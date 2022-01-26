@@ -1,0 +1,364 @@
+{
+	"block_pools":
+	[
+		{
+			"name": "hull_t1",
+			"type": {
+				"type": "block",
+				"name": "chisel:technicalnew",
+				"meta": 2
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar_t2"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"chance": 20.0,
+					"name": "chisel:technical",
+					"meta": 0
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:hull_plate_t1",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 2,
+							"maxValue": 5
+						}
+					]
+				}
+			]
+		},
+		
+		{
+			"name": "hull_t2",
+			"type": {
+				"type": "block",
+				"name": "chisel:factory",
+				"meta": 9
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar_t2"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"chance": 20.0,
+					"name": "chisel:technical",
+					"meta": 0
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:hull_plate_t2",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 2,
+							"maxValue": 5
+						}
+					]
+				}
+			]
+		},
+		
+		{
+			"name": "hull_t3",
+			"type": {
+				"type": "block",
+				"name": "chisel:laboratory",
+				"meta": 11
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar_t2"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"chance": 20.0,
+					"name": "chisel:technical",
+					"meta": 0
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:hull_plate_t3",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 4
+						}
+					]
+				}
+			]
+		},
+		
+
+		{
+			"name": "post_hull_t1",
+			"type": {
+				"type": "block",
+				"name": "chisel:technical",
+				"meta": 0
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.3,
+					"pitch": 0.85,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar_t2"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"chance": 30.0,
+					"name": "minecraft:air"
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:internals_t1",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 2,
+							"maxValue": 5
+						}
+					]
+				}
+			]
+		},
+		
+		{
+			"name": "broken_fan",
+			"type": {
+				"type": "block",
+				"name": "chisel:technical",
+				"meta": 14
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar_t2"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "consume_block"
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 10
+				}
+			],
+			"drops": [
+				{
+					"name": "gregtech:meta_item_2",
+					"meta": "18071",
+					"properties": [
+						{
+							"type": "set_size",
+							"value": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "quartz",
+			"type": {
+				"type": "block",
+				"name": "chisel:laboratory",
+				"meta": 5
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.1,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar_t2"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"chance": 25.0,
+					"name": "chisel:laboratory",
+					"meta": 15
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:hull_plate_t4",
+					"meta": "0",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 2,
+							"maxValue": 4
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "post_hull_t2",
+			"type": {
+				"type": "block",
+				"name": "chisel:laboratory",
+				"meta": 15
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.1,
+					"pitch": 0.85,
+					"category": "block"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"chance": 33.0,
+					"name": "minecraft:air"
+				},
+				
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar_t2"
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:internals_t2",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 3
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,6 @@
+
+{
+  "Name": "mod_lavacow.weta",
+  "Registry ID": "mod_lavacow:weta",
+  "Class": "com.Fishmod.mod_LavaCow.entities.tameable.EntityWeta"
+}

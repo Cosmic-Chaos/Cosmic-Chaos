@@ -1,0 +1,6 @@
+
+{
+  "Name": "mod_lavacow.mummy",
+  "Registry ID": "mod_lavacow:mummy",
+  "Class": "com.Fishmod.mod_LavaCow.entities.EntityMummy"
+}

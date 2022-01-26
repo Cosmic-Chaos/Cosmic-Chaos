@@ -1,0 +1,35 @@
+material.crystalized=Crystalized
+
+
+material.crude_steel=Crude Steel
+material.end_steel=End Steel
+material.electrical_steel=Electrical Steel
+material.dark_steel=Dark Steel
+material.pulsating_iron=Pulsating Iron
+material.conductive_iron=Conductive Iron
+material.redstone_alloy=Redstone Alloy
+material.vibrant_alloy=Vibrant Alloy
+material.energetic_alloy=Energetic Alloy
+material.soularium=Soularium
+material.crystalline_alloy=Crystalline Alloy
+material.melodic_alloy=Melodic Alloy
+material.stellar_alloy=Stellar Alloy
+material.vivid_alloy=Vivid Alloy
+material.crystalline_pink_slime=Crystalline Pink Slime
+material.energetic_silver=Energetic Silver
+
+material.dwarf_star_alloy=Dwarf Star Alloy
+
+item.contenttweaker.crowbar.name=Makeshift Crowbar
+item.contenttweaker.crowbar_t2.name=§6Crowbar
+item.contenttweaker.hull_plate_t1.name=§aHeavy Hull Plate
+item.contenttweaker.broken_hull_plate_t1.name=Broken Iron Hull Plate
+item.contenttweaker.hull_plate_t2.name=§aLight Hull Plate
+item.contenttweaker.broken_hull_plate_t2.name=Broken Copper Hull Plate
+item.contenttweaker.hull_plate_t3.name=§aDense Hull Plate
+item.contenttweaker.broken_hull_plate_t3.name=Broken Lead Hull Plate
+item.contenttweaker.hull_plate_t4.name=§aFancy Hull Plate
+item.contenttweaker.internals_t1.name=§aSimple Internals
+item.contenttweaker.internals_t2.name=§aComplex Internals
+
+item.contenttweaker.purpleprint.name=§5Multiblock Visualizer

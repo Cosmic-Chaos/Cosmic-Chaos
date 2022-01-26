@@ -1,0 +1,30 @@
+{
+	x: 2.5d,
+	y: -2.5d,
+	shape: "circle",
+	dependencies: [
+		"a838aa4e"
+	],
+	size: 1.5d,
+	tasks: [{
+		uid: "a6b3ede6",
+		type: "item",
+		items: [{
+			item: "contenttweaker:hull_plate_t4"
+		}]
+	},
+	{
+		uid: "261208d5",
+		type: "item",
+		items: [{
+			item: "contenttweaker:internals_t2"
+		}]
+	},
+	{
+		uid: "aadf2f0f",
+		type: "item",
+		items: [{
+			item: "chisel:laboratory 1 5"
+		}]
+	}]
+}

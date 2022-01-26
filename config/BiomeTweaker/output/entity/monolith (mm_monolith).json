@@ -1,0 +1,6 @@
+
+{
+  "Name": "monolith",
+  "Registry ID": "mm:monolith",
+  "Class": "com.barribob.MaelstromMod.entity.entities.EntityMonolith"
+}

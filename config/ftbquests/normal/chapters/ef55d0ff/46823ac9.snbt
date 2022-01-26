@@ -1,0 +1,260 @@
+{
+	title: "Shipwrecked",
+	icon: {
+		id: "ironchest:iron_shulker_box_silver",
+		tag: {
+			BlockEntityTag: {
+				facing: 1b,
+				Items: [{
+					Slot: 1b,
+					id: "minecraft:deadbush",
+					Count: 2b,
+					Damage: 0s
+				},
+				{
+					Slot: 4b,
+					id: "minecraft:deadbush",
+					Count: 3b,
+					Damage: 0s
+				},
+				{
+					Slot: 7b,
+					id: "minecraft:reeds",
+					Count: 1b,
+					Damage: 0s
+				},
+				{
+					Slot: 8b,
+					id: "minecraft:red_mushroom",
+					Count: 1b,
+					Damage: 0s
+				},
+				{
+					Slot: 9b,
+					id: "minecraft:deadbush",
+					Count: 2b,
+					Damage: 0s
+				},
+				{
+					Slot: 10b,
+					id: "minecraft:log2",
+					Count: 29b,
+					Damage: 1s
+				},
+				{
+					Slot: 11b,
+					id: "minecraft:log2",
+					Count: 11b,
+					Damage: 0s
+				},
+				{
+					Slot: 12b,
+					id: "minecraft:log",
+					Count: 2b,
+					Damage: 3s
+				},
+				{
+					Slot: 14b,
+					id: "minecraft:log",
+					Count: 5b,
+					Damage: 2s
+				},
+				{
+					Slot: 15b,
+					id: "minecraft:log",
+					Count: 15b,
+					Damage: 1s
+				},
+				{
+					Slot: 16b,
+					id: "minecraft:log",
+					Count: 46b,
+					Damage: 0s
+				},
+				{
+					Slot: 18b,
+					id: "minecraft:mycelium",
+					Count: 2b,
+					Damage: 0s
+				},
+				{
+					Slot: 19b,
+					id: "minecraft:sapling",
+					Count: 6b,
+					Damage: 5s
+				},
+				{
+					Slot: 20b,
+					id: "minecraft:sapling",
+					Count: 1b,
+					Damage: 4s
+				},
+				{
+					Slot: 21b,
+					id: "minecraft:sapling",
+					Count: 4b,
+					Damage: 3s
+				},
+				{
+					Slot: 22b,
+					id: "minecraft:reeds",
+					Count: 4b,
+					Damage: 0s
+				},
+				{
+					Slot: 23b,
+					id: "minecraft:sapling",
+					Count: 2b,
+					Damage: 2s
+				},
+				{
+					Slot: 24b,
+					id: "minecraft:sapling",
+					Count: 2b,
+					Damage: 1s
+				},
+				{
+					Slot: 25b,
+					id: "minecraft:sapling",
+					Count: 8b,
+					Damage: 0s
+				},
+				{
+					Slot: 27b,
+					id: "minecraft:deadbush",
+					Count: 13b,
+					Damage: 0s
+				},
+				{
+					Slot: 28b,
+					id: "minecraft:deadbush",
+					Count: 1b,
+					Damage: 0s
+				},
+				{
+					Slot: 29b,
+					id: "minecraft:brown_mushroom",
+					Count: 7b,
+					Damage: 0s
+				},
+				{
+					Slot: 30b,
+					id: "minecraft:deadbush",
+					Count: 5b,
+					Damage: 0s
+				},
+				{
+					Slot: 32b,
+					id: "minecraft:red_mushroom",
+					Count: 3b,
+					Damage: 0s
+				},
+				{
+					Slot: 33b,
+					id: "minecraft:mycelium",
+					Count: 1b,
+					Damage: 0s
+				},
+				{
+					Slot: 34b,
+					id: "minecraft:deadbush",
+					Count: 1b,
+					Damage: 0s
+				},
+				{
+					Slot: 35b,
+					id: "minecraft:deadbush",
+					Count: 2b,
+					Damage: 0s
+				},
+				{
+					Slot: 37b,
+					id: "minecraft:reeds",
+					Count: 3b,
+					Damage: 0s
+				},
+				{
+					Slot: 38b,
+					id: "minecraft:dye",
+					Count: 1b,
+					Damage: 3s
+				},
+				{
+					Slot: 39b,
+					id: "minecraft:wheat_seeds",
+					Count: 7b,
+					Damage: 0s
+				},
+				{
+					Slot: 40b,
+					id: "minecraft:deadbush",
+					Count: 4b,
+					Damage: 0s
+				},
+				{
+					Slot: 41b,
+					id: "minecraft:dirt",
+					Count: 13b,
+					Damage: 1s
+				},
+				{
+					Slot: 42b,
+					id: "minecraft:dirt",
+					Count: 4b,
+					Damage: 0s
+				},
+				{
+					Slot: 43b,
+					id: "minecraft:grass",
+					Count: 1b,
+					Damage: 0s
+				},
+				{
+					Slot: 45b,
+					id: "minecraft:deadbush",
+					Count: 3b,
+					Damage: 0s
+				},
+				{
+					Slot: 47b,
+					id: "minecraft:sugar",
+					Count: 4b,
+					Damage: 0s
+				},
+				{
+					Slot: 48b,
+					id: "minecraft:deadbush",
+					Count: 2b,
+					Damage: 0s
+				},
+				{
+					Slot: 51b,
+					id: "minecraft:deadbush",
+					Count: 2b,
+					Damage: 0s
+				},
+				{
+					Slot: 53b,
+					id: "minecraft:reeds",
+					Count: 2b,
+					Damage: 0s
+				}],
+				ShulkerBoxSize: 54
+			}
+		}
+	},
+	x: -7.0d,
+	y: 2.0d,
+	shape: "hexagon",
+	text: [
+		"You'll need to find some sort of lever to open the door leading out."
+	],
+	size: 2.0d,
+	tasks: [{
+		uid: "58a7fda7",
+		type: "item",
+		items: [{
+			item: "minecraft:lever"
+		}]
+	}]
+}

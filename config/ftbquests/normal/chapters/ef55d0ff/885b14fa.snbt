@@ -1,0 +1,21 @@
+{
+	x: 6.0d,
+	y: 0.5d,
+	dependencies: [
+		"c464e32a"
+	],
+	tasks: [{
+		uid: "1709e502",
+		type: "item",
+		items: [{
+			item: "gregtech:machine 1 210"
+		}]
+	},
+	{
+		uid: "49155b73",
+		type: "item",
+		items: [{
+			item: "minecraft:obsidian"
+		}]
+	}]
+}

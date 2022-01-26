@@ -1,0 +1,111 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.GuiMainMenu
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  name = temp_slideshow
+  action = setbackgroundslideshow
+}
+
+customization {
+  identifier = %id=400322%
+  orientation = mid-centered
+  x = -103
+  action = movebutton
+  y = -56
+}
+
+customization {
+  identifier = %id=400382%
+  orientation = mid-centered
+  x = -1
+  action = movebutton
+  y = -25
+}
+
+customization {
+  identifier = %id=502382%
+  orientation = mid-centered
+  x = -53
+  action = movebutton
+  y = 16
+}
+
+customization {
+  identifier = %id=502382%
+  seconds = 1.0
+  onlyfirsttime = true
+  fadein = true
+  fadeinspeed = 1.0
+  action = hidebuttonfor
+}
+
+customization {
+  identifier = %id=376382%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=400298%
+  orientation = mid-centered
+  x = -103
+  action = movebutton
+  y = -81
+}
+
+customization {
+  identifier = %id=400346%
+  orientation = mid-centered
+  x = -103
+  action = movebutton
+  y = -25
+}
+
+customization {
+  identifier = %id=502346%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=376346%
+  action = hidebutton
+}
+
+customization {
+  orientation = mid-centered
+  buttonaction = openlink
+  backgroundhovered = resources/assets/fancymenu/discord-logo-logodownload-download-logotipos-1.png
+  description = Join our Discord!
+  label = 
+  x = -105
+  width = 32
+  actionid = dabe5f01-1d0a-466a-933f-a8bbf0d7213e1630549712890
+  action = addbutton
+  y = 10
+  backgroundnormal = resources/assets/fancymenu/discord-logo-logodownload-download-logotipos-1.png
+  value = https://discord.gg/qfEAtfY
+  height = 32
+}
+
+customization {
+  orientation = mid-centered
+  buttonaction = openlink
+  backgroundhovered = resources/assets/fancymenu/iconfinder-github-4555889_121361.png
+  description = Report an issue or make a suggestion!
+  label = 
+  x = 66
+  width = 30
+  actionid = eb86af41-8c84-49d0-bd95-7928d89be2121630549712890
+  action = addbutton
+  y = 11
+  backgroundnormal = resources/assets/fancymenu/iconfinder-github-4555889_121361.png
+  value = https://github.com/Filostorm/Cosmic-Chaos/issues
+  height = 30
+}
+

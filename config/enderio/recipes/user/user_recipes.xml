@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enderio:recipes xmlns:enderio="http://enderio.com/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enderio.com/recipes recipes.xsd ">
+<recipe name="Tweak: Stick from Wood" disabled="true" />
+<recipe name="Tweak: Chest from Wood" disabled="true" />
+<recipe name="Tweak: Wood Hopper" disabled="true" />
+<recipe name="Gear, ae2 messes things up" disabled="true" />
+<recipe name="Gear, just to be sure" disabled="true" />
+<recipe name="Gear, better save than sorry" disabled="true" />
+<recipe name="Alloy: Endergy Crude Steel" disabled="true" />
+
+  <recipe name="Red Alloy">
+    <alloying energy="1000" exp="0.0">
+      <input name="ingotCopper"/>
+      <input name="dustRedstone" amount="4"/>
+      <output name="ingotRedAlloy"/>
+    </alloying>
+  </recipe>
+  <recipe name="Brass">
+    <alloying energy="1000" exp="0.0">
+      <input name="ingotCopper" amount="3"/>
+      <input name="ingotZinc"/>
+      <output name="ingotBrass" amount="4"/>
+    </alloying>
+  </recipe>
+  <recipe name="Steel">
+    <alloying energy="2000" exp="0.0">
+      <input name="dustCrudeSteel"/>
+      <input name="dustCoal"/>
+      <output name="ingotSteel"/>
+    </alloying>
+  </recipe>
+</enderio:recipes>

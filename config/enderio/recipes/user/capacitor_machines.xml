@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enderio:recipes xmlns:enderio="http://enderio.com/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enderio.com/recipes recipes.xsd ">
+
+  <capacitor key="enderio:block_simple_sag_mill/intake" base="25" scaler="POWER" />
+  <capacitor key="enderio:block_simple_sag_mill/buffer" base="2500" scaler="POWER" />
+  <capacitor key="enderio:block_simple_sag_mill/use" base="25" scaler="POWER" />
+
+</enderio:recipes>

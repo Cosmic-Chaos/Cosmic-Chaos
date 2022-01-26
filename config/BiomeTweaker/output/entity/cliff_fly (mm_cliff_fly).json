@@ -1,0 +1,6 @@
+
+{
+  "Name": "cliff_fly",
+  "Registry ID": "mm:cliff_fly",
+  "Class": "com.barribob.MaelstromMod.entity.entities.EntityCliffFly"
+}

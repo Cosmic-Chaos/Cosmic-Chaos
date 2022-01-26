@@ -1,0 +1,6 @@
+
+{
+  "Name": "nexus_gunsmith",
+  "Registry ID": "mm:nexus_gunsmith",
+  "Class": "com.barribob.MaelstromMod.entity.entities.npc.NexusGunTrader"
+}

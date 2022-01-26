@@ -1,0 +1,20 @@
+{
+	x: 11.5d,
+	y: 1.5d,
+	text: [
+		""
+	],
+	dependencies: [
+		"9f9b3984"
+	],
+	tasks: [{
+		uid: "efd6c271",
+		type: "item",
+		items: [{
+			id: "calculator:calculator",
+			tag: {}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

@@ -1,0 +1,6 @@
+
+{
+  "Name": "maelstrom_crawler",
+  "Registry ID": "mm:maelstrom_crawler",
+  "Class": "com.barribob.MaelstromMod.entity.entities.EntityBeast"
+}

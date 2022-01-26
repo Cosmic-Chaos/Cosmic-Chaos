@@ -1,0 +1,40 @@
+{
+  "weight": 100,
+  "density": 0.5,
+  "max_height": 55,
+  "min_height": 35,
+  "surface_stone_material": "gold",
+  "dimension_filter": [
+    "dimension_id:0",
+    "dimension_id:33"
+],
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [30, 30]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 60,
+          "value": "ore:magnetite"
+        },
+        {
+          "weight": 15,
+          "value": "ore:iron"
+        },
+		{
+          "weight": 15,
+          "value": "ore:vanadium_magnetite"
+        },
+		{
+          "weight": 10,
+          "value": "ore:precious_metal"
+        }
+      ]
+    }
+  }
+}

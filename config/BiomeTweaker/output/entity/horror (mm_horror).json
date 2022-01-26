@@ -1,0 +1,6 @@
+
+{
+  "Name": "horror",
+  "Registry ID": "mm:horror",
+  "Class": "com.barribob.MaelstromMod.entity.entities.EntityHorror"
+}

@@ -1,0 +1,17 @@
+{
+	x: 7.0d,
+	y: 3.0d,
+	text: [
+		"Used to split water, as well as process some rarer ores."
+	],
+	dependencies: [
+		"c464e32a"
+	],
+	tasks: [{
+		uid: "8986ef37",
+		type: "item",
+		items: [{
+			item: "gregtech:machine 1 240"
+		}]
+	}]
+}

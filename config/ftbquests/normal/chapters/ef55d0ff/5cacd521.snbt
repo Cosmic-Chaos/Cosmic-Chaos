@@ -1,0 +1,23 @@
+{
+	icon: "contenttweaker:internals_t1",
+	x: 3.5d,
+	y: -7.5d,
+	shape: "circle",
+	description: "Can burn 2 items",
+	text: [
+		"Use a Crowbar on a scaffolding to aquire."
+	],
+	dependencies: [
+		"00489151",
+		"cb175ed6"
+	],
+	dependency_requirement: "one_completed",
+	size: 1.25d,
+	tasks: [{
+		uid: "04f64107",
+		type: "item",
+		items: [{
+			item: "contenttweaker:internals_t1"
+		}]
+	}]
+}

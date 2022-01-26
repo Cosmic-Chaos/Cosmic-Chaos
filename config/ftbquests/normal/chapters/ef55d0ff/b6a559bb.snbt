@@ -1,0 +1,19 @@
+{
+	title: "Crude Steel",
+	x: 5.5d,
+	y: -1.0d,
+	shape: "rsquare",
+	text: [
+		""
+	],
+	dependencies: [
+		"ea4dcd2e"
+	],
+	tasks: [{
+		uid: "1b7c0eb9",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 10601"
+		}]
+	}]
+}
