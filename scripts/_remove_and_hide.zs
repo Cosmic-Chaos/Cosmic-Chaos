@@ -48,7 +48,6 @@ val itemstoRemoveAndHide =
 <actuallyadditions:block_coal_generator>,
 <actuallyadditions:block_leaf_generator>,
 <appliedenergistics2:material:40>,
-<gregtech:meta_item_2:26196>,
 <teslacorelib:gear_stone>,
 <actuallyadditions:block_grinder>,
 <actuallyadditions:block_grinder_double>,

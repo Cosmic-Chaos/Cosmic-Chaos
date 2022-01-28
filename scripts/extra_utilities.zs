@@ -17,14 +17,17 @@ for item in itemstoRemove {
 
 recipes.addShaped(<extrautils2:terraformer:9>, [[<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12033>],[<ore:sapling>, <gregtech:machine:501>, <ore:sapling>], [<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12033>]]);
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}), [[null, <ore:bookEnchanted>, null],[<gregtech:meta_item_1:12111>, <gregtech:machine:501>, <gregtech:meta_item_1:12111>], [<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>]]);
-recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator"}), [[<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>],[<gregtech:meta_item_1:12033>, <gregtech:machine:501>, <gregtech:meta_item_1:12033>], [<gregtech:cable:5237>, <furnaceoverhaul:iron_furnace>, <gregtech:cable:5237>]]);
+recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator"}), [[<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>],[<gregtech:meta_item_1:12033>, <gregtech:machine:501>, <gregtech:meta_item_1:12033>], [<metaitem:wireGtDoubleRedAlloy>, <minecraft:furnace>, <metaitem:wireGtDoubleRedAlloy>]]);
 
+/*
 //Teleporter
 recipes.addShaped(<extrautils2:teleporter:1>, [
 	[<extrautils2:compressedcobblestone:7>, <extrautils2:compressedcobblestone:7>, <extrautils2:compressedcobblestone:7>],
 	[<extrautils2:compressedcobblestone:7>, <gtadditions:ga_meta_item:32343>, <extrautils2:compressedcobblestone:7>], 
 	[<extrautils2:compressedcobblestone:7>, <extrautils2:compressedcobblestone:7>, <extrautils2:compressedcobblestone:7>]
 ]);
+*/
+
 
 /*
 <techreborn:part:13>.displayName = "Constantan Heating Coil";

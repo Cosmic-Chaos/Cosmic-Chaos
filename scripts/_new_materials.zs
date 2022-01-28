@@ -2,7 +2,6 @@
 #priority 1001
 import crafttweaker.item.IItemStack;
 import mods.gregtech.material.MaterialRegistry;
-import mods.gtadditions.recipe.Utils;
 import mods.jei.JEI;
 import crafttweaker.oredict.IOreDictEntry;
 print("==================== loading new_materials.zs ====================");
@@ -94,7 +93,7 @@ Utils.registerItem("crude_steel", 1003, 0x52bfa8, "DULL", "gear");
 val crystalized = MaterialRegistry.createIngotMaterial(600, "crystalized", 0x52bfa8, "shiny", 1);
 crystalized.setCableProperties(128, 2, 0);
 crystalized.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-*/
+*//*
 
 //Ender IO
 val crudeSteel = MaterialRegistry.createIngotMaterial(601, "crude_steel", 0x9e9e9e, "metallic", 1);
@@ -156,7 +155,7 @@ val dwarf_star_alloy = MaterialRegistry.createIngotMaterial(617, "dwarf_star_all
 dwarf_star_alloy.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
 
 
-
+*/
 /*
 val tinyDustMap as IItemStack[IItemStack] = {
 } as IItemStack[IItemStack];

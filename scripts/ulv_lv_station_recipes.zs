@@ -1,7 +1,4 @@
 import crafttweaker.item.IItemStack;
-import mods.enderio.SagMill;
-import mods.enderio.AlloySmelter;
-import mods.enderio.Vat;
 import crafttweaker.item.IIngredient;
 import mods.industrialforegoing.SludgeRefiner;
 
@@ -57,18 +54,19 @@ recipes.addShaped(<gregtech:machine_casing:1>, [
 	[anySteelPlate, anySteelPlate, anySteelPlate]
 ]);
 
+/*
 //Crude Steel Piston
 recipes.addShapedMirrored(<gregtech:meta_item_1:32640>, [
 	[<gregtech:meta_item_1:12601>, <gregtech:meta_item_1:12601>, <gregtech:meta_item_1:12601>],
 	[<gregtech:cable:5071>, <gregtech:meta_item_1:14601>, <gregtech:meta_item_1:14601>], 
 	[<gregtech:cable:5071>, <gregtech:meta_item_1:32600>, <gregtech:meta_item_2:26601>]
-]);
+]);*/
 
 //petrified_fuel_generator
 recipes.addShaped(<industrialforegoing:petrified_fuel_generator>, [
 	[<ore:plateRubber>, <minecraft:diamond>, <ore:plateRubber>],
 	[<ore:gearGold>, <gregtech:machine:501>, <ore:gearGold>], 
-	[<ore:plateRubber>, <furnaceoverhaul:iron_furnace>, <ore:plateRubber>]
+	[<ore:plateRubber>, <morerefinedstorage:fusion_furnace>, <ore:plateRubber>]
 ]);
 
 //Musroom Maker
@@ -80,7 +78,7 @@ recipes.addShaped(<industrialforegoing:spores_recreator>, [
 
 //Sludge Refiner
 recipes.addShaped(<industrialforegoing:sludge_refiner>, [
-	[<ore:plateBrass>, <gregtech:fluid_pipe:3095>, <ore:plateBrass>],
+	[<ore:plateBrass>, <metaitem:pipeNormalFluidBronze>, <ore:plateBrass>],
 	[<gregtech:meta_item_1:32600>, <gregtech:machine:501>, <gregtech:meta_item_1:32600>], 
 	[<ore:circuitBasic>, <ore:gearGold>, <ore:circuitBasic>]]
 );
@@ -127,8 +125,8 @@ recipes.addShaped(<metaitem:ingotCrudeSteel>, [
 
 
 //Bio Goo
-recipes.addShaped(<fossil:bio_goo> * 3, [[<gregtechfoodoption:gtfo_meta_tool>],[<minecraft:mutton>]]);
-recipes.addShaped(<fossil:bio_goo> * 9, [[<gregtechfoodoption:gtfo_meta_tool>],[<fossil:failuresaurus_flesh>]]);
+//recipes.addShaped(<fossil:bio_goo> * 3, [[<gregtechfoodoption:gtfo_meta_tool>],[<minecraft:mutton>]]);
+//recipes.addShaped(<fossil:bio_goo> * 9, [[<gregtechfoodoption:gtfo_meta_tool>],[<fossil:failuresaurus_flesh>]]);
 
 //Slime in a bucket
 recipes.addShaped(<quark:slime_bucket>, [[<fossil:bio_goo>],[<minecraft:bucket>]]);
@@ -138,7 +136,7 @@ furnace.addRecipe(<gregtech:meta_item_1:32627> * 4, <fossil:bio_goo>, 0.0);
 
 // Sludge Recipe
 chemical_reactor.recipeBuilder()
-	.chancedOutput(<gregtech:meta_item_2:32451>, 1000, 1000)
+	.chancedOutput(<metaitem:component.diode>, 1000, 1000)
 	.fluidOutputs([<liquid:sludge> * 2000])
     .fluidInputs([<liquid:nutrient_distillation> * 200])
     .inputs(<contenttweaker:internals_t1>)

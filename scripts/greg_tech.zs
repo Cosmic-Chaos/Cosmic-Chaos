@@ -1,7 +1,5 @@
 import crafttweaker.item.IItemStack;
 import mods.gregtech.material.MaterialRegistry;
-import mods.enderio.AlloySmelter;
-import mods.gtadditions.recipe.Utils;
 import crafttweaker.item.IIngredient;
 print("==================== loading gregtech.zs ====================");
 ##########################################################################################
@@ -18,13 +16,13 @@ for item in itemstoRemove {
 }
 
 //Crafting Station
-recipes.addShaped(<gregtech:machine:825>, [[<ore:chestWood>, <minecraft:crafting_table>, <ore:chestWood>],[plateBronze, <gregtech:metal_casing>, plateBronze], [plateBronze, <gregtech:meta_tool:6>, plateBronze]]);
+recipes.addShaped(<gregtech:machine:825>, [[<ore:chestWood>, <minecraft:crafting_table>, <ore:chestWood>],[<metaitem:plateBronze>, <gregtech:metal_casing>, <metaitem:plateBronze>], [<metaitem:plateBronze>, <gregtech:meta_tool:6>, <metaitem:plateBronze>]]);
 
 //Wood Plank
-recipes.addShaped(plateWood, [[craftingHammer],[<ore:plankWood>]]);
+recipes.addShaped(<metaitem:plateWood>, [[craftingHammer],[<ore:plankWood>]]);
 
 //Glass Tube
-recipes.addShaped(GlassTube, [[null, <ore:paneGlassColorless>, null],[<ore:paneGlassColorless>, null, <ore:paneGlassColorless>], [null, <ore:paneGlassColorless>, null]]);
+recipes.addShaped(<metaitem:component.glass.tube>, [[null, <ore:paneGlassColorless>, null],[<ore:paneGlassColorless>, null, <ore:paneGlassColorless>], [null, <ore:paneGlassColorless>, null]]);
 
 
 //Autoclave

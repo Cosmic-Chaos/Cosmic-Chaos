@@ -1,3 +1,4 @@
+
 #modloaded integrateddynamics
 import crafttweaker.item.IItemStack;
 import mods.integrateddynamics.Squeezer;
@@ -21,7 +22,7 @@ for item in itemstoRemove {
 
 //Squezzer
 recipes.addShaped(<integrateddynamics:squeezer>, [
-	[<gregtech:meta_item_1:14197>, <gtadditions:ga_meta_item:1035>, <gregtech:meta_item_1:14197>],
+	[<gregtech:meta_item_1:14197>, <metaitem:plateDoubleIron>, <gregtech:meta_item_1:14197>],
 	[<gregtech:meta_item_1:14197>, <minecraft:redstone>, <gregtech:meta_item_1:14197>], 
 	[<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>]
 ]);

@@ -24,20 +24,20 @@ basic.addRecipe(<metaitem:dustCoal>, <ore:dustRedstone>, <calculator:enrichedcoa
 
 //Tier one calc stuff
 recipes.addShaped(<calculator:calculator>, [
-	[<gregtech:meta_item_2:32572>, <calculator:calculatorscreen>, <gregtech:meta_item_2:32572>],
+	[<metaitem:plateRedAlloy>, <calculator:calculatorscreen>, <metaitem:plateRedAlloy>],
 	[<quark:iron_button>, <calculator:calculatorassembly>, <quark:iron_button>], 
 	[<ore:plateTin>, <ore:plateTin>, <ore:plateTin>]
 ]);
 
 recipes.addShaped(<calculator:calculatorscreen>, [
-	[<gregtech:meta_item_2:32572>, <gregtech:meta_item_2:32572>, <gregtech:meta_item_2:32572>],
+	[<metaitem:plateRedAlloy>, <metaitem:plateRedAlloy>, <metaitem:plateRedAlloy>],
 	[<ore:paneGlassColorless>, <ore:paneGlassColorless>, <ore:paneGlassColorless>], 
-	[<gregtech:meta_item_2:32572>, <gregtech:meta_item_2:32572>, <gregtech:meta_item_2:32572>]
+	[<metaitem:plateRedAlloy>, <metaitem:plateRedAlloy>, <metaitem:plateRedAlloy>]
 ]);
 
 recipes.addShaped(<calculator:calculatorassembly> * 4, [
 	[<ore:foilZinc>, <quark:iron_button>, <ore:foilZinc>],
-	[<quark:iron_button>, <gregtech:meta_item_2:32572>, <quark:iron_button>], 
+	[<quark:iron_button>, <metaitem:plateRedAlloy>, <quark:iron_button>], 
 	[<ore:foilZinc>, <quark:iron_button>, <ore:foilZinc>]
 ]);
 

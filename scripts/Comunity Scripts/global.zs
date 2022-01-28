@@ -66,47 +66,5 @@ global craftingHammer as IItemStack = <gregtech:meta_tool:5>;
 global craftingScrewdriver as IItemStack = <gregtech:meta_tool:11>;
 global craftingWrench as IItemStack = <gregtech:meta_tool:8>;
 
-global GlassTube as IItemStack = <gregtech:meta_item_2:32454>;
-
-
-global plateWood as IItemStack = <gregtech:meta_item_1:12196>;
-global plateBronze as IItemStack = <gregtech:meta_item_1:12095>;
-
-global dustCoal as IItemStack = <gregtech:meta_item_1:2106>;
-global dustIron as IItemStack = <gregtech:meta_item_1:2033>;
-global dustCopper as IItemStack = <gregtech:meta_item_1:2018>;
-global dustSteel as IItemStack = <gregtech:meta_item_1:2184>;
-global dustTin as IItemStack = <gregtech:meta_item_1:2071>;
-global dustRedstone as IItemStack = <minecraft:redstone>;
-
-global dustSmallCoal as IItemStack = <gregtech:meta_item_1:1106>;
-global dustSmallRedstone as IItemStack = <gregtech:meta_item_1:1215>;
-global dustSmallNetherQuartz as IItemStack = <gregtech:meta_item_1:1201>;
-
-global dustSmallIron as IItemStack = <gregtech:meta_item_1:1033>;
-global dustSmallTin as IItemStack = <gregtech:meta_item_1:1071>;
-global dustSmallLead as IItemStack = <gregtech:meta_item_1:1035>;
-
-global dustSmallCopper as IItemStack = <gregtech:meta_item_1:1018>;
-global dustSmallZinc as IItemStack = <gregtech:meta_item_1:1079>;
-global dustSmallGold as IItemStack = <gregtech:meta_item_1:1026>;
-
-global dustSmallSteel as IItemStack = <gregtech:meta_item_1:1184>;
-global dustSmallCrudeSteel as IItemStack = <gregtech:meta_item_1:1601>;
-global dustSmallAluminium as IItemStack = <gregtech:meta_item_1:1001>;
-
-global dustSmallGlass as IItemStack = <gregtech:meta_item_1:1209>;
-
-global nuggetLead as IItemStack = <gregtech:meta_item_1:9035>;
-global nuggetCopper as IItemStack = <gregtech:meta_item_1:9018>;
-
-global ingotZinc as IItemStack = <gregtech:meta_item_1:10079>;
-global ingotCopper as IItemStack = <gregtech:meta_item_1:10018>;
-global ingotBrass as IItemStack = <gregtech:meta_item_1:10094>;
-global ingotRedAlloy as IItemStack = <gregtech:meta_item_1:10237>;
-
-
-global Resistor as IItemStack = <gregtech:meta_item_2:32455>;
-
 ##########################################################################################
 print("==================== end of global.zs ====================");

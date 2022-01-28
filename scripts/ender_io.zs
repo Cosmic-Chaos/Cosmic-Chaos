@@ -34,7 +34,7 @@ recipes.addShaped(<enderio:block_simple_sag_mill>, [
 
 //Gen
 recipes.addShaped(<enderio:block_simple_stirling_generator>, [
-	[<ore:plateIron>, <furnaceoverhaul:iron_furnace>, <ore:plateIron>],
+	[<ore:plateIron>, <minecraft:furnace>, <ore:plateIron>],
 	[<ore:plateIron>, <gregtech:machine:500>, <ore:plateIron>], 
 	[<ore:gearCopper>, <ore:circuitPrimitive>, <ore:gearCopper>]
 ]);
@@ -42,7 +42,7 @@ recipes.addShaped(<enderio:block_simple_stirling_generator>, [
 //Alloy Smeltery
 recipes.addShaped(<enderio:block_simple_alloy_smelter>, [
 	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>],
-	[<furnaceoverhaul:iron_furnace>, <gregtech:machine:500>, <furnaceoverhaul:iron_furnace>], 
+	[<minecraft:furnace>, <gregtech:machine:500>, <minecraft:furnace>], 
 	[<ore:gearLead>, <ore:circuitPrimitive>, <ore:gearLead>]
 ]);
 */
@@ -51,7 +51,7 @@ recipes.addShaped(<enderio:block_simple_alloy_smelter>, [
 recipes.addShaped(<enderio:block_vat>, [
 	[<ore:plateBrass>, <minecraft:cauldron>, <ore:plateBrass>],
 	[<enderio:block_tank>, <gregtech:machine:501>, <enderio:block_tank>], 
-	[<ore:plateBrass>, <furnaceoverhaul:iron_furnace>, <ore:plateBrass>]
+	[<ore:plateBrass>, <minecraft:furnace>, <ore:plateBrass>]
 ]);
 
 //Sag Mill
@@ -79,7 +79,7 @@ for output, input in capacaitorMap {
 	assembler.recipeBuilder()
 	.outputs(output)
     .inputs(basicCapacitorInput)
-    .inputs(Resistor)
+    .inputs(<metaitem:component.resistor>)
     .inputs(input*8)
     .fluidInputs([<liquid:soldering_alloy> * 72])
 	.EUt(30)
@@ -89,7 +89,7 @@ for output, input in capacaitorMap {
 	assembler.recipeBuilder()
 	.outputs(output)
     .inputs(basicCapacitorInput)
-    .inputs(Resistor)
+    .inputs(<metaitem:component.resistor>)
     .inputs(input*8)
     .fluidInputs([<liquid:tin> * 144])
 	.EUt(30)

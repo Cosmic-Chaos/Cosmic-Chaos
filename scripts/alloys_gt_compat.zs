@@ -72,7 +72,7 @@ alloy_smelter.recipeBuilder()
 alloy_smelter.recipeBuilder()
 	.outputs(<metaitem:ingotEnergeticAlloy>)
     .inputs(<ore:ingotGold>)
-    .inputs(<gregtech:meta_item_2:32572>)
+    .inputs(<ore:dustEnergetic>)
 	.EUt(32)
 	.duration(120)
 	.buildAndRegister();
