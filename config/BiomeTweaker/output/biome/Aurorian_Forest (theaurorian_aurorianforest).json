@@ -22,8 +22,8 @@
   "Dictionary Types": [
     "DRY",
     "FOREST",
-    "MAGICAL",
     "COLD",
+    "MAGICAL",
     "PLAINS"
   ],
   "BiomeManager Entries": {

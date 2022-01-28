@@ -21,8 +21,8 @@
   "Enable Snow": false,
   "Dictionary Types": [
     "SNOWY",
-    "MAGICAL",
-    "SWAMP"
+    "SWAMP",
+    "MAGICAL"
   ],
   "BiomeManager Entries": {},
   "Spawnable Creatures": [

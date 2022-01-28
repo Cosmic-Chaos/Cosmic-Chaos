@@ -22,8 +22,8 @@
   "Dictionary Types": [
     "WASTELAND",
     "DRY",
-    "HOT",
-    "DEAD"
+    "DEAD",
+    "HOT"
   ],
   "BiomeManager Entries": {
     "DESERT Weights": [

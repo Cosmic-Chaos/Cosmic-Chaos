@@ -20,9 +20,9 @@
   "Enable Rain": false,
   "Enable Snow": false,
   "Dictionary Types": [
-    "MOUNTAIN",
     "RARE",
     "DRY",
+    "MOUNTAIN",
     "SPARSE",
     "HOT"
   ],
