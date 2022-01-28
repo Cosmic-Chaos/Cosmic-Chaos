@@ -26,7 +26,6 @@
   "ftblib": "5.4.7.2",
   "enderioconduitsrefinedstorage": "5.3.70",
   "jeresources": "0.9.2.60",
-  "bq_msi": "1.0.7",
   "onslaught": "1.12.2-1.2.2",
   "superfactorymanager": "@VERSION@",
   "enderioconduits": "5.3.70",

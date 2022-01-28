@@ -24,6 +24,7 @@ alloy_smelter.recipeBuilder()
 	.duration(80)
 	.buildAndRegister();
 
+/*
 //Steel
 alloy_smelter.recipeBuilder()
 	.outputs(<metaitem:ingotSteel>)
@@ -32,7 +33,7 @@ alloy_smelter.recipeBuilder()
 	.EUt(32)
 	.duration(120)
 	.buildAndRegister();
-/*
+
 //Dark Steel
 alloy_smelter.recipeBuilder()
 	.outputs(<metaitem:ingotDarkSteel>)
@@ -112,6 +113,7 @@ alloy_smelter.recipeBuilder()
 	.duration(120)
 	.buildAndRegister();
 	
+/*
 //Dark Gear
 chemical_reactor.recipeBuilder()
 	.outputs(<enderio:item_material:73>)
@@ -138,5 +140,6 @@ chemical_reactor.recipeBuilder()
 	.EUt(32)
 	.duration(120)
 	.buildAndRegister();
+*/
 ##########################################################################################
 print("==================== end of mods blank.zs ====================");
