@@ -22,8 +22,8 @@
   "Dictionary Types": [
     "SNOWY",
     "RIVER",
-    "COLD",
-    "WATER"
+    "WATER",
+    "COLD"
   ],
   "BiomeManager Entries": {},
   "Spawnable Creatures": [

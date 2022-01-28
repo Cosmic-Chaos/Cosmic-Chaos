@@ -23,10 +23,10 @@
     "SANDY",
     "DRY",
     "RIVER",
-    "ATUM",
-    "SPARSE",
     "HOT",
-    "WATER"
+    "WATER",
+    "ATUM",
+    "SPARSE"
   ],
   "BiomeManager Entries": {},
   "Spawnable Creatures": [],
