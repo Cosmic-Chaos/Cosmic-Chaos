@@ -10,16 +10,13 @@ print("==================== loading mods blank.zs ====================");
 
 val itemstoRemove =
 [
-	//<enderio:item_material>,
 	<quark:iron_button>,
 	<quark:gold_button>,
 	<ironchest:iron_chest:3>,
-	<furnaceoverhaul:iron_furnace>,
 	<industrialforegoing:sludge_refiner>,
 	<industrialforegoing:spores_recreator>,
 	<tinymobfarm:iron_farm>,
 	<fossil:analyzer>,
-	<enderio:item_alloy_endergy_ingot>,	
 	<gregtech:machine_casing:1>,
 	<gregtech:machine:501>,
 	<industrialforegoing:petrified_fuel_generator>,
@@ -44,13 +41,7 @@ recipes.addShaped(<ironchest:iron_chest:3>, [
 	[anyCopperPlate, anyCopperPlate, anyCopperPlate]
 ]);
 
-//Iron Hull Furnace 
-val anyIronPlate as IIngredient = (<contenttweaker:hull_plate_t1>|<ore:plateIron>) as IIngredient;
-recipes.addShaped(<furnaceoverhaul:iron_furnace>, [
-	[anyIronPlate, anyIronPlate, anyIronPlate],
-	[anyIronPlate, null, anyIronPlate], 
-	[anyIronPlate, anyIronPlate, anyIronPlate]
-]);
+
 
 
 //LV Hull/Casing
@@ -109,42 +100,10 @@ recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_sto
 
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
 
-/* TEMP REMOVAL
-//Brass
-AlloySmelter.addRecipe(ingotBrass*4, [ingotCopper*3,ingotZinc], 500, 0.1);
-
-//RedAlloy
-AlloySmelter.addRecipe(ingotRedAlloy, [ingotCopper,dustRedstone*4], 500, 0.1);
-
-//Steel
-val coalForSteel as IIngredient = (<ore:itemCoal>|<ore:dustCoal>) as IIngredient;
-val crudeForSteel as IIngredient = (<ore:ingotCrudeSteel>|<metaitem:dustCrudeSteel>) as IIngredient;
-
-AlloySmelter.addRecipe(<metaitem:ingotSteel>, [crudeForSteel,coalForSteel], 1500, 0.1);
-*/
-
-//Internals t1
-SagMill.addRecipe([<minecraft:redstone>,<metaitem:dustCoal>,<minecraft:glowstone_dust>], [1,0.9,0.60] , <contenttweaker:internals_t1>, "MULTIPLY_OUTPUT");
-
-//Internals t2
-SagMill.addRecipe([<metaitem:dustDiamond>,<enderio:item_material:20>,<enderio:item_material:62>], [1,0.9,0.50] , <contenttweaker:internals_t2>, "MULTIPLY_OUTPUT");
-
-//Iron Hull
-SagMill.addRecipe([<metaitem:dustIron>,<metaitem:dustLead>,<metaitem:dustTin>], [1, 0.75, 0.66], <contenttweaker:hull_plate_t1>, "MULTIPLY_OUTPUT");
-
-//Copper Hull
-SagMill.addRecipe([<metaitem:dustCopper>,<metaitem:dustGold>,<metaitem:dustZinc>], [1,0.5,0.33] , <contenttweaker:hull_plate_t2>, "MULTIPLY_OUTPUT");
-
-//Dense Hull
-SagMill.addRecipe([<metaitem:dustCrudeSteel>,<metaitem:dustObsidian>,<metaitem:dustAluminium>], [1, 0.55, 0.33], <contenttweaker:hull_plate_t3>, "MULTIPLY_OUTPUT");
-
-//Fancy Hull
-SagMill.addRecipe([<metaitem:dustSilver>,<metaitem:dustNetherQuartz>,<metaitem:dustLapis>], [1, 0.75, 0.60], <contenttweaker:hull_plate_t4>, "MULTIPLY_OUTPUT");
-
 //Cooking Ingots
 furnace.addRecipe(<minecraft:iron_ingot>, <contenttweaker:broken_hull_plate_t1>, 0.0);
 furnace.addRecipe(<metaitem:ingotCopper>, <contenttweaker:broken_hull_plate_t2>, 0.0);
-furnace.addRecipe(<metaitem:ingotLead>, <contenttweaker:broken_hull_plate_t3>, 0.0);
+furnace.addRecipe(<metaitem:ingotTin>, <contenttweaker:broken_hull_plate_t3>, 0.0);
 furnace.addRecipe(<metaitem:ingotCrudeSteel>, <contenttweaker:hull_plate_t3>, 0.0);
 furnace.addRecipe(<metaitem:ingotSilver>, <contenttweaker:hull_plate_t4>, 0.0);
 
