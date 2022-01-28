@@ -32,7 +32,7 @@ alloy_smelter.recipeBuilder()
 	.EUt(32)
 	.duration(120)
 	.buildAndRegister();
-
+/*
 //Dark Steel
 alloy_smelter.recipeBuilder()
 	.outputs(<metaitem:ingotDarkSteel>)
@@ -94,7 +94,7 @@ alloy_smelter.recipeBuilder()
 	.EUt(20)
 	.duration(160)
 	.buildAndRegister();
-
+*/
 //fused_quartz
 electrolyzer.recipeBuilder()
 	.outputs(<enderio:block_fused_quartz>)
