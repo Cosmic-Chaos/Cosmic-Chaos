@@ -2,92 +2,110 @@
 #priority 1001
 import crafttweaker.item.IItemStack;
 import mods.gregtech.material.MaterialRegistry;
+import mods.gregtech.material.MaterialBuilder;
+import mods.gregtech.material.Material;
+import mods.gregtech.material.Elements;
 import mods.jei.JEI;
 import crafttweaker.oredict.IOreDictEntry;
 print("==================== loading new_materials.zs ====================");
 ##########################################################################################
+
+//Unification stuff
+<material:gold>.addFlags("generate_gear");
+<material:tin>.addFlags("generate_gear");
+<material:copper>.addFlags("generate_gear");
 
 ###################################################
 ################## NEW MATS #######################
 ###################################################
 
 /*
-MaterialRegistry.createFluidMaterial(int metaItemSubId, String name, int color, String iconSet, @Optional MaterialStack[] materialComponents);
 
-MaterialRegistry.createDustMaterial(int metaItemSubId, String name, int color, String iconSet, int harvestLevel, @Optional MaterialStack[] materialComponents);
+  "≡": <theaurorian:aurorianiteingot>, # Aurorianite Ingot
+  "≡": <theaurorian:umbraingot>,               # Umbra Ingot
+  "Ξ": <theaurorian:crystallineingot>, # Crystalline Ingot
+  "=": <ore:ingotCerulean>,            # Cerulean Ingot
+  "≡": <ore:ingotMoonstone>,       # Moonstone Ingot
 
-MaterialRegistry.createGemMaterial(int metaItemSubId, String name, int color, String iconSet, int harvestLevel, @Optional MaterialStack[] materialComponents, @Optional float toolSpeed, @Optional int toolDurability);
+  "‗": <midnight:tenebrum_ingot>,      # Tenebrum Ingot
+  "N": <midnight:nagrilite_ingot>,   # Nagrilite Ingot
 
-MaterialRegistry.createIngotMaterial(int metaItemSubId, String name, int color, String iconSet, int harvestLevel, @Optional MaterialStack[] materialComponents, @Optional float toolSpeed, @Optional int toolDurability, @Optional int blastFurnaceTemperature);
+  "_": <mm:chasmium_ingot>,            # Chasmium Ingot
 
-setCableProperties(long voltage, int baseAmperage, int lossPerBlock)
+  "▬": <ore:ingotCrudeSteel>,          # Crude Steel Ingot
+  "l": <ore:ingotElectricalSteel>,     # Electrical Steel Ingot
+  "E": <ore:ingotEnergeticAlloy>,      # Energetic Alloy Ingot
+  "-": <ore:ingotEnergeticSilver>,      # Energetic Silver Ingot
+  "=": <ore:ingotCrystallinePinkSlime>, # Crystalline Pink Slime Ingot
+  "▬": <ore:ingotStellarAlloy>,         # Stellar Alloy Ingot
+  "_": <ore:ingotSoularium>,            # Soularium Ingot
+  "E": <ore:ingotEndSteel>,             # End Steel Ingot
+  "V": <ore:ingotVibrantAlloy>,    # Vibrant Alloy Ingot
+  "_": <ore:ingot_dark_soularium>, # Dark Soularium Ingot
+  "Ξ": <ore:ingotVividAlloy>,        # Vivid Alloy Ingot
+  "D": <ore:ingotDarkSteel>,         # Dark Steel Ingot
+  "≡": <ore:ingotMelodicAlloy>,      # Melodic Alloy Ingot
+  "=": <ore:ingotCrystallineAlloy>,  # Crystalline Alloy Ingot
 
-setFluidPipeProperties(int throughput, int maxTemperature, boolean gasProof)
+  "=": <industrialforegoing:pink_slime_ingot>, # Pink Slime Ingot
+  "▬": <ore:ingotDemonicMetal>,                # Demon Ingot
+  "Ξ": <ore:ingotFluixSteel>,                  # Fluix Steel Ingot
+  "♥": <ore:ingotRedstoneAlloy>,               # Redstone Alloy Ingot
+  "C": <ore:ingotConductiveIron>,              # Conductive Iron Ingot
+  "_": <ore:ingotPulsatingIron>,               # Pulsating Iron Ingot
 
-Utils.registerItem("skystone", 1000, 0x414647, "GEM_HORIZONTAL", "lens");
-Utils.registerItem("fluix", 1001, 0x6a4887, "SHINY", "plate");
-Utils.registerItem("resonating_crystal", 1002, 0x6146c2, "GEM_VERTICAL", "dust");
-Utils.registerItem("end_steel", 1005, 0xece7b6, "METALLIC", "stick");
-Utils.registerItem("end_steel", 1006, 0xece7b6, "METALLIC", "plate");
-Utils.registerItem("end_steel", 1007, 0xece7b6, "METALLIC", "bolt");
-Utils.registerItem("end_steel", 1008, 0xece7b6, "METALLIC", "screw");
-Utils.registerItem("stellar_alloy", 1014, 0xc4ccbf, "SHINY", "plate");
-Utils.registerItem("charged_certus", 1017, 0xD2D2E6, "QUARTZ", "dust");
-Utils.registerItem("ferroboron", 1019, 0x646464, "DULL", "ingotHot");
+  "‗": <ore:ingotEvilMetal>,            # Evil Infused Iron Ingot
+  "Ξ": <randomthings:ingredient:3>,     # Spectre Ingot
+  "≡": <nyx:meteor_ingot>,              # Meteor Ingot
 
-<material:copper>.addFlags(["GENERATE_SPRING_SMALL"]);
-<material:vanadium>.addFlags(["GENERATE_LONG_ROD", "GENERATE_SPRING", "GENERATE_DENSE"]);
-<material:iron>.addFlags(["GENERATE_SMALL_GEAR"]);
-<material:magnesium>.addFlags(["GENERATE_FINE_WIRE"]);
-<material:gold>.addFlags(["GENERATE_RING"]);
-    NONE
-    METALLIC
-    DULL
-    MAGNETIC
-    QUARTZ
-    DIAMOND
-    EMERALD
-    SHINY
-    SHARDS
-    ROUGH
-    FINE
-    SAND
-    FLINT
-    RUBY
-    LAPIS
-    POWDER
-    FLUID
-    GAS
-    LIGNITE
-    OPAL
-    GLASS
-    WOOD
-    LEAF
-    GEM_HORIZONTAL
-    GEM_VERTICAL
-    PAPER
-    NETHERSTAR
+  "T": <ore:ingotTough>,           # Tough Alloy Ingot
+  "=": <ore:ingotSuperAlloy>,      # Super Alloy Ingot
+  "▬": <ore:ingotHardCarbon>,        # Hard Carbon Alloy Ingot
+  "-": <ore:ingotExtreme>,           # Extreme Alloy Ingot
+  "T": <ore:ingotThermoconducting>,     # Thermoconducting Alloy Ingot
 
-    // Set toolDurability to 0 if ingot cannot be used as tool
-// Note that an @Optional parameter can be left out, and it's replaced by default 0.
-// Means Gem and Ingot material cannot be used as tool by default.
-MaterialRegistry.createFluidMaterial(int metaItemSubId, String name, int color, String iconSet, @Optional MaterialStack[] materialComponents);
+  "▬": <ore:ingotIronCompressed>,  # Compressed Iron Ingot
+  "Ξ": <ore:ingotNetherite>,       # Netherite Ingot
+  "‗": <ore:ingotEnchantedMetal>,  # Enchanted Ingot
 
-MaterialRegistry.createDustMaterial(int metaItemSubId, String name, int color, String iconSet, int harvestLevel, @Optional MaterialStack[] materialComponents);
+  "‗": <ore:ingotCrystalized>,       # Crystalized Ingot
 
-MaterialRegistry.createGemMaterial(int metaItemSubId, String name, int color, String iconSet, int harvestLevel, @Optional MaterialStack[] materialComponents, @Optional float toolSpeed, @Optional int toolDamage);
+  "_": <ore:ingotGoldTitaniumAlloy>, # Gold-Titanium-Alloy Ingot
+  "-": <ore:ingotUru>,                 # Uru Ingot
+  "‗": <ore:ingotDwarfStarAlloy>,              # Dwarf Star Alloy Ingot
+  "-": <ore:ingotVibranium>,                   # Vibranium Ingot
+  "-": <ore:ingotIntertium>,       # Intertium Ingot
 
-MaterialRegistry.createIngotMaterial(int metaItemSubId, String name, int color, String iconSet, int toolLevel, @Optional MaterialStack[] materialComponents, @Optional float toolSpeed, @Optional int toolDamage, @Optional int Durability);
+});*/
 
+//Elements.add(8, 8, -1, null, "Crude Steel", "CS", false); // create a new element.
 
-*/
+//Crude Steel
+var crude_steel = MaterialBuilder(32001, "crude_steel") // name
+    .fluid("fluid", true) // fluid with block
+    .ingot(1) // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x9e9e9e) // can also use colorAverage()
+    .iconSet("dull") // "NONE", "METALLIC", "DULL", "MAGNETIC", "QUARTZ", "DIAMOND", "EMERALD", "SHINY", "ROUGH", "FINE", "SAND", "FLINT", "RUBY", "LAPIS", "FLUID", "GAS", "LIGNITE", "OPAL", "GLASS", "WOOD", "GEM_HORIZONTAL", "GEM_VERTICAL", "PAPER", "NETHERSTAR", "BRIGHT".
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags
+    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .cableProperties(8, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+    .components([<material:iron> * 1, <material:carbon> * 2]) // set the components
+//    .element("Iron")
+//    .blastTemp(2900) // (int temp, @Optional gasTier - Available options are: "LOW", "MID", "HIGH", "HIGHER", "HIGHEST, @Optional int eutOverride, @Optional int durationOverride)
+//    .ore() // (@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .washedIn(Material material, @Optional int washedAmount)
+//    .separatedInto: separatedInto(Material... materials)
+//    .addOreByproducts(<material:gold>, <material:copper>)
+//    .oreSmeltInto(Material material)
+//    .polarizesInto(Material material)
+//    .arcSmeltInto(Material material)
+//    .macerateInto(Material material)
+//    .fluidTemp(int temp)
+//    .fluidPipeProperties(int maxTemp, int throughput, boolean gasProof)
+//    .itemPipeProperties(int priority, float stacksPerSec)
+//    .addDefaultEnchant(IEnchantment enchantment)
+    .build(); // build the actual material
 
-## Crude Steel ##
-/*
-Utils.registerItem("crude_steel", 1001, 0x52bfa8, "DULL", "stick");
-Utils.registerItem("crude_steel", 1002, 0x52bfa8, "DULL", "plate");
-Utils.registerItem("crude_steel", 1003, 0x52bfa8, "DULL", "gear");
-*/
 
 /*
 val crystalized = MaterialRegistry.createIngotMaterial(600, "crystalized", 0x52bfa8, "shiny", 1);
@@ -95,10 +113,6 @@ crystalized.setCableProperties(128, 2, 0);
 crystalized.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
 *//*
 
-//Ender IO
-val crudeSteel = MaterialRegistry.createIngotMaterial(601, "crude_steel", 0x9e9e9e, "metallic", 1);
-crudeSteel.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR", "GENERATE_SMALL_GEAR"]);
-crudeSteel.setCableProperties(8, 1, 1);
 
 val end_steel = MaterialRegistry.createIngotMaterial(602, "end_steel", 0xdbd986, "metallic", 1);
 //end_steel.addFlags(["GENERATE_ROD","GENERATE_PLATE","GENERATE_GEAR",]);

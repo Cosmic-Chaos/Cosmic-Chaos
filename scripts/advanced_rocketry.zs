@@ -15,7 +15,7 @@ val itemstoRemove =
 	<advancedrocketry:spacechestplate>,
 	<libvulpes:structuremachine>,
 	<advancedrocketry:jetpack>,
-	<simplyjetpacks:metaitemmods:8>,
+//	<simplyjetpacks:metaitemmods:8>,
 ]
  as IItemStack[];
 
@@ -94,7 +94,7 @@ recipes.addShapeless(<advancedrocketry:thermite> * 3, [<ore:dustAluminium>,<ore:
 val anyTank as IIngredient = (<advancedrocketry:pressuretank>|<advancedrocketry:pressuretank:1>|<advancedrocketry:pressuretank:2>|<advancedrocketry:pressuretank:3>) as IIngredient;
 val basicCapacitor as IIngredient = (<enderio:item_basic_capacitor>|<enderio:item_capacitor_silver>) as IIngredient;
 
-	
+/*
 // Jetpack
 recipes.addShaped(<simplyjetpacks:metaitemmods:8>, [
 	[<ore:plateElectricalSteel>, basicCapacitor, <ore:plateElectricalSteel>],
@@ -110,7 +110,7 @@ assembler.recipeBuilder()
 	.EUt(30)
 	.duration(120)
 	.buildAndRegister();
-
+*/
 	// Hover
 assembler.recipeBuilder()
 	.outputs(<advancedrocketry:itemupgrade>)

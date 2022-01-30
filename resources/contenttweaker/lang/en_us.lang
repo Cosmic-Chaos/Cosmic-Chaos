@@ -32,4 +32,6 @@ item.contenttweaker.hull_plate_t4.name=§aFancy Hull Plate
 item.contenttweaker.internals_t1.name=§aSimple Internals
 item.contenttweaker.internals_t2.name=§aComplex Internals
 
+item_alloy_endergy_ingot
+
 item.contenttweaker.purpleprint.name=§5Multiblock Visualizer

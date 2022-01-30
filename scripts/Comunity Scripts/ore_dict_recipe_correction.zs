@@ -51,7 +51,14 @@ var name_removals = [
     // Other
     "quark:hopper",
     "enderio:tweak_wood_hopper",
-    "minecraft:hopper"
+    "minecraft:hopper",
+
+
+    //EIO Stuff
+    "enderio:auto_crude_steel_1_block_to_9_ingots",
+    "enderio:auto_crude_steel_9_ingots_to_1_block",
+    "enderio:auto_crude_steel_1_ingot_to_9_nuggets",
+    "enderio:auto_crude_steel_9_nuggets_to_1_ingot",
 ] as string[];
 
 for item in name_removals {
