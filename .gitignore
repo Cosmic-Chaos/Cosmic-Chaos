@@ -15,3 +15,7 @@ config/jei/bookmark.ini
 config/jei/worldSettings.cfg
 config/AppliedEnergistics2/items.csv
 config/BiomeTweaker/output/*
+config/AppliedEnergistics2/VersionChecker.cfg
+config/craftpresence.properties
+config/InvTweaks.cfg
+config/splash.properties
