@@ -25,14 +25,6 @@ recipes.addShaped(<metaitem:plateWood>, [[craftingHammer],[<ore:plankWood>]]);
 recipes.addShaped(<metaitem:component.glass.tube>, [[null, <ore:paneGlassColorless>, null],[<ore:paneGlassColorless>, null, <ore:paneGlassColorless>], [null, <ore:paneGlassColorless>, null]]);
 
 
-//Autoclave
-val anySteelPlate as IIngredient = (<ore:plateCrudeSteel>|<ore:plateSteel>) as IIngredient;
-recipes.addShaped(<gregtech:machine:110>, [
-	[anySteelPlate, <ore:blockGlassColorless>, anySteelPlate], 
-	[anySteelPlate, <gregtech:machine:501>, anySteelPlate], 
-	[<ore:circuitBasic>, <gregtech:meta_item_1:32610>, <ore:circuitBasic>]
-]);
-
 /*
 val tinyDustMap as IItemStack[IItemStack] = {
 } as IItemStack[IItemStack];

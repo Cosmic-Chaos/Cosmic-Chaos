@@ -103,7 +103,7 @@ config/brandon3055/Custom Fusion Recipe Info.txt
 
 # Other Stuff
 config/BiomeTweaker/output/*
-$config/craftpresence.properties
+config/craftpresence.properties
 config/jei/jei.cfg
 config/jei/worldSettings.cfg
 config/splash.properties
@@ -113,4 +113,3 @@ minecraftinstance.json
 resourcepacks/*
 asm/hammercore.xml
 craftpresence/chardata.properties
-config/craftpresence.properties

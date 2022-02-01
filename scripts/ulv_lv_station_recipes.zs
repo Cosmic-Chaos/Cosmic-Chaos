@@ -43,6 +43,7 @@ recipes.addShaped(<ironchest:iron_chest:3>, [
 
 //LV Hull/Casing
 val anySteelPlate as IIngredient = (<ore:plateCrudeSteel>|<ore:plateSteel>) as IIngredient;
+
 recipes.addShaped(<gregtech:machine:501>, [
 	[<ore:plateWroughtIron>, anySteelPlate, <ore:plateWroughtIron>], 
 	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]
