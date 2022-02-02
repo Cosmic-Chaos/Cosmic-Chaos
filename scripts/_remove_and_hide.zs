@@ -5,6 +5,7 @@ print("==================== loading mods blank.zs ====================");
 
 val itemstoRemoveAndHide =
 [
+/*
 <gregtech:machine_casing:10>,
 <gregtech:machine_casing:11>,
 <gregtech:machine_casing:12>,
@@ -28,6 +29,20 @@ val itemstoRemoveAndHide =
 <gregtech:machine:7>,
 <gregtech:machine:8>,
 <gregtech:machine:9>,
+<gregtech:machine:4175>,
+<gregtech:machine:4176>,
+<gregtech:machine:4177>,
+<gregtech:machine:4178>,
+<gregtech:machine4197>,
+*/
+
+// LV Machines
+<gregtech:machine:560>, //Laser
+<gregtech:machine:245>, //Cutting Machine
+<gregtech:machine:320>, //Extruder
+//<gregtech:machine:605>, //Thermal Centerfuge
+//<gregtech:machine:425>, //Forming Press
+
 <projecte:collector_mk1>,
 <projecte:collector_mk2>,
 <projecte:collector_mk3>,
@@ -79,11 +94,6 @@ val itemstoRemoveAndHide =
 <enderio:block_lava_generator>,
 <enderio:block_enhanced_vat>,
 <enderio:block_combustion_generator>,
-<gregtech:machine:4175>,
-<gregtech:machine:4176>,
-<gregtech:machine:4177>,
-<gregtech:machine:4178>,
-<gregtech:machine:4197>,
 <enderio:block_simple_alloy_smelter>,
 ]
  as IItemStack[];

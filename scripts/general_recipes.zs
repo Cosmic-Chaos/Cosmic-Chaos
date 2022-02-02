@@ -5,7 +5,6 @@ mods.jei.JEI.hideCategory("Painter");
 mods.jei.JEI.hideCategory("EIOWC");
 mods.jei.JEI.hideCategory("EIOWO");
 mods.jei.JEI.hideCategory("EIOTank");
-mods.jei.JEI.hideCategory("forestry.bottler");
 
 /*
 mods.unidict.removalByKind.get("Crafting").remove("plate");

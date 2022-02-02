@@ -61,11 +61,7 @@ for item in itemstoRemove {
 
 
 val oreDicCleanUp as IItemStack[IOreDictEntry] = {
-    //Forestry
-	<ore:oreApatite>: <forestry:resources>,
-	<ore:oreCopper>: <forestry:resources:1>,
-	<ore:oreTin>: <forestry:resources:2>,
-	<ore:gemApatite>: <forestry:apatite>,
+
     //<ore:dustCoal>:<enderio:item_material:23>,
     //Seems to be unneeded
     //Ender IO
@@ -159,10 +155,6 @@ val oreDicCleanUp as IItemStack[IOreDictEntry] = {
     <ore:dustTin>:<enderio:item_material:27>,
     <ore:dustCobalt>:<enderio:item_material:31>,
 
-    //Teh Gears!
-    <ore:gearTin>:<forestry:gear_tin>,
-    <ore:gearBronze>:<forestry:gear_bronze>,
-    <ore:gearCopper>:<forestry:gear_copper>,
 
 } as IItemStack[IOreDictEntry];
 

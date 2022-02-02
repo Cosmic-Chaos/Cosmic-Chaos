@@ -14,8 +14,6 @@ val itemstoRemove =
 	<industrialforegoing:spores_recreator>,
 	<tinymobfarm:iron_farm>,
 	<fossil:analyzer>,
-	<gregtech:machine_casing:1>,
-	<gregtech:machine:501>,
 	<industrialforegoing:petrified_fuel_generator>,
 	<fossil:bio_goo>,
 ]
