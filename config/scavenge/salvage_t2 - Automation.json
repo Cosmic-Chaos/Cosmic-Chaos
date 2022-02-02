@@ -246,8 +246,8 @@
 			],
 			"drops": [
 				{
-					"name": "gregtech:meta_item_2",
-					"meta": "18071",
+					"name": "gregtech:meta_rotor",
+					"meta": "112",
 					"properties": [
 						{
 							"type": "set_size",

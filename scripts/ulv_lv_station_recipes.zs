@@ -44,17 +44,6 @@ recipes.addShaped(<ironchest:iron_chest:3>, [
 //LV Hull/Casing
 val anySteelPlate as IIngredient = (<ore:plateCrudeSteel>|<ore:plateSteel>) as IIngredient;
 
-recipes.addShaped(<gregtech:machine:501>, [
-	[<ore:plateWroughtIron>, anySteelPlate, <ore:plateWroughtIron>], 
-	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]
-]);
-
-recipes.addShaped(<gregtech:machine_casing:1>, [
-	[anySteelPlate, anySteelPlate, anySteelPlate],
-	[anySteelPlate, <gregtech:meta_tool:8>, anySteelPlate], 
-	[anySteelPlate, anySteelPlate, anySteelPlate]
-]);
-
 /*
 //Crude Steel Piston
 recipes.addShapedMirrored(<gregtech:meta_item_1:32640>, [
@@ -62,27 +51,6 @@ recipes.addShapedMirrored(<gregtech:meta_item_1:32640>, [
 	[<gregtech:cable:5071>, <gregtech:meta_item_1:14601>, <gregtech:meta_item_1:14601>], 
 	[<gregtech:cable:5071>, <gregtech:meta_item_1:32600>, <gregtech:meta_item_2:26601>]
 ]);*/
-
-//petrified_fuel_generator
-recipes.addShaped(<industrialforegoing:petrified_fuel_generator>, [
-	[<ore:plateRubber>, <minecraft:diamond>, <ore:plateRubber>],
-	[<ore:gearGold>, <gregtech:machine:501>, <ore:gearGold>], 
-	[<ore:plateRubber>, <morerefinedstorage:fusion_furnace>, <ore:plateRubber>]
-]);
-
-//Musroom Maker
-recipes.addShaped(<industrialforegoing:spores_recreator>, [
-	[<ore:plateBrass>, <ore:plateBrass>, <ore:plateBrass>],
-	[<minecraft:mycelium>, <gregtech:machine:501>, <minecraft:mycelium>], 
-	[<ore:cableGtSingleRedAlloy>, <ore:circuitBasic>, <ore:cableGtSingleRedAlloy>]
-]);
-
-//Sludge Refiner
-recipes.addShaped(<industrialforegoing:sludge_refiner>, [
-	[<ore:plateBrass>, <metaitem:pipeNormalFluidBronze>, <ore:plateBrass>],
-	[<gregtech:meta_item_1:32600>, <gregtech:machine:501>, <gregtech:meta_item_1:32600>], 
-	[<ore:circuitBasic>, <ore:gearGold>, <ore:circuitBasic>]]
-);
 
 //Hopper
 recipes.addShaped(<minecraft:hopper>, [
@@ -110,20 +78,6 @@ furnace.addRecipe(<metaitem:ingotSilver>, <contenttweaker:hull_plate_t4>, 0.0);
 furnace.addRecipe(<minecraft:glass_pane>, <metaitem:dustSmallGlass>, 0.0);
 furnace.addRecipe(<minecraft:glass>, <metaitem:dustGlass>, 0.0);
 
-/*
-//Making Ingots
-recipes.addShaped(<metaitem:ingotSilver>, [
-	[<ore:nuggetSilver>, <ore:nuggetSilver>, <ore:nuggetSilver>],
-	[<ore:nuggetSilver>, <ore:nuggetSilver>, <ore:nuggetSilver>], 
-	[<ore:nuggetSilver>, <ore:nuggetSilver>, <ore:nuggetSilver>]
-]);
-recipes.addShaped(<metaitem:ingotCrudeSteel>, [
-	[<ore:nuggetCrudeSteel>, <ore:nuggetCrudeSteel>, <ore:nuggetCrudeSteel>],
-	[<ore:nuggetCrudeSteel>, <ore:nuggetCrudeSteel>, <ore:nuggetCrudeSteel>], 
-	[<ore:nuggetCrudeSteel>, <ore:nuggetCrudeSteel>, <ore:nuggetCrudeSteel>]
-]);
-*/
-
 
 //Bio Goo
 //recipes.addShaped(<fossil:bio_goo> * 3, [[<gregtechfoodoption:gtfo_meta_tool>],[<minecraft:mutton>]]);
@@ -133,7 +87,7 @@ recipes.addShaped(<metaitem:ingotCrudeSteel>, [
 recipes.addShaped(<quark:slime_bucket>, [[<fossil:bio_goo>],[<minecraft:bucket>]]);
 
 //Resin
-furnace.addRecipe(<gregtech:meta_item_1:32627> * 4, <fossil:bio_goo>, 0.0);
+furnace.addRecipe(<metaitem:rubber_drop> * 4, <fossil:bio_goo>, 0.0);
 
 // Sludge Recipe
 chemical_reactor.recipeBuilder()

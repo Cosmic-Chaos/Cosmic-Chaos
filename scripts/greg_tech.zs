@@ -6,8 +6,6 @@ print("==================== loading gregtech.zs ====================");
 
 val itemstoRemove =
 [
-	<gregtech:machine:825>,
-	<gregtech:machine:110>,
 ]
  as IItemStack[];
 
@@ -15,14 +13,12 @@ for item in itemstoRemove {
 	recipes.remove(item);
 }
 
-//Crafting Station
-recipes.addShaped(<gregtech:machine:825>, [[<ore:chestWood>, <minecraft:crafting_table>, <ore:chestWood>],[<metaitem:plateBronze>, <gregtech:metal_casing>, <metaitem:plateBronze>], [<metaitem:plateBronze>, <gregtech:meta_tool:6>, <metaitem:plateBronze>]]);
-
-//Wood Plank
-recipes.addShaped(<metaitem:plateWood>, [[craftingHammer],[<ore:plankWood>]]);
-
-//Glass Tube
-recipes.addShaped(<metaitem:component.glass.tube>, [[null, <ore:paneGlassColorless>, null],[<ore:paneGlassColorless>, null, <ore:paneGlassColorless>], [null, <ore:paneGlassColorless>, null]]);
+//Glass Tubes
+recipes.addShaped(<metaitem:component.glass.tube>, [
+	[null, <ore:paneGlassColorless>, null],
+	[<ore:paneGlassColorless>, null, <ore:paneGlassColorless>], 
+	[null, <ore:paneGlassColorless>, null]
+]);
 
 
 /*

@@ -59,8 +59,20 @@
 					]
 				},
 				{
-					"name": "gregtech:meta_item_1",
-					"meta": 1209,
+					"name": "contenttweaker:scrap_rubber",
+					"meta": 0,
+					"amount": 1,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 0,
+							"maxValue": 2
+						}
+					]
+				},
+				{
+					"name": "gregtech:meta_dust_small",
+					"meta": 2000,
 					"amount": 1,
 					"properties": [
 						{
