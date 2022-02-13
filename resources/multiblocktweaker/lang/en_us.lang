@@ -7,3 +7,6 @@ recipemap.crushing_tank.name=Station Recycler
 
 mbt.machine.trash_compactor.name=Trash Compactor
 recipemap.trash_compactor.name=Trash Compactor
+
+mbt.machine.oxygen_collector.name=Life Support System
+recipemap.oxygen_collector.name=Life Support System

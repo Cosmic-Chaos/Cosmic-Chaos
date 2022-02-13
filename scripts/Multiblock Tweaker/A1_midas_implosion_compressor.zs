@@ -144,7 +144,7 @@ midas_implosion_compressor
     .duration(180)
     .EUt(30)
     .inputs(<minecraft:stone>*9, <minecraft:tnt>)
-    .outputs(<minecraft:gold_block>)
+    .outputs(<minecraft:gold_block>*9)
     .buildAndRegister();
 
 midas_implosion_compressor
@@ -153,7 +153,7 @@ midas_implosion_compressor
     .duration(180)
     .EUt(30)
     .inputs(<minecraft:dirt>*9, <minecraft:tnt>)
-    .outputs(<minecraft:grass>)
+    .outputs(<minecraft:grass>*9)
     .buildAndRegister();
 
 // These are best specified in .lang files, since these may not work properly.

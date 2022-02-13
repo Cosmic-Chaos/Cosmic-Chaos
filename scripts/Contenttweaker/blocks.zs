@@ -31,6 +31,15 @@ glassVat.setBlockLayer("TRANSLUCENT");
 glassVat.setLightOpacity(0);
 glassVat.register();
 
+var organicOverloader = VanillaFactory.createBlock("organic_overloader", <blockmaterial:iron>);
+organicOverloader.setLightOpacity(3);
+organicOverloader.setLightValue(1);
+organicOverloader.setBlockHardness(3.0);
+organicOverloader.setBlockResistance(3.0);
+organicOverloader.setToolClass("axe");
+organicOverloader.setToolLevel(1);
+organicOverloader.setBlockSoundType(<soundtype:wood>);
+organicOverloader.register();
 /*
 var book_block = VanillaFactory.createBlock("book_block", <blockmaterial:wood>);
 book_block.setLightValue(0);
