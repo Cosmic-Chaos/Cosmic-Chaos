@@ -1,6 +1,7 @@
 #priority 9999
 import crafttweaker.item.IItemStack;
 import mods.gregtech.recipe.RecipeMap;
+import crafttweaker.item.IIngredient;
 print("==================== loading global.zs ====================");
 ##########################################################################################
 
@@ -65,6 +66,9 @@ global wiremill as RecipeMap =                      RecipeMap.getByName("wiremil
 global craftingHammer as IItemStack = <gregtech:meta_tool:5>;
 global craftingScrewdriver as IItemStack = <gregtech:meta_tool:11>;
 global craftingWrench as IItemStack = <gregtech:meta_tool:8>;
+
+
+global anySteelPlate as IIngredient = (<ore:plateCrudeSteel>|<ore:plateSteel>) as IIngredient;
 
 ##########################################################################################
 print("==================== end of global.zs ====================");

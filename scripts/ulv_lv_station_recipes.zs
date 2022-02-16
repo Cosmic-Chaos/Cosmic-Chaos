@@ -9,11 +9,6 @@ val itemstoRemove =
 [
 	<quark:iron_button>,
 	<quark:gold_button>,
-	<ironchest:iron_chest:3>,
-	<industrialforegoing:sludge_refiner>,
-	<industrialforegoing:spores_recreator>,
-	<tinymobfarm:iron_farm>,
-	<fossil:analyzer>,
 	<industrialforegoing:petrified_fuel_generator>,
 	<fossil:bio_goo>,
 ]
@@ -27,28 +22,25 @@ for item in itemstoRemove {
 recipes.addShapeless(<quark:iron_button>*2, [<minecraft:iron_ingot>]);
 recipes.addShapeless(<quark:gold_button>*2, [<minecraft:gold_ingot>]);
 
+# [Crowbar] from [Bronze Rod][+1]
+craft.remake(<contenttweaker:crowbar_t2>, ["pretty",
+  "  □ □",
+  "  ╱  ",
+  "╱    "], {
+  "□": <ore:plateIron>,   # Iron Plate
+  "╱": <ore:stickBronze>, # Bronze Rod
+});
 
-//Copper Hull Chest
-val anyCopperPlate as IIngredient = (<contenttweaker:hull_plate_t2>|<ore:plateCopper>) as IIngredient;
-recipes.addShaped(<ironchest:iron_chest:3>, [
-	[anyCopperPlate, anyCopperPlate, anyCopperPlate],
-	[anyCopperPlate, null, anyCopperPlate], 
-	[anyCopperPlate, anyCopperPlate, anyCopperPlate]
-]);
-
-
-
-
-//LV Hull/Casing
-val anySteelPlate as IIngredient = (<ore:plateCrudeSteel>|<ore:plateSteel>) as IIngredient;
-
-/*
-//Crude Steel Piston
-recipes.addShapedMirrored(<gregtech:meta_item_1:32640>, [
-	[<gregtech:meta_item_1:12601>, <gregtech:meta_item_1:12601>, <gregtech:meta_item_1:12601>],
-	[<gregtech:cable:5071>, <gregtech:meta_item_1:14601>, <gregtech:meta_item_1:14601>], 
-	[<gregtech:cable:5071>, <gregtech:meta_item_1:32600>, <gregtech:meta_item_2:26601>]
-]);*/
+# [Derelict Casing] from [Stainless Steel Frame Box][+3]
+craft.remake(<contenttweaker:station_casing>, ["pretty",
+  "□ o □",
+  "□ ◙ □",
+  "□ T □"], {
+  "□": <ore:plateCrudeSteel>,       # Crude Steel Plate
+  "o": <ore:craftingToolHardHammer> | <ore:gregHardHammers>, # Iron Hammer
+  "◙": <metaitem:frameCrudeSteel>, # Crude Steel Frame Box
+  "T": <ore:craftingToolWrench> | <ore:gregWrenches>, # Neutronium Wrench
+});
 
 //Hopper
 recipes.addShaped(<minecraft:hopper>, [
@@ -58,12 +50,18 @@ recipes.addShaped(<minecraft:hopper>, [
 ]);
 
 
+
+
 //Diamonds to other gems for blast furnace
 recipes.addShapeless(<metaitem:gemRuby> * 3, [<projecte:item.pe_philosophers_stone>,<minecraft:diamond>,<minecraft:diamond>,<minecraft:diamond>]);
 recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_stone>,<minecraft:diamond>]);
 
-
+// Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
+
+// GC Alloy Dust
+recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 4, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<contenttweaker:dust_crystal_green>]);
+
 
 //Cooking Ingots
 furnace.addRecipe(<minecraft:iron_ingot>, <contenttweaker:broken_hull_plate_t1>, 0.0);
@@ -101,18 +99,6 @@ chemical_reactor.recipeBuilder()
 SludgeRefiner.add(<fossil:bio_goo>, 5);
 SludgeRefiner.add(<minecraft:grass>, 3);
 
-
-//Iron Mob Farm
-recipes.addShaped(<tinymobfarm:iron_farm>, [
-	[<gregtech:meta_item_1:14197>, <ore:blockGlass>, <gregtech:meta_item_1:14197>],
-	[<ore:blockGlass>, <gregtech:meta_tool:8>, <ore:blockGlass>], 
-	[<ore:plateDoubleWroughtIron>, <minecraft:grass>, <ore:plateDoubleWroughtIron>]
-]);
-
-
-
-//aNALIZER
-recipes.addShaped(<fossil:analyzer>, [[<gregtech:meta_item_1:12033>, <ore:paneGlassColorless>, <gregtech:meta_item_1:12033>], [<gregtech:meta_item_1:12033>, <fossil:biofossil>, <gregtech:meta_item_1:12033>]]);
 
 //Sheep Recipe
 recipes.addShaped(<tinymobfarm:lasso>.withTag({capturedMob: {mobName: "Sheep", mobHostile: 0 as byte, mobMaxHealth: 8.0, mobLootTableLocation: "minecraft:entities/sheep/black", 

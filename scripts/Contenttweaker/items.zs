@@ -21,6 +21,8 @@ VanillaFactory.createItem("hull_plate_t4").register();
 
 VanillaFactory.createItem("scrap_rubber").register();
 
+VanillaFactory.createItem("dust_crystal_green").register();
+
 VanillaFactory.createItem("internals_t1").register();
 
 VanillaFactory.createItem("internals_t2").register();

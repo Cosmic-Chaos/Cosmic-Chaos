@@ -18,6 +18,8 @@ material.vivid_alloy=Vivid Alloy
 material.crystalline_pink_slime=Crystalline Pink Slime
 material.energetic_silver=Energetic Silver
 
+material.green_crystal_alloy=Green Crystal Alloy
+
 material.dwarf_star_alloy=Dwarf Star Alloy
 
 item.contenttweaker.crowbar.name=Makeshift Crowbar
@@ -32,7 +34,7 @@ item.contenttweaker.hull_plate_t4.name=§aFancy Hull Plate
 item.contenttweaker.internals_t1.name=§aSimple Internals
 item.contenttweaker.internals_t2.name=§aComplex Internals
 item.contenttweaker.scrap_rubber.name=Rubber Scraps
-
+item.contenttweaker.dust_crystal_green.name=Green Crystal Dust
 
 
 item.contenttweaker.purpleprint.name=§5Multiblock Visualizer

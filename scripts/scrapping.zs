@@ -34,10 +34,8 @@ Carving.removeVariation("laboratory", <chisel:laboratory:15>);
 recipes.addShaped(<chisel:laboratory:8> * 4, [[null, <contenttweaker:hull_plate_t1>, null],[<contenttweaker:hull_plate_t3>, <contenttweaker:internals_t1>, <contenttweaker:hull_plate_t3>], [null, <contenttweaker:hull_plate_t1>, null]]);
 Carving.removeVariation("laboratory", <chisel:laboratory:8>);
 
-//Crafted Crowbar
-recipes.addShaped(<contenttweaker:crowbar_t2>, [[null, <contenttweaker:broken_hull_plate_t1>, <contenttweaker:broken_hull_plate_t1>],[null, <contenttweaker:hull_plate_t2>, null], [<contenttweaker:hull_plate_t1>, null, null]]);
-
-
+//No Fans
+Carving.removeVariation("factory", <chisel:technical:14>);
 
 //scaffold crafting changed
 Carving.removeVariation("factory", <chisel:technical:0>);

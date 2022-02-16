@@ -47,14 +47,15 @@ print("==================== loading new_materials.zs ====================");
   "≡": <ore:ingotMelodicAlloy>,      # Melodic Alloy Ingot
   "=": <ore:ingotCrystallineAlloy>,  # Crystalline Alloy Ingot
 
-  "=": <industrialforegoing:pink_slime_ingot>, # Pink Slime Ingot
   "▬": <ore:ingotDemonicMetal>,                # Demon Ingot
+  "‗": <ore:ingotEvilMetal>,            # Evil Infused Iron Ingot
+
   "Ξ": <ore:ingotFluixSteel>,                  # Fluix Steel Ingot
   "♥": <ore:ingotRedstoneAlloy>,               # Redstone Alloy Ingot
   "C": <ore:ingotConductiveIron>,              # Conductive Iron Ingot
   "_": <ore:ingotPulsatingIron>,               # Pulsating Iron Ingot
 
-  "‗": <ore:ingotEvilMetal>,            # Evil Infused Iron Ingot
+  "=": <industrialforegoing:pink_slime_ingot>, # Pink Slime Ingot
   "Ξ": <randomthings:ingredient:3>,     # Spectre Ingot
   "≡": <nyx:meteor_ingot>,              # Meteor Ingot
 
@@ -86,10 +87,10 @@ var crude_steel = MaterialBuilder(32001, "crude_steel") // name
     .ingot(1) // (@Optional int harvestLevel, @Optional int burnTime)
     .color(0x9e9e9e) // can also use colorAverage()
     .iconSet("dull") // "NONE", "METALLIC", "DULL", "MAGNETIC", "QUARTZ", "DIAMOND", "EMERALD", "SHINY", "ROUGH", "FINE", "SAND", "FLINT", "RUBY", "LAPIS", "FLUID", "GAS", "LIGNITE", "OPAL", "GLASS", "WOOD", "GEM_HORIZONTAL", "GEM_VERTICAL", "PAPER", "NETHERSTAR", "BRIGHT".
-    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags
+    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_frame"]) // add flags
     .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
     .cableProperties(8, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
-    .components([<material:iron> * 1, <material:carbon> * 2]) // set the components
+    .components([<material:iron> * 4, <material:carbon> * 1]) // set the components
 //    .element("Iron")
 //    .blastTemp(2900) // (int temp, @Optional gasTier - Available options are: "LOW", "MID", "HIGH", "HIGHER", "HIGHEST, @Optional int eutOverride, @Optional int durationOverride)
 //    .ore() // (@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
@@ -105,6 +106,17 @@ var crude_steel = MaterialBuilder(32001, "crude_steel") // name
 //    .itemPipeProperties(int priority, float stacksPerSec)
 //    .addDefaultEnchant(IEnchantment enchantment)
     .build(); // build the actual material
+
+// Green Crystal Alloy
+var green_crystal_alloy = MaterialBuilder(32002, "green_crystal_alloy") // name
+    .fluid("fluid", true) // fluid with block
+    .ingot(1) // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x21a343) // can also use colorAverage()
+    .iconSet("SHINY") // "NONE", "METALLIC", "DULL", "MAGNETIC", "QUARTZ", "DIAMOND", "EMERALD", "SHINY", "ROUGH", "FINE", "SAND", "FLINT", "RUBY", "LAPIS", "FLUID", "GAS", "LIGNITE", "OPAL", "GLASS", "WOOD", "GEM_HORIZONTAL", "GEM_VERTICAL", "PAPER", "NETHERSTAR", "BRIGHT".
+    .flags(["generate_plate", "generate_foil", "generate_fine_wire"]) // add flags
+    .cableProperties(8, 4, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+    .components([<material:crude_steel> * 3, <material:beryllium> * 1])
+    .build();
 
 
 /*
