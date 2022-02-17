@@ -31,6 +31,19 @@ glassVat.setBlockLayer("TRANSLUCENT");
 glassVat.setLightOpacity(0);
 glassVat.register();
 
+var glassCrystal = VanillaFactory.createBlock("crystal_green_glass", <blockmaterial:glass>);
+glassCrystal.setLightValue(0.2);
+glassCrystal.setBlockHardness(2.0);
+glassCrystal.setBlockResistance(2.0);
+glassCrystal.setToolClass("pickaxe");
+glassCrystal.setToolLevel(1);
+glassCrystal.setBlockSoundType(<soundtype:glass>);
+glassCrystal.setFullBlock(false);
+glassCrystal.setTranslucent(true);
+glassCrystal.setBlockLayer("TRANSLUCENT");
+glassCrystal.setLightOpacity(0);
+glassCrystal.register();
+
 var organicOverloader = VanillaFactory.createBlock("organic_overloader", <blockmaterial:iron>);
 organicOverloader.setLightOpacity(3);
 organicOverloader.setLightValue(1);

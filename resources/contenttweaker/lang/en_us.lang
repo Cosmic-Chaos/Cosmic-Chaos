@@ -33,8 +33,11 @@ item.contenttweaker.broken_hull_plate_t3.name=Broken Tin Scraps
 item.contenttweaker.hull_plate_t4.name=§aFancy Hull Plate
 item.contenttweaker.internals_t1.name=§aSimple Internals
 item.contenttweaker.internals_t2.name=§aComplex Internals
+item.contenttweaker.internals_t3.name=§aDigital Components
+item.contenttweaker.internals_t4.name=§aHigh Tech Broken Circuits
 item.contenttweaker.scrap_rubber.name=Rubber Scraps
 item.contenttweaker.dust_crystal_green.name=Green Crystal Dust
+item.contenttweaker.dust_crystal_green_glass.name=Glass-Green Crystal Blend
 
 
 item.contenttweaker.purpleprint.name=§5Multiblock Visualizer
@@ -44,3 +47,4 @@ item.contenttweaker.purpleprint.name=§5Multiblock Visualizer
 tile.contenttweaker.station_casing.name=Derelict Casing
 tile.contenttweaker.vat_glass.name=Bio-Covered Glass
 tile.contenttweaker.organic_overloader.name=Photosynthesis Accelerator
+tile.contenttweaker.crystal_green_glass.name=Green Crystal Glass

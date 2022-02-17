@@ -1,6 +1,5 @@
-mbt.machine.cloning_vat.name=Station Cloning Vat
-mbt.multiblock.cloning_vat.description=Smeared with unrecognizable substances from long ago.
-recipemap.cloning_vat.name=Station Cloning Vat
+mbt.machine.bio_organic_fabricator.name=Bio-Organic Fabricator
+recipemap.bio_organic_fabricator.name=Bio-Organic Fabricator
 
 mbt.machine.crushing_tank.name=Station Recycler
 recipemap.crushing_tank.name=Station Recycler

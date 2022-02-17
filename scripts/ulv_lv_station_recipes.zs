@@ -50,6 +50,7 @@ recipes.addShaped(<minecraft:hopper>, [
 ]);
 
 
+furnace.addRecipe(<contenttweaker:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);
 
 
 //Diamonds to other gems for blast furnace
@@ -60,7 +61,10 @@ recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_sto
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
 
 // GC Alloy Dust
-recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 4, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<contenttweaker:dust_crystal_green>]);
+recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<contenttweaker:dust_crystal_green>]);
+
+// GC Glass Dust
+recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:dustGlass>,<metaitem:dustGlass>,<contenttweaker:dust_crystal_green>]);
 
 
 //Cooking Ingots

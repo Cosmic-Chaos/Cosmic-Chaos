@@ -22,10 +22,15 @@ VanillaFactory.createItem("hull_plate_t4").register();
 VanillaFactory.createItem("scrap_rubber").register();
 
 VanillaFactory.createItem("dust_crystal_green").register();
+VanillaFactory.createItem("dust_crystal_green_glass").register();
 
 VanillaFactory.createItem("internals_t1").register();
 
 VanillaFactory.createItem("internals_t2").register();
+
+VanillaFactory.createItem("internals_t3").register();
+
+VanillaFactory.createItem("internals_t4").register();
 
 VanillaFactory.createItem("purpleprint").register();
 
@@ -44,6 +49,7 @@ crowbar_t2.toolClass = "pickaxe";
 crowbar_t2.maxDamage = 256;
 crowbar_t2.toolLevel = 1;
 crowbar_t2.register();
+
 
 
 ##########################################################################################
