@@ -5,18 +5,54 @@ import mods.industrialforegoing.SludgeRefiner;
 print("==================== loading mods blank.zs ====================");
 ##########################################################################################
 
+##=======================================================
+## RECIPE REMOVAL
+##=======================================================
 val itemstoRemove =
 [
 	<quark:iron_button>,
 	<quark:gold_button>,
 	<industrialforegoing:petrified_fuel_generator>,
 	<fossil:bio_goo>,
+	<actuallyadditions:item_knife>,
 ]
  as IItemStack[];
 
 for item in itemstoRemove {
 	recipes.remove(item);
 }
+
+##=======================================================
+## HIDING ITEMS IN JEI
+##=======================================================
+
+val itemstoRemoveAndHide =
+[
+	<actuallyadditions:item_misc:2>, //Knife blade
+	<actuallyadditions:item_misc:3>, //Knife handle
+]
+ as IItemStack[];
+
+for item in itemstoRemoveAndHide {
+	mods.jei.JEI.removeAndHide(item);
+}
+
+
+##=======================================================
+## Adding ITEMS TO JEI
+##=======================================================
+
+//Space Suit with Oxygen
+mods.jei.JEI.addItem(<advancedrocketry:spacechestplate>.withTag({slotInsert: [1, 1, 1, 1, 1, 1] as byte[] as byte[], size: 6, slotExtract: [1, 1, 1, 1, 1, 1] as byte[] as byte[], outputItems: [{Slot: 0 as byte, id: "advancedrocketry:pressuretank", Count: 1 as byte, tag: {Fluid: {FluidName: "oxygen", Amount: 7192}}, Damage: 3 as short}, {Slot: 1 as byte, id: "advancedrocketry:pressuretank", Count: 1 as byte, tag: {Fluid: {FluidName: "oxygen", Amount: 8000}}, Damage: 3 as short}]}));
+
+
+
+##=======================================================
+## RECIPES
+##=======================================================
+
+//Knife
+recipes.addShapeless(<actuallyadditions:item_knife>, [<ore:craftingToolKnife>]);
 
 //No Stone Buttons
 recipes.addShapeless(<quark:iron_button>*2, [<minecraft:iron_ingot>]);
@@ -27,7 +63,7 @@ craft.remake(<contenttweaker:crowbar_t2>, ["pretty",
   "  □ □",
   "  ╱  ",
   "╱    "], {
-  "□": <ore:plateIron>,   # Iron Plate
+  "□": <metaitem:plateWroughtIron>,   # Iron Plate
   "╱": <ore:stickBronze>, # Bronze Rod
 });
 
@@ -37,25 +73,54 @@ craft.remake(<contenttweaker:station_casing>, ["pretty",
   "□ ◙ □",
   "□ T □"], {
   "□": <ore:plateCrudeSteel>,       # Crude Steel Plate
-  "o": <ore:craftingToolHardHammer> | <ore:gregHardHammers>, # Iron Hammer
+  "o": <metaitem:tool.hard_hammer>, # Iron Hammer
   "◙": <metaitem:frameCrudeSteel>, # Crude Steel Frame Box
-  "T": <ore:craftingToolWrench> | <ore:gregWrenches>, # Neutronium Wrench
+  "T": <ore:gtceWrenches>, # Neutronium Wrench
 });
 
-//Hopper
-recipes.addShaped(<minecraft:hopper>, [
-	[<contenttweaker:hull_plate_t3>, null, <contenttweaker:hull_plate_t3>],
-	[<contenttweaker:hull_plate_t3>, <gregtech:meta_tool:6>, <contenttweaker:hull_plate_t3>], 
-	[null, <contenttweaker:hull_plate_t3>, null]
+# [Crafting Station] from [Steel Crate][+3]
+craft.remake(<metaitem:workbench>, ["pretty",
+  "E P",
+  "r S"], {
+  "E": <minecraft:book>, # Book
+  "P": <contenttweaker:station_component_4>, # Primitive Crafting Interface
+  "r": <contenttweaker:station_component_3>, # Primitive Mixed Plating
+  "S": <metaitem:crate.steel>,              # Steel Crate
+});
+// Workbench 2nd Recipe
+recipes.addShaped(<metaitem:workbench>, [
+	[null, <minecraft:book>, null],
+	[<ore:screwIron>, <ore:craftingTableWood>, <ore:screwIron>], 
+	[null, <metaitem:plateBronze>, null]
 ]);
 
+# [Plating Component]
+recipes.addShapeless(<contenttweaker:station_component_1>, 
+	[<ore:gtceHardHammers>,<contenttweaker:hull_plate_t2>,<contenttweaker:hull_plate_t2>,<contenttweaker:hull_plate_t1>]
+);
 
+# [Plating Component]
+recipes.addShapeless(<contenttweaker:station_component_2>, 
+	[<ore:gtceHardHammers>,<contenttweaker:hull_plate_t1>,<contenttweaker:hull_plate_t1>,<contenttweaker:hull_plate_t2>]
+);
+
+# [Primitive Mixed Plating]
+recipes.addShapeless(<contenttweaker:station_component_3>, 
+	[<ore:gtceWrenches>,<contenttweaker:station_component_2>,<contenttweaker:station_component_1>]
+);
+
+# [Primitive Crafting Interface]
+recipes.addShapeless(<contenttweaker:station_component_4>, 
+	[<ore:gtceScrewdrivers>,<contenttweaker:internals_t1>,<contenttweaker:internals_t1>,<contenttweaker:internals_t1>]
+);
+//Crystal Glass
 furnace.addRecipe(<contenttweaker:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);
 
-
+/*
 //Diamonds to other gems for blast furnace
 recipes.addShapeless(<metaitem:gemRuby> * 3, [<projecte:item.pe_philosophers_stone>,<minecraft:diamond>,<minecraft:diamond>,<minecraft:diamond>]);
 recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_stone>,<minecraft:diamond>]);
+*/
 
 // Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);

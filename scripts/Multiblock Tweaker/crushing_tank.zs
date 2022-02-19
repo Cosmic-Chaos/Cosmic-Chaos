@@ -44,7 +44,7 @@ val crushing_tank = Builder.start(loc)
                         .minInputs(1)
 						.maxInputs(1)
 						.minOutputs(1)
-                        .maxOutputs(4)
+                        .maxOutputs(6)
                         .build())
 		.withBaseTexture(<contenttweaker:station_casing>.asBlock().definition.getStateFromMeta(1))
 		.buildAndRegister();
@@ -63,16 +63,107 @@ recipes.addShaped(
 );
 
 // Recipes	
-	
-crushing_tank
-	.recipeMap
-		.recipeBuilder()
+
+//Dense Hull Block
+crushing_tank.recipeMap.recipeBuilder()
     .duration(200)
     .EUt(8)
     .inputs(<chisel:laboratory:11>)
-	.chancedOutput(<contenttweaker:hull_plate_t3>*2, 9000, 1000)
-	.chancedOutput(<contenttweaker:hull_plate_t3>, 7500, 1000)
+    .outputs(<contenttweaker:hull_plate_t3>*5)
+	.chancedOutput(<contenttweaker:hull_plate_t3>*2, 7500, 1000)
+	.chancedOutput(<contenttweaker:hull_plate_t3>, 5000, 1000)
 	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
 	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
-    .buildAndRegister();
+.buildAndRegister();
 	
+    
+//Heavy Hull Block
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(200)
+    .EUt(8)
+    .inputs(<chisel:technicalnew:2>)
+    .outputs(<contenttweaker:broken_hull_plate_t1>*3, <contenttweaker:broken_hull_plate_t3>*3)
+	.chancedOutput(<contenttweaker:broken_hull_plate_t1>, 7500, 1000)
+	.chancedOutput(<contenttweaker:broken_hull_plate_t3>, 7500, 1000)
+	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
+	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
+.buildAndRegister();
+	
+    
+//Light Hull Block
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(200)
+    .EUt(8)
+    .inputs(<chisel:factory:9>)
+    .outputs(<contenttweaker:broken_hull_plate_t2>*5)
+	.chancedOutput(<contenttweaker:broken_hull_plate_t2>*4, 7500, 1000)
+	.chancedOutput(<contenttweaker:broken_hull_plate_t2>*2, 5000, 1000)
+	.chancedOutput(<contenttweaker:broken_hull_plate_t3>, 5000, 1000)
+	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
+	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
+.buildAndRegister();
+	
+//Simple Internals
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(200)
+    .EUt(8)
+    .inputs(<contenttweaker:internals_t1>)
+    .outputs(<minecraft:redstone>*4)
+	.chancedOutput(<metaitem:dustGlass>*2, 7500, 1000)
+	.chancedOutput(<contenttweaker:scrap_rubber>*2, 5000, 1000)
+.buildAndRegister();
+
+
+//Copper Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<metaitem:ingotCopper>)
+    .outputs(<metaitem:dustCopper>)
+.buildAndRegister();
+
+
+//Iron Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<contenttweaker:broken_hull_plate_t1>)
+    .outputs(<metaitem:dustIron>)
+	.chancedOutput(<metaitem:dustIron>, 5000, 1000)
+	.chancedOutput(<metaitem:dustIron>, 2500, 1000)
+.buildAndRegister();
+
+//Iron Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<minecraft:iron_ingot>)
+    .outputs(<metaitem:dustIron>)
+.buildAndRegister();
+
+
+//Tin Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<contenttweaker:broken_hull_plate_t3>)
+    .outputs(<metaitem:dustTin>)
+	.chancedOutput(<metaitem:dustTin>, 5000, 1000)
+	.chancedOutput(<metaitem:dustTin>, 2500, 1000)
+.buildAndRegister();
+//Tin Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<metaitem:ingotTin>)
+    .outputs(<metaitem:dustTin>)
+.buildAndRegister();
+
+//Green Crystal
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<actuallyadditions:item_crystal_shard:4>*2)
+    .outputs(<contenttweaker:dust_crystal_green>)
+	.chancedOutput(<contenttweaker:dust_crystal_green>, 2500, 1000)
+.buildAndRegister();

@@ -37,8 +37,13 @@ item.contenttweaker.internals_t3.name=§aDigital Components
 item.contenttweaker.internals_t4.name=§aHigh Tech Broken Circuits
 item.contenttweaker.scrap_rubber.name=Rubber Scraps
 item.contenttweaker.dust_crystal_green.name=Green Crystal Dust
-item.contenttweaker.dust_crystal_green_glass.name=Glass-Green Crystal Blend
+item.contenttweaker.dust_crystal_green_glass.name=Green Crystal-Glass Blend
 
+
+item.contenttweaker.station_component_1.name=Plating Component
+item.contenttweaker.station_component_2.name=Plating Component
+item.contenttweaker.station_component_3.name=Mixed Primitive Plating
+item.contenttweaker.station_component_4.name=Primitive Crafting Storage
 
 item.contenttweaker.purpleprint.name=§5Multiblock Visualizer
 

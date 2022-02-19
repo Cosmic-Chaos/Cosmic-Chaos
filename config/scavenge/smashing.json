@@ -54,31 +54,19 @@
 						{
 							"type": "set_random_size",
 							"minValue": 1,
-							"maxValue": 3
+							"maxValue": 2
 						}
 					]
 				},
 				{
-					"name": "contenttweaker:scrap_rubber",
-					"meta": 0,
+					"name": "gregtech:meta_dust_small:271",
+					"meta": 271,
 					"amount": 1,
 					"properties": [
 						{
 							"type": "set_random_size",
 							"minValue": 0,
 							"maxValue": 2
-						}
-					]
-				},
-				{
-					"name": "gregtech:meta_dust_small",
-					"meta": 2000,
-					"amount": 1,
-					"properties": [
-						{
-							"type": "set_random_size",
-							"minValue": 0,
-							"maxValue": 1
 						}
 					]
 				}

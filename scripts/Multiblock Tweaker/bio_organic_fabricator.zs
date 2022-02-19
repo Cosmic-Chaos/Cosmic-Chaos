@@ -20,6 +20,8 @@ import mods.gregtech.recipe.functions.ICompleteRecipeFunction;
 import mods.gregtech.recipe.IRecipe;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.RecipeMap;
+import crafttweaker.command.ICommandSender;
+import crafttweaker.command.ICommandManager;
 
 var loc = "mbt:bio_organic_fabricator";
 
@@ -105,15 +107,21 @@ val getCenter = function (pos as IBlockPos, facing as IFacing) as IBlockPos[] {
     ] as IBlockPos[];
 };
 
+
+        //if (!(world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_green_glass>))
+        //if (<contenttweaker:crystal_green_glass> in world.getPickedBlock(pos, null, null))
+        //server.commandManager.executeCommand(server, "msg @p Bio-Organic Fabricator needs cleaning!");
+
 // check if any glass is cleam, if so, start.
 bio_organic_fabricator.checkRecipeFunction = function(controller as IControllerTile, recipe as IRecipe, consumeIfSuccess as bool) as bool {
     val world as IWorld = controller.world;
-    for pos in getSurround(controller.pos, controller.frontFacing) {
+    for pos in getSurround(controller.pos, controller.frontFacing) 
+    {
         if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_green_glass>) {
             return true;
         }
     }
-    return false;
+return false;
 } as ICheckRecipeFunction;
 
 

@@ -34,6 +34,13 @@ VanillaFactory.createItem("internals_t4").register();
 
 VanillaFactory.createItem("purpleprint").register();
 
+
+
+VanillaFactory.createItem("station_component_1").register();
+VanillaFactory.createItem("station_component_2").register();
+VanillaFactory.createItem("station_component_3").register();
+VanillaFactory.createItem("station_component_4").register();
+
 val crowbar = VanillaFactory.createItem("crowbar");
 crowbar.maxStackSize = 1;
 crowbar.rarity = "UNCOMMON";
