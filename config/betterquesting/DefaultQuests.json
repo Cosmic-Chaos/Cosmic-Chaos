@@ -173,7 +173,9 @@
       }
     },
     "3:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        105
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -908,7 +910,9 @@
       }
     },
     "17:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        113
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -957,7 +961,9 @@
       }
     },
     "18:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        113
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -1006,7 +1012,9 @@
       }
     },
     "19:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        113
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -1264,8 +1272,7 @@
     },
     "24:10": {
       "preRequisites:11": [
-        18,
-        25
+        108
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -1321,7 +1328,10 @@
       }
     },
     "25:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        106,
+        108
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -1331,12 +1341,12 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:redstone"
+            "id:8": "contenttweaker:dust_crystal_green"
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Redstone",
+          "name:8": "Crystal Dust",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -1362,7 +1372,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "minecraft:redstone"
+              "id:8": "contenttweaker:dust_crystal_green"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5157,7 +5167,8 @@
       "preRequisites:11": [
         4,
         6,
-        5
+        5,
+        112
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5453,8 +5464,7 @@
     },
     "105:10": {
       "preRequisites:11": [
-        19,
-        18
+        108
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5562,8 +5572,8 @@
     },
     "107:10": {
       "preRequisites:11": [
-        106,
-        59
+        59,
+        25
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5613,7 +5623,11 @@
       }
     },
     "108:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        19,
+        17,
+        18
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -5729,7 +5743,9 @@
       }
     },
     "110:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        115
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -5790,7 +5806,9 @@
       }
     },
     "111:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        115
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -5926,6 +5944,182 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "113:10": {
+      "preRequisites:11": [
+        99
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Craft up a Copper or Iron Furnace for your basic Smelting Needs!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 5,
+            "OreDict:8": "",
+            "id:8": "morefurnaces:furnaceblock"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Scrap Furnaces",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 113,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 5,
+              "OreDict:8": "",
+              "id:8": "morefurnaces:furnaceblock"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "morefurnaces:furnaceblock"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "114:10": {
+      "preRequisites:11": [
+        8
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 6,
+            "OreDict:8": "",
+            "id:8": "morefurnaces:furnaceblock"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Upgraded Furnaces!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 114,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 6,
+              "OreDict:8": "",
+              "id:8": "morefurnaces:furnaceblock"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "115:10": {
+      "preRequisites:11": [
+        25
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "contenttweaker:crystal_green_glass"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Crystal Glass",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 115,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:dust_crystal_green_glass"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:crystal_green_glass"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -5973,7 +6167,7 @@
           "id:3": 3,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 216,
+          "x:3": 372,
           "y:3": -36
         },
         "4:10": {
@@ -6001,15 +6195,15 @@
           "id:3": 7,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 252,
-          "y:3": -72
+          "x:3": 420,
+          "y:3": -48
         },
         "8:10": {
           "id:3": 8,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 252,
-          "y:3": 0
+          "x:3": 420,
+          "y:3": -12
         },
         "9:10": {
           "id:3": 9,
@@ -6022,78 +6216,78 @@
           "id:3": 17,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": 0
+          "x:3": 228,
+          "y:3": -36
         },
         "11:10": {
           "id:3": 18,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": 72
+          "x:3": 228,
+          "y:3": 0
         },
         "12:10": {
           "id:3": 19,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": -36
+          "x:3": 228,
+          "y:3": -72
         },
         "13:10": {
           "id:3": 24,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
-          "y:3": 36
+          "x:3": 324,
+          "y:3": 0
         },
         "14:10": {
           "id:3": 25,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": 36
+          "x:3": 324,
+          "y:3": -72
         },
         "15:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": -72
+          "x:3": 456,
+          "y:3": -48
         },
         "16:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 48
+          "x:3": 564,
+          "y:3": -48
         },
         "17:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
-          "y:3": 48
+          "x:3": 564,
+          "y:3": -120
         },
         "18:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 12,
-          "y:3": 84
+          "x:3": 564,
+          "y:3": -84
         },
         "19:10": {
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": 48
+          "x:3": 600,
+          "y:3": -120
         },
         "20:10": {
           "id:3": 98,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 48
+          "x:3": 636,
+          "y:3": -120
         },
         "21:10": {
           "id:3": 99,
@@ -6106,84 +6300,105 @@
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 84
+          "x:3": 636,
+          "y:3": -84
         },
         "23:10": {
           "id:3": 101,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 48
+          "x:3": 600,
+          "y:3": -48
         },
         "24:10": {
           "id:3": 102,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 84
+          "x:3": 600,
+          "y:3": -12
         },
         "25:10": {
           "id:3": 104,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 120,
-          "y:3": 84
+          "x:3": 564,
+          "y:3": -12
         },
         "26:10": {
           "id:3": 105,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 336,
-          "y:3": 0
+          "x:3": 324,
+          "y:3": -36
         },
         "27:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
-          "y:3": -144
+          "y:3": -108
         },
         "28:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 324,
-          "y:3": -108
+          "x:3": 492,
+          "y:3": -72
         },
         "29:10": {
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 48
+          "x:3": 276,
+          "y:3": -36
         },
         "30:10": {
           "id:3": 109,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 192,
-          "y:3": 84
+          "x:3": 636,
+          "y:3": -12
         },
         "31:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": 48
+          "x:3": 420,
+          "y:3": -144
         },
         "32:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": 84
+          "x:3": 420,
+          "y:3": -108
         },
         "33:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
+          "y:3": 36
+        },
+        "34:10": {
+          "id:3": 113,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 180,
+          "y:3": -36
+        },
+        "35:10": {
+          "id:3": 114,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 456,
+          "y:3": -12
+        },
+        "36:10": {
+          "id:3": 115,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 372,
           "y:3": -108
         }
       }
@@ -6347,300 +6562,293 @@
           "y:3": 12
         },
         "17:10": {
-          "id:3": 25,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 48
-        },
-        "18:10": {
           "id:3": 26,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": -42
         },
-        "19:10": {
+        "18:10": {
           "id:3": 27,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -42
         },
-        "20:10": {
+        "19:10": {
           "id:3": 28,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 120
         },
-        "21:10": {
+        "20:10": {
           "id:3": 29,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 156
         },
-        "22:10": {
+        "21:10": {
           "id:3": 30,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -150
         },
-        "23:10": {
+        "22:10": {
           "id:3": 31,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -114
         },
-        "24:10": {
+        "23:10": {
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -186
         },
-        "25:10": {
+        "24:10": {
           "id:3": 33,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -132
         },
-        "26:10": {
+        "25:10": {
           "id:3": 34,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -78
         },
-        "27:10": {
+        "26:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": -168
         },
-        "28:10": {
+        "27:10": {
           "id:3": 36,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": -132
         },
-        "29:10": {
+        "28:10": {
           "id:3": 37,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -96
         },
-        "30:10": {
+        "29:10": {
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 132
         },
-        "31:10": {
+        "30:10": {
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 168
         },
-        "32:10": {
+        "31:10": {
           "id:3": 40,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -204
         },
-        "33:10": {
+        "32:10": {
           "id:3": 41,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -240
         },
-        "34:10": {
+        "33:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -276
         },
-        "35:10": {
+        "34:10": {
           "id:3": 43,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -276
         },
-        "36:10": {
+        "35:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -168
         },
-        "37:10": {
+        "36:10": {
           "id:3": 45,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -132
         },
-        "38:10": {
+        "37:10": {
           "id:3": 46,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -96
         },
-        "39:10": {
+        "38:10": {
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -60
         },
-        "40:10": {
+        "39:10": {
           "id:3": 48,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -24
         },
-        "41:10": {
+        "40:10": {
           "id:3": 49,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 12
         },
-        "42:10": {
+        "41:10": {
           "id:3": 50,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 48
         },
-        "43:10": {
+        "42:10": {
           "id:3": 51,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -48
         },
-        "44:10": {
+        "43:10": {
           "id:3": 52,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 48
         },
-        "45:10": {
+        "44:10": {
           "id:3": 53,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 84
         },
-        "46:10": {
+        "45:10": {
           "id:3": 54,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 96
         },
-        "47:10": {
+        "46:10": {
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 24
         },
-        "48:10": {
+        "47:10": {
           "id:3": 56,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -120
         },
-        "49:10": {
+        "48:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -12
         },
-        "50:10": {
+        "49:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -84
         },
-        "51:10": {
+        "50:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 24,
           "y:3": -180
         },
-        "52:10": {
+        "51:10": {
           "id:3": 60,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": -180
         },
-        "53:10": {
+        "52:10": {
           "id:3": 61,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 336,
           "y:3": -156
         },
-        "54:10": {
+        "53:10": {
           "id:3": 62,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 372,
           "y:3": -120
         },
-        "55:10": {
+        "54:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -132
         },
-        "56:10": {
+        "55:10": {
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -180
         },
-        "57:10": {
+        "56:10": {
           "id:3": 65,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 372,
           "y:3": -156
         },
-        "58:10": {
+        "57:10": {
           "id:3": 66,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": -156
         },
-        "59:10": {
+        "58:10": {
           "id:3": 93,
           "sizeX:3": 24,
           "sizeY:3": 24,

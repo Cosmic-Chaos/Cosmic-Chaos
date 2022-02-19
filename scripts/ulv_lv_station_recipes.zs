@@ -30,6 +30,20 @@ val itemstoRemoveAndHide =
 [
 	<actuallyadditions:item_misc:2>, //Knife blade
 	<actuallyadditions:item_misc:3>, //Knife handle
+	/*
+	<morefurnaces:upgrade:7>, 
+	<morefurnaces:upgrade:6>,
+	<morefurnaces:upgrade:5>,
+	<morefurnaces:upgrade:4>,
+	<morefurnaces:upgrade:3>,
+	<morefurnaces:upgrade:2>,
+	<morefurnaces:upgrade:1>,
+	<morefurnaces:upgrade>,
+	*/
+	<morefurnaces:furnaceblock:4>,
+	<morefurnaces:furnaceblock:3>,
+	<morefurnaces:furnaceblock:2>,
+	<morefurnaces:furnaceblock:1>, // Furnace Stuff
 ]
  as IItemStack[];
 
@@ -113,8 +127,44 @@ recipes.addShapeless(<contenttweaker:station_component_3>,
 recipes.addShapeless(<contenttweaker:station_component_4>, 
 	[<ore:gtceScrewdrivers>,<contenttweaker:internals_t1>,<contenttweaker:internals_t1>,<contenttweaker:internals_t1>]
 );
+
+# [Copper Furnace] from [Neutronium Wrench][+1]
+craft.remake(<morefurnaces:furnaceblock:5>, ["pretty",
+  "P P P",
+  "P T P",
+  "P P P"], {
+  "P": <contenttweaker:station_component_1>, # Plating Component
+  "T": <ore:gtceWrenches>, # Neutronium Wrench
+});
+
+# [Iron Furnace] from [Neutronium Wrench][+1]
+craft.remake(<morefurnaces:furnaceblock>, ["pretty",
+  "P P P",
+  "P T P",
+  "P P P"], {
+  "P": <contenttweaker:station_component_2>, # Plating Component
+  "T": <ore:gtceWrenches>, # Neutronium Wrench
+});
+
+# [Silver Furnace] from [Silver Wrench][+1]
+craft.remake(<morefurnaces:furnaceblock:6>, ["pretty",
+  "□ □ □",
+  "□ T □",
+  "□ □ □"], {
+  "□": <metaitem:plateSilver>, # Silver Plate
+  "T": <ore:gtceWrenches>, # Wrench
+});
+
+//Reuse the Basic furnaces
+val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
+recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);
+
+
+
 //Crystal Glass
 furnace.addRecipe(<contenttweaker:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);
+
+
 
 /*
 //Diamonds to other gems for blast furnace
