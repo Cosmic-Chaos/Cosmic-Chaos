@@ -59,7 +59,7 @@
 					]
 				},
 				{
-					"name": "gregtech:meta_dust_small:271",
+					"name": "gregtech:meta_dust_small",
 					"meta": 271,
 					"amount": 1,
 					"properties": [
