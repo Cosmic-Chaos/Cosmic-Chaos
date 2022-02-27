@@ -178,7 +178,7 @@ bio_organic_fabricator
     .duration(500)
     .EUt(8)
     .inputs(<fossil:sheep_dna>)
-	.fluidInputs(<liquid:sludge> * 1000)
+	.fluidInputs(<liquid:sludge> * 2000)
     .outputs(<minecraft:mutton> * 2,
 			 <minecraft:wool> * 4,
 	         <minecraft:bone> * 2)

@@ -52,15 +52,18 @@ val crushing_tank = Builder.start(loc)
 crushing_tank.hasMaintenanceMechanics = false;
 crushing_tank.hasMufflerMechanics = false;
 
-// Controller Recipe
-recipes.addShaped(
-    <metaitem:mbt:crushing_tank>,
-    [
-        [<gregtech:fluid_pipe_normal:1617>,         <gregtech:metal_casing:1>,         <gregtech:fluid_pipe_normal:1617>],
-        [<minecraft:glass>, <gregtech:metal_casing:1>,  <minecraft:glass>],
-        [<gregtech:fluid_pipe_normal:1617>,         <gregtech:metal_casing:1>,         <gregtech:fluid_pipe_normal:1617>]
-    ]
-);
+# [Station Recycler] from [tile.contenttweaker.controller_broken_south.name][+5]
+craft.remake(<metaitem:mbt:crushing_tank>, ["pretty",
+  "P r P",
+  "G t G",
+  "¤ ⌂ ¤"], {
+  "P": <contenttweaker:station_component_4>,     # Primitive Crafting Storage
+  "r": <ore:circuitPrimitive>,                   # Vacuum Tube
+  "G": <ore:wireGtDoubleTin>,                    # 2x Tin Wire
+  "t": <contenttweaker:controller_broken_south>, # tile.contenttweaker.controller_broken_south.name
+  "¤": <ore:gearCopper>,                         # Copper Gear
+  "⌂": <contenttweaker:station_casing>,          # Derelict Casing
+});
 
 // Recipes	
 

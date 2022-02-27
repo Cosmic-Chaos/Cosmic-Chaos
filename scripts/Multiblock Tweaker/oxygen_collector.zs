@@ -69,7 +69,7 @@ val oxygen_collector = Builder.start(loc)
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:station_casing>)
 			.where("T", <blockstate:advancedrocketry:liquidtank>)
-			.where("G", <blockstate:sonarcore:clearstableglass>)
+			.where("G", CTPredicate.blocks(<contenttweaker:crystal_green_glass>))
 			.where("L", <blockstate:contenttweaker:organic_overloader>)
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
                                       | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1) // There is at least one IMPORT_ITEMS bus. JEI preview shows only one.

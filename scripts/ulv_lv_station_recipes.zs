@@ -155,6 +155,43 @@ craft.remake(<morefurnaces:furnaceblock:6>, ["pretty",
   "T": <ore:gtceWrenches>, # Wrench
 });
 
+# [Derelict Casing] from [Wrought Iron Frame Box][+3]
+craft.remake(<contenttweaker:station_casing>, ["pretty",
+  "P o P",
+  "P ◙ P",
+  "P T P"], {
+  "P": <contenttweaker:station_component_1> | <contenttweaker:station_component_2>, # Plating Component
+  "o": <ore:gtceHardHammers>, # Neutronium Hammer
+  "◙": <ore:frameGtWroughtIron>,                   # Wrought Iron Frame Box
+  "T": <ore:gtceWrenches>, # Neutronium Wrench
+});
+
+# [Small Pile of Glass Dust] from [Glass Shard][+1]
+craft.reshapeless(<metaitem:dustSmallGlass>, "TG", {
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+  "G": <ore:shardGlass>, # Glass Shard
+});
+
+# [Vacuum Tube] from [Glass Tube][+2]
+craft.remake(<metaitem:circuit.vacuum_tube>, ["pretty",
+  "╱ l ╱",
+  "G G G"], {
+  "╱": <ore:stickWroughtIron>,     # Wrought Iron Rod
+  "l": <gregtech:meta_item_1:517>, # Glass Tube
+  "G": <ore:wireGtSingleCopper>,   # 1x Copper Wire
+});
+
+# [ULV Machine Hull] from [Wrought Iron Plate][+3]
+craft.remake(<metaitem:hull.ulv>, ["pretty",
+  "     ",
+  "□ п □",
+  "G ⌂ G"], {
+  "□": <ore:plateCopper>,         # Copper Plate
+  "п": <ore:plateWroughtIron>,    # Wrought Iron Plate
+  "G": <ore:wireGtSingleTin>,     # 1x Tin Wire
+  "⌂": <gregtech:machine_casing>, # ULV Machine Casing
+});
+
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);

@@ -7,13 +7,19 @@ import mods.gregtech.material.Material;
 import mods.gregtech.material.Elements;
 import mods.jei.JEI;
 import crafttweaker.oredict.IOreDictEntry;
+import mods.gregtech.ore.OrePrefix;
 print("==================== loading new_materials.zs ====================");
 ##########################################################################################
+
+
+val ingotPrefix = OrePrefix.getPrefix("ingot");
 
 //Unification stuff
 <material:gold>.addFlags("generate_gear");
 <material:tin>.addFlags("generate_gear");
 <material:copper>.addFlags("generate_gear");
+<material:iron>.addFlags("generate_frame");
+<material:wrought_iron>.addFlags("generate_frame");
 
 ###################################################
 ################## NEW MATS #######################
@@ -106,6 +112,7 @@ var crude_steel = MaterialBuilder(32001, "crude_steel") // name
 //    .itemPipeProperties(int priority, float stacksPerSec)
 //    .addDefaultEnchant(IEnchantment enchantment)
     .build(); // build the actual material
+ingotPrefix.setIgnored(<material:crude_steel>);
 
 // Green Crystal Alloy
 var green_crystal_alloy = MaterialBuilder(32002, "green_crystal_alloy") // name
@@ -114,7 +121,7 @@ var green_crystal_alloy = MaterialBuilder(32002, "green_crystal_alloy") // name
     .color(0x21a343) // can also use colorAverage()
     .iconSet("SHINY") // "NONE", "METALLIC", "DULL", "MAGNETIC", "QUARTZ", "DIAMOND", "EMERALD", "SHINY", "ROUGH", "FINE", "SAND", "FLINT", "RUBY", "LAPIS", "FLUID", "GAS", "LIGNITE", "OPAL", "GLASS", "WOOD", "GEM_HORIZONTAL", "GEM_VERTICAL", "PAPER", "NETHERSTAR", "BRIGHT".
     .flags(["generate_plate", "generate_foil", "generate_fine_wire"])
-    .cableProperties(8, 4, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+    .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .components([<material:crude_steel> * 4, <material:beryllium> * 1])
     .build();
 

@@ -251,8 +251,10 @@ unify(<ore:itemSilicon>, 0);
 <ore:fusedGlass>.add(<sonarcore:stableglass>);
 <ore:fusedGlass>.add(<sonarcore:clearstableglass>);
 
+/*
 //Fix EIO Dusts
 <enderio:item_material:23>.displayName = "Coal Dust";
+
 furnace.setFuel(<enderio:item_material:23>, 1600);
 
 <enderio:item_material:25>.displayName = "Gold Dust";
@@ -260,6 +262,6 @@ furnace.setFuel(<enderio:item_material:23>, 1600);
 <enderio:item_material:24>.displayName = "Iron Dust";
 <enderio:item_material:32>.displayName = "Lapis Dust";
 <enderio:item_material:33>.displayName = "Quartz Dust";
-
+*/
 //<enderio:item_material:26>.displayName = "Copper Dust";
 //<enderio:item_material:27>.displayName = "Tin Dust";
