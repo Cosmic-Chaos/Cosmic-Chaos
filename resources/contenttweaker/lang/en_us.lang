@@ -1,6 +1,3 @@
-material.crystalized=Crystalized
-
-
 material.crude_steel=Crude Steel
 material.end_steel=End Steel
 material.electrical_steel=Electrical Steel
@@ -21,6 +18,17 @@ material.energetic_silver=Energetic Silver
 material.green_crystal_alloy=Green Crystal Alloy
 
 material.dwarf_star_alloy=Dwarf Star Alloy
+material.uru=Uru
+material.vibranium=Vibranium
+material.adamantium=Adamantium
+
+
+material.fluix=Fluix
+material.fluix_steel=Fluix Steel
+
+
+item.material.oreprefix.sheet=%s Sheet
+
 
 item.contenttweaker.crowbar.name=Makeshift Crowbar
 item.contenttweaker.crowbar_t2.name=§6Crowbar

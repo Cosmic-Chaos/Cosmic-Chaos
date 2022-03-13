@@ -33,5 +33,10 @@ for crystal, shard in crystalMap {
 recipes.removeShaped(crystal, [[shard, shard, shard],[shard, shard, shard], [shard, shard, shard]]);
 recipes.removeShapeless(shard * 9, [crystal]);
 }
+
+//Red Shards burn 32 items
+furnace.setFuel(<actuallyadditions:item_crystal_shard>, 6400);
+
+<actuallyadditions:item_knife>.maxDamage = 200;
 ##########################################################################################
 print("==================== end of mods blank.zs ====================");

@@ -8,6 +8,92 @@
 <recipe name="Gear, better save than sorry" disabled="true" />
 <recipe name="Alloy: Endergy Crude Steel" disabled="true" />
 
+<recipe name="Auto: electrical_steel 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: electrical_steel 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: electrical_steel 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: electrical_steel 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: energetic_alloy 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: energetic_alloy 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: energetic_alloy 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: energetic_alloy 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: vibrant_alloy 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: vibrant_alloy 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: vibrant_alloy 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: vibrant_alloy 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: redstone_alloy 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: redstone_alloy 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: redstone_alloy 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: redstone_alloy 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: conductive_iron 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: conductive_iron 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: conductive_iron 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: conductive_iron 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: pulsating_iron 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: pulsating_iron 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: pulsating_iron 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: pulsating_iron 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: dark_steel 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: dark_steel 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: dark_steel 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: dark_steel 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: soularium 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: soularium 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: soularium 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: soularium 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: end_steel 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: end_steel 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: end_steel 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: end_steel 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: construction_alloy 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: construction_alloy 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: construction_alloy 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: construction_alloy 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: crude_steel 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: crude_steel 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: crude_steel 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: crude_steel 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: crystalline_alloy 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: crystalline_alloy 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: crystalline_alloy 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: crystalline_alloy 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: melodic_alloy 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: melodic_alloy 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: melodic_alloy 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: melodic_alloy 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: stellar_alloy 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: stellar_alloy 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: stellar_alloy 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: stellar_alloy 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: crystalline_pink_slime 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: crystalline_pink_slime 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: crystalline_pink_slime 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: crystalline_pink_slime 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: energetic_silver 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: energetic_silver 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: energetic_silver 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: energetic_silver 1 ingot to 9 nuggets" disabled="true" />
+
+<recipe name="Auto: vivid_alloy 9 ingots to 1 block" disabled="true" />
+<recipe name="Auto: vivid_alloy 9 nuggets to 1 ingot" disabled="true" />
+<recipe name="Auto: vivid_alloy 1 block to 9 ingots" disabled="true" />
+<recipe name="Auto: vivid_alloy 1 ingot to 9 nuggets" disabled="true" />
+
+
   <recipe name="Red Alloy">
     <alloying energy="1000" exp="0.0">
       <input name="ingotCopper"/>

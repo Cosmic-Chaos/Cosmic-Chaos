@@ -117,6 +117,16 @@ crushing_tank.recipeMap.recipeBuilder()
 .buildAndRegister();
 
 
+
+//Copper Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<contenttweaker:broken_hull_plate_t2>)
+    .outputs(<metaitem:dustCopper>)
+	.chancedOutput(<metaitem:dustCopper>, 5000, 1000)
+	.chancedOutput(<metaitem:dustCopper>, 2500, 1000)
+.buildAndRegister();
 //Copper Dust
 crushing_tank.recipeMap.recipeBuilder()
     .duration(100)
@@ -136,7 +146,7 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustIron>, 2500, 1000)
 .buildAndRegister();
 
-//Iron Dust
+//Iron Ingot
 crushing_tank.recipeMap.recipeBuilder()
     .duration(100)
     .EUt(8)
@@ -154,13 +164,33 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustTin>, 5000, 1000)
 	.chancedOutput(<metaitem:dustTin>, 2500, 1000)
 .buildAndRegister();
-//Tin Dust
+
+//Tin Ingot
 crushing_tank.recipeMap.recipeBuilder()
     .duration(100)
     .EUt(8)
     .inputs(<metaitem:ingotTin>)
     .outputs(<metaitem:dustTin>)
 .buildAndRegister();
+
+//Crude Steel Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<contenttweaker:hull_plate_t3>)
+    .outputs(<metaitem:dustCrudeSteel>)
+	.chancedOutput(<metaitem:dustCrudeSteel>, 5000, 1000)
+	.chancedOutput(<metaitem:dustCrudeSteel>, 2500, 1000)
+.buildAndRegister();
+
+//Crude Steel Ingot
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<ore:ingotCrudeSteel>)
+    .outputs(<metaitem:dustCrudeSteel>)
+.buildAndRegister();
+
 
 //Green Crystal
 crushing_tank.recipeMap.recipeBuilder()

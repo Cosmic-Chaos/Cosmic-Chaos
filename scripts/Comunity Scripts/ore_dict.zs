@@ -62,87 +62,6 @@ for item in itemstoRemove {
 
 val oreDicCleanUp as IItemStack[IOreDictEntry] = {
 
-    //<ore:dustCoal>:<enderio:item_material:23>,
-    //Seems to be unneeded
-    //Ender IO
-    /*
-	<ore:ingotCrudeSteel>: <gregtech:meta_ingot:32001>,
-	<ore:blockCrudeSteel>: <gregtech:meta_block_compressed_2000:1>,
-	<ore:nuggetCrudeSteel>: <gregtech:meta_nugget:32001>,
-
-    <ore:blockRedstoneAlloy>:<gregtech:meta_block_compressed_37:15>,
-    <ore:ingotRedstoneAlloy>:<gregtech:meta_item_1:10607>,
-    <ore:nuggetRedstoneAlloy>:<gregtech:meta_item_1:9607>,
-
-    <ore:blockVibrantAlloy>:<gregtech:meta_block_compressed_38>,
-    <ore:ingotVibrantAlloy>:<gregtech:meta_item_1:10608>,
-    <ore:nuggetVibrantAlloy>:<gregtech:meta_item_1:9608>,
-
-    <ore:blockEnergeticAlloy>:<gregtech:meta_block_compressed_38:1>,
-    <ore:ingotEnergeticAlloy>:<gregtech:meta_item_1:10609>,
-    <ore:nuggetEnergeticAlloy>:<gregtech:meta_item_1:9609>,
-
-    <ore:blockDarkSteel>:<gregtech:meta_block_compressed_37:12>,
-    <ore:ingotDarkSteel>:<gregtech:meta_item_1:10604>,
-    <ore:nuggetDarkSteel>:<gregtech:meta_item_1:9604>,
-
-    <ore:blockPulsatingIron>:<gregtech:meta_block_compressed_37:13>,
-    <ore:ingotPulsatingIron>:<gregtech:meta_item_1:10605>,
-    <ore:nuggetPulsatingIron>:<gregtech:meta_item_1:9605>,
-
-    <ore:blockConductiveIron>:<gregtech:meta_block_compressed_37:14>,
-    <ore:ingotConductiveIron>:<gregtech:meta_item_1:10606>,
-    <ore:nuggetConductiveIron>:<gregtech:meta_item_1:9606>,
-
-    <ore:blockSoularium>:<gregtech:meta_block_compressed_38:2>,
-    <ore:ingotSoularium>:<gregtech:meta_item_1:10610>,
-    <ore:nuggetSoularium>:<gregtech:meta_item_1:9610>,
-
-    <ore:blockEndSteel>:<gregtech:meta_block_compressed_37:10>,
-    <ore:ingotEndSteel>:<gregtech:meta_item_1:10602>,
-    <ore:nuggetEndSteel>:<gregtech:meta_item_1:9602>,
-
-    <ore:blockElectricalSteel>:<gregtech:meta_block_compressed_37:11>,
-    <ore:ingotElectricalSteel>:<gregtech:meta_item_1:10603>,
-    <ore:nuggetElectricalSteel>:<gregtech:meta_item_1:9603>,
-
-    <ore:blockEnergeticSilver>:<gregtech:meta_block_compressed_38:7>,
-    <ore:ingotEnergeticSilver>:<gregtech:meta_item_1:10615>,
-    <ore:nuggetEnergeticSilver>:<gregtech:meta_item_1:9615>,
-
-    <ore:blockCrystallinePinkSlime>:<gregtech:meta_block_compressed_38:6>,
-    <ore:ingotCrystallinePinkSlime>:<gregtech:meta_item_1:10614>,
-    <ore:nuggetCrystallinePinkSlime>:<gregtech:meta_item_1:9614>,
-
-    <ore:blockVividAlloy>:<gregtech:meta_block_compressed_38:8>,
-    <ore:ingotVividAlloy>:<gregtech:meta_item_1:10616>,
-    <ore:nuggetVividAlloy>:<gregtech:meta_item_1:9616>,
-
-    <ore:blockStellarAlloy>:<gregtech:meta_block_compressed_38:5>,
-    <ore:ingotStellarAlloy>:<gregtech:meta_item_1:10613>,
-    <ore:nuggetStellarAlloy>:<gregtech:meta_item_1:9613>,
-
-    <ore:blockMelodicAlloy>:<gregtech:meta_block_compressed_38:4>,
-    <ore:ingotMelodicAlloy>:<gregtech:meta_item_1:10612>,
-    <ore:nuggetMelodicAlloy>:<gregtech:meta_item_1:9612>,
-
-    //Lucraft
-    <ore:ingotVibranium>:<gregtech:meta_item_1:10717>,
-    <ore:plateVibranium>:<gregtech:meta_item_1:12717>,
-    <ore:dustVibranium>:<gregtech:meta_item_1:2717>,
-
-    <ore:blockDwarfStarAlloy>:<gregtech:meta_block_compressed_38:9>,
-    <ore:plateDwarfStarAlloy>:<gregtech:meta_item_1:12617>,
-    <ore:ingotDwarfStarAlloy>:<gregtech:meta_item_1:10617>,
-    <ore:dustDwarfStarAlloy>:<gregtech:meta_item_1:2617>,
-    <ore:nuggetDwarfStarAlloy>:<gregtech:meta_item_1:9617>,
-
-    //Refined Storage
-    <ore:blockCrystalized>:<gregtech:meta_block_compressed_37:8>,
-    <ore:ingotCrystalized>:<gregtech:meta_item_1:10600>,
-    <ore:nuggetCrystalized>:<gregtech:meta_item_1:9600>,
-*/
-
 
     //Wrong Circits
     <ore:circuitBasic>:<lucraftcore:basic_circuit>,
@@ -165,7 +84,7 @@ JEI.removeAndHide(item);
 }
 
 
-static mods as string[] = ["minecraft",  "gregtech", "gtadditions", "enderio","nuclearcraft", "advancedrocketry", "libvulpes", "lucraftcore", "chisel", "actuallyadditions", "threng"];
+static mods as string[] = ["minecraft",  "gregtech", "gtadditions", "devtech","enderio","nuclearcraft", "advancedrocketry", "libvulpes", "lucraftcore", "chisel", "actuallyadditions", "threng"];
 static size as int = mods.length - 1;
 
 function unify_oredicts (oredict as [IOreDictEntry]) {
@@ -251,11 +170,11 @@ unify(<ore:itemSilicon>, 0);
 <ore:fusedGlass>.add(<sonarcore:stableglass>);
 <ore:fusedGlass>.add(<sonarcore:clearstableglass>);
 
+
 /*
 //Fix EIO Dusts
 <enderio:item_material:23>.displayName = "Coal Dust";
 
-furnace.setFuel(<enderio:item_material:23>, 1600);
 
 <enderio:item_material:25>.displayName = "Gold Dust";
 <enderio:item_material:29>.displayName = "Obsidian Dust";

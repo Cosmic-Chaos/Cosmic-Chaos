@@ -53,18 +53,37 @@ var name_removals = [
     "enderio:tweak_wood_hopper",
     "minecraft:hopper",
 
-
+/* Done in config with every other one
     //EIO Stuff
     "enderio:auto_crude_steel_1_block_to_9_ingots",
     "enderio:auto_crude_steel_9_ingots_to_1_block",
     "enderio:auto_crude_steel_1_ingot_to_9_nuggets",
     "enderio:auto_crude_steel_9_nuggets_to_1_ingot",
+*/
+    "lucraftcore:nugget_vibranium",
+    "lucraftcore:block_vibranium",
+    "lucraftcore:ingot_vibranium",
+    "lucraftcore:ingot_vibranium_alt",
+
+    "lucraftcore:nugget_uru",
+    "lucraftcore:block_uru",
+    "lucraftcore:ingot_uru",
+    "lucraftcore:ingot_uru_alt",
+
+    "lucraftcore:nugget_adamantium",
+    "lucraftcore:block_adamantium",
+    "lucraftcore:ingot_adamantium",
+    "lucraftcore:ingot_adamantium_alt",
+
+    "lucraftcore:nugget_dwarf_star_alloy",
+    "lucraftcore:block_dwarf_star_alloy",
+    "lucraftcore:ingot_dwarf_star_alloy",
+    "lucraftcore:ingot_dwarf_star_alloy_alt",
 ] as string[];
 
 for item in name_removals {
     recipes.removeByRecipeName(item);
 }
-
 
 // Furnace ----------------------------------------------------
 

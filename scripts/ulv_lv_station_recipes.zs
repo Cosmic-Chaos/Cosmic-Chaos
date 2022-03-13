@@ -2,7 +2,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import mods.industrialforegoing.SludgeRefiner;
 
-print("==================== loading mods blank.zs ====================");
+print("==================== loading ulv_lv_station_recipes.zs ====================");
 ##########################################################################################
 
 ##=======================================================
@@ -105,7 +105,7 @@ craft.remake(<metaitem:workbench>, ["pretty",
 recipes.addShaped(<metaitem:workbench>, [
 	[null, <minecraft:book>, null],
 	[<ore:screwIron>, <ore:craftingTableWood>, <ore:screwIron>], 
-	[null, <metaitem:plateBronze>, null]
+	[null, <metaitem:plateDoubleBronze>, null]
 ]);
 
 # [Plating Component]
@@ -298,4 +298,4 @@ compressor.recipeBuilder()
 recipes.addShapeless(<metaitem:dustSulfur>, [<projecte:item.pe_philosophers_stone>,<ore:dustCoal>,<ore:dustCoal>,<ore:dustCoal>,<ore:dustCoal>]);
 
 ##########################################################################################
-print("==================== end of mods blank.zs ====================");
+print("==================== end of ulv_lv_station_recipes.zs ====================");

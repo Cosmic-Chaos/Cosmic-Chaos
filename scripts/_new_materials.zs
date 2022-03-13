@@ -13,6 +13,12 @@ print("==================== loading new_materials.zs ====================");
 
 
 val ingotPrefix = OrePrefix.getPrefix("ingot");
+val gemPrefix = OrePrefix.getPrefix("gem");
+val platePrefix = OrePrefix.getPrefix("plate");
+val gearPrefix = OrePrefix.getPrefix("gear");
+val blockPrefix = OrePrefix.getPrefix("block");
+val dustPrefix = OrePrefix.getPrefix("dust");
+val nuggetPrefix = OrePrefix.getPrefix("nugget");
 
 //Unification stuff
 <material:gold>.addFlags("generate_gear");
@@ -38,28 +44,12 @@ val ingotPrefix = OrePrefix.getPrefix("ingot");
 
   "_": <mm:chasmium_ingot>,            # Chasmium Ingot
 
-  "▬": <ore:ingotCrudeSteel>,          # Crude Steel Ingot
-  "l": <ore:ingotElectricalSteel>,     # Electrical Steel Ingot
-  "E": <ore:ingotEnergeticAlloy>,      # Energetic Alloy Ingot
-  "-": <ore:ingotEnergeticSilver>,      # Energetic Silver Ingot
-  "=": <ore:ingotCrystallinePinkSlime>, # Crystalline Pink Slime Ingot
-  "▬": <ore:ingotStellarAlloy>,         # Stellar Alloy Ingot
-  "_": <ore:ingotSoularium>,            # Soularium Ingot
-  "E": <ore:ingotEndSteel>,             # End Steel Ingot
-  "V": <ore:ingotVibrantAlloy>,    # Vibrant Alloy Ingot
   "_": <ore:ingot_dark_soularium>, # Dark Soularium Ingot
-  "Ξ": <ore:ingotVividAlloy>,        # Vivid Alloy Ingot
-  "D": <ore:ingotDarkSteel>,         # Dark Steel Ingot
-  "≡": <ore:ingotMelodicAlloy>,      # Melodic Alloy Ingot
-  "=": <ore:ingotCrystallineAlloy>,  # Crystalline Alloy Ingot
 
   "▬": <ore:ingotDemonicMetal>,                # Demon Ingot
   "‗": <ore:ingotEvilMetal>,            # Evil Infused Iron Ingot
 
   "Ξ": <ore:ingotFluixSteel>,                  # Fluix Steel Ingot
-  "♥": <ore:ingotRedstoneAlloy>,               # Redstone Alloy Ingot
-  "C": <ore:ingotConductiveIron>,              # Conductive Iron Ingot
-  "_": <ore:ingotPulsatingIron>,               # Pulsating Iron Ingot
 
   "=": <industrialforegoing:pink_slime_ingot>, # Pink Slime Ingot
   "Ξ": <randomthings:ingredient:3>,     # Spectre Ingot
@@ -78,17 +68,21 @@ val ingotPrefix = OrePrefix.getPrefix("ingot");
   "‗": <ore:ingotCrystalized>,       # Crystalized Ingot
 
   "_": <ore:ingotGoldTitaniumAlloy>, # Gold-Titanium-Alloy Ingot
-  "-": <ore:ingotUru>,                 # Uru Ingot
-  "‗": <ore:ingotDwarfStarAlloy>,              # Dwarf Star Alloy Ingot
-  "-": <ore:ingotVibranium>,                   # Vibranium Ingot
   "-": <ore:ingotIntertium>,       # Intertium Ingot
 
 });*/
 
+//Elements.add: Elements.add(long protons, long neutrons, long halfLifeSeconds, String decayTo, String name, String symbol, boolean isIsotope)
 //Elements.add(8, 8, -1, null, "Crude Steel", "CS", false); // create a new element.
 
+
+/////////////////////////////////////////////////////////
+////////////////       Ender IO         /////////////////
+/////////////////////////////////////////////////////////
+
+
 //Crude Steel
-var crude_steel = MaterialBuilder(32001, "crude_steel") // name
+var crude_steel = MaterialBuilder(32002, "crude_steel") // name
     .fluid("fluid", true) // fluid with block
     .ingot(1) // (@Optional int harvestLevel, @Optional int burnTime)
     .color(0x9e9e9e) // can also use colorAverage()
@@ -114,92 +108,314 @@ var crude_steel = MaterialBuilder(32001, "crude_steel") // name
     .build(); // build the actual material
 ingotPrefix.setIgnored(<material:crude_steel>);
 
+// End Steel
+var end_steel = MaterialBuilder(32003, "end_steel")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xdbd986) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:end_steel>);
+
+// Electrical Steel
+var electrical_steel = MaterialBuilder(32004, "electrical_steel")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xa7b5b4) // can also use colorAverage() if using components
+    .iconSet("shiny")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:electrical_steel>);
+
+// Dark Steel
+var dark_steel = MaterialBuilder(32005, "dark_steel")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x363636) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:dark_steel>);
+gearPrefix.setIgnored(<material:dark_steel>);
+
+// Pulsating Iron
+var pulsating_iron = MaterialBuilder(32006, "pulsating_iron")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x96d996) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:pulsating_iron>);
+
+//Conductive Iron
+var conductive_iron = MaterialBuilder(32007, "conductive_iron")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xe3b1b8) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:conductive_iron>);
+
+// Redstone Alloy
+var redstone_alloy = MaterialBuilder(32008, "redstone_alloy")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xa31d1d) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:redstone_alloy>);
+
+// Vibrant Alloy
+var vibrant_alloy = MaterialBuilder(32009, "vibrant_alloy")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xaade52) // can also use colorAverage() if using components
+    .iconSet("shiny")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:vibrant_alloy>);
+gearPrefix.setIgnored(<material:vibrant_alloy>);
+
+// Energetic Alloy
+var energetic_alloy = MaterialBuilder(32010, "energetic_alloy")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xdb8246) // can also use colorAverage() if using components
+    .iconSet("shiny")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:energetic_alloy>);
+gearPrefix.setIgnored(<material:energetic_alloy>);
+
+// Soularium
+var soularium = MaterialBuilder(32011, "soularium")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x6e4d2d) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:soularium>);
+
+// Crystalline Alloy
+var crystalline_alloy = MaterialBuilder(32012, "crystalline_alloy")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xadd7db) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:crystalline_alloy>);
+
+// Melodic Alloy
+var melodic_alloy = MaterialBuilder(32013, "melodic_alloy")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xc796d4) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:melodic_alloy>);
+
+// Stellar Alloy
+var stellar_alloy = MaterialBuilder(32014, "stellar_alloy")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xfffcd1) // can also use colorAverage() if using components
+    .iconSet("shiny")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:stellar_alloy>);
+
+// Crystalline Pink Slime
+var crystalline_pink_slime = MaterialBuilder(32015, "crystalline_pink_slime")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xdf8be0) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:crystalline_pink_slime>);
+
+// Energetic Silver
+var energetic_silver = MaterialBuilder(32016, "energetic_silver")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x73afc7) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:energetic_silver>);
+
+// Vivid Alloy
+var vivid_alloy = MaterialBuilder(32017, "vivid_alloy")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x46b4db) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:vivid_alloy>);
+
+
+
+/////////////////////////////////////////////////////////
+/////////////////       Lucidcraft      /////////////////
+/////////////////////////////////////////////////////////
+
+
+// Uru
+Elements.add(800, 850, -1, null, "Uru", "Ur", false); // create a new element.
+var uru = MaterialBuilder(32051, "uru")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xa3acad) // can also use colorAverage() if using components
+    .iconSet("metallic")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+    .element("Uru")
+    .blastTemp(5400, "HIGH") // (int temp, @Optional gasTier - Available options are: "LOW", "MID", "HIGH", "HIGHER", "HIGHEST, @Optional int eutOverride, @Optional int durationOverride)
+//    .ore(1, 1, true)
+//    .addOreByproducts(<material:dwarf_star_alloy>, <material:rutile>, <material:gold>)
+    .build();
+ingotPrefix.setIgnored(<material:uru>);
+//platePrefix.setIgnored(<material:uru>);
+//blockPrefix.setIgnored(<material:uru>);
+//nuggetPrefix.setIgnored(<material:uru>);
+
+
+// Dwarf Star Alloy
+var dwarf_star_alloy = MaterialBuilder(32050, "dwarf_star_alloy")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x445956) // can also use colorAverage() if using components
+    .iconSet("shiny")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+    .blastTemp(5400, "HIGH") // (int temp, @Optional gasTier - Available options are: "LOW", "MID", "HIGH", "HIGHER", "HIGHEST, @Optional int eutOverride, @Optional int durationOverride)
+    .ore(1, 1, false)
+    .addOreByproducts(<material:uru>, <material:tungsten>, <material:rutile>, <material:cooperite>)
+    .build();
+ingotPrefix.setIgnored(<material:dwarf_star_alloy>);
+//platePrefix.setIgnored(<material:dwarf_star_alloy>);
+//blockPrefix.setIgnored(<material:dwarf_star_alloy>);
+//nuggetPrefix.setIgnored(<material:dwarf_star_alloy>);
+
+// Vibranium
+// Vibrainium would be placed under the main body of metals of the periodic table near our currently unnamed elements. Its symbol would be Vb, and its shorthand electron configuration would be [Rn]7s27f147d5
+// Elements.add: Elements.add(long protons, long neutrons, long halfLifeSeconds, String decayTo, String name, String symbol, boolean isIsotope)
+Elements.add(850, 900, -1, null, "Vibranium", "Vb", false); // create a new element.
+
+var vibranium = MaterialBuilder(32052, "vibranium")
+    .fluid("fluid", true) // fluid with block
+    .ingot(10) // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x82c4cf) // can also use colorAverage() if using components
+    .iconSet("shiny")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+    .element("Vibranium")
+    .blastTemp(5400, "HIGH") // (int temp, @Optional gasTier - Available options are: "LOW", "MID", "HIGH", "HIGHER", "HIGHEST, @Optional int eutOverride, @Optional int durationOverride)
+    .ore(1, 1, true) // (@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .washedIn(Material material, @Optional int washedAmount)
+//    .separatedInto: separatedInto(Material... materials)
+    .addOreByproducts(<material:uru>, <material:rutile>)
+//    .oreSmeltInto(Material material)
+//    .polarizesInto(Material material)
+//    .arcSmeltInto(Material material)
+//    .macerateInto(Material material)
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+    .toolStats(20, 15, 256000, 12) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:vibranium>);
+//platePrefix.setIgnored(<material:vibranium>);
+//blockPrefix.setIgnored(<material:vibranium>);
+//nuggetPrefix.setIgnored(<material:vibranium>);
+
+// Adamantium
+var adamantium = MaterialBuilder(32053, "adamantium")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xc1c2c9) // can also use colorAverage() if using components
+    .iconSet("shiny")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, "generate_foil", "generate_fine_wire"
+//    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+//    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .build();
+ingotPrefix.setIgnored(<material:adamantium>);
+
+/////////////////////////////////////////////////////////
+////////////////////       AE 2      ////////////////////
+/////////////////////////////////////////////////////////
+
+
+// Fluix
+var fluix = MaterialBuilder(32100, "fluix")
+    .gem() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x713d82) // can also use colorAverage() if using components
+    .iconSet("QUARTZ")
+    .flags(["generate_plate", "generate_rod", "generate_gear","generate_foil", "generate_fine_wire","generate_lens"]) // add flags, 
+    .cableProperties(32, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+    .build();
+gemPrefix.setIgnored(<material:fluix>);
+blockPrefix.setIgnored(<material:fluix>);
+dustPrefix.setIgnored(<material:fluix>);
+
+// Fluix Steel
+var fluix_steel = MaterialBuilder(32101, "fluix_steel")
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x713d82) // can also use colorAverage() if using components
+    .iconSet("shiny")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // add flags, 
+    .cableProperties(128, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+    .build();
+ingotPrefix.setIgnored(<material:fluix_steel>);
+
+
+/////////////////////////////////////////////////////////
+//////////////////       Custom         /////////////////
+/////////////////////////////////////////////////////////
+
 // Green Crystal Alloy
-var green_crystal_alloy = MaterialBuilder(32002, "green_crystal_alloy") // name
+var green_crystal_alloy = MaterialBuilder(32150, "green_crystal_alloy") // name
     .fluid("fluid", true) // fluid with block
     .ingot(1) // (@Optional int harvestLevel, @Optional int burnTime)
     .color(0x21a343) // can also use colorAverage()
-    .iconSet("SHINY") // "NONE", "METALLIC", "DULL", "MAGNETIC", "QUARTZ", "DIAMOND", "EMERALD", "SHINY", "ROUGH", "FINE", "SAND", "FLINT", "RUBY", "LAPIS", "FLUID", "GAS", "LIGNITE", "OPAL", "GLASS", "WOOD", "GEM_HORIZONTAL", "GEM_VERTICAL", "PAPER", "NETHERSTAR", "BRIGHT".
+    .iconSet("SHINY")
     .flags(["generate_plate", "generate_foil", "generate_fine_wire"])
     .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .components([<material:crude_steel> * 4, <material:beryllium> * 1])
     .build();
 
-
-/*
-val crystalized = MaterialRegistry.createIngotMaterial(600, "crystalized", 0x52bfa8, "shiny", 1);
-crystalized.setCableProperties(128, 2, 0);
-crystalized.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-*//*
-
-
-val end_steel = MaterialRegistry.createIngotMaterial(602, "end_steel", 0xdbd986, "metallic", 1);
-//end_steel.addFlags(["GENERATE_ROD","GENERATE_PLATE","GENERATE_GEAR",]);
-
-val electrical_steel = MaterialRegistry.createIngotMaterial(603, "electrical_steel", 0xa7b5b4, "shiny", 1);
-electrical_steel.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-
-val dark_steel = MaterialRegistry.createIngotMaterial(604, "dark_steel", 0x363636, "metallic", 2, [], 3.5, 4, 1000);
-//val dark_steel = MaterialRegistry.createIngotMaterial(604, "dark_steel", 0x363636, "metallic", 1);
-//dark_steel.addFlags(["GENERATE_ROD", "GENERATE_PLATE"]);
-
-
-val pulsating_iron = MaterialRegistry.createIngotMaterial(605, "pulsating_iron", 0x96d996, "metallic", 1);
-//pulsating_iron.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-val conductive_iron = MaterialRegistry.createIngotMaterial(606, "conductive_iron", 0xe3b1b8	, "metallic", 1);
-conductive_iron.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-val redstone_alloy = MaterialRegistry.createIngotMaterial(607, "redstone_alloy", 0xa31d1d, "metallic", 1);
-//redstone_alloy.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-val vibrant_alloy = MaterialRegistry.createIngotMaterial(608, "vibrant_alloy", 0xaade52, "shiny", 1);
-//vibrant_alloy.addFlags(["GENERATE_ROD", "GENERATE_PLATE"]);
-
-val energetic_alloy = MaterialRegistry.createIngotMaterial(609, "energetic_alloy", 0xe3914d, "shiny", 1);
-//energetic_alloy.addFlags(["GENERATE_ROD", "GENERATE_PLATE"]);
-energetic_alloy.setCableProperties(32, 1, 0);
-
-val soularium = MaterialRegistry.createIngotMaterial(610, "soularium", 0x6e4d2d, "metallic", 1);
-//soularium.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-val crystalline_alloy = MaterialRegistry.createIngotMaterial(611, "crystalline_alloy", 0xadd7db, "metallic", 1);
-//crystalline_alloy.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-val melodic_alloy = MaterialRegistry.createIngotMaterial(612, "melodic_alloy", 0xc796d4, "metallic", 1);
-//melodic_alloy.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-val stellar_alloy = MaterialRegistry.createIngotMaterial(613, "stellar_alloy", 0xfffcd1, "metallic", 1);
-//stellar_alloy.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-val crystalline_pink_slime = MaterialRegistry.createIngotMaterial(614, "crystalline_pink_slime", 0xdf8be0, "metallic", 1);
-//crystalline_pink_slime.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-val energetic_silver = MaterialRegistry.createIngotMaterial(615, "energetic_silver", 0x73afc7, "metallic", 1);
-//energetic_silver.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-val vivid_alloy = MaterialRegistry.createIngotMaterial(616, "vivid_alloy", 0x72caed, "metallic", 1);
-//vivid_alloy.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-
-//Lucraft
-val dwarf_star_alloy = MaterialRegistry.createIngotMaterial(617, "dwarf_star_alloy", 0x445956, "shiny", 1);
-dwarf_star_alloy.addFlags(["GENERATE_ROD", "GENERATE_PLATE", "GENERATE_GEAR"]);
-
-
-*/
-/*
-val tinyDustMap as IItemStack[IItemStack] = {
-} as IItemStack[IItemStack];
-
-for tinyDust, material in tinyDustMap {
-	mods.fossils.recipes.addSifterOutput(material, tinyDust, 1);
-}
-
-
-<techreborn:part:13>.displayName = "Constantan Heating Coil";
-<astralsorcery:itemcelestialcrystal>.addTooltip(format.aqua("Grows from a Celestal Crystal Cluster"));
-*/
 ##########################################################################################
 print("==================== end of new_materials.zs ====================");

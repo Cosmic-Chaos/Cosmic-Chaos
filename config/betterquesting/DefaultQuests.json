@@ -5588,7 +5588,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32002,
+            "Damage:2": 32001,
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
@@ -5619,7 +5619,13 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32002,
+              "Damage:2": 32001,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 32001,
               "OreDict:8": "",
               "id:8": "gregtech:meta_ingot"
             }
