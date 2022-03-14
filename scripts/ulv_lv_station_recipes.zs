@@ -65,6 +65,11 @@ mods.jei.JEI.addItem(<advancedrocketry:spacechestplate>.withTag({slotInsert: [1,
 ## RECIPES
 ##=======================================================
 
+//Busses because no wood
+recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<metaitem:crate.steel>]]);
+recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<metaitem:crate.steel>],[<metaitem:hull.ulv>]]);
+
+
 //Knife
 recipes.addShapeless(<actuallyadditions:item_knife>, [<ore:craftingToolKnife>]);
 
@@ -81,8 +86,20 @@ craft.remake(<contenttweaker:crowbar_t2>, ["pretty",
   "╱": <ore:stickBronze>, # Bronze Rod
 });
 
-# [Derelict Casing] from [Stainless Steel Frame Box][+3]
-craft.remake(<contenttweaker:station_casing>, ["pretty",
+
+# [Derelict Casing] from [Wrought Iron Frame Box][+3]
+craft.remake(<contenttweaker:station_casing>*2, ["pretty",
+  "P o P",
+  "P ◙ P",
+  "P T P"], {
+  "P": <contenttweaker:station_component_1> | <contenttweaker:station_component_2>, # Plating Component
+  "o": <ore:gtceHardHammers>, # Neutronium Hammer
+  "◙": <ore:frameGtWroughtIron>,                   # Wrought Iron Frame Box
+  "T": <ore:gtceWrenches>, # Neutronium Wrench
+});
+
+# [Derelict Casing] from [Crude Steel Frame Box][+3]
+craft.remake(<contenttweaker:station_casing>*4, ["pretty",
   "□ o □",
   "□ ◙ □",
   "□ T □"], {
@@ -154,18 +171,6 @@ craft.remake(<morefurnaces:furnaceblock:6>, ["pretty",
   "□": <metaitem:plateSilver>, # Silver Plate
   "T": <ore:gtceWrenches>, # Wrench
 });
-
-# [Derelict Casing] from [Wrought Iron Frame Box][+3]
-craft.remake(<contenttweaker:station_casing>, ["pretty",
-  "P o P",
-  "P ◙ P",
-  "P T P"], {
-  "P": <contenttweaker:station_component_1> | <contenttweaker:station_component_2>, # Plating Component
-  "o": <ore:gtceHardHammers>, # Neutronium Hammer
-  "◙": <ore:frameGtWroughtIron>,                   # Wrought Iron Frame Box
-  "T": <ore:gtceWrenches>, # Neutronium Wrench
-});
-
 # [Small Pile of Glass Dust] from [Glass Shard][+1]
 craft.reshapeless(<metaitem:dustSmallGlass>, "TG", {
   "T": <ore:gtceHardHammers>, # Neutronium Hammer
@@ -230,6 +235,17 @@ furnace.addRecipe(<metaitem:ingotSilver>, <contenttweaker:hull_plate_t4>, 0.0);
 furnace.addRecipe(<minecraft:glass_pane>, <metaitem:dustSmallGlass>, 0.0);
 furnace.addRecipe(<minecraft:glass>, <metaitem:dustGlass>, 0.0);
 
+# [Rubber Sheet] from [Neutronium Hammer][+1]
+craft.remake(<gregtech:meta_plate:1068>, ["pretty",
+  "  T",
+  "  ▬",
+  "  ▬"], {
+  "T": <ore:craftingToolHardHammer> | <ore:gtceHardHammers>, # Neutronium Hammer
+  "▬": <ore:ingotRubber>, # Rubber Bar
+});
+
+//Rubber
+furnace.addRecipe(<metaitem:ingotRubber>, <metaitem:dustRubber>, 0.0);
 
 //Bio Goo
 //recipes.addShaped(<fossil:bio_goo> * 3, [[<gregtechfoodoption:gtfo_meta_tool>],[<minecraft:mutton>]]);

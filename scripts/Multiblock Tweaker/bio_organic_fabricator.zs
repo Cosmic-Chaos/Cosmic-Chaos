@@ -66,6 +66,8 @@ val bio_organic_fabricator = Builder.start(loc)
 		FactoryRecipeMap.start("bio_organic_fabricator")
                         .minFluidInputs(1)
                         .maxFluidInputs(1)
+                        .minFluidOutputs(1)
+                        .maxFluidOutputs(1)
                         .minInputs(1)
 						.maxInputs(1)
 						.minOutputs(1)
@@ -131,7 +133,7 @@ bio_organic_fabricator.updateFormedValidFunction = function(controller as IContr
     if (controller.offsetTimer % 20 == 0) {
         if (controller.recipeLogic.isWorking) {
             for pos in getCenter(controller.pos, controller.frontFacing) {
-                    world.setBlockState(<blockstate:industrialforegoing:sludge>, pos); // SLUDGE
+                    world.setBlockState(<blockstate:enderio:block_fluid_nutrient_distillation>, pos); // SLUDGE
             }
         } else if (!controller.recipeLogic.isActive) { //Clear interior so next recipe can run
             for pos in getCenter(controller.pos, controller.frontFacing) {
@@ -178,9 +180,10 @@ bio_organic_fabricator
     .duration(500)
     .EUt(8)
     .inputs(<fossil:sheep_dna>)
-	.fluidInputs(<liquid:sludge> * 2000)
+	.fluidInputs(<liquid:nutrient_distillation> * 2000)
     .outputs(<minecraft:mutton> * 2,
 			 <minecraft:wool> * 4,
 	         <minecraft:bone> * 2)
+	.fluidOutputs(<liquid:sludge> * 1000)
     .buildAndRegister();
 	

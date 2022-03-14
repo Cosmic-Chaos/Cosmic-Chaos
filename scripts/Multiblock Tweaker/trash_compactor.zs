@@ -7,7 +7,8 @@ import mods.gregtech.multiblock.CTPredicate;
 import mods.gregtech.multiblock.IBlockPattern;
 import mods.gregtech.recipe.FactoryRecipeMap;
 import mods.gregtech.recipe.RecipeMap;
-
+import crafttweaker.oredict.IOreDictEntry;
+import crafttweaker.item.IItemStack;
 
 var loc = "mbt:trash_compactor";
 
@@ -60,23 +61,50 @@ trash_compactor.hasMaintenanceMechanics = false;
 trash_compactor.hasMufflerMechanics = false;
 
 // Controller Recipe
-recipes.addShaped(
-    <metaitem:mbt:trash_compactor>,
-    [
-        [<gregtech:fluid_pipe_normal:1617>,         <gregtech:metal_casing:1>,         <gregtech:fluid_pipe_normal:1617>],
-        [<minecraft:glass>, <gregtech:metal_casing:1>,  <minecraft:glass>],
-        [<gregtech:fluid_pipe_normal:1617>,         <gregtech:metal_casing:1>,         <gregtech:fluid_pipe_normal:1617>]
-    ]
-);
+# [Trash Compactor] from [tile.contenttweaker.controller_broken_north.name][+5]
+craft.remake(<metaitem:mbt:trash_compactor>, ["pretty",
+  "¤ P ¤",
+  "L t L",
+  "* ⌂ *"], {
+  "¤": <ore:gearSmallBronze>,                    # Small Bronze Gear
+  "P": <ore:circuitPrimitive>,                   # Vacuum Tube
+  "L": <metaitem:electric.motor.lv>,               # LV Electric Motor
+  "t": <contenttweaker:controller_broken_north>, # tile.contenttweaker.controller_broken_north.name
+  "*": <ore:wireGtDoubleGreenCrystalAlloy>,      # 2x Green Crystal Alloy Wire
+  "⌂": <contenttweaker:station_casing>,          # Derelict Casing
+});
+
+# [Small Plate Presser] from [Crude Steel Frame Box][+4]
+craft.remake(<advancedrocketry:platepress>, ["pretty",
+  "□ □ □",
+  "¤ ◙ ¤",
+  "W L W"], {
+  "□": <ore:plateTin>,             # Tin Plate
+  "¤": <ore:gearSmallBronze>,      # Small Bronze Gear
+  "◙": <ore:frameGtCrudeSteel>,    # Crude Steel Frame Box
+  "W": <ore:screwWroughtIron>,     # Wrought Iron Screw
+  "L": <metaitem:electric.piston.lv>, # LV Electric Piston
+});
+
 
 // Recipes	
 	
-trash_compactor
-	.recipeMap
-		.recipeBuilder()
-    .duration(200)
+
+val trashCompactorPlateMap as IItemStack[IOreDictEntry] = {
+    <ore:ingotIron>:<ore:plateIron>.firstItem,
+    <ore:ingotWroughtIron>:<ore:plateWroughtIron>.firstItem,
+    <ore:ingotTin>:<ore:plateTin>.firstItem,
+    <ore:ingotCopper>:<ore:plateCopper>.firstItem,
+    <ore:ingotBronze>:<ore:plateBronze>.firstItem,
+    <ore:ingotCrudeSteel>:<ore:plateCrudeSteel>.firstItem,
+    <ore:ingotRedAlloy>:<ore:plateRedAlloy>.firstItem,
+    <ore:ingotGreenCrystalAlloy>:<ore:plateGreenCrystalAlloy>.firstItem,
+} as IItemStack[IOreDictEntry];
+for ingot, plate in trashCompactorPlateMap {
+trash_compactor.recipeMap.recipeBuilder()
+    .duration(100)
     .EUt(8)
-    .inputs(<contenttweaker:hull_plate_t3>*3,<contenttweaker:internals_t1>)
-	.outputs(<chisel:laboratory:11>)
-    .buildAndRegister();
-	
+    .inputs(ingot*3)
+    .outputs(plate*2)
+.buildAndRegister();
+}

@@ -69,7 +69,7 @@ craft.remake(<metaitem:mbt:crushing_tank>, ["pretty",
 
 //Dense Hull Block
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(200)
+    .duration(150)
     .EUt(8)
     .inputs(<chisel:laboratory:11>)
     .outputs(<contenttweaker:hull_plate_t3>*5)
@@ -82,7 +82,7 @@ crushing_tank.recipeMap.recipeBuilder()
     
 //Heavy Hull Block
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(200)
+    .duration(150)
     .EUt(8)
     .inputs(<chisel:technicalnew:2>)
     .outputs(<contenttweaker:broken_hull_plate_t1>*3, <contenttweaker:broken_hull_plate_t3>*3)
@@ -95,7 +95,7 @@ crushing_tank.recipeMap.recipeBuilder()
     
 //Light Hull Block
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(200)
+    .duration(150)
     .EUt(8)
     .inputs(<chisel:factory:9>)
     .outputs(<contenttweaker:broken_hull_plate_t2>*5)
@@ -108,12 +108,13 @@ crushing_tank.recipeMap.recipeBuilder()
 	
 //Simple Internals
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(200)
+    .duration(100)
     .EUt(8)
     .inputs(<contenttweaker:internals_t1>)
     .outputs(<minecraft:redstone>*4)
 	.chancedOutput(<metaitem:dustGlass>*2, 7500, 1000)
 	.chancedOutput(<contenttweaker:scrap_rubber>*2, 5000, 1000)
+	.chancedOutput(<contenttweaker:scrap_rubber>, 2500, 1000)
 .buildAndRegister();
 
 
@@ -127,6 +128,7 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustCopper>, 5000, 1000)
 	.chancedOutput(<metaitem:dustCopper>, 2500, 1000)
 .buildAndRegister();
+
 //Copper Dust
 crushing_tank.recipeMap.recipeBuilder()
     .duration(100)
@@ -198,5 +200,27 @@ crushing_tank.recipeMap.recipeBuilder()
     .EUt(8)
     .inputs(<actuallyadditions:item_crystal_shard:4>*2)
     .outputs(<contenttweaker:dust_crystal_green>)
-	.chancedOutput(<contenttweaker:dust_crystal_green>, 2500, 1000)
+	.chancedOutput(<contenttweaker:dust_crystal_green>, 5000, 1000)
+.buildAndRegister();
+
+//Bio Chaff
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<metaitem:plant_ball>*2)
+    .outputs(<metaitem:bio_chaff>)
+	.chancedOutput(<metaitem:bio_chaff>, 5000, 1000)
+	.chancedOutput(<metaitem:bio_chaff>, 2500, 1000)
+.buildAndRegister();
+
+
+//Rubber
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<contenttweaker:scrap_rubber>)
+    .outputs(<metaitem:dustSmallRubber>)
+	.chancedOutput(<metaitem:dustSmallRubber>, 5000, 1000)
+	.chancedOutput(<metaitem:dustSmallRubber>, 2500, 1000)
+	.chancedOutput(<metaitem:dustSmallRubber>, 1000, 1000)
 .buildAndRegister();

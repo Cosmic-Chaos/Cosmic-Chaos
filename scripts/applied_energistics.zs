@@ -2,9 +2,13 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.item.IIngredient;
+import mods.jei.JEI;
 print("==================== loading mods blank.zs ====================");
 ##########################################################################################
-/*
+
+
+
+
 val itemstoRemove =
 [
 ]
@@ -14,6 +18,16 @@ for item in itemstoRemove {
 	recipes.remove(item);
 }
 
+val itemstoRemoveAndHide =
+[
+	<aeadditions:certustank>,
+]
+ as IItemStack[];
+
+for item in itemstoRemoveAndHide {
+	JEI.removeAndHide(item);
+}
+/*
 //First Stack is second in the list
 val clusterFluidMap as ILiquidStack[IOreDictEntry] = {
 val tinyDustMap as IItemStack[IItemStack] = {
@@ -35,7 +49,8 @@ val basicCapacitorInput as IIngredient = (<enderio:item_capacitor_grainy>|<ender
 val anyFluix as IIngredient = (<appliedenergistics2:material:12>|<appliedenergistics2:material:7>) as IIngredient;
 
 recipes.removeShaped(<appliedenergistics2:fluix_block>, [[<appliedenergistics2:material:12>, <appliedenergistics2:material:12>, <appliedenergistics2:material:12>],[<appliedenergistics2:material:12>, null, <appliedenergistics2:material:12>], [<appliedenergistics2:material:12>, <appliedenergistics2:material:12>, <appliedenergistics2:material:12>]]);
-recipes.removeShaped(<appliedenergistics2:fluix_block>, [[<appliedenergistics2:material:7>, <appliedenergistics2:material:7>, null],[<appliedenergistics2:material:7>, <appliedenergistics2:material:7>, null], [null, null, null]]);
+recipes.removeShaped(<appliedenergistics2:fluix_block>, [[<appliedenergistics2:material:7>, <appliedenergistics2:material:7>],[<appliedenergistics2:material:7>, <appliedenergistics2:material:7>]]);
+recipes.removeShapeless(<appliedenergistics2:material:7> * 4, [<appliedenergistics2:fluix_block>]);
 recipes.addShaped(<appliedenergistics2:fluix_block>, [[anyFluix, anyFluix, anyFluix],[anyFluix, anyFluix, anyFluix], [anyFluix, anyFluix, anyFluix]]);
 
 ##########################################################################################

@@ -312,9 +312,6 @@ var uru = MaterialBuilder(32051, "uru")
 //    .addOreByproducts(<material:dwarf_star_alloy>, <material:rutile>, <material:gold>)
     .build();
 ingotPrefix.setIgnored(<material:uru>);
-//platePrefix.setIgnored(<material:uru>);
-//blockPrefix.setIgnored(<material:uru>);
-//nuggetPrefix.setIgnored(<material:uru>);
 
 
 // Dwarf Star Alloy
@@ -329,9 +326,6 @@ var dwarf_star_alloy = MaterialBuilder(32050, "dwarf_star_alloy")
     .addOreByproducts(<material:uru>, <material:tungsten>, <material:rutile>, <material:cooperite>)
     .build();
 ingotPrefix.setIgnored(<material:dwarf_star_alloy>);
-//platePrefix.setIgnored(<material:dwarf_star_alloy>);
-//blockPrefix.setIgnored(<material:dwarf_star_alloy>);
-//nuggetPrefix.setIgnored(<material:dwarf_star_alloy>);
 
 // Vibranium
 // Vibrainium would be placed under the main body of metals of the periodic table near our currently unnamed elements. Its symbol would be Vb, and its shorthand electron configuration would be [Rn]7s27f147d5
@@ -358,9 +352,6 @@ var vibranium = MaterialBuilder(32052, "vibranium")
     .toolStats(20, 15, 256000, 12) // (float speed, float damage, int durability, int enchantability)
     .build();
 ingotPrefix.setIgnored(<material:vibranium>);
-//platePrefix.setIgnored(<material:vibranium>);
-//blockPrefix.setIgnored(<material:vibranium>);
-//nuggetPrefix.setIgnored(<material:vibranium>);
 
 // Adamantium
 var adamantium = MaterialBuilder(32053, "adamantium")
@@ -393,6 +384,7 @@ dustPrefix.setIgnored(<material:fluix>);
 
 // Fluix Steel
 var fluix_steel = MaterialBuilder(32101, "fluix_steel")
+    .fluid("fluid", true) // fluid with block
     .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
     .color(0x713d82) // can also use colorAverage() if using components
     .iconSet("shiny")
