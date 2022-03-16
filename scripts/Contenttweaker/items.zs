@@ -65,7 +65,7 @@ crowbar_t2.toolLevel = 1;
 crowbar_t2.register();
 
 
-var componentsULV = (itemColor(0x965111));
+var componentsULV = (itemColor(0xf0821d));
 
 val motorULV = VanillaFactory.createItem("electric_motor_ulv");
 motorULV.itemColorSupplier = componentsULV;

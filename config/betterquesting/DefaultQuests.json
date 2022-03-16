@@ -808,8 +808,7 @@
     "15:10": {
       "preRequisites:11": [
         16,
-        27,
-        60
+        27
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -826,7 +825,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Rubber",
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -908,9 +907,7 @@
       }
     },
     "17:10": {
-      "preRequisites:11": [
-        113
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -959,9 +956,7 @@
       }
     },
     "18:10": {
-      "preRequisites:11": [
-        113
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -1010,9 +1005,7 @@
       }
     },
     "19:10": {
-      "preRequisites:11": [
-        113
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -3142,9 +3135,7 @@
       }
     },
     "60:10": {
-      "preRequisites:11": [
-        108
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -4981,9 +4972,7 @@
     },
     "95:10": {
       "preRequisites:11": [
-        34,
-        19,
-        18
+        113
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5658,9 +5647,7 @@
     },
     "108:10": {
       "preRequisites:11": [
-        19,
-        18,
-        34
+        113
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5736,8 +5723,7 @@
     "109:10": {
       "preRequisites:11": [
         24,
-        107,
-        10
+        107
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6336,7 +6322,7 @@
     },
     "119:10": {
       "preRequisites:11": [
-        19
+        113
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6379,6 +6365,55 @@
               "Damage:2": 112,
               "OreDict:8": "",
               "id:8": "gregtech:item_pipe_small"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "120:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 328,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tin Alloy",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 120,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 328,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6431,7 +6466,7 @@
           "id:3": 3,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 456,
+          "x:3": 360,
           "y:3": -36
         },
         "4:10": {
@@ -6459,14 +6494,14 @@
           "id:3": 7,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 504,
+          "x:3": 408,
           "y:3": -48
         },
         "8:10": {
           "id:3": 8,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 504,
+          "x:3": 408,
           "y:3": -12
         },
         "9:10": {
@@ -6480,85 +6515,85 @@
           "id:3": 10,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 504,
-          "y:3": 36
+          "x:3": 144,
+          "y:3": -276
         },
         "11:10": {
           "id:3": 15,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 456,
-          "y:3": 36
+          "x:3": 144,
+          "y:3": -240
         },
         "12:10": {
           "id:3": 17,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": -36
+          "x:3": 288,
+          "y:3": -204
         },
         "13:10": {
           "id:3": 18,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": 0
+          "x:3": 216,
+          "y:3": -204
         },
         "14:10": {
           "id:3": 19,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 228,
-          "y:3": -72
+          "x:3": 180,
+          "y:3": -204
         },
         "15:10": {
           "id:3": 24,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
-          "y:3": 0
+          "y:3": 24
         },
         "16:10": {
           "id:3": 25,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
+          "x:3": 312,
           "y:3": -72
         },
         "17:10": {
           "id:3": 34,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": -36
+          "x:3": 288,
+          "y:3": -240
         },
         "18:10": {
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 540,
+          "x:3": 444,
           "y:3": -48
         },
         "19:10": {
           "id:3": 60,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
-          "y:3": 36
+          "x:3": 144,
+          "y:3": -204
         },
         "20:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 444,
+          "x:3": 396,
           "y:3": -192
         },
         "21:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 324,
-          "y:3": -72
+          "x:3": 240,
+          "y:3": -60
         },
         "22:10": {
           "id:3": 96,
@@ -6571,14 +6606,14 @@
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
+          "x:3": 312,
           "y:3": -144
         },
         "24:10": {
           "id:3": 98,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
+          "x:3": 360,
           "y:3": -192
         },
         "25:10": {
@@ -6620,7 +6655,7 @@
           "id:3": 105,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
+          "x:3": 312,
           "y:3": -36
         },
         "31:10": {
@@ -6634,35 +6669,35 @@
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 576,
+          "x:3": 480,
           "y:3": -72
         },
         "33:10": {
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 324,
-          "y:3": 0
+          "x:3": 240,
+          "y:3": -12
         },
         "34:10": {
           "id:3": 109,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 612,
+          "x:3": 516,
           "y:3": 36
         },
         "35:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 552,
+          "x:3": 456,
           "y:3": -144
         },
         "36:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 504,
+          "x:3": 408,
           "y:3": -144
         },
         "37:10": {
@@ -6683,43 +6718,50 @@
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 540,
+          "x:3": 444,
           "y:3": -12
         },
         "40:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 456,
+          "x:3": 360,
           "y:3": -108
         },
         "41:10": {
           "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
+          "x:3": 312,
           "y:3": -108
         },
         "42:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 456,
-          "y:3": 0
+          "x:3": 444,
+          "y:3": 60
         },
         "43:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 456,
+          "x:3": 360,
           "y:3": -72
         },
         "44:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 276,
-          "y:3": -108
+          "x:3": 204,
+          "y:3": 12
+        },
+        "45:10": {
+          "id:3": 120,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 252,
+          "y:3": -204
         }
       }
     },
