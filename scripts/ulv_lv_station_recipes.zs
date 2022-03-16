@@ -22,6 +22,15 @@ for item in itemstoRemove {
 	recipes.remove(item);
 }
 
+var name_removals = [
+    // Clay
+    "gregtech:electric_motor_lv_iron",
+] as string[];
+
+for item in name_removals {
+    recipes.removeByRecipeName(item);
+}
+
 ##=======================================================
 ## HIDING ITEMS IN JEI
 ##=======================================================
@@ -52,6 +61,7 @@ for item in itemstoRemoveAndHide {
 }
 
 
+
 ##=======================================================
 ## Adding ITEMS TO JEI
 ##=======================================================
@@ -60,9 +70,8 @@ for item in itemstoRemoveAndHide {
 mods.jei.JEI.addItem(<advancedrocketry:spacechestplate>.withTag({slotInsert: [1, 1, 1, 1, 1, 1] as byte[] as byte[], size: 6, slotExtract: [1, 1, 1, 1, 1, 1] as byte[] as byte[], outputItems: [{Slot: 0 as byte, id: "advancedrocketry:pressuretank", Count: 1 as byte, tag: {Fluid: {FluidName: "oxygen", Amount: 7192}}, Damage: 3 as short}, {Slot: 1 as byte, id: "advancedrocketry:pressuretank", Count: 1 as byte, tag: {Fluid: {FluidName: "oxygen", Amount: 8000}}, Damage: 3 as short}]}));
 
 
-
 ##=======================================================
-## RECIPES
+## ADD RECIPES
 ##=======================================================
 
 //Busses because no wood
@@ -195,6 +204,26 @@ craft.remake(<metaitem:hull.ulv>, ["pretty",
   "п": <ore:plateWroughtIron>,    # Wrought Iron Plate
   "G": <ore:wireGtSingleTin>,     # 1x Tin Wire
   "⌂": <gregtech:machine_casing>, # ULV Machine Casing
+});
+
+
+# [ULV Electric Motor] from [Iron Rod][+2]
+craft.remake(<contenttweaker:electric_motor_ulv>, ["pretty",
+  "G ╱",
+  "/ G"], {
+  "G": <ore:wireGtSingleCopper>, # 1x Copper Wire
+  "╱": <ore:stickIron>,          # Iron Rod
+  "/": <ore:stickIronMagnetic>,  # Magnetic Iron Rod
+});
+
+# [ULV Electric Piston] from [Small Bronze Gear][+3]
+craft.remake(<contenttweaker:electric_piston_ulv>, ["pretty",
+  "□ ╱",
+  "U ¤"], {
+  "□": <ore:plateBronze>,                   # Bronze Plate
+  "╱": <ore:stickBronze>,                   # Bronze Rod
+  "U": <contenttweaker:electric_motor_ulv>, # ULV Electric Motor
+  "¤": <ore:gearSmallBronze>,               # Small Bronze Gear
 });
 
 //Reuse the Basic furnaces

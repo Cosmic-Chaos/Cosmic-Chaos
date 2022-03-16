@@ -56,6 +56,11 @@ item.contenttweaker.station_component_4.name=Primitive Crafting Storage
 item.contenttweaker.purpleprint.name=§5Multiblock Visualizer
 
 
+item.contenttweaker.electric_motor_ulv.name=ULV Electric Motor
+item.contenttweaker.electric_piston_ulv.name=ULV Electric Piston
+item.contenttweaker.electric_pump_ulv.name=ULV Electric Pump
+item.contenttweaker.emitter_ulv.name=ULV Emitter
+item.contenttweaker.conveyor_module_ulv.name=ULV Conveyor
 
 tile.contenttweaker.station_casing.name=Derelict Casing
 tile.contenttweaker.vat_glass.name=Bio-Covered Glass
@@ -63,3 +68,4 @@ tile.contenttweaker.organic_overloader.name=Photosynthesis Accelerator
 tile.contenttweaker.crystal_green_glass.name=Green Crystal Glass
 
 tile.contenttweaker.controller_broken_south.name=Broken Recycler Controller
+

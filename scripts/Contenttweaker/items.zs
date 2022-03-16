@@ -2,13 +2,20 @@
 #priority 91
 import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.Item;
+import mods.contenttweaker.IItemColorSupplier;
+import mods.contenttweaker.Color;
+import crafttweaker.item.IItemStack;
 
 
 print("==================== loading Items.zs ====================");
 ##########################################################################################
 
 
-
+function itemColor(intColor as int) as IItemColorSupplier {
+  return function(item as IItemStack, tint as int) as Color {
+      return Color.fromInt(intColor);
+  };
+}
 
 
 VanillaFactory.createItem("hull_plate_t1").register();
@@ -58,6 +65,27 @@ crowbar_t2.toolLevel = 1;
 crowbar_t2.register();
 
 
+var componentsULV = (itemColor(0x965111));
+
+val motorULV = VanillaFactory.createItem("electric_motor_ulv");
+motorULV.itemColorSupplier = componentsULV;
+motorULV.register();
+
+val pistonULV = VanillaFactory.createItem("electric_piston_ulv");
+pistonULV.itemColorSupplier = componentsULV;
+pistonULV.register();
+
+val pumpULV = VanillaFactory.createItem("electric_pump_ulv");
+pumpULV.itemColorSupplier = componentsULV;
+pumpULV.register();
+
+val emitterULV = VanillaFactory.createItem("emitter_ulv");
+emitterULV.itemColorSupplier = componentsULV;
+emitterULV.register();
+
+val conveyorULV = VanillaFactory.createItem("conveyor_module_ulv");
+conveyorULV.itemColorSupplier = componentsULV;
+conveyorULV.register();
 
 ##########################################################################################
 print("==================== end of Items.zs ====================");
