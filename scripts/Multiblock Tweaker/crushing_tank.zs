@@ -1,11 +1,24 @@
-import mods.gregtech.multiblock.Builder;
-import mods.gregtech.multiblock.FactoryBlockPattern;
-import mods.gregtech.multiblock.RelativeDirection;
-import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
+import crafttweaker.block.IBlockState;
+import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemStack;
+import crafttweaker.world.IBlockPos;
+import crafttweaker.world.IFacing;
+import crafttweaker.world.IWorld;
+import mods.contenttweaker.Random;
+import mods.contenttweaker.World;
 import mods.gregtech.IControllerTile;
+import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.CTPredicate;
+import mods.gregtech.multiblock.FactoryBlockPattern;
+import mods.gregtech.multiblock.functions.ICheckRecipeFunction;
+import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
+import mods.gregtech.multiblock.functions.IUpdateFormedValidFunction;
 import mods.gregtech.multiblock.IBlockPattern;
+import mods.gregtech.multiblock.RelativeDirection;
 import mods.gregtech.recipe.FactoryRecipeMap;
+import mods.gregtech.recipe.functions.ICompleteRecipeFunction;
+import mods.gregtech.recipe.IRecipe;
+import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.RecipeMap;
 
 
@@ -51,6 +64,160 @@ val crushing_tank = Builder.start(loc)
 // set optional properties
 crushing_tank.hasMaintenanceMechanics = false;
 crushing_tank.hasMufflerMechanics = false;
+
+
+
+// Just above the controller
+val getCenter = function (pos as IBlockPos, facing as IFacing) as IBlockPos[] {
+    return [
+        pos.getOffset(IFacing.up(), 1),
+    ] as IBlockPos[];
+};
+
+        //if (!(world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_green_glass>))
+        //if (<contenttweaker:crystal_green_glass> in world.getPickedBlock(pos, null, null))
+        //server.commandManager.executeCommand(server, "msg @p Bio-Organic Fabricator needs cleaning!");
+
+val blocksToCheck =
+[
+    <contenttweaker:crystal_cluster_blue_1>,
+    <contenttweaker:crystal_cluster_blue_2>,
+    <contenttweaker:crystal_cluster_blue_3>,
+    <contenttweaker:crystal_cluster_blue_4>,
+    <contenttweaker:crystal_cluster_blue_5>,
+    <contenttweaker:crystal_cluster_blue_6>,
+    <contenttweaker:crystal_cluster_blue_7>,
+    <contenttweaker:crystal_cluster_green_1>,
+    <contenttweaker:crystal_cluster_green_2>,
+    <contenttweaker:crystal_cluster_green_3>,
+    <contenttweaker:crystal_cluster_green_4>,
+    <contenttweaker:crystal_cluster_green_5>,
+    <contenttweaker:crystal_cluster_green_6>,
+    <contenttweaker:crystal_cluster_green_7>,
+    <contenttweaker:crystal_cluster_red_1>,
+    <contenttweaker:crystal_cluster_red_2>,
+    <contenttweaker:crystal_cluster_red_3>,
+    <contenttweaker:crystal_cluster_red_4>,
+    <contenttweaker:crystal_cluster_red_5>,
+    <contenttweaker:crystal_cluster_red_6>,
+    <contenttweaker:crystal_cluster_red_7>,
+]
+ as IItemStack[];
+
+// check if any glass is cleam, if so, start.
+crushing_tank.checkRecipeFunction = function(controller as IControllerTile, recipe as IRecipe, consumeIfSuccess as bool) as bool {
+    val world as IWorld = controller.world;
+    for pos in getCenter(controller.pos, controller.frontFacing) 
+    {
+        for block in blocksToCheck
+        {
+            if (world.isAirBlock(pos)) {
+                return true;
+            }
+            else if (world.getPickedBlock(pos, null, null) has block) {
+                return true;
+            }
+        }
+    }
+return false;
+} as ICheckRecipeFunction;
+
+
+
+// 1/4 chance to progress crystal growth
+crushing_tank.completeRecipeFunction = function (recipeLogic as IRecipeLogic) as bool {
+    val controller as IControllerTile = recipeLogic.metaTileEntity;
+    val world as IWorld = controller.world;
+
+    for pos in getCenter(controller.pos, controller.frontFacing) {
+        if (world.getRandom().nextInt(4) == 0) {
+            if (world.isAirBlock(pos)) {
+                if (world.getRandom().nextInt(3) == 0) {
+                        world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_1>, pos);
+                    }
+                else if (world.getRandom().nextInt(3) == 1) {
+                        world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_1>, pos);
+                    }
+                else {
+                        world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_1>, pos);
+                    }
+                }
+        //////////////////// BLUE ///////////////
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_1>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_2>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_2>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_3>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_3>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_4>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_4>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_5>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_5>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_6>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_6>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_7>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_7>) {
+                    world.setBlockState(<blockstate:actuallyadditions:block_crystal_cluster_lapis:facing=up>, pos);
+                }
+
+        //////////////////// RED ///////////////
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_1>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_2>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_2>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_3>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_3>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_4>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_4>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_5>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_5>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_6>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_6>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_7>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_7>) {
+                    world.setBlockState(<blockstate:actuallyadditions:block_crystal_cluster_redstone:facing=up>, pos);
+                }
+
+        //////////////////// GREEN ///////////////
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_1>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_2>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_2>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_3>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_3>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_4>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_4>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_5>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_5>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_6>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_6>) {
+                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_7>, pos);
+                }
+            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_7>) {
+                    world.setBlockState(<blockstate:actuallyadditions:block_crystal_cluster_emerald:facing=up>, pos);
+                }
+
+        }
+    }
+    return true;
+} as ICompleteRecipeFunction;
+
+
+
 
 # [Station Recycler] from [tile.contenttweaker.controller_broken_south.name][+5]
 craft.remake(<metaitem:mbt:crushing_tank>, ["pretty",
@@ -129,7 +296,7 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustCopper>, 2500, 1000)
 .buildAndRegister();
 
-//Copper Dust
+//Copper Ingot
 crushing_tank.recipeMap.recipeBuilder()
     .duration(100)
     .EUt(8)
@@ -201,6 +368,15 @@ crushing_tank.recipeMap.recipeBuilder()
     .inputs(<actuallyadditions:item_crystal_shard:4>*2)
     .outputs(<contenttweaker:dust_crystal_green>)
 	.chancedOutput(<contenttweaker:dust_crystal_green>, 5000, 1000)
+.buildAndRegister();
+
+//Red Crystal
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(8)
+    .inputs(<actuallyadditions:item_crystal_shard>*2)
+    .outputs(<contenttweaker:dust_crystal_red>)
+	.chancedOutput(<contenttweaker:dust_crystal_red>, 5000, 1000)
 .buildAndRegister();
 
 //Bio Chaff

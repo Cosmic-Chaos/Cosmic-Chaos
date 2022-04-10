@@ -20,8 +20,6 @@ import mods.gregtech.recipe.functions.ICompleteRecipeFunction;
 import mods.gregtech.recipe.IRecipe;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.RecipeMap;
-import crafttweaker.command.ICommandSender;
-import crafttweaker.command.ICommandManager;
 
 var loc = "mbt:bio_organic_fabricator";
 

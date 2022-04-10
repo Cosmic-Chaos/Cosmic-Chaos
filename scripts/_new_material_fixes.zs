@@ -63,6 +63,9 @@ furnace.remove(<lucraftcore:ingot_adamantium>, <lucraftcore:dust_adamantium>);
 <ore:gemFluix>.add(<appliedenergistics2:material:7>);
 <ore:blockFluix>.add(<appliedenergistics2:fluix_block>);
 
+// Sky Stone
+<ore:skyStone>.add(<appliedenergistics2:sky_stone_block>);
+<ore:dustSkyStone>.add(<appliedenergistics2:material:45>);
 
 /////////////////////////////////////////////////////////
 //////////////////       Custom         /////////////////

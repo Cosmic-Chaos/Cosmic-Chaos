@@ -1,0 +1,16 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "texture": "contenttweaker:blocks/block_crystal_cluster",
+      "particle": "contenttweaker:blocks/block_crystal_cluster"
+    },
+    "model": "contenttweaker:block_crystal_cluster_4",
+    "uvlock": true,
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

@@ -246,6 +246,8 @@ recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_sto
 // Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
 
+recipes.addShapeless(<metaitem:dustRedAlloy>*2, [<ore:dustCopper>,<contenttweaker:dust_crystal_red>,<contenttweaker:dust_crystal_red>]);
+
 // GC Alloy Dust
 recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<contenttweaker:dust_crystal_green>]);
 

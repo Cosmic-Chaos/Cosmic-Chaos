@@ -31,6 +31,8 @@ VanillaFactory.createItem("scrap_rubber").register();
 VanillaFactory.createItem("dust_crystal_green").register();
 VanillaFactory.createItem("dust_crystal_green_glass").register();
 
+VanillaFactory.createItem("dust_crystal_red").register();
+
 VanillaFactory.createItem("internals_t1").register();
 
 VanillaFactory.createItem("internals_t2").register();
@@ -42,6 +44,12 @@ VanillaFactory.createItem("internals_t4").register();
 VanillaFactory.createItem("purpleprint").register();
 
 
+VanillaFactory.createItem("emc_mote").register();
+
+VanillaFactory.createItem("emc_minor_widget").register();
+VanillaFactory.createItem("emc_fragment_1").register();
+VanillaFactory.createItem("emc_fragment_2").register();
+VanillaFactory.createItem("emc_fragment_3").register();
 
 VanillaFactory.createItem("station_component_1").register();
 VanillaFactory.createItem("station_component_2").register();

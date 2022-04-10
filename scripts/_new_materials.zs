@@ -8,6 +8,7 @@ import mods.gregtech.material.Elements;
 import mods.jei.JEI;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.ore.OrePrefix;
+import mods.gregtech.StoneType;
 print("==================== loading new_materials.zs ====================");
 ##########################################################################################
 
@@ -26,6 +27,9 @@ val nuggetPrefix = OrePrefix.getPrefix("nugget");
 <material:copper>.addFlags("generate_gear");
 <material:iron>.addFlags("generate_frame");
 <material:wrought_iron>.addFlags("generate_frame");
+
+//Color Changing
+//<material:salt_water>.setMaterialRGB(0xFF1F5099);
 
 ###################################################
 ################## NEW MATS #######################
@@ -393,6 +397,15 @@ var fluix_steel = MaterialBuilder(32101, "fluix_steel")
     .build();
 ingotPrefix.setIgnored(<material:fluix_steel>);
 
+/*
+// Sky Stone
+var sky_stone = MaterialBuilder(32102, "sky_stone")
+    .dust(1)
+    .color(0x133554)
+    .build();
+dustPrefix.setIgnored(<material:sky_stone>);
+*/
+
 
 /////////////////////////////////////////////////////////
 //////////////////       Custom         /////////////////
@@ -408,6 +421,45 @@ var green_crystal_alloy = MaterialBuilder(32150, "green_crystal_alloy") // name
     .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .components([<material:crude_steel> * 4, <material:beryllium> * 1])
     .build();
+
+// Minor Manifested EMC
+var emc_minor = MaterialBuilder(32200, "emc_minor") // name
+    .fluid("fluid", true) // fluid with block
+    .ingot(1) // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x30e642) // can also use colorAverage()
+    .iconSet("DULL")
+    .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
+    .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+    .build();
+/*
+// Aurorian Stone
+var stone_aurorian = MaterialBuilder(32300, "stone_aurorian")
+    .dust(1)
+    .color(0x133554)
+    .build();
+
+
+// Atum Limetone
+var limestone_atum = MaterialBuilder(32301, "limestone_atum")
+    .dust(1)
+    .color(0xf7d26a)
+    .build();
+*/
+
+
+
+/////////////////////////////////////////////////////////
+////////////       New Stone Types         //////////////
+/////////////////////////////////////////////////////////
+
+//Sky Stone
+StoneType.create(16,"sky_stone","ore",<material:stone>,"appliedenergistics2:sky_stone_block", null, true);
+
+//Aurorian Stone
+StoneType.create(17,"stone_aurorian","ore",<material:stone>,"theaurorian:aurorianstone", null, true);
+
+//Atum Stone
+StoneType.create(18,"limestone_atum","ore",<material:stone>,"atum:limestone:contains_scarab=false", null, true);
 
 ##########################################################################################
 print("==================== end of new_materials.zs ====================");

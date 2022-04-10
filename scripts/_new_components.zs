@@ -43,6 +43,7 @@ sheet.setGenerationPredicate(function(mat as Material) as bool {
 
 sheet.createMaterialItem();
 
+
 /*
 //Cut a plate in half?
 sheet.addRecipeHandler(function(sheet as OrePrefix, material as Material) {

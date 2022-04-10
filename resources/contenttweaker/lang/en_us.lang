@@ -23,9 +23,16 @@ material.vibranium=Vibranium
 material.adamantium=Adamantium
 
 
+material.sky_stone=Sky Stone
+material.limestone_atum=Atum Limestone
+material.stone_aurorian=Aurorian Stone
+
+item.material.sky_stone.ore=Alchemical %s Ore
+
 material.fluix=Fluix
 material.fluix_steel=Fluix Steel
 
+material.emc_minor=Minor Manifested EMC
 
 item.material.oreprefix.sheet=%s Sheet
 
@@ -45,13 +52,22 @@ item.contenttweaker.internals_t3.name=§aDigital Components
 item.contenttweaker.internals_t4.name=§aHigh Tech Broken Circuits
 item.contenttweaker.scrap_rubber.name=Rubber Scraps
 item.contenttweaker.dust_crystal_green.name=Green Crystal Dust
+item.contenttweaker.dust_crystal_red.name=Red Crystal Dust
 item.contenttweaker.dust_crystal_green_glass.name=Green Crystal-Glass Blend
 
+
+item.contenttweaker.emc_mote.name=Mote of EMC
+
+item.contenttweaker.emc_minor_widget.name=Minor Alchemical Construct
+
+item.contenttweaker.emc_fragment_1.name=Tiny Fragment of EMC
+item.contenttweaker.emc_fragment_2.name=Small Fragment of EMC
+item.contenttweaker.emc_fragment_3.name=Fragment of EMC
 
 item.contenttweaker.station_component_1.name=Plating Component
 item.contenttweaker.station_component_2.name=Plating Component
 item.contenttweaker.station_component_3.name=Mixed Primitive Plating
-item.contenttweaker.station_component_4.name=Primitive Crafting Storage
+item.contenttweaker.station_component_4.name=Primitive Processor
 
 item.contenttweaker.purpleprint.name=§5Multiblock Visualizer
 
@@ -68,4 +84,29 @@ tile.contenttweaker.organic_overloader.name=Photosynthesis Accelerator
 tile.contenttweaker.crystal_green_glass.name=Green Crystal Glass
 
 tile.contenttweaker.controller_broken_south.name=Broken Recycler Controller
+
+
+tile.contenttweaker.crystal_cluster_blue_1.name=Growing Blue Crystal Cluster
+tile.contenttweaker.crystal_cluster_blue_2.name=Growing Blue Crystal Cluster
+tile.contenttweaker.crystal_cluster_blue_3.name=Growing Blue Crystal Cluster
+tile.contenttweaker.crystal_cluster_blue_4.name=Growing Blue Crystal Cluster
+tile.contenttweaker.crystal_cluster_blue_5.name=Growing Blue Crystal Cluster
+tile.contenttweaker.crystal_cluster_blue_6.name=Growing Blue Crystal Cluster
+tile.contenttweaker.crystal_cluster_blue_7.name=Growing Blue Crystal Cluster
+
+tile.contenttweaker.crystal_cluster_red_1.name=Growing Red Crystal Cluster
+tile.contenttweaker.crystal_cluster_red_2.name=Growing Red Crystal Cluster
+tile.contenttweaker.crystal_cluster_red_3.name=Growing Red Crystal Cluster
+tile.contenttweaker.crystal_cluster_red_4.name=Growing Red Crystal Cluster
+tile.contenttweaker.crystal_cluster_red_5.name=Growing Red Crystal Cluster
+tile.contenttweaker.crystal_cluster_red_6.name=Growing Red Crystal Cluster
+tile.contenttweaker.crystal_cluster_red_7.name=Growing Red Crystal Cluster
+
+tile.contenttweaker.crystal_cluster_green_1.name=Growing Green Crystal Cluster
+tile.contenttweaker.crystal_cluster_green_2.name=Growing Green Crystal Cluster
+tile.contenttweaker.crystal_cluster_green_3.name=Growing Green Crystal Cluster
+tile.contenttweaker.crystal_cluster_green_4.name=Growing Green Crystal Cluster
+tile.contenttweaker.crystal_cluster_green_5.name=Growing Green Crystal Cluster
+tile.contenttweaker.crystal_cluster_green_6.name=Growing Green Crystal Cluster
+tile.contenttweaker.crystal_cluster_green_7.name=Growing Green Crystal Cluster
 
