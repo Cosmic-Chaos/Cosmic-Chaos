@@ -14,6 +14,7 @@ import mods.gregtech.recipe.helpers;
 import mods.advancedrocketry.RollingMachine;
 import mods.gregtech.MaterialFlag;
 import mods.gregtech.MaterialFlagBuilder;
+import mods.gregtech.MetaItem;
 
 print("==================== loading new_components.zs ====================");
 ##########################################################################################
@@ -26,6 +27,10 @@ MaterialFlagBuilder.create("generate_thin_sheet")
 <material:bronze>.addFlags("generate_thin_sheet");
 <material:gold>.addFlags("generate_thin_sheet");
 <material:copper>.addFlags("generate_thin_sheet");
+
+
+// addItem(short id, string name).long maxCharge, int tier, @Optional boolean rechargeable (default true), @Optional boolean dischrgeable (default true)
+//MetaItem.addItem(1, "battery_crystal_green").electricItem(8000, 0);
 
 
 ###################################################

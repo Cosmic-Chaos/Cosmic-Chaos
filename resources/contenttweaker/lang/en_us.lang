@@ -55,6 +55,9 @@ item.contenttweaker.dust_crystal_green.name=Green Crystal Dust
 item.contenttweaker.dust_crystal_red.name=Red Crystal Dust
 item.contenttweaker.dust_crystal_green_glass.name=Green Crystal-Glass Blend
 
+item.contenttweaker.battery_crystal_green.name=Crystal Battery
+
+
 
 item.contenttweaker.emc_mote.name=Mote of EMC
 

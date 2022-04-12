@@ -20,6 +20,8 @@ recipes.addShaped(<metaitem:component.glass.tube>, [
 	[null, <ore:paneGlassColorless>, null]
 ]);
 
+//Wrought Iron temp
+furnace.addRecipe(<metaitem:ingotWroughtIron>, <metaitem:ingotWroughtIron>, 0.1);
 
 /*
 val tinyDustMap as IItemStack[IItemStack] = {

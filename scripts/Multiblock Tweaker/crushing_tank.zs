@@ -225,7 +225,7 @@ craft.remake(<metaitem:mbt:crushing_tank>, ["pretty",
   "G t G",
   "¤ ⌂ ¤"], {
   "P": <contenttweaker:station_component_4>,     # Primitive Crafting Storage
-  "r": <ore:circuitPrimitive>,                   # Vacuum Tube
+  "r": <metaitem:circuit.vacuum_tube>,                   # Vacuum Tube
   "G": <ore:wireGtDoubleTin>,                    # 2x Tin Wire
   "t": <contenttweaker:controller_broken_south>, # tile.contenttweaker.controller_broken_south.name
   "¤": <ore:gearCopper>,                         # Copper Gear

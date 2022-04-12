@@ -83,14 +83,24 @@ recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<metaitem:crate.steel>],[<me
 recipes.addShapeless(<actuallyadditions:item_knife>, [<ore:craftingToolKnife>]);
 
 //No Stone Buttons
-recipes.addShapeless(<quark:iron_button>*2, [<minecraft:iron_ingot>]);
-recipes.addShapeless(<quark:gold_button>*2, [<minecraft:gold_ingot>]);
+recipes.addShapeless(<quark:iron_button>, [<minecraft:iron_ingot>]);
+recipes.addShapeless(<quark:gold_button>, [<minecraft:gold_ingot>]);
+
+
+# [Makeshift Crowbar] from [Copper Rod][+1]
+craft.remake(<contenttweaker:crowbar>, ["pretty",
+  "  □ □",
+  "  ╱  ",
+  "╱ □  "], {
+  "□": <ore:plateIron>,   # Iron Plate
+  "╱": <ore:stickCopper>, # Copper Rod
+});
 
 # [Crowbar] from [Bronze Rod][+1]
 craft.remake(<contenttweaker:crowbar_t2>, ["pretty",
   "  □ □",
   "  ╱  ",
-  "╱    "], {
+  "╱ □  "], {
   "□": <metaitem:plateWroughtIron>,   # Iron Plate
   "╱": <ore:stickBronze>, # Bronze Rod
 });
@@ -163,6 +173,15 @@ craft.remake(<morefurnaces:furnaceblock:5>, ["pretty",
   "T": <ore:gtceWrenches>, # Neutronium Wrench
 });
 
+# [Copper Furnace] from [Neutronium Wrench][+1]
+craft.make(<morefurnaces:furnaceblock:5>, ["pretty",
+  "□ □ □",
+  "□ T □",
+  "□ □ □"], {
+  "□": <ore:plateCopper>, # Copper Plate
+  "T": <ore:gtceWrenches>, # Neutronium Wrench
+});
+
 # [Iron Furnace] from [Neutronium Wrench][+1]
 craft.remake(<morefurnaces:furnaceblock>, ["pretty",
   "P P P",
@@ -171,6 +190,16 @@ craft.remake(<morefurnaces:furnaceblock>, ["pretty",
   "P": <contenttweaker:station_component_2>, # Plating Component
   "T": <ore:gtceWrenches>, # Neutronium Wrench
 });
+
+# [Iron Furnace] from [Neutronium Wrench][+1]
+craft.make(<morefurnaces:furnaceblock>, ["pretty",
+  "□ □ □",
+  "□ T □",
+  "□ □ □"], {
+  "□": <ore:plateIron>, # Iron Plate
+  "T": <ore:gtceWrenches>, # Neutronium Wrench
+});
+
 
 # [Silver Furnace] from [Silver Wrench][+1]
 craft.remake(<morefurnaces:furnaceblock:6>, ["pretty",
@@ -262,8 +291,12 @@ furnace.addRecipe(<metaitem:ingotTin>, <contenttweaker:broken_hull_plate_t3>, 0.
 furnace.addRecipe(<metaitem:ingotCrudeSteel>, <contenttweaker:hull_plate_t3>, 0.0);
 furnace.addRecipe(<metaitem:ingotSilver>, <contenttweaker:hull_plate_t4>, 0.0);
 
+
+//Wrought Iron recipe in greg_tech.zs
+//furnace.addRecipe(<metaitem:ingotWroughtIron>, <metaitem:ingotWroughtIron>, 0.1);
+
 //Glass
-furnace.addRecipe(<minecraft:glass_pane>, <metaitem:dustSmallGlass>, 0.0);
+//furnace.addRecipe(<minecraft:glass_pane>, <metaitem:dustSmallGlass>, 0.0); //bad recipe
 furnace.addRecipe(<minecraft:glass>, <metaitem:dustGlass>, 0.0);
 
 # [Rubber Sheet] from [Neutronium Hammer][+1]
@@ -343,6 +376,15 @@ compressor.recipeBuilder()
 
 //Sulfur
 recipes.addShapeless(<metaitem:dustSulfur>, [<projecte:item.pe_philosophers_stone>,<ore:dustCoal>,<ore:dustCoal>,<ore:dustCoal>,<ore:dustCoal>]);
+
+
+# [Small Airlock Door] from [Iron Plate]
+craft.remake(<advancedrocketry:smallairlockdoor>, ["pretty",
+  "□ □",
+  "□ □",
+  "□ □"], {
+  "□": <ore:plateIron>, # Iron Plate
+});
 
 ##########################################################################################
 print("==================== end of ulv_lv_station_recipes.zs ====================");
