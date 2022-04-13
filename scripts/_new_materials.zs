@@ -91,7 +91,7 @@ var crude_steel = MaterialBuilder(32002, "crude_steel") // name
     .ingot(1) // (@Optional int harvestLevel, @Optional int burnTime)
     .color(0x9e9e9e) // can also use colorAverage()
     .iconSet("dull") // "NONE", "METALLIC", "DULL", "MAGNETIC", "QUARTZ", "DIAMOND", "EMERALD", "SHINY", "ROUGH", "FINE", "SAND", "FLINT", "RUBY", "LAPIS", "FLUID", "GAS", "LIGNITE", "OPAL", "GLASS", "WOOD", "GEM_HORIZONTAL", "GEM_VERTICAL", "PAPER", "NETHERSTAR", "BRIGHT".
-    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_frame"]) // add flags
+    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_frame", "generate_bolt_screw"]) // add flags
     .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
 //    .cableProperties(8, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .components([<material:iron> * 4, <material:carbon> * 1]) // set the components

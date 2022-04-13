@@ -87,13 +87,14 @@ recipes.addShapeless(<quark:iron_button>, [<minecraft:iron_ingot>]);
 recipes.addShapeless(<quark:gold_button>, [<minecraft:gold_ingot>]);
 
 
-# [Makeshift Crowbar] from [Copper Rod][+1]
+# [Makeshift Crowbar] from [Tin Plate][+2]
 craft.remake(<contenttweaker:crowbar>, ["pretty",
   "  □ □",
   "  ╱  ",
-  "╱ □  "], {
+  "╱ п  "], {
   "□": <ore:plateIron>,   # Iron Plate
   "╱": <ore:stickCopper>, # Copper Rod
+  "п": <ore:plateTin>,    # Tin Plate
 });
 
 # [Crowbar] from [Bronze Rod][+1]
@@ -137,6 +138,10 @@ craft.remake(<metaitem:workbench>, ["pretty",
   "r": <contenttweaker:station_component_3>, # Primitive Mixed Plating
   "S": <metaitem:crate.steel>,              # Steel Crate
 });
+
+
+
+
 // Workbench 2nd Recipe
 recipes.addShaped(<metaitem:workbench>, [
 	[null, <minecraft:book>, null],
@@ -253,6 +258,26 @@ craft.remake(<contenttweaker:electric_piston_ulv>, ["pretty",
   "╱": <ore:stickBronze>,                   # Bronze Rod
   "U": <contenttweaker:electric_motor_ulv>, # ULV Electric Motor
   "¤": <ore:gearSmallBronze>,               # Small Bronze Gear
+});
+
+# [Rail Frame]*2 from [Steel Screw][+2]
+craft.remake(<industrialrenewal:frame> * 2, ["pretty",
+  "╱ ◙ ╱",
+  "S ◙ S",
+  "╱ ◙ ╱"], {
+  "╱": <ore:stickWroughtIron>,  # Wrought Iron Rod
+  "◙": <ore:frameGtCrudeSteel>, # Crude Steel Frame Box
+  "S": <ore:screwCrudeSteel>,        # Steel Screw
+});
+
+# [Crystal Battery] from [Low Covalence Dust][+2]
+craft.remake(<devtech:meta_item:1>, ["pretty",
+  "╳ * ╳",
+  "* ▲ *",
+  "╳ * ╳"], {
+  "╳": <ore:wireFineGreenCrystalAlloy>,          # Fine Green Crystal Alloy Wire
+  "*": <actuallyadditions:item_crystal_shard:4>, # Green Crystal Shard
+  "▲": <projecte:item.pe_covalence_dust>,        # Low Covalence Dust
 });
 
 //Reuse the Basic furnaces

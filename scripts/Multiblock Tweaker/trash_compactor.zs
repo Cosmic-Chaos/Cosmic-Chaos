@@ -67,7 +67,7 @@ craft.remake(<metaitem:mbt:trash_compactor>, ["pretty",
   "L t L",
   "* ⌂ *"], {
   "¤": <ore:gearSmallBronze>,                    # Small Bronze Gear
-  "P": <ore:circuitPrimitive>,                   # Vacuum Tube
+  "P": <metaitem:circuit.vacuum_tube>,                   # Vacuum Tube
   "L": <contenttweaker:electric_motor_ulv>,               # LV Electric Motor
   "t": <contenttweaker:controller_broken_north>, # tile.contenttweaker.controller_broken_north.name
   "*": <ore:wireGtDoubleGreenCrystalAlloy>,      # 2x Green Crystal Alloy Wire
@@ -100,7 +100,7 @@ val trashCompactorPlateMap as IItemStack[IOreDictEntry] = {
 } as IItemStack[IOreDictEntry];
 for ingot, plate in trashCompactorPlateMap {
 trash_compactor.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(80)
     .EUt(8)
     .inputs(ingot*3)
     .outputs(plate*2)

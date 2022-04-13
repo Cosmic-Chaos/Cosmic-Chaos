@@ -236,7 +236,7 @@ craft.remake(<metaitem:mbt:crushing_tank>, ["pretty",
 
 //Dense Hull Block
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(150)
+    .duration(80)
     .EUt(8)
     .inputs(<chisel:laboratory:11>)
     .outputs(<contenttweaker:hull_plate_t3>*5)
@@ -249,7 +249,7 @@ crushing_tank.recipeMap.recipeBuilder()
     
 //Heavy Hull Block
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(150)
+    .duration(80)
     .EUt(8)
     .inputs(<chisel:technicalnew:2>)
     .outputs(<contenttweaker:broken_hull_plate_t1>*3, <contenttweaker:broken_hull_plate_t3>*3)
@@ -262,7 +262,7 @@ crushing_tank.recipeMap.recipeBuilder()
     
 //Light Hull Block
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(150)
+    .duration(80)
     .EUt(8)
     .inputs(<chisel:factory:9>)
     .outputs(<contenttweaker:broken_hull_plate_t2>*5)
@@ -275,7 +275,7 @@ crushing_tank.recipeMap.recipeBuilder()
 	
 //Simple Internals
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(40)
     .EUt(8)
     .inputs(<contenttweaker:internals_t1>)
     .outputs(<minecraft:redstone>*4)
@@ -288,7 +288,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Copper Dust
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(40)
     .EUt(8)
     .inputs(<contenttweaker:broken_hull_plate_t2>)
     .outputs(<metaitem:dustCopper>)
@@ -298,7 +298,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Copper Ingot
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(50)
     .EUt(8)
     .inputs(<metaitem:ingotCopper>)
     .outputs(<metaitem:dustCopper>)
@@ -307,7 +307,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Iron Dust
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(40)
     .EUt(8)
     .inputs(<contenttweaker:broken_hull_plate_t1>)
     .outputs(<metaitem:dustIron>)
@@ -317,7 +317,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Iron Ingot
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(50)
     .EUt(8)
     .inputs(<minecraft:iron_ingot>)
     .outputs(<metaitem:dustIron>)
@@ -326,7 +326,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Tin Dust
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(40)
     .EUt(8)
     .inputs(<contenttweaker:broken_hull_plate_t3>)
     .outputs(<metaitem:dustTin>)
@@ -336,7 +336,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Tin Ingot
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(50)
     .EUt(8)
     .inputs(<metaitem:ingotTin>)
     .outputs(<metaitem:dustTin>)
@@ -344,7 +344,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Crude Steel Dust
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(40)
     .EUt(8)
     .inputs(<contenttweaker:hull_plate_t3>)
     .outputs(<metaitem:dustCrudeSteel>)
@@ -354,7 +354,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Crude Steel Ingot
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(50)
     .EUt(8)
     .inputs(<ore:ingotCrudeSteel>)
     .outputs(<metaitem:dustCrudeSteel>)
@@ -363,7 +363,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Green Crystal
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(40)
     .EUt(8)
     .inputs(<actuallyadditions:item_crystal_shard:4>*2)
     .outputs(<contenttweaker:dust_crystal_green>)
@@ -372,7 +372,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Red Crystal
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(40)
     .EUt(8)
     .inputs(<actuallyadditions:item_crystal_shard>*2)
     .outputs(<contenttweaker:dust_crystal_red>)
@@ -381,7 +381,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Bio Chaff
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(40)
     .EUt(8)
     .inputs(<metaitem:plant_ball>*2)
     .outputs(<metaitem:bio_chaff>)
@@ -392,7 +392,7 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Rubber
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(100)
+    .duration(40)
     .EUt(8)
     .inputs(<contenttweaker:scrap_rubber>)
     .outputs(<metaitem:dustSmallRubber>)

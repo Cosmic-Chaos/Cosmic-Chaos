@@ -230,7 +230,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Smash them on the ground to recover some of the useful components!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -293,7 +293,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Smash them on the ground to recover some of the useful components!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -350,7 +350,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "These are found after harvesting other blocks for the plating.\n\nSmash them on the ground to recover some of the useful components!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3433,12 +3433,12 @@
     },
     "65:10": {
       "preRequisites:11": [
-        61
+        113
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "You\u0027ll need to craft up the other tools to move forward!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3454,7 +3454,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "File",
+          "name:8": "More Tools",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3479,7 +3479,29 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 9,
-              "OreDict:8": "craftingToolFile",
+              "OreDict:8": "gtceFiles",
+              "id:8": "gregtech:meta_tool",
+              "tag:10": {
+                "GT.ToolStats:10": {
+                  "Material:8": "wrought_iron"
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 5,
+              "OreDict:8": "craftingToolSaw",
+              "id:8": "gregtech:meta_tool",
+              "tag:10": {
+                "GT.ToolStats:10": {
+                  "Material:8": "wrought_iron"
+                }
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 13,
+              "OreDict:8": "gtceWireCutters",
               "id:8": "gregtech:meta_tool",
               "tag:10": {
                 "GT.ToolStats:10": {
@@ -4972,7 +4994,7 @@
     },
     "95:10": {
       "preRequisites:11": [
-        113
+        65
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5184,7 +5206,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "3x3 Crafting!\n\nThis also links to adjacent inventories for crafting and can save up to 9 recipes!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5647,12 +5669,12 @@
     },
     "108:10": {
       "preRequisites:11": [
-        113
+        65
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With these, you\u0027ll be able to complete the Recycler and start making more complex materials!",
+          "desc:8": "With these, you\u0027ll be able to complete the Recycler and start making more complex materials!\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5940,7 +5962,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -6327,7 +6349,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Until you can craft conveyers on your own, you\u0027ll have to rely on good old fasioned Looting!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6365,6 +6387,12 @@
               "Damage:2": 112,
               "OreDict:8": "",
               "id:8": "gregtech:item_pipe_small"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 157,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6582,181 +6610,188 @@
           "y:3": -204
         },
         "20:10": {
+          "id:3": 65,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": -36
+        },
+        "21:10": {
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 396,
           "y:3": -192
         },
-        "21:10": {
+        "22:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
+          "x:3": 252,
           "y:3": -60
         },
-        "22:10": {
+        "23:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 648,
           "y:3": -84
         },
-        "23:10": {
+        "24:10": {
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": -144
         },
-        "24:10": {
+        "25:10": {
           "id:3": 98,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -192
         },
-        "25:10": {
+        "26:10": {
           "id:3": 99,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -36
         },
-        "26:10": {
+        "27:10": {
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 720,
           "y:3": -84
         },
-        "27:10": {
+        "28:10": {
           "id:3": 101,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 684,
           "y:3": -48
         },
-        "28:10": {
+        "29:10": {
           "id:3": 102,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 684,
           "y:3": -12
         },
-        "29:10": {
+        "30:10": {
           "id:3": 104,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 648,
           "y:3": -12
         },
-        "30:10": {
+        "31:10": {
           "id:3": 105,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": -36
         },
-        "31:10": {
+        "32:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": -108
         },
-        "32:10": {
+        "33:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": -72
         },
-        "33:10": {
+        "34:10": {
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 240,
+          "x:3": 252,
           "y:3": -12
         },
-        "34:10": {
+        "35:10": {
           "id:3": 109,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 516,
           "y:3": 36
         },
-        "35:10": {
+        "36:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": -144
         },
-        "36:10": {
+        "37:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -144
         },
-        "37:10": {
+        "38:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 36
         },
-        "38:10": {
+        "39:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": -36
         },
-        "39:10": {
+        "40:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": -12
         },
-        "40:10": {
+        "41:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -108
         },
-        "41:10": {
+        "42:10": {
           "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": -108
         },
-        "42:10": {
+        "43:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": 60
         },
-        "43:10": {
+        "44:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
-          "y:3": -72
+          "y:3": 0
         },
-        "44:10": {
+        "45:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 12
         },
-        "45:10": {
+        "46:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,

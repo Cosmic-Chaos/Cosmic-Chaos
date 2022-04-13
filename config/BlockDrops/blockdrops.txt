@@ -7890,21 +7890,6 @@
     "3pair14": "{\n  \"left\": 0,\n  \"right\": 1\n}"
   },
   {
-    "name": "gregtech:rubber_leaves",
-    "meta": 0,
-    "length": 1,
-    "name0": "gregtech:rubber_sapling",
-    "meta0": 0,
-    "0chance0": 5.12,
-    "1chance0": 5.68,
-    "2chance0": 8.68,
-    "3chance0": 9.94,
-    "0pair0": "{\n  \"left\": 0,\n  \"right\": 1\n}",
-    "1pair0": "{\n  \"left\": 0,\n  \"right\": 1\n}",
-    "2pair0": "{\n  \"left\": 0,\n  \"right\": 1\n}",
-    "3pair0": "{\n  \"left\": 0,\n  \"right\": 1\n}"
-  },
-  {
     "name": "appliedenergistics2:quartz_ore",
     "meta": 0,
     "length": 1,
@@ -7948,5 +7933,20 @@
     "1pair0": "{\n  \"left\": 1,\n  \"right\": 4\n}",
     "2pair0": "{\n  \"left\": 1,\n  \"right\": 6\n}",
     "3pair0": "{\n  \"left\": 1,\n  \"right\": 8\n}"
+  },
+  {
+    "name": "gregtech:rubber_leaves",
+    "meta": 0,
+    "length": 1,
+    "name0": "gregtech:rubber_sapling",
+    "meta0": 0,
+    "0chance0": 4.9,
+    "1chance0": 6.14,
+    "2chance0": 8.04,
+    "3chance0": 9.98,
+    "0pair0": "{\n  \"left\": 0,\n  \"right\": 1\n}",
+    "1pair0": "{\n  \"left\": 0,\n  \"right\": 1\n}",
+    "2pair0": "{\n  \"left\": 0,\n  \"right\": 1\n}",
+    "3pair0": "{\n  \"left\": 0,\n  \"right\": 1\n}"
   }
 ]

@@ -34,6 +34,10 @@ material.fluix_steel=Fluix Steel
 
 material.emc_minor=Minor Manifested EMC
 
+metaitem.battery_crystal_green.name=Crystal Battery
+
+metaitem.battery_station_ulv.name=Rusty Battery
+
 item.material.oreprefix.sheet=%s Sheet
 
 
@@ -55,7 +59,6 @@ item.contenttweaker.dust_crystal_green.name=Green Crystal Dust
 item.contenttweaker.dust_crystal_red.name=Red Crystal Dust
 item.contenttweaker.dust_crystal_green_glass.name=Green Crystal-Glass Blend
 
-item.contenttweaker.battery_crystal_green.name=Crystal Battery
 
 
 
