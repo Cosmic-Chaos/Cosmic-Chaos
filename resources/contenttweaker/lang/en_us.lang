@@ -91,6 +91,8 @@ tile.contenttweaker.crystal_green_glass.name=Green Crystal Glass
 
 tile.contenttweaker.controller_broken_south.name=Broken Recycler Controller
 
+tile.contenttweaker.crystal_grower.name=Crystal Waste Output
+
 
 tile.contenttweaker.crystal_cluster_blue_1.name=Growing Blue Crystal Cluster
 tile.contenttweaker.crystal_cluster_blue_2.name=Growing Blue Crystal Cluster

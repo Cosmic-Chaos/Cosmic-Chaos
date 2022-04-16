@@ -1,0 +1,108 @@
+{
+  "consumeCatalyst": false,
+  "location": "mbd:station_generator_controller",
+  "traits": {
+    "background": "multiblocked:textures/gui/item_bus_gui.png"
+  },
+  "allowRotate": true,
+  "showInJei": true,
+  "baseRenderer": {
+    "baseTexture": "multiblocked:blocks/gregtech_base",
+    "frontTexture": "multiblocked:blocks/gregtech_front",
+    "formedAsController": true,
+    "type": "gregtech"
+  },
+  "workingRenderer": {
+    "baseTexture": "multiblocked:blocks/gregtech_base",
+    "frontTexture": "multiblocked:blocks/overlay/overlay_front_active",
+    "type": "gregtech"
+  },
+  "isOpaqueCube": true,
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "FRONT"
+    ],
+    "pattern": [
+      [
+        "BBB",
+        "AAA",
+        "AAA"
+      ],
+      [
+        "BBB",
+        "A-A",
+        "AAA"
+      ],
+      [
+        "BBB",
+        "A@A",
+        "AAA"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "contenttweaker:station_casing",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "mbd:station_generator_controller",
+        "type": "component"
+      },
+      "E": {
+        "capability": "gtce_energy",
+        "type": "capability",
+        "toolTips": [
+          "Any Capability: gtce_energy IO: BOTH"
+        ]
+      },
+      "I": {
+        "capability": "item",
+        "type": "capability",
+        "toolTips": [
+          "Any Capability: item IO: BOTH"
+        ]
+      },
+      "air": {
+        "type": "air"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "A",
+        "E",
+        "I"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  },
+  "recipeMap": "station_generator"
+}

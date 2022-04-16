@@ -280,6 +280,18 @@ craft.remake(<devtech:meta_item:1>, ["pretty",
   "▲": <projecte:item.pe_covalence_dust>,        # Low Covalence Dust
 });
 
+
+# [Saw Blade Assembly] from [Iron Buzzsaw Blade][+3]
+craft.remake(<advancedrocketry:sawblade>, ["pretty",
+  "╱   ╱",
+  "I H I",
+  "□   □"], {
+  "╱": <ore:stickIron>,           # Iron Rod
+  "I": <ore:screwIron>,           # Iron Screw
+  "H": <ore:toolHeadBuzzSawIron>, # Iron Buzzsaw Blade
+  "□": <ore:plateIron>,           # Iron Plate
+});
+
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);

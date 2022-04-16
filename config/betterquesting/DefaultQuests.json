@@ -59,7 +59,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "After you enter the main station area, you might be able to piece together a suit with a small amount of oxygen left.",
+          "desc:8": "After you enter the main station area, you might be able to piece together a suit with a small amount of oxygen left.\n\nBefore going exploring, you may want to use the command \"§6/sethome§r\", just in case you fall! Once set, your home can be teleported to by using the command \"§6/home§r\".",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -96,25 +96,29 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "advancedrocketry:spacehelmet"
+              "id:8": "advancedrocketry:spacehelmet",
+              "tag:10": {}
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "advancedrocketry:spacechestplate"
+              "id:8": "advancedrocketry:spacechestplate",
+              "tag:10": {}
             },
             "2:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "advancedrocketry:spaceleggings"
+              "id:8": "advancedrocketry:spaceleggings",
+              "tag:10": {}
             },
             "3:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "advancedrocketry:spaceboots"
+              "id:8": "advancedrocketry:spaceboots",
+              "tag:10": {}
             }
           },
           "taskID:8": "bq_standard:retrieval"

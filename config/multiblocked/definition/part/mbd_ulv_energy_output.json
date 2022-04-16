@@ -1,0 +1,26 @@
+{
+  "canShared": true,
+  "location": "mbd:ulv_energy_output",
+  "traits": {
+    "background": "multiblocked:textures/gui/fluid_hatch_gui.png",
+    "gtce_energy": {
+      "cIO": 1,
+      "gIO": 2,
+      "x": 39,
+      "y": 71,
+      "width": 100,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "capacity": 1024
+    }
+  },
+  "allowRotate": true,
+  "showInJei": true,
+  "baseRenderer": {
+    "baseTexture": "multiblocked:blocks/gregtech_base",
+    "frontTexture": "multiblocked:blocks/overlay/overlay_energy_out",
+    "formedAsController": true,
+    "type": "gregtech"
+  },
+  "isOpaqueCube": true
+}

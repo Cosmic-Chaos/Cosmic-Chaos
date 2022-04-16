@@ -1,0 +1,31 @@
+{
+  "name": "station_generator",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "recipes": [
+    {
+      "uid": "bddc469c-d569-4724-aa49-65411bac3f02",
+      "duration": 32,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "amount": 1,
+              "matches": [
+                "{id:\"actuallyadditions:item_crystal_shard\",Count:1b,Damage:1s}"
+              ]
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "gtce_energy": [
+          {
+            "content": 256,
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

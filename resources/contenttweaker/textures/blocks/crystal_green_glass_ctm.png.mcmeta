@@ -1,0 +1,10 @@
+{
+    "ctm": {
+        "ctm_version": 1,
+        "type": "ctm",
+        "layer": "CUTOUT",
+        "textures": [
+            "contenttweaker:blocks/crystal_green_glass_ctm"
+        ]
+    }
+}

@@ -35,7 +35,7 @@ casingStation.setLightOpacity(3);
 casingStation.setLightValue(0);
 casingStation.setBlockHardness(5.0);
 casingStation.setBlockResistance(5.0);
-casingStation.setToolClass("pickaxe");
+casingStation.setToolClass("wrench");
 casingStation.setToolLevel(1);
 casingStation.setBlockSoundType(<soundtype:metal>);
 casingStation.blockColorSupplier = casingStationColorBlock;
@@ -97,6 +97,16 @@ brokenControllerWest.setBlockLayer("CUTOUT");
 brokenControllerWest.blockColorSupplier = casingStationColorBlock;
 brokenControllerWest.itemColorSupplier = casingStationColorItem;
 brokenControllerWest.register();
+
+/*
+var crystalHatch = VanillaFactory.createBlock("crystal_grower", <blockmaterial:iron>);
+crystalHatch.setBlockHardness(5.0);
+crystalHatch.setBlockResistance(5.0);
+crystalHatch.setToolClass("pickaxe");
+crystalHatch.setToolLevel(1);
+crystalHatch.setBlockSoundType(<soundtype:metal>);
+crystalHatch.register();
+*/
 
 var glassVat = VanillaFactory.createBlock("vat_glass", <blockmaterial:glass>);
 glassVat.setLightValue(0);
