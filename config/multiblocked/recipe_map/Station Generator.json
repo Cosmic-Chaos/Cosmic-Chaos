@@ -4,7 +4,7 @@
   "recipes": [
     {
       "uid": "bddc469c-d569-4724-aa49-65411bac3f02",
-      "duration": 32,
+      "duration": 512,
       "inputs": {
         "item": [
           {
@@ -18,10 +18,12 @@
           }
         ]
       },
-      "outputs": {
+      "outputs": {},
+      "tickInputs": {},
+      "tickOutputs": {
         "gtce_energy": [
           {
-            "content": 256,
+            "content": 8,
             "chance": 1.0
           }
         ]

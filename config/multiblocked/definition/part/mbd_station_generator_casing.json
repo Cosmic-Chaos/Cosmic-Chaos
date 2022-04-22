@@ -1,0 +1,15 @@
+{
+  "canShared": true,
+  "location": "mbd:station_generator_casing",
+  "traits": {},
+  "allowRotate": true,
+  "showInJei": true,
+  "baseRenderer": {
+    "state": {
+      "id": "contenttweaker:station_casing",
+      "meta": 0
+    },
+    "type": "blockstate"
+  },
+  "isOpaqueCube": true
+}

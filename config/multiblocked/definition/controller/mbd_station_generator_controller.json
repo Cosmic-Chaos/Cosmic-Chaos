@@ -72,16 +72,22 @@
       "E": {
         "capability": "gtce_energy",
         "type": "capability",
-        "toolTips": [
-          "Any Capability: gtce_energy IO: BOTH"
-        ]
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "OUT"
       },
       "I": {
-        "capability": "item",
-        "type": "capability",
-        "toolTips": [
-          "Any Capability: item IO: BOTH"
-        ]
+        "blocks": [
+          {
+            "id": "mbd:item_bus"
+          }
+        ],
+        "type": "blocks",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "IN"
       },
       "air": {
         "type": "air"

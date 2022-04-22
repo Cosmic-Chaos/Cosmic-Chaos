@@ -62,13 +62,22 @@ item.contenttweaker.dust_crystal_green_glass.name=Green Crystal-Glass Blend
 
 
 
-item.contenttweaker.emc_mote.name=Mote of EMC
 
-item.contenttweaker.emc_minor_widget.name=Minor Alchemical Construct
+item.contenttweaker.emc_widget_1.name=Minor Alchemical Construct
 
-item.contenttweaker.emc_fragment_1.name=Tiny Fragment of EMC
-item.contenttweaker.emc_fragment_2.name=Small Fragment of EMC
-item.contenttweaker.emc_fragment_3.name=Fragment of EMC
+item.contenttweaker.emc_item_1.name=Mote of EMC
+item.contenttweaker.emc_item_2.name=Speck of EMC
+item.contenttweaker.emc_item_3.name=Fragment of EMC
+item.contenttweaker.emc_item_4.name=Sliver of EMC
+item.contenttweaker.emc_item_5.name=Shard of EMC
+item.contenttweaker.emc_item_6.name=Cluster of EMC
+item.contenttweaker.emc_item_7.name=Chunk of EMC
+item.contenttweaker.emc_item_8.name=Ball of EMC
+item.contenttweaker.emc_item_9.name=Orb of EMC
+item.contenttweaker.emc_item_10.name=Sphere of EMC
+
+fluid.emc_fluid=Liquid EMC
+
 
 item.contenttweaker.station_component_1.name=Plating Component
 item.contenttweaker.station_component_2.name=Plating Component
@@ -90,6 +99,10 @@ tile.contenttweaker.organic_overloader.name=Photosynthesis Accelerator
 tile.contenttweaker.crystal_green_glass.name=Green Crystal Glass
 
 tile.contenttweaker.controller_broken_south.name=Broken Recycler Controller
+
+tile.contenttweaker.controller_broken_north.name=Broken Generator Controller
+
+tile.contenttweaker.controller_broken_west.name=Broken Compactor Controller
 
 tile.contenttweaker.crystal_grower.name=Crystal Waste Output
 

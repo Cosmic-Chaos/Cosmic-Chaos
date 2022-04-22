@@ -3,9 +3,10 @@
   "defaults": {
     "textures": {
       "all": "contenttweaker:blocks/crystal_green_glass",
+      "ctm": "contenttweaker:blocks/crystal_green_glass_ctm",
       "particle": "contenttweaker:blocks/crystal_green_glass"
     },
-    "model": "contenttweaker:cube_all",
+    "model": "cube_all",
     "uvlock": true,
     "transform": "forge:default-block"
   },

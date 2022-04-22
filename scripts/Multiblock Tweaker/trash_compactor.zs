@@ -61,17 +61,17 @@ trash_compactor.hasMaintenanceMechanics = false;
 trash_compactor.hasMufflerMechanics = false;
 
 // Controller Recipe
-# [Trash Compactor] from [tile.contenttweaker.controller_broken_north.name][+5]
+# [Trash Compactor] from [tile.contenttweaker.controller_broken_west.name][+5]
 craft.remake(<metaitem:mbt:trash_compactor>, ["pretty",
-  "¤ P ¤",
-  "L t L",
+  "I L I",
+  "U t U",
   "* ⌂ *"], {
-  "¤": <ore:gearSmallBronze>,                    # Small Bronze Gear
-  "P": <metaitem:circuit.vacuum_tube>,                   # Vacuum Tube
-  "L": <contenttweaker:electric_motor_ulv>,               # LV Electric Motor
-  "t": <contenttweaker:controller_broken_north>, # tile.contenttweaker.controller_broken_north.name
-  "*": <ore:wireGtDoubleGreenCrystalAlloy>,      # 2x Green Crystal Alloy Wire
-  "⌂": <contenttweaker:station_casing>,          # Derelict Casing
+  "I": <ore:springIron>,                        # Iron Spring
+  "L": <ore:circuitLv>,                         # Electronic Circuit
+  "U": <contenttweaker:electric_piston_ulv>,    # ULV Electric Piston
+  "t": <contenttweaker:controller_broken_west>, # tile.contenttweaker.controller_broken_west.name
+  "*": <ore:cableGtDoubleGreenCrystalAlloy>,    # 2x Green Crystal Alloy Cable
+  "⌂": <contenttweaker:station_casing>,         # Derelict Casing
 });
 
 # [Small Plate Presser] from [Crude Steel Frame Box][+4]

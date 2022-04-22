@@ -1,5 +1,6 @@
 import crafttweaker.item.IItemStack;
 import mods.projecte.WorldTransmutation;
+import crafttweaker.oredict.IOreDictEntry;
 print("==================== loading mods blank.zs ====================");
 ##########################################################################################
 
@@ -57,30 +58,33 @@ Unacceptable, Emerging, Minimally Acceptable, Acceptable, Accomplished, Exemplar
 
 //Mote
 //This is looted, which is how you get the chain started
-//Crafting down is free, while crafting up is done once with an item for that tier and then using the table
+//Crafting up is done once with an item for that tier and then using the table
 //recipes.addShapeless(<contenttweaker:emc_mote>*8, [<contenttweaker:emc_fragment_1>]);
 
-//Fragment 1
-recipes.addShapeless(<contenttweaker:emc_fragment_1>, 
-	[<contenttweaker:emc_mote>,	<contenttweaker:emc_mote>,<contenttweaker:emc_mote>,<contenttweaker:emc_mote>,<contenttweaker:emc_mote>,<contenttweaker:emc_mote>,<contenttweaker:emc_mote>,<contenttweaker:emc_mote>]
-);
-//recipes.addShapeless(<contenttweaker:emc_fragment_1>*8, [<contenttweaker:emc_fragment_2>]);
 
-//Fragment 2
-recipes.addShapeless(<contenttweaker:emc_fragment_2>, 
-	[<contenttweaker:emc_fragment_1>,<contenttweaker:emc_fragment_1>,<contenttweaker:emc_fragment_1>,<contenttweaker:emc_fragment_1>,<contenttweaker:emc_fragment_1>,<contenttweaker:emc_fragment_1>,<contenttweaker:emc_fragment_1>,<contenttweaker:emc_fragment_1>]
-);
-//recipes.addShapeless(<contenttweaker:emc_fragment_2>*8, [<contenttweaker:emc_fragment_3>]);
+val mapEMC as IItemStack[][IOreDictEntry] = {
+    <ore:circuitUlv>:[<contenttweaker:emc_item_1>, <contenttweaker:emc_item_2>], //ULV
+    <ore:circuitLv>:[<contenttweaker:emc_item_2>, <contenttweaker:emc_item_3>],
+    <ore:circuitMv>:[<contenttweaker:emc_item_3>, <contenttweaker:emc_item_4>],
+    <ore:circuitHv>:[<contenttweaker:emc_item_4>, <contenttweaker:emc_item_5>],
+    <ore:circuitEv>:[<contenttweaker:emc_item_5>, <contenttweaker:emc_item_6>],
+    <ore:circuitIv>:[<contenttweaker:emc_item_6>, <contenttweaker:emc_item_7>],
+    <ore:circuitLuv>:[<contenttweaker:emc_item_7>, <contenttweaker:emc_item_8>],
+    <ore:circuitZpm>:[<contenttweaker:emc_item_8>, <contenttweaker:emc_item_9>],
+    <ore:circuitUv>:[<contenttweaker:emc_item_9>, <contenttweaker:emc_item_10>],
+} as IItemStack[][IOreDictEntry];
 
-//Fragment 3
-recipes.addShapeless(<contenttweaker:emc_fragment_3>, 
-	[<contenttweaker:emc_fragment_2>,<contenttweaker:emc_fragment_2>,<contenttweaker:emc_fragment_2>,<contenttweaker:emc_fragment_2>,<contenttweaker:emc_fragment_2>,<contenttweaker:emc_fragment_2>,<contenttweaker:emc_fragment_2>,<contenttweaker:emc_fragment_2>]
-);
-
-// Fragment -> Minor EMC Material
+for item, material in mapEMC {
+recipes.addShaped(material[1], [
+	[material[0], material[0], material[0]],
+	[material[0],    item,     material[0]], 
+	[material[0], material[0], material[0]]
+]);
+}
 
 //Not sure if I'll keep these ratios, but the idea is once you unlock the higher tier of EMC item you get a better ratio.
 
+/*
 //chemical_reactor.recipeBuilder() // May use for higher tier
 extractor.recipeBuilder()
     .inputs(<contenttweaker:emc_fragment_1>)
@@ -102,9 +106,10 @@ extractor.recipeBuilder()
 	.EUt(10)
 	.duration(200)
 .buildAndRegister();
+*/
 
 # [Minor Alchemical Construct] from [Bronze Plate][+8]
-craft.remake(<contenttweaker:emc_minor_widget>, ["pretty",
+craft.remake(<contenttweaker:emc_widget_1>, ["pretty",
   "o G T",
   "* □ F",
   "○ H l"], {

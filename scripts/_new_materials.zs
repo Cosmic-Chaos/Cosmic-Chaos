@@ -425,26 +425,12 @@ var green_crystal_alloy = MaterialBuilder(32150, "green_crystal_alloy") // name
 // Minor Manifested EMC
 var emc_minor = MaterialBuilder(32200, "emc_minor") // name
     .fluid("fluid", true) // fluid with block
-    .ingot(1) // (@Optional int harvestLevel, @Optional int burnTime)
+    .gem(1) // (@Optional int harvestLevel, @Optional int burnTime)
     .color(0x30e642) // can also use colorAverage()
-    .iconSet("DULL")
+    .iconSet("EMERALD")
     .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
     .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .build();
-/*
-// Aurorian Stone
-var stone_aurorian = MaterialBuilder(32300, "stone_aurorian")
-    .dust(1)
-    .color(0x133554)
-    .build();
-
-
-// Atum Limetone
-var limestone_atum = MaterialBuilder(32301, "limestone_atum")
-    .dust(1)
-    .color(0xf7d26a)
-    .build();
-*/
 
 
 
@@ -460,6 +446,20 @@ StoneType.create(17,"stone_aurorian","ore",<material:stone>,"theaurorian:auroria
 
 //Atum Stone
 StoneType.create(18,"limestone_atum","ore",<material:stone>,"atum:limestone:contains_scarab=false", null, true);
+/*
+// Aurorian Stone
+var stone_aurorian = MaterialBuilder(32300, "stone_aurorian")
+    .dust(1)
+    .color(0x133554)
+    .build();
+
+
+// Atum Limetone
+var limestone_atum = MaterialBuilder(32301, "limestone_atum")
+    .dust(1)
+    .color(0xf7d26a)
+    .build();
+*/
 
 ##########################################################################################
 print("==================== end of new_materials.zs ====================");

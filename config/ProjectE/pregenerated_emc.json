@@ -4,10 +4,17 @@
 "projecte:item.pe_fuel|2": 262144,
 "equivadditions:zeitheron_fuel|0": 16777216,
 
-"contenttweaker:emc_mote|0": 1,
+"contenttweaker:emc_item_1|0": 1,
+"contenttweaker:emc_item_2|0": 8,
+"contenttweaker:emc_item_3|0": 64,
+"contenttweaker:emc_item_4|0": 512,
+"contenttweaker:emc_item_5|0": 4096,
+"contenttweaker:emc_item_6|0": 32768,
+"contenttweaker:emc_item_7|0": 262144,
+"contenttweaker:emc_item_8|0": 2097152,
+"contenttweaker:emc_item_9|0": 16777216,
+"contenttweaker:emc_item_10|0": 134217728,
+"contenttweaker:emc_item_11|0": 1073741824,
 
-"contenttweaker:emc_minor_widget|0": 256,
-"contenttweaker:emc_fragment_1|0": 8,
-"contenttweaker:emc_fragment_2|0": 64,
-"contenttweaker:emc_fragment_3|0": 512
+"contenttweaker:emc_widget_1|0": 256
 }

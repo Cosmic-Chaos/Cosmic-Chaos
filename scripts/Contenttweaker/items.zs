@@ -44,12 +44,18 @@ VanillaFactory.createItem("internals_t4").register();
 VanillaFactory.createItem("purpleprint").register();
 
 
-VanillaFactory.createItem("emc_mote").register();
 
-VanillaFactory.createItem("emc_minor_widget").register();
-VanillaFactory.createItem("emc_fragment_1").register();
-VanillaFactory.createItem("emc_fragment_2").register();
-VanillaFactory.createItem("emc_fragment_3").register();
+VanillaFactory.createItem("emc_widget_1").register();
+VanillaFactory.createItem("emc_item_1").register();
+VanillaFactory.createItem("emc_item_2").register();
+VanillaFactory.createItem("emc_item_3").register();
+VanillaFactory.createItem("emc_item_4").register();
+VanillaFactory.createItem("emc_item_5").register();
+VanillaFactory.createItem("emc_item_6").register();
+VanillaFactory.createItem("emc_item_7").register();
+VanillaFactory.createItem("emc_item_8").register();
+VanillaFactory.createItem("emc_item_9").register();
+VanillaFactory.createItem("emc_item_10").register();
 
 VanillaFactory.createItem("station_component_1").register();
 VanillaFactory.createItem("station_component_2").register();
