@@ -330,7 +330,7 @@ furnace.addRecipe(<metaitem:ingotSilver>, <contenttweaker:hull_plate_t4>, 0.0);
 
 
 //Wrought Iron recipe in greg_tech.zs
-//furnace.addRecipe(<metaitem:ingotWroughtIron>, <metaitem:ingotWroughtIron>, 0.1);
+//furnace.addRecipe(<metaitem:ingotIron>, <metaitem:ingotWroughtIron>, 0.1);
 
 //Glass
 //furnace.addRecipe(<minecraft:glass_pane>, <metaitem:dustSmallGlass>, 0.0); //bad recipe

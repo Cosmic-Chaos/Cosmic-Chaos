@@ -21,7 +21,7 @@ recipes.addShaped(<metaitem:component.glass.tube>, [
 ]);
 
 //Wrought Iron temp
-furnace.addRecipe(<metaitem:ingotWroughtIron>, <metaitem:ingotWroughtIron>, 0.1);
+furnace.addRecipe(<metaitem:ingotIron>, <metaitem:ingotWroughtIron>, 0.1);
 
 /*
 val tinyDustMap as IItemStack[IItemStack] = {

@@ -5,6 +5,7 @@ import mods.contenttweaker.Item;
 import mods.contenttweaker.IItemColorSupplier;
 import mods.contenttweaker.Color;
 import crafttweaker.item.IItemStack;
+import mods.contenttweaker.ItemFood;
 
 
 print("==================== loading Items.zs ====================");
@@ -101,5 +102,9 @@ val conveyorULV = VanillaFactory.createItem("conveyor_module_ulv");
 conveyorULV.itemColorSupplier = componentsULV;
 conveyorULV.register();
 
+
+val cannedBeans = VanillaFactory.createItemFood("canned_beans", 8);
+cannedBeans.saturation = 0.25;
+cannedBeans.register();
 ##########################################################################################
 print("==================== end of Items.zs ====================");

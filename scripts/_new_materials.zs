@@ -427,7 +427,7 @@ var emc_minor = MaterialBuilder(32200, "emc_minor") // name
     .fluid("fluid", true) // fluid with block
     .gem(1) // (@Optional int harvestLevel, @Optional int burnTime)
     .color(0x30e642) // can also use colorAverage()
-    .iconSet("EMERALD")
+    .iconSet("SHINY")
     .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
     .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .build();
