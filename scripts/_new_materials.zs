@@ -37,11 +37,6 @@ val nuggetPrefix = OrePrefix.getPrefix("nugget");
 
 /*
 
-  "≡": <theaurorian:aurorianiteingot>, # Aurorianite Ingot
-  "≡": <theaurorian:umbraingot>,               # Umbra Ingot
-  "Ξ": <theaurorian:crystallineingot>, # Crystalline Ingot
-  "=": <ore:ingotCerulean>,            # Cerulean Ingot
-  "≡": <ore:ingotMoonstone>,       # Moonstone Ingot
 
   "‗": <midnight:tenebrum_ingot>,      # Tenebrum Ingot
   "N": <midnight:nagrilite_ingot>,   # Nagrilite Ingot
@@ -369,6 +364,156 @@ var adamantium = MaterialBuilder(32053, "adamantium")
     .build();
 ingotPrefix.setIgnored(<material:adamantium>);
 
+
+/////////////////////////////////////////////////////////
+///////////////       The Aurorian      /////////////////
+/////////////////////////////////////////////////////////
+
+
+// Cerulean
+//Elements.add(800, 850, -1, null, "Cerulean", "Cr", false); // create a new element.
+var cerulean = MaterialBuilder(32060, "cerulean")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x87e9ff) // can also use colorAverage() if using components
+    .iconSet("SHINY")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Cerulean")
+    .ore(1, 1, true) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+ingotPrefix.setIgnored(<material:cerulean>);
+
+
+// Moonstone
+//Elements.add(800, 850, -1, null, "Moonstone", "Mn", false); // create a new element.
+var moonstone = MaterialBuilder(32061, "moonstone")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xdadbd3) // can also use colorAverage() if using components
+    .iconSet("SHINY")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Moonstone")
+    .ore(1, 1, true) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+ingotPrefix.setIgnored(<material:moonstone>);
+
+// Aurorian Crystal
+//Elements.add(800, 850, -1, null, "Aurorian Crystal", "Mn", false); // create a new element.
+var aurorian_geode = MaterialBuilder(32062, "aurorian_geode")
+    .gem() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xbe99c4) // can also use colorAverage() if using components
+    .iconSet("diamond")
+//    .element("Aurorian Crystal")
+    .ore(2, 1, true) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+gemPrefix.setIgnored(<material:aurorian_geode>);
+
+// Crystalline
+var crystalline = MaterialBuilder(32063, "crystalline")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xbea9c2) // can also use colorAverage() if using components
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+    .iconSet("shiny")
+    .build();
+ingotPrefix.setIgnored(<material:crystalline>);
+
+// Umbra
+var umbra = MaterialBuilder(32064, "umbra")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x191a21) // can also use colorAverage() if using components
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+    .iconSet("metallic")
+    .build();
+ingotPrefix.setIgnored(<material:umbra>);
+
+// Aurorianite
+var aurorianite = MaterialBuilder(32065, "aurorianite")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x5c68bf) // can also use colorAverage() if using components
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+    .iconSet("shiny")
+    .build();
+ingotPrefix.setIgnored(<material:aurorianite>);
+
+// Aurorian Steel
+var aurorian_steel = MaterialBuilder(32066, "aurorian_steel")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x855cad) // can also use colorAverage() if using components
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+    .iconSet("shiny")
+    .blastTemp(5400, "HIGH") // (int temp, @Optional gasTier - Available options are: "LOW", "MID", "HIGH", "HIGHER", "HIGHEST, @Optional int eutOverride, @Optional int durationOverride)
+    .build();
+ingotPrefix.setIgnored(<material:aurorian_steel>);
+
+
+/////////////////////////////////////////////////////////
+///////////////       The Midnight      /////////////////
+/////////////////////////////////////////////////////////
+
+
+// Tenebrum
+//Elements.add(800, 850, -1, null, "Tenebrum", "Cr", false); // create a new element.
+var tenebrum = MaterialBuilder(32070, "tenebrum")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x0f0f1c) // can also use colorAverage() if using components
+    .iconSet("dull")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Tenebrum")
+    .ore(1, 1, false) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+ingotPrefix.setIgnored(<material:tenebrum>);
+
+// Nagrilite
+//Elements.add(800, 850, -1, null, "Nagrilite", "Cr", false); // create a new element.
+var nagrilite = MaterialBuilder(32071, "nagrilite")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x331d40) // can also use colorAverage() if using components
+    .iconSet("dull")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Nagrilite")
+    .ore(1, 1, false) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+ingotPrefix.setIgnored(<material:nagrilite>);
+
+// Ebony
+//Elements.add(800, 850, -1, null, "Ebony", "Cr", false); // create a new element.
+var ebony = MaterialBuilder(32072, "ebony")
+    .fluid("fluid", true) // fluid with block
+    .gem() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x120d0a) // can also use colorAverage() if using components
+    .iconSet("diamond")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Ebony")
+    .ore(1, 1, false) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+gemPrefix.setIgnored(<material:ebony>);
+
+// Archaic Shard
+//Elements.add(800, 850, -1, null, "Archaic Shard", "Cr", false); // create a new element.
+var archaic_shard = MaterialBuilder(32073, "archaic_shard")
+    .fluid("fluid", true) // fluid with block
+    .gem() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x6950a6) // can also use colorAverage() if using components
+    .iconSet("diamond")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Archaic Shard")
+    .ore(1, 1, true) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+gemPrefix.setIgnored(<material:archaic_shard>);
+
 /////////////////////////////////////////////////////////
 ////////////////////       AE 2      ////////////////////
 /////////////////////////////////////////////////////////
@@ -397,14 +542,14 @@ var fluix_steel = MaterialBuilder(32101, "fluix_steel")
     .build();
 ingotPrefix.setIgnored(<material:fluix_steel>);
 
-/*
+
 // Sky Stone
 var sky_stone = MaterialBuilder(32102, "sky_stone")
     .dust(1)
     .color(0x133554)
     .build();
-dustPrefix.setIgnored(<material:sky_stone>);
-*/
+//dustPrefix.setIgnored(<material:sky_stone>);
+
 
 
 /////////////////////////////////////////////////////////
@@ -425,7 +570,7 @@ var green_crystal_alloy = MaterialBuilder(32150, "green_crystal_alloy") // name
 // Minor Manifested EMC
 var emc_minor = MaterialBuilder(32200, "emc_minor") // name
     .fluid("fluid", true) // fluid with block
-    .gem(1) // (@Optional int harvestLevel, @Optional int burnTime)
+    .ingot(1) // (@Optional int harvestLevel, @Optional int burnTime)
     .color(0x30e642) // can also use colorAverage()
     .iconSet("SHINY")
     .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
@@ -439,13 +584,20 @@ var emc_minor = MaterialBuilder(32200, "emc_minor") // name
 /////////////////////////////////////////////////////////
 
 //Sky Stone
-StoneType.create(16,"sky_stone","ore",<material:stone>,"appliedenergistics2:sky_stone_block", null, true);
+val oreSkyStone as OrePrefix = OrePrefix.registerOrePrefix("oreSkyStone", 1);
+oreSkyStone.addSecondaryMaterial(<material:sky_stone>);
+
+StoneType.create(16,"sky_stone","oreSkyStone",<material:sky_stone>,"appliedenergistics2:sky_stone_block", null, true);
 
 //Aurorian Stone
 StoneType.create(17,"stone_aurorian","ore",<material:stone>,"theaurorian:aurorianstone", null, true);
 
 //Atum Stone
 StoneType.create(18,"limestone_atum","ore",<material:stone>,"atum:limestone:contains_scarab=false", null, true);
+
+//Midnight Stone
+StoneType.create(19,"nightstone","ore",<material:stone>,"midnight:nightstone", null, true);
+
 /*
 // Aurorian Stone
 var stone_aurorian = MaterialBuilder(32300, "stone_aurorian")

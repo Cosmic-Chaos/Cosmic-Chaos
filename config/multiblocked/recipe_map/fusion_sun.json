@@ -13,7 +13,9 @@
           }
         ]
       },
-      "outputs": {}
+      "outputs": {},
+      "tickInputs": {},
+      "tickOutputs": {}
     }
   ]
 }

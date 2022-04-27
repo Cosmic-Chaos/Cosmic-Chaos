@@ -11,7 +11,6 @@ import mods.gregtech.ore.OrePrefix;
 import mods.gregtech.ore.IOreRecipeHandler;
 import mods.gregtech.material.IMaterialPredicate;
 import mods.gregtech.recipe.helpers;
-import mods.advancedrocketry.RollingMachine;
 import mods.gregtech.MaterialFlag;
 import mods.gregtech.MaterialFlagBuilder;
 import mods.gregtech.MetaItem;
@@ -46,7 +45,6 @@ MetaItem.create(2, "battery_station_ulv").electricItem(96000, 0);
 val sheet as OrePrefix = OrePrefix.registerOrePrefix("sheet", 1);
 
 sheet.setGenerationPredicate(function(mat as Material) as bool {
-    //return mat.hasIngot();
     return mat.hasFlag("generate_thin_sheet");  
 } as IMaterialPredicate);
 sheet.createMaterialItem();

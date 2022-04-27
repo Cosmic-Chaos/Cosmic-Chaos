@@ -55,6 +55,40 @@ furnace.remove(<lucraftcore:ingot_vibranium>, <lucraftcore:ore_vibranium>);
 furnace.remove(<lucraftcore:ingot_adamantium>, <lucraftcore:dust_adamantium>);
 
 /////////////////////////////////////////////////////////
+////////////////       The Aurorian      ////////////////
+/////////////////////////////////////////////////////////
+
+// Crystal
+<ore:gemAurorianGeode>.add(<theaurorian:crystal>);
+
+//Crystalline
+<ore:ingotCrystalline>.add(<theaurorian:crystallineingot>);
+
+//Umbra
+<ore:ingotUmbra>.add(<theaurorian:umbraingot>);
+
+//Aurorianite
+<ore:ingotAurorianite>.add(<theaurorian:aurorianiteingot>);
+
+/////////////////////////////////////////////////////////
+////////////////       The Midnight      ////////////////
+/////////////////////////////////////////////////////////
+
+// Tenebrum
+<ore:ingotTenebrum>.add(<midnight:tenebrum_ingot>);
+
+//Nagrilite
+<ore:ingotNagrilite>.add(<midnight:nagrilite_ingot>);
+
+//Ebony
+<ore:gemEbony>.add(<midnight:ebonys>);
+
+//Archaic Shard
+<ore:gemArchaicShard>.add(<midnight:archaic_shard>);
+
+
+
+/////////////////////////////////////////////////////////
 ////////////////////       AE 2      ////////////////////
 /////////////////////////////////////////////////////////
 
@@ -65,6 +99,7 @@ furnace.remove(<lucraftcore:ingot_adamantium>, <lucraftcore:dust_adamantium>);
 
 // Sky Stone
 <ore:skyStone>.add(<appliedenergistics2:sky_stone_block>);
+//<ore:stoneSkyStone>.add(<appliedenergistics2:sky_stone_block>);
 <ore:dustSkyStone>.add(<appliedenergistics2:material:45>);
 
 /////////////////////////////////////////////////////////

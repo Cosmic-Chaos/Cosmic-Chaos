@@ -23,11 +23,26 @@ material.vibranium=Vibranium
 material.adamantium=Adamantium
 
 
+material.cerulean=Cerulean
+material.moonstone=Moonstone
+material.aurorian_geode=Aurorian Crystal
+material.crystalline=Crystalline
+material.umbra=Umbra
+material.aurorianite=Aurorianite
+material.aurorian_steel=Aurorian Steel
+
+material.tenebrum=Tenebrum
+material.nagrilite=Nagrilite
+material.ebony=Ebony
+material.archaic_shard=Archaic Shard
+
+
 material.sky_stone=Sky Stone
+item.material.oreprefix.oreSkyStone=Alchemical %s Ore
+
 material.limestone_atum=Atum Limestone
 material.stone_aurorian=Aurorian Stone
 
-item.material.sky_stone.ore=Alchemical %s Ore
 
 material.fluix=Fluix
 material.fluix_steel=Fluix Steel

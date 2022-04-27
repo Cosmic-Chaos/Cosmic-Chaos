@@ -9,6 +9,23 @@
         }
       },
       "jed": {}
-    }
+    },
+    {
+			"dim": 17,
+			"worldinfo": {
+				"JED": {
+					"RespawnDimension": 17
+				}
+			}
+		},
+    {
+			"dim": 424,
+			"worldinfo": {
+				"JED": {
+          "CanRespawnHere": false,
+					"RespawnDimension": 424
+				}
+			}
+		}
   ]
 }

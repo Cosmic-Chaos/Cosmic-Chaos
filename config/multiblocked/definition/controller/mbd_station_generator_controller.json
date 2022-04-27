@@ -80,7 +80,7 @@
       "I": {
         "blocks": [
           {
-            "id": "mbd:item_bus"
+            "id": "mbd:fluid_hatch"
           }
         ],
         "type": "blocks",

@@ -1,5 +1,5 @@
 <galaxy>
-    <star name="Tau Ceti" temp="128" x="0" y="0" numPlanets="4" numGasGiants="1" blackHole="true">
+    <star name="Tau Ceti" temp="128" x="0" y="0" numPlanets="0" numGasGiants="0" blackHole="true">
         <planet name="Storm-3c Debris Field" DIMID="33">
 			<genType>2</genType>
             <fogColor>0,0,0</fogColor>
@@ -15,6 +15,22 @@
 			<OreGen>
 				<ore block="minecraft:ice" minHeight="1" maxHeight="255" clumpSize="32" chancePerChunk="12" />
 			</OreGen>
+        
+            <planet name="Atum" DIMID="17" dimMapping="" customIcon="DesertWorld">
+                <orbitalDistance>140</orbitalDistance>
+                <orbitalTheta>100</orbitalTheta>
+                <orbitalPhi>30</orbitalPhi>
+            </planet>
+            <planet name="The Aurorian" DIMID="424" dimMapping="" customIcon="EarthLike">
+                <orbitalDistance>120</orbitalDistance>
+                <orbitalTheta>180</orbitalTheta>
+                <orbitalPhi>90</orbitalPhi>
+            </planet>
+            <planet name="The Midnight" DIMID="-421" dimMapping="" customIcon="CarbonWorld">
+                <orbitalDistance>100</orbitalDistance>
+                <orbitalTheta>50</orbitalTheta>
+                <orbitalPhi>35</orbitalPhi>
+            </planet>
         </planet>
     </star>
 </galaxy>

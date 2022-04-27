@@ -39,16 +39,14 @@ val itemstoRemoveAndHide =
 [
 	<actuallyadditions:item_misc:2>, //Knife blade
 	<actuallyadditions:item_misc:3>, //Knife handle
-	/*
-	<morefurnaces:upgrade:7>, 
-	<morefurnaces:upgrade:6>,
-	<morefurnaces:upgrade:5>,
+
+	<morefurnaces:upgrade:7>,
 	<morefurnaces:upgrade:4>,
 	<morefurnaces:upgrade:3>,
 	<morefurnaces:upgrade:2>,
 	<morefurnaces:upgrade:1>,
 	<morefurnaces:upgrade>,
-	*/
+	
 	<morefurnaces:furnaceblock:4>,
 	<morefurnaces:furnaceblock:3>,
 	<morefurnaces:furnaceblock:2>,
@@ -175,7 +173,7 @@ craft.remake(<morefurnaces:furnaceblock:5>, ["pretty",
   "P T P",
   "P P P"], {
   "P": <contenttweaker:station_component_1>, # Plating Component
-  "T": <ore:gtceWrenches>, # Neutronium Wrench
+  "T": <ore:gtceHardHammers>, # Neutronium Wrench
 });
 
 # [Copper Furnace] from [Neutronium Wrench][+1]
@@ -184,7 +182,7 @@ craft.make(<morefurnaces:furnaceblock:5>, ["pretty",
   "□ T □",
   "□ □ □"], {
   "□": <ore:plateCopper>, # Copper Plate
-  "T": <ore:gtceWrenches>, # Neutronium Wrench
+  "T": <ore:gtceHardHammers>, # Neutronium Wrench
 });
 
 # [Iron Furnace] from [Neutronium Wrench][+1]
@@ -193,7 +191,7 @@ craft.remake(<morefurnaces:furnaceblock>, ["pretty",
   "P T P",
   "P P P"], {
   "P": <contenttweaker:station_component_2>, # Plating Component
-  "T": <ore:gtceWrenches>, # Neutronium Wrench
+  "T": <ore:gtceHardHammers>, # Neutronium Wrench
 });
 
 # [Iron Furnace] from [Neutronium Wrench][+1]
@@ -202,7 +200,7 @@ craft.make(<morefurnaces:furnaceblock>, ["pretty",
   "□ T □",
   "□ □ □"], {
   "□": <ore:plateIron>, # Iron Plate
-  "T": <ore:gtceWrenches>, # Neutronium Wrench
+  "T": <ore:gtceHardHammers>, # Neutronium Wrench
 });
 
 
@@ -212,7 +210,7 @@ craft.remake(<morefurnaces:furnaceblock:6>, ["pretty",
   "□ T □",
   "□ □ □"], {
   "□": <metaitem:plateSilver>, # Silver Plate
-  "T": <ore:gtceWrenches>, # Wrench
+  "T": <ore:gtceHardHammers>, # Wrench
 });
 # [Small Pile of Glass Dust] from [Glass Shard][+1]
 craft.reshapeless(<metaitem:dustSmallGlass>, "TG", {
