@@ -147,3 +147,15 @@ tile.contenttweaker.crystal_cluster_green_5.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_6.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_7.name=Growing Green Crystal Cluster
 
+
+station_generator_controller.name=Backup Generator
+station_generator_controller.discription=Backup Generator
+ulv_energy_output.name=ULV Energy Output Hatch
+item_bus.name=Multiblock Item Bus
+
+gp_eu.name=Hand Crank Generator
+
+devtech.machine.brewery.ulv.name=Primitive Brewery
+
+multiblocked.recipe_map.station_generator=Backup Generator
+multiblocked.recipe_map.Clockwork EU=Hand Crank Generator

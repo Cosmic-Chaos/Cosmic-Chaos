@@ -5,36 +5,7 @@ print("==================== loading mods blank.zs ====================");
 
 val itemstoRemoveAndHide =
 [
-/*
-<gregtech:machine_casing:10>,
-<gregtech:machine_casing:11>,
-<gregtech:machine_casing:12>,
-<gregtech:machine_casing:13>,
-<gregtech:machine:1>,
-<gregtech:machine:10>,
-<gregtech:machine:11>,
-<gregtech:machine:12>,
-<gregtech:machine:13>,
-<gregtech:machine:14>,
-<gregtech:machine:15>,
-<gregtech:machine:16>,
-<gregtech:machine:17>,
-<gregtech:machine:18>,
-<gregtech:machine:2>,
-<gregtech:machine:2232>,
-<gregtech:machine:2235>,
-<gregtech:machine:3>,
-<gregtech:machine:5>,
-<gregtech:machine:6>,
-<gregtech:machine:7>,
-<gregtech:machine:8>,
-<gregtech:machine:9>,
-<gregtech:machine:4175>,
-<gregtech:machine:4176>,
-<gregtech:machine:4177>,
-<gregtech:machine:4178>,
-<gregtech:machine4197>,
-*/
+
 
 // LV Machines
 <gregtech:machine:560>, //Laser
@@ -95,6 +66,30 @@ val itemstoRemoveAndHide =
 <enderio:block_enhanced_vat>,
 <enderio:block_combustion_generator>,
 <enderio:block_simple_alloy_smelter>,
+
+<advancedrocketry:electrolyser>, // Only AR multiblock left is the Assembler, might remove still
+<advancedrocketry:arcfurnace>,
+<advancedrocketry:crystallizer>,
+<advancedrocketry:chemicalreactor>,
+<advancedrocketry:cuttingmachine>,
+<advancedrocketry:lathe>,
+<advancedrocketry:rollingmachine>,
+
+<nuclearcraft:alloy_furnace>, // Only NC Machines left are the Fuel Reprocessor and Decay Hastener, might remove still
+<nuclearcraft:separator>,
+<nuclearcraft:infuser>,
+<nuclearcraft:melter>,
+<nuclearcraft:electrolyzer>,
+<nuclearcraft:assembler>,
+<nuclearcraft:ingot_former>,
+<nuclearcraft:pressurizer>,
+<nuclearcraft:chemical_reactor>,
+<nuclearcraft:salt_mixer>,
+<nuclearcraft:crystallizer>,
+<nuclearcraft:enricher>,
+<nuclearcraft:extractor>,
+<nuclearcraft:centrifuge>,
+
 ]
  as IItemStack[];
 

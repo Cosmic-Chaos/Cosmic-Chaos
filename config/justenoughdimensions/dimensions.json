@@ -2,30 +2,12 @@
   "dimensions": [
     {
       "dim": 33,
-      "override": true,
       "worldinfo_onetime": {
         "GameRules": {
           "disableNetherPortalCreation": "true"
         }
       },
       "jed": {}
-    },
-    {
-			"dim": 17,
-			"worldinfo": {
-				"JED": {
-					"RespawnDimension": 17
-				}
-			}
-		},
-    {
-			"dim": 424,
-			"worldinfo": {
-				"JED": {
-          "CanRespawnHere": false,
-					"RespawnDimension": 424
-				}
-			}
-		}
+    }
   ]
 }

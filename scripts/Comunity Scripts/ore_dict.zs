@@ -171,6 +171,11 @@ unify(<ore:itemSilicon>, 0);
 <ore:fusedGlass>.add(<sonarcore:clearstableglass>);
 
 
+<ore:bioChaff>.add(<metaitem:bio_chaff>);
+
+//Needs the extra i
+<ore:sheetAluminium>.add(<libvulpes:productsheet:9>);
+
 /*
 //Fix EIO Dusts
 <enderio:item_material:23>.displayName = "Coal Dust";

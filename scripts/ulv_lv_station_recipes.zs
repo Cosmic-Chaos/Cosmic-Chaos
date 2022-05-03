@@ -61,12 +61,14 @@ for item in itemstoRemoveAndHide {
 
 
 ##=======================================================
-## Adding ITEMS TO JEI
+## JEI Changes
 ##=======================================================
 
 //Space Suit with Oxygen
 mods.jei.JEI.addItem(<advancedrocketry:spacechestplate>.withTag({slotInsert: [1, 1, 1, 1, 1, 1] as byte[] as byte[], size: 6, slotExtract: [1, 1, 1, 1, 1, 1] as byte[] as byte[], outputItems: [{Slot: 0 as byte, id: "advancedrocketry:pressuretank", Count: 1 as byte, tag: {Fluid: {FluidName: "oxygen", Amount: 7192}}, Damage: 3 as short}, {Slot: 1 as byte, id: "advancedrocketry:pressuretank", Count: 1 as byte, tag: {Fluid: {FluidName: "oxygen", Amount: 8000}}, Damage: 3 as short}]}));
 
+
+<metaitem:battery_station_ulv>.addTooltip(format.red("Can not be recharged"));
 
 ##=======================================================
 ## ADD RECIPES
@@ -238,26 +240,6 @@ craft.remake(<metaitem:hull.ulv>, ["pretty",
   "⌂": <gregtech:machine_casing>, # ULV Machine Casing
 });
 
-
-# [ULV Electric Motor] from [Iron Rod][+2]
-craft.remake(<contenttweaker:electric_motor_ulv>, ["pretty",
-  "G ╱",
-  "/ G"], {
-  "G": <ore:wireGtSingleCopper>, # 1x Copper Wire
-  "╱": <ore:stickIron>,          # Iron Rod
-  "/": <ore:stickIronMagnetic>,  # Magnetic Iron Rod
-});
-
-# [ULV Electric Piston] from [Small Bronze Gear][+3]
-craft.remake(<contenttweaker:electric_piston_ulv>, ["pretty",
-  "□ ╱",
-  "U ¤"], {
-  "□": <ore:plateBronze>,                   # Bronze Plate
-  "╱": <ore:stickBronze>,                   # Bronze Rod
-  "U": <contenttweaker:electric_motor_ulv>, # ULV Electric Motor
-  "¤": <ore:gearSmallBronze>,               # Small Bronze Gear
-});
-
 # [Rail Frame]*2 from [Steel Screw][+2]
 craft.remake(<industrialrenewal:frame> * 2, ["pretty",
   "╱ ◙ ╱",
@@ -289,6 +271,62 @@ craft.remake(<advancedrocketry:sawblade>, ["pretty",
   "H": <ore:toolHeadBuzzSawIron>, # Iron Buzzsaw Blade
   "□": <ore:plateIron>,           # Iron Plate
 });
+
+
+# [Primitive Brewery] from [ULV Machine Hull][+5]
+craft.remake(<gregtech:machine:32102>, ["pretty",
+  "■ V ■",
+  "* L *",
+  "U T U"], {
+  "■": <ore:blockGlassColorless> | <ore:blockGlass>, # Glass
+  "V": <contenttweaker:electric_pump_ulv>,   # ULV Electric Pump
+  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+  "L": <gregtech:machine:985>,               # ULV Machine Hull
+  "U": <ore:circuitUlv>,                     # Vacuum Tube
+  "T": <ore:springTin>,                      # Tin Spring
+});
+
+# [ULV Electric Pump] from [Rubber Ring][+6]
+craft.remake(<contenttweaker:electric_pump_ulv>, ["pretty",
+  "* B l",
+  "r R  ",
+  "o   T"], {
+  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+  "B": <ore:rotorBronze>,                    # Bronze Rotor
+  "l": <ore:gtceWrenches>, # Neutronium Wrench
+  "r": <ore:screwBronze>,                    # Bronze Screw
+  "R": <ore:ringRubber>,                     # Rubber Ring
+  "o": <ore:gtceScrewdrivers>, # Neutronium Screwdriver
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+});
+
+# [ULV Electric Motor] from [Iron Rod][+5]
+craft.remake(<contenttweaker:electric_motor_ulv>, ["pretty",
+  "* ╱ l",
+  "/ *  ",
+  "o   T"], {
+  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+  "╱": <ore:stickIron>,                      # Iron Rod
+  "l": <ore:gtceWrenches>, # Neutronium Wrench
+  "/": <ore:stickIronMagnetic>,              # Magnetic Iron Rod
+  "o": <ore:gtceWireCutters>, # Neutronium Wire Cutter
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+});
+
+# [ULV Electric Piston] from [Small Bronze Gear][+6]
+craft.remake(<contenttweaker:electric_piston_ulv>, ["pretty",
+  "□ ╱ l",
+  "U ¤  ",
+  "o   T"], {
+  "□": <ore:plateBronze>,                        # Bronze Plate
+  "╱": <ore:stickBronze>,                        # Bronze Rod
+  "l": <ore:gtceWrenches>, # Neutronium Wrench
+  "U": <contenttweaker:electric_motor_ulv>,      # ULV Electric Motor
+  "¤": <ore:gearSmallBronze>,                    # Small Bronze Gear
+  "o": <ore:gtceFiles>, # Neutronium File
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+});
+
 
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
@@ -369,7 +407,7 @@ chemical_reactor.recipeBuilder()
 
 SludgeRefiner.add(<fossil:bio_goo>, 5);
 SludgeRefiner.add(<minecraft:grass>, 3);
-
+/*
 
 //Sheep Recipe
 recipes.addShaped(<tinymobfarm:lasso>.withTag({capturedMob: {mobName: "Sheep", mobHostile: 0 as byte, mobMaxHealth: 8.0, mobLootTableLocation: "minecraft:entities/sheep/black", 
@@ -412,7 +450,7 @@ compressor.recipeBuilder()
 //Sulfur
 recipes.addShapeless(<metaitem:dustSulfur>, [<projecte:item.pe_philosophers_stone>,<ore:dustCoal>,<ore:dustCoal>,<ore:dustCoal>,<ore:dustCoal>]);
 
-
+*/
 # [Small Airlock Door] from [Iron Plate]
 craft.remake(<advancedrocketry:smallairlockdoor>, ["pretty",
   "□ □",

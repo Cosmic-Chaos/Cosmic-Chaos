@@ -32,7 +32,7 @@ MaterialFlagBuilder.create("generate_thin_sheet")
 MetaItem.create(1, "battery_crystal_green").electricItem(24000, 0);
 
 //Old Battery
-MetaItem.create(2, "battery_station_ulv").electricItem(96000, 0);
+MetaItem.create(2, "battery_station_ulv").electricItem(96000, 0, false);
 
 
 

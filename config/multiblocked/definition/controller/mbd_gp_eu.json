@@ -1,0 +1,86 @@
+{
+  "consumeCatalyst": false,
+  "location": "mbd:gp_eu",
+  "traits": {
+    "exu2_gp": {
+      "x": 58,
+      "y": 40,
+      "width": 60,
+      "height": 18,
+      "textType": 3
+    },
+    "gtce_energy": {
+      "cIO": 2,
+      "gIO": 2,
+      "x": 28,
+      "y": 115,
+      "width": 120,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "capacity": 1024
+    }
+  },
+  "allowRotate": true,
+  "showInJei": true,
+  "baseRenderer": {
+    "baseTexture": "multiblocked:blocks/casing/casing_ulv",
+    "frontTexture": "multiblocked:blocks/overlay/overlay_energy_out",
+    "type": "gregtech"
+  },
+  "isOpaqueCube": true,
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "BACK"
+    ],
+    "pattern": [
+      [
+        "@",
+        "A"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "extrautils2:passivegenerator",
+            "meta": 7
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "mbd:gp_eu",
+        "type": "component"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  },
+  "recipeMap": "Clockwork EU"
+}

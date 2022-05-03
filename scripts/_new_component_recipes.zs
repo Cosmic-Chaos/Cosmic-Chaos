@@ -4,12 +4,17 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.ore.OrePrefix;
 
+import mods.gregtech.ore.IOreRecipeHandler;
+import mods.gregtech.material.Material;
+import mods.gregtech.recipe.IRecipeUtils;
+
 print("==================== loading new_component_recipes.zs ====================");
 ##########################################################################################
 
 
 ///////////////// SHEETS ///////////////////
-
+val sheet as OrePrefix = OrePrefix.getPrefix("sheet");
+/*
 val sheetMap as IItemStack[IOreDictEntry] = {
     <ore:plateIron>:<ore:sheetIron>.firstItem,
     <ore:plateCopper>:<ore:sheetCopper>.firstItem,
@@ -26,13 +31,11 @@ for plate, sheet in sheetMap {
         .outputs(sheet * 2)
     .buildAndRegister();
 }
+*/
 
 
-/*
-val sheet as OrePrefix = OrePrefix.getPrefix("sheet");
-
-sheet.generateRecipes(function(orePrefix as OrePrefix, material as material) {
-    val utils as IRecipeUtiIs = IRecipeUtils.utils;
+sheet.generateRecipes(function(orePrefix as OrePrefix, material as Material) {
+    val utils as IRecipeUtils = IRecipeUtils.utils;
 
     recipes.addShaped(utils.item(orePrefix, material), [
         [<ore:gtceSaws>, utils.ore("plate", material)]
@@ -44,8 +47,8 @@ sheet.generateRecipes(function(orePrefix as OrePrefix, material as material) {
         .outputs(utils.item(orePrefix, material)*2)
     .buildAndRegister();
 
-} as IOreRecipeHandIer);
-*/
+} as IOreRecipeHandler);
+
 
 
 

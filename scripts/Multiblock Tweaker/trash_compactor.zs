@@ -106,3 +106,18 @@ trash_compactor.recipeMap.recipeBuilder()
     .outputs(plate*2)
 .buildAndRegister();
 }
+
+val trashCompactorPlantMap as int[IOreDictEntry] = {
+    <ore:treeSapling>:8,
+    <ore:cropPotato>:8,
+    <ore:treeLeaves>:16,
+    <ore:listAllmushroom>:8,
+} as int[IOreDictEntry];
+for plant, n in trashCompactorPlantMap {
+trash_compactor.recipeMap.recipeBuilder()
+    .duration(60)
+    .EUt(4)
+    .inputs(plant*n)
+    .outputs(<metaitem:plant_ball>)
+.buildAndRegister();
+}

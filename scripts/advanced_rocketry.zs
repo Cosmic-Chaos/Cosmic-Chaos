@@ -15,7 +15,6 @@ val itemstoRemove =
 	<advancedrocketry:spacechestplate>,
 	<libvulpes:structuremachine>,
 	<advancedrocketry:jetpack>,
-//	<simplyjetpacks:metaitemmods:8>,
 ]
  as IItemStack[];
 

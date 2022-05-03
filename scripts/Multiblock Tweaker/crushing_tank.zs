@@ -364,8 +364,8 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Green Crystal
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(40)
-    .EUt(8)
+    .duration(60)
+    .EUt(6)
     .inputs(<actuallyadditions:item_crystal_shard:4>)
     .outputs(<contenttweaker:dust_crystal_green>)
 	.chancedOutput(<contenttweaker:dust_crystal_green>, 5000, 1000)
@@ -373,8 +373,8 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Red Crystal
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(40)
-    .EUt(8)
+    .duration(60)
+    .EUt(6)
     .inputs(<actuallyadditions:item_crystal_shard>)
     .outputs(<contenttweaker:dust_crystal_red>)
 	.chancedOutput(<contenttweaker:dust_crystal_red>, 5000, 1000)
@@ -382,8 +382,8 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Bio Chaff
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(40)
-    .EUt(8)
+    .duration(60)
+    .EUt(2)
     .inputs(<metaitem:plant_ball>*2)
     .outputs(<metaitem:bio_chaff>)
 	.chancedOutput(<metaitem:bio_chaff>, 5000, 1000)
@@ -393,11 +393,22 @@ crushing_tank.recipeMap.recipeBuilder()
 
 //Rubber
 crushing_tank.recipeMap.recipeBuilder()
-    .duration(40)
-    .EUt(8)
+    .duration(60)
+    .EUt(4)
     .inputs(<contenttweaker:scrap_rubber>)
     .outputs(<metaitem:dustSmallRubber>)
 	.chancedOutput(<metaitem:dustSmallRubber>, 5000, 1000)
 	.chancedOutput(<metaitem:dustSmallRubber>, 2500, 1000)
 	.chancedOutput(<metaitem:dustSmallRubber>, 1000, 1000)
+.buildAndRegister();
+
+//Rusty Batteries
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(60)
+    .EUt(8)
+    .inputs(<metaitem:battery_station_ulv>)
+    .outputs(<metaitem:dustLead>*4)
+	.chancedOutput(<metaitem:dustIron>, 7500, 1000)
+	.chancedOutput(<metaitem:dustTin>, 5000, 1000)
+	.chancedOutput(<metaitem:dustTin>, 2500, 1000)
 .buildAndRegister();

@@ -37,9 +37,10 @@ val nuggetPrefix = OrePrefix.getPrefix("nugget");
 
 /*
 
+  "=": <industrialforegoing:pink_slime_ingot>, # Pink Slime Ingot
+  "Ξ": <randomthings:ingredient:3>,     # Spectre Ingot
+  "≡": <nyx:meteor_ingot>,              # Meteor Ingot
 
-  "‗": <midnight:tenebrum_ingot>,      # Tenebrum Ingot
-  "N": <midnight:nagrilite_ingot>,   # Nagrilite Ingot
 
   "_": <mm:chasmium_ingot>,            # Chasmium Ingot
 
@@ -47,12 +48,6 @@ val nuggetPrefix = OrePrefix.getPrefix("nugget");
 
   "▬": <ore:ingotDemonicMetal>,                # Demon Ingot
   "‗": <ore:ingotEvilMetal>,            # Evil Infused Iron Ingot
-
-  "Ξ": <ore:ingotFluixSteel>,                  # Fluix Steel Ingot
-
-  "=": <industrialforegoing:pink_slime_ingot>, # Pink Slime Ingot
-  "Ξ": <randomthings:ingredient:3>,     # Spectre Ingot
-  "≡": <nyx:meteor_ingot>,              # Meteor Ingot
 
   "T": <ore:ingotTough>,           # Tough Alloy Ingot
   "=": <ore:ingotSuperAlloy>,      # Super Alloy Ingot

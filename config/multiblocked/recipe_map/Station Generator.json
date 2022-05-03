@@ -8,7 +8,7 @@
       "inputs": {
         "fluid": [
           {
-            "content": "{FluidName:\"biomass\",Amount:4}",
+            "content": "{FluidName:\"biomass\",Amount:1}",
             "chance": 1.0
           }
         ]
