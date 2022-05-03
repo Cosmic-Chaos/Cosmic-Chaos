@@ -88,6 +88,7 @@ craft.remake(<advancedrocketry:platepress>, ["pretty",
 // Recipes	
 	
 
+// 3i -> 2o
 val trashCompactorPlateMap as IItemStack[IOreDictEntry] = {
     <ore:ingotIron>:<ore:plateIron>.firstItem,
     <ore:ingotWroughtIron>:<ore:plateWroughtIron>.firstItem,
@@ -107,6 +108,7 @@ trash_compactor.recipeMap.recipeBuilder()
 .buildAndRegister();
 }
 
+// (Input)n -> Plant Ball
 val trashCompactorPlantMap as int[IOreDictEntry] = {
     <ore:treeSapling>:8,
     <ore:cropPotato>:8,
@@ -119,5 +121,18 @@ trash_compactor.recipeMap.recipeBuilder()
     .EUt(4)
     .inputs(plant*n)
     .outputs(<metaitem:plant_ball>)
+.buildAndRegister();
+}
+
+// 1 -> 1
+val trashCompactorOneToOneMap as IItemStack[IOreDictEntry] = {
+    <ore:dustWood>:<ore:plateWood>.firstItem,
+} as IItemStack[IOreDictEntry];
+for input, output in trashCompactorOneToOneMap {
+trash_compactor.recipeMap.recipeBuilder()
+    .duration(120)
+    .EUt(3)
+    .inputs(input)
+    .outputs(output)
 .buildAndRegister();
 }

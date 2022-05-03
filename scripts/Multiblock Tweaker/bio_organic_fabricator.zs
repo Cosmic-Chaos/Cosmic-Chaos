@@ -69,7 +69,7 @@ val bio_organic_fabricator = Builder.start(loc)
                         .minInputs(1)
 						.maxInputs(1)
 						.minOutputs(1)
-                        .maxOutputs(3)
+                        .maxOutputs(4)
                         .build())
 		.withBaseTexture(<contenttweaker:station_casing>.asBlock().definition.getStateFromMeta(1))
 		.buildAndRegister();
@@ -171,17 +171,22 @@ recipes.addShaped(
 );
 
 // Recipes	
-	
-bio_organic_fabricator
-	.recipeMap
-		.recipeBuilder()
-    .duration(500)
-    .EUt(8)
-    .inputs(<fossil:sheep_dna>)
+
+val bioRecipeMap as IItemStack[][IItemStack] = {
+    <minecraft:sapling>:[<minecraft:log> * 4,<minecraft:leaves> * 16, <metaitem:plant_ball>],
+    <fossil:sheep_dna>:[<minecraft:wool> * 4,<minecraft:mutton> * 2, <minecraft:bone> * 2],
+} as IItemStack[][IItemStack];
+
+for input, output in bioRecipeMap {
+
+bio_organic_fabricator.recipeMap.recipeBuilder()
+    .duration(100)
+    .EUt(6)
+    .notConsumable(input)
 	.fluidInputs(<liquid:nutrient_distillation> * 2000)
-    .outputs(<minecraft:mutton> * 2,
-			 <minecraft:wool> * 4,
-	         <minecraft:bone> * 2)
+    .outputs(output[0], output[1])
+	.chancedOutput(output[2], 5000, 0)
+	.chancedOutput(input, 100, 0)
 	.fluidOutputs(<liquid:sludge> * 1000)
-    .buildAndRegister();
-	
+.buildAndRegister();
+}

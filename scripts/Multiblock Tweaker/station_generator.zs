@@ -50,24 +50,3 @@ station_generator.hasMaintenanceMechanics = false;
 station_generator.hasMufflerMechanics = false;
 
 // Controller Recipe
-# [Trash Compactor] from [tile.contenttweaker.controller_broken_north.name][+5]
-craft.remake(<metaitem:mbt:station_generator>, ["pretty",
-  "¤ P ¤",
-  "L t L",
-  "* ⌂ *"], {
-  "¤": <ore:gearSmallBronze>,                    # Small Bronze Gear
-  "P": <metaitem:circuit.vacuum_tube>,                   # Vacuum Tube
-  "L": <contenttweaker:electric_motor_ulv>,               # LV Electric Motor
-  "t": <contenttweaker:controller_broken_north>, # tile.contenttweaker.controller_broken_north.name
-  "*": <ore:wireGtDoubleGreenCrystalAlloy>,      # 2x Green Crystal Alloy Wire
-  "⌂": <contenttweaker:station_casing>,          # Derelict Casing
-});
-
-
-// Recipes	
-station_generator.recipeMap.recipeBuilder()
-    .duration(500)
-    .EUt(8)
-    .inputs(<fossil:sheep_dna>)
-//	.fluidInputs(<liquid:nutrient_distillation> * 2000)
-    .buildAndRegister();

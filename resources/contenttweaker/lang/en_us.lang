@@ -150,7 +150,7 @@ tile.contenttweaker.crystal_cluster_green_7.name=Growing Green Crystal Cluster
 
 station_generator_controller.name=Backup Generator
 station_generator_controller.discription=Backup Generator
-ulv_energy_output.name=ULV Energy Output Hatch
+ulv_energy_output.name=ULV Dynamo Hatch
 item_bus.name=Multiblock Item Bus
 
 gp_eu.name=Hand Crank Generator

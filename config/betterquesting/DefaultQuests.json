@@ -5100,6 +5100,57 @@
     },
     "97:10": {
       "preRequisites:11": [
+        107
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Once you have the Generator back up and running, you\u0027ll be able to process materials much more efficiently and with less stress.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "mbd:station_generator_controller"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Power!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 97,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "mbd:station_generator_controller"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "98:10": {
+      "preRequisites:11": [
         4,
         6,
         5,
@@ -5152,7 +5203,7 @@
         }
       }
     },
-    "98:10": {
+    "99:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5201,7 +5252,7 @@
         }
       }
     },
-    "99:10": {
+    "100:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5250,7 +5301,7 @@
         }
       }
     },
-    "100:10": {
+    "101:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5299,7 +5350,7 @@
         }
       }
     },
-    "101:10": {
+    "102:10": {
       "preRequisites:11": [
         108
       ],
@@ -5356,7 +5407,7 @@
         }
       }
     },
-    "102:10": {
+    "103:10": {
       "preRequisites:11": [
         121
       ],
@@ -5413,7 +5464,7 @@
         }
       }
     },
-    "103:10": {
+    "104:10": {
       "preRequisites:11": [
         59,
         25
@@ -5471,7 +5522,7 @@
         }
       }
     },
-    "104:10": {
+    "105:10": {
       "preRequisites:11": [
         65
       ],
@@ -5546,7 +5597,7 @@
         }
       }
     },
-    "105:10": {
+    "106:10": {
       "preRequisites:11": [
         24,
         107
@@ -5601,7 +5652,7 @@
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 32009,
+              "Damage:2": 32010,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -5610,7 +5661,7 @@
         }
       }
     },
-    "106:10": {
+    "107:10": {
       "preRequisites:11": [
         111
       ],
@@ -5673,7 +5724,7 @@
         }
       }
     },
-    "107:10": {
+    "108:10": {
       "preRequisites:11": [
         115
       ],
@@ -5724,7 +5775,7 @@
         }
       }
     },
-    "108:10": {
+    "109:10": {
       "preRequisites:11": [
         0
       ],
@@ -5807,7 +5858,7 @@
         }
       }
     },
-    "109:10": {
+    "110:10": {
       "preRequisites:11": [
         99
       ],
@@ -5875,7 +5926,7 @@
         }
       }
     },
-    "110:10": {
+    "111:10": {
       "preRequisites:11": [
         8
       ],
@@ -5926,7 +5977,7 @@
         }
       }
     },
-    "111:10": {
+    "112:10": {
       "preRequisites:11": [
         25,
         116
@@ -5984,14 +6035,14 @@
         }
       }
     },
-    "112:10": {
+    "113:10": {
       "preRequisites:11": [
         108
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can smash some of the Glass found",
+          "desc:8": "You can smash some of the Glass found around the ship in crates into dust.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6041,7 +6092,7 @@
         }
       }
     },
-    "113:10": {
+    "114:10": {
       "preRequisites:11": [
         24
       ],
@@ -6094,7 +6145,7 @@
         }
       }
     },
-    "114:10": {
+    "115:10": {
       "preRequisites:11": [
         105
       ],
@@ -6145,7 +6196,7 @@
         }
       }
     },
-    "115:10": {
+    "116:10": {
       "preRequisites:11": [
         113
       ],
@@ -6215,7 +6266,7 @@
         }
       }
     },
-    "116:10": {
+    "117:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -6264,7 +6315,7 @@
         }
       }
     },
-    "117:10": {
+    "118:10": {
       "preRequisites:11": [
         113
       ],
@@ -6511,143 +6562,150 @@
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 528,
-          "y:3": -36
+          "x:3": 588,
+          "y:3": -48
         },
         "24:10": {
+          "id:3": 97,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 528,
+          "y:3": -84
+        },
+        "25:10": {
           "id:3": 99,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -36
         },
-        "25:10": {
+        "26:10": {
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 720,
           "y:3": -84
         },
-        "26:10": {
+        "27:10": {
           "id:3": 101,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 684,
           "y:3": -48
         },
-        "27:10": {
+        "28:10": {
           "id:3": 105,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": -12
         },
-        "28:10": {
+        "29:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": -108
         },
-        "29:10": {
+        "30:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": -72
         },
-        "30:10": {
+        "31:10": {
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": -12
         },
-        "31:10": {
+        "32:10": {
           "id:3": 109,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 516,
-          "y:3": 36
+          "x:3": 564,
+          "y:3": 0
         },
-        "32:10": {
+        "33:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": -132
         },
-        "33:10": {
+        "34:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -120
         },
-        "34:10": {
+        "35:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 36
         },
-        "35:10": {
+        "36:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": -36
         },
-        "36:10": {
+        "37:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": -12
         },
-        "37:10": {
+        "38:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": -84
         },
-        "38:10": {
+        "39:10": {
           "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": -84
         },
-        "39:10": {
+        "40:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": 60
         },
-        "40:10": {
+        "41:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 360,
           "y:3": 0
         },
-        "41:10": {
+        "42:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 12
         },
-        "42:10": {
+        "43:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": -204
         },
-        "43:10": {
+        "44:10": {
           "id:3": 121,
           "sizeX:3": 24,
           "sizeY:3": 24,

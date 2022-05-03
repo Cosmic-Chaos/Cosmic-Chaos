@@ -412,3 +412,16 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustTin>, 5000, 1000)
 	.chancedOutput(<metaitem:dustTin>, 2500, 1000)
 .buildAndRegister();
+
+//Wood Pulp
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(40)
+    .EUt(4)
+    .inputs(<ore:logWood>)
+    .outputs(<metaitem:dustWood>*3)
+	.chancedOutput(<metaitem:dustWood>, 7500, 1000)
+	.chancedOutput(<metaitem:dustWood>, 5000, 1000)
+	.chancedOutput(<metaitem:dustWood>, 2500, 1000)
+.buildAndRegister();
+
+

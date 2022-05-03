@@ -327,6 +327,36 @@ craft.remake(<contenttweaker:electric_piston_ulv>, ["pretty",
   "T": <ore:gtceHardHammers>, # Neutronium Hammer
 });
 
+# [LV Machine Casing] from [Neutronium Wrench (HV)][+1]
+craft.make(<metaitem:hull.lv>, ["pretty",
+  "□ □ □",
+  "□ T □",
+  "□ □ □"], {
+  "□": <ore:plateCrudeSteel>, # Crude Steel Plate
+  "T": <ore:craftingToolWrench> | <ore:gtceWrenches>, # Neutronium Wrench (HV)
+});
+
+# [LV Machine Hull] from [LV Machine Casing][+3]
+craft.make(<metaitem:hull.lv>, ["pretty",
+  "□ п □",
+  "G ⌂ G"], {
+  "□": <ore:plateWroughtIron>,      # Wrought Iron Plate
+  "п": <ore:plateCrudeSteel>,       # Crude Steel Plate
+  "G": <ore:cableGtSingleTin>,      # 1x Tin Cable
+  "⌂": <metaitem:hull.lv>, # LV Machine Casing
+});
+
+# [Electronic Circuit] from [Circuit Board][+4]
+craft.make(<gregtech:meta_item_1:621>, ["pretty",
+  "R □ R",
+  "U C U",
+  "G G G"], {
+  "R": <ore:componentResistor>,     # Resistor
+  "□": <ore:plateCrudeSteel>,       # Crude Steel Plate
+  "U": <metaitem:circuit.vacuum_tube>,            # Vacuum Tube
+  "C": <metaitem:circuit_board.basic>,  # Circuit Board
+  "G": <ore:cableGtSingleRedAlloy>, # 1x Red Alloy Cable
+});
 
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
@@ -393,16 +423,6 @@ recipes.addShaped(<quark:slime_bucket>, [[<fossil:bio_goo>],[<minecraft:bucket>]
 
 //Resin
 furnace.addRecipe(<metaitem:rubber_drop> * 4, <fossil:bio_goo>, 0.0);
-
-// Sludge Recipe
-chemical_reactor.recipeBuilder()
-	.chancedOutput(<metaitem:component.diode>, 1000, 1000)
-	.fluidOutputs([<liquid:sludge> * 2000])
-    .fluidInputs([<liquid:nutrient_distillation> * 200])
-    .inputs(<contenttweaker:internals_t1>)
-	.EUt(30)
-	.duration(120)
-	.buildAndRegister();
 
 
 SludgeRefiner.add(<fossil:bio_goo>, 5);
