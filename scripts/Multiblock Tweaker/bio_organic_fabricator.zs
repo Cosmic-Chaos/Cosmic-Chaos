@@ -190,3 +190,12 @@ bio_organic_fabricator.recipeMap.recipeBuilder()
 	.fluidOutputs(<liquid:sludge> * 1000)
 .buildAndRegister();
 }
+
+bio_organic_fabricator.recipeMap.recipeBuilder()
+    .duration(120)
+    .EUt(3)
+    .inputs(<minecraft:deadbush>)
+	.fluidInputs(<liquid:nutrient_distillation> * 2000)
+	.chancedOutput(<minecraft:sapling>, 7500, 0)
+	.fluidOutputs(<liquid:sludge> * 1000)
+.buildAndRegister();

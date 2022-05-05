@@ -358,6 +358,19 @@ craft.make(<gregtech:meta_item_1:621>, ["pretty",
   "G": <ore:cableGtSingleRedAlloy>, # 1x Red Alloy Cable
 });
 
+# [Sludge Refiner] from [LV Machine Hull][+5]
+craft.remake(<industrialforegoing:sludge_refiner>, ["pretty",
+  "* v *",
+  "G L G",
+  "U S U"], {
+  "*": <ore:foilGreenCrystalAlloy>,         # Green Crystal Alloy Foil
+  "v": <ore:circuitLv>,                     # Electronic Circuit
+  "G": <ore:wireGtSingleCopper>,            # 1x Copper Wire
+  "L": <gregtech:machine:986>,              # LV Machine Hull
+  "U": <contenttweaker:electric_motor_ulv>, # ULV Electric Motor
+  "S": <extrautils2:drum>,                  # Stone Drum
+});
+
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);

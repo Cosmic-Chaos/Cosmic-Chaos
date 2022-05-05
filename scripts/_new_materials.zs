@@ -84,7 +84,7 @@ var crude_steel = MaterialBuilder(32002, "crude_steel") // name
     .flags(["generate_plate", "generate_rod", "generate_gear", "generate_frame", "generate_bolt_screw"]) // add flags
     .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
 //    .cableProperties(8, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
-    .components([<material:iron> * 4, <material:carbon>]) // set the components
+    .components([<material:iron> * 4, <material:carbon>*1]) // set the components
 //    .element("Iron")
 //    .blastTemp(2900) // (int temp, @Optional gasTier - Available options are: "LOW", "MID", "HIGH", "HIGHER", "HIGHEST, @Optional int eutOverride, @Optional int durationOverride)
 //    .ore() // (@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)

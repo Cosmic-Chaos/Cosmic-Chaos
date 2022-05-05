@@ -49,7 +49,8 @@ brewery.recipeBuilder()
 // Biomass * 20
 <recipemap:brewery>.findRecipe(3, [<minecraft:reeds:0>], [<liquid:water> * 20]).remove();
 // Biomass * 20
-<recipemap:brewery>.findRecipe(3, [<minecraft:reeds:0>], [<liquid:water> * 20]).remove();
+<recipemap:brewery>.findRecipe(3, [<minecraft:cactus:0>], [<liquid:water> * 20]).remove();
+
 
 // Bio Mass with water
 brewery.recipeBuilder()
