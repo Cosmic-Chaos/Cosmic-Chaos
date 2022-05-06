@@ -83,8 +83,8 @@ recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<metaitem:crate.steel>],[<me
 recipes.addShapeless(<actuallyadditions:item_knife>, [<ore:craftingToolKnife>]);
 
 //No Stone Buttons
-recipes.addShapeless(<quark:iron_button>, [<minecraft:iron_ingot>]);
-recipes.addShapeless(<quark:gold_button>, [<minecraft:gold_ingot>]);
+recipes.addShaped(<quark:iron_button>, [[<ore:gtceHardHammers>],[<minecraft:iron_ingot>]]);
+recipes.addShaped(<quark:gold_button>, [[<ore:gtceHardHammers>],[<minecraft:gold_ingot>]]);
 
 
 # [Makeshift Crowbar] from [Tin Plate][+2]
