@@ -28,6 +28,8 @@ val nuggetPrefix = OrePrefix.getPrefix("nugget");
 <material:iron>.addFlags("generate_frame");
 <material:wrought_iron>.addFlags("generate_frame");
 
+<material:silver>.addFlags("generate_spring");
+
 //Color Changing
 //<material:salt_water>.setMaterialRGB(0xFF1F5099);
 
