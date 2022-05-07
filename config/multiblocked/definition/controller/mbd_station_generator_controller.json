@@ -70,8 +70,12 @@
         "type": "component"
       },
       "E": {
-        "capability": "gtce_energy",
-        "type": "capability",
+        "blocks": [
+          {
+            "id": "mbd:ulv_energy_output"
+          }
+        ],
+        "type": "blocks",
         "minCount": 1,
         "maxCount": 1,
         "previewCount": 1,
