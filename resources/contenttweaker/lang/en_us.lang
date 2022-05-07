@@ -152,6 +152,7 @@ station_generator_controller.name=Backup Generator
 station_generator_controller.discription=Backup Generator
 ulv_energy_output.name=ULV Dynamo Hatch
 item_bus.name=Multiblock Item Bus
+fluid_hatch.name=Multiblock Fluid Hatch
 
 gp_eu.name=Hand Crank Generator
 
