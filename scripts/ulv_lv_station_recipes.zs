@@ -75,8 +75,8 @@ mods.jei.JEI.addItem(<advancedrocketry:spacechestplate>.withTag({slotInsert: [1,
 ##=======================================================
 
 //Busses because no wood
-recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<metaitem:crate.steel>]]);
-recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<metaitem:crate.steel>],[<metaitem:hull.ulv>]]);
+recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<metaitem:crate.steel>|<metaitem:crate.bronze>]]);
+recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<metaitem:crate.steel>|<metaitem:crate.bronze>],[<metaitem:hull.ulv>]]);
 
 
 //Knife
@@ -257,7 +257,7 @@ craft.remake(<devtech:meta_item:1>, ["pretty",
   "╳ * ╳"], {
   "╳": <ore:wireFineGreenCrystalAlloy>,          # Fine Green Crystal Alloy Wire
   "*": <actuallyadditions:item_crystal_shard:4>, # Green Crystal Shard
-  "▲": <projecte:item.pe_covalence_dust>,        # Low Covalence Dust
+  "▲": <metaitem:springSilver>,        # Low Covalence Dust
 });
 
 
@@ -404,7 +404,6 @@ recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:d
 furnace.addRecipe(<minecraft:iron_ingot>, <contenttweaker:broken_hull_plate_t1>, 0.0);
 furnace.addRecipe(<metaitem:ingotCopper>, <contenttweaker:broken_hull_plate_t2>, 0.0);
 furnace.addRecipe(<metaitem:ingotTin>, <contenttweaker:broken_hull_plate_t3>, 0.0);
-furnace.addRecipe(<metaitem:ingotCrudeSteel>, <contenttweaker:hull_plate_t3>, 0.0);
 furnace.addRecipe(<metaitem:ingotSilver>, <contenttweaker:hull_plate_t4>, 0.0);
 
 
