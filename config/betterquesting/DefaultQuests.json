@@ -178,7 +178,7 @@
     },
     "3:10": {
       "preRequisites:11": [
-        105
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -272,18 +272,6 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "contenttweaker:hull_plate_t1"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:broken_hull_plate_t1"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:broken_hull_plate_t3"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -335,12 +323,6 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "contenttweaker:hull_plate_t2"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:broken_hull_plate_t2"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -1266,9 +1248,7 @@
       }
     },
     "24:10": {
-      "preRequisites:11": [
-        108
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -1323,10 +1303,7 @@
       }
     },
     "25:10": {
-      "preRequisites:11": [
-        106,
-        108
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -3082,9 +3059,7 @@
       }
     },
     "59:10": {
-      "preRequisites:11": [
-        7
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -3139,11 +3114,13 @@
       }
     },
     "60:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        108
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "You\u0027ll need at least a second §6Output Bus§r on the Station Recycler in order to get Rubber Scrap from processing §aSimple Internals§r. \n\nIf you only have 2 buses, you will need to toggle §cVoid Item§r mode in the controller in order to start the craft.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3154,14 +3131,14 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Rubber Scraps",
+          "name:8": "Acquire Rubber",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "CHAIN"
         }
       },
@@ -3187,9 +3164,31 @@
               "Damage:2": 1068,
               "OreDict:8": "",
               "id:8": "gregtech:meta_dust_small"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1068,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1068,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 1068,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_plate"
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "index:3": 1,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -3476,7 +3475,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -3494,7 +3493,7 @@
             "1:10": {
               "Count:3": 1,
               "Damage:2": 5,
-              "OreDict:8": "craftingToolSaw",
+              "OreDict:8": "gtceSaws",
               "id:8": "gregtech:meta_tool",
               "tag:10": {
                 "GT.ToolStats:10": {
@@ -5100,7 +5099,8 @@
     },
     "97:10": {
       "preRequisites:11": [
-        107
+        7,
+        60
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5150,6 +5150,57 @@
       }
     },
     "98:10": {
+      "preRequisites:11": [
+        8
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You may have noticed that you won\u0027t be able to recharge the §6Rusty Batteries§r, so creating your own source of rechargeable energy storage is next.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "devtech:meta_item"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Crystal Battery!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 98,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "devtech:meta_item"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "99:10": {
       "preRequisites:11": [
         4,
         6,
@@ -5203,7 +5254,7 @@
         }
       }
     },
-    "99:10": {
+    "100:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5252,7 +5303,7 @@
         }
       }
     },
-    "100:10": {
+    "101:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5301,7 +5352,64 @@
         }
       }
     },
-    "101:10": {
+    "102:10": {
+      "preRequisites:11": [
+        108
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "With access to a method of pulverization, you\u0027ll be able to mix a few basic alloys.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 260,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_dust"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Alloys!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 102,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 260,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 2517,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "103:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -5350,10 +5458,8 @@
         }
       }
     },
-    "102:10": {
-      "preRequisites:11": [
-        108
-      ],
+    "104:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -5407,7 +5513,7 @@
         }
       }
     },
-    "103:10": {
+    "105:10": {
       "preRequisites:11": [
         121
       ],
@@ -5464,11 +5570,8 @@
         }
       }
     },
-    "104:10": {
-      "preRequisites:11": [
-        59,
-        25
-      ],
+    "106:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -5522,7 +5625,7 @@
         }
       }
     },
-    "105:10": {
+    "107:10": {
       "preRequisites:11": [
         65
       ],
@@ -5597,10 +5700,9 @@
         }
       }
     },
-    "106:10": {
+    "108:10": {
       "preRequisites:11": [
-        24,
-        107
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5661,7 +5763,7 @@
         }
       }
     },
-    "107:10": {
+    "109:10": {
       "preRequisites:11": [
         111
       ],
@@ -5724,9 +5826,10 @@
         }
       }
     },
-    "108:10": {
+    "110:10": {
       "preRequisites:11": [
-        115
+        115,
+        95
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5775,7 +5878,7 @@
         }
       }
     },
-    "109:10": {
+    "111:10": {
       "preRequisites:11": [
         0
       ],
@@ -5858,7 +5961,7 @@
         }
       }
     },
-    "110:10": {
+    "112:10": {
       "preRequisites:11": [
         99
       ],
@@ -5926,7 +6029,7 @@
         }
       }
     },
-    "111:10": {
+    "113:10": {
       "preRequisites:11": [
         8
       ],
@@ -5977,10 +6080,10 @@
         }
       }
     },
-    "112:10": {
+    "114:10": {
       "preRequisites:11": [
-        25,
-        116
+        106,
+        108
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6035,10 +6138,8 @@
         }
       }
     },
-    "113:10": {
-      "preRequisites:11": [
-        108
-      ],
+    "115:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -6092,9 +6193,9 @@
         }
       }
     },
-    "114:10": {
+    "116:10": {
       "preRequisites:11": [
-        24
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6145,9 +6246,9 @@
         }
       }
     },
-    "115:10": {
+    "117:10": {
       "preRequisites:11": [
-        105
+        102
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -6196,7 +6297,7 @@
         }
       }
     },
-    "116:10": {
+    "118:10": {
       "preRequisites:11": [
         113
       ],
@@ -6266,7 +6367,7 @@
         }
       }
     },
-    "117:10": {
+    "119:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -6315,7 +6416,7 @@
         }
       }
     },
-    "118:10": {
+    "120:10": {
       "preRequisites:11": [
         113
       ],
@@ -6340,8 +6441,8 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "tasklogic:8": "OR",
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 121,
@@ -6506,15 +6607,15 @@
           "id:3": 24,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
-          "y:3": 24
+          "x:3": 360,
+          "y:3": -204
         },
         "16:10": {
           "id:3": 25,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
-          "y:3": -48
+          "x:3": 324,
+          "y:3": -240
         },
         "17:10": {
           "id:3": 34,
@@ -6527,15 +6628,15 @@
           "id:3": 59,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 444,
-          "y:3": -48
+          "x:3": 144,
+          "y:3": -204
         },
         "19:10": {
           "id:3": 60,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": -204
+          "x:3": 360,
+          "y:3": -72
         },
         "20:10": {
           "id:3": 65,
@@ -6548,164 +6649,178 @@
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 444,
+          "x:3": 408,
           "y:3": -180
         },
         "22:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 252,
-          "y:3": -60
+          "x:3": 312,
+          "y:3": -120
         },
         "23:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 588,
-          "y:3": -48
+          "x:3": 312,
+          "y:3": 48
         },
         "24:10": {
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 528,
-          "y:3": -84
+          "x:3": 444,
+          "y:3": -72
         },
         "25:10": {
+          "id:3": 98,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 444,
+          "y:3": -36
+        },
+        "26:10": {
           "id:3": 99,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -36
         },
-        "26:10": {
+        "27:10": {
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 720,
-          "y:3": -84
+          "x:3": 216,
+          "y:3": 60
         },
-        "27:10": {
+        "28:10": {
           "id:3": 101,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 684,
-          "y:3": -48
+          "x:3": 180,
+          "y:3": 96
         },
-        "28:10": {
-          "id:3": 105,
+        "29:10": {
+          "id:3": 102,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
-          "y:3": -12
+          "y:3": -36
         },
-        "29:10": {
+        "30:10": {
+          "id:3": 105,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 324,
+          "y:3": -204
+        },
+        "31:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": -108
         },
-        "30:10": {
+        "32:10": {
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 480,
-          "y:3": -72
+          "x:3": 360,
+          "y:3": -240
         },
-        "31:10": {
+        "33:10": {
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 252,
-          "y:3": -12
+          "x:3": 264,
+          "y:3": -36
         },
-        "32:10": {
+        "34:10": {
           "id:3": 109,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 564,
-          "y:3": 0
+          "x:3": 408,
+          "y:3": 24
         },
-        "33:10": {
+        "35:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 456,
+          "x:3": 420,
           "y:3": -132
         },
-        "34:10": {
+        "36:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
+          "x:3": 372,
           "y:3": -120
         },
-        "35:10": {
+        "37:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
           "y:3": 36
         },
-        "36:10": {
+        "38:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": -36
         },
-        "37:10": {
+        "39:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
-          "y:3": -12
+          "y:3": 0
         },
-        "38:10": {
+        "40:10": {
           "id:3": 115,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 360,
-          "y:3": -84
-        },
-        "39:10": {
-          "id:3": 116,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 312,
           "y:3": -84
         },
-        "40:10": {
+        "41:10": {
+          "id:3": 116,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": -204
+        },
+        "42:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 444,
+          "x:3": 408,
           "y:3": 60
         },
-        "41:10": {
+        "43:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 360,
-          "y:3": 0
+          "x:3": 324,
+          "y:3": 12
         },
-        "42:10": {
+        "44:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 12
         },
-        "43:10": {
+        "45:10": {
           "id:3": 120,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 252,
           "y:3": -204
         },
-        "44:10": {
+        "46:10": {
           "id:3": 121,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -7111,55 +7226,48 @@
           "y:3": -180
         },
         "51:10": {
-          "id:3": 60,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -180
-        },
-        "52:10": {
           "id:3": 61,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 336,
           "y:3": -156
         },
-        "53:10": {
+        "52:10": {
           "id:3": 62,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 372,
           "y:3": -120
         },
-        "54:10": {
+        "53:10": {
           "id:3": 63,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -132
         },
-        "55:10": {
+        "54:10": {
           "id:3": 64,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 408,
           "y:3": -180
         },
-        "56:10": {
+        "55:10": {
           "id:3": 65,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 372,
           "y:3": -156
         },
-        "57:10": {
+        "56:10": {
           "id:3": 66,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
           "y:3": -156
         },
-        "58:10": {
+        "57:10": {
           "id:3": 93,
           "sizeX:3": 24,
           "sizeY:3": 24,
