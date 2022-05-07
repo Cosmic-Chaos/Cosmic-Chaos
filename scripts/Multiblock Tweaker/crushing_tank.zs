@@ -279,10 +279,11 @@ crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
     .EUt(8)
     .inputs(<contenttweaker:internals_t1>)
-    .outputs(<minecraft:redstone>*4)
-	.chancedOutput(<metaitem:dustGlass>*2, 7500, 1000)
-	.chancedOutput(<contenttweaker:scrap_rubber>*2, 5000, 1000)
+    .outputs(<minecraft:redstone>*4,<contenttweaker:scrap_rubber>)
+	.chancedOutput(<contenttweaker:scrap_rubber>, 7500, 1000)
+	.chancedOutput(<contenttweaker:scrap_rubber>, 5000, 1000)
 	.chancedOutput(<contenttweaker:scrap_rubber>, 2500, 1000)
+	.chancedOutput(<metaitem:dustGlass>*2, 7500, 1000)
 .buildAndRegister();
 
 
@@ -398,8 +399,8 @@ crushing_tank.recipeMap.recipeBuilder()
     .inputs(<contenttweaker:scrap_rubber>)
     .outputs(<metaitem:dustSmallRubber>)
 	.chancedOutput(<metaitem:dustSmallRubber>, 5000, 1000)
-	.chancedOutput(<metaitem:dustSmallRubber>, 2500, 1000)
-	.chancedOutput(<metaitem:dustSmallRubber>, 1000, 1000)
+	.chancedOutput(<metaitem:dustSmallRubber>, 3000, 1000)
+	.chancedOutput(<metaitem:dustSmallRubber>, 1500, 1000)
 .buildAndRegister();
 
 //Rusty Batteries
