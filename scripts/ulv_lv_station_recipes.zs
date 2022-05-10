@@ -279,7 +279,7 @@ craft.remake(<gregtech:machine:32102>, ["pretty",
   "* L *",
   "U T U"], {
   "■": <ore:blockGlassColorless> | <ore:blockGlass>, # Glass
-  "V": <contenttweaker:electric_pump_ulv>,   # ULV Electric Pump
+  "V": <metaitem:electric.pump.ulv>,   # ULV Electric Pump
   "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
   "L": <gregtech:machine:985>,               # ULV Machine Hull
   "U": <ore:circuitUlv>,                     # Vacuum Tube
@@ -287,7 +287,7 @@ craft.remake(<gregtech:machine:32102>, ["pretty",
 });
 
 # [ULV Electric Pump] from [Rubber Ring][+6]
-craft.remake(<contenttweaker:electric_pump_ulv>, ["pretty",
+craft.remake(<metaitem:electric.pump.ulv>, ["pretty",
   "* B l",
   "r R  ",
   "o   T"], {
@@ -371,6 +371,38 @@ craft.remake(<industrialforegoing:sludge_refiner>, ["pretty",
   "S": <extrautils2:drum>,                  # Stone Drum
 });
 
+# [Redstone Gear] from [Red Alloy Plate][+1]
+craft.remake(<extrautils2:ingredients:1>, ["pretty",
+  "  ♥  ",
+  "♥ □ ♥",
+  "  ♥  "], {
+  "♥": <ore:torchRedstoneActive> | <ore:craftingRedstoneTorch>, # Redstone Torch
+  "□": <ore:plateRedAlloy>, # Red Alloy Plate
+});
+
+# [Manual Mill] from [Redstone Gear][+2]
+craft.remake(<extrautils2:passivegenerator:7>, ["pretty",
+  "     ",
+  "  ▼  ",
+  "□ ♥ □"], {
+  "▼": <ore:gearRedstone>,        # Redstone Gear
+  "□": <ore:plateDoubleTinAlloy>, # Double Tin Alloy Plate
+  "♥": <ore:gemRedstone>,         # Resonating Redstone Crystal
+});
+
+# [Hand Crank Generator] from [ULV Machine Hull][+5]
+craft.remake(<mbd:gp_eu>, ["pretty",
+  "U M U",
+  "S L S",
+  "¤ i ¤"], {
+  "U": <metaitem:circuit.vacuum_tube>,                 # Vacuum Tube
+  "M": <extrautils2:passivegenerator:7>, # Manual Mill
+  "S": <ore:screwSilver>,                # Silver Screw
+  "L": <gregtech:machine:985>,           # ULV Machine Hull
+  "¤": <ore:gearCrudeSteel>,             # Crude Steel Gear
+  "i": <ore:springSilver>,               # Silver Spring
+});
+
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);
@@ -390,8 +422,7 @@ recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_sto
 
 // Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
-
-recipes.addShapeless(<metaitem:dustRedAlloy>*2, [<ore:dustCopper>,<contenttweaker:dust_crystal_red>,<contenttweaker:dust_crystal_red>]);
+recipes.addShapeless(<metaitem:dustRedAlloy>*2, [<ore:dustCopper>,<ore:dustCopper>,<contenttweaker:dust_crystal_red>]);
 
 // GC Alloy Dust
 recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<contenttweaker:dust_crystal_green>]);
@@ -399,6 +430,8 @@ recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeS
 // GC Glass Dust
 recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:dustGlass>,<metaitem:dustGlass>,<contenttweaker:dust_crystal_green>]);
 
+//Tin Alloy
+recipes.addShapeless(<metaitem:dustTinAlloy>*2, [<ore:dustIron>,<ore:dustTin>]);
 
 //Cooking Ingots
 furnace.addRecipe(<minecraft:iron_ingot>, <contenttweaker:broken_hull_plate_t1>, 0.0);
@@ -406,6 +439,8 @@ furnace.addRecipe(<metaitem:ingotCopper>, <contenttweaker:broken_hull_plate_t2>,
 furnace.addRecipe(<metaitem:ingotTin>, <contenttweaker:broken_hull_plate_t3>, 0.0);
 furnace.addRecipe(<metaitem:ingotSilver>, <contenttweaker:hull_plate_t4>, 0.0);
 
+//MB Fluid Hatch
+recipes.addShapeless(<mbd:fluid_hatch>, [<metaitem:fluid_hatch.import.ulv>]);
 
 //Wrought Iron recipe in greg_tech.zs
 //furnace.addRecipe(<metaitem:ingotIron>, <metaitem:ingotWroughtIron>, 0.1);

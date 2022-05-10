@@ -20,6 +20,7 @@ import mods.gregtech.recipe.functions.ICompleteRecipeFunction;
 import mods.gregtech.recipe.IRecipe;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.RecipeMap;
+import crafttweaker.oredict.IOreDictEntry;
 
 
 var loc = "mbt:crushing_tank";
@@ -298,14 +299,6 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustCopper>, 2500, 1000)
 .buildAndRegister();
 
-//Copper Ingot
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(50)
-    .EUt(8)
-    .inputs(<metaitem:ingotCopper>)
-    .outputs(<metaitem:dustCopper>)
-.buildAndRegister();
-
 
 //Iron Dust
 crushing_tank.recipeMap.recipeBuilder()
@@ -315,14 +308,6 @@ crushing_tank.recipeMap.recipeBuilder()
     .outputs(<metaitem:dustIron>)
 	.chancedOutput(<metaitem:dustIron>, 5000, 1000)
 	.chancedOutput(<metaitem:dustIron>, 2500, 1000)
-.buildAndRegister();
-
-//Iron Ingot
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(50)
-    .EUt(8)
-    .inputs(<minecraft:iron_ingot>)
-    .outputs(<metaitem:dustIron>)
 .buildAndRegister();
 
 
@@ -336,14 +321,6 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustTin>, 2500, 1000)
 .buildAndRegister();
 
-//Tin Ingot
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(50)
-    .EUt(8)
-    .inputs(<metaitem:ingotTin>)
-    .outputs(<metaitem:dustTin>)
-.buildAndRegister();
-
 //Crude Steel Dust
 crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
@@ -354,32 +331,6 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustCrudeSteel>, 2500, 1000)
 .buildAndRegister();
 
-//Crude Steel Ingot
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(50)
-    .EUt(8)
-    .inputs(<ore:ingotCrudeSteel>)
-    .outputs(<metaitem:dustCrudeSteel>)
-.buildAndRegister();
-
-
-//Green Crystal
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(60)
-    .EUt(6)
-    .inputs(<actuallyadditions:item_crystal_shard:4>)
-    .outputs(<contenttweaker:dust_crystal_green>)
-	.chancedOutput(<contenttweaker:dust_crystal_green>, 5000, 1000)
-.buildAndRegister();
-
-//Red Crystal
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(60)
-    .EUt(6)
-    .inputs(<actuallyadditions:item_crystal_shard>)
-    .outputs(<contenttweaker:dust_crystal_red>)
-	.chancedOutput(<contenttweaker:dust_crystal_red>, 5000, 1000)
-.buildAndRegister();
 
 //Bio Chaff
 crushing_tank.recipeMap.recipeBuilder()
@@ -407,7 +358,7 @@ crushing_tank.recipeMap.recipeBuilder()
 crushing_tank.recipeMap.recipeBuilder()
     .duration(60)
     .EUt(8)
-    .inputs(<metaitem:battery_station_ulv>)
+    .inputs(<devtech:meta_item:2>.withTag({Charge: 0 as long}))
     .outputs(<metaitem:dustLead>*4)
 	.chancedOutput(<metaitem:dustIron>, 7500, 1000)
 	.chancedOutput(<metaitem:dustTin>, 5000, 1000)
@@ -425,4 +376,41 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustWood>, 2500, 1000)
 .buildAndRegister();
 
+
+//Green Crystal
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(60)
+    .EUt(6)
+    .inputs(<actuallyadditions:item_crystal_shard:4>)
+    .outputs(<contenttweaker:dust_crystal_green>)
+	.chancedOutput(<contenttweaker:dust_crystal_green>, 5000, 1000)
+.buildAndRegister();
+
+//Red Crystal
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(60)
+    .EUt(6)
+    .inputs(<actuallyadditions:item_crystal_shard>)
+    .outputs(<contenttweaker:dust_crystal_red>)
+	.chancedOutput(<contenttweaker:dust_crystal_red>, 5000, 1000)
+.buildAndRegister();
+
+
+val ingotDustMap as IItemStack[IOreDictEntry] = {
+<ore:ingotCrudeSteel>:<metaitem:dustCrudeSteel>,
+<ore:ingotCopper>:<metaitem:dustCopper>,
+<ore:ingotIron>:<metaitem:dustIron>,
+<ore:ingotTin>:<metaitem:dustTin>,
+<ore:ingotBronze>:<metaitem:dustBronze>,
+<ore:frameGtWroughtIron>:<metaitem:dustWroughtIron>*2
+} as IItemStack[IOreDictEntry];
+
+for ingot, dust in ingotDustMap {
+    crushing_tank.recipeMap.recipeBuilder()
+        .duration(50)
+        .EUt(8)
+        .inputs(ingot)
+        .outputs(dust)
+    .buildAndRegister();
+}
 

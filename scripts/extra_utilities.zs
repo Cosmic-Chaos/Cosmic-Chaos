@@ -19,6 +19,15 @@ recipes.addShaped(<extrautils2:terraformer:9>, [[<gregtech:meta_item_1:12033>, <
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}), [[null, <ore:bookEnchanted>, null],[<gregtech:meta_item_1:12111>, <gregtech:machine:501>, <gregtech:meta_item_1:12111>], [<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>]]);
 recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator"}), [[<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>],[<gregtech:meta_item_1:12033>, <gregtech:machine:501>, <gregtech:meta_item_1:12033>], [<metaitem:wireGtDoubleRedAlloy>, <minecraft:furnace>, <metaitem:wireGtDoubleRedAlloy>]]);
 
+# [Resonating Redstone Crystal] from [Red Crystal Shard][+1]
+craft.remake(<extrautils2:ingredients>, ["pretty",
+  "  ♥  ",
+  "♥ * ♥",
+  "  ♥  "], {
+  "♥": <ore:dustRedstone>,                     # Redstone
+  "*": <actuallyadditions:item_crystal_shard>, # Red Crystal Shard
+});
+
 /*
 //Teleporter
 recipes.addShaped(<extrautils2:teleporter:1>, [

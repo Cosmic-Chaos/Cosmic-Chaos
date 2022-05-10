@@ -21,7 +21,7 @@ recipes.addShaped(<metaitem:component.glass.tube>, [
 ]);
 
 //Wrought Iron temp
-furnace.addRecipe(<metaitem:ingotIron>, <metaitem:ingotWroughtIron>, 0.1);
+furnace.addRecipe(<metaitem:ingotWroughtIron>, <minecraft:iron_ingot>);
 
 
 
@@ -84,6 +84,19 @@ craft.reshapeless(<metaitem:energy_hatch.output.ulv>, "Ϟ", {
   "Ϟ": <mbd:ulv_energy_output>, # ULV Energy Output Hatch
 });
 <metaitem:energy_hatch.output.ulv>.addTooltip(format.red("Deprecated until proper MBD support"));
+
+//Temp?
+// Ultra Low Voltage Coil * 1
+<recipemap:assembler>.findRecipe(7, [<metaitem:stickIronMagnetic>, <metaitem:wireFineLead> * 16, <metaitem:circuit.integrated>.withTag({Configuration: 1})], null).remove();
+# [Ultra Low Voltage Coil] from [Magnetic Iron Rod][+1]
+craft.remake(<gregtech:meta_item_1:96>, ["pretty",
+  "F F F",
+  "F ╱ F",
+  "F F F"], {
+  "F": <ore:wireFineLead>,      # Fine Lead Wire
+  "╱": <ore:stickIronMagnetic>, # Magnetic Iron Rod
+});
+
 
 /*
 val tinyDustMap as IItemStack[IItemStack] = {

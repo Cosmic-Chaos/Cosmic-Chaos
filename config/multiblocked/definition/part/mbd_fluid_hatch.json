@@ -9,14 +9,15 @@
         "gIO": 2,
         "x": 79,
         "y": 71,
-        "tC": 64000
+        "autoIO": false,
+        "tC": 8000
       }
     ]
   },
   "allowRotate": true,
   "showInJei": true,
   "baseRenderer": {
-    "baseTexture": "multiblocked:blocks/casing/base",
+    "baseTexture": "multiblocked:blocks/casing/casing_ulv",
     "frontTexture": "multiblocked:blocks/overlay/overlay_hatch",
     "formedAsController": true,
     "type": "gregtech"

@@ -24,7 +24,6 @@ val itemstoRemoveAndHide =
 <extrautils2:machine>.withTag({Type: "extrautils2:furnace"}),
 <extrautils2:machine>.withTag({Type: "extrautils2:crusher"}),
 <equivadditions:collector_mk4>,
-<draconicevolution:generator>,
 <industrialforegoing:pitiful_fuel_generator>,
 <libvulpes:coalgenerator>,
 <rftools:coalgenerator>,
@@ -33,6 +32,7 @@ val itemstoRemoveAndHide =
 <microblockcbe:saw_stone>,
 <actuallyadditions:block_coal_generator>,
 <actuallyadditions:block_leaf_generator>,
+
 <appliedenergistics2:material:40>,
 <teslacorelib:gear_stone>,
 <actuallyadditions:block_grinder>,
@@ -46,8 +46,6 @@ val itemstoRemoveAndHide =
 <libvulpes:productrod:5>,
 <libvulpes:productrod:6>,
 <libvulpes:productrod:7>,
-<tinymobfarm:wood_farm>,
-<tinymobfarm:stone_farm>,
 <teslacorelib:gear_diamond>,
 <teslacorelib:gear_gold>,
 <teslacorelib:gear_iron>,
@@ -89,6 +87,7 @@ val itemstoRemoveAndHide =
 <nuclearcraft:enricher>,
 <nuclearcraft:extractor>,
 <nuclearcraft:centrifuge>,
+
 
 ]
  as IItemStack[];

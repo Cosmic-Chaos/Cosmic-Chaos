@@ -583,17 +583,16 @@ var emc_minor = MaterialBuilder(32200, "emc_minor") // name
 //Sky Stone
 val oreSkyStone as OrePrefix = OrePrefix.registerOrePrefix("oreSkyStone", 1);
 oreSkyStone.addSecondaryMaterial(<material:sky_stone>);
-
 StoneType.create(16,"sky_stone","oreSkyStone",<material:sky_stone>,"appliedenergistics2:sky_stone_block", null, true);
 
 //Aurorian Stone
-StoneType.create(17,"stone_aurorian","ore",<material:stone>,"theaurorian:aurorianstone", null, true);
+StoneType.create(17,"stone_aurorian","oreAurorianStone",<material:stone>,"theaurorian:aurorianstone", null, true);
 
 //Atum Stone
-StoneType.create(18,"limestone_atum","ore",<material:stone>,"atum:limestone:contains_scarab=false", null, true);
+StoneType.create(18,"betweenstone","oreBetweenStone",<material:stone>,"thebetweenlands:betweenstone", null, true);
 
 //Midnight Stone
-StoneType.create(19,"nightstone","ore",<material:stone>,"midnight:nightstone", null, true);
+StoneType.create(19,"nightstone","oreNightStone",<material:stone>,"midnight:nightstone", null, true);
 
 /*
 // Aurorian Stone
