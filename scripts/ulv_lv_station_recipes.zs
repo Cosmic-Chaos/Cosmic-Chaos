@@ -278,11 +278,11 @@ craft.remake(<gregtech:machine:32102>, ["pretty",
   "■ V ■",
   "* L *",
   "U T U"], {
-  "■": <ore:blockGlassColorless> | <ore:blockGlass>, # Glass
+  "■": <ore:blockGlassColorless>, # Glass
   "V": <metaitem:electric.pump.ulv>,   # ULV Electric Pump
   "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
-  "L": <gregtech:machine:985>,               # ULV Machine Hull
-  "U": <ore:circuitUlv>,                     # Vacuum Tube
+  "L": <metaitem:hull.ulv>,               # ULV Machine Hull
+  "U": <metaitem:circuit.vacuum_tube>,                     # Vacuum Tube
   "T": <ore:springTin>,                      # Tin Spring
 });
 
@@ -328,12 +328,12 @@ craft.remake(<contenttweaker:electric_piston_ulv>, ["pretty",
 });
 
 # [LV Machine Casing] from [Neutronium Wrench (HV)][+1]
-craft.make(<metaitem:hull.lv>, ["pretty",
+craft.make(<gregtech:machine_casing:1>, ["pretty",
   "□ □ □",
   "□ T □",
   "□ □ □"], {
   "□": <ore:plateCrudeSteel>, # Crude Steel Plate
-  "T": <ore:craftingToolWrench> | <ore:gtceWrenches>, # Neutronium Wrench (HV)
+  "T": <ore:gtceWrenches>, # Neutronium Wrench (HV)
 });
 
 # [LV Machine Hull] from [LV Machine Casing][+3]
@@ -343,7 +343,7 @@ craft.make(<metaitem:hull.lv>, ["pretty",
   "□": <ore:plateWroughtIron>,      # Wrought Iron Plate
   "п": <ore:plateCrudeSteel>,       # Crude Steel Plate
   "G": <ore:cableGtSingleTin>,      # 1x Tin Cable
-  "⌂": <metaitem:hull.lv>, # LV Machine Casing
+  "⌂": <gregtech:machine_casing:1>, # LV Machine Casing
 });
 
 # [Electronic Circuit] from [Circuit Board][+4]
