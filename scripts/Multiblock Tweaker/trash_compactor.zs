@@ -79,7 +79,7 @@ craft.remake(<advancedrocketry:platepress>, ["pretty",
   "□ □ □",
   "¤ ◙ ¤",
   "W L W"], {
-  "□": <ore:plateTin>,             # Tin Plate
+  "□": <ore:plateTinAlloy>,             # Tin Plate
   "¤": <ore:gearSmallBronze>,      # Small Bronze Gear
   "◙": <ore:frameGtCrudeSteel>,    # Crude Steel Frame Box
   "W": <ore:screwWroughtIron>,     # Wrought Iron Screw
