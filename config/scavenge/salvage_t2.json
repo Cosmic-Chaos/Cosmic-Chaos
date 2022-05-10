@@ -46,8 +46,8 @@
 					"properties": [
 						{
 							"type": "set_random_size",
-							"minValue": 2,
-							"maxValue": 5
+							"minValue": 1,
+							"maxValue": 4
 						}
 					]
 				}
@@ -99,8 +99,8 @@
 					"properties": [
 						{
 							"type": "set_random_size",
-							"minValue": 2,
-							"maxValue": 5
+							"minValue": 1,
+							"maxValue": 4
 						}
 					]
 				}
@@ -214,8 +214,8 @@
 					"properties": [
 						{
 							"type": "set_random_size",
-							"minValue": 2,
-							"maxValue": 6
+							"minValue": 1,
+							"maxValue": 2
 						}
 					]
 				}
@@ -317,8 +317,8 @@
 					"properties": [
 						{
 							"type": "set_random_size",
-							"minValue": 2,
-							"maxValue": 4
+							"minValue": 1,
+							"maxValue": 3
 						}
 					]
 				}
@@ -369,7 +369,7 @@
 						{
 							"type": "set_random_size",
 							"minValue": 1,
-							"maxValue": 3
+							"maxValue": 2
 						}
 					]
 				}

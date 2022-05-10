@@ -47,7 +47,7 @@
 						{
 							"type": "set_random_size",
 							"minValue": 1,
-							"maxValue": 4
+							"maxValue": 3
 						}
 					]
 				}
@@ -100,7 +100,7 @@
 						{
 							"type": "set_random_size",
 							"minValue": 1,
-							"maxValue": 4
+							"maxValue": 3
 						}
 					],
 					"conditions": [
