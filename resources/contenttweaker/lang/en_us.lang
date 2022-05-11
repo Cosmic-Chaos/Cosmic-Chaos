@@ -36,6 +36,10 @@ material.nagrilite=Nagrilite
 material.ebony=Ebony
 material.archaic_shard=Archaic Shard
 
+material.octine=Octine
+material.syrmorite=Syrmorite
+material.valonite=Valonite
+material.scabyst=Scabyst
 
 material.sky_stone=Sky Stone
 item.material.oreprefix.oreSkyStone=Alchemical %s Ore

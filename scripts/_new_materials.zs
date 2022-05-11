@@ -518,7 +518,7 @@ gemPrefix.setIgnored(<material:archaic_shard>);
 
 
 // Octine
-//Elements.add(800, 850, -1, null, "octine", "Cr", false); // create a new element.
+//Elements.add(800, 850, -1, null, "Octine", "Cr", false); // create a new element.
 var octine = MaterialBuilder(32080, "octine")
     .fluid("fluid", true) // fluid with block
     .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
