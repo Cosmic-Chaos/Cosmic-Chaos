@@ -23,7 +23,7 @@
             </planet>
 
             <planet name="Atum" DIMID="17" dimMapping="" customIcon="DesertWorld">
-                <orbitalDistance>200</orbitalDistance>
+                <orbitalDistance>250</orbitalDistance>
                 <orbitalTheta>100</orbitalTheta>
                 <orbitalPhi>30</orbitalPhi>
             </planet>
