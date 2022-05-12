@@ -1,0 +1,17 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "all": "contenttweaker:blocks/crystal_green_glass",
+      "ctm": "contenttweaker:blocks/crystal_green_glass_ctm",
+      "particle": "contenttweaker:blocks/crystal_green_glass"
+    },
+    "model": "cube_all",
+    "uvlock": true,
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

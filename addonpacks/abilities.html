@@ -1,0 +1,2434 @@
+<html><head><title>Abilities</title><style>
+table{font-family:arial, sans-serif;border-collapse:collapse;}
+td,th{border:1px solid #666666;text-align:left;padding:8px;min-width:45px;}
+th{background-color:#CCCCCC;}
+p{margin:0;}
+tr:nth-child(even){background-color:#D8D8D8;}
+tr:nth-child(odd){background-color:#EEEEEE;}
+td.true{background-color:#72FF85AA;}
+td.false{background-color:#FF6666AA;}
+td.other{background-color:#42A3FFAA;}
+td.error{color:#FF0000;}
+th,td.true,td.false,td.other{text-align:center;}
+</style></head><body><h1>HeroesExpansion</h1>
+<ul>
+<li><a href="#heroesexpansion:god_mode">God Mode</a></li>
+<li><a href="#heroesexpansion:lightning_strike">Lightning Strike</a></li>
+<li><a href="#heroesexpansion:lightning_attack">Lightning Attack</a></li>
+<li><a href="#heroesexpansion:solar_energy">Solar Energy</a></li>
+<li><a href="#heroesexpansion:heat_vision">Heat Vision</a></li>
+<li><a href="#heroesexpansion:kinetic_energy_absorption">Kinetic Energy Absorption</a></li>
+<li><a href="#heroesexpansion:call_weapon">Call Weapon</a></li>
+<li><a href="#heroesexpansion:energy_absorption">Energy Absorption</a></li>
+<li><a href="#heroesexpansion:i_dont_feel_so_good">I don't feel so good</a></li>
+<li><a href="#heroesexpansion:spider_sense">Spider Sense</a></li>
+<li><a href="#heroesexpansion:wall_crawling">Wall Crawling</a></li>
+<li><a href="#heroesexpansion:web_wings">Web Wings</a></li>
+<li><a href="#heroesexpansion:blindness">Blindness</a></li>
+<li><a href="#heroesexpansion:precision">Precision</a></li>
+<li><a href="#heroesexpansion:portal">Portal</a></li>
+<li><a href="#heroesexpansion:grab_entity">Grab Entity</a></li>
+<li><a href="#heroesexpansion:photon_blast">Photon Blast</a></li>
+<li><a href="#heroesexpansion:force_field">Force Field</a></li>
+<li><a href="#heroesexpansion:black_hole">Black Hole</a></li>
+<li><a href="#heroesexpansion:freeze_breath">Freeze Breath</a></li>
+<li><a href="#heroesexpansion:x_ray">X-Ray Vision</a></li>
+</ul>
+<h1>Lucraft: Core</h1>
+<ul>
+<li><a href="#lucraftcore:toggle_power">Toggle Power</a></li>
+<li><a href="#lucraftcore:health">Health</a></li>
+<li><a href="#lucraftcore:healing">Healing</a></li>
+<li><a href="#lucraftcore:strength">Strength</a></li>
+<li><a href="#lucraftcore:punch">Punch Damage</a></li>
+<li><a href="#lucraftcore:sprint">Sprint Speed</a></li>
+<li><a href="#lucraftcore:jump_boost">Jump Boost</a></li>
+<li><a href="#lucraftcore:resistance">Resistance</a></li>
+<li><a href="#lucraftcore:fall_resistance">Fall Resistance</a></li>
+<li><a href="#lucraftcore:fire_resistance">Fire Resistance</a></li>
+<li><a href="#lucraftcore:step_assist">Step Assist</a></li>
+<li><a href="#lucraftcore:size_change">Change Size</a></li>
+<li><a href="#lucraftcore:teleport">Teleportation</a></li>
+<li><a href="#lucraftcore:knockback_resistance">Knockback Resistance</a></li>
+<li><a href="#lucraftcore:potion_punch">Potion Punch</a></li>
+<li><a href="#lucraftcore:slowfall">Slowfall</a></li>
+<li><a href="#lucraftcore:energy_blast">Energy Blast</a></li>
+<li><a href="#lucraftcore:fire_punch">Fire Punch</a></li>
+<li><a href="#lucraftcore:flight">Flight</a></li>
+<li><a href="#lucraftcore:water_breathing">Water Breathing</a></li>
+<li><a href="#lucraftcore:tough_lungs">Tough Lungs</a></li>
+<li><a href="#lucraftcore:invisibility">Invisibility</a></li>
+<li><a href="#lucraftcore:command">Command</a></li>
+<li><a href="#lucraftcore:command_loop">Command</a></li>
+<li><a href="#lucraftcore:command_toggle">Command</a></li>
+<li><a href="#lucraftcore:command_held">Command</a></li>
+<li><a href="#lucraftcore:command_on_gain">Command On Gain</a></li>
+<li><a href="#lucraftcore:command_on_lose">Command On Lose</a></li>
+<li><a href="#lucraftcore:set_punch">Punch</a></li>
+</ul>
+
+<hr>
+<p><h1 id="lucraftcore:toggle_power">Toggle Power</h1>
+<h3>lucraftcore:toggle_power</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:toggle_power",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.toggle_power.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.toggle_power.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:health">Health</h1>
+<h3>lucraftcore:health</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:health",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.health.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "amount": 1.0,<br>
+  "operation": 0,<br>
+  "uuid": "0669d99d-b34d-40fc-a4d8-c7ee963cc842"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.health.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The amount for the giving attribute modifier</p>
+</td></tr><br><tr>
+<td><code>operation</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</p>
+</td></tr><br><tr>
+<td><code>uuid</code></td>
+<td><code>UUID</code></td>
+<td><code>"0669d99d-b34d-40fc-a4d8-c7ee963cc842"</code></td>
+<td><p>Sets the unique identifier for this attribute modifier</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:healing">Healing</h1>
+<h3>lucraftcore:healing</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:healing",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.healing.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "frequency": 20,<br>
+  "amount": 0.5<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.healing.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>frequency</code></td>
+<td><code>Integer</code></td>
+<td><code>20</code></td>
+<td><p>Sets the frequency of healing (in ticks)</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>0.5</code></td>
+<td><p>Sets the amount of hearts for each healing</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:strength">Strength</h1>
+<h3>lucraftcore:strength</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:strength",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.strength.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "amount": 1.0,<br>
+  "operation": 0,<br>
+  "uuid": "0669d99d-b34d-40fc-a4d8-c7ee963cc842"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.strength.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The amount for the giving attribute modifier</p>
+</td></tr><br><tr>
+<td><code>operation</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</p>
+</td></tr><br><tr>
+<td><code>uuid</code></td>
+<td><code>UUID</code></td>
+<td><code>"0669d99d-b34d-40fc-a4d8-c7ee963cc842"</code></td>
+<td><p>Sets the unique identifier for this attribute modifier</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:punch">Punch Damage</h1>
+<h3>lucraftcore:punch</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:punch",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.punch.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "amount": 1.0,<br>
+  "operation": 0,<br>
+  "uuid": "0669d99d-b34d-40fc-a4d8-c7ee963cc842"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.punch.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The amount for the giving attribute modifier</p>
+</td></tr><br><tr>
+<td><code>operation</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</p>
+</td></tr><br><tr>
+<td><code>uuid</code></td>
+<td><code>UUID</code></td>
+<td><code>"0669d99d-b34d-40fc-a4d8-c7ee963cc842"</code></td>
+<td><p>Sets the unique identifier for this attribute modifier</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:sprint">Sprint Speed</h1>
+<h3>lucraftcore:sprint</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:sprint",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.sprint.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "amount": 1.0,<br>
+  "operation": 0,<br>
+  "uuid": "0669d99d-b34d-40fc-a4d8-c7ee963cc842"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.sprint.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The amount for the giving attribute modifier</p>
+</td></tr><br><tr>
+<td><code>operation</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</p>
+</td></tr><br><tr>
+<td><code>uuid</code></td>
+<td><code>UUID</code></td>
+<td><code>"0669d99d-b34d-40fc-a4d8-c7ee963cc842"</code></td>
+<td><p>Sets the unique identifier for this attribute modifier</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:jump_boost">Jump Boost</h1>
+<h3>lucraftcore:jump_boost</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:jump_boost",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.jump_boost.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "amount": 1.0,<br>
+  "operation": 0,<br>
+  "uuid": "0669d99d-b34d-40fc-a4d8-c7ee963cc842"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.jump_boost.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The amount for the giving attribute modifier</p>
+</td></tr><br><tr>
+<td><code>operation</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</p>
+</td></tr><br><tr>
+<td><code>uuid</code></td>
+<td><code>UUID</code></td>
+<td><code>"0669d99d-b34d-40fc-a4d8-c7ee963cc842"</code></td>
+<td><p>Sets the unique identifier for this attribute modifier</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:resistance">Resistance</h1>
+<h3>lucraftcore:resistance</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:resistance",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.resistance.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "amount": 1.0,<br>
+  "operation": 0,<br>
+  "uuid": "0669d99d-b34d-40fc-a4d8-c7ee963cc842"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.resistance.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The amount for the giving attribute modifier</p>
+</td></tr><br><tr>
+<td><code>operation</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</p>
+</td></tr><br><tr>
+<td><code>uuid</code></td>
+<td><code>UUID</code></td>
+<td><code>"0669d99d-b34d-40fc-a4d8-c7ee963cc842"</code></td>
+<td><p>Sets the unique identifier for this attribute modifier</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:fall_resistance">Fall Resistance</h1>
+<h3>lucraftcore:fall_resistance</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:fall_resistance",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.fall_resistance.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "amount": 1.0,<br>
+  "operation": 0,<br>
+  "uuid": "0669d99d-b34d-40fc-a4d8-c7ee963cc842"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.fall_resistance.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The amount for the giving attribute modifier</p>
+</td></tr><br><tr>
+<td><code>operation</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</p>
+</td></tr><br><tr>
+<td><code>uuid</code></td>
+<td><code>UUID</code></td>
+<td><code>"0669d99d-b34d-40fc-a4d8-c7ee963cc842"</code></td>
+<td><p>Sets the unique identifier for this attribute modifier</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:fire_resistance">Fire Resistance</h1>
+<h3>lucraftcore:fire_resistance</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:fire_resistance",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.fire_resistance.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.fire_resistance.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:step_assist">Step Assist</h1>
+<h3>lucraftcore:step_assist</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:step_assist",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.step_assist.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "amount": 1.0,<br>
+  "operation": 0,<br>
+  "uuid": "0669d99d-b34d-40fc-a4d8-c7ee963cc842"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.step_assist.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The amount for the giving attribute modifier</p>
+</td></tr><br><tr>
+<td><code>operation</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</p>
+</td></tr><br><tr>
+<td><code>uuid</code></td>
+<td><code>UUID</code></td>
+<td><code>"0669d99d-b34d-40fc-a4d8-c7ee963cc842"</code></td>
+<td><p>Sets the unique identifier for this attribute modifier</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:size_change">Change Size</h1>
+<h3>lucraftcore:size_change</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:size_change",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.size_change.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "size": 0.1,<br>
+  "size_changer": "lucraftcore:default"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.size_change.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>size</code></td>
+<td><code>Float</code></td>
+<td><code>0.1</code></td>
+<td><p>Well...the size you want to change to</p>
+</td></tr><br><tr>
+<td><code>size_changer</code></td>
+<td><code>SizeChanger</code></td>
+<td><code>"lucraftcore:default"</code></td>
+<td><p>The way to change size</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:teleport">Teleportation</h1>
+<h3>lucraftcore:teleport</h3>
+Type: ACTION</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:teleport",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.teleport.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "distance": 1.0<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.teleport.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>distance</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The maximum amount of blocks you can teleport to</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:knockback_resistance">Knockback Resistance</h1>
+<h3>lucraftcore:knockback_resistance</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:knockback_resistance",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.knockback_resistance.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "amount": 1.0,<br>
+  "operation": 0,<br>
+  "uuid": "0669d99d-b34d-40fc-a4d8-c7ee963cc842"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.knockback_resistance.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>amount</code></td>
+<td><code>Float</code></td>
+<td><code>1.0</code></td>
+<td><p>The amount for the giving attribute modifier</p>
+</td></tr><br><tr>
+<td><code>operation</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</p>
+</td></tr><br><tr>
+<td><code>uuid</code></td>
+<td><code>UUID</code></td>
+<td><code>"0669d99d-b34d-40fc-a4d8-c7ee963cc842"</code></td>
+<td><p>Sets the unique identifier for this attribute modifier</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:potion_punch">Potion Punch</h1>
+<h3>lucraftcore:potion_punch</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:potion_punch",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.potion_punch.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "potion": "minecraft:poison",<br>
+  "amplifier": 0,<br>
+  "duration": 20<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.potion_punch.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>potion</code></td>
+<td><code>Potion</code></td>
+<td><code>"minecraft:poison"</code></td>
+<td><p>Sets the actual potion</p>
+</td></tr><br><tr>
+<td><code>amplifier</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Sets the amplifier for the potion effect</p>
+</td></tr><br><tr>
+<td><code>duration</code></td>
+<td><code>Integer</code></td>
+<td><code>20</code></td>
+<td><p>Sets the duration for the potion effect</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:slowfall">Slowfall</h1>
+<h3>lucraftcore:slowfall</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:slowfall",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.slowfall.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.slowfall.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:energy_blast">Energy Blast</h1>
+<h3>lucraftcore:energy_blast</h3>
+Type: ACTION</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:energy_blast",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.energy_blast.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "damage": 3.0,<br>
+  "color": [255, 0, 0],<br>
+  "entity_data": {},<br>
+  "play_sound": true,<br>
+  "invisible": false<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.energy_blast.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>damage</code></td>
+<td><code>Float</code></td>
+<td><code>3.0</code></td>
+<td><p>The amount of damage that the energy blast entity will cause</p>
+</td></tr><br><tr>
+<td><code>color</code></td>
+<td><code>Color</code></td>
+<td><code>[255, 0, 0]</code></td>
+<td><p>Sets the color for the energy blast</p>
+</td></tr><br><tr>
+<td><code>entity_data</code></td>
+<td><code>NBTTagCompound</code></td>
+<td><code>{}</code></td>
+<td><p>NBT tag for the entity that will be spawned</p>
+</td></tr><br><tr>
+<td><code>play_sound</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if a laser sound is played upon shooting the entity</p>
+</td></tr><br><tr>
+<td><code>invisible</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Makes the energy blast invisible</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:fire_punch">Fire Punch</h1>
+<h3>lucraftcore:fire_punch</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:fire_punch",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.fire_punch.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "duration": 20<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.fire_punch.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>duration</code></td>
+<td><code>Integer</code></td>
+<td><code>20</code></td>
+<td><p>Sets for how long a hurt entity will be on fire</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:flight">Flight</h1>
+<h3>lucraftcore:flight</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:flight",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.flight.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "speed": 0.1,<br>
+  "sprint_speed": 0.2,<br>
+  "rotate_arms": true<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.flight.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>speed</code></td>
+<td><code>Float</code></td>
+<td><code>0.1</code></td>
+<td><p>Sets the speed multiplier for flying when you are NOT sprinting</p>
+</td></tr><br><tr>
+<td><code>sprint_speed</code></td>
+<td><code>Float</code></td>
+<td><code>0.2</code></td>
+<td><p>Sets the speed multiplier for flying when you are sprinting</p>
+</td></tr><br><tr>
+<td><code>rotate_arms</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>If enabled the players arms will face in your direction (like Superman)</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:water_breathing">Water Breathing</h1>
+<h3>lucraftcore:water_breathing</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:water_breathing",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.water_breathing.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.water_breathing.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:tough_lungs">Tough Lungs</h1>
+<h3>lucraftcore:tough_lungs</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:tough_lungs",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.tough_lungs.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.tough_lungs.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:invisibility">Invisibility</h1>
+<h3>lucraftcore:invisibility</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:invisibility",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.invisibility.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.invisibility.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:command">Command</h1>
+<h3>lucraftcore:command</h3>
+Type: ACTION</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:command",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.command.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "commands": ["say Hello", "say World"]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.command.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>commands</code></td>
+<td><code>AbilityCommand$CommandList</code></td>
+<td><code>["say Hello", "say World"]</code></td>
+<td><p>Sets the commands which get executed when using the ability</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:command_loop">Command</h1>
+<h3>lucraftcore:command_loop</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:command_loop",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.command_loop.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "commands": ["say Hello", "say World"]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.command_loop.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>commands</code></td>
+<td><code>AbilityCommand$CommandList</code></td>
+<td><code>["say Hello", "say World"]</code></td>
+<td><p>Sets the commands which get executed when using the ability</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:command_toggle">Command</h1>
+<h3>lucraftcore:command_toggle</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:command_toggle",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.command_toggle.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "commands": ["say Hello", "say World"]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.command_toggle.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>commands</code></td>
+<td><code>AbilityCommand$CommandList</code></td>
+<td><code>["say Hello", "say World"]</code></td>
+<td><p>Sets the commands which get executed when using the ability</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:command_held">Command</h1>
+<h3>lucraftcore:command_held</h3>
+Type: HELD</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:command_held",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.command_held.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "commands": ["say Hello", "say World"]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.command_held.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>commands</code></td>
+<td><code>AbilityCommand$CommandList</code></td>
+<td><code>["say Hello", "say World"]</code></td>
+<td><p>Sets the commands which get executed when using the ability</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:command_on_gain">Command On Gain</h1>
+<h3>lucraftcore:command_on_gain</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:command_on_gain",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.command_on_gain.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "commands": ["say Hello", "say World"]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.command_on_gain.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>commands</code></td>
+<td><code>AbilityCommand$CommandList</code></td>
+<td><code>["say Hello", "say World"]</code></td>
+<td><p>Sets the commands which get executed when using the ability</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:command_on_lose">Command On Lose</h1>
+<h3>lucraftcore:command_on_lose</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:command_on_lose",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"lucraftcore.abilities.command_on_lose.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "commands": ["say Hello", "say World"]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.command_on_lose.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>commands</code></td>
+<td><code>AbilityCommand$CommandList</code></td>
+<td><code>["say Hello", "say World"]</code></td>
+<td><p>Sets the commands which get executed when using the ability</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="lucraftcore:set_punch">Punch</h1>
+<h3>lucraftcore:set_punch</h3>
+Type: ACTION</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "lucraftcore:set_punch",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"lucraftcore.abilities.set_punch.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "arm": 0,<br>
+  "reach_distance": 5.0,<br>
+  "damage": -1.0<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"lucraftcore.abilities.set_punch.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>arm</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>The arm that will be used for this. 0 - main hand. 1 - off hand. 2 - both arms. 3 - random arm</p>
+</td></tr><br><tr>
+<td><code>reach_distance</code></td>
+<td><code>Float</code></td>
+<td><code>5.0</code></td>
+<td><p>The maximum distance you can hit entities at</p>
+</td></tr><br><tr>
+<td><code>damage</code></td>
+<td><code>Float</code></td>
+<td><code>-1.0</code></td>
+<td><p>The amount of damage dealt with each hit. If you set it to -1 it will use the current attack stat of the player</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:god_mode">God Mode</h1>
+<h3>heroesexpansion:god_mode</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:god_mode",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.god_mode.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "damage": 7.0<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.god_mode.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>damage</code></td>
+<td><code>Float</code></td>
+<td><code>7.0</code></td>
+<td><p>The amount of damage boost given by the ability</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:lightning_strike">Lightning Strike</h1>
+<h3>heroesexpansion:lightning_strike</h3>
+Type: HELD</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:lightning_strike",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.lightning_strike.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.lightning_strike.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:lightning_attack">Lightning Attack</h1>
+<h3>heroesexpansion:lightning_attack</h3>
+Type: ACTION</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:lightning_attack",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.lightning_attack.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "damage": 10.0<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.lightning_attack.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>damage</code></td>
+<td><code>Float</code></td>
+<td><code>10.0</code></td>
+<td><p>The distance that you can strike the lightning from.</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:solar_energy">Solar Energy</h1>
+<h3>heroesexpansion:solar_energy</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:solar_energy",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"heroesexpansion.abilities.solar_energy.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "max_solar_energy": 100,<br>
+  "ability_values": [<br> { "ability": "ability_key_1", "amount": 3, "frequency": 1 },<br> { "ability": "ability_key_2", "amount": 1, "frequency": 2 }<br>]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.solar_energy.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>max_solar_energy</code></td>
+<td><code>Integer</code></td>
+<td><code>100</code></td>
+<td><p>The maximum amount of solar energy you can charge to</p>
+</td></tr><br><tr>
+<td><code>ability_values</code></td>
+<td><code>AbilitySolarEnergy$SolarAbilityEntry></code></td>
+<td><code>[<br> { "ability": "ability_key_1", "amount": 3, "frequency": 1 },<br> { "ability": "ability_key_2", "amount": 1, "frequency": 2 }<br>]</code></td>
+<td><p>An array of settings for every ability</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:heat_vision">Heat Vision</h1>
+<h3>heroesexpansion:heat_vision</h3>
+Type: HELD</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:heat_vision",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.heat_vision.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "color": [255, 0, 0]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.heat_vision.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>color</code></td>
+<td><code>Color</code></td>
+<td><code>[255, 0, 0]</code></td>
+<td><p>The color of the beams</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:kinetic_energy_absorption">Kinetic Energy Absorption</h1>
+<h3>heroesexpansion:kinetic_energy_absorption</h3>
+Type: ACTION</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:kinetic_energy_absorption",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.kinetic_energy_absorption.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "max_energy": 100,<br>
+  "color": [255, 255, 255]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.kinetic_energy_absorption.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>max_energy</code></td>
+<td><code>Integer</code></td>
+<td><code>100</code></td>
+<td><p>The maximum energy able to be absorbed</p>
+</td></tr><br><tr>
+<td><code>color</code></td>
+<td><code>Color</code></td>
+<td><code>[255, 255, 255]</code></td>
+<td><p>The color of the energy blast</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:call_weapon">Call Weapon</h1>
+<h3>heroesexpansion:call_weapon</h3>
+Type: ACTION</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:call_weapon",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.call_weapon.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.call_weapon.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:energy_absorption">Energy Absorption</h1>
+<h3>heroesexpansion:energy_absorption</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:energy_absorption",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.energy_absorption.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "max_energy": 100,<br>
+  "max_damage": 10.0<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.energy_absorption.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>max_energy</code></td>
+<td><code>Integer</code></td>
+<td><code>100</code></td>
+<td><p>The maximum amount of energy that you can absorb.</p>
+</td></tr><br><tr>
+<td><code>max_damage</code></td>
+<td><code>Float</code></td>
+<td><code>10.0</code></td>
+<td><p>The maximum amount of damage that you can cause.</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:i_dont_feel_so_good">I don't feel so good</h1>
+<h3>heroesexpansion:i_dont_feel_so_good</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:i_dont_feel_so_good",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"heroesexpansion.abilities.i_dont_feel_so_good.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.i_dont_feel_so_good.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:spider_sense">Spider Sense</h1>
+<h3>heroesexpansion:spider_sense</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:spider_sense",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"heroesexpansion.abilities.spider_sense.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.spider_sense.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:wall_crawling">Wall Crawling</h1>
+<h3>heroesexpansion:wall_crawling</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:wall_crawling",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.wall_crawling.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.wall_crawling.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:web_wings">Web Wings</h1>
+<h3>heroesexpansion:web_wings</h3>
+Type: TOGGLE</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:web_wings",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.web_wings.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.web_wings.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:blindness">Blindness</h1>
+<h3>heroesexpansion:blindness</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:blindness",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"heroesexpansion.abilities.blindness.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.blindness.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:precision">Precision</h1>
+<h3>heroesexpansion:precision</h3>
+Type: CONSTANT</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:precision",<br>
+  "show_in_bar": false,<br>
+  "title": {"translate":"heroesexpansion.abilities.precision.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.precision.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:portal">Portal</h1>
+<h3>heroesexpansion:portal</h3>
+Type: ACTION</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:portal",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.portal.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.portal.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:grab_entity">Grab Entity</h1>
+<h3>heroesexpansion:grab_entity</h3>
+Type: HELD</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:grab_entity",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.grab_entity.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.grab_entity.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:photon_blast">Photon Blast</h1>
+<h3>heroesexpansion:photon_blast</h3>
+Type: HELD</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:photon_blast",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.photon_blast.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "color": [99, 92, 0]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.photon_blast.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>color</code></td>
+<td><code>Color</code></td>
+<td><code>[99, 92, 0]</code></td>
+<td><p>The color of the beam</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:force_field">Force Field</h1>
+<h3>heroesexpansion:force_field</h3>
+Type: HELD</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:force_field",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.force_field.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "color": [2, 85, 255]<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.force_field.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>color</code></td>
+<td><code>Color</code></td>
+<td><code>[2, 85, 255]</code></td>
+<td><p>Sets the color of the shield</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:black_hole">Black Hole</h1>
+<h3>heroesexpansion:black_hole</h3>
+Type: HELD</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:black_hole",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.black_hole.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.black_hole.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:freeze_breath">Freeze Breath</h1>
+<h3>heroesexpansion:freeze_breath</h3>
+Type: HELD</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:freeze_breath",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.freeze_breath.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray",<br>
+  "distance": 5.0<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.freeze_breath.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br><tr>
+<td><code>distance</code></td>
+<td><code>Float</code></td>
+<td><code>5.0</code></td>
+<td><p>Sets the maximum distance entities and blocks can be reached with</p>
+</td></tr><br></table>
+
+<hr>
+<p><h1 id="heroesexpansion:x_ray">X-Ray Vision</h1>
+<h3>heroesexpansion:x_ray</h3>
+Type: HELD</p><br>
+<p>Example:<br>
+<code>"example_ability": {<br>
+  "ability": "heroesexpansion:x_ray",<br>
+  "cooldown": 0,<br>
+  "show_in_bar": true,<br>
+  "title": {"translate":"heroesexpansion.abilities.x_ray.name"},<br>
+  "icon": { "type": "internal" },<br>
+  "bar_color": "light_gray"<br>
+}</code>
+<table>
+<tr><th>Setting</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr>
+<td><code>cooldown</code></td>
+<td><code>Integer</code></td>
+<td><code>0</code></td>
+<td><p>Maximum cooldown for using this ability</p>
+</td></tr><br><tr>
+<td><code>show_in_bar</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td><p>Determines if this ability should be displayed in the ability bar</p>
+</td></tr><br><tr>
+<td><code>title</code></td>
+<td><code>ITextComponent</code></td>
+<td><code>{"translate":"heroesexpansion.abilities.x_ray.name"}</code></td>
+<td><p>Allows you to set a custom title for this ability</p>
+</td></tr><br><tr>
+<td><code>icon</code></td>
+<td><code>AbilityDataIcon$Icon</code></td>
+<td><code>{ "type": "internal" }</code></td>
+<td><p>Lets you customize the icon for the ability</p>
+</td></tr><br><tr>
+<td><code>bar_color</code></td>
+<td><code>EnumAbilityBarColor</code></td>
+<td><code>"light_gray"</code></td>
+<td><p>Lets you choose the color of the ability bar frame for this ability. Available options: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black</p>
+</td></tr><br></table>
+
+</body></html>
