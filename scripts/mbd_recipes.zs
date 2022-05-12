@@ -11,7 +11,7 @@ craft.remake(<mbd:station_generator_controller>, ["pretty",
   "* ⌂ *"], {
   "¤": <ore:gearSmallBronze>,                    # Small Bronze Gear
   "P": <metaitem:circuit.vacuum_tube>,                   # Vacuum Tube
-  "L": <contenttweaker:electric_motor_ulv>,               # LV Electric Motor
+  "L": <metaitem:electric.motor.ulv>,               # LV Electric Motor
   "t": <contenttweaker:controller_broken_north>, # tile.contenttweaker.controller_broken_north.name
   "*": <ore:wireGtDoubleGreenCrystalAlloy>,      # 2x Green Crystal Alloy Wire
   "⌂": <contenttweaker:station_casing>,          # Derelict Casing

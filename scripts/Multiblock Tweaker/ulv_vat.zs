@@ -172,13 +172,14 @@ ulv_vat.recipeMap.recipeBuilder()
 	.fluidOutputs(<liquid:carbon_monoxide>*1000)
 	.duration(40).EUt(7).buildAndRegister();
 
+/*
 // Splitting 1,2-Dichloroethane
 ulv_vat.recipeMap.recipeBuilder()
 	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration:1}))
 	.fluidInputs(<liquid:dichloroethane>*1000)
 	.fluidOutputs(<liquid:vinyl_chloride>*1000, <liquid:hydrochloric_acid>*1000)
 	.duration(40).EUt(7).buildAndRegister();
-
+*/
 // Sulfur Dioxide
 ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<ore:dustSulfur>)

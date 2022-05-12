@@ -81,7 +81,7 @@ crowbar_t2.register();
 
 
 var componentsULV = (itemColor(0xf0821d));
-
+/*
 val motorULV = VanillaFactory.createItem("electric_motor_ulv");
 motorULV.itemColorSupplier = componentsULV;
 motorULV.register();
@@ -94,14 +94,15 @@ val pumpULV = VanillaFactory.createItem("electric_pump_ulv");
 pumpULV.itemColorSupplier = componentsULV;
 pumpULV.register();
 
-val emitterULV = VanillaFactory.createItem("emitter_ulv");
-emitterULV.itemColorSupplier = componentsULV;
-emitterULV.register();
-
 val conveyorULV = VanillaFactory.createItem("conveyor_module_ulv");
 conveyorULV.itemColorSupplier = componentsULV;
 conveyorULV.register();
+*/
 
+
+val emitterULV = VanillaFactory.createItem("emitter_ulv");
+emitterULV.itemColorSupplier = componentsULV;
+emitterULV.register();
 
 val cannedBeans = VanillaFactory.createItemFood("canned_beans", 8);
 cannedBeans.saturation = 0.25;

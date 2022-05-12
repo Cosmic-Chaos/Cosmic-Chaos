@@ -287,7 +287,7 @@ craft.remake(<gregtech:machine:32102>, ["pretty",
 });
 
 # [ULV Electric Pump] from [Rubber Ring][+6]
-craft.remake(<contenttweaker:electric_pump_ulv>, ["pretty",
+craft.remake(<metaitem:electric.pump.ulv>, ["pretty",
   "* B l",
   "r R  ",
   "o   T"], {
@@ -301,7 +301,7 @@ craft.remake(<contenttweaker:electric_pump_ulv>, ["pretty",
 });
 
 # [ULV Electric Motor] from [Iron Rod][+5]
-craft.remake(<contenttweaker:electric_motor_ulv>, ["pretty",
+craft.remake(<metaitem:electric.motor.ulv>, ["pretty",
   "* ╱ l",
   "/ *  ",
   "o   T"], {
@@ -314,17 +314,30 @@ craft.remake(<contenttweaker:electric_motor_ulv>, ["pretty",
 });
 
 # [ULV Electric Piston] from [Small Bronze Gear][+6]
-craft.remake(<contenttweaker:electric_piston_ulv>, ["pretty",
+craft.remake(<metaitem:electric.piston.ulv>, ["pretty",
   "□ ╱ l",
   "U ¤  ",
   "o   T"], {
   "□": <ore:plateBronze>,                        # Bronze Plate
   "╱": <ore:stickBronze>,                        # Bronze Rod
   "l": <ore:gtceWrenches>, # Neutronium Wrench
-  "U": <contenttweaker:electric_motor_ulv>,      # ULV Electric Motor
+  "U": <metaitem:electric.motor.ulv>,      # ULV Electric Motor
   "¤": <ore:gearSmallBronze>,                    # Small Bronze Gear
   "o": <ore:gtceFiles>, # Neutronium File
   "T": <ore:gtceHardHammers>, # Neutronium Hammer
+});
+
+# [ULV Conveyor Module] from [ULV Electric Motor][+5]
+craft.remake(<metaitem:conveyor.module.ulv>, ["pretty",
+  "□ U T",
+  "* □  ",
+  "o   l"], {
+  "□": <ore:plateRubber>,                    # Rubber Sheet
+  "U": <metaitem:electric.motor.ulv>,         # ULV Electric Motor
+  "T": <ore:gtceWireCutters>, # Neutronium Wire Cutter
+  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+  "o": <ore:gtceScrewdrivers>, # Neutronium Screwdriver
+  "l": <ore:gtceHardHammers>, # Neutronium Hammer
 });
 
 # [LV Machine Casing] from [Neutronium Wrench (HV)][+1]
@@ -367,7 +380,7 @@ craft.remake(<industrialforegoing:sludge_refiner>, ["pretty",
   "v": <ore:circuitLv>,                     # Electronic Circuit
   "G": <ore:wireGtSingleCopper>,            # 1x Copper Wire
   "L": <gregtech:machine:986>,              # LV Machine Hull
-  "U": <contenttweaker:electric_motor_ulv>, # ULV Electric Motor
+  "U": <metaitem:electric.motor.ulv>, # ULV Electric Motor
   "S": <extrautils2:drum>,                  # Stone Drum
 });
 

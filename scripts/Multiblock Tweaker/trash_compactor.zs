@@ -68,7 +68,7 @@ craft.remake(<metaitem:mbt:trash_compactor>, ["pretty",
   "* ⌂ *"], {
   "I": <ore:springIron>,                        # Iron Spring
   "L": <ore:circuitLv>,                         # Electronic Circuit
-  "U": <contenttweaker:electric_piston_ulv>,    # ULV Electric Piston
+  "U": <metaitem:electric.piston.ulv>,    # ULV Electric Piston
   "t": <contenttweaker:controller_broken_west>, # tile.contenttweaker.controller_broken_west.name
   "*": <ore:cableGtDoubleGreenCrystalAlloy>,    # 2x Green Crystal Alloy Cable
   "⌂": <contenttweaker:station_casing>,         # Derelict Casing
@@ -83,7 +83,7 @@ craft.remake(<advancedrocketry:platepress>, ["pretty",
   "¤": <ore:gearSmallBronze>,      # Small Bronze Gear
   "◙": <ore:frameGtCrudeSteel>,    # Crude Steel Frame Box
   "W": <ore:screwWroughtIron>,     # Wrought Iron Screw
-  "L": <contenttweaker:electric_piston_ulv>, # LV Electric Piston
+  "L": <metaitem:electric.piston.ulv>, # LV Electric Piston
 });
 // Recipes	
 	
