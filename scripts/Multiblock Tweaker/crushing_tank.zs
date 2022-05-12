@@ -2,6 +2,7 @@ import crafttweaker.block.IBlockState;
 import crafttweaker.block.IBlock;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.world.IBlockPos;
 import crafttweaker.world.IFacing;
 import crafttweaker.world.IWorld;
