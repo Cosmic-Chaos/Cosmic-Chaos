@@ -221,3 +221,4 @@ for name, itemList in oreNameMap {
 <ore:foodFlour>.add(<metaitem:dustWheat>);
 <ore:foodSalt>.add(<metaitem:dustWheat>);
 
+<ore:gemSulfur>.add(<thebetweenlands:items_misc:18>);
