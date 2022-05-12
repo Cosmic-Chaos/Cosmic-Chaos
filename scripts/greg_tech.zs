@@ -97,6 +97,51 @@ craft.remake(<gregtech:meta_item_1:96>, ["pretty",
   "╱": <ore:stickIronMagnetic>, # Magnetic Iron Rod
 });
 
+// Fix fermented spider eye to accept oredict
+recipes.removeByRecipeName("minecraft:fermented_spider_eye");
+<recipemap:mixer>.findRecipe(7, [<minecraft:sugar:0>, <minecraft:red_mushroom:0>, <minecraft:spider_eye:0>], null).remove();
+<recipemap:mixer>.findRecipe(7, [<minecraft:sugar:0>, <minecraft:brown_mushroom:0>, <minecraft:spider_eye:0>], null).remove();
+recipes.addShapeless("fermented_spider_eye", <minecraft:fermented_spider_eye>, [<minecraft:spider_eye>, <ore:listAllmushroom>, <ore:listAllsugar>]);
+<recipemap:mixer>.recipeBuilder()
+	.inputs(<minecraft:spider_eye>, <ore:listAllmushroom>, <ore:listAllsugar>)
+	.outputs(<minecraft:fermented_spider_eye>)
+	.duration(100).EUt(7).buildAndRegister();
+
+// Remove Sulfur Dioxide recipe with unneeded circuit from GT chem reactor
+<recipemap:chemical_reactor>.findRecipe(7, [<metaitem:dustSulfur>, <metaitem:circuit.integrated>.withTag({Configuration: 2})], [<liquid:oxygen>*2000]).remove();
+
+// Sulfur Dioxide (for the GT chem reactor)
+<recipemap:chemical_reactor>.recipeBuilder()
+	.inputs(<ore:dustSulfur>)
+	.fluidInputs(<liquid:oxygen>*2000)
+	.fluidOutputs(<liquid:sulfur_dioxide>*1000)
+	.duration(60).EUt(7).buildAndRegister();
+
+// Fix Carbon monoxide recipe which takes way longer than other carbon monoxide recipes
+<recipemap:chemical_reactor>.findRecipe(7, [<metaitem:dustCarbon>], [<liquid:carbon_dioxide>*1000]).remove();
+<recipemap:chemical_reactor>.recipeBuilder()
+	.inputs(<ore:dustCarbon>)
+	.fluidInputs(<liquid:carbon_dioxide>*1000)
+	.fluidOutputs(<liquid:carbon_monoxide>*1000)
+	.duration(80).EUt(7).buildAndRegister();
+
+// Carbon Monoxide from coal/charcoal
+val carbonMonoxideItems as IOreDictEntry[] = [
+	<ore:gemCoal>,
+	<ore:gemCharcoal>,
+	<ore:dustCoal>,
+	<ore:dustCharcoal>
+] as IOreDictEntry[];
+
+for item in carbonMonoxideItems {
+	<recipemap:chemical_reactor>.findRecipe(7, [item.firstItem, <metaitem:circuit.integrated>.withTag({Configuration: 1})], [<liquid:oxygen>*1000]).remove();
+	<recipemap:chemical_reactor>.recipeBuilder()
+		.inputs(item)
+		.fluidInputs(<liquid:oxygen>*1000)
+		.outputs(<metaitem:dustTinyAsh>)
+		.fluidOutputs(<liquid:carbon_monoxide>*1000)
+		.duration(80).EUt(7).buildAndRegister();
+}
 
 /*
 val tinyDustMap as IItemStack[IItemStack] = {
@@ -110,5 +155,7 @@ for tinyDust, material in tinyDustMap {
 <techreborn:part:13>.displayName = "Constantan Heating Coil";
 <astralsorcery:itemcelestialcrystal>.addTooltip(format.aqua("Grows from a Celestal Crystal Cluster"));
 */
+
+
 ##########################################################################################
 print("==================== end of gregtech.zs ====================");
