@@ -1,0 +1,26 @@
+{
+	x: 5.0d,
+	y: -7.5d,
+	shape: "diamond",
+	description: "Smashing!",
+	text: [
+		""
+	],
+	dependencies: [
+		"5cacd521"
+	],
+	tasks: [{
+		uid: "00a69bc0",
+		type: "item",
+		items: [{
+			item: "minecraft:redstone"
+		}]
+	},
+	{
+		uid: "2b292cd9",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 1209"
+		}]
+	}]
+}

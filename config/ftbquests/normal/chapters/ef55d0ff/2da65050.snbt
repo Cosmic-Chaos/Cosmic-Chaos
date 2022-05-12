@@ -1,0 +1,36 @@
+{
+	x: 1.5d,
+	y: -4.0d,
+	shape: "diamond",
+	dependencies: [
+		"cb175ed6"
+	],
+	tasks: [{
+		uid: "9e2b0db7",
+		type: "item",
+		items: [{
+			item: "contenttweaker:broken_hull_plate_t1"
+		}]
+	},
+	{
+		uid: "4fa447ac",
+		type: "item",
+		items: [{
+			item: "contenttweaker:broken_hull_plate_t3"
+		}]
+	},
+	{
+		uid: "0bc659ca",
+		type: "item",
+		items: [{
+			item: "minecraft:iron_ingot"
+		}]
+	},
+	{
+		uid: "3d30d019",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 10035"
+		}]
+	}]
+}

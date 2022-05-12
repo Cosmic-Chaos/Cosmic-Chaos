@@ -36,9 +36,16 @@ material.nagrilite=Nagrilite
 material.ebony=Ebony
 material.archaic_shard=Archaic Shard
 
+material.octine=Octine
+material.syrmorite=Syrmorite
+material.valonite=Valonite
+material.scabyst=Scabyst
 
 material.sky_stone=Sky Stone
 item.material.oreprefix.oreSkyStone=Alchemical %s Ore
+item.material.oreprefix.oreAurorianStone=%s Ore
+item.material.oreprefix.oreBetweenStone=%s Ore
+item.material.oreprefix.oreNightStone=%s Ore
 
 material.limestone_atum=Atum Limestone
 material.stone_aurorian=Aurorian Stone
@@ -148,12 +155,16 @@ tile.contenttweaker.crystal_cluster_green_6.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_7.name=Growing Green Crystal Cluster
 
 
+tile.mbd.station_generator_controller.name=Backup Generator
 station_generator_controller.name=Backup Generator
-station_generator_controller.discription=Backup Generator
-ulv_energy_output.name=ULV Dynamo Hatch
-item_bus.name=Multiblock Item Bus
+mbd.station_generator_controller.description=Runs on Bio Fuel
 
-gp_eu.name=Hand Crank Generator
+tile.mbd.ulv_energy_output.name=ULV Dynamo Hatch
+tile.mbd.item_bus.name=Multiblock Item Bus
+tile.mbd.fluid_hatch.name=Multiblock Fluid Hatch
+
+
+tile.mbd.gp_eu.name=Hand Crank Generator
 
 devtech.machine.brewery.ulv.name=Primitive Brewery
 

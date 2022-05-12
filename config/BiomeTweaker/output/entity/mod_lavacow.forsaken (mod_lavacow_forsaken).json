@@ -1,0 +1,6 @@
+
+{
+  "Name": "mod_lavacow.forsaken",
+  "Registry ID": "mod_lavacow:forsaken",
+  "Class": "com.Fishmod.mod_LavaCow.entities.EntityForsaken"
+}

@@ -1,0 +1,22 @@
+{
+	x: -3.5d,
+	y: 2.0d,
+	text: [
+		"Broken Hull Plates can be smelted down into nuggets."
+	],
+	dependencies: [
+		"4ac7dc15"
+	],
+	tasks: [{
+		uid: "26c2594b",
+		type: "item",
+		items: [{
+			item: "furnaceoverhaul:iron_furnace"
+		}]
+	}],
+	rewards: [{
+		uid: "512c4e3e",
+		type: "item",
+		item: "furnaceoverhaul:iron_furnace"
+	}]
+}

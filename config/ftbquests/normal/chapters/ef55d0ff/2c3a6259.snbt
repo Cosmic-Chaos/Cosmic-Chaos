@@ -1,0 +1,25 @@
+{
+	title: "Using RF Power",
+	x: 10.0d,
+	y: -1.0d,
+	text: [
+		""
+	],
+	dependencies: [
+		"4c27e895"
+	],
+	tasks: [{
+		uid: "1606e897",
+		type: "item",
+		items: [{
+			item: "enderio:block_zombie_generator"
+		}]
+	},
+	{
+		uid: "42ac2b7a",
+		type: "item",
+		items: [{
+			item: "gregtech:machine 1 2911"
+		}]
+	}]
+}

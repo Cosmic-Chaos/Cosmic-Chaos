@@ -1,0 +1,172 @@
+{
+	"block_pools":
+	[
+		{
+			"name": "hull_t1",
+			"type": {
+				"type": "block",
+				"name": "chisel:technicalnew",
+				"meta": 2
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "require_sneak",
+					"sneak": true
+				},
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "consume_block",
+					"chance": 20.0,
+					"name": "chisel:technical",
+					"meta": 0
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:hull_plate_t1",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 3
+						}
+					]
+				}
+			]
+		},
+		
+		{
+			"name": "hull_t2",
+			"type": {
+				"type": "block",
+				"name": "chisel:factory",
+				"meta": 9
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "require_sneak",
+					"sneak": true
+				},
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "consume_block",
+					"chance": 20.0,
+					"name": "chisel:technical",
+					"meta": 0
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:hull_plate_t2",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 3
+						}
+					],
+					"conditions": [
+						{
+							"type": "require_sneak"
+						},
+						{
+							"type": "require_item",
+							"name": "contenttweaker:crowbar"
+						}
+					]
+				}
+			]
+		},
+		
+
+		{
+			"name": "post_hull_t1",
+			"type": {
+				"type": "block",
+				"name": "chisel:technical",
+				"meta": 0
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "require_sneak",
+					"sneak": true
+				},
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.3,
+					"pitch": 0.85,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "consume_block",
+					"chance": 33.0,
+					"name": "minecraft:air"
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:internals_t1",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 2
+						}
+					]
+				}
+			]
+		}
+	]
+}

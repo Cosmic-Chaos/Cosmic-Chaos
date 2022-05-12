@@ -1,0 +1,28 @@
+{
+  "name": "Clockwork EU",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "recipes": [
+    {
+      "uid": "377de616-4fb9-4b93-a16b-b5ef6e494ec6",
+      "duration": 2,
+      "inputs": {},
+      "outputs": {
+        "gtce_energy": [
+          {
+            "content": 8,
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "exu2_gp": [
+          {
+            "content": 15.0,
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickOutputs": {}
+    }
+  ]
+}

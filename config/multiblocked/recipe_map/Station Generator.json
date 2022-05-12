@@ -1,0 +1,28 @@
+{
+  "name": "station_generator",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "recipes": [
+    {
+      "uid": "bddc469c-d569-4724-aa49-65411bac3f02",
+      "duration": 1,
+      "inputs": {
+        "fluid": [
+          {
+            "content": "{FluidName:\"biomass\",Amount:1}",
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "gtce_energy": [
+          {
+            "content": 8,
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {},
+      "tickOutputs": {}
+    }
+  ]
+}

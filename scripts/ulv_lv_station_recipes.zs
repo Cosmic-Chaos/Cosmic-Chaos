@@ -75,16 +75,16 @@ mods.jei.JEI.addItem(<advancedrocketry:spacechestplate>.withTag({slotInsert: [1,
 ##=======================================================
 
 //Busses because no wood
-recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<metaitem:crate.steel>]]);
-recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<metaitem:crate.steel>],[<metaitem:hull.ulv>]]);
+recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<metaitem:crate.steel>|<metaitem:crate.bronze>]]);
+recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<metaitem:crate.steel>|<metaitem:crate.bronze>],[<metaitem:hull.ulv>]]);
 
 
 //Knife
 recipes.addShapeless(<actuallyadditions:item_knife>, [<ore:craftingToolKnife>]);
 
 //No Stone Buttons
-recipes.addShapeless(<quark:iron_button>, [<minecraft:iron_ingot>]);
-recipes.addShapeless(<quark:gold_button>, [<minecraft:gold_ingot>]);
+recipes.addShaped(<quark:iron_button>, [[<ore:gtceHardHammers>],[<minecraft:iron_ingot>]]);
+recipes.addShaped(<quark:gold_button>, [[<ore:gtceHardHammers>],[<minecraft:gold_ingot>]]);
 
 
 # [Makeshift Crowbar] from [Tin Plate][+2]
@@ -257,7 +257,7 @@ craft.remake(<devtech:meta_item:1>, ["pretty",
   "╳ * ╳"], {
   "╳": <ore:wireFineGreenCrystalAlloy>,          # Fine Green Crystal Alloy Wire
   "*": <actuallyadditions:item_crystal_shard:4>, # Green Crystal Shard
-  "▲": <projecte:item.pe_covalence_dust>,        # Low Covalence Dust
+  "▲": <metaitem:springSilver>,        # Low Covalence Dust
 });
 
 
@@ -278,16 +278,16 @@ craft.remake(<gregtech:machine:32102>, ["pretty",
   "■ V ■",
   "* L *",
   "U T U"], {
-  "■": <ore:blockGlassColorless> | <ore:blockGlass>, # Glass
-  "V": <contenttweaker:electric_pump_ulv>,   # ULV Electric Pump
+  "■": <ore:blockGlassColorless>, # Glass
+  "V": <metaitem:electric.pump.ulv>,   # ULV Electric Pump
   "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
-  "L": <gregtech:machine:985>,               # ULV Machine Hull
-  "U": <ore:circuitUlv>,                     # Vacuum Tube
+  "L": <metaitem:hull.ulv>,               # ULV Machine Hull
+  "U": <metaitem:circuit.vacuum_tube>,                     # Vacuum Tube
   "T": <ore:springTin>,                      # Tin Spring
 });
 
 # [ULV Electric Pump] from [Rubber Ring][+6]
-craft.remake(<contenttweaker:electric_pump_ulv>, ["pretty",
+craft.remake(<metaitem:electric.pump.ulv>, ["pretty",
   "* B l",
   "r R  ",
   "o   T"], {
@@ -328,12 +328,12 @@ craft.remake(<contenttweaker:electric_piston_ulv>, ["pretty",
 });
 
 # [LV Machine Casing] from [Neutronium Wrench (HV)][+1]
-craft.make(<metaitem:hull.lv>, ["pretty",
+craft.make(<gregtech:machine_casing:1>, ["pretty",
   "□ □ □",
   "□ T □",
   "□ □ □"], {
   "□": <ore:plateCrudeSteel>, # Crude Steel Plate
-  "T": <ore:craftingToolWrench> | <ore:gtceWrenches>, # Neutronium Wrench (HV)
+  "T": <ore:gtceWrenches>, # Neutronium Wrench (HV)
 });
 
 # [LV Machine Hull] from [LV Machine Casing][+3]
@@ -343,7 +343,7 @@ craft.make(<metaitem:hull.lv>, ["pretty",
   "□": <ore:plateWroughtIron>,      # Wrought Iron Plate
   "п": <ore:plateCrudeSteel>,       # Crude Steel Plate
   "G": <ore:cableGtSingleTin>,      # 1x Tin Cable
-  "⌂": <metaitem:hull.lv>, # LV Machine Casing
+  "⌂": <gregtech:machine_casing:1>, # LV Machine Casing
 });
 
 # [Electronic Circuit] from [Circuit Board][+4]
@@ -371,6 +371,38 @@ craft.remake(<industrialforegoing:sludge_refiner>, ["pretty",
   "S": <extrautils2:drum>,                  # Stone Drum
 });
 
+# [Redstone Gear] from [Red Alloy Plate][+1]
+craft.remake(<extrautils2:ingredients:1>, ["pretty",
+  "  ♥  ",
+  "♥ □ ♥",
+  "  ♥  "], {
+  "♥": <ore:torchRedstoneActive> | <ore:craftingRedstoneTorch>, # Redstone Torch
+  "□": <ore:plateRedAlloy>, # Red Alloy Plate
+});
+
+# [Manual Mill] from [Redstone Gear][+2]
+craft.remake(<extrautils2:passivegenerator:7>, ["pretty",
+  "     ",
+  "  ▼  ",
+  "□ ♥ □"], {
+  "▼": <ore:gearRedstone>,        # Redstone Gear
+  "□": <ore:plateDoubleTinAlloy>, # Double Tin Alloy Plate
+  "♥": <ore:gemRedstone>,         # Resonating Redstone Crystal
+});
+
+# [Hand Crank Generator] from [ULV Machine Hull][+5]
+craft.remake(<mbd:gp_eu>, ["pretty",
+  "U M U",
+  "S L S",
+  "¤ i ¤"], {
+  "U": <metaitem:circuit.vacuum_tube>,                 # Vacuum Tube
+  "M": <extrautils2:passivegenerator:7>, # Manual Mill
+  "S": <ore:screwSilver>,                # Silver Screw
+  "L": <gregtech:machine:985>,           # ULV Machine Hull
+  "¤": <ore:gearCrudeSteel>,             # Crude Steel Gear
+  "i": <ore:springSilver>,               # Silver Spring
+});
+
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);
@@ -390,8 +422,7 @@ recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_sto
 
 // Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
-
-recipes.addShapeless(<metaitem:dustRedAlloy>*2, [<ore:dustCopper>,<contenttweaker:dust_crystal_red>,<contenttweaker:dust_crystal_red>]);
+recipes.addShapeless(<metaitem:dustRedAlloy>*2, [<ore:dustCopper>,<ore:dustCopper>,<contenttweaker:dust_crystal_red>]);
 
 // GC Alloy Dust
 recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<contenttweaker:dust_crystal_green>]);
@@ -399,14 +430,17 @@ recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeS
 // GC Glass Dust
 recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:dustGlass>,<metaitem:dustGlass>,<contenttweaker:dust_crystal_green>]);
 
+//Tin Alloy
+recipes.addShapeless(<metaitem:dustTinAlloy>*2, [<ore:dustIron>,<ore:dustTin>]);
 
 //Cooking Ingots
 furnace.addRecipe(<minecraft:iron_ingot>, <contenttweaker:broken_hull_plate_t1>, 0.0);
 furnace.addRecipe(<metaitem:ingotCopper>, <contenttweaker:broken_hull_plate_t2>, 0.0);
 furnace.addRecipe(<metaitem:ingotTin>, <contenttweaker:broken_hull_plate_t3>, 0.0);
-furnace.addRecipe(<metaitem:ingotCrudeSteel>, <contenttweaker:hull_plate_t3>, 0.0);
 furnace.addRecipe(<metaitem:ingotSilver>, <contenttweaker:hull_plate_t4>, 0.0);
 
+//MB Fluid Hatch
+recipes.addShapeless(<mbd:fluid_hatch>, [<metaitem:fluid_hatch.import.ulv>]);
 
 //Wrought Iron recipe in greg_tech.zs
 //furnace.addRecipe(<metaitem:ingotIron>, <metaitem:ingotWroughtIron>, 0.1);

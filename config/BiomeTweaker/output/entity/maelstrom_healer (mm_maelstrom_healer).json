@@ -1,0 +1,6 @@
+
+{
+  "Name": "maelstrom_healer",
+  "Registry ID": "mm:maelstrom_healer",
+  "Class": "com.barribob.MaelstromMod.entity.entities.EntityMaelstromHealer"
+}

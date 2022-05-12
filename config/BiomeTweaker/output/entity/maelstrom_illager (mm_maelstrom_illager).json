@@ -1,0 +1,6 @@
+
+{
+  "Name": "maelstrom_illager",
+  "Registry ID": "mm:maelstrom_illager",
+  "Class": "com.barribob.MaelstromMod.entity.entities.EntityMaelstromIllager"
+}

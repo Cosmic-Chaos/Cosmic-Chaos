@@ -1,0 +1,40 @@
+{
+  "weight": 70,
+  "density": 0.5,
+  "max_height": 55,
+  "min_height": 35,
+  "surface_stone_material": "redstone",
+  "dimension_filter": [
+    "dimension_id:0",
+    "dimension_id:33"
+],
+
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [30, 30]
+  },
+  "filler": {
+    "type": "simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 60,
+          "value": "ore:redstone"
+        },
+        {
+          "weight": 20,
+          "value": "ore:ruby"
+        },
+        {
+          "weight": 20,
+          "value": "ore:cinnabar"
+        },
+        {
+          "weight": 5,
+          "value": "ore:chromite"
+        }
+      ]
+    }
+  }
+}

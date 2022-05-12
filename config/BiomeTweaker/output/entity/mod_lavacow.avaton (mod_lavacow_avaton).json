@@ -1,0 +1,6 @@
+
+{
+  "Name": "mod_lavacow.avaton",
+  "Registry ID": "mod_lavacow:avaton",
+  "Class": "com.Fishmod.mod_LavaCow.entities.EntityAvaton"
+}

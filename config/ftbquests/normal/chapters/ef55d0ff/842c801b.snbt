@@ -1,0 +1,22 @@
+{
+	x: 5.5d,
+	y: -4.0d,
+	shape: "diamond",
+	dependencies: [
+		"00489151"
+	],
+	tasks: [{
+		uid: "a1a94662",
+		type: "item",
+		items: [{
+			item: "contenttweaker:broken_hull_plate_t2"
+		}]
+	},
+	{
+		uid: "8a3fdc28",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 10018"
+		}]
+	}]
+}

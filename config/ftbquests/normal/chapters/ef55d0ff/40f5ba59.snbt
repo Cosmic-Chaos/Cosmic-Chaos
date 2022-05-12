@@ -1,0 +1,25 @@
+{
+	title: "Aquire Sticks",
+	x: -7.0d,
+	y: 4.0d,
+	text: [
+		"Smash some dead bushes on the ground to get sticks."
+	],
+	dependencies: [
+		"46823ac9"
+	],
+	tasks: [{
+		uid: "8caa4ad2",
+		type: "item",
+		items: [{
+			item: "minecraft:deadbush"
+		}]
+	},
+	{
+		uid: "91dea365",
+		type: "item",
+		items: [{
+			item: "minecraft:stick"
+		}]
+	}]
+}

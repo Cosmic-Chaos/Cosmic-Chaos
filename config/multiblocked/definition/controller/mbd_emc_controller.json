@@ -1,0 +1,133 @@
+{
+  "consumeCatalyst": false,
+  "location": "mbd:emc_controller",
+  "traits": {
+    "projecte_emc": {
+      "x": 55,
+      "y": 138,
+      "width": 60,
+      "height": 18,
+      "textType": 0
+    },
+    "background": "multiblocked:textures/gui/emc_hatch.png",
+    "item": [
+      {
+        "cIO": 2,
+        "gIO": 2,
+        "x": 63,
+        "y": 54,
+        "autoIO": false
+      }
+    ],
+    "exu2_gp": {
+      "x": 61,
+      "y": 79,
+      "width": 60,
+      "height": 18,
+      "textType": 3
+    }
+  },
+  "allowRotate": true,
+  "showInJei": true,
+  "baseRenderer": {
+    "state": {
+      "id": "minecraft:concrete_powder",
+      "meta": 14
+    },
+    "type": "blockstate"
+  },
+  "isOpaqueCube": true,
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "    ",
+        " BB ",
+        " BB ",
+        "    "
+      ],
+      [
+        " AA ",
+        "@  B",
+        "B  B",
+        " AA "
+      ],
+      [
+        " AA ",
+        "B  B",
+        "B  B",
+        " AA "
+      ],
+      [
+        "    ",
+        " BB ",
+        " BB ",
+        "    "
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "minecraft:wool",
+            "meta": 14
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "mbd:emc_controller",
+        "type": "component"
+      },
+      "I": {
+        "capability": "item",
+        "type": "capability",
+        "minCount": 1,
+        "maxCount": 2,
+        "previewCount": 1,
+        "io": "OUT"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "A",
+        "I"
+      ]
+    }
+  },
+  "recipeMap": "emc_map"
+}

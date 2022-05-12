@@ -28,6 +28,8 @@ val nuggetPrefix = OrePrefix.getPrefix("nugget");
 <material:iron>.addFlags("generate_frame");
 <material:wrought_iron>.addFlags("generate_frame");
 
+<material:silver>.addFlags("generate_spring");
+
 //Color Changing
 //<material:salt_water>.setMaterialRGB(0xFF1F5099);
 
@@ -509,6 +511,69 @@ var archaic_shard = MaterialBuilder(32073, "archaic_shard")
     .build();
 gemPrefix.setIgnored(<material:archaic_shard>);
 
+
+/////////////////////////////////////////////////////////
+/////////////       The Betweenlands      ///////////////
+/////////////////////////////////////////////////////////
+
+
+// Octine
+//Elements.add(800, 850, -1, null, "Octine", "Cr", false); // create a new element.
+var octine = MaterialBuilder(32080, "octine")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xed822f) // can also use colorAverage() if using components
+    .iconSet("shiny")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Octine")
+    .ore(1, 1, true) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+ingotPrefix.setIgnored(<material:octine>);
+
+// Syrmorite
+//Elements.add(800, 850, -1, null, "Syrmorite", "Cr", false); // create a new element.
+var syrmorite = MaterialBuilder(32081, "syrmorite")
+    .fluid("fluid", true) // fluid with block
+    .ingot() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x3d48db) // can also use colorAverage() if using components
+    .iconSet("dull")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Syrmorite")
+    .ore(1, 1, false) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+ingotPrefix.setIgnored(<material:syrmorite>);
+
+// Valonite
+//Elements.add(800, 850, -1, null, "Valonite", "Cr", false); // create a new element.
+var valonite = MaterialBuilder(32082, "valonite")
+    .fluid("fluid", true) // fluid with block
+    .gem() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0xbd9dbf) // can also use colorAverage() if using components
+    .iconSet("diamond")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Valonite")
+    .ore(1, 1, false) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+gemPrefix.setIgnored(<material:valonite>);
+
+
+// Scabyst
+//Elements.add(800, 850, -1, null, "Scabyst", "Cr", false); // create a new element.
+var scabyst = MaterialBuilder(32083, "scabyst")
+    .fluid("fluid", true) // fluid with block
+    .gem() // (@Optional int harvestLevel, @Optional int burnTime)
+    .color(0x7ca394) // can also use colorAverage() if using components
+    .iconSet("diamond")
+    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+//    .element("Scabyst")
+    .ore(1, 1, true) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
+//    .addOreByproducts(<material:gold>)
+    .build();
+gemPrefix.setIgnored(<material:scabyst>);
+
 /////////////////////////////////////////////////////////
 ////////////////////       AE 2      ////////////////////
 /////////////////////////////////////////////////////////
@@ -581,17 +646,16 @@ var emc_minor = MaterialBuilder(32200, "emc_minor") // name
 //Sky Stone
 val oreSkyStone as OrePrefix = OrePrefix.registerOrePrefix("oreSkyStone", 1);
 oreSkyStone.addSecondaryMaterial(<material:sky_stone>);
-
 StoneType.create(16,"sky_stone","oreSkyStone",<material:sky_stone>,"appliedenergistics2:sky_stone_block", null, true);
 
 //Aurorian Stone
-StoneType.create(17,"stone_aurorian","ore",<material:stone>,"theaurorian:aurorianstone", null, true);
+StoneType.create(17,"stone_aurorian","oreAurorianStone",<material:stone>,"theaurorian:aurorianstone", null, true);
 
 //Atum Stone
-StoneType.create(18,"limestone_atum","ore",<material:stone>,"atum:limestone:contains_scarab=false", null, true);
+StoneType.create(18,"betweenstone","oreBetweenStone",<material:stone>,"thebetweenlands:betweenstone", null, true);
 
 //Midnight Stone
-StoneType.create(19,"nightstone","ore",<material:stone>,"midnight:nightstone", null, true);
+StoneType.create(19,"nightstone","oreNightStone",<material:stone>,"midnight:nightstone", null, true);
 
 /*
 // Aurorian Stone

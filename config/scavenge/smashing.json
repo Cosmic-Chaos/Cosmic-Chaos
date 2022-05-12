@@ -1,0 +1,264 @@
+{
+	"block_pools":
+	[
+		{
+			"name": "internals_t1",
+			"type": {
+				"type": "block_list",
+				"blocks": [
+					{
+						"name": "chisel:technicalnew"
+					},
+					{
+						"name": "chisel:technical"
+					},
+					{
+						"name": "chisel:laboratory"
+					},
+					{
+						"name": "chisel:factory"
+					}
+				]
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "require_sneak",
+					"sneak": true
+				},
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.1,
+					"pitch": 1.2,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:internals_t1"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "consume_item",
+					"amount": 1,
+					"chance": 90.0
+				}
+			],
+			"drops": [
+				{
+					"name": "minecraft:redstone",
+					"amount": 1,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 2
+						}
+					]
+				},
+				{
+					"name": "gregtech:meta_dust_small",
+					"meta": 271,
+					"amount": 1,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 0,
+							"maxValue": 2
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "hull_t1",
+			"type": {
+				"type": "block_list",
+				"blocks": [
+					{
+						"name": "chisel:technicalnew"
+					},
+					{
+						"name": "chisel:technical"
+					},
+					{
+						"name": "chisel:laboratory"
+					},
+					{
+						"name": "chisel:factory"
+					}
+				]
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "require_sneak",
+					"sneak": true
+				},
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.1,
+					"pitch": 1.2,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:hull_plate_t1"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "consume_item",
+					"amount": 1,
+					"chance": 90.0
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:broken_hull_plate_t1",
+					"amount": 1,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 0,
+							"maxValue": 3
+						}
+					]
+				},
+				{
+					"name": "contenttweaker:broken_hull_plate_t3",
+					"amount": 1,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 0,
+							"maxValue": 2
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "hull_t2",
+			"type": {
+				"type": "block_list",
+				"blocks": [
+					{
+						"name": "chisel:technicalnew"
+					},
+					{
+						"name": "chisel:technical"
+					},
+					{
+						"name": "chisel:laboratory"
+					},
+					{
+						"name": "chisel:factory"
+					}
+				]
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "require_sneak",
+					"sneak": true
+				},
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.1,
+					"pitch": 1.2,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:hull_plate_t2"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "consume_item",
+					"amount": 1,
+					"chance": 90.0
+				}
+			],
+			"drops": [
+				{
+					"name": "contenttweaker:broken_hull_plate_t2",
+					"amount": 1,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 4
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "dead_bush",
+			"type": {
+				"type": "block_list",
+				"blocks": [
+					{
+						"name": "chisel:technicalnew"
+					},
+					{
+						"name": "chisel:technical"
+					},
+					{
+						"name": "chisel:laboratory"
+					},
+					{
+						"name": "chisel:factory"
+					}
+				]
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "require_sneak",
+					"sneak": true
+				},
+				{
+					"type": "play_sound",
+					"name": "block.grass.break",
+					"volume": 0.1,
+					"pitch": 1.2,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "minecraft:deadbush"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "consume_item",
+					"amount": 1,
+					"chance": 90.0
+				}
+			],
+			"drops": [
+				{
+					"name": "minecraft:stick",
+					"amount": 1,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 0,
+							"maxValue": 3
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	title: "Jetpack!",
+	icon: "advancedrocketry:jetpack",
+	x: 14.5d,
+	y: 2.0d,
+	text: [
+		"You might want to look into getting bigger tanks for your suit!"
+	],
+	dependencies: [
+		"a9d56598",
+		"84696432"
+	],
+	tasks: [{
+		uid: "192a1b74",
+		type: "item",
+		items: [{
+			item: "advancedrocketry:suitworkstation"
+		}]
+	},
+	{
+		uid: "e20e4f32",
+		type: "item",
+		items: [{
+			item: "advancedrocketry:jetpack"
+		}]
+	}]
+}

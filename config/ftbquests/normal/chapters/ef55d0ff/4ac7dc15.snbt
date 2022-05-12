@@ -1,0 +1,20 @@
+{
+	title: "Mind the Gap!",
+	x: -5.0d,
+	y: 2.0d,
+	text: [
+		"Once you get out, look around inside boxes to find a Makeshift Crowbar, then shift right click with it to scavange various parts of the statioon."
+	],
+	dependencies: [
+		"46823ac9"
+	],
+	tasks: [{
+		uid: "4b995b4c",
+		type: "item",
+		items: [{
+			item: "contenttweaker:crowbar"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

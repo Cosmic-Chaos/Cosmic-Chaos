@@ -1,0 +1,6 @@
+
+{
+  "Name": "maelstrom_gauntlet",
+  "Registry ID": "mm:maelstrom_gauntlet",
+  "Class": "com.barribob.MaelstromMod.entity.entities.gauntlet.EntityMaelstromGauntlet"
+}

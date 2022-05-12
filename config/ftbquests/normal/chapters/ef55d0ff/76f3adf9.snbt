@@ -1,0 +1,25 @@
+{
+	x: -2.0d,
+	y: 2.0d,
+	shape: "gear",
+	text: [
+		"You'll need to scavange around the Station for hull plates to smelt iron."
+	],
+	dependencies: [
+		"4abc337a"
+	],
+	tasks: [{
+		uid: "244b263f",
+		type: "item",
+		items: [{
+			id: "gregtech:meta_tool",
+			tag: {
+				GT.ToolStats: {
+					Material: "iron"
+				}
+			},
+			Damage: 6s
+		}],
+		ignore_nbt: 1b
+	}]
+}

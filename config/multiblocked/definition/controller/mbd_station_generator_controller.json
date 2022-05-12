@@ -1,0 +1,118 @@
+{
+  "consumeCatalyst": false,
+  "location": "mbd:station_generator_controller",
+  "traits": {
+    "background": "multiblocked:textures/gui/item_bus_gui.png"
+  },
+  "allowRotate": true,
+  "showInJei": true,
+  "baseRenderer": {
+    "baseTexture": "multiblocked:blocks/gregtech_base",
+    "frontTexture": "multiblocked:blocks/gregtech_front",
+    "formedAsController": true,
+    "type": "gregtech"
+  },
+  "workingRenderer": {
+    "baseTexture": "multiblocked:blocks/gregtech_base",
+    "frontTexture": "multiblocked:blocks/overlay/overlay_front_active",
+    "type": "gregtech"
+  },
+  "isOpaqueCube": true,
+  "basePattern": {
+    "structureDir": [
+      "LEFT",
+      "UP",
+      "FRONT"
+    ],
+    "pattern": [
+      [
+        "BBB",
+        "AAA",
+        "AAA"
+      ],
+      [
+        "BBB",
+        "A-A",
+        "AAA"
+      ],
+      [
+        "BBB",
+        "A@A",
+        "AAA"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "contenttweaker:station_casing",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "mbd:station_generator_controller",
+        "type": "component"
+      },
+      "E": {
+        "blocks": [
+          {
+            "id": "mbd:ulv_energy_output"
+          }
+        ],
+        "type": "blocks",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "OUT"
+      },
+      "I": {
+        "blocks": [
+          {
+            "id": "mbd:fluid_hatch"
+          }
+        ],
+        "type": "blocks",
+        "minCount": 1,
+        "maxCount": 1,
+        "previewCount": 1,
+        "io": "IN"
+      },
+      "air": {
+        "type": "air"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "A",
+        "E",
+        "I"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  },
+  "recipeMap": "station_generator"
+}

@@ -1,0 +1,6 @@
+
+{
+  "Name": "azure_villager",
+  "Registry ID": "mm:azure_villager",
+  "Class": "com.barribob.MaelstromMod.entity.entities.EntityAzureVillager"
+}

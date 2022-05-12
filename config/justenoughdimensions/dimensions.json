@@ -1,0 +1,13 @@
+{
+  "dimensions": [
+    {
+      "dim": 33,
+      "worldinfo_onetime": {
+        "GameRules": {
+          "disableNetherPortalCreation": "true"
+        }
+      },
+      "jed": {}
+    }
+  ]
+}

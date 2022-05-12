@@ -1,0 +1,40 @@
+{
+	title: "Rubber Sheets",
+	x: 11.5d,
+	y: 2.5d,
+	text: [
+		"First step will be to make some liquid rubber, then solidify it into sheets"
+	],
+	dependencies: [
+		"046e57b6",
+		"9f5454b0"
+	],
+	tasks: [{
+		uid: "ae772f0e",
+		type: "item",
+		items: [{
+			item: "gregtech:machine 1 190"
+		}]
+	},
+	{
+		uid: "f8293317",
+		type: "item",
+		items: [{
+			item: "gregtech:machine 1 320"
+		}]
+	},
+	{
+		uid: "3daaaec0",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 32301"
+		}]
+	},
+	{
+		uid: "7f317510",
+		type: "item",
+		items: [{
+			item: "gregtech:meta_item_1 1 12152"
+		}]
+	}]
+}

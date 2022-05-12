@@ -1,0 +1,22 @@
+{
+	x: 1.0d,
+	y: 2.0d,
+	shape: "gear",
+	dependencies: [
+		"2b66af6c"
+	],
+	tasks: [{
+		uid: "7dd408f1",
+		type: "item",
+		items: [{
+			id: "gregtech:meta_tool",
+			tag: {
+				GT.ToolStats: {
+					Material: "iron"
+				}
+			},
+			Damage: 5s
+		}],
+		ignore_nbt: 1b
+	}]
+}

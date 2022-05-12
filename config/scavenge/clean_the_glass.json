@@ -1,0 +1,58 @@
+{
+	"block_pools":
+	[
+		{
+			"name": "clean_glass",
+			"type": {
+				"type": "block",
+				"name": "contenttweaker:vat_glass"
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "require_sneak",
+					"sneak": true
+				},
+				{
+					"type": "play_sound",
+					"name": "block.anvil.place",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "actuallyadditions:item_knife"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"name": "contenttweaker:crystal_green_glass"
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "fossil:bio_goo",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 0,
+							"maxValue": 2
+						}
+					]
+				}
+			]
+		}
+		
+	]
+}
