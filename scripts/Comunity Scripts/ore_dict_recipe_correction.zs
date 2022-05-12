@@ -79,6 +79,21 @@ var name_removals = [
     "lucraftcore:block_dwarf_star_alloy",
     "lucraftcore:ingot_dwarf_star_alloy",
     "lucraftcore:ingot_dwarf_star_alloy_alt",
+
+    "thebetweenlands:scabyst_from_block",
+    "thebetweenlands:scabyst_block",
+
+    "thebetweenlands:octine_block",
+    "thebetweenlands:octine_ingot",
+
+    "thebetweenlands:valonite_shard",
+    "thebetweenlands:valonite_block",
+    "thebetweenlands:valonite_splinter",
+    //"thebetweenlands:valonite_shard_from_splinters", // No gt recipe for this
+
+    "thebetweenlands:symorite_block",
+    "thebetweenlands:symorite_ingot",
+
 ] as string[];
 
 for item in name_removals {
