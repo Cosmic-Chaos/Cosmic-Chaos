@@ -1,15 +1,18 @@
 mbt.machine.bio_organic_fabricator.name=Bio-Organic Fabricator
-recipemap.bio_organic_fabricator.name=Bio-Organic Fabricator
+recipemap.bio_organic_fabricator.name=Bio-Organic Fabrication
 
 mbt.machine.crushing_tank.name=Station Recycler
-recipemap.crushing_tank.name=Station Recycler
+recipemap.crushing_tank.name=Station Recycling
 
 mbt.machine.trash_compactor.name=Trash Compactor
-recipemap.trash_compactor.name=Trash Compactor
+recipemap.trash_compactor.name=Trash Compaction
 
 mbt.machine.oxygen_collector.name=Life Support System
-recipemap.oxygen_collector.name=Life Support System
+recipemap.oxygen_collector.name=Life Support System Operation
 
 mbt.machine.station_generator.name=Backup Generator
-recipemap.station_generator.name=Backup Generator
+recipemap.station_generator.name=Backup Generation
+
+mbt.machine.ulv_vat.name=NASA Slow Cooker
+recipemap.ulv_vat.name=NASA Slow Cooking
 
