@@ -1,6 +1,8 @@
 import crafttweaker.block.IBlockState;
+import crafttweaker.block.IBlock;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.world.IBlockPos;
 import crafttweaker.world.IFacing;
 import crafttweaker.world.IWorld;
@@ -20,7 +22,6 @@ import mods.gregtech.recipe.functions.ICompleteRecipeFunction;
 import mods.gregtech.recipe.IRecipe;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.RecipeMap;
-import crafttweaker.oredict.IOreDictEntry;
 
 
 var loc = "mbt:crushing_tank";
@@ -106,25 +107,75 @@ val blocksToCheck =
 ]
  as IItemStack[];
 
-// check if any glass is cleam, if so, start.
+static baseCrystals as IBlockState[] = [
+	<blockstate:contenttweaker:crystal_cluster_blue_1>,
+	<blockstate:contenttweaker:crystal_cluster_red_1>,
+	<blockstate:contenttweaker:crystal_cluster_green_1>
+] as IBlockState[];
+
+static crystalMap as IBlockState[IBlockState] = {
+	//////////////////// BLUE ///////////////
+    <blockstate:contenttweaker:crystal_cluster_blue_1>:
+		<blockstate:contenttweaker:crystal_cluster_blue_2>,
+    <blockstate:contenttweaker:crystal_cluster_blue_2>:
+		<blockstate:contenttweaker:crystal_cluster_blue_3>,
+	<blockstate:contenttweaker:crystal_cluster_blue_3>:
+		<blockstate:contenttweaker:crystal_cluster_blue_4>,
+	<blockstate:contenttweaker:crystal_cluster_blue_4>:
+		<blockstate:contenttweaker:crystal_cluster_blue_5>,
+	<blockstate:contenttweaker:crystal_cluster_blue_5>:
+		<blockstate:contenttweaker:crystal_cluster_blue_6>,
+	<blockstate:contenttweaker:crystal_cluster_blue_6>:
+		<blockstate:contenttweaker:crystal_cluster_blue_7>,
+	<blockstate:contenttweaker:crystal_cluster_blue_7>:
+		<blockstate:actuallyadditions:block_crystal_cluster_lapis:facing=up>,
+    //////////////////// RED ///////////////
+    <blockstate:contenttweaker:crystal_cluster_red_1>:
+		<blockstate:contenttweaker:crystal_cluster_red_2>,
+    <blockstate:contenttweaker:crystal_cluster_red_2>:
+		<blockstate:contenttweaker:crystal_cluster_red_3>,
+    <blockstate:contenttweaker:crystal_cluster_red_3>:
+		<blockstate:contenttweaker:crystal_cluster_red_4>,
+    <blockstate:contenttweaker:crystal_cluster_red_4>:
+		<blockstate:contenttweaker:crystal_cluster_red_5>,
+    <blockstate:contenttweaker:crystal_cluster_red_5>:
+		<blockstate:contenttweaker:crystal_cluster_red_6>,
+	<blockstate:contenttweaker:crystal_cluster_red_6>:
+		<blockstate:contenttweaker:crystal_cluster_red_7>,
+	<blockstate:contenttweaker:crystal_cluster_red_7>:
+		<blockstate:actuallyadditions:block_crystal_cluster_redstone:facing=up>,
+    //////////////////// GREEN ///////////////
+    <blockstate:contenttweaker:crystal_cluster_green_1>:
+		<blockstate:contenttweaker:crystal_cluster_green_2>,
+	<blockstate:contenttweaker:crystal_cluster_green_2>:
+		<blockstate:contenttweaker:crystal_cluster_green_3>,
+	<blockstate:contenttweaker:crystal_cluster_green_3>:
+		<blockstate:contenttweaker:crystal_cluster_green_4>,
+	<blockstate:contenttweaker:crystal_cluster_green_4>:
+		<blockstate:contenttweaker:crystal_cluster_green_5>,
+	<blockstate:contenttweaker:crystal_cluster_green_5>:
+		<blockstate:contenttweaker:crystal_cluster_green_6>,
+	<blockstate:contenttweaker:crystal_cluster_green_6>:
+		<blockstate:contenttweaker:crystal_cluster_green_7>,
+	<blockstate:contenttweaker:crystal_cluster_green_7>:
+		<blockstate:actuallyadditions:block_crystal_cluster_emerald:facing=up>
+} as IBlockState[IBlockState];
+
+// check if the crystal can grow more, if so, start.
 crushing_tank.checkRecipeFunction = function(controller as IControllerTile, recipe as IRecipe, consumeIfSuccess as bool) as bool {
     val world as IWorld = controller.world;
-    for pos in getCenter(controller.pos, controller.frontFacing) 
-    {
-        for block in blocksToCheck
-        {
-            if (world.isAirBlock(pos)) {
-                return true;
-            }
-            else if (world.getPickedBlock(pos, null, null) has block) {
+    for pos in getCenter(controller.pos, controller.frontFacing) {
+        if (world.isAirBlock(pos)) {
+            return true;
+        } else {
+			val block as IBlockState = world.getBlockState(pos);
+			if (crystalMap has block) {
                 return true;
             }
         }
     }
-return false;
+	return false;
 } as ICheckRecipeFunction;
-
-
 
 // 1/4 chance to progress crystal growth
 crushing_tank.completeRecipeFunction = function (recipeLogic as IRecipeLogic) as bool {
@@ -134,92 +185,18 @@ crushing_tank.completeRecipeFunction = function (recipeLogic as IRecipeLogic) as
     for pos in getCenter(controller.pos, controller.frontFacing) {
         if (world.getRandom().nextInt(4) == 0) {
             if (world.isAirBlock(pos)) {
-                if (world.getRandom().nextInt(3) == 0) {
-                        world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_1>, pos);
-                    }
-                else if (world.getRandom().nextInt(3) == 1) {
-                        world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_1>, pos);
-                    }
-                else {
-                        world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_1>, pos);
-                    }
-                }
-        //////////////////// BLUE ///////////////
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_1>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_2>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_2>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_3>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_3>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_4>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_4>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_5>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_5>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_6>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_6>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_blue_7>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_blue_7>) {
-                    world.setBlockState(<blockstate:actuallyadditions:block_crystal_cluster_lapis:facing=up>, pos);
-                }
-
-        //////////////////// RED ///////////////
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_1>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_2>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_2>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_3>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_3>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_4>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_4>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_5>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_5>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_6>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_6>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_red_7>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_red_7>) {
-                    world.setBlockState(<blockstate:actuallyadditions:block_crystal_cluster_redstone:facing=up>, pos);
-                }
-
-        //////////////////// GREEN ///////////////
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_1>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_2>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_2>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_3>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_3>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_4>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_4>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_5>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_5>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_6>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_6>) {
-                    world.setBlockState(<blockstate:contenttweaker:crystal_cluster_green_7>, pos);
-                }
-            else if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_cluster_green_7>) {
-                    world.setBlockState(<blockstate:actuallyadditions:block_crystal_cluster_emerald:facing=up>, pos);
-                }
-
+				val crystalType as int = world.getRandom().nextInt(baseCrystals.length);
+                world.setBlockState(baseCrystals[crystalType], pos);
+            } else {
+				val block as IBlockState = world.getBlockState(pos);
+				if (crystalMap has block) {
+					world.setBlockState(crystalMap[block], pos);
+				}
+			}
         }
     }
     return true;
 } as ICompleteRecipeFunction;
-
-
-
 
 # [Station Recycler] from [tile.contenttweaker.controller_broken_south.name][+5]
 craft.remake(<metaitem:mbt:crushing_tank>, ["pretty",

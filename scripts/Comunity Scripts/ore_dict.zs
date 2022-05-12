@@ -189,3 +189,35 @@ unify(<ore:itemSilicon>, 0);
 */
 //<enderio:item_material:26>.displayName = "Copper Dust";
 //<enderio:item_material:27>.displayName = "Tin Dust";
+
+// Remove redundant mushroom stew recipes
+recipes.removeByRecipeName("quark:mushroom_stew");
+recipes.removeByRecipeName("harvestcraft:minecraft_mushroomstew");
+
+val oreNameMap as IItemStack[][string] = {
+	"listAllmushroom": [		
+		<advancedrocketry:electricmushroom:0>,
+		<erebus:materials:48>,
+		<erebus:double_plant:5>,
+		<erebus:double_plant:6>,
+		<erebus:dark_capped_mushroom:0>,
+		<erebus:sarcastic_czech_mushroom:0>,
+		<erebus:grandmas_shoes_mushroom:0>,
+		<erebus:dutch_cap_mushroom:0>,
+		<erebus:kaizers_fingers_mushroom:0>,
+		<nuclearcraft:glowing_mushroom:0>,
+		<quark:glowshroom:0>,
+		<randomthings:glowingmushroom:0>,
+		<theaurorian:mushroomsmall:0>
+	]
+} as IItemStack[][string];
+
+for name, itemList in oreNameMap {
+	for item in itemList {
+		oreDict.get(name).add(item);
+	}
+}
+
+<ore:foodFlour>.add(<metaitem:dustWheat>);
+<ore:foodSalt>.add(<metaitem:dustWheat>);
+

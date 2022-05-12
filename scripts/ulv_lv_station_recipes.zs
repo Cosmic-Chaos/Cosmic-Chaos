@@ -287,7 +287,7 @@ craft.remake(<gregtech:machine:32102>, ["pretty",
 });
 
 # [ULV Electric Pump] from [Rubber Ring][+6]
-craft.remake(<metaitem:electric.pump.ulv>, ["pretty",
+craft.remake(<contenttweaker:electric_pump_ulv>, ["pretty",
   "* B l",
   "r R  ",
   "o   T"], {
