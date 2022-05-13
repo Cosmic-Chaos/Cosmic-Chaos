@@ -70,7 +70,7 @@ ulv_vat.hasMaintenanceMechanics = false;
 ulv_vat.hasMufflerMechanics = false;
 
 # ULV Vat Controller Recipe
-craft.remake(<metaitem:mbt:ulv_vat>, ["pretty",
+craft.make(<metaitem:mbt:ulv_vat>, ["pretty",
   "P r P",
   "G t G",
   "¤ ⌂ ¤"], {
@@ -459,3 +459,10 @@ for itemA, multA in cloudseedInputsA {
 		.duration(100).EUt(7).buildAndRegister();
 }
 */
+
+// Mud Bricks
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<ore:sand>*2, <ore:gravel>*2)
+	.fluidInputs(<liquid:water>*250)
+	.outputs(<metaitem:brick.adobe>)
+	.duration(100).EUt(7).buildAndRegister();
