@@ -88,7 +88,29 @@ val itemstoRemoveAndHide =
 <nuclearcraft:extractor>,
 <nuclearcraft:centrifuge>,
 
+<metaitem:steam_boiler_coal_bronze>, //Steam multiblocks are left for now
+<metaitem:steam_boiler_solar_bronze>,
+<metaitem:steam_boiler_lava_bronze>,
+<metaitem:steam_extractor_bronze>,
+<metaitem:steam_macerator_bronze>,
+<metaitem:steam_rock_breaker_bronze>,
+<metaitem:steam_compressor_bronze>,
+<metaitem:steam_hammer_bronze>,
+<metaitem:steam_furnace_bronze>,
+<metaitem:steam_alloy_smelter_bronze>,
 
+<metaitem:steam_boiler_coal_steel>,
+<metaitem:steam_boiler_solar_steel>,
+<metaitem:steam_boiler_lava_steel>,
+<metaitem:steam_extractor_steel>,
+<metaitem:steam_macerator_steel>,
+<metaitem:steam_rock_breaker_steel>,
+<metaitem:steam_compressor_steel>,
+<metaitem:steam_hammer_steel>,
+<metaitem:steam_furnace_steel>,
+<metaitem:steam_alloy_smelter_steel>,
+
+<metaitem:steam_miner>,
 ]
  as IItemStack[];
 
