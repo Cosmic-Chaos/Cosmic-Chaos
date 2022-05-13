@@ -462,7 +462,7 @@ for itemA, multA in cloudseedInputsA {
 
 // Mud Bricks
 ulv_vat.recipeMap.recipeBuilder()
-	.inputs(<ore:sand>*2, <ore:gravel>*2)
+	.inputs(<ore:gravel>*4)
 	.fluidInputs(<liquid:water>*250)
 	.outputs(<metaitem:brick.adobe>)
 	.duration(100).EUt(7).buildAndRegister();
