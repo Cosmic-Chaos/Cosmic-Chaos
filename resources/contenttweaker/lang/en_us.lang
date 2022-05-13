@@ -128,6 +128,8 @@ item.contenttweaker.electric_pump_ulv.name=ULV Electric Pump
 item.contenttweaker.emitter_ulv.name=ULV Emitter
 item.contenttweaker.conveyor_module_ulv.name=ULV Conveyor
 
+item.contenttweaker.flexible_organic_panel.name=Flexible Organic Panel
+
 tile.contenttweaker.station_casing.name=Derelict Casing
 tile.contenttweaker.vat_glass.name=Bio-Covered Glass
 tile.contenttweaker.organic_overloader.name=Photosynthesis Accelerator
