@@ -42,7 +42,8 @@
 			],
 			"drops": [
 				{
-					"name": "contenttweaker:hull_plate_t1",
+					"name": "cosmic_core:cc_meta_item",
+					"meta": 100,
 					"properties": [
 						{
 							"type": "set_random_size",
@@ -95,7 +96,8 @@
 			],
 			"drops": [
 				{
-					"name": "contenttweaker:hull_plate_t2",
+					"name": "cosmic_core:cc_meta_item",
+					"meta": 101,
 					"properties": [
 						{
 							"type": "set_random_size",
@@ -148,7 +150,8 @@
 			],
 			"drops": [
 				{
-					"name": "contenttweaker:hull_plate_t3",
+					"name": "cosmic_core:cc_meta_item",
+					"meta": 102,
 					"properties": [
 						{
 							"type": "set_random_size",
@@ -312,8 +315,8 @@
 			],
 			"drops": [
 				{
-					"name": "contenttweaker:hull_plate_t4",
-					"meta": "0",
+					"name": "cosmic_core:cc_meta_item",
+					"meta": 103,
 					"properties": [
 						{
 							"type": "set_random_size",

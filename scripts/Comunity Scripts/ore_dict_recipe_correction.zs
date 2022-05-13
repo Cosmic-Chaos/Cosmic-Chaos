@@ -94,6 +94,9 @@ var name_removals = [
     "thebetweenlands:symorite_block",
     "thebetweenlands:symorite_ingot",
 
+    "gregtech:block_compress_sulfur",
+    "gregtech:block_decompress_sulfur",
+
 ] as string[];
 
 for item in name_removals {

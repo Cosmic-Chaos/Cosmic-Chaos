@@ -106,7 +106,8 @@
 				},
 				{
 					"type": "require_item",
-					"name": "contenttweaker:hull_plate_t1"
+					"name": "cosmic_core:cc_meta_item",
+					"meta": "100"
 				},
 				{
 					"type": "swing_hand"
@@ -119,7 +120,8 @@
 			],
 			"drops": [
 				{
-					"name": "contenttweaker:broken_hull_plate_t1",
+					"name": "cosmic_core:cc_meta_item",
+					"meta": "105",
 					"amount": 1,
 					"properties": [
 						{
@@ -130,7 +132,8 @@
 					]
 				},
 				{
-					"name": "contenttweaker:broken_hull_plate_t3",
+					"name": "cosmic_core:cc_meta_item",
+					"meta": "107",
 					"amount": 1,
 					"properties": [
 						{
@@ -176,7 +179,8 @@
 				},
 				{
 					"type": "require_item",
-					"name": "contenttweaker:hull_plate_t2"
+					"name": "cosmic_core:cc_meta_item",
+					"meta": "101"
 				},
 				{
 					"type": "swing_hand"
@@ -189,7 +193,8 @@
 			],
 			"drops": [
 				{
-					"name": "contenttweaker:broken_hull_plate_t2",
+					"name": "cosmic_core:cc_meta_item",
+					"meta": "106",
 					"amount": 1,
 					"properties": [
 						{

@@ -18,14 +18,16 @@ function itemColor(intColor as int) as IItemColorSupplier {
   };
 }
 
-
+/*
 VanillaFactory.createItem("hull_plate_t1").register();
-VanillaFactory.createItem("broken_hull_plate_t1").register();
 VanillaFactory.createItem("hull_plate_t2").register();
-VanillaFactory.createItem("broken_hull_plate_t2").register();
 VanillaFactory.createItem("hull_plate_t3").register();
-VanillaFactory.createItem("broken_hull_plate_t3").register();
 VanillaFactory.createItem("hull_plate_t4").register();
+
+VanillaFactory.createItem("broken_hull_plate_t1").register();
+VanillaFactory.createItem("broken_hull_plate_t2").register();
+VanillaFactory.createItem("broken_hull_plate_t3").register();
+*/
 
 VanillaFactory.createItem("scrap_rubber").register();
 /*
@@ -49,7 +51,7 @@ VanillaFactory.createItem("internals_t3").register();
 
 VanillaFactory.createItem("internals_t4").register();
 
-VanillaFactory.createItem("purpleprint").register();
+VanillaFactory.createItem("stator").register();
 
 
 

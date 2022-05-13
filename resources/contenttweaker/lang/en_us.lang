@@ -119,7 +119,7 @@ item.contenttweaker.station_component_2.name=Plating Component
 item.contenttweaker.station_component_3.name=Mixed Primitive Plating
 item.contenttweaker.station_component_4.name=Primitive Processor
 
-item.contenttweaker.purpleprint.name=§5Multiblock Visualizer
+item.contenttweaker.stator.name=Primitive Stator
 
 
 item.contenttweaker.electric_motor_ulv.name=ULV Electric Motor

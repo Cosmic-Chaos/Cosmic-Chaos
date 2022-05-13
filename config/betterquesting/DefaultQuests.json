@@ -269,9 +269,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 100,
               "OreDict:8": "",
-              "id:8": "contenttweaker:hull_plate_t1"
+              "id:8": "cosmic_core:cc_meta_item"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -320,9 +320,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 101,
               "OreDict:8": "",
-              "id:8": "contenttweaker:hull_plate_t2"
+              "id:8": "cosmic_core:cc_meta_item"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -436,7 +436,11 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:hull_plate_t3"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "contenttweaker:hull_plate_t3",
+                "orig_meta:3": 0
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -487,7 +491,11 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:hull_plate_t4"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "contenttweaker:hull_plate_t4",
+                "orig_meta:3": 0
+              }
             },
             "1:10": {
               "Count:3": 1,
@@ -1303,7 +1311,11 @@
       }
     },
     "25:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        109,
+        111,
+        107
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -1311,18 +1323,14 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 621,
             "OreDict:8": "",
-            "id:8": "betterquesting:placeholder",
-            "tag:10": {
-              "orig_id:8": "contenttweaker:dust_crystal_green",
-              "orig_meta:3": 0
-            }
+            "id:8": "gregtech:meta_item_1"
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Crystal Dust",
+          "name:8": "First Circuits!",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -1330,7 +1338,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 25,
@@ -1346,13 +1354,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 621,
               "OreDict:8": "",
-              "id:8": "betterquesting:placeholder",
-              "tag:10": {
-                "orig_id:8": "contenttweaker:dust_crystal_green",
-                "orig_meta:3": 0
-              }
+              "id:8": "gregtech:meta_item_1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5056,7 +5060,7 @@
     },
     "96:10": {
       "preRequisites:11": [
-        8
+        101
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5330,22 +5334,25 @@
       }
     },
     "101:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        25,
+        110
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Probably won\u0027t be food safe when you\u0027re done with it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 32005,
             "OreDict:8": "",
-            "id:8": "advancedrocketry:suitworkstation"
+            "id:8": "gregtech:machine"
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Suit Work Station",
+          "name:8": "The NASA Slow Cooker",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -5353,7 +5360,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 101,
@@ -5369,9 +5376,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 32005,
               "OreDict:8": "",
-              "id:8": "advancedrocketry:suitworkstation"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5660,22 +5667,25 @@
       }
     },
     "107:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        104,
+        97
+      ],
       "properties:10": {
         "betterquesting:10": {
-          "autoclaim:1": 0,
+          "autoclaim:1": 1,
           "desc:8": "No Description",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32150,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_ingot"
+            "id:8": "minecraft:nether_star"
           },
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
-          "name:8": "Green Crystal Alloy",
+          "name:8": "Power! OR Hand Crank Power",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -5683,36 +5693,12 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 107,
       "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 32150,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_dust"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 32150,
-              "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
+      "tasks:9": {}
     },
     "108:10": {
       "preRequisites:11": [
@@ -5843,7 +5829,7 @@
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 32010,
+              "Damage:2": 32003,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -5902,11 +5888,11 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "sonarcore:clearstableglass"
+              "id:8": "contenttweaker:crystal_green_glass"
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 32008,
+              "Damage:2": 32002,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -5958,7 +5944,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32006,
+              "Damage:2": 32000,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -6289,7 +6275,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Can be charged in a §dULV Battery Buffer§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6605,7 +6591,9 @@
       }
     },
     "123:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        25
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -6734,6 +6722,69 @@
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "advancedrocketry:planetidchip"
+            },
+            "5:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "advancedrocketry:bucketrocketfuel",
+              "tag:10": {
+                "Fluid:10": {
+                  "Amount:3": 1000,
+                  "FluidName:8": "rocketfuel"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "125:10": {
+      "preRequisites:11": [
+        25
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 32004,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "New Quest",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 125,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 32004,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6877,8 +6928,8 @@
           "id:3": 25,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 312,
-          "y:3": -288
+          "x:3": 528,
+          "y:3": -48
         },
         "17:10": {
           "id:3": 34,
@@ -6912,8 +6963,8 @@
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 408,
-          "y:3": -180
+          "x:3": 564,
+          "y:3": -168
         },
         "22:10": {
           "id:3": 95,
@@ -6926,22 +6977,22 @@
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 444,
-          "y:3": 0
+          "x:3": 588,
+          "y:3": -120
         },
         "24:10": {
           "id:3": 97,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
-          "y:3": -72
+          "y:3": -84
         },
         "25:10": {
           "id:3": 98,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
-          "y:3": -36
+          "y:3": -24
         },
         "26:10": {
           "id:3": 99,
@@ -6954,15 +7005,15 @@
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 432,
+          "x:3": 444,
           "y:3": -96
         },
         "28:10": {
           "id:3": 101,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 600,
-          "y:3": -108
+          "x:3": 552,
+          "y:3": -96
         },
         "29:10": {
           "id:3": 102,
@@ -6976,7 +7027,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
-          "y:3": -36
+          "y:3": -12
         },
         "31:10": {
           "id:3": 105,
@@ -6996,8 +7047,8 @@
           "id:3": 107,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 348,
-          "y:3": -288
+          "x:3": 504,
+          "y:3": -48
         },
         "34:10": {
           "id:3": 108,
@@ -7011,20 +7062,20 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
-          "y:3": -108
+          "y:3": -48
         },
         "36:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 372,
-          "y:3": -180
+          "x:3": 516,
+          "y:3": -120
         },
         "37:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
+          "x:3": 480,
           "y:3": -120
         },
         "38:10": {
@@ -7046,7 +7097,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
-          "y:3": 36
+          "y:3": 48
         },
         "41:10": {
           "id:3": 115,
@@ -7066,15 +7117,15 @@
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 360,
-          "y:3": 12
+          "x:3": 372,
+          "y:3": 36
         },
         "44:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 324,
-          "y:3": 12
+          "x:3": 312,
+          "y:3": 24
         },
         "45:10": {
           "id:3": 119,
@@ -7108,15 +7159,22 @@
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 684,
-          "y:3": -60
+          "x:3": 576,
+          "y:3": -48
         },
         "50:10": {
           "id:3": 124,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 756,
-          "y:3": -60
+          "x:3": 624,
+          "y:3": -48
+        },
+        "51:10": {
+          "id:3": 125,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 552,
+          "y:3": 0
         }
       }
     },

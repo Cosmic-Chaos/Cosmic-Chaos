@@ -26,7 +26,7 @@ Carving.removeVariation("laboratory", <chisel:laboratory:5>);
 Carving.removeVariation("laboratory", <chisel:laboratory:15>);
 
 //For Walking
-recipes.addShaped(<chisel:laboratory:8> * 4, [[null, <contenttweaker:hull_plate_t1>, null],[<contenttweaker:hull_plate_t3>, <contenttweaker:internals_t1>, <contenttweaker:hull_plate_t3>], [null, <contenttweaker:hull_plate_t1>, null]]);
+recipes.addShaped(<chisel:laboratory:8> * 8, [[null, <metaitem:hull.plate.0>, null],[<metaitem:hull.plate.2>, <contenttweaker:internals_t1>, <metaitem:hull.plate.2>], [null, <metaitem:hull.plate.0>, null]]);
 Carving.removeVariation("laboratory", <chisel:laboratory:8>);
 
 //No Fans

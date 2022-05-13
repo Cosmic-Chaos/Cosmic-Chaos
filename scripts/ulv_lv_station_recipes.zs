@@ -151,12 +151,12 @@ recipes.addShaped(<metaitem:workbench>, [
 
 # [Plating Component]
 recipes.addShapeless(<contenttweaker:station_component_1>, 
-	[<ore:gtceHardHammers>,<contenttweaker:hull_plate_t2>,<contenttweaker:hull_plate_t2>,<contenttweaker:hull_plate_t1>]
+	[<ore:gtceHardHammers>,<metaitem:hull.plate.1>,<metaitem:hull.plate.1>,<metaitem:hull.plate.0>]
 );
 
 # [Plating Component]
 recipes.addShapeless(<contenttweaker:station_component_2>, 
-	[<ore:gtceHardHammers>,<contenttweaker:hull_plate_t1>,<contenttweaker:hull_plate_t1>,<contenttweaker:hull_plate_t2>]
+	[<ore:gtceHardHammers>,<metaitem:hull.plate.0>,<metaitem:hull.plate.0>,<metaitem:hull.plate.1>]
 );
 
 # [Primitive Mixed Plating]
@@ -411,9 +411,9 @@ craft.remake(<mbd:gp_eu>, ["pretty",
   "U": <metaitem:circuit.vacuum_tube>,                 # Vacuum Tube
   "M": <extrautils2:passivegenerator:7>, # Manual Mill
   "S": <ore:screwSilver>,                # Silver Screw
-  "L": <gregtech:machine:985>,           # ULV Machine Hull
+  "L": <contenttweaker:stator>,           # Stator
   "¤": <ore:gearCrudeSteel>,             # Crude Steel Gear
-  "i": <ore:springSilver>,               # Silver Spring
+  "i": <gregtech:machine:985>,               # ULV Machine Hull
 });
 
 
@@ -510,7 +510,7 @@ craft.remake(<advancedrocketry:misc>, ["pretty",
   "▲": <ore:dustGlowstone>,                        # Glowstone Dust
   "G": <ore:paneGlassColorless>, # Glass Pane
 });
-
+/*
 # [Low Pressure Tank] from [Neutronium Screwdriver][+3]
 craft.remake(<advancedrocketry:pressuretank>, ["pretty",
   "I W I",
@@ -521,7 +521,7 @@ craft.remake(<advancedrocketry:pressuretank>, ["pretty",
   "o": <ore:gtceScrewdrivers>, # Neutronium Screwdriver
   "T": <ore:gtceHardHammers>, # Neutronium Hammer
 });
-
+*/
 # [Planet Id Chip] from [Circuit Board][+5]
 craft.remake(<advancedrocketry:planetidchip>, ["pretty",
   "R U R",
@@ -542,9 +542,6 @@ val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:f
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);
 
 
-//Crystal Glass
-furnace.addRecipe(<contenttweaker:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);
-
 
 /*
 //Diamonds to other gems for blast furnace
@@ -561,15 +558,17 @@ recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeS
 
 // GC Glass Dust
 recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:dustGlass>,<metaitem:dustGlass>,<metaitem:dustGreenCrystal>]);
+//Crystal Glass
+furnace.addRecipe(<contenttweaker:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);
 
 //Tin Alloy
 recipes.addShapeless(<metaitem:dustTinAlloy>*2, [<ore:dustIron>,<ore:dustTin>]);
 
 //Cooking Ingots
-furnace.addRecipe(<minecraft:iron_ingot>, <contenttweaker:broken_hull_plate_t1>, 0.0);
-furnace.addRecipe(<metaitem:ingotCopper>, <contenttweaker:broken_hull_plate_t2>, 0.0);
-furnace.addRecipe(<metaitem:ingotTin>, <contenttweaker:broken_hull_plate_t3>, 0.0);
-furnace.addRecipe(<metaitem:ingotSilver>, <contenttweaker:hull_plate_t4>, 0.0);
+furnace.addRecipe(<minecraft:iron_ingot>, <metaitem:hull.plate.broken.0>, 0.0);
+furnace.addRecipe(<metaitem:ingotCopper>, <metaitem:hull.plate.broken.1>, 0.0);
+furnace.addRecipe(<metaitem:ingotTin>, <metaitem:hull.plate.broken.2>, 0.0);
+furnace.addRecipe(<metaitem:ingotSilver>, <metaitem:hull.plate.3>, 0.0);
 
 //MB Fluid Hatch
 recipes.addShapeless(<mbd:fluid_hatch>, [<metaitem:fluid_hatch.import.ulv>]);

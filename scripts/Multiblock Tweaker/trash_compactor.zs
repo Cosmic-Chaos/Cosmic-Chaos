@@ -67,7 +67,7 @@ craft.remake(<metaitem:mbt:trash_compactor>, ["pretty",
   "U t U",
   "* ⌂ *"], {
   "I": <ore:springIron>,                        # Iron Spring
-  "L": <ore:circuitLv>,                         # Electronic Circuit
+  "L": <metaitem:circuit.vacuum_tube>,                         # Electronic Circuit
   "U": <metaitem:electric.piston.ulv>,    # ULV Electric Piston
   "t": <contenttweaker:controller_broken_west>, # tile.contenttweaker.controller_broken_west.name
   "*": <ore:cableGtDoubleGreenCrystalAlloy>,    # 2x Green Crystal Alloy Cable

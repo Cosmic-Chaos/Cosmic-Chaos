@@ -30,15 +30,15 @@ recipes.addShaped(<calculator:calculator>, [
 ]);
 
 recipes.addShaped(<calculator:calculatorscreen>, [
-	[<metaitem:plateRedAlloy>, <metaitem:plateRedAlloy>, <metaitem:plateRedAlloy>],
+	[<metaitem:plateCupronickel>, <metaitem:plateCupronickel>, <metaitem:plateCupronickel>],
 	[<ore:paneGlassColorless>, <ore:paneGlassColorless>, <ore:paneGlassColorless>], 
-	[<metaitem:plateRedAlloy>, <metaitem:plateRedAlloy>, <metaitem:plateRedAlloy>]
+	[<metaitem:plateCupronickel>, <metaitem:plateCupronickel>, <metaitem:plateCupronickel>]
 ]);
 
-recipes.addShaped(<calculator:calculatorassembly> * 4, [
-	[<ore:foilZinc>, <quark:iron_button>, <ore:foilZinc>],
-	[<quark:iron_button>, <metaitem:plateRedAlloy>, <quark:iron_button>], 
-	[<ore:foilZinc>, <quark:iron_button>, <ore:foilZinc>]
+recipes.addShaped(<calculator:calculatorassembly>, [
+	[<metaitem:foilBrass>, <quark:iron_button>, <metaitem:foilBrass>],
+	[<quark:iron_button>, <metaitem:plateCupronickel>, <quark:iron_button>], 
+	[<metaitem:foilBrass>, <quark:iron_button>, <metaitem:foilBrass>]
 ]);
 
 

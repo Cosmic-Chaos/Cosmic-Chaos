@@ -96,7 +96,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:wireGtDoubleGreenCrystalAlloy>*4, # 2x Green Crystal Alloy Wire
 		<ore:stickIronMagnetic>*2,             # Magnetic Iron Rod
-		<contenttweaker:hull_plate_t4>,       # Fancy Hull Plate
+		<metaitem:hull.plate.3>,       # Fancy Hull Plate
 		<gregtech:machine:986>,               # LV Machine Hull
 		<ore:cableGtDoubleTin>               # 2x Tin Cable
 	)
@@ -108,10 +108,10 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<cosmic_core:cc_meta_item:3>*4,   # ULV Electric Piston
 		<ore:circuitLv>*2,                # Electronic Circuit
-		<contenttweaker:hull_plate_t4>, # Fancy Hull Plate
+		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
 		<ore:cableGtDoubleTin>,         # 2x Tin Cable
-		<contenttweaker:hull_plate_t1> # Heavy Hull Plate
+		<metaitem:hull.plate.0> # Heavy Hull Plate
 	)
 	.outputs(<gregtech:machine:230>)
 .duration(600).EUt(14).buildAndRegister();
@@ -121,7 +121,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<cosmic_core:cc_meta_item>*4,     # ULV Conveyor Module
 		<ore:circuitLv>*2,                # Electronic Circuit
-		<contenttweaker:hull_plate_t4>, # Fancy Hull Plate
+		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
 		<ore:cableGtDoubleTin>         # 2x Tin Cable
 	)
@@ -133,9 +133,9 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:circuitLv>*4,                # Electronic Circuit
 		<cosmic_core:cc_meta_item:2>*3,   # ULV Electric Motor
-		<contenttweaker:hull_plate_t4>, # Fancy Hull Plate
+		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
-		<contenttweaker:hull_plate_t2> # Light Hull Plate
+		<metaitem:hull.plate.1> # Light Hull Plate
 	)
 	.outputs(<gregtech:machine:185>)
 .duration(600).EUt(14).buildAndRegister();
@@ -145,7 +145,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:circuitLv>*3,                # Electronic Circuit
 		<cosmic_core:cc_meta_item:3>*2,   # ULV Electric Piston
-		<contenttweaker:hull_plate_t4>, # Fancy Hull Plate
+		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
 		<ore:cableGtQuadrupleTin>,      # 4x Tin Cable
 		<ore:gemDiamond>,               # Diamond
@@ -159,7 +159,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:circuitLv>*4,                    # Electronic Circuit
 		<ore:wireGtOctalGreenCrystalAlloy>*2, # 8x Green Crystal Alloy Wire
-		<contenttweaker:hull_plate_t4>,     # Fancy Hull Plate
+		<metaitem:hull.plate.3>,     # Fancy Hull Plate
 		<gregtech:machine:986>*2,             # LV Machine Hull
 		<ore:cableGtQuadrupleTin>          # 4x Tin Cable
 	)
@@ -171,7 +171,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:circuitLv>*3,                # Electronic Circuit
 		<cosmic_core:cc_meta_item:3>*2,   # ULV Electric Piston
-		<contenttweaker:hull_plate_t4>, # Fancy Hull Plate
+		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
 		<ore:cableGtQuadrupleTin>,      # 4x Tin Cable
 		<ore:gemDiamond>,               # Diamond
