@@ -160,15 +160,17 @@ bio_organic_fabricator.completeRecipeFunction = function (recipeLogic as IRecipe
     return true;
 } as ICompleteRecipeFunction;
 
-// Controller Recipe
-recipes.addShaped(
-    <metaitem:mbt:bio_organic_fabricator>,
-    [
-        [<gregtech:fluid_pipe_normal:1617>,         <gregtech:metal_casing:1>,         <gregtech:fluid_pipe_normal:1617>],
-        [<minecraft:glass>, <gregtech:metal_casing:1>,  <minecraft:glass>],
-        [<gregtech:fluid_pipe_normal:1617>,         <gregtech:metal_casing:1>,         <gregtech:fluid_pipe_normal:1617>]
-    ]
-);
+# [Bio-Organic Fabricator] from [ULV Machine Casing][+4]
+craft.make(<metaitem:mbt:bio_organic_fabricator>, ["pretty",
+  "§ A §",
+  "M ⌂ M",
+  "L A L"], {
+  "§": <contenttweaker:internals_t2>,    # Complex Internals
+  "A": <gregtechfoodoption:gtfo_casing>, # Adobe Bricks
+  "M": <minecraft:red_mushroom_block>,   # Mushroom
+  "⌂": <gregtech:machine_casing>,        # ULV Machine Casing
+  "L": <ore:circuitLv>,                  # Electronic Circuit
+});
 
 // Recipes	
 
@@ -199,3 +201,13 @@ bio_organic_fabricator.recipeMap.recipeBuilder()
 	.chancedOutput(<minecraft:sapling>, 7500, 0)
 	.fluidOutputs(<liquid:sludge> * 1000)
 .buildAndRegister();
+
+bio_organic_fabricator.recipeMap.recipeBuilder()
+	.notConsumable(<quark:root>)
+	.fluidInputs(<liquid:nutrient_distillation> * 2000)
+	.chancedOutput(<quark:root>, 2500, 500)
+	.chancedOutput(<quark:root_flower:0>, 900, 300)
+	.chancedOutput(<quark:root_flower:1>, 900, 300)
+	.chancedOutput(<quark:root_flower:2>, 900, 300)
+	.fluidOutputs(<liquid:sludge> * 1000)
+.duration(240).EUt(3).buildAndRegister();

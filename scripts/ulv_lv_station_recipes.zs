@@ -658,5 +658,43 @@ craft.remake(<advancedrocketry:smallairlockdoor>, ["pretty",
   "□": <ore:plateIron>, # Iron Plate
 });
 
+# [Basic Alloy Smelter] from [LV Machine Hull][+3]
+recipes.removeByRecipeName("gregtech:gregtech.machine.alloy_smelter.lv");
+craft.make(<gregtech:machine:80>, ["pretty",
+  "L G L",
+  "G V G",
+  "t G t"], {
+  "L": <ore:circuitLv>,             # Electronic Circuit
+  "G": <ore:wireGtQuadrupleNickel>, # 4x Nickel Wire
+  "V": <gregtech:machine:986>,      # LV Machine Hull
+  "t": <ore:cableGtSingleTin>,      # 1x Tin Cable
+});
+
+# [Basic Polarizer] from [LV Machine Hull][+3]
+recipes.removeByRecipeName("gregtech:gregtech.machine.polarizer.lv");
+craft.make(<gregtech:machine:545>, ["pretty",
+  "t G t",
+  "C V C",
+  "t G t"], {
+  "G": <ore:stickSteel>,             # Steel Rod
+  "C": <ore:cableGtSingleTin>, # 1x Tin Cable
+  "V": <gregtech:machine:986>,      # LV Machine Hull
+  "t": <ore:wireGtDoubleTin>,      # 2x Tin Wire
+});
+
+# [Spores Recreator] from [ULV Machine Casing][+6]
+recipes.removeByRecipeName("industrialforegoing:spores_recreator");
+craft.make(<industrialforegoing:spores_recreator>, ["pretty",
+  "§ l §",
+  "n ⌂ n",
+  "□ ¤ □"], {
+  "§": <contenttweaker:internals_t2>, # Complex Internals
+  "l": <ore:listAllwater>,            # Water Bucket
+  "n": <ore:listAllmushroom>, # Mushroom
+  "⌂": <gregtech:machine_casing:0>,     # ULV Machine Casing
+  "□": <ore:plateDoubleTinAlloy>,     # Double Tin Alloy Plate
+  "¤": <ore:gearIron>,                # Iron Gear
+});
+
 ##########################################################################################
 print("==================== end of ulv_lv_station_recipes.zs ====================");
