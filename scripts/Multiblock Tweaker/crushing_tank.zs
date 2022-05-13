@@ -199,7 +199,7 @@ crushing_tank.completeRecipeFunction = function (recipeLogic as IRecipeLogic) as
 } as ICompleteRecipeFunction;
 
 # [Station Recycler] from [tile.contenttweaker.controller_broken_south.name][+5]
-craft.remake(<metaitem:mbt:crushing_tank>, ["pretty",
+craft.make(<metaitem:mbt:crushing_tank>, ["pretty",
   "P r P",
   "G t G",
   "¤ ⌂ ¤"], {

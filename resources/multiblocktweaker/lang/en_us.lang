@@ -16,3 +16,6 @@ recipemap.station_generator.name=Backup Generation
 mbt.machine.ulv_vat.name=NASA Slow Cooker
 recipemap.ulv_vat.name=NASA Slow Cooking
 
+mbt.machine.ulv_assembler.name=Careful Assembulator
+recipemap.ulv_assembler.name=Careful Assembly
+

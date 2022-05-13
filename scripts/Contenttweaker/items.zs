@@ -70,6 +70,8 @@ VanillaFactory.createItem("station_component_2").register();
 VanillaFactory.createItem("station_component_3").register();
 VanillaFactory.createItem("station_component_4").register();
 
+VanillaFactory.createItem("flexible_organic_panel").register();
+
 val crowbar = VanillaFactory.createItem("crowbar");
 crowbar.maxStackSize = 1;
 crowbar.rarity = "UNCOMMON";
