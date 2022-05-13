@@ -19,5 +19,20 @@ emc_fluid.flowingLocation = "contenttweaker:fluids/emc_fluid_1_base_flowing";
 emc_fluid.material = <blockmaterial:lava>;
 emc_fluid.register();
 
+var green_crystal_fluid = VanillaFactory.createFluid("green_crystal_fluid", Color.fromHex("34eb4c"));
+green_crystal_fluid.viscosity = 3000;
+green_crystal_fluid.material = <blockmaterial:lava>;
+green_crystal_fluid.register();
+
+var red_crystal_fluid = VanillaFactory.createFluid("red_crystal_fluid", Color.fromHex("db303c"));
+red_crystal_fluid.viscosity = 3000;
+red_crystal_fluid.material = <blockmaterial:lava>;
+red_crystal_fluid.register();
+
+var blue_crystal_fluid = VanillaFactory.createFluid("blue_crystal_fluid", Color.fromHex("2d2de3"));
+blue_crystal_fluid.viscosity = 3000;
+blue_crystal_fluid.material = <blockmaterial:lava>;
+blue_crystal_fluid.register();
+
 ##########################################################################################
 print("==================== end of fluids.zs ====================");

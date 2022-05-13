@@ -1313,7 +1313,11 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "contenttweaker:dust_crystal_green"
+            "id:8": "betterquesting:placeholder",
+            "tag:10": {
+              "orig_id:8": "contenttweaker:dust_crystal_green",
+              "orig_meta:3": 0
+            }
           },
           "ismain:1": 0,
           "issilent:1": 0,
@@ -1344,7 +1348,11 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:dust_crystal_green"
+              "id:8": "betterquesting:placeholder",
+              "tag:10": {
+                "orig_id:8": "contenttweaker:dust_crystal_green",
+                "orig_meta:3": 0
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5047,7 +5055,9 @@
       }
     },
     "96:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        8
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -5269,7 +5279,9 @@
       }
     },
     "100:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        7
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -5277,14 +5289,14 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 1,
             "OreDict:8": "",
-            "id:8": "advancedrocketry:jetpack"
+            "id:8": "hooked:hook"
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Jetpack",
+          "name:8": "Space Exploration!",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -5292,7 +5304,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 100,
@@ -5308,9 +5320,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 1,
               "OreDict:8": "",
-              "id:8": "advancedrocketry:jetpack"
+              "id:8": "hooked:hook"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6591,6 +6603,142 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "123:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "advancedrocketry:rocketbuilder"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rocket Assembling",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 123,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "advancedrocketry:rocketbuilder"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "advancedrocketry:structuretower"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "advancedrocketry:launchpad"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "124:10": {
+      "preRequisites:11": [
+        123
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 4,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "advancedrocketry:rocketmotor"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Building the Rocket",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 124,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 4,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "advancedrocketry:rocketmotor"
+            },
+            "1:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "advancedrocketry:fueltank"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "advancedrocketry:seat"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "advancedrocketry:guidancecomputer"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "advancedrocketry:planetidchip"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -6778,8 +6926,8 @@
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 324,
-          "y:3": 96
+          "x:3": 444,
+          "y:3": 0
         },
         "24:10": {
           "id:3": 97,
@@ -6806,15 +6954,15 @@
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 288,
-          "y:3": 96
+          "x:3": 432,
+          "y:3": -96
         },
         "28:10": {
           "id:3": 101,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 252,
-          "y:3": 96
+          "x:3": 600,
+          "y:3": -108
         },
         "29:10": {
           "id:3": 102,
@@ -6898,7 +7046,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 444,
-          "y:3": 0
+          "y:3": 36
         },
         "41:10": {
           "id:3": 115,
@@ -6955,6 +7103,20 @@
           "sizeY:3": 24,
           "x:3": 348,
           "y:3": -120
+        },
+        "49:10": {
+          "id:3": 123,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 684,
+          "y:3": -60
+        },
+        "50:10": {
+          "id:3": 124,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 756,
+          "y:3": -60
         }
       }
     },

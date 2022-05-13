@@ -359,8 +359,8 @@ crushing_tank.recipeMap.recipeBuilder()
     .duration(60)
     .EUt(6)
     .inputs(<actuallyadditions:item_crystal_shard:4>)
-    .outputs(<contenttweaker:dust_crystal_green>)
-	.chancedOutput(<contenttweaker:dust_crystal_green>, 5000, 1000)
+    .outputs(<metaitem:dustGreenCrystal>)
+	.chancedOutput(<metaitem:dustGreenCrystal>, 5000, 1000)
 .buildAndRegister();
 
 //Red Crystal
@@ -368,11 +368,21 @@ crushing_tank.recipeMap.recipeBuilder()
     .duration(60)
     .EUt(6)
     .inputs(<actuallyadditions:item_crystal_shard>)
-    .outputs(<contenttweaker:dust_crystal_red>)
-	.chancedOutput(<contenttweaker:dust_crystal_red>, 5000, 1000)
+    .outputs(<metaitem:dustRedCrystal>)
+	.chancedOutput(<metaitem:dustRedCrystal>, 5000, 1000)
+.buildAndRegister();
+
+//Blue Crystal
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(60)
+    .EUt(6)
+    .inputs(<actuallyadditions:item_crystal_shard:1>)
+    .outputs(<metaitem:dustBlueCrystal>)
+	.chancedOutput(<metaitem:dustBlueCrystal>, 5000, 1000)
 .buildAndRegister();
 
 
+// 1:1 I/O
 val ingotDustMap as IItemStack[IOreDictEntry] = {
 <ore:ingotCrudeSteel>:<metaitem:dustCrudeSteel>,
 <ore:ingotCopper>:<metaitem:dustCopper>,

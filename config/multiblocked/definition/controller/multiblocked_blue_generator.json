@@ -1,0 +1,88 @@
+{
+  "consumeCatalyst": false,
+  "location": "multiblocked:blue_generator",
+  "traits": {
+    "item": [
+      {
+        "cIO": 0,
+        "gIO": 0,
+        "x": 52,
+        "y": 114,
+        "autoIO": false
+      },
+      {
+        "cIO": 1,
+        "gIO": 1,
+        "x": 106,
+        "y": 114,
+        "autoIO": false
+      }
+    ],
+    "gtce_energy": {
+      "cIO": 1,
+      "gIO": 2,
+      "x": 28,
+      "y": 144,
+      "width": 120,
+      "height": 18,
+      "texture": "multiblocked:textures/gui/energy_bar.png",
+      "capacity": 1024
+    },
+    "background": "multiblocked:textures/gui/gray_two_slot_gui.png"
+  },
+  "allowRotate": true,
+  "showInJei": true,
+  "baseRenderer": {
+    "baseTexture": "multiblocked:blocks/casing/machine_casing_blank",
+    "frontTexture": "multiblocked:blocks/gregtech_front",
+    "type": "gregtech"
+  },
+  "workingRenderer": {
+    "baseTexture": "multiblocked:blocks/gregtech_base",
+    "frontTexture": "multiblocked:blocks/overlay/overlay_front_active",
+    "type": "gregtech"
+  },
+  "isOpaqueCube": true,
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "@"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "controller": {
+        "location": "multiblocked:blue_generator",
+        "type": "component"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  },
+  "recipeMap": "Blue EU"
+}

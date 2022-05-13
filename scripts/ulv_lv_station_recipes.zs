@@ -364,7 +364,7 @@ craft.make(<gregtech:meta_item_1:621>, ["pretty",
   "R □ R",
   "U C U",
   "G G G"], {
-  "R": <ore:componentResistor>,     # Resistor
+  "R": <metaitem:component.resistor>,     # Resistor
   "□": <ore:plateCrudeSteel>,       # Crude Steel Plate
   "U": <metaitem:circuit.vacuum_tube>,            # Vacuum Tube
   "C": <metaitem:circuit_board.basic>,  # Circuit Board
@@ -389,7 +389,7 @@ craft.remake(<extrautils2:ingredients:1>, ["pretty",
   "  ♥  ",
   "♥ □ ♥",
   "  ♥  "], {
-  "♥": <ore:torchRedstoneActive> | <ore:craftingRedstoneTorch>, # Redstone Torch
+  "♥": <ore:craftingRedstoneTorch>, # Redstone Torch
   "□": <ore:plateRedAlloy>, # Red Alloy Plate
 });
 
@@ -416,15 +416,134 @@ craft.remake(<mbd:gp_eu>, ["pretty",
   "i": <ore:springSilver>,               # Silver Spring
 });
 
+
+# [Liquid Fueled Engine] from [Crude Steel Screw][+3]
+craft.remake(<advancedrocketry:rocketmotor>, ["pretty",
+  "╱ r ╱",
+  "I C I",
+  "I   I"], {
+  "╱": <ore:stickCrudeSteel>, # Crude Steel Rod
+  "r": <ore:ringCrudeSteel>,  # Crude Steel Ring
+  "I": <ore:sheetIron>,       # Iron Sheet
+  "C": <ore:screwCrudeSteel>, # Crude Steel Screw
+});
+
+# [Liquid Fuel Tank] from [Double Crude Steel Plate][+2]
+craft.remake(<advancedrocketry:fueltank>, ["pretty",
+  "╱ C ╱",
+  "□ C □",
+  "╱ C ╱"], {
+  "╱": <ore:stickCrudeSteel>,       # Crude Steel Rod
+  "C": <ore:ringCrudeSteel>,        # Crude Steel Ring
+  "□": <ore:plateDoubleCrudeSteel>, # Double Crude Steel Plate
+});
+
+# [Rocket Assembling Machine] from [ULV Machine Casing][+5]
+craft.remake(<advancedrocketry:rocketbuilder>, ["pretty",
+  "L U L",
+  "□ ⌂ □",
+  "¤ V ¤"], {
+  "L": <ore:circuitLv>,            # Electronic Circuit
+  "U": <advancedrocketry:misc>,    # User Interface
+  "□": <ore:plateSilver>,          # Silver Plate
+  "⌂": <gregtech:machine_casing>,  # ULV Machine Casing
+  "¤": <ore:gearCrudeSteel>,       # Crude Steel Gear
+  "V": <cosmic_core:cc_meta_item>, # ULV Conveyor Module
+});
+
+# [Guidance Computer] from [ULV Machine Casing][+5]
+craft.remake(<advancedrocketry:guidancecomputer>, ["pretty",
+  "□ U □",
+  "L ⌂ L",
+  "¤ V ¤"], {
+  "□": <ore:plateSilver>,            # Silver Plate
+  "U": <advancedrocketry:misc>,      # User Interface
+  "L": <ore:circuitLv>,              # Electronic Circuit
+  "⌂": <gregtech:machine_casing>,    # ULV Machine Casing
+  "¤": <ore:gearCrudeSteel>,         # Crude Steel Gear
+  "V": <cosmic_core:cc_meta_item:2>, # ULV Electric Motor
+});
+
+# [Iron Hook] from [Crude Steel Pickaxe Head][+3]
+craft.remake(<hooked:hook:1>, ["pretty",
+  "C ╱ H",
+  "  I ╱",
+  "I   C"], {
+  "C": <ore:screwCrudeSteel>,           # Crude Steel Screw
+  "╱": <ore:stickCrudeSteel>,           # Crude Steel Rod
+  "H": <ore:toolHeadPickaxeCrudeSteel>, # Crude Steel Pickaxe Head
+  "I": <hooked:microcrafting:3>,        # Iron Chain
+});
+
+# [Philosopher's Stone] from [Resonating Redstone Crystal][+2]
+craft.remake(<projecte:item.pe_philosophers_stone>, ["pretty",
+  "▲ ♠ ▲",
+  "♠ ♥ ♠",
+  "▲ ♠ ▲"], {
+  "▲": <ore:dustGlowstone>,               # Glowstone Dust
+  "♠": <projecte:item.pe_covalence_dust>, # Low Covalence Dust
+  "♥": <ore:gemRedstone>,                 # Resonating Redstone Crystal
+});
+
+# [Sulfur Dust] from [Philosopher's Stone][+1]
+craft.shapeless(<metaitem:dustSulfur>, "P©©©©", {
+  "P": <projecte:item.pe_philosophers_stone>, # Philosopher's Stone
+  "©": <ore:dustCoal>, # Coal Dust
+});
+
+# [Iron Chain Link]*3 from [Neutronium Hammer][+2]
+craft.remake(<hooked:microcrafting:2> * 3, ["pretty",
+  "T ╱  ",
+  "╱   ╱",
+  "  ╱ o"], {
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+  "╱": <ore:stickCrudeSteel>, # Crude Steel Rod
+  "o": <ore:gtceWireCutters>, # Neutronium Wire Cutter
+});
+
+# [User Interface] from [Glass Pane][+3]
+craft.remake(<advancedrocketry:misc>, ["pretty",
+  "F L F",
+  "▲ G ▲"], {
+  "F": <ore:wireFineRedAlloy>,                     # Fine Red Alloy Wire
+  "L": <ore:circuitLv>,                            # Electronic Circuit
+  "▲": <ore:dustGlowstone>,                        # Glowstone Dust
+  "G": <ore:paneGlassColorless>, # Glass Pane
+});
+
+# [Low Pressure Tank] from [Neutronium Screwdriver][+3]
+craft.remake(<advancedrocketry:pressuretank>, ["pretty",
+  "I W I",
+  "I o I",
+  "I T I"], {
+  "I": <ore:sheetIron>,        # Iron Sheet
+  "W": <ore:screwWroughtIron>, # Wrought Iron Screw
+  "o": <ore:gtceScrewdrivers>, # Neutronium Screwdriver
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+});
+
+# [Planet Id Chip] from [Circuit Board][+5]
+craft.remake(<advancedrocketry:planetidchip>, ["pretty",
+  "R U R",
+  "* C *",
+  "▲ ♠ ▲"], {
+  "R": <metaitem:component.resistor>,              # Resistor
+  "U": <metaitem:circuit.vacuum_tube>,                     # Vacuum Tube
+  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+  "C": <metaitem:circuit_board.basic>,           # Circuit Board
+  "▲": <ore:dustGlowstone>,                  # Glowstone Dust
+  "♠": <projecte:item.pe_covalence_dust>,    # Low Covalence Dust
+});
+
+
+
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);
 
 
-
 //Crystal Glass
 furnace.addRecipe(<contenttweaker:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);
-
 
 
 /*
@@ -435,13 +554,13 @@ recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_sto
 
 // Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
-recipes.addShapeless(<metaitem:dustRedAlloy>*2, [<ore:dustCopper>,<ore:dustCopper>,<contenttweaker:dust_crystal_red>]);
+recipes.addShapeless(<metaitem:dustRedAlloy>*2, [<ore:dustCopper>,<ore:dustCopper>,<metaitem:dustRedCrystal>]);
 
 // GC Alloy Dust
-recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<contenttweaker:dust_crystal_green>]);
+recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustGreenCrystal>]);
 
 // GC Glass Dust
-recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:dustGlass>,<metaitem:dustGlass>,<contenttweaker:dust_crystal_green>]);
+recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:dustGlass>,<metaitem:dustGlass>,<metaitem:dustGreenCrystal>]);
 
 //Tin Alloy
 recipes.addShapeless(<metaitem:dustTinAlloy>*2, [<ore:dustIron>,<ore:dustTin>]);
@@ -463,7 +582,7 @@ recipes.addShapeless(<mbd:fluid_hatch>, [<metaitem:fluid_hatch.import.ulv>]);
 furnace.addRecipe(<minecraft:glass>, <metaitem:dustGlass>, 0.0);
 
 # [Rubber Sheet] from [Neutronium Hammer][+1]
-craft.remake(<gregtech:meta_plate:1068>, ["pretty",
+craft.remake(<metaitem:plateRubber>, ["pretty",
   "  T",
   "  ▬",
   "  ▬"], {
@@ -487,8 +606,8 @@ furnace.addRecipe(<metaitem:rubber_drop> * 4, <fossil:bio_goo>, 0.0);
 
 SludgeRefiner.add(<fossil:bio_goo>, 5);
 SludgeRefiner.add(<minecraft:grass>, 3);
-/*
 
+/*
 //Sheep Recipe
 recipes.addShaped(<tinymobfarm:lasso>.withTag({capturedMob: {mobName: "Sheep", mobHostile: 0 as byte, mobMaxHealth: 8.0, mobLootTableLocation: "minecraft:entities/sheep/black", 
 mobData: {HurtByTimestamp: 0, ForgeData: {}, RelativeAABB: [-0.44999998807907104, 0.0, -0.44999998807907104, 0.44999998807907104, 1.2999999523162842, 0.44999998807907104], 

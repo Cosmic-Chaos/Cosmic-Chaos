@@ -2,6 +2,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.item.IIngredient;
+import mods.actuallyadditions.AtomicReconstructor;
 print("==================== loading mods blank.zs ====================");
 ##########################################################################################
 /*
@@ -32,7 +33,9 @@ val crystalMap as IItemStack[IItemStack] = {
 for crystal, shard in crystalMap {
 recipes.removeShaped(crystal, [[shard, shard, shard],[shard, shard, shard], [shard, shard, shard]]);
 recipes.removeShapeless(shard * 9, [crystal]);
+//AtomicReconstructor.removeRecipe(crystal);
 }
+
 
 //Red Shards burn 32 items
 furnace.setFuel(<actuallyadditions:item_crystal_shard>, 6400);

@@ -4,13 +4,27 @@ import crafttweaker.oredict.IOreDictEntry;
 print("==================== loading mods blank.zs ====================");
 ##########################################################################################
 
+var name_removals = [
+    "projecte:conversions/emerald_to_diamond",
+    "projecte:conversions/gold_to_iron",
+    "projecte:conversions/iron_to_ender_pearl",
+    "projecte:conversions/diamond_to_iron",
+    "projecte:conversions/iron_to_gold",
+    "projecte:conversions/diamond_to_emerald",
+    "projecte:conversions/gold_to_diamond",
+] as string[];
+
+for item in name_removals {
+    recipes.removeByRecipeName(item);
+}
+
 val itemstoRemove =
 [
 <projecte:item.pe_fuel>,
 <projecte:item.pe_fuel:1>,
 <projecte:item.pe_fuel:2>,
 <equivadditions:zeitheron_fuel>,
-
+<projecte:item.pe_covalence_dust>,
 ]
  as IItemStack[];
 
@@ -81,6 +95,7 @@ recipes.addShaped(material[1], [
 	[material[0], material[0], material[0]]
 ]);
 }
+
 
 //Not sure if I'll keep these ratios, but the idea is once you unlock the higher tier of EMC item you get a better ratio.
 

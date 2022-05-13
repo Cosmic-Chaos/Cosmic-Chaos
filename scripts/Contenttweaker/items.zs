@@ -28,11 +28,18 @@ VanillaFactory.createItem("broken_hull_plate_t3").register();
 VanillaFactory.createItem("hull_plate_t4").register();
 
 VanillaFactory.createItem("scrap_rubber").register();
-
+/*
 VanillaFactory.createItem("dust_crystal_green").register();
+VanillaFactory.createItem("dust_crystal_red").register();
+*/
 VanillaFactory.createItem("dust_crystal_green_glass").register();
 
-VanillaFactory.createItem("dust_crystal_red").register();
+
+VanillaFactory.createItem("blue_crystal_dust").register();
+VanillaFactory.createItem("blue_crystal_dust_inert").register();
+
+VanillaFactory.createItem("rough_redstone_crystal").register();
+
 
 VanillaFactory.createItem("internals_t1").register();
 
@@ -79,30 +86,13 @@ crowbar_t2.maxDamage = 256;
 crowbar_t2.toolLevel = 1;
 crowbar_t2.register();
 
-
-var componentsULV = (itemColor(0xf0821d));
 /*
-val motorULV = VanillaFactory.createItem("electric_motor_ulv");
-motorULV.itemColorSupplier = componentsULV;
-motorULV.register();
-
-val pistonULV = VanillaFactory.createItem("electric_piston_ulv");
-pistonULV.itemColorSupplier = componentsULV;
-pistonULV.register();
-
-val pumpULV = VanillaFactory.createItem("electric_pump_ulv");
-pumpULV.itemColorSupplier = componentsULV;
-pumpULV.register();
-
-val conveyorULV = VanillaFactory.createItem("conveyor_module_ulv");
-conveyorULV.itemColorSupplier = componentsULV;
-conveyorULV.register();
-*/
-
+var componentsULV = (itemColor(0xf0821d));
 
 val emitterULV = VanillaFactory.createItem("emitter_ulv");
 emitterULV.itemColorSupplier = componentsULV;
 emitterULV.register();
+*/
 
 val cannedBeans = VanillaFactory.createItemFood("canned_beans", 8);
 cannedBeans.saturation = 0.25;

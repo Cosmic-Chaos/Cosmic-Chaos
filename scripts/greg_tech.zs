@@ -1,6 +1,7 @@
 import crafttweaker.item.IItemStack;
 import mods.gregtech.material.MaterialRegistry;
 import crafttweaker.item.IIngredient;
+import crafttweaker.oredict.IOreDictEntry;
 print("==================== loading gregtech.zs ====================");
 ##########################################################################################
 

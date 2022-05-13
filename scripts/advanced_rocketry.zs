@@ -33,11 +33,6 @@ assembler.recipeBuilder()
 	.duration(120)
 	.buildAndRegister();
 
-//User Interface
-recipes.addShaped(<advancedrocketry:misc>, [
-	[<ore:dustRegularGlowstone>, <ore:paneGlassColorless>, <ore:dustRegularGlowstone>], 
-	[<ore:dustRegularRedstone>, <ore:circuitBasic>, <ore:dustRegularRedstone>]
-]);
 
 //Gas Charger
 recipes.addShaped(<advancedrocketry:oxygencharger>, [

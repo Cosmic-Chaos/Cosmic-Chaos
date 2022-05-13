@@ -58,10 +58,10 @@ val ulv_vat = Builder.start(loc)
     } as IPatternBuilderFunction)
 	    .withRecipeMap(
 		FactoryRecipeMap.start("ulv_vat")
-						.maxInputs(2)
-						.maxFluidInputs(3)
-                        .maxOutputs(2)
-                        .maxFluidOutputs(2)
+						.maxInputs(1)
+						.maxFluidInputs(2)
+                        .maxOutputs(1)
+                        .maxFluidOutputs(1)
                         .build())
 		.withBaseTexture(<contenttweaker:station_casing>.asBlock().definition.getStateFromMeta(1))
 		.buildAndRegister();
@@ -173,6 +173,74 @@ ulv_vat.recipeMap.recipeBuilder()
 	.fluidInputs(<liquid:water>*1000)
 	.fluidOutputs(<liquid:sulfuric_acid>*1000)
 	.duration(200).EUt(7).buildAndRegister();
+
+
+
+// Green Acid
+ulv_vat.recipeMap.recipeBuilder()
+	.fluidInputs(<liquid:sulfuric_acid>*1000)
+	.inputs(<metaitem:dustGreenCrystal>*4)
+	.fluidOutputs(<liquid:green_crystal_fluid>*1000)
+	.duration(100).EUt(7).buildAndRegister();
+
+// Red Acid
+ulv_vat.recipeMap.recipeBuilder()
+	.fluidInputs(<liquid:sulfuric_acid>*1000)
+	.inputs(<metaitem:dustRedCrystal>)
+	.fluidOutputs(<liquid:red_crystal_fluid>*1000)
+	.duration(100).EUt(7).buildAndRegister();
+
+// Blue Acid
+ulv_vat.recipeMap.recipeBuilder()
+	.fluidInputs(<liquid:sulfuric_acid>*1000)
+	.inputs(<metaitem:dustBlueCrystal>*2)
+	.fluidOutputs(<liquid:blue_crystal_fluid>*1000)
+	.duration(100).EUt(7).buildAndRegister();
+
+
+
+
+// Green Dust
+ulv_vat.recipeMap.recipeBuilder()
+	.fluidInputs(<liquid:green_crystal_fluid>*250)
+	.outputs(<projecte:item.pe_covalence_dust>)
+	.duration(200).EUt(3).buildAndRegister();
+
+// Glowstone
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<minecraft:redstone_block>)
+	.fluidInputs(<liquid:green_crystal_fluid>*500)
+	.outputs(<minecraft:glowstone>)
+	.duration(200).EUt(3).buildAndRegister();
+
+// Red Gem
+ulv_vat.recipeMap.recipeBuilder()
+	.fluidInputs(<liquid:red_crystal_fluid>*250)
+	.outputs(<metaitem:gemRedCrystalAlloy>)
+	.duration(200).EUt(3).buildAndRegister();
+
+// Red Gem
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<advancedrocketry:pressuretank>)
+	.fluidInputs(<liquid:red_crystal_fluid>*1000)
+	.outputs(<advancedrocketry:bucketrocketfuel>.withTag({Fluid: {FluidName: "rocketfuel", Amount: 1000}}))
+	.duration(200).EUt(3).buildAndRegister();
+
+
+// Blue Dust
+ulv_vat.recipeMap.recipeBuilder()
+	.fluidInputs(<liquid:blue_crystal_fluid>*1000)
+	.outputs(<contenttweaker:blue_crystal_dust>)
+	.duration(200).EUt(3).buildAndRegister();
+
+// Blue Dust again
+ulv_vat.recipeMap.recipeBuilder()
+	.fluidInputs(<liquid:oxygen>*1000)
+	.inputs(<contenttweaker:blue_crystal_dust_inert>)
+	.outputs(<contenttweaker:blue_crystal_dust>)
+	.duration(200).EUt(3).buildAndRegister();
+
+
 
 
 /*

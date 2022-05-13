@@ -8,6 +8,7 @@ val itemstoRemove =
 	<extrautils2:terraformer:9>,
 	<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}),
 	<extrautils2:machine>.withTag({Type: "extrautils2:generator"}),
+	<extrautils2:ingredients>,
 ]
  as IItemStack[];
 
@@ -15,18 +16,16 @@ for item in itemstoRemove {
 	recipes.remove(item);
 }
 
-recipes.addShaped(<extrautils2:terraformer:9>, [[<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12033>],[<ore:sapling>, <gregtech:machine:501>, <ore:sapling>], [<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12111>, <gregtech:meta_item_1:12033>]]);
-recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}), [[null, <ore:bookEnchanted>, null],[<gregtech:meta_item_1:12111>, <gregtech:machine:501>, <gregtech:meta_item_1:12111>], [<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>]]);
-recipes.addShaped(<extrautils2:machine>.withTag({Type: "extrautils2:generator"}), [[<gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>, <gregtech:meta_item_1:12033>],[<gregtech:meta_item_1:12033>, <gregtech:machine:501>, <gregtech:meta_item_1:12033>], [<metaitem:wireGtDoubleRedAlloy>, <minecraft:furnace>, <metaitem:wireGtDoubleRedAlloy>]]);
-
 # [Resonating Redstone Crystal] from [Red Crystal Shard][+1]
-craft.remake(<extrautils2:ingredients>, ["pretty",
+craft.remake(<contenttweaker:rough_redstone_crystal>, ["pretty",
   "  ♥  ",
   "♥ * ♥",
   "  ♥  "], {
   "♥": <ore:dustRedstone>,                     # Redstone
   "*": <actuallyadditions:item_crystal_shard>, # Red Crystal Shard
 });
+furnace.addRecipe(<extrautils2:ingredients>, <contenttweaker:rough_redstone_crystal>, 0.0);
+
 
 /*
 //Teleporter

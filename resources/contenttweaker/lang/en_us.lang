@@ -15,7 +15,6 @@ material.vivid_alloy=Vivid Alloy
 material.crystalline_pink_slime=Crystalline Pink Slime
 material.energetic_silver=Energetic Silver
 
-material.green_crystal_alloy=Green Crystal Alloy
 
 material.dwarf_star_alloy=Dwarf Star Alloy
 material.uru=Uru
@@ -40,6 +39,20 @@ material.octine=Octine
 material.syrmorite=Syrmorite
 material.valonite=Valonite
 material.scabyst=Scabyst
+
+material.green_crystal_alloy=Green Crystal Alloy
+material.red_crystal_alloy=Firestone
+
+material.green_crystal=Green Crystal
+material.red_crystal=Red Crystal
+material.blue_crystal=Blue Crystal
+
+fluid.green_crystal_fluid=Low Grade Covalence Fluid
+fluid.red_crystal_fluid=Heat Matrix Fluid
+fluid.blue_crystal_fluid=Simmering Mixture
+
+item.contenttweaker.blue_crystal_dust.name=Reactive Crystal Powder
+item.contenttweaker.blue_crystal_dust_inert.name=Inert Crystal Powder
 
 material.sky_stone=Sky Stone
 item.material.oreprefix.oreSkyStone=Alchemical %s Ore
@@ -77,9 +90,8 @@ item.contenttweaker.internals_t2.name=§aComplex Internals
 item.contenttweaker.internals_t3.name=§aDigital Components
 item.contenttweaker.internals_t4.name=§aHigh Tech Broken Circuits
 item.contenttweaker.scrap_rubber.name=Rubber Scraps
-item.contenttweaker.dust_crystal_green.name=Green Crystal Dust
-item.contenttweaker.dust_crystal_red.name=Red Crystal Dust
 item.contenttweaker.dust_crystal_green_glass.name=Green Crystal-Glass Blend
+item.contenttweaker.rough_redstone_crystal.name=Redstone Covered Crystal
 
 
 item.contenttweaker.canned_beans.name=Canned Beans
@@ -127,9 +139,6 @@ tile.contenttweaker.controller_broken_north.name=Broken Generator Controller
 
 tile.contenttweaker.controller_broken_west.name=Broken Compactor Controller
 
-tile.contenttweaker.crystal_grower.name=Crystal Waste Output
-
-
 tile.contenttweaker.crystal_cluster_blue_1.name=Growing Blue Crystal Cluster
 tile.contenttweaker.crystal_cluster_blue_2.name=Growing Blue Crystal Cluster
 tile.contenttweaker.crystal_cluster_blue_3.name=Growing Blue Crystal Cluster
@@ -158,6 +167,12 @@ tile.contenttweaker.crystal_cluster_green_7.name=Growing Green Crystal Cluster
 tile.mbd.station_generator_controller.name=Backup Generator
 station_generator_controller.name=Backup Generator
 mbd.station_generator_controller.description=Runs on Bio Fuel
+multiblocked.recipe_map.station_generator=Backup Generator
+
+tile.multiblocked.blue_generator.name=Crystal Powered Generator
+blue_generator.name=Crystal Powered Generator
+multiblocked.blue_generator.description=Runs on Reactive Powder
+multiblocked.recipe_map.Blue EU=Crystal Powered Generator
 
 tile.mbd.ulv_energy_output.name=ULV Dynamo Hatch
 tile.mbd.item_bus.name=Multiblock Item Bus
@@ -165,8 +180,9 @@ tile.mbd.fluid_hatch.name=Multiblock Fluid Hatch
 
 
 tile.mbd.gp_eu.name=Hand Crank Generator
+gp_eu.name=Hand Crank Generator
+mbd.gp_eu.description=Using the power of Manual Labor, generate Power!
+multiblocked.recipe_map.Clockwork EU=Hand Crank Generator
 
 devtech.machine.brewery.ulv.name=Primitive Brewery
 
-multiblocked.recipe_map.station_generator=Backup Generator
-multiblocked.recipe_map.Clockwork EU=Hand Crank Generator
