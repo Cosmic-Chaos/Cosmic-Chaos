@@ -13,9 +13,11 @@ import mods.gregtech.IControllerTile;
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.CTPredicate;
 import mods.gregtech.multiblock.FactoryBlockPattern;
+import mods.gregtech.multiblock.IPatternMatchContext;
 import mods.gregtech.multiblock.functions.ICheckRecipeFunction;
 import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
 import mods.gregtech.multiblock.functions.IUpdateFormedValidFunction;
+import mods.gregtech.multiblock.functions.IFormStructureFunction;
 import mods.gregtech.multiblock.IBlockPattern;
 import mods.gregtech.multiblock.RelativeDirection;
 import mods.gregtech.recipe.FactoryRecipeMap;
@@ -53,7 +55,6 @@ val ulv_vat = Builder.start(loc)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(0).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(0).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1)
-				  | CTPredicate.states(<blockstate:contenttweaker:station_backbone>).setMinGlobalLimited(1).setPreviewCount(1)
             )              
             .build();
     } as IPatternBuilderFunction)
@@ -82,6 +83,8 @@ craft.make(<metaitem:mbt:ulv_vat>, ["pretty",
   "¤": <ore:gearCopper>,
   "⌂": <contenttweaker:station_casing>,
 });
+
+<metaitem:mbt:ulv_vat>.addTooltip(format.red("Can only be used in the space station"));
 
 // Recipes
 
@@ -507,3 +510,11 @@ ulv_vat.recipeMap.recipeBuilder()
 	.fluidInputs(<liquid:water>*1000)
 	.outputs(<advancedrocketry:concrete>*8)
 	.duration(40).EUt(7).buildAndRegister();
+
+// Check correct dimension
+ulv_vat.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){
+	if(controller.getWorld().getDimension() != 33){
+		controller.invalidateStructure();
+	}
+} as IFormStructureFunction;
+

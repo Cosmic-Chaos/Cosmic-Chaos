@@ -12,9 +12,11 @@ import mods.gregtech.IControllerTile;
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.CTPredicate;
 import mods.gregtech.multiblock.FactoryBlockPattern;
+import mods.gregtech.multiblock.IPatternMatchContext;
 import mods.gregtech.multiblock.functions.ICheckRecipeFunction;
 import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
 import mods.gregtech.multiblock.functions.IUpdateFormedValidFunction;
+import mods.gregtech.multiblock.functions.IFormStructureFunction;
 import mods.gregtech.multiblock.IBlockPattern;
 import mods.gregtech.multiblock.RelativeDirection;
 import mods.gregtech.recipe.FactoryRecipeMap;
@@ -51,7 +53,6 @@ val crushing_tank = Builder.start(loc)
                                       | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1) // There is at least one IMPORT_ITEMS bus. JEI preview shows only one.
                                       | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
                                       | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1)
-                                      | CTPredicate.states(<blockstate:contenttweaker:station_backbone>).setMinGlobalLimited(1).setPreviewCount(1)
             )              
             .build();
     } as IPatternBuilderFunction)
@@ -81,6 +82,13 @@ val getCenter = function (pos as IBlockPos, facing as IFacing) as IBlockPos[] {
         //if (!(world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_green_glass>))
         //if (<contenttweaker:crystal_green_glass> in world.getPickedBlock(pos, null, null))
         //server.commandManager.executeCommand(server, "msg @p Bio-Organic Fabricator needs cleaning!");
+
+// Check correct dimension
+crushing_tank.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){
+	if(controller.getWorld().getDimension() != 33){
+		controller.invalidateStructure();
+	}
+} as IFormStructureFunction;
 
 val blocksToCheck =
 [
@@ -211,6 +219,9 @@ craft.make(<metaitem:mbt:crushing_tank>, ["pretty",
   "¤": <ore:gearCopper>,                         # Copper Gear
   "⌂": <contenttweaker:station_casing>,          # Derelict Casing
 });
+
+<metaitem:mbt:crushing_tank>.addTooltip(format.red("Can only be used in the space station"));
+<metaitem:mbt:crushing_tank>.addTooltip(format.red("Sometimes crystals grow on it"));
 
 // Recipes	
 

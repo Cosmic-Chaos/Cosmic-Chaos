@@ -13,9 +13,11 @@ import mods.gregtech.IControllerTile;
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.CTPredicate;
 import mods.gregtech.multiblock.FactoryBlockPattern;
+import mods.gregtech.multiblock.IPatternMatchContext;
 import mods.gregtech.multiblock.functions.ICheckRecipeFunction;
 import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
 import mods.gregtech.multiblock.functions.IUpdateFormedValidFunction;
+import mods.gregtech.multiblock.functions.IFormStructureFunction;
 import mods.gregtech.multiblock.IBlockPattern;
 import mods.gregtech.multiblock.RelativeDirection;
 import mods.gregtech.recipe.FactoryRecipeMap;
@@ -59,7 +61,6 @@ val ulv_assembler = Builder.start(loc)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1)
-				  | CTPredicate.states(<blockstate:contenttweaker:station_backbone>).setMinGlobalLimited(1).setPreviewCount(1)
             )              
             .build();
     } as IPatternBuilderFunction)
@@ -91,6 +92,8 @@ craft.make(<metaitem:mbt:ulv_assembler>, ["pretty",
   "#": <contenttweaker:flexible_organic_panel>, # Flexible Organic Panel
   "⌂": <gregtech:machine_casing:0>,         # ULV Machine Casing
 });
+
+<metaitem:mbt:ulv_assembler>.addTooltip(format.red("Can only be used in the space station"));
 
 # [Basic Polarizer] from [Magnetic Iron Rod]*2[+4]
 ulv_assembler.recipeMap.recipeBuilder()
@@ -276,4 +279,11 @@ ulv_assembler.recipeMap.recipeBuilder()
 	)
 	.outputs(<cosmic_core:cc_meta_item:3>)
 .duration(200).EUt(4).buildAndRegister();
+
+// Check correct dimension
+ulv_assembler.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){
+	if(controller.getWorld().getDimension() != 33){
+		controller.invalidateStructure();
+	}
+} as IFormStructureFunction;
 

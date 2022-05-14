@@ -1,7 +1,9 @@
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.FactoryBlockPattern;
+import mods.gregtech.multiblock.IPatternMatchContext;
 import mods.gregtech.multiblock.RelativeDirection;
 import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
+import mods.gregtech.multiblock.functions.IFormStructureFunction;
 import mods.gregtech.IControllerTile;
 import mods.gregtech.multiblock.CTPredicate;
 import mods.gregtech.multiblock.IBlockPattern;
@@ -44,7 +46,6 @@ val trash_compactor = Builder.start(loc)
                                       | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1) // There is at least one IMPORT_ITEMS bus. JEI preview shows only one.
                                       | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
                                       | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1)
-                                      | CTPredicate.states(<blockstate:contenttweaker:station_backbone>).setMinGlobalLimited(1).setPreviewCount(1)
             )              
             .build();
     } as IPatternBuilderFunction)
@@ -86,6 +87,9 @@ craft.remake(<advancedrocketry:platepress>, ["pretty",
   "W": <ore:screwWroughtIron>,     # Wrought Iron Screw
   "L": <metaitem:electric.piston.ulv>, # LV Electric Piston
 });
+
+<metaitem:mbt:trash_compactor>.addTooltip(format.red("Can only be used in the space station"));
+
 // Recipes	
 	
 // Calc stuff
@@ -95,7 +99,6 @@ trash_compactor.recipeMap.recipeBuilder()
     .inputs(<quark:iron_button>*9)
     .outputs(<calculator:calculatorassembly>)
 .buildAndRegister();
-
 
 // 3i -> 2o
 val trashCompactorPlateMap as IItemStack[IOreDictEntry] = {
@@ -111,13 +114,14 @@ val trashCompactorPlateMap as IItemStack[IOreDictEntry] = {
     <ore:ingotSilver>:<ore:plateSilver>.firstItem,
     <ore:ingotLead>:<ore:plateLead>.firstItem,
 } as IItemStack[IOreDictEntry];
+
 for ingot, plate in trashCompactorPlateMap {
-trash_compactor.recipeMap.recipeBuilder()
-    .duration(80)
-    .EUt(8)
-    .inputs(ingot*3)
-    .outputs(plate*2)
-.buildAndRegister();
+	trash_compactor.recipeMap.recipeBuilder()
+		.duration(80)
+		.EUt(8)
+		.inputs(ingot*3)
+		.outputs(plate*2)
+	.buildAndRegister();
 }
 
 // (Input)n -> Plant Ball
@@ -127,13 +131,14 @@ val trashCompactorPlantMap as int[IOreDictEntry] = {
     <ore:treeLeaves>:16,
     <ore:listAllmushroom>:8,
 } as int[IOreDictEntry];
+
 for plant, n in trashCompactorPlantMap {
-trash_compactor.recipeMap.recipeBuilder()
-    .duration(60)
-    .EUt(4)
-    .inputs(plant*n)
-    .outputs(<metaitem:plant_ball>)
-.buildAndRegister();
+	trash_compactor.recipeMap.recipeBuilder()
+		.duration(60)
+		.EUt(4)
+		.inputs(plant*n)
+		.outputs(<metaitem:plant_ball>)
+	.buildAndRegister();
 }
 
 // 1 -> 1
@@ -142,11 +147,20 @@ val trashCompactorOneToOneMap as IItemStack[IOreDictEntry] = {
     <ore:cobblestone>:<minecraft:gravel>,
     <ore:blockGlass>:<minecraft:sand>,
 } as IItemStack[IOreDictEntry];
+
 for input, output in trashCompactorOneToOneMap {
-trash_compactor.recipeMap.recipeBuilder()
-    .duration(120)
-    .EUt(3)
-    .inputs(input)
-    .outputs(output)
-.buildAndRegister();
+	trash_compactor.recipeMap.recipeBuilder()
+		.duration(120)
+		.EUt(3)
+		.inputs(input)
+		.outputs(output)
+	.buildAndRegister();
 }
+
+// Check correct dimension
+trash_compactor.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){
+	if(controller.getWorld().getDimension() != 33){
+		controller.invalidateStructure();
+	}
+} as IFormStructureFunction;
+

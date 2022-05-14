@@ -61,7 +61,6 @@ val pebf = Builder.start(loc)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(1).setPreviewCount(1)
-				  | CTPredicate.states(<blockstate:contenttweaker:station_backbone>).setPreviewCount(1)
             )
             .build();
     } as IPatternBuilderFunction)
