@@ -60,9 +60,9 @@ val pebf = Builder.start(loc)
             .where("I", CTPredicate.states(<blockstate:gregtech:metal_casing:variant=bronze_bricks>)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
-				  | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1)
+				  | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setMaxGlobalLimited(1).setPreviewCount(1)
 				  | CTPredicate.states(<blockstate:contenttweaker:station_backbone>).setPreviewCount(1)
-            )              
+            )
             .build();
     } as IPatternBuilderFunction)
 	    .withRecipeMap(
@@ -88,15 +88,26 @@ craft.make(<metaitem:mbt:pebf>, ["pretty",
   "B": <ore:sheetBronze>,                # Bronze Sheet
 });
 
-pebf.recipeMap.recipeBuilder()
-	.inputs(<ore:dustCoal>, <ore:ingotIron>)
-	.outputs(<ore:ingotSteel>.firstItem)
-.duration(60).EUt(36).buildAndRegister();
+<metaitem:mbt:pebf>.addTooltip(format.red("Runs dust/ore recipes in parallel!"));
+<metaitem:mbt:pebf>.addTooltip(format.red("4x + 1x per overclock tier"));
 
-pebf.recipeMap.recipeBuilder()
-	.inputs(<ore:dustCoal>, <ore:ingotIron>)
-	.outputs(<ore:ingotCrudeSteel>.firstItem)
-.duration(60).EUt(6).buildAndRegister();
+val steelFuelMap as int[IIngredient] = {
+	<ore:dustCharcoal>*4: 180,
+	<ore:dustCoal>*2: 120,
+	<ore:dustCoke>:60
+} as int[IIngredient];
+
+for input, time in steelFuelMap {
+	pebf.recipeMap.recipeBuilder()
+		.inputs(input, <ore:ingotIron>)
+		.outputs(<ore:ingotSteel>.firstItem)
+	.duration(time).EUt(36).buildAndRegister();
+	
+	pebf.recipeMap.recipeBuilder()
+		.inputs(input, <ore:ingotIron>)
+		.outputs(<ore:ingotCrudeSteel>.firstItem)
+	.duration(time).EUt(6).buildAndRegister();
+}
 
 pebf.recipeMap.recipeBuilder()
 	.inputs(<ore:ingotIron>)
@@ -1145,17 +1156,17 @@ function insertItemStack(inventory as IItemHandlerModifiable, _itemStack as IIte
 function extractIngredient(inventory as IItemHandlerModifiable, _ingredient as IIngredient) as int {
 	var toExtract as int = _ingredient.amount;
 	val ingredient as IIngredient = _ingredient*1;
-	print("extractIngredient::: toExtract "~toExtract~" 1=="~ingredient.amount);
+	//print("extractIngredient::: toExtract "~toExtract~" 1=="~ingredient.amount);
 	for slot, stack in inventory {
 		if(ingredient.matches(stack) && !isNull(stack)){
 			var amount as int = toExtract;
 			if(amount > stack.amount){
 				amount = stack.amount;
 			}
-			print("extractIngredient::: trying "~amount~" from slot "~slot);
+			//print("extractIngredient::: trying "~amount~" from slot "~slot);
 			val itemStack as IItemStack = inventory.extractItem(slot, amount, false);
 			if(!isNull(itemStack)){
-				print("extractIngredient::: got "~itemStack.amount);
+				//print("extractIngredient::: got "~itemStack.amount);
 				toExtract -= itemStack.amount;
 				if(toExtract == 0){
 					return _ingredient.amount;
@@ -1198,9 +1209,9 @@ pebf.setupRecipeFunction = function(logic as IRecipeLogic, recipe as IRecipe) as
 		if(!isNull(overflowOutput) && overflowOutput.amount > 0){
 			extraAmount -= (overflowOutput.amount + outputMult - 1)/outputMult;
 		}
-		print("PEBF::: Running at tier "~tier~", pulling "~extraAmount~" extra items");
+		//print("PEBF::: Running at tier "~tier~", pulling "~extraAmount~" extra items");
 		val extraExtracted as int = extractIngredient(logic.inputInventory, recipeInputs[0]*(extraAmount*inputMult));
-		print("PEBF::: Actually pulled "~extraExtracted);
+		//print("PEBF::: Actually pulled "~extraExtracted);
 		logic.metaTileEntity.extraData = extraExtracted as IData;
 	}
 	return false;
@@ -1209,7 +1220,7 @@ pebf.setupRecipeFunction = function(logic as IRecipeLogic, recipe as IRecipe) as
 pebf.completeRecipeFunction = function(logic as IRecipeLogic) as bool {
 	val extraExtracted as int = logic.metaTileEntity.extraData as int;
 	logic.metaTileEntity.extraData = 0 as IData;
-	print("PEBF::: Generating bonus outputs for "~extraExtracted~" extra recipes");
+	//print("PEBF::: Generating bonus outputs for "~extraExtracted~" extra recipes");
 	if(extraExtracted != 0){
 		val outputItem as IItemStack = logic.previousRecipe.getAllItemOutputs()[0];
 		insertItemStack(logic.outputInventory, outputItem.withAmount(outputItem.amount*extraExtracted), false);
