@@ -670,6 +670,18 @@ craft.make(<gregtech:machine:80>, ["pretty",
   "t": <ore:cableGtSingleTin>,      # 1x Tin Cable
 });
 
+# [Basic Electric Furnace] from [LV Machine Hull][+3]
+recipes.removeByRecipeName("gregtech:gregtech.machine.electric_furnace.lv");
+craft.make(<gregtech:machine:50>, ["pretty",
+  "L G L",
+  "G V G",
+  "t G t"], {
+  "L": <ore:circuitLv>,             # Electronic Circuit
+  "G": <ore:wireGtDoubleNickel>,   # 2x Nickel Wire
+  "V": <gregtech:machine:986>,      # LV Machine Hull
+  "t": <ore:cableGtSingleTin>,      # 1x Tin Cable
+});
+
 # [Basic Polarizer] from [LV Machine Hull][+3]
 recipes.removeByRecipeName("gregtech:gregtech.machine.polarizer.lv");
 craft.make(<gregtech:machine:545>, ["pretty",
