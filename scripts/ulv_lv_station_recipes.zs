@@ -75,8 +75,8 @@ mods.jei.JEI.addItem(<advancedrocketry:spacechestplate>.withTag({slotInsert: [1,
 ##=======================================================
 
 //Busses because no wood
-recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<metaitem:crate.steel>|<metaitem:crate.bronze>]]);
-recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<metaitem:crate.steel>|<metaitem:crate.bronze>],[<metaitem:hull.ulv>]]);
+recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<ironchest:iron_chest:*>]]);
+recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ironchest:iron_chest:*>],[<metaitem:hull.ulv>]]);
 
 
 //Knife
@@ -124,7 +124,7 @@ craft.remake(<contenttweaker:station_casing>*4, ["pretty",
   "□ ◙ □",
   "□ T □"], {
   "□": <ore:plateCrudeSteel>,       # Crude Steel Plate
-  "o": <metaitem:tool.hard_hammer>, # Iron Hammer
+  "o": <ore:gtceHardHammers>, # Iron Hammer
   "◙": <metaitem:frameCrudeSteel>, # Crude Steel Frame Box
   "T": <ore:gtceWrenches>, # Neutronium Wrench
 });
@@ -136,7 +136,7 @@ craft.remake(<metaitem:workbench>, ["pretty",
   "E": <minecraft:book>, # Book
   "P": <contenttweaker:station_component_4>, # Primitive Crafting Interface
   "r": <contenttweaker:station_component_3>, # Primitive Mixed Plating
-  "S": <metaitem:crate.steel>,              # Steel Crate
+  "S": <ironchest:iron_chest:*>,              # Silver Chest
 });
 
 
