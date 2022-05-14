@@ -98,6 +98,9 @@ val trashCompactorPlateMap as IItemStack[IOreDictEntry] = {
     <ore:ingotCrudeSteel>:<ore:plateCrudeSteel>.firstItem,
     <ore:ingotRedAlloy>:<ore:plateRedAlloy>.firstItem,
     <ore:ingotGreenCrystalAlloy>:<ore:plateGreenCrystalAlloy>.firstItem,
+    <ore:ingotRubber>:<ore:plateRubber>.firstItem,
+    <ore:ingotSilver>:<ore:plateSilver>.firstItem,
+    <ore:ingotLead>:<ore:plateLead>.firstItem,
 } as IItemStack[IOreDictEntry];
 for ingot, plate in trashCompactorPlateMap {
 trash_compactor.recipeMap.recipeBuilder()
@@ -127,6 +130,8 @@ trash_compactor.recipeMap.recipeBuilder()
 // 1 -> 1
 val trashCompactorOneToOneMap as IItemStack[IOreDictEntry] = {
     <ore:dustWood>:<ore:plateWood>.firstItem,
+    <ore:cobblestone>:<minecraft:gravel>,
+    <ore:blockGlass>:<minecraft:sand>,
 } as IItemStack[IOreDictEntry];
 for input, output in trashCompactorOneToOneMap {
 trash_compactor.recipeMap.recipeBuilder()
