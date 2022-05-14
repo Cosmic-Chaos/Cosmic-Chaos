@@ -225,7 +225,7 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
 .buildAndRegister();
 	
-    
+/*   
 //Heavy Hull Block
 crushing_tank.recipeMap.recipeBuilder()
     .duration(80)
@@ -237,8 +237,6 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
 	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
 .buildAndRegister();
-	
-    
 //Light Hull Block
 crushing_tank.recipeMap.recipeBuilder()
     .duration(80)
@@ -251,7 +249,32 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
 	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
 .buildAndRegister();
-	
+*/
+
+//Heavy Hull Block
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(80)
+    .EUt(8)
+    .inputs(<chisel:technicalnew:2>)
+    .outputs(<metaitem:hull.plate.0>*6)
+	.chancedOutput(<metaitem:hull.plate.0>*3, 2500, 1000)
+	.chancedOutput(<metaitem:hull.plate.0>*3, 5000, 1000)
+	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
+	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
+.buildAndRegister();
+
+//Light Hull Block
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(80)
+    .EUt(8)
+    .inputs(<chisel:factory:9>)
+    .outputs(<metaitem:hull.plate.1>*6)
+	.chancedOutput(<metaitem:hull.plate.1>*3, 2500, 1000)
+	.chancedOutput(<metaitem:hull.plate.1>*3, 5000, 1000)
+	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
+	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
+.buildAndRegister();
+
 //Simple Internals
 crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
@@ -266,47 +289,57 @@ crushing_tank.recipeMap.recipeBuilder()
 
 
 
-//Copper Dust
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(40)
-    .EUt(8)
-    .inputs(<metaitem:hull.plate.broken.1>)
-    .outputs(<metaitem:dustCopper>)
-	.chancedOutput(<metaitem:dustCopper>, 5000, 1000)
-	.chancedOutput(<metaitem:dustCopper>, 2500, 1000)
-.buildAndRegister();
-
-
 //Iron Dust
 crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
     .EUt(8)
     .inputs(<metaitem:hull.plate.broken.0>)
     .outputs(<metaitem:dustIron>)
-	.chancedOutput(<metaitem:dustIron>, 5000, 1000)
-	.chancedOutput(<metaitem:dustIron>, 2500, 1000)
 .buildAndRegister();
-
-
+//Copper Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(40)
+    .EUt(8)
+    .inputs(<metaitem:hull.plate.broken.1>)
+    .outputs(<metaitem:dustCopper>)
+.buildAndRegister();
 //Tin Dust
 crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
     .EUt(8)
     .inputs(<metaitem:hull.plate.broken.2>)
     .outputs(<metaitem:dustTin>)
-	.chancedOutput(<metaitem:dustTin>, 5000, 1000)
-	.chancedOutput(<metaitem:dustTin>, 2500, 1000)
 .buildAndRegister();
 
+
+// Heavy Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(40)
+    .EUt(8)
+    .inputs(<metaitem:hull.plate.0>)
+    .outputs(<contenttweaker:heavy_dust>*4)
+	.chancedOutput(<contenttweaker:heavy_dust>*2, 5000, 1000)
+	.chancedOutput(<contenttweaker:heavy_dust>*2, 2500, 1000)
+.buildAndRegister();
+// Light Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(40)
+    .EUt(8)
+    .inputs(<metaitem:hull.plate.1>)
+    .outputs(<contenttweaker:light_dust>*4)
+	.chancedOutput(<contenttweaker:light_dust>*2, 5000, 1000)
+	.chancedOutput(<contenttweaker:light_dust>*2, 2500, 1000)
+.buildAndRegister();
 //Crude Steel Dust
 crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
     .EUt(8)
     .inputs(<metaitem:hull.plate.2>)
-    .outputs(<metaitem:dustCrudeSteel>)
-	.chancedOutput(<metaitem:dustCrudeSteel>, 5000, 1000)
-	.chancedOutput(<metaitem:dustCrudeSteel>, 2500, 1000)
+    .outputs(<contenttweaker:dense_dust>*4)
+	.chancedOutput(<contenttweaker:dense_dust>*2, 5000, 1000)
+	.chancedOutput(<contenttweaker:dense_dust>*2, 2500, 1000)
 .buildAndRegister();
+
 
 
 //Bio Chaff
