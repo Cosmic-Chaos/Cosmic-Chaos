@@ -47,55 +47,63 @@ material.green_crystal=Green Crystal
 material.red_crystal=Red Crystal
 material.blue_crystal=Blue Crystal
 
-fluid.green_crystal_fluid=Low Grade Covalence Fluid
-fluid.red_crystal_fluid=Heat Matrix Fluid
-fluid.blue_crystal_fluid=Simmering Mixture
-
-item.contenttweaker.blue_crystal_dust.name=Reactive Crystal Powder
-item.contenttweaker.blue_crystal_dust_inert.name=Inert Crystal Powder
-
-material.sky_stone=Sky Stone
-item.material.oreprefix.oreSkyStone=Alchemical %s Ore
-item.material.oreprefix.oreAurorianStone=%s Ore
-item.material.oreprefix.oreBetweenStone=%s Ore
-item.material.oreprefix.oreNightStone=%s Ore
-
-material.limestone_atum=Atum Limestone
-material.stone_aurorian=Aurorian Stone
-
-
 material.fluix=Fluix
 material.fluix_steel=Fluix Steel
 
 material.emc_minor=Minor Manifested EMC
 
-metaitem.battery_crystal_green.name=Crystal Battery
+material.sky_stone=Sky Stone
+material.limestone_atum=Atum Limestone
+material.stone_aurorian=Aurorian Stone
 
-metaitem.battery_station_ulv.name=Rusty Battery
+item.material.oreprefix.oreSkyStone=Alchemical %s Ore
+item.material.oreprefix.oreAurorianStone=%s Ore
+item.material.oreprefix.oreBetweenStone=%s Ore
+item.material.oreprefix.oreNightStone=%s Ore
 
 item.material.oreprefix.sheet=%s Sheet
 
 
+
+fluid.green_crystal_fluid=Low Grade Covalence Fluid
+fluid.red_crystal_fluid=Liquid Fire Matrix
+fluid.blue_crystal_fluid=Simmering Mixture
+
+item.contenttweaker.blue_crystal_dust.name=Reactive Crystal Powder
+item.contenttweaker.blue_crystal_dust_inert.name=Inert Crystal Powder
+
+
+
+
+
+metaitem.battery_crystal_green.name=Crystal Battery
+
+metaitem.battery_station_ulv.name=Rusty Battery
+
+
+
 item.contenttweaker.crowbar.name=Makeshift Crowbar
 item.contenttweaker.crowbar_t2.name=§6Crowbar
-item.contenttweaker.hull_plate_t1.name=§aHeavy Hull Plate
-item.contenttweaker.broken_hull_plate_t1.name=Broken Iron Scraps
-item.contenttweaker.hull_plate_t2.name=§aLight Hull Plate
-item.contenttweaker.broken_hull_plate_t2.name=Broken Copper Scraps
-item.contenttweaker.hull_plate_t3.name=§aDense Hull Plate
-item.contenttweaker.broken_hull_plate_t3.name=Broken Tin Scraps
-item.contenttweaker.hull_plate_t4.name=§aFancy Hull Plate
 item.contenttweaker.internals_t1.name=§aSimple Internals
 item.contenttweaker.internals_t2.name=§aComplex Internals
 item.contenttweaker.internals_t3.name=§aDigital Components
 item.contenttweaker.internals_t4.name=§aHigh Tech Broken Circuits
 item.contenttweaker.scrap_rubber.name=Rubber Scraps
+
 item.contenttweaker.dust_crystal_green_glass.name=Green Crystal-Glass Blend
 item.contenttweaker.rough_redstone_crystal.name=Redstone Covered Crystal
+
+item.contenttweaker.heavy_dust.name=Heavy Scrap Dust
+item.contenttweaker.light_dust.name=Light Scrap Dust
+item.contenttweaker.dense_dust.name=Dense Scrap Dust
+
+item.contenttweaker.heating_element.name=Heating Element
+item.contenttweaker.cooling_element.name=Cooling Element
 
 
 item.contenttweaker.canned_beans.name=Canned Beans
 
+item.contenttweaker.vat_print.name=NASA Slow Cooker Blueprint
 
 
 item.contenttweaker.emc_widget_1.name=Minor Alchemical Construct
@@ -122,11 +130,7 @@ item.contenttweaker.station_component_4.name=Primitive Processor
 item.contenttweaker.stator.name=Primitive Stator
 
 
-item.contenttweaker.electric_motor_ulv.name=ULV Electric Motor
-item.contenttweaker.electric_piston_ulv.name=ULV Electric Piston
-item.contenttweaker.electric_pump_ulv.name=ULV Electric Pump
 item.contenttweaker.emitter_ulv.name=ULV Emitter
-item.contenttweaker.conveyor_module_ulv.name=ULV Conveyor
 
 item.contenttweaker.flexible_organic_panel.name=Flexible Organic Panel
 
@@ -186,5 +190,5 @@ gp_eu.name=Hand Crank Generator
 mbd.gp_eu.description=Using the power of Manual Labor, generate Power!
 multiblocked.recipe_map.Clockwork EU=Hand Crank Generator
 
-devtech.machine.brewery.ulv.name=Primitive Brewery
+devtech.machine.electromagnetic_separator.ulv.name=Primitive Electromagnetic Separator
 
