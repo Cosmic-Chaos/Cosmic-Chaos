@@ -111,6 +111,11 @@ val itemstoRemoveAndHide =
 <metaitem:steam_alloy_smelter_steel>,
 
 <metaitem:steam_miner>,
+
+<harvestcraft:shippingbin>,
+<harvestcraft:market>,
+<harvestcraft:well>,
+<farmingforblockheads:market>,
 ]
  as IItemStack[];
 

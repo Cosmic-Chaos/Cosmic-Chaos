@@ -199,6 +199,13 @@ for item in carbonMonoxideItems {
 		.duration(80).EUt(7).buildAndRegister();
 }
 
+// Rice slimeballs
+<recipemap:chemical_reactor>.recipeBuilder()
+	.inputs(<actuallyadditions:item_misc:9>*4)
+	.fluidInputs(<liquid:water>*1000)
+	.outputs(<actuallyadditions:item_misc:12>*4)
+.duration(80).EUt(20).buildAndRegister();
+
 // Biomass from Nutrient Distillation + Sapling (for the GT brewery)
 <recipemap:brewery>.recipeBuilder()
 	.inputs(<ore:treeSapling>)

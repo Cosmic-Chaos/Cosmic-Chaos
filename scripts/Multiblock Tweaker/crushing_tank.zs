@@ -414,6 +414,13 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustBlueCrystal>, 5000, 1000)
 .buildAndRegister();
 
+//Books to Paper
+crushing_tank.recipeMap.recipeBuilder()
+	.inputs(<minecraft:book>)
+	.outputs(<minecraft:paper>)
+	.chancedOutput(<minecraft:paper>, 5000, 1000)
+	.chancedOutput(<minecraft:paper>, 2500, 1000)
+.duration(60).EUt(6).buildAndRegister();
 
 // 1:1 I/O
 val ingotDustMap as IItemStack[IOreDictEntry] = {

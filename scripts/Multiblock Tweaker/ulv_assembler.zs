@@ -128,32 +128,6 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.outputs(<gregtech:machine:620>)
 .duration(600).EUt(14).buildAndRegister();
 
-# [Basic Centrifuge] from [Light Hull Plate][+4]
-ulv_assembler.recipeMap.recipeBuilder()
-	.inputs(
-		<ore:circuitLv>*4,                # Electronic Circuit
-		<cosmic_core:cc_meta_item:2>*3,   # ULV Electric Motor
-		<metaitem:hull.plate.3>, # Fancy Hull Plate
-		<gregtech:machine:986>,         # LV Machine Hull
-		<metaitem:hull.plate.1> # Light Hull Plate
-	)
-	.outputs(<gregtech:machine:185>)
-.duration(600).EUt(14).buildAndRegister();
-
-# [Basic Macerator] from [Crude Steel Dust][+6]
-ulv_assembler.recipeMap.recipeBuilder()
-	.inputs(
-		<ore:circuitLv>*3,                # Electronic Circuit
-		<cosmic_core:cc_meta_item:3>*2,   # ULV Electric Piston
-		<metaitem:hull.plate.3>, # Fancy Hull Plate
-		<gregtech:machine:986>,         # LV Machine Hull
-		<ore:cableGtQuadrupleTin>,      # 4x Tin Cable
-		<ore:gemDiamond>,               # Diamond
-		<ore:dustCrudeSteel>            # Crude Steel Dust
-	)
-	.outputs(<gregtech:machine:65>)
-.duration(600).EUt(14).buildAndRegister();
-
 # [Basic Alloy Smelter] from [8x Green Crystal Alloy Wire][+4]
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
