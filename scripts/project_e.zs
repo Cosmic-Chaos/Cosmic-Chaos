@@ -32,6 +32,8 @@ for item in itemstoRemove {
 	recipes.remove(item);
 }
 
+mods.projecte.WorldTransmutation.removeAll();
+
 /* Three Levels
 
 Weak, Satisfactory, Strong
@@ -95,6 +97,12 @@ recipes.addShaped(material[1], [
 	[material[0], material[0], material[0]]
 ]);
 }
+
+//WorldTransmutation.add(IBlockState output, IBlockState input, @Optional IBlockState sneakOutput);
+
+//Glowstone
+WorldTransmutation.add(<blockstate:minecraft:glowstone>, <blockstate:minecraft:redstone_block>);
+
 
 
 //Not sure if I'll keep these ratios, but the idea is once you unlock the higher tier of EMC item you get a better ratio.

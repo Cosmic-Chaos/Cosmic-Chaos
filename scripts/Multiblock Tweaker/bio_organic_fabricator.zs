@@ -169,7 +169,7 @@ craft.make(<metaitem:mbt:bio_organic_fabricator>, ["pretty",
   "A": <minecraft:sand>,
   "M": <minecraft:red_mushroom_block>,   # Mushroom
   "⌂": <gregtech:machine_casing>,        # ULV Machine Casing
-  "L": <ore:circuitLv>,                  # Electronic Circuit
+  "L": <metaitem:circuit.vacuum_tube>,                  # Electronic Circuit
 });
 
 // Recipes	
@@ -217,9 +217,9 @@ bio_organic_fabricator.recipeMap.recipeBuilder()
 	.notConsumable(<quark:root>)
 	.fluidInputs(<liquid:nutrient_distillation> * 2000)
 	.chancedOutput(<quark:root>, 2500, 500)
-	.chancedOutput(<quark:root_flower:0>, 900, 300)
-	.chancedOutput(<quark:root_flower:1>, 900, 300)
-	.chancedOutput(<quark:root_flower:2>, 900, 300)
+	.chancedOutput(<quark:root_flower:0>, 1800, 300)
+	.chancedOutput(<quark:root_flower:1>, 1800, 300)
+	.chancedOutput(<quark:root_flower:2>, 1800, 300)
 	.fluidOutputs(<liquid:sludge> * 1000)
 .duration(240).EUt(3).buildAndRegister();
 

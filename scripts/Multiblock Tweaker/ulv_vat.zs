@@ -48,17 +48,17 @@ val ulv_vat = Builder.start(loc)
 			.where("C", <blockstate:contenttweaker:station_casing>)
 			.where("S", <blockstate:contenttweaker:crystal_green_glass>)
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
-				  | CTPredicate.abilities(<mte_ability:IMPORT_FLUIDS>).setMinGlobalLimited(2).setPreviewCount(2)
-				  | CTPredicate.abilities(<mte_ability:EXPORT_FLUIDS>).setMinGlobalLimited(1).setPreviewCount(1)
-				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
-				  | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
+				  | CTPredicate.abilities(<mte_ability:IMPORT_FLUIDS>).setMinGlobalLimited(0).setPreviewCount(1)
+				  | CTPredicate.abilities(<mte_ability:EXPORT_FLUIDS>).setMinGlobalLimited(0).setPreviewCount(1)
+				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(0).setPreviewCount(1)
+				  | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(0).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1)
             )              
             .build();
     } as IPatternBuilderFunction)
 	    .withRecipeMap(
 		FactoryRecipeMap.start("ulv_vat")
-						.maxInputs(1)
+						.maxInputs(2)
 						.maxFluidInputs(2)
                         .maxOutputs(1)
                         .maxFluidOutputs(1)
@@ -77,22 +77,22 @@ craft.make(<metaitem:mbt:ulv_vat>, ["pretty",
   "P": <contenttweaker:station_component_4>,
   "r": <metaitem:circuit.vacuum_tube>,
   "G": <ore:wireGtDoubleTin>,
-  "t": <ore:rotorTin>,
+  "t": <contenttweaker:vat_print>,
   "¤": <ore:gearCopper>,
   "⌂": <contenttweaker:station_casing>,
 });
 
 // Recipes
 
+/*
 // Nutrient Distillation
 ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<ore:listAllmushroom>)
 	.fluidInputs(<liquid:water>*1000)
 	.fluidOutputs(<liquid:nutrient_distillation>*1000)
 	.duration(128).EUt(2).buildAndRegister();
+*/
 
-
-/*
 // Nutrient distillation recipes (a la the the vat)
 val nutrientInputsA as double[IIngredient] = {
 	<ore:listAllmeatraw>: 0.75 as double,
@@ -117,7 +117,7 @@ for itemA, multA in nutrientInputsA {
 			.duration(100).EUt(7).buildAndRegister();
 	}
 }
-*/
+
 // Biomass from Nutrient Distillation + Bio Chaff
 ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<metaitem:bio_chaff>)
@@ -146,12 +146,13 @@ ulv_vat.recipeMap.recipeBuilder()
 	.fluidOutputs(<liquid:biomass>*200)
 	.duration(128).EUt(4).buildAndRegister();
 
-// Biomass from Nutrient Distillation + Sapling (for the GT brewery)
-<recipemap:brewery>.recipeBuilder()
-	.inputs(<ore:treeSapling>)
-	.fluidInputs(<liquid:nutrient_distillation>*200)
-	.fluidOutputs(<liquid:biomass>*200)
+// Methane for Rocket Boots
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<metaitem:dustCarbon>)
+	.fluidInputs(<liquid:hydrogen>*4000)
+	.fluidOutputs(<liquid:methane>*1000)
 	.duration(128).EUt(4).buildAndRegister();
+
 
 // Sulfur Dioxide
 ulv_vat.recipeMap.recipeBuilder()
@@ -199,36 +200,55 @@ ulv_vat.recipeMap.recipeBuilder()
 
 
 
+# [Heating Element] from [Red Crystal Dust][+1]
+craft.remake(<contenttweaker:heating_element>, ["pretty",
+  "  F  ",
+  "F * F",
+  "  F  "], {
+  "F": <ore:wireFineCopper>, # Fine Copper Wire
+  "*": <ore:dustRedCrystal>, # Red Crystal Dust
+});
 
 // Green Dust
 ulv_vat.recipeMap.recipeBuilder()
+	.notConsumable(<contenttweaker:heating_element>)
 	.fluidInputs(<liquid:green_crystal_fluid>*250)
 	.outputs(<projecte:item.pe_covalence_dust>)
 	.duration(200).EUt(3).buildAndRegister();
-
+/*
 // Glowstone
 ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<minecraft:redstone_block>)
 	.fluidInputs(<liquid:green_crystal_fluid>*500)
 	.outputs(<minecraft:glowstone>)
 	.duration(200).EUt(3).buildAndRegister();
-
-// Red Gem
-ulv_vat.recipeMap.recipeBuilder()
-	.fluidInputs(<liquid:red_crystal_fluid>*250)
-	.outputs(<metaitem:gemRedCrystalAlloy>)
-	.duration(200).EUt(3).buildAndRegister();
-
-// Red Gem
+*/
+// Rocket Fuel
 ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<advancedrocketry:pressuretank>)
 	.fluidInputs(<liquid:red_crystal_fluid>*1000)
 	.outputs(<advancedrocketry:bucketrocketfuel>.withTag({Fluid: {FluidName: "rocketfuel", Amount: 1000}}))
 	.duration(200).EUt(3).buildAndRegister();
 
+# [Cooling Element] from [Blue Crystal Dust][+1]
+craft.remake(<contenttweaker:cooling_element>, ["pretty",
+  "  F  ",
+  "F * F",
+  "  F  "], {
+  "F": <ore:wireFineSilver>,  # Fine Silver Wire
+  "*": <ore:dustBlueCrystal>, # Blue Crystal Dust
+});
+// Red Gem
+ulv_vat.recipeMap.recipeBuilder()
+	.notConsumable(<contenttweaker:cooling_element>)
+	.fluidInputs(<liquid:red_crystal_fluid>*250)
+	.outputs(<metaitem:gemRedCrystalAlloy>)
+	.duration(200).EUt(3).buildAndRegister();
+
 
 // Blue Dust
 ulv_vat.recipeMap.recipeBuilder()
+	.notConsumable(<contenttweaker:heating_element>)
 	.fluidInputs(<liquid:blue_crystal_fluid>*1000)
 	.outputs(<contenttweaker:blue_crystal_dust>)
 	.duration(200).EUt(3).buildAndRegister();
@@ -242,6 +262,27 @@ ulv_vat.recipeMap.recipeBuilder()
 
 
 
+
+// Oxygen Thingie
+mods.fossils.recipes.addCultivateRecipe(<advancedrocketry:crystal:2>, <contenttweaker:organic_overloader>);
+
+# [Green Crystal Block] from [Green Crystal Shard]
+craft.remake(<advancedrocketry:crystal:2>, ["pretty",
+  "* *",
+  "* *"], {
+  "*": <ore:gemGreenCrystal>, # Green Crystal Shard
+});
+# [Green Crystal Shard]*4 from [Green Crystal Block]
+craft.reshapeless(<actuallyadditions:item_crystal_shard:4> * 4, "*", {
+  "*": <advancedrocketry:crystal:2>, # Green Crystal Block
+});
+
+// Oxygen
+ulv_vat.recipeMap.recipeBuilder()
+	.notConsumable(<contenttweaker:organic_overloader>)
+	.inputs(<minecraft:leaves>*24)
+	.fluidOutputs(<liquid:oxygen>*1000)
+	.duration(200).EUt(3).buildAndRegister();
 
 /*
 // All 9 lubricant recipes
@@ -459,3 +500,9 @@ for itemA, multA in cloudseedInputsA {
 		.duration(100).EUt(7).buildAndRegister();
 }
 */
+// Concrete
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<ore:gravel>*2,<ore:sand>*2)
+	.fluidInputs(<liquid:water>*1000)
+	.outputs(<advancedrocketry:concrete>*8)
+	.duration(40).EUt(7).buildAndRegister();

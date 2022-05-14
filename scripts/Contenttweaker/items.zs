@@ -30,6 +30,9 @@ VanillaFactory.createItem("broken_hull_plate_t3").register();
 */
 
 VanillaFactory.createItem("scrap_rubber").register();
+VanillaFactory.createItem("heavy_dust").register();
+VanillaFactory.createItem("light_dust").register();
+VanillaFactory.createItem("dense_dust").register();
 /*
 VanillaFactory.createItem("dust_crystal_green").register();
 VanillaFactory.createItem("dust_crystal_red").register();
@@ -39,6 +42,7 @@ VanillaFactory.createItem("dust_crystal_green_glass").register();
 
 VanillaFactory.createItem("blue_crystal_dust").register();
 VanillaFactory.createItem("blue_crystal_dust_inert").register();
+
 
 VanillaFactory.createItem("rough_redstone_crystal").register();
 
@@ -53,6 +57,10 @@ VanillaFactory.createItem("internals_t4").register();
 
 VanillaFactory.createItem("stator").register();
 
+VanillaFactory.createItem("heating_element").register();
+VanillaFactory.createItem("cooling_element").register();
+
+VanillaFactory.createItem("vat_print").register();
 
 
 VanillaFactory.createItem("emc_widget_1").register();

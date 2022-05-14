@@ -9,7 +9,7 @@ craft.remake(<mbd:station_generator_controller>, ["pretty",
   "¤ P ¤",
   "L t L",
   "* ⌂ *"], {
-  "¤": <ore:gearSmallBronze>,                    # Small Bronze Gear
+  "¤": <metaitem:gearCrudeSteel>,                    # Small Bronze Gear
   "P": <metaitem:circuit.vacuum_tube>,                   # Vacuum Tube
   "L": <metaitem:electric.motor.ulv>,               # LV Electric Motor
   "t": <contenttweaker:controller_broken_north>, # tile.contenttweaker.controller_broken_north.name

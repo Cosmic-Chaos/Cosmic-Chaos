@@ -35,11 +35,12 @@ recipes.addShaped(<calculator:calculatorscreen>, [
 	[<metaitem:plateCupronickel>, <metaitem:plateCupronickel>, <metaitem:plateCupronickel>]
 ]);
 
+/*
 recipes.addShaped(<calculator:calculatorassembly>, [
 	[<metaitem:foilBrass>, <quark:iron_button>, <metaitem:foilBrass>],
 	[<quark:iron_button>, <metaitem:plateCupronickel>, <quark:iron_button>], 
 	[<metaitem:foilBrass>, <quark:iron_button>, <metaitem:foilBrass>]
-]);
+]);*/
 
 
 

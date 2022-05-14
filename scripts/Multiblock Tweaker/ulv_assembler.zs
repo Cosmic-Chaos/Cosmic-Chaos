@@ -77,7 +77,7 @@ ulv_assembler.hasMufflerMechanics = false;
 craft.reshapeless(<contenttweaker:flexible_organic_panel>, "#GB", {
   "#": <ore:plateWood>,                   # Wood Plank
   "G": <minecraft:tallgrass:1>,           # Grass
-  "B": <ore:dyeBlack>,                    # Black Dye
+  "B": <quark:root_dye:1>,                    # Black Dye
 });
 
 # [Crafting Station] from [ULV Machine Casing][+3]
