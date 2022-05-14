@@ -61,6 +61,7 @@ global thermal_centrifuge as RecipeMap =            RecipeMap.getByName("thermal
 global unpacker as RecipeMap =                      RecipeMap.getByName("unpacker");
 global vacuum_freezer as RecipeMap =                RecipeMap.getByName("vacuum_freezer");
 global wiremill as RecipeMap =                      RecipeMap.getByName("wiremill");
+global electromagnetic_separator as RecipeMap =     RecipeMap.getByName("electromagnetic_separator");
 
 
 global craftingHammer as IItemStack = <gregtech:meta_tool:5>;
