@@ -43,6 +43,13 @@ casingStation.blockColorSupplier = casingStationColorBlock;
 casingStation.itemColorSupplier = casingStationColorItem;
 casingStation.register();
 
+val stationBackbone = VanillaFactory.createBlock("station_backbone", <blockmaterial:iron>);
+stationBackbone.setLightValue(4);
+stationBackbone.blockHardness = -1;
+stationBackbone.blockResistance = 18000000;
+stationBackbone.witherProof = true;
+stationBackbone.register();
+
 var brokenControllerNorth = VanillaFactory.createBlock("controller_broken_north", <blockmaterial:iron>);
 brokenControllerNorth.setLightValue(0);
 brokenControllerNorth.setBlockHardness(4.0);

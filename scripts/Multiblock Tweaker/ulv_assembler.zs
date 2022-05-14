@@ -59,6 +59,7 @@ val ulv_assembler = Builder.start(loc)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1)
+				  | CTPredicate.states(<blockstate:contenttweaker:station_backbone>).setMinGlobalLimited(1).setPreviewCount(1)
             )              
             .build();
     } as IPatternBuilderFunction)
@@ -74,14 +75,14 @@ ulv_assembler.hasMaintenanceMechanics = false;
 ulv_assembler.hasMufflerMechanics = false;
 
 # [Flexible Organic Panel] from [Grass][+2]
-craft.reshapeless(<contenttweaker:flexible_organic_panel>, "#GB", {
+craft.shapeless(<contenttweaker:flexible_organic_panel>, "#GB", {
   "#": <ore:plateWood>,                   # Wood Plank
   "G": <minecraft:tallgrass:1>,           # Grass
   "B": <quark:root_dye:1>,                    # Black Dye
 });
 
 # [Crafting Station] from [ULV Machine Casing][+3]
-craft.remake(<metaitem:mbt:ulv_assembler>, ["pretty",
+craft.make(<metaitem:mbt:ulv_assembler>, ["pretty",
   "L C L",
   "# ⌂ #",
   "L # L"], {
@@ -148,7 +149,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
 		<ore:cableGtQuadrupleTin>,      # 4x Tin Cable
-		<ore:gemDiamond>,               # Diamond
+		<ore:gemRedCrystalAlloy>,       # Fire Gem
 		<contenttweaker:internals_t2>   # Complex Internals
 	)
 	.outputs(<gregtech:machine:440>)

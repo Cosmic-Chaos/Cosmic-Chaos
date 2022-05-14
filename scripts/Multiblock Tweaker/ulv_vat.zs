@@ -53,6 +53,7 @@ val ulv_vat = Builder.start(loc)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(0).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(0).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1)
+				  | CTPredicate.states(<blockstate:contenttweaker:station_backbone>).setMinGlobalLimited(1).setPreviewCount(1)
             )              
             .build();
     } as IPatternBuilderFunction)
