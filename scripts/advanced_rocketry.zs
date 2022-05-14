@@ -15,6 +15,7 @@ val itemstoRemove =
 	<advancedrocketry:spacechestplate>,
 	<libvulpes:structuremachine>,
 	<advancedrocketry:jetpack>,
+	<advancedrocketry:concrete>,
 ]
  as IItemStack[];
 
@@ -79,6 +80,22 @@ recipes.addShaped(<libvulpes:structuremachine> * 8, [
 	[<ore:plateSteel>, null, <ore:plateSteel>], 
 	[<ore:stickSteel>, <ore:plateSteel>, <ore:stickSteel>]
 ]);
+
+# [Launch Pad] from [Black Dye]*2[+2]
+craft.reshapeless(<advancedrocketry:launchpad>, "cB▲", {
+  "c": <ore:concrete>,      # Concrete
+  "B": <quark:root_dye:1>,  # Black Dye
+  "▲": <ore:dustGlowstone>, # Glowstone Dust
+});
+
+# [Structure Tower]*8 from [Crude Steel Frame Box][+1]
+craft.remake(<advancedrocketry:structuretower> * 8, ["pretty",
+  "╱ ╱ ╱",
+  "╱ ◙ ╱",
+  "╱ ╱ ╱"], {
+  "╱": <ore:stickSilver>,       # Silver Rod
+  "◙": <ore:frameGtCrudeSteel>, # Crude Steel Frame Box
+});
 
 //Thermite
 recipes.addShapeless(<advancedrocketry:thermite> * 3, [<ore:dustAluminium>,<ore:dustIron>,<ore:dustIron>]);

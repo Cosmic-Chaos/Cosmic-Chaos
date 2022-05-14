@@ -286,59 +286,6 @@ craft.remake(<gregtech:machine:32102>, ["pretty",
   "T": <ore:springTin>,                      # Tin Spring
 });
 
-# [ULV Electric Pump] from [Rubber Ring][+6]
-craft.remake(<metaitem:electric.pump.ulv>, ["pretty",
-  "* B l",
-  "r R  ",
-  "o   T"], {
-  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
-  "B": <ore:rotorBronze>,                    # Bronze Rotor
-  "l": <ore:gtceWrenches>, # Neutronium Wrench
-  "r": <ore:screwBronze>,                    # Bronze Screw
-  "R": <ore:ringRubber>,                     # Rubber Ring
-  "o": <ore:gtceScrewdrivers>, # Neutronium Screwdriver
-  "T": <ore:gtceHardHammers>, # Neutronium Hammer
-});
-
-# [ULV Electric Motor] from [Iron Rod][+5]
-craft.remake(<metaitem:electric.motor.ulv>, ["pretty",
-  "* ╱ l",
-  "/ *  ",
-  "o   T"], {
-  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
-  "╱": <ore:stickIron>,                      # Iron Rod
-  "l": <ore:gtceWrenches>, # Neutronium Wrench
-  "/": <ore:stickIronMagnetic>,              # Magnetic Iron Rod
-  "o": <ore:gtceWireCutters>, # Neutronium Wire Cutter
-  "T": <ore:gtceHardHammers>, # Neutronium Hammer
-});
-
-# [ULV Electric Piston] from [Small Bronze Gear][+6]
-craft.remake(<metaitem:electric.piston.ulv>, ["pretty",
-  "□ ╱ l",
-  "U ¤  ",
-  "o   T"], {
-  "□": <ore:plateBronze>,                        # Bronze Plate
-  "╱": <ore:stickBronze>,                        # Bronze Rod
-  "l": <ore:gtceWrenches>, # Neutronium Wrench
-  "U": <metaitem:electric.motor.ulv>,      # ULV Electric Motor
-  "¤": <ore:gearSmallBronze>,                    # Small Bronze Gear
-  "o": <ore:gtceFiles>, # Neutronium File
-  "T": <ore:gtceHardHammers>, # Neutronium Hammer
-});
-
-# [ULV Conveyor Module] from [ULV Electric Motor][+5]
-craft.remake(<metaitem:conveyor.module.ulv>, ["pretty",
-  "□ U T",
-  "* □  ",
-  "o   l"], {
-  "□": <ore:plateRubber>,                    # Rubber Sheet
-  "U": <metaitem:electric.motor.ulv>,         # ULV Electric Motor
-  "T": <ore:gtceWireCutters>, # Neutronium Wire Cutter
-  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
-  "o": <ore:gtceScrewdrivers>, # Neutronium Screwdriver
-  "l": <ore:gtceHardHammers>, # Neutronium Hammer
-});
 
 # [LV Machine Casing] from [Neutronium Wrench (HV)][+1]
 craft.make(<gregtech:machine_casing:1>, ["pretty",
@@ -409,11 +356,11 @@ craft.remake(<mbd:gp_eu>, ["pretty",
   "S L S",
   "¤ i ¤"], {
   "U": <metaitem:circuit.vacuum_tube>,                 # Vacuum Tube
-  "M": <extrautils2:passivegenerator:7>, # Manual Mill
+  "M": <contenttweaker:stator>, # Manual Mill
   "S": <ore:screwSilver>,                # Silver Screw
-  "L": <contenttweaker:stator>,           # Stator
+  "L": <gregtech:machine:985>,           # Stator
   "¤": <ore:gearCrudeSteel>,             # Crude Steel Gear
-  "i": <gregtech:machine:985>,               # ULV Machine Hull
+  "i": <ore:springSilver>,               # ULV Machine Hull
 });
 
 
@@ -480,9 +427,9 @@ craft.remake(<projecte:item.pe_philosophers_stone>, ["pretty",
   "▲ ♠ ▲",
   "♠ ♥ ♠",
   "▲ ♠ ▲"], {
-  "▲": <ore:dustGlowstone>,               # Glowstone Dust
+  "▲": <metaitem:foilRedAlloy>,               # Glowstone Dust
   "♠": <projecte:item.pe_covalence_dust>, # Low Covalence Dust
-  "♥": <ore:gemRedstone>,                 # Resonating Redstone Crystal
+  "♥": <ore:gemRedCrystalAlloy>,                 # Resonating Redstone Crystal
 });
 
 # [Sulfur Dust] from [Philosopher's Stone][+1]
@@ -535,13 +482,77 @@ craft.remake(<advancedrocketry:planetidchip>, ["pretty",
   "♠": <projecte:item.pe_covalence_dust>,    # Low Covalence Dust
 });
 
+# [Culture Vat] from [Evertide Amulet][+3]
+craft.remake(<fossil:cultivate>, ["pretty",
+  "* B *",
+  "* E *",
+  "□ □ □"], {
+  "*": <contenttweaker:crystal_green_glass>, # Green Crystal Glass
+  "B": <ore:circuitLv>,                     # Bio-Goo
+  "E": <projecte:item.pe_evertide_amulet>,   # Evertide Amulet
+  "□": <ore:plateWroughtIron>,               # Wrought Iron Plate
+});
 
+
+# [devtech.machine.electromagnetic_separator.ulv.name] from [ULV Machine Hull][+5]
+craft.remake(<metaitem:devtech:electromagnetic_separator.ulv>, ["pretty",
+  "U G t",
+  "G V ╱",
+  "L G t"], {
+  "U": <metaitem:circuit.vacuum_tube>,            # Vacuum Tube
+  "G": <ore:cableGtSingleRedAlloy>, # 1x Red Alloy Cable
+  "t": <ore:wireGtDoubleRedAlloy>,  # 2x Red Alloy Wire
+  "V": <metaitem:hull.ulv>,      # ULV Machine Hull
+  "╱": <ore:stickIronMagnetic>,     # Magnetic Iron Rod
+  "L": <metaitem:conveyor.module.ulv>,  # ULV Conveyor Module
+});
+
+//Cooking Ingots
+furnace.addRecipe(<minecraft:iron_ingot>, <metaitem:hull.plate.broken.0>, 0.0);
+furnace.addRecipe(<metaitem:ingotCopper>, <metaitem:hull.plate.broken.1>, 0.0);
+furnace.addRecipe(<metaitem:ingotTin>, <metaitem:hull.plate.broken.2>, 0.0);
+furnace.addRecipe(<metaitem:ingotSilver>, <metaitem:hull.plate.3>, 0.0);
+
+//Iron + Tin
+electromagnetic_separator.recipeBuilder()
+  .inputs(<contenttweaker:heavy_dust>)
+	.outputs(<metaitem:dustIron>)
+	.chancedOutput(<metaitem:dustSmallTin>, 4000, 1000)
+	.chancedOutput(<metaitem:dustSmallTin>, 2000, 1000)
+	.EUt(2)
+	.duration(100)
+	.buildAndRegister();
+
+furnace.addRecipe(<minecraft:iron_ingot>, <contenttweaker:heavy_dust>, 0.0);
+
+//Copper + Tin
+electromagnetic_separator.recipeBuilder()
+  .inputs(<contenttweaker:light_dust>)
+	.outputs(<metaitem:dustCopper>)
+	.chancedOutput(<metaitem:dustSmallTin>, 4000, 1000)
+	.chancedOutput(<metaitem:dustSmallTin>, 2000, 1000)
+	.EUt(2)
+	.duration(100)
+	.buildAndRegister();
+
+furnace.addRecipe(<metaitem:ingotCopper>, <contenttweaker:light_dust>, 0.0);
+
+//Crude Steel + Lead
+electromagnetic_separator.recipeBuilder()
+  .inputs(<contenttweaker:dense_dust>)
+	.outputs(<metaitem:dustCrudeSteel>)
+	.chancedOutput(<metaitem:dustSmallLead>, 4000, 1000)
+	.chancedOutput(<metaitem:dustSmallLead>, 2000, 1000)
+	.EUt(2)
+	.duration(100)
+	.buildAndRegister();
+//Crude Steel is blast furnace only
+//furnace.remove(<enderio:item_alloy_endergy_ingot>);
+furnace.addRecipe(<ore:ingotCrudeSteel>.firstItem, <contenttweaker:dense_dust>, 0.0);
 
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);
-
-
 
 /*
 //Diamonds to other gems for blast furnace
@@ -564,20 +575,10 @@ furnace.addRecipe(<contenttweaker:crystal_green_glass>, <contenttweaker:dust_cry
 //Tin Alloy
 recipes.addShapeless(<metaitem:dustTinAlloy>*2, [<ore:dustIron>,<ore:dustTin>]);
 
-//Cooking Ingots
-furnace.addRecipe(<minecraft:iron_ingot>, <metaitem:hull.plate.broken.0>, 0.0);
-furnace.addRecipe(<metaitem:ingotCopper>, <metaitem:hull.plate.broken.1>, 0.0);
-furnace.addRecipe(<metaitem:ingotTin>, <metaitem:hull.plate.broken.2>, 0.0);
-furnace.addRecipe(<metaitem:ingotSilver>, <metaitem:hull.plate.3>, 0.0);
-
 //MB Fluid Hatch
 recipes.addShapeless(<mbd:fluid_hatch>, [<metaitem:fluid_hatch.import.ulv>]);
 
-//Wrought Iron recipe in greg_tech.zs
-//furnace.addRecipe(<metaitem:ingotIron>, <metaitem:ingotWroughtIron>, 0.1);
-
 //Glass
-//furnace.addRecipe(<minecraft:glass_pane>, <metaitem:dustSmallGlass>, 0.0); //bad recipe
 furnace.addRecipe(<minecraft:glass>, <metaitem:dustGlass>, 0.0);
 
 # [Rubber Sheet] from [Neutronium Hammer][+1]
