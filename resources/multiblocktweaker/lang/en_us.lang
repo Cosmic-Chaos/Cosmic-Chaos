@@ -7,9 +7,6 @@ recipemap.crushing_tank.name=Station Recycling
 mbt.machine.trash_compactor.name=Trash Compactor
 recipemap.trash_compactor.name=Trash Compaction
 
-mbt.machine.oxygen_collector.name=Life Support System
-recipemap.oxygen_collector.name=Life Support System Operation
-
 mbt.machine.station_generator.name=Backup Generator
 recipemap.station_generator.name=Backup Generation
 
@@ -18,4 +15,7 @@ recipemap.ulv_vat.name=NASA Slow Cooking
 
 mbt.machine.ulv_assembler.name=Careful Assembulator
 recipemap.ulv_assembler.name=Careful Assembly
+
+mbt.machine.pebf.name=Fire Gem Forge
+recipemap.pebf.name=Fire Gem Forgin'
 

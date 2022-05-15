@@ -206,6 +206,24 @@ for item in carbonMonoxideItems {
 	.outputs(<actuallyadditions:item_misc:12>*4)
 .duration(80).EUt(20).buildAndRegister();
 
+// Crude Steel except you can overclock
+<recipemap:alloy_smelter>.recipeBuilder()
+	.inputs(<ore:dustCoal>*2, <ore:ingotIron>)
+	.outputs(<ore:ingotCrudeSteel>.firstItem)
+.duration(120).EUt(6).buildAndRegister();
+
+// Crude Steel except you can overclock
+<recipemap:alloy_smelter>.recipeBuilder()
+	.inputs(<ore:dustCharcoal>*4, <ore:ingotIron>)
+	.outputs(<ore:ingotCrudeSteel>.firstItem)
+.duration(180).EUt(6).buildAndRegister();
+
+// Crude Steel except you can overclock
+<recipemap:alloy_smelter>.recipeBuilder()
+	.inputs(<ore:dustCoke>, <ore:ingotIron>)
+	.outputs(<ore:ingotCrudeSteel>.firstItem)
+.duration(60).EUt(6).buildAndRegister();
+
 // Biomass from Nutrient Distillation + Sapling (for the GT brewery)
 <recipemap:brewery>.recipeBuilder()
 	.inputs(<ore:treeSapling>)

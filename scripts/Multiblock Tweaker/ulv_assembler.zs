@@ -13,9 +13,11 @@ import mods.gregtech.IControllerTile;
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.CTPredicate;
 import mods.gregtech.multiblock.FactoryBlockPattern;
+import mods.gregtech.multiblock.IPatternMatchContext;
 import mods.gregtech.multiblock.functions.ICheckRecipeFunction;
 import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
 import mods.gregtech.multiblock.functions.IUpdateFormedValidFunction;
+import mods.gregtech.multiblock.functions.IFormStructureFunction;
 import mods.gregtech.multiblock.IBlockPattern;
 import mods.gregtech.multiblock.RelativeDirection;
 import mods.gregtech.recipe.FactoryRecipeMap;
@@ -74,14 +76,14 @@ ulv_assembler.hasMaintenanceMechanics = false;
 ulv_assembler.hasMufflerMechanics = false;
 
 # [Flexible Organic Panel] from [Grass][+2]
-craft.reshapeless(<contenttweaker:flexible_organic_panel>, "#GB", {
+craft.shapeless(<contenttweaker:flexible_organic_panel>, "#GB", {
   "#": <ore:plateWood>,                   # Wood Plank
   "G": <minecraft:tallgrass:1>,           # Grass
   "B": <quark:root_dye:1>,                    # Black Dye
 });
 
 # [Crafting Station] from [ULV Machine Casing][+3]
-craft.remake(<metaitem:mbt:ulv_assembler>, ["pretty",
+craft.make(<metaitem:mbt:ulv_assembler>, ["pretty",
   "L C L",
   "# ⌂ #",
   "L # L"], {
@@ -90,6 +92,8 @@ craft.remake(<metaitem:mbt:ulv_assembler>, ["pretty",
   "#": <contenttweaker:flexible_organic_panel>, # Flexible Organic Panel
   "⌂": <gregtech:machine_casing:0>,         # ULV Machine Casing
 });
+
+<metaitem:mbt:ulv_assembler>.addTooltip(format.red("Can only be used in the space station"));
 
 # [Basic Polarizer] from [Magnetic Iron Rod]*2[+4]
 ulv_assembler.recipeMap.recipeBuilder()
@@ -148,7 +152,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
 		<ore:cableGtQuadrupleTin>,      # 4x Tin Cable
-		<ore:gemDiamond>,               # Diamond
+		<ore:gemRedCrystalAlloy>,       # Fire Gem
 		<contenttweaker:internals_t2>   # Complex Internals
 	)
 	.outputs(<gregtech:machine:440>)
@@ -275,4 +279,11 @@ ulv_assembler.recipeMap.recipeBuilder()
 	)
 	.outputs(<cosmic_core:cc_meta_item:3>)
 .duration(200).EUt(4).buildAndRegister();
+
+// Check correct dimension
+ulv_assembler.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){
+	if(controller.getWorld().getDimension() != 33){
+		controller.invalidateStructure();
+	}
+} as IFormStructureFunction;
 

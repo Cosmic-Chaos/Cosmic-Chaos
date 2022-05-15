@@ -10,9 +10,11 @@ import mods.gregtech.IControllerTile;
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.CTPredicate;
 import mods.gregtech.multiblock.FactoryBlockPattern;
+import mods.gregtech.multiblock.IPatternMatchContext;
 import mods.gregtech.multiblock.functions.ICheckRecipeFunction;
 import mods.gregtech.multiblock.functions.IPatternBuilderFunction;
 import mods.gregtech.multiblock.functions.IUpdateFormedValidFunction;
+import mods.gregtech.multiblock.functions.IFormStructureFunction;
 import mods.gregtech.multiblock.IBlockPattern;
 import mods.gregtech.multiblock.RelativeDirection;
 import mods.gregtech.recipe.FactoryRecipeMap;
@@ -112,6 +114,13 @@ val getCenter = function (pos as IBlockPos, facing as IFacing) as IBlockPos[] {
         //if (<contenttweaker:crystal_green_glass> in world.getPickedBlock(pos, null, null))
         //server.commandManager.executeCommand(server, "msg @p Bio-Organic Fabricator needs cleaning!");
 
+// Check correct dimension
+bio_organic_fabricator.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){
+	if(controller.getWorld().getDimension() != 33){
+		controller.invalidateStructure();
+	}
+} as IFormStructureFunction;
+
 // check if any glass is cleam, if so, start.
 bio_organic_fabricator.checkRecipeFunction = function(controller as IControllerTile, recipe as IRecipe, consumeIfSuccess as bool) as bool {
     val world as IWorld = controller.world;
@@ -171,6 +180,9 @@ craft.make(<metaitem:mbt:bio_organic_fabricator>, ["pretty",
   "⌂": <gregtech:machine_casing>,        # ULV Machine Casing
   "L": <metaitem:circuit.vacuum_tube>,                  # Electronic Circuit
 });
+
+<metaitem:mbt:bio_organic_fabricator>.addTooltip(format.red("Can only be used in the space station"));
+<metaitem:mbt:bio_organic_fabricator>.addTooltip(format.red("Sometimes the glass becomes covered with goo"));
 
 // Recipes	
 
