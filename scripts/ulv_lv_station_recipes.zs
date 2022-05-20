@@ -745,6 +745,19 @@ craft.make(<gregtech:machine:545>, ["pretty",
   "t": <ore:wireGtDoubleTin>,      # 2x Tin Wire
 });
 
+# [Basic Electrolyzer] from [LV Machine Hull][+4]
+recipes.removeByRecipeName("gregtech:gregtech.machine.electrolyzer.lv");
+craft.make(<gregtech:machine:275>, ["pretty",
+  "G ■ G",
+  "G V G",
+  "L t L"], {
+  "G": <ore:wireGtSingleGold>,    # 1x Gold Wire
+  "■": <ore:blockGlassColorless>, # Glass
+  "V": <gregtech:machine:986>,    # LV Machine Hull
+  "L": <ore:circuitLv>,           # Microprocessor
+  "t": <ore:cableGtSingleNickel>, # 1x Nickel Cable
+});
+
 # [Spores Recreator] from [ULV Machine Casing][+6]
 recipes.removeByRecipeName("industrialforegoing:spores_recreator");
 craft.make(<industrialforegoing:spores_recreator>, ["pretty",

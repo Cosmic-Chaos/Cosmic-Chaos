@@ -1,5 +1,6 @@
 import crafttweaker.item.IItemStack;
 import mods.jei.JEI.removeAndHide;
+import mods.jei.JEI.hideCategory;
 print("==================== loading mods blank.zs ====================");
 #########################################################################################
 
@@ -116,7 +117,73 @@ val itemstoRemoveAndHide =
 <harvestcraft:shippingbin>,
 <harvestcraft:market>,
 <harvestcraft:well>,
+<harvestcraft:watertrap>, // gtceu already adds fishers
+<harvestcraft:waterfilter>,
+<harvestcraft:grinder>,
+<harvestcraft:apiary>,
+<harvestcraft:presser>,
+<harvestcraft:honeycombitem>,
 <farmingforblockheads:market>,
+<farmingforblockheads:feeding_trough>,
+
+<futuremc:acacia_trapdoor>,
+<futuremc:jungle_trapdoor>,
+<futuremc:birch_trapdoor>,
+<futuremc:spruce_trapdoor>,
+<futuremc:dark_oak_trapdoor>, // quark also adds trapdoors
+<futuremc:brick_wall>,
+<futuremc:granite_wall>,
+<futuremc:andesite_wall>,
+<futuremc:diorite_wall>,
+<futuremc:sandstone_wall>,
+<futuremc:red_sandstone_wall>,
+<futuremc:stone_brick_wall>,
+<futuremc:mossy_stone_brick_wall>,
+<futuremc:nether_brick_wall>,
+<futuremc:red_nether_brick_wall>,
+<futuremc:end_stone_brick_wall>,
+<futuremc:prismarine_wall>,
+
+<industrialforegoing:petrified_fuel_generator>,// rf gen
+<industrialforegoing:enchantment_extractor>,// pnc pressure chamber
+<industrialforegoing:enchantment_aplicator>,// pnc pressure chamber
+<industrialforegoing:potion_enervator>,// vanilla/gtceu brewing
+<industrialforegoing:water_resources_collector>,// vanilla/gtceu fishing
+<industrialforegoing:block_destroyer>,// IT/gtceu/ae
+<industrialforegoing:block_placer>,// IT/gtceu/ae
+<industrialforegoing:lava_fabricator>,// ID/AA
+<industrialforegoing:black_hole_controller>,// mk2
+<industrialforegoing:dye_mixer>,// gtceu dye mixing
+<industrialforegoing:enchantment_invoker>,// fishing
+<industrialforegoing:resourceful_furnace>,// gtceu
+<industrialforegoing:oredictionary_converter>,// exploit haven
+<industrialforegoing:item_splitter>,// any other item transport
+<industrialforegoing:biofuel_generator>,// rf gen
+<industrialforegoing:protein_generator>,// rf gen
+<industrialforegoing:froster>,// gtceu
+<industrialforegoing:enchantment_refiner>,// IT/eio
+<industrialforegoing:crop_sower>,// farming station
+<industrialforegoing:crop_recolector>,// farming station
+<industrialforegoing:crop_enrich_material_injector>,// farming station
+<industrialforegoing:energy_field_provider>,// xu2 wireless battery
+<industrialforegoing:fluid_pump>,// gtceu
+<industrialforegoing:water_condensator>,// gtceu/xu2/cookingforblockheads
+<industrialforegoing:latex_processing_unit>,// can add recipe for latex -> tiny dry rubber
+<industrialforegoing:ore_processor>,// player sim/mek user
+<industrialforegoing:villager_trade_exchanger>,// come on, you know why
+<teslacorelib:machine_case>,
+
+<actuallyadditions:block_fishing_net>,
+<actuallyadditions:block_miner>,
+<actuallyadditions:block_farmer>,
+<actuallyadditions:block_bio_reactor>,
+<actuallyadditions:block_oil_generator>,
+<actuallyadditions:block_feeder>,
+<actuallyadditions:block_furnace_double>,
+<actuallyadditions:block_furnace_solar>,
+<actuallyadditions:block_heat_collector>,
+<actuallyadditions:item_color_lens>,
+<actuallyadditions:item_mining_lens>,
 ]
  as IItemStack[];
 
@@ -140,6 +207,43 @@ for item in itemstoRemove {
 }
 
 
+var name_removals = [
+    "futuremc:oak_trap_door",
+    "aether_legacy:saddle", // gtceu adds a recipe
+    "harvestcraft:freshwateritem_listallwater",
+    "erebus:honey_comb",
+    "harvestcraft:honeycomb",
+    "gregtechfoodoption:gtfo_hand_zest1",
+    "gregtechfoodoption:gtfo_hand_zest2",
+    "gregtechfoodoption:gtfo_hand_zest3",
+    "gregtechfoodoption:gtfo_hand_kubide_kebab_meat",
+    "gregtechfoodoption:gtfo_hand_kubide_kebab",
+    "gregtechfoodoption:gtfo_hand_barg_kebab_meat",
+    "gregtechfoodoption:gtfo_hand_barg_kebab",
+    "gregtechfoodoption:gtfo_hand_tomato_kebab",
+    "gregtechfoodoption:gtfo_hand_onion_kebab",
+    "industrialforegoing:black_hole_controller_reworked_black_hole_controller_deprecated",
+    "industrialforegoing:tree_fluid_extractor",
+] as string[];
+
+for item in name_removals {
+    recipes.removeByRecipeName(item);
+}
+
+var category_removals = [
+	"jehc.presser",
+	"jehc.apiary",
+	"jehc.water_trap",
+	"jehc.grinder",
+	"jehc.waterfilter",
+] as string[];
+
+for name in category_removals {
+	hideCategory(name);
+}
+
+// remove bugged sponge iron recipe
+furnace.remove(<gregtech:meta_ingot:0>);
 
 //Cheap Hoppper
 recipes.removeShaped(<minecraft:hopper>, [[<minecraft:iron_ingot>, null, <minecraft:iron_ingot>],[<minecraft:iron_ingot>, <ore:chestWood>, <minecraft:iron_ingot>], [null, <minecraft:iron_ingot>, null]]);
