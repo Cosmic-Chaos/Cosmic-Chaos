@@ -40,6 +40,11 @@ recipes.removeShapeless(shard * 9, [crystal]);
 //Red Shards burn 32 items
 furnace.setFuel(<actuallyadditions:item_crystal_shard>, 6400);
 
+AtomicReconstructor.removeRecipe(<actuallyadditions:item_color_lens>);
+AtomicReconstructor.removeRecipe(<actuallyadditions:item_explosion_lens>);
+AtomicReconstructor.addRecipe(<actuallyadditions:item_explosion_lens>, <actuallyadditions:item_misc:18>, 10000);
+AtomicReconstructor.addRecipe(<minecraft:web>, <harvestcraft:pamspiderweb>, 1000);
+
 <actuallyadditions:item_knife>.maxDamage = 200;
 ##########################################################################################
 print("==================== end of mods blank.zs ====================");
