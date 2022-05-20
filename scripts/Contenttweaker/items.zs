@@ -33,6 +33,9 @@ VanillaFactory.createItem("scrap_rubber").register();
 VanillaFactory.createItem("heavy_dust").register();
 VanillaFactory.createItem("light_dust").register();
 VanillaFactory.createItem("dense_dust").register();
+
+VanillaFactory.createItem("root_pulp").register();
+VanillaFactory.createItem("root_paper").register();
 /*
 VanillaFactory.createItem("dust_crystal_green").register();
 VanillaFactory.createItem("dust_crystal_red").register();
@@ -109,5 +112,9 @@ emitterULV.register();
 val cannedBeans = VanillaFactory.createItemFood("canned_beans", 8);
 cannedBeans.saturation = 0.25;
 cannedBeans.register();
+
+val cannedCorn = VanillaFactory.createItemFood("canned_corn", 5);
+cannedCorn.saturation = 2;
+cannedCorn.register();
 ##########################################################################################
 print("==================== end of Items.zs ====================");

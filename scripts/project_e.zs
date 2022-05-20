@@ -1,6 +1,7 @@
 import crafttweaker.item.IItemStack;
 import mods.projecte.WorldTransmutation;
 import crafttweaker.oredict.IOreDictEntry;
+import crafttweaker.block.IBlockState;
 print("==================== loading mods blank.zs ====================");
 ##########################################################################################
 
@@ -100,8 +101,20 @@ recipes.addShaped(material[1], [
 
 //WorldTransmutation.add(IBlockState output, IBlockState input, @Optional IBlockState sneakOutput);
 
-//Glowstone
-WorldTransmutation.add(<blockstate:minecraft:glowstone>, <blockstate:minecraft:redstone_block>);
+val twoWayConversion as IBlockState[IBlockState] = {
+
+<blockstate:minecraft:glowstone>:<blockstate:minecraft:redstone_block>,
+
+<blockstate:chisel:factory:variation=9>:<blockstate:chisel:technicalnew:variation=2>, // Tier 1
+<blockstate:chisel:laboratory:variation=11>:<blockstate:chisel:laboratory:variation=5>, // Tier 2
+
+} as IBlockState[IBlockState];
+for blockOne, blockTwo in twoWayConversion {
+
+WorldTransmutation.add(blockOne, blockTwo);
+WorldTransmutation.add(blockTwo, blockOne);
+
+}
 
 
 

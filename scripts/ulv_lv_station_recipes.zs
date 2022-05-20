@@ -272,21 +272,6 @@ craft.remake(<advancedrocketry:sawblade>, ["pretty",
   "□": <ore:plateIron>,           # Iron Plate
 });
 
-
-# [Primitive Brewery] from [ULV Machine Hull][+5]
-craft.remake(<gregtech:machine:32102>, ["pretty",
-  "■ V ■",
-  "* L *",
-  "U T U"], {
-  "■": <ore:blockGlassColorless>, # Glass
-  "V": <metaitem:electric.pump.ulv>,   # ULV Electric Pump
-  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
-  "L": <metaitem:hull.ulv>,               # ULV Machine Hull
-  "U": <metaitem:circuit.vacuum_tube>,                     # Vacuum Tube
-  "T": <ore:springTin>,                      # Tin Spring
-});
-
-
 # [LV Machine Casing] from [Neutronium Wrench (HV)][+1]
 craft.make(<gregtech:machine_casing:1>, ["pretty",
   "□ □ □",
@@ -493,6 +478,34 @@ craft.remake(<fossil:cultivate>, ["pretty",
   "□": <ore:plateWroughtIron>,               # Wrought Iron Plate
 });
 
+# [Coated Circuit Board] from [Wood Plank][+1]
+craft.remake(<metaitem:board.coated>, ["pretty",
+  "# S",
+  "S  "], {
+  "#": <ore:plateCaveRoot> | <ore:plateWood>, # Wood Plank
+  "S": <metaitem:rubber_drop>,        # Sticky Resin
+});
+
+# [Coated Circuit Board]*3 from [Wood Plank][+1]
+craft.remake(<metaitem:board.coated> * 3, ["pretty",
+  "S S S",
+  "# # #",
+  "S S S"], {
+  "S": <metaitem:rubber_drop>,        # Sticky Resin
+  "#": <ore:plateCaveRoot> | <ore:plateWood>, # Wood Plank
+});
+
+# [Resistor]*2 from [Carbon Dust][+3]
+craft.remake(<metaitem:component.resistor> * 2, ["pretty",
+  "S p S",
+  "F ▲ F",
+  "  p  "], {
+  "S": <metaitem:rubber_drop>, # Sticky Resin
+  "p": <ore:paper> | <contenttweaker:root_paper>, # Paper
+  "F": <ore:wireFineCopper> | <ore:wireGtSingleCopper>,       # Fine Copper Wire
+  "▲": <ore:dustCarbon> | <ore:dustCarbon> | <ore:dustCharcoal>,           # Carbon Dust
+});
+
 
 # [devtech.machine.electromagnetic_separator.ulv.name] from [ULV Machine Hull][+5]
 craft.remake(<metaitem:devtech:electromagnetic_separator.ulv>, ["pretty",
@@ -505,6 +518,44 @@ craft.remake(<metaitem:devtech:electromagnetic_separator.ulv>, ["pretty",
   "V": <metaitem:hull.ulv>,      # ULV Machine Hull
   "╱": <ore:stickIronMagnetic>,     # Magnetic Iron Rod
   "L": <metaitem:conveyor.module.ulv>,  # ULV Conveyor Module
+});
+
+# [Broken Iron Scraps] from [Heavy Hull Plate][+1]
+craft.make(<metaitem:hull.plate.broken.0>, ["pretty",
+  "T",
+  "□"], {
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+  "□": <metaitem:hull.plate.0>, # Heavy Hull Plate
+});
+
+# [Broken Tin Scraps] from [Heavy Hull Plate][+1]
+craft.make(<metaitem:hull.plate.broken.2>, ["pretty",
+  "T □"], {
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+  "□": <metaitem:hull.plate.0>, # Heavy Hull Plate
+});
+
+# [Broken Copper Scraps] from [Light Hull Plate][+1]
+craft.make(<metaitem:hull.plate.broken.1>, ["pretty",
+  "T",
+  "□"], {
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+  "□": <metaitem:hull.plate.1>, # Light Hull Plate
+});
+
+# [Redstone] from [Simple Internals][+1]
+craft.make(<minecraft:redstone>, ["pretty",
+  "T",
+  "§"], {
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+  "§": <contenttweaker:internals_t1>, # Simple Internals
+});
+
+# [Small Pile of Coal Dust] from [Simple Internals][+1]
+craft.make(<metaitem:dustSmallCoal>, ["pretty",
+  "T §"], {
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+  "§": <contenttweaker:internals_t1>, # Simple Internals
 });
 
 //Cooking Ingots
@@ -707,6 +758,5 @@ craft.make(<industrialforegoing:spores_recreator>, ["pretty",
   "□": <ore:plateDoubleTinAlloy>,     # Double Tin Alloy Plate
   "¤": <ore:gearIron>,                # Iron Gear
 });
-
 ##########################################################################################
 print("==================== end of ulv_lv_station_recipes.zs ====================");

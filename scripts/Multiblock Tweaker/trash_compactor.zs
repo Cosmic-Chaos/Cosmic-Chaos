@@ -94,7 +94,7 @@ craft.remake(<advancedrocketry:platepress>, ["pretty",
 	
 // Calc stuff
 trash_compactor.recipeMap.recipeBuilder()
-    .duration(120)
+    .duration(240)
     .EUt(3)
     .inputs(<quark:iron_button>*9)
     .outputs(<calculator:calculatorassembly>)
@@ -144,6 +144,7 @@ for plant, n in trashCompactorPlantMap {
 // 1 -> 1
 val trashCompactorOneToOneMap as IItemStack[IOreDictEntry] = {
     <ore:dustWood>:<ore:plateWood>.firstItem,
+    <ore:dustCaveRoot>:<ore:plateCaveRoot>.firstItem,
     <ore:cobblestone>:<minecraft:gravel>,
     <ore:blockGlass>:<minecraft:sand>,
 } as IItemStack[IOreDictEntry];
@@ -156,6 +157,14 @@ for input, output in trashCompactorOneToOneMap {
 		.outputs(output)
 	.buildAndRegister();
 }
+
+trash_compactor.recipeMap.recipeBuilder()
+	.duration(120)
+	.EUt(3)
+	.inputs(<contenttweaker:root_pulp>)
+	.outputs(<contenttweaker:root_paper>)
+.buildAndRegister();
+
 
 // Check correct dimension
 trash_compactor.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){

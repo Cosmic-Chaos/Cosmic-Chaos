@@ -152,6 +152,24 @@ organicOverloader.setToolLevel(1);
 organicOverloader.setBlockSoundType(<soundtype:wood>);
 organicOverloader.register();
 
+var perfect_sample_ruby_itemColor = (itemColor(0xdb001d));
+var perfect_sample_ruby_blockColor = (blockColor(0xdb001d));
+
+var perfect_sample_ruby = VanillaFactory.createBlock("perfect_sample_ruby", <blockmaterial:glass>);
+perfect_sample_ruby.setLightValue(0);
+perfect_sample_ruby.setBlockHardness(1.0);
+perfect_sample_ruby.setBlockResistance(1.0);
+perfect_sample_ruby.setToolClass("pickaxe");
+perfect_sample_ruby.setToolLevel(1);
+perfect_sample_ruby.setBlockSoundType(<soundtype:glass>);
+perfect_sample_ruby.setFullBlock(false);
+perfect_sample_ruby.setTranslucent(true);
+perfect_sample_ruby.setBlockLayer("TRANSLUCENT");
+perfect_sample_ruby.setLightOpacity(0);
+perfect_sample_ruby.blockColorSupplier = perfect_sample_ruby_blockColor;
+perfect_sample_ruby.itemColorSupplier = perfect_sample_ruby_itemColor;
+perfect_sample_ruby.register();
+
 
 ///////////////////////////////////////////////////////////
 //////////////////////    BLUE    /////////////////////////

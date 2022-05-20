@@ -72,6 +72,7 @@ val itemstoRemoveAndHide =
 <advancedrocketry:cuttingmachine>,
 <advancedrocketry:lathe>,
 <advancedrocketry:rollingmachine>,
+<advancedrocketry:sawbladeiron>,
 
 <nuclearcraft:alloy_furnace>, // Only NC Machines left are the Fuel Reprocessor and Decay Hastener, might remove still
 <nuclearcraft:separator>,

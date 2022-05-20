@@ -252,7 +252,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Smash them on the ground to recover some of the useful components!",
+          "desc:8": "Shift-Right click on some blocks around the station to recover some useful Components!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -263,7 +263,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Heavy Hull Plating",
+          "name:8": "Scraping",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -290,6 +290,18 @@
               "Damage:2": 100,
               "OreDict:8": "",
               "id:8": "cosmic_core:cc_meta_item"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": "",
+              "id:8": "cosmic_core:cc_meta_item"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:internals_t1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -298,23 +310,24 @@
     },
     "5:10": {
       "preRequisites:11": [
-        2
+        109,
+        111
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Smash them on the ground to recover some of the useful components!",
+          "desc:8": "Now that you have access to several machines, you\u0027ll be able to make §6Circuit Boards§r after a bit of a long process. Life in space, am I right?",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 9,
+            "Damage:2": 381,
             "OreDict:8": "",
-            "id:8": "chisel:factory"
+            "id:8": "gregtech:meta_item_1"
           },
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Light Hull Plating",
+          "name:8": "Circuit Boards",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -325,7 +338,7 @@
           "visibility:8": "CHAIN"
         }
       },
-      "questID:3": 5,
+      "questID:3": 7,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
@@ -338,9 +351,51 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 101,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "cosmic_core:cc_meta_item"
+              "id:8": "minecraft:deadbush"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "treeSapling",
+              "id:8": "minecraft:sapling"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "logWood",
+              "id:8": "minecraft:log"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 1617,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 1617,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_plate"
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "fossil:bio_goo"
+            },
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 438,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            },
+            "7:10": {
+              "Count:3": 1,
+              "Damage:2": 381,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -349,23 +404,23 @@
     },
     "6:10": {
       "preRequisites:11": [
-        2
+        4
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "These are found after harvesting other blocks for the plating.\n\nSmash them on the ground to recover some of the useful components!",
+          "desc:8": "Once you\u0027ve used the Crowbar to remove components, you\u0027ll need to break them down for further use in smelting.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 105,
             "OreDict:8": "",
-            "id:8": "contenttweaker:internals_t1"
+            "id:8": "cosmic_core:cc_meta_item"
           },
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Internals",
+          "name:8": "Breaking Down",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -376,7 +431,7 @@
           "visibility:8": "CHAIN"
         }
       },
-      "questID:3": 6,
+      "questID:3": 8,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
@@ -389,17 +444,29 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 105,
               "OreDict:8": "",
-              "id:8": "contenttweaker:internals_t1"
+              "id:8": "cosmic_core:cc_meta_item"
             },
             "1:10": {
+              "Count:3": 1,
+              "Damage:2": 107,
+              "OreDict:8": "",
+              "id:8": "cosmic_core:cc_meta_item"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 106,
+              "OreDict:8": "",
+              "id:8": "cosmic_core:cc_meta_item"
+            },
+            "3:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "minecraft:redstone"
             },
-            "2:10": {
+            "4:10": {
               "Count:3": 1,
               "Damage:2": 271,
               "OreDict:8": "",
@@ -808,7 +875,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 16,
@@ -1047,9 +1114,7 @@
     },
     "19:10": {
       "preRequisites:11": [
-        109,
-        107,
-        111
+        7
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -1073,7 +1138,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 25,
@@ -4331,7 +4396,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 98,
@@ -4359,8 +4424,6 @@
     "83:10": {
       "preRequisites:11": [
         4,
-        6,
-        5,
         112
       ],
       "properties:10": {
@@ -4417,7 +4480,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Spaaaaace!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4487,7 +4550,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 101,
@@ -4538,7 +4601,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 102,
@@ -4650,7 +4713,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 104,
@@ -4683,7 +4746,7 @@
     },
     "89:10": {
       "preRequisites:11": [
-        121
+        2
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -4694,7 +4757,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "actuallyadditions:block_crystal_cluster_emerald"
+            "id:8": "actuallyadditions:block_crystal_cluster_redstone"
           },
           "ismain:1": 1,
           "issilent:1": 0,
@@ -4723,12 +4786,6 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 4,
-              "OreDict:8": "",
-              "id:8": "actuallyadditions:item_crystal_shard"
-            },
-            "1:10": {
-              "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "actuallyadditions:item_crystal_shard"
@@ -4739,40 +4796,6 @@
       }
     },
     "90:10": {
-      "preRequisites:11": [
-        104,
-        97
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 1,
-          "desc:8": "Hidden",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ismain:1": 0,
-          "issilent:1": 1,
-          "lockedprogress:1": 0,
-          "name:8": "Power! OR Hand Crank Power",
-          "questlogic:8": "OR",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "HIDDEN"
-        }
-      },
-      "questID:3": 107,
-      "rewards:9": {},
-      "tasks:9": {}
-    },
-    "91:10": {
       "preRequisites:11": [
         15
       ],
@@ -4820,7 +4843,7 @@
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 32007,
+              "Damage:2": 32001,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -4847,7 +4870,7 @@
         }
       }
     },
-    "92:10": {
+    "91:10": {
       "preRequisites:11": [
         3
       ],
@@ -4901,7 +4924,7 @@
             },
             "2:10": {
               "Count:3": 1,
-              "Damage:2": 32002,
+              "Damage:2": 32003,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -4910,7 +4933,7 @@
         }
       }
     },
-    "93:10": {
+    "92:10": {
       "preRequisites:11": [
         60,
         102
@@ -4974,7 +4997,7 @@
         }
       }
     },
-    "94:10": {
+    "93:10": {
       "preRequisites:11": [
         115,
         101
@@ -4982,7 +5005,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you run this, you\u0027ll need to keep the Crystal Glass free from contaminants by scraping clean any §aBio Covered Glass§r that shows up. \n\nThe §aBio-Goo§r that is collected this way is quite useful.",
+          "desc:8": "As you run this, you\u0027ll need to keep the Crystal Glass free from contaminants by scraping clean any §aBio Covered Glass§r that shows up. \n\nThe §aBio-Goo§r collected this way is quite useful.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5032,7 +5055,7 @@
         }
       }
     },
-    "95:10": {
+    "94:10": {
       "preRequisites:11": [
         0
       ],
@@ -5115,9 +5138,10 @@
         }
       }
     },
-    "96:10": {
+    "95:10": {
       "preRequisites:11": [
-        99
+        99,
+        8
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5183,14 +5207,14 @@
         }
       }
     },
-    "97:10": {
+    "96:10": {
       "preRequisites:11": [
         3
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Faster Smelting!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5234,10 +5258,11 @@
         }
       }
     },
-    "98:10": {
+    "97:10": {
       "preRequisites:11": [
-        106,
-        108
+        108,
+        121,
+        106
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -5292,7 +5317,7 @@
         }
       }
     },
-    "99:10": {
+    "98:10": {
       "preRequisites:11": [
         109
       ],
@@ -5345,14 +5370,14 @@
         }
       }
     },
-    "100:10": {
+    "99:10": {
       "preRequisites:11": [
         102
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "These work very similar to Item Pipes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5371,7 +5396,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 118,
@@ -5402,14 +5427,14 @@
         }
       }
     },
-    "101:10": {
+    "100:10": {
       "preRequisites:11": [
         113
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Until you can craft conveyers on your own, you\u0027ll have to rely on good old fasioned Looting!",
+          "desc:8": "Until you can craft conveyers on your own, you\u0027ll have to rely on good old fasioned Looting!\n\nHow GTCEu pipes take a bit of practice if you haven\u0027t used them before. §9You\u0027ll need a Wrench to configure where each pipe section is attached to§r, §aand a Screwdriver to configure the Conveyers for extracting items from inventories.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5428,7 +5453,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
+          "visibility:8": "NORMAL"
         }
       },
       "questID:3": 119,
@@ -5459,7 +5484,7 @@
         }
       }
     },
-    "102:10": {
+    "101:10": {
       "preRequisites:11": [
         113
       ],
@@ -5520,7 +5545,7 @@
         }
       }
     },
-    "103:10": {
+    "102:10": {
       "preRequisites:11": [
         25,
         125,
@@ -5530,7 +5555,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "You\u0027ll probably want around 16 Launch Pads.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5549,7 +5574,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 123,
@@ -5586,7 +5611,7 @@
         }
       }
     },
-    "104:10": {
+    "103:10": {
       "preRequisites:11": [
         123
       ],
@@ -5612,7 +5637,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 124,
@@ -5673,7 +5698,7 @@
         }
       }
     },
-    "105:10": {
+    "104:10": {
       "preRequisites:11": [
         25,
         117
@@ -5700,7 +5725,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
+          "visibility:8": "CHAIN"
         }
       },
       "questID:3": 125,
@@ -5779,21 +5804,21 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
-          "y:3": -72
+          "y:3": -36
         },
         "5:10": {
-          "id:3": 5,
+          "id:3": 7,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 0
+          "x:3": 528,
+          "y:3": -36
         },
         "6:10": {
-          "id:3": 6,
+          "id:3": 8,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -36
+          "x:3": 132,
+          "y:3": -54
         },
         "7:10": {
           "id:3": 9,
@@ -5835,7 +5860,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 612,
-          "y:3": 12
+          "y:3": 6
         },
         "13:10": {
           "id:3": 95,
@@ -5853,16 +5878,16 @@
         },
         "15:10": {
           "id:3": 97,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 492,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 468,
           "y:3": 0
         },
         "16:10": {
           "id:3": 98,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 444,
+          "x:3": 432,
           "y:3": -36
         },
         "17:10": {
@@ -5870,7 +5895,7 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
-          "y:3": -36
+          "y:3": -18
         },
         "18:10": {
           "id:3": 100,
@@ -5897,122 +5922,115 @@
           "id:3": 104,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 492,
+          "x:3": 468,
           "y:3": -72
         },
         "22:10": {
           "id:3": 106,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 252,
-          "y:3": -108
+          "x:3": 84,
+          "y:3": -84
         },
         "23:10": {
-          "id:3": 107,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 528,
-          "y:3": -36
-        },
-        "24:10": {
           "id:3": 108,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 264,
           "y:3": -36
         },
-        "25:10": {
+        "24:10": {
           "id:3": 109,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 492,
           "y:3": -36
         },
-        "26:10": {
+        "25:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 372,
           "y:3": 0
         },
-        "27:10": {
+        "26:10": {
           "id:3": 111,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 480,
           "y:3": -132
         },
-        "28:10": {
+        "27:10": {
           "id:3": 112,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 84,
-          "y:3": 36
+          "y:3": 12
         },
-        "29:10": {
+        "28:10": {
           "id:3": 113,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 180,
           "y:3": -36
         },
-        "30:10": {
+        "29:10": {
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 432,
           "y:3": -84
         },
-        "31:10": {
+        "30:10": {
           "id:3": 115,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 324,
           "y:3": -144
         },
-        "32:10": {
+        "31:10": {
           "id:3": 117,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 552,
-          "y:3": 0
+          "y:3": 6
         },
-        "33:10": {
+        "32:10": {
           "id:3": 118,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 348,
           "y:3": -60
         },
-        "34:10": {
+        "33:10": {
           "id:3": 119,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 12
         },
-        "35:10": {
+        "34:10": {
           "id:3": 121,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -84
         },
-        "36:10": {
+        "35:10": {
           "id:3": 123,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 684,
           "y:3": -36
         },
-        "37:10": {
+        "36:10": {
           "id:3": 124,
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": 744,
           "y:3": -42
         },
-        "38:10": {
+        "37:10": {
           "id:3": 125,
           "sizeX:3": 24,
           "sizeY:3": 24,
@@ -6061,286 +6079,279 @@
       },
       "quests:9": {
         "0:10": {
-          "id:3": 6,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -216
-        },
-        "1:10": {
           "id:3": 10,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -96
         },
-        "2:10": {
+        "1:10": {
           "id:3": 11,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -132
         },
-        "3:10": {
+        "2:10": {
           "id:3": 12,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": -132
         },
-        "4:10": {
+        "3:10": {
           "id:3": 13,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 96,
           "y:3": -168
         },
-        "5:10": {
+        "4:10": {
           "id:3": 14,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -60
         },
-        "6:10": {
+        "5:10": {
           "id:3": 20,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 60,
           "y:3": -24
         },
-        "7:10": {
+        "6:10": {
           "id:3": 21,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 132
         },
-        "8:10": {
+        "7:10": {
           "id:3": 22,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": 168
         },
-        "9:10": {
+        "8:10": {
           "id:3": 23,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": 120
         },
-        "10:10": {
+        "9:10": {
           "id:3": 28,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 120
         },
-        "11:10": {
+        "10:10": {
           "id:3": 29,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 156
         },
-        "12:10": {
+        "11:10": {
           "id:3": 30,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -150
         },
-        "13:10": {
+        "12:10": {
           "id:3": 31,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -114
         },
-        "14:10": {
+        "13:10": {
           "id:3": 32,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -84,
           "y:3": -186
         },
-        "15:10": {
+        "14:10": {
           "id:3": 33,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -132
         },
-        "16:10": {
+        "15:10": {
           "id:3": 35,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": -168
         },
-        "17:10": {
+        "16:10": {
           "id:3": 36,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
           "y:3": -132
         },
-        "18:10": {
+        "17:10": {
           "id:3": 37,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -48,
           "y:3": -96
         },
-        "19:10": {
+        "18:10": {
           "id:3": 38,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 132
         },
-        "20:10": {
+        "19:10": {
           "id:3": 39,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 168
         },
-        "21:10": {
+        "20:10": {
           "id:3": 40,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -204
         },
-        "22:10": {
+        "21:10": {
           "id:3": 41,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -240
         },
-        "23:10": {
+        "22:10": {
           "id:3": 42,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 168,
           "y:3": -276
         },
-        "24:10": {
+        "23:10": {
           "id:3": 43,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -276
         },
-        "25:10": {
+        "24:10": {
           "id:3": 44,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -168
         },
-        "26:10": {
+        "25:10": {
           "id:3": 45,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -132
         },
-        "27:10": {
+        "26:10": {
           "id:3": 46,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -96
         },
-        "28:10": {
+        "27:10": {
           "id:3": 47,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -60
         },
-        "29:10": {
+        "28:10": {
           "id:3": 48,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": -24
         },
-        "30:10": {
+        "29:10": {
           "id:3": 49,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 12
         },
-        "31:10": {
+        "30:10": {
           "id:3": 50,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 48
         },
-        "32:10": {
+        "31:10": {
           "id:3": 51,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -48
         },
-        "33:10": {
+        "32:10": {
           "id:3": 52,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 48
         },
-        "34:10": {
+        "33:10": {
           "id:3": 53,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 84
         },
-        "35:10": {
+        "34:10": {
           "id:3": 54,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 204,
           "y:3": 96
         },
-        "36:10": {
+        "35:10": {
           "id:3": 55,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": 24
         },
-        "37:10": {
+        "36:10": {
           "id:3": 56,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -120
         },
-        "38:10": {
+        "37:10": {
           "id:3": 57,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -12
         },
-        "39:10": {
+        "38:10": {
           "id:3": 58,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 132,
           "y:3": -84
         },
-        "40:10": {
+        "39:10": {
           "id:3": 93,
           "sizeX:3": 24,
           "sizeY:3": 24,

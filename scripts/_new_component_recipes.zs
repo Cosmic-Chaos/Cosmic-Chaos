@@ -14,25 +14,6 @@ print("==================== loading new_component_recipes.zs ===================
 
 ///////////////// SHEETS ///////////////////
 val sheet as OrePrefix = OrePrefix.getPrefix("sheet");
-/*
-val sheetMap as IItemStack[IOreDictEntry] = {
-    <ore:plateIron>:<ore:sheetIron>.firstItem,
-    <ore:plateCopper>:<ore:sheetCopper>.firstItem,
-    <ore:plateGold>:<ore:sheetGold>.firstItem,
-    <ore:plateBronze>:<ore:sheetBronze>.firstItem,
-    <ore:plateTin>:<ore:sheetTin>.firstItem
-} as IItemStack[IOreDictEntry];
-
-for plate, sheet in sheetMap {
-    recipes.addShaped(sheet, [[<ore:gtceSaws>, plate]]);
-    cutter.recipeBuilder().EUt(7).duration(200)
-        .fluidInputs(<liquid:lubricant>)
-        .inputs(plate)
-        .outputs(sheet * 2)
-    .buildAndRegister();
-}
-*/
-
 
 sheet.generateRecipes(function(orePrefix as OrePrefix, material as Material) {
 //    val utils as IRecipeUtils = IRecipeUtils.utils;

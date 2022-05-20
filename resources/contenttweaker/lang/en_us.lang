@@ -52,6 +52,8 @@ material.fluix_steel=Fluix Steel
 
 material.emc_minor=Minor Manifested EMC
 
+material.cave_root=Cave Root
+
 material.sky_stone=Sky Stone
 material.limestone_atum=Atum Limestone
 material.stone_aurorian=Aurorian Stone
@@ -63,7 +65,7 @@ item.material.oreprefix.oreNightStone=%s Ore
 
 item.material.oreprefix.sheet=%s Sheet
 
-
+item.material.oreprefix.dustCaveRoot=Ground Cave Root
 
 fluid.green_crystal_fluid=Low Grade Covalence Fluid
 fluid.red_crystal_fluid=Liquid Fire Matrix
@@ -100,8 +102,11 @@ item.contenttweaker.dense_dust.name=Dense Scrap Dust
 item.contenttweaker.heating_element.name=Heating Element
 item.contenttweaker.cooling_element.name=Cooling Element
 
+item.contenttweaker.root_pulp.name=Cave Root Pulp
+item.contenttweaker.root_paper.name=Cave Root Paper
 
 item.contenttweaker.canned_beans.name=Canned Beans
+item.contenttweaker.canned_corn.name=Canned Corn
 
 item.contenttweaker.vat_print.name=NASA Slow Cooker Blueprint
 
@@ -169,6 +174,8 @@ tile.contenttweaker.crystal_cluster_green_4.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_5.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_6.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_7.name=Growing Green Crystal Cluster
+
+tile.contenttweaker.perfect_sample_ruby.name=Perfected Crystal of Ruby 
 
 
 tile.mbd.station_generator_controller.name=Backup Generator
