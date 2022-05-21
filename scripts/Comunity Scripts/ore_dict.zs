@@ -74,7 +74,8 @@ val oreDicCleanUp as IItemStack[IOreDictEntry] = {
     <ore:dustTin>:<enderio:item_material:27>,
     <ore:dustCobalt>:<enderio:item_material:31>,
 
-
+	<ore:listAllmilk>:<aether_legacy:skyroot_bucket>,
+	<ore:milkBucket>:<aether_legacy:skyroot_bucket>,
 } as IItemStack[IOreDictEntry];
 
 for oreDic, item in oreDicCleanUp {
@@ -219,11 +220,13 @@ for name, itemList in oreNameMap {
 }
 
 <ore:foodFlour>.add(<metaitem:dustWheat>);
-<ore:foodSalt>.add(<metaitem:dustWheat>);
+<ore:foodSalt>.add(<metaitem:dustSalt>);
 
 <ore:gemSulfur>.add(<thebetweenlands:items_misc:18>);
-
 
 <ore:gemGreenCrystal>.add(<actuallyadditions:item_crystal_shard:4>);
 <ore:gemRedCrystal>.add(<actuallyadditions:item_crystal_shard>);
 <ore:gemBlueCrystal>.add(<actuallyadditions:item_crystal_shard:1>);
+<ore:listAllmilk>.add(<aether_legacy:skyroot_bucket:4>);
+<ore:milkBucket>.add(<aether_legacy:skyroot_bucket:4>);
+
