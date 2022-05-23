@@ -229,8 +229,42 @@ for item in carbonMonoxideItems {
 	.inputs(<ore:treeSapling>)
 	.fluidInputs(<liquid:nutrient_distillation>*200)
 	.fluidOutputs(<liquid:biomass>*200)
-	.duration(128).EUt(4).buildAndRegister();
-	
+.duration(128).EUt(4).buildAndRegister();
+
+// Copy flat slicer blade
+<recipemap:forming_press>.recipeBuilder()
+	.inputs(<metaitem:shape.empty>, <ore:plateIron>*2)
+	.notConsumable(<metaitem:config.slicer_blade.flat>)
+	.outputs(<metaitem:config.slicer_blade.flat>)
+.duration(120).EUt(44).buildAndRegister();
+
+// Copy stripes slicer blade
+<recipemap:forming_press>.recipeBuilder()
+	.inputs(<metaitem:shape.empty>, <ore:plateIron>*4)
+	.notConsumable(<metaitem:config.slicer_blade.stripes>)
+	.outputs(<metaitem:config.slicer_blade.stripes>)
+.duration(120).EUt(44).buildAndRegister();
+
+// Copy octagonal slicer blade
+<recipemap:forming_press>.recipeBuilder()
+	.inputs(<metaitem:shape.empty>, <ore:plateIron>*4)
+	.notConsumable(<metaitem:config.slicer_blade.octagonal>)
+	.outputs(<metaitem:config.slicer_blade.octagonal>)
+.duration(120).EUt(44).buildAndRegister();
+
+// Golden lasso
+<recipemap:assembler>.recipeBuilder()
+	.inputs(<ore:nuggetGold>*4, <ore:string>*4)
+	.fluidInputs(<liquid:xpjuice>*4000)
+	.outputs(<extrautils2:goldenlasso>)
+.duration(600).EUt(240).buildAndRegister();
+
+<recipemap:fluid_solidifier>.recipeBuilder()
+	.fluidInputs(<liquid:latex>*450)
+	.notConsumable(<metaitem:shape.mold.nugget>)
+	.outputs(<industrialforegoing:tinydryrubber>*9)
+.duration(60).EUt(8).buildAndRegister();
+
 /*
 val tinyDustMap as IItemStack[IItemStack] = {
 } as IItemStack[IItemStack];
