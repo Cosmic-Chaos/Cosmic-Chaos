@@ -546,6 +546,7 @@ gemPrefix.setIgnored(<material:scabyst>);
 /////////////////////////////////////////////////////////
 
 
+gemPrefix.setIgnored(<material:certus_quartz>);
 // Fluix
 var fluix = MaterialBuilder(32100, "fluix")
     .gem()
@@ -557,6 +558,7 @@ var fluix = MaterialBuilder(32100, "fluix")
 gemPrefix.setIgnored(<material:fluix>);
 blockPrefix.setIgnored(<material:fluix>);
 dustPrefix.setIgnored(<material:fluix>);
+
 
 // Fluix Steel
 var fluix_steel = MaterialBuilder(32101, "fluix_steel")
@@ -586,7 +588,7 @@ var sky_stone = MaterialBuilder(32102, "sky_stone")
 // Green Crystal
 var green_crystal = MaterialBuilder(32150, "green_crystal")
     .gem(1)
-    .color(0x21a343) // can also use colorAverage()
+    .color(0x21a343)
     .iconSet("diamond")
     .build();
 gemPrefix.setIgnored(<material:green_crystal>);
@@ -595,7 +597,7 @@ gemPrefix.setIgnored(<material:green_crystal>);
 var green_crystal_alloy = MaterialBuilder(32151, "green_crystal_alloy")
     .fluid("fluid", true)
     .ingot(1)
-    .color(0x21a343) // can also use colorAverage()
+    .color(0x21a343)
     .iconSet("SHINY")
     .flags(["generate_plate", "generate_foil", "generate_fine_wire"])
     .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
@@ -605,7 +607,7 @@ var green_crystal_alloy = MaterialBuilder(32151, "green_crystal_alloy")
 // Red Crystal
 var red_crystal = MaterialBuilder(32152, "red_crystal")
     .gem(1)
-    .color(0xff1f1f) // can also use colorAverage()
+    .color(0xff1f1f)
     .iconSet("diamond")
     .build();
 gemPrefix.setIgnored(<material:red_crystal>);
@@ -614,33 +616,35 @@ gemPrefix.setIgnored(<material:red_crystal>);
 var red_crystal_alloy = MaterialBuilder(32153, "red_crystal_alloy")
     .fluid("fluid", true)
     .gem(1, 6400)
-    .color(0xbf1717) // can also use colorAverage()
+    .color(0xbf1717)
     .iconSet("emerald")
     .build();
 
 // Blue Crystal
 var blue_crystal = MaterialBuilder(32154, "blue_crystal")
     .gem(1)
-    .color(0x514aff) // can also use colorAverage()
+    .color(0x514aff)
     .iconSet("diamond")
     .build();
 gemPrefix.setIgnored(<material:blue_crystal>);
-/*
-// Generator Material
-var blue_crystal_alloy = MaterialBuilder(32155, "blue_crystal_alloy")
-    .dust(1)
-    .color(0x21a343) // can also use colorAverage()
-    .iconSet("SHINY")
-    .build();
-*/
 
+
+
+//Cave Root
+var cave_root = MaterialBuilder(32155, "cave_root")
+    .dust(1)
+    .color(0x876d45)
+    .iconSet("dull")
+    .flags(["generate_plate"])
+    .build();
+ingotPrefix.setIgnored(<material:cave_root>);
 
 
 // Minor Manifested EMC
 var emc_minor = MaterialBuilder(32200, "emc_minor")
     .fluid("fluid", true)
     .ingot(1)
-    .color(0x261ba1) // can also use colorAverage()
+    .color(0x261ba1)
     .iconSet("SHINY")
     .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
     .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)

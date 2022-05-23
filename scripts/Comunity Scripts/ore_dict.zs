@@ -85,7 +85,7 @@ JEI.removeAndHide(item);
 }
 
 
-static mods as string[] = ["minecraft",  "gregtech", "gtadditions", "devtech","enderio","nuclearcraft", "advancedrocketry", "libvulpes", "lucraftcore", "chisel", "actuallyadditions", "threng"];
+static mods as string[] = ["minecraft",  "gregtech", "gtadditions", "devtech","enderio","nuclearcraft", "advancedrocketry", "libvulpes", "lucraftcore", "chisel", "actuallyadditions", "threng", "appliedenergistics2"];
 static size as int = mods.length - 1;
 
 function unify_oredicts (oredict as [IOreDictEntry]) {
@@ -135,10 +135,11 @@ function unify (ore as IOreDictEntry, p as int) {
 <ore:blockAluminum>.remove(<ore:blockAluminum>.firstItem);
 <ore:ingotAluminum>.remove(<ore:ingotAluminum>.firstItem);
 
+/*
 // Certus Compatability
 <ore:crystalCertusQuartz>.add(<metaitem:gemCertusQuartz>);
 <ore:gemCertusQuartz>.remove(<ore:gemCertusQuartz>.firstItem);
-
+*/
 // Silicon Compatability
 <ore:itemSilicon>.add(<metaitem:plateSilicon>);
 <ore:itemSilicon>.remove(<ore:itemSilicon>.firstItem);
@@ -223,6 +224,8 @@ for name, itemList in oreNameMap {
 <ore:foodSalt>.add(<metaitem:dustSalt>);
 
 <ore:gemSulfur>.add(<thebetweenlands:items_misc:18>);
+
+<ore:gemCertusQuartz>.add(<appliedenergistics2:material>);
 
 <ore:gemGreenCrystal>.add(<actuallyadditions:item_crystal_shard:4>);
 <ore:gemRedCrystal>.add(<actuallyadditions:item_crystal_shard>);

@@ -77,7 +77,7 @@ ulv_assembler.hasMufflerMechanics = false;
 
 # [Flexible Organic Panel] from [Grass][+2]
 craft.shapeless(<contenttweaker:flexible_organic_panel>, "#GB", {
-  "#": <ore:plateWood>,                   # Wood Plank
+  "#": <ore:plateWood> | <ore:plateCaveRoot>,                   # Wood Plank
   "G": <minecraft:tallgrass:1>,           # Grass
   "B": <quark:root_dye:1>,                    # Black Dye
 });

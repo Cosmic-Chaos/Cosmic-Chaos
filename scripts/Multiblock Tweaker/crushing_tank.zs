@@ -453,3 +453,22 @@ for ingot, dust in ingotDustMap {
     .buildAndRegister();
 }
 
+
+// Root Crushing
+val rootMap as IItemStack[IItemStack] = {
+<quark:root>:<metaitem:dustCaveRoot>,
+<quark:root_flower>:<quark:root_dye>,
+<quark:root_flower:1>:<quark:root_dye:1>,
+<quark:root_flower:2>:<quark:root_dye:2>,
+} as IItemStack[IItemStack];
+
+for root, dye in rootMap {
+    crushing_tank.recipeMap.recipeBuilder()
+        .duration(80)
+        .EUt(2)
+        .inputs(root)
+        .outputs(<metaitem:dustCaveRoot>)
+	    .chancedOutput(dye, 7500, 1000)
+	    .chancedOutput(dye, 5000, 1000)
+    .buildAndRegister();
+}

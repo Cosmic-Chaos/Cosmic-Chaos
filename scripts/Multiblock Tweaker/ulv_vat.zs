@@ -269,6 +269,7 @@ ulv_vat.recipeMap.recipeBuilder()
 
 // Oxygen Thingie
 mods.fossils.recipes.addCultivateRecipe(<advancedrocketry:crystal:2>, <contenttweaker:organic_overloader>);
+<contenttweaker:organic_overloader>.addTooltip(format.yellow("Recipes in the Cuture Vat can fail, with a Failuresaurus breaking out instead!"));
 
 # [Green Crystal Block] from [Green Crystal Shard]
 craft.remake(<advancedrocketry:crystal:2>, ["pretty",
@@ -509,7 +510,14 @@ ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<ore:gravel>*2,<ore:sand>*2)
 	.fluidInputs(<liquid:water>*1000)
 	.outputs(<advancedrocketry:concrete>*8)
-	.duration(40).EUt(7).buildAndRegister();
+.duration(40).EUt(7).buildAndRegister();
+
+// Root Pulp for Paper
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<ore:dustCaveRoot>)
+	.fluidInputs(<liquid:water>*1000)
+	.outputs(<contenttweaker:root_pulp>)
+.duration(80).EUt(4).buildAndRegister();
 
 // Check correct dimension
 ulv_vat.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){

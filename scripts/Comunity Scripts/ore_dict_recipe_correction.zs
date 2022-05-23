@@ -80,6 +80,9 @@ var name_removals = [
     "lucraftcore:ingot_dwarf_star_alloy",
     "lucraftcore:ingot_dwarf_star_alloy_alt",
 
+    "lucraftcore:nugget_copper",
+    "lucraftcore:block_copper",
+
     "thebetweenlands:scabyst_from_block",
     "thebetweenlands:scabyst_block",
 
