@@ -142,6 +142,15 @@ glassCrystal.setBlockLayer("CUTOUT_MIPPED");
 glassCrystal.setLightOpacity(0);
 glassCrystal.register();
 
+val stationGlass = VanillaFactory.createBlock("station_glass", <blockmaterial:glass>);
+stationGlass.blockHardness = 5.0;
+stationGlass.setToolLevel(1);
+stationGlass.setFullBlock(false);
+stationGlass.setTranslucent(true);
+stationGlass.setBlockLayer("TRANSLUCENT");
+stationGlass.setLightOpacity(0);
+stationGlass.register();
+
 var organicOverloader = VanillaFactory.createBlock("organic_overloader", <blockmaterial:iron>);
 organicOverloader.setLightOpacity(3);
 organicOverloader.setLightValue(1);
