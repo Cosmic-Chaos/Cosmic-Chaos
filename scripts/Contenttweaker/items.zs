@@ -18,17 +18,6 @@ function itemColor(intColor as int) as IItemColorSupplier {
   };
 }
 
-/*
-VanillaFactory.createItem("hull_plate_t1").register();
-VanillaFactory.createItem("hull_plate_t2").register();
-VanillaFactory.createItem("hull_plate_t3").register();
-VanillaFactory.createItem("hull_plate_t4").register();
-
-VanillaFactory.createItem("broken_hull_plate_t1").register();
-VanillaFactory.createItem("broken_hull_plate_t2").register();
-VanillaFactory.createItem("broken_hull_plate_t3").register();
-*/
-
 VanillaFactory.createItem("scrap_rubber").register();
 VanillaFactory.createItem("heavy_dust").register();
 VanillaFactory.createItem("light_dust").register();
@@ -36,10 +25,7 @@ VanillaFactory.createItem("dense_dust").register();
 
 VanillaFactory.createItem("root_pulp").register();
 VanillaFactory.createItem("root_paper").register();
-/*
-VanillaFactory.createItem("dust_crystal_green").register();
-VanillaFactory.createItem("dust_crystal_red").register();
-*/
+
 VanillaFactory.createItem("dust_crystal_green_glass").register();
 
 

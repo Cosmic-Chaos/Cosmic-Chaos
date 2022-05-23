@@ -229,3 +229,5 @@ for name, itemList in oreNameMap {
 <ore:gemGreenCrystal>.add(<actuallyadditions:item_crystal_shard:4>);
 <ore:gemRedCrystal>.add(<actuallyadditions:item_crystal_shard>);
 <ore:gemBlueCrystal>.add(<actuallyadditions:item_crystal_shard:1>);
+
+<ore:paper>.add(<contenttweaker:root_paper>);

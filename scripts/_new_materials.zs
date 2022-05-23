@@ -30,6 +30,7 @@ val nuggetPrefix = OrePrefix.getPrefix("nugget");
 <material:silver>.addFlags("generate_spring");
 <material:brass>.addFlags("generate_foil");
 
+
 //Color Changing
 //<material:salt_water>.setMaterialRGB(0xFF1F5099);
 
