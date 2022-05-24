@@ -1,6 +1,0 @@
-
-{
-  "Name": "mod_lavacow.ghostray",
-  "Registry ID": "mod_lavacow:ghostray",
-  "Class": "com.Fishmod.mod_LavaCow.entities.flying.EntityGhostRay"
-}
