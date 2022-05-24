@@ -1,6 +1,0 @@
-
-{
-  "Name": "mod_lavacow.banshee",
-  "Registry ID": "mod_lavacow:banshee",
-  "Class": "com.Fishmod.mod_LavaCow.entities.EntityBanshee"
-}

@@ -230,6 +230,8 @@ for name, itemList in oreNameMap {
 <ore:gemGreenCrystal>.add(<actuallyadditions:item_crystal_shard:4>);
 <ore:gemRedCrystal>.add(<actuallyadditions:item_crystal_shard>);
 <ore:gemBlueCrystal>.add(<actuallyadditions:item_crystal_shard:1>);
+
 <ore:listAllmilk>.add(<aether_legacy:skyroot_bucket:4>);
 <ore:milkBucket>.add(<aether_legacy:skyroot_bucket:4>);
 
+<ore:paper>.add(<contenttweaker:root_paper>);

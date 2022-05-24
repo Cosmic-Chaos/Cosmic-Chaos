@@ -92,14 +92,6 @@ craft.remake(<advancedrocketry:platepress>, ["pretty",
 
 // Recipes	
 	
-// Calc stuff
-trash_compactor.recipeMap.recipeBuilder()
-    .duration(240)
-    .EUt(3)
-    .inputs(<quark:iron_button>*9)
-    .outputs(<calculator:calculatorassembly>)
-.buildAndRegister();
-
 // 3i -> 2o
 val trashCompactorPlateMap as IItemStack[IOreDictEntry] = {
     <ore:ingotIron>:<ore:plateIron>.firstItem,
@@ -158,6 +150,7 @@ for input, output in trashCompactorOneToOneMap {
 	.buildAndRegister();
 }
 
+//Root Paper
 trash_compactor.recipeMap.recipeBuilder()
 	.duration(120)
 	.EUt(3)

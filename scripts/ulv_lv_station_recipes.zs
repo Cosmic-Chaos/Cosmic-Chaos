@@ -70,6 +70,27 @@ mods.jei.JEI.addItem(<advancedrocketry:spacechestplate>.withTag({slotInsert: [1,
 
 <metaitem:battery_station_ulv>.addTooltip(format.red("Can not be recharged"));
 
+val lootable =
+[
+  <contenttweaker:controller_broken_south>,
+  <contenttweaker:controller_broken_west>,
+  <contenttweaker:controller_broken_north>,
+  <contenttweaker:vat_print>,
+  <contenttweaker:stator>,
+  <actuallyadditions:block_crystal_cluster_redstone>,
+  <actuallyadditions:block_crystal_cluster_emerald>,
+  <quark:root>,
+  <metaitem:battery_station_ulv>,
+  <metaitem:battery_buffer.ulv.4>
+]
+ as IItemStack[];
+
+for item in lootable {
+	item.addTooltip(format.yellow("Found on the Station"));
+}
+
+<hooked:hook:2>.displayName = "Blue Alloy Hook";
+
 ##=======================================================
 ## ADD RECIPES
 ##=======================================================
@@ -501,9 +522,9 @@ craft.remake(<metaitem:component.resistor> * 2, ["pretty",
   "F ▲ F",
   "  p  "], {
   "S": <metaitem:rubber_drop>, # Sticky Resin
-  "p": <ore:paper> | <contenttweaker:root_paper>, # Paper
+  "p": <ore:paper>, # Paper
   "F": <ore:wireFineCopper> | <ore:wireGtSingleCopper>,       # Fine Copper Wire
-  "▲": <ore:dustCarbon> | <ore:dustCarbon> | <ore:dustCharcoal>,           # Carbon Dust
+  "▲": <ore:dustCoal> | <ore:dustCarbon> | <ore:dustCharcoal>,           # Carbon Dust
 });
 
 
@@ -614,6 +635,9 @@ recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_sto
 // Red Alloy Dust
 recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
 recipes.addShapeless(<metaitem:dustRedAlloy>*2, [<ore:dustCopper>,<ore:dustCopper>,<metaitem:dustRedCrystal>]);
+
+// Blue Alloy Dust
+recipes.addShapeless(<metaitem:dustBlueAlloy>*2, [<ore:dustSilver>,<ore:dustSilver>,<metaitem:dustBlueCrystal>]);
 
 // GC Alloy Dust
 recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustGreenCrystal>]);

@@ -65,7 +65,6 @@ item.material.oreprefix.oreNightStone=%s Ore
 
 item.material.oreprefix.sheet=%s Sheet
 
-item.material.oreprefix.dustCaveRoot=Ground Cave Root
 
 fluid.green_crystal_fluid=Low Grade Covalence Fluid
 fluid.red_crystal_fluid=Liquid Fire Matrix

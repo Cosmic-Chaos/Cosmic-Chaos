@@ -296,6 +296,20 @@ ulv_vat.recipeMap.recipeBuilder()
 	.fluidOutputs(<liquid:oxygen>*1000)
 	.duration(200).EUt(3).buildAndRegister();
 
+// Concrete
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<ore:gravel>*2,<ore:sand>*2)
+	.fluidInputs(<liquid:water>*1000)
+	.outputs(<advancedrocketry:concrete>*8)
+.duration(40).EUt(7).buildAndRegister();
+
+// Root Pulp for Paper
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<ore:dustCaveRoot>)
+	.fluidInputs(<liquid:water>*1000)
+	.outputs(<contenttweaker:root_pulp>*2)
+.duration(80).EUt(4).buildAndRegister();
+
 /*
 // All 9 lubricant recipes
 val lubeItems as IIngredient[] = [
@@ -512,20 +526,6 @@ for itemA, multA in cloudseedInputsA {
 		.duration(100).EUt(7).buildAndRegister();
 }
 */
-// Concrete
-ulv_vat.recipeMap.recipeBuilder()
-	.inputs(<ore:gravel>*2,<ore:sand>*2)
-	.fluidInputs(<liquid:water>*1000)
-	.outputs(<advancedrocketry:concrete>*8)
-.duration(40).EUt(7).buildAndRegister();
-
-// Root Pulp for Paper
-ulv_vat.recipeMap.recipeBuilder()
-	.inputs(<ore:dustCaveRoot>)
-	.fluidInputs(<liquid:water>*1000)
-	.outputs(<contenttweaker:root_pulp>)
-.duration(80).EUt(4).buildAndRegister();
-
 // Check correct dimension
 ulv_vat.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){
 	if(controller.getWorld().getDimension() != 33){

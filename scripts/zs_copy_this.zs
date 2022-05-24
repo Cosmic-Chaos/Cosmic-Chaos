@@ -15,6 +15,7 @@ for item in itemstoRemove {
 }
 
 //First Stack is second in the list
+val clusterFluidMap as int[string] = {
 val clusterFluidMap as ILiquidStack[IOreDictEntry] = {
 val tinyDustMap as IItemStack[IItemStack] = {
 
@@ -30,6 +31,8 @@ val basicCapacitorInput as IIngredient = (<enderio:item_capacitor_grainy>|<ender
 
 <techreborn:part:13>.displayName = "Constantan Heating Coil";
 <astralsorcery:itemcelestialcrystal>.addTooltip(format.aqua("Grows from a Celestal Crystal Cluster"));
+
+<fossil:bio_goo>.addTooltip(format.yellow(n ~ "% chance to give " + output.displayName + " when analyzed."));
 */
 ##########################################################################################
 print("==================== end of mods blank.zs ====================");
