@@ -14,6 +14,7 @@
 /world/
 /config/enderio/recipes/examples
 /config/BiomeTweaker/output/
+/natives/
 config/jei/bookmarks.ini
 **/*.pdf
 
@@ -77,6 +78,8 @@ eula.txt
 banned-players.json
 banned-ips.json
 ChangelogGenerator.jar
+config.json
+config.bak.json
 
 # Instance Sync
 **/*.jar
