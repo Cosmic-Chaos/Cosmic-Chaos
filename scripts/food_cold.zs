@@ -1,3 +1,6 @@
+#priority 5
+// ^ Ensures this file is run before food.zs to avoid creating duplicate recipes for frozen foods
+
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;

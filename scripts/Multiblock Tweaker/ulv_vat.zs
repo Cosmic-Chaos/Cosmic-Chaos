@@ -84,6 +84,13 @@ craft.make(<metaitem:mbt:ulv_vat>, ["pretty",
   "⌂": <contenttweaker:station_casing>,
 });
 
+# ULV Vat Blueprint (copy)
+recipes.addShaped("ulv_vat_blueprint_copy", <contenttweaker:vat_print>, [
+	[<ore:nuggetRubber>, <quark:root_dye:1>, <ore:nuggetRubber>],
+	[<ore:wireFineRedAlloy>, <contenttweaker:root_paper>, <ore:wireFineRedAlloy>],
+	[<ore:nuggetRubber>, <contenttweaker:station_component_4>, <ore:nuggetRubber>]
+]);
+
 <metaitem:mbt:ulv_vat>.addTooltip(format.red("Can only be used in the space station"));
 
 // Recipes

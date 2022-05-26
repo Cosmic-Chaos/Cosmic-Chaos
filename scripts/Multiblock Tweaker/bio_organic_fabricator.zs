@@ -201,11 +201,11 @@ for input, output in bioRecipeMap {
 		.duration(100)
 		.EUt(6)
 		.notConsumable(input)
-		.fluidInputs(<liquid:nutrient_distillation> * 2000)
+		.fluidInputs(<liquid:nutrient_distillation> * 500)
 		.outputs(output[0], output[1])
 		.chancedOutput(output[2], 5000, 0)
 		.chancedOutput(input, 100, 0)
-		.fluidOutputs(<liquid:sludge> * 1000)
+		.fluidOutputs(<liquid:sludge> * 250)
 	.buildAndRegister();
 }
 
@@ -214,34 +214,34 @@ bio_organic_fabricator.recipeMap.recipeBuilder()
     .duration(120)
     .EUt(3)
     .inputs(<minecraft:deadbush>)
-	.fluidInputs(<liquid:nutrient_distillation> * 2000)
+	.fluidInputs(<liquid:nutrient_distillation> * 500)
 	.chancedOutput(<minecraft:sapling:0>, 5000, 0) // Oak
 	.chancedOutput(<minecraft:sapling:1>, 1000, 0) // Spruce
 	.chancedOutput(<minecraft:sapling:2>, 1000, 0) // Birch
 	.chancedOutput(<minecraft:sapling:3>, 200, 0) // Jungle
 	.chancedOutput(<minecraft:sapling:4>, 200, 0) // Dark Oak
 	.chancedOutput(<minecraft:sapling:5>, 200, 0) // Acacia
-	.fluidOutputs(<liquid:sludge> * 1000)
+	.fluidOutputs(<liquid:sludge> * 250)
 .buildAndRegister();
 
 // Quark Roots
 bio_organic_fabricator.recipeMap.recipeBuilder()
 	.notConsumable(<quark:root>)
-	.fluidInputs(<liquid:nutrient_distillation> * 2000)
+	.fluidInputs(<liquid:nutrient_distillation> * 500)
 	.chancedOutput(<quark:root>, 5000, 500)
 	.chancedOutput(<quark:root_flower:0>, 1800, 300)
 	.chancedOutput(<quark:root_flower:1>, 1800, 300)
 	.chancedOutput(<quark:root_flower:2>, 1800, 300)
-	.fluidOutputs(<liquid:sludge> * 1000)
+	.fluidOutputs(<liquid:sludge> * 250)
 .duration(240).EUt(3).buildAndRegister();
 
 // Rabbit
 bio_organic_fabricator.recipeMap.recipeBuilder()
 	.notConsumable(<fossil:rabbit_dna>)
-	.fluidInputs(<liquid:nutrient_distillation> * 2000)
+	.fluidInputs(<liquid:nutrient_distillation> * 500)
 	.outputs(<minecraft:rabbit_hide>*4, <minecraft:rabbit>)
 	.chancedOutput(<minecraft:rabbit_foot>, 2000, 0)
 	.chancedOutput(<fossil:rabbit_dna>, 100, 0)
 	.chancedOutput(<minecraft:bone>, 5000, 0)
-	.fluidOutputs(<liquid:sludge> * 1000)
+	.fluidOutputs(<liquid:sludge> * 250)
 .duration(240).EUt(3).buildAndRegister();
