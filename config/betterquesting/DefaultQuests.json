@@ -4485,8 +4485,7 @@
     },
     "84:10": {
       "preRequisites:11": [
-        3,
-        101
+        25
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -4495,7 +4494,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 1,
+            "Damage:2": 2,
             "OreDict:8": "",
             "id:8": "hooked:hook"
           },
@@ -4526,9 +4525,15 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 1,
+              "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "hooked:hook"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "cosmic_core:cc_armor"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5643,12 +5648,10 @@
               "Count:3": 2,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "advancedrocketry:bucketrocketfuel",
+              "id:8": "forge:bucketfilled",
               "tag:10": {
-                "Fluid:10": {
-                  "Amount:3": 1000,
-                  "FluidName:8": "rocketfuel"
-                }
+                "Amount:3": 1000,
+                "FluidName:8": "rocket_fuel"
               }
             }
           },
@@ -5858,8 +5861,8 @@
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 432,
-          "y:3": -84
+          "x:3": 588,
+          "y:3": 12
         },
         "19:10": {
           "id:3": 101,

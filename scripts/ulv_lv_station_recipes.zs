@@ -81,7 +81,9 @@ val lootable =
   <actuallyadditions:block_crystal_cluster_emerald>,
   <quark:root>,
   <metaitem:battery_station_ulv>,
-  <metaitem:battery_buffer.ulv.4>
+  <metaitem:battery_buffer.ulv.4>,
+  <fossil:relic_scrap>,
+  <fossil:biofossil>,
 ]
  as IItemStack[];
 
@@ -90,7 +92,8 @@ for item in lootable {
 }
 
 <hooked:hook:2>.displayName = "Blue Alloy Hook";
-
+<hooked:microcrafting:2>.displayName = "Crude Steel Chain Link";
+<hooked:microcrafting:3>.displayName = "Crude Steel Chain";
 ##=======================================================
 ## ADD RECIPES
 ##=======================================================
@@ -417,15 +420,15 @@ craft.remake(<advancedrocketry:guidancecomputer>, ["pretty",
   "V": <cosmic_core:cc_meta_item:2>, # ULV Electric Motor
 });
 
-# [Iron Hook] from [Crude Steel Pickaxe Head][+3]
-craft.remake(<hooked:hook:1>, ["pretty",
-  "C ╱ H",
+# [Blue Alloy Hook] from [Blue Alloy Pickaxe Head][+3]
+craft.remake(<hooked:hook:2>, ["pretty",
+  "B ╱ H",
   "  I ╱",
-  "I   C"], {
-  "C": <ore:screwCrudeSteel>,           # Crude Steel Screw
-  "╱": <ore:stickCrudeSteel>,           # Crude Steel Rod
-  "H": <ore:toolHeadPickaxeCrudeSteel>, # Crude Steel Pickaxe Head
-  "I": <hooked:microcrafting:3>,        # Iron Chain
+  "I   B"], {
+  "B": <ore:screwBlueAlloy>,           # Blue Alloy Screw
+  "╱": <ore:stickBlueAlloy>,           # Blue Alloy Rod
+  "H": <ore:toolHeadPickaxeBlueAlloy>, # Blue Alloy Pickaxe Head
+  "I": <hooked:microcrafting:3>,       # Iron Chain
 });
 
 # [Philosopher's Stone] from [Resonating Redstone Crystal][+2]
@@ -487,18 +490,6 @@ craft.remake(<advancedrocketry:planetidchip>, ["pretty",
   "▲": <ore:dustGlowstone>,                  # Glowstone Dust
   "♠": <projecte:item.pe_covalence_dust>,    # Low Covalence Dust
 });
-
-# [Culture Vat] from [Evertide Amulet][+3]
-craft.remake(<fossil:cultivate>, ["pretty",
-  "* B *",
-  "* E *",
-  "□ □ □"], {
-  "*": <contenttweaker:crystal_green_glass>, # Green Crystal Glass
-  "B": <ore:circuitLv>,                     # Bio-Goo
-  "E": <projecte:item.pe_evertide_amulet>,   # Evertide Amulet
-  "□": <ore:plateWroughtIron>,               # Wrought Iron Plate
-});
-
 # [Coated Circuit Board] from [Wood Plank][+1]
 craft.remake(<metaitem:board.coated>, ["pretty",
   "# S",

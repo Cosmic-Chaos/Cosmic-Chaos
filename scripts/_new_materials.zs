@@ -30,6 +30,9 @@ val nuggetPrefix = OrePrefix.getPrefix("nugget");
 <material:silver>.addFlags("generate_spring");
 <material:brass>.addFlags("generate_foil");
 
+//So I can make the Diamond Hook :)
+//material.addTools(float toolSpeed, float toolAttackDamage, int toolDurability, @Optional int toolEnchantability, @Optional boolean shouldIgnoreCraftingTools)
+<material:blue_alloy>.addTools(1, 10, 256, 1, true);
 
 //Color Changing
 //<material:salt_water>.setMaterialRGB(0xFF1F5099);

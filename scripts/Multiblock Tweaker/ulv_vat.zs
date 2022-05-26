@@ -231,7 +231,7 @@ ulv_vat.recipeMap.recipeBuilder()
 ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<advancedrocketry:pressuretank>)
 	.fluidInputs(<liquid:red_crystal_fluid>*1000)
-	.outputs(<advancedrocketry:bucketrocketfuel>.withTag({Fluid: {FluidName: "rocketfuel", Amount: 1000}}))
+	.outputs(<forge:bucketfilled>.withTag({FluidName: "rocket_fuel", Amount: 1000}))
 	.duration(200).EUt(3).buildAndRegister();
 
 # [Cooling Element] from [Blue Crystal Dust][+1]
