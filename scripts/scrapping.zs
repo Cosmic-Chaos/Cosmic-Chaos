@@ -8,10 +8,6 @@ import mods.chisel.Carving;
 <contenttweaker:crowbar>.addShiftTooltip("You feel like you probably shouldn't speak while holding it.");
 <contenttweaker:crowbar_t2>.addShiftTooltip("You walk a little taller now that you have it.");
 
-
-//furnace.setFuel(<contenttweaker:internals_t1>, 400);
-//furnace.setFuel(<contenttweaker:internals_t2>, 800);
-
 //iron hull crafting changed
 Carving.removeVariation("factory", <chisel:technicalnew:2>);
 
@@ -26,7 +22,7 @@ Carving.removeVariation("laboratory", <chisel:laboratory:5>);
 Carving.removeVariation("laboratory", <chisel:laboratory:15>);
 
 //For Walking
-recipes.addShaped(<chisel:laboratory:8> * 8, [[null, <metaitem:hull.plate.0>, null],[<metaitem:hull.plate.2>, <contenttweaker:internals_t1>, <metaitem:hull.plate.2>], [null, <metaitem:hull.plate.0>, null]]);
+recipes.addShaped(<chisel:laboratory:8> * 8, [[null, <metaitem:hull.plate.0>, null],[<metaitem:hull.plate.2>, <metaitem:internal.components.0>, <metaitem:hull.plate.2>], [null, <metaitem:hull.plate.0>, null]]);
 Carving.removeVariation("laboratory", <chisel:laboratory:8>);
 
 //No Fans

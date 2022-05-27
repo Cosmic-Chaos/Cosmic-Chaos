@@ -1,3 +1,4 @@
+#priority 6
 import crafttweaker.block.IBlockState;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -174,7 +175,7 @@ craft.make(<metaitem:mbt:bio_organic_fabricator>, ["pretty",
   "§ A §",
   "M ⌂ M",
   "L A L"], {
-  "§": <contenttweaker:internals_t2>,    # Complex Internals
+  "§": <metaitem:internal.components.1>,    # Complex Internals
   "A": <minecraft:sand>,
   "M": <minecraft:red_mushroom_block>,   # Mushroom
   "⌂": <gregtech:machine_casing>,        # ULV Machine Casing
@@ -187,12 +188,12 @@ craft.make(<metaitem:mbt:bio_organic_fabricator>, ["pretty",
 // Recipes	
 
 val bioRecipeMap as IItemStack[][IItemStack] = {
-    <minecraft:sapling:0>:[<minecraft:log:0> * 4,<minecraft:leaves:0> * 16, <metaitem:plant_ball>],
-    <minecraft:sapling:1>:[<minecraft:log:1> * 4,<minecraft:leaves:1> * 16, <metaitem:plant_ball>],
-    <minecraft:sapling:2>:[<minecraft:log:2> * 4,<minecraft:leaves:2> * 16, <metaitem:plant_ball>],
-    <minecraft:sapling:3>:[<minecraft:log:3> * 4,<minecraft:leaves:3> * 16, <metaitem:plant_ball>],
-    <minecraft:sapling:4>:[<minecraft:log2:0> * 4,<minecraft:leaves2:0> * 16, <metaitem:plant_ball>],
-    <minecraft:sapling:5>:[<minecraft:log2:1> * 4,<minecraft:leaves2:1> * 16, <metaitem:plant_ball>],
+    //<minecraft:sapling:0>:[<minecraft:log:0> * 4,<minecraft:leaves:0> * 16, <metaitem:plant_ball>],
+    //<minecraft:sapling:1>:[<minecraft:log:1> * 4,<minecraft:leaves:1> * 16, <metaitem:plant_ball>],
+    //<minecraft:sapling:2>:[<minecraft:log:2> * 4,<minecraft:leaves:2> * 16, <metaitem:plant_ball>],
+    //<minecraft:sapling:3>:[<minecraft:log:3> * 4,<minecraft:leaves:3> * 16, <metaitem:plant_ball>],
+    //<minecraft:sapling:4>:[<minecraft:log2:0> * 4,<minecraft:leaves2:0> * 16, <metaitem:plant_ball>],
+    //<minecraft:sapling:5>:[<minecraft:log2:1> * 4,<minecraft:leaves2:1> * 16, <metaitem:plant_ball>],
     <fossil:sheep_dna>:[<minecraft:wool> * 4,<minecraft:mutton> * 2, <minecraft:bone> * 2],
 } as IItemStack[][IItemStack];
 
@@ -201,7 +202,7 @@ for input, output in bioRecipeMap {
 		.duration(100)
 		.EUt(6)
 		.notConsumable(input)
-		.fluidInputs(<liquid:nutrient_distillation> * 500)
+		.fluidInputs(<liquid:biomass> * 500)
 		.outputs(output[0], output[1])
 		.chancedOutput(output[2], 5000, 0)
 		.chancedOutput(input, 100, 0)
@@ -209,12 +210,13 @@ for input, output in bioRecipeMap {
 	.buildAndRegister();
 }
 
+/*
 // Saplings from dead bushes
 bio_organic_fabricator.recipeMap.recipeBuilder()
     .duration(120)
     .EUt(3)
     .inputs(<minecraft:deadbush>)
-	.fluidInputs(<liquid:nutrient_distillation> * 500)
+	.fluidInputs(<liquid:biomass> * 500)
 	.chancedOutput(<minecraft:sapling:0>, 5000, 0) // Oak
 	.chancedOutput(<minecraft:sapling:1>, 1000, 0) // Spruce
 	.chancedOutput(<minecraft:sapling:2>, 1000, 0) // Birch
@@ -223,22 +225,24 @@ bio_organic_fabricator.recipeMap.recipeBuilder()
 	.chancedOutput(<minecraft:sapling:5>, 200, 0) // Acacia
 	.fluidOutputs(<liquid:sludge> * 250)
 .buildAndRegister();
+*/
 
 // Quark Roots
 bio_organic_fabricator.recipeMap.recipeBuilder()
 	.notConsumable(<quark:root>)
-	.fluidInputs(<liquid:nutrient_distillation> * 500)
+	.fluidInputs(<liquid:biomass> * 500)
 	.chancedOutput(<quark:root>, 5000, 500)
 	.chancedOutput(<quark:root_flower:0>, 1800, 300)
 	.chancedOutput(<quark:root_flower:1>, 1800, 300)
 	.chancedOutput(<quark:root_flower:2>, 1800, 300)
+	.chancedOutput(<minecraft:stick>, 1800, 300)
 	.fluidOutputs(<liquid:sludge> * 250)
 .duration(240).EUt(3).buildAndRegister();
 
 // Rabbit
 bio_organic_fabricator.recipeMap.recipeBuilder()
 	.notConsumable(<fossil:rabbit_dna>)
-	.fluidInputs(<liquid:nutrient_distillation> * 500)
+	.fluidInputs(<liquid:biomass> * 500)
 	.outputs(<minecraft:rabbit_hide>*4, <minecraft:rabbit>)
 	.chancedOutput(<minecraft:rabbit_foot>, 2000, 0)
 	.chancedOutput(<fossil:rabbit_dna>, 100, 0)

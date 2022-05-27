@@ -1,3 +1,4 @@
+#priority 6
 import crafttweaker.block.IBlockState;
 import crafttweaker.block.IBlock;
 import crafttweaker.item.IIngredient;
@@ -212,7 +213,7 @@ craft.make(<metaitem:mbt:crushing_tank>, ["pretty",
   "P r P",
   "G t G",
   "¤ ⌂ ¤"], {
-  "P": <contenttweaker:station_component_4>,     # Primitive Crafting Storage
+  "P": <metaitem:station.component.3>,     # Primitive Crafting Storage
   "r": <metaitem:circuit.vacuum_tube>,                   # Vacuum Tube
   "G": <ore:wireGtDoubleTin>,                    # 2x Tin Wire
   "t": <contenttweaker:controller_broken_south>, # tile.contenttweaker.controller_broken_south.name
@@ -233,8 +234,8 @@ crushing_tank.recipeMap.recipeBuilder()
     .outputs(<metaitem:hull.plate.2>*5)
 	.chancedOutput(<metaitem:hull.plate.2>*2, 7500, 1000)
 	.chancedOutput(<metaitem:hull.plate.2>, 5000, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
+	.chancedOutput(<metaitem:internal.components.0>*2, 7500, 1000)
+	.chancedOutput(<metaitem:internal.components.0>, 5000, 1000)
 .buildAndRegister();
 	
 /*   
@@ -246,8 +247,8 @@ crushing_tank.recipeMap.recipeBuilder()
     .outputs(<metaitem:hull.plate.broken.0>*3, <metaitem:hull.plate.broken.2>*3)
 	.chancedOutput(<metaitem:hull.plate.broken.0>, 7500, 1000)
 	.chancedOutput(<metaitem:hull.plate.broken.2>, 7500, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
+	.chancedOutput(<metaitem:internal.components.0>*2, 7500, 1000)
+	.chancedOutput(<metaitem:internal.components.0>, 5000, 1000)
 .buildAndRegister();
 //Light Hull Block
 crushing_tank.recipeMap.recipeBuilder()
@@ -258,8 +259,8 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:hull.plate.broken.1>*4, 7500, 1000)
 	.chancedOutput(<metaitem:hull.plate.broken.1>*2, 5000, 1000)
 	.chancedOutput(<metaitem:hull.plate.broken.2>, 5000, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
+	.chancedOutput(<metaitem:internal.components.0>*2, 7500, 1000)
+	.chancedOutput(<metaitem:internal.components.0>, 5000, 1000)
 .buildAndRegister();
 */
 
@@ -271,8 +272,8 @@ crushing_tank.recipeMap.recipeBuilder()
     .outputs(<metaitem:hull.plate.0>*6)
 	.chancedOutput(<metaitem:hull.plate.0>*3, 2500, 1000)
 	.chancedOutput(<metaitem:hull.plate.0>*3, 5000, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
+	.chancedOutput(<metaitem:internal.components.0>*2, 7500, 1000)
+	.chancedOutput(<metaitem:internal.components.0>, 5000, 1000)
 .buildAndRegister();
 
 //Light Hull Block
@@ -283,15 +284,15 @@ crushing_tank.recipeMap.recipeBuilder()
     .outputs(<metaitem:hull.plate.1>*6)
 	.chancedOutput(<metaitem:hull.plate.1>*3, 2500, 1000)
 	.chancedOutput(<metaitem:hull.plate.1>*3, 5000, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>*2, 7500, 1000)
-	.chancedOutput(<contenttweaker:internals_t1>, 5000, 1000)
+	.chancedOutput(<metaitem:internal.components.0>*2, 7500, 1000)
+	.chancedOutput(<metaitem:internal.components.0>, 5000, 1000)
 .buildAndRegister();
 
 //Simple Internals
 crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
     .EUt(8)
-    .inputs(<contenttweaker:internals_t1>)
+    .inputs(<metaitem:internal.components.0>)
     .outputs(<minecraft:redstone>*4,<contenttweaker:scrap_rubber>)
 	.chancedOutput(<contenttweaker:scrap_rubber>, 7500, 1000)
 	.chancedOutput(<contenttweaker:scrap_rubber>, 5000, 1000)

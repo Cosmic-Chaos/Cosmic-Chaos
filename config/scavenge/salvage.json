@@ -169,6 +169,57 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "cave_roots",
+			"type": {
+				"type": "block",
+				"name": "quark:roots"
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "require_sneak",
+					"sneak": true
+				},
+				{
+					"type": "play_sound",
+					"name": "block.vine.break",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "require_item",
+					"name": "contenttweaker:crowbar"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "consume_block",
+					"chance": 20.0,
+					"name": "minecraft:air",
+					"meta": 0
+				},
+				{
+					"type": "damage_item",
+					"disableJEI": true,
+					"amount": 1
+				}
+			],
+			"drops": [
+				{
+					"name": "quark:root",
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 2
+						}
+					]
+				}
+			]
 		}
 	]
 }
