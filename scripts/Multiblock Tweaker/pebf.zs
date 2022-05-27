@@ -1,3 +1,4 @@
+#priority 6
 import crafttweaker.block.IBlockState;
 import crafttweaker.block.IBlock;
 import crafttweaker.item.IIngredient;
@@ -75,6 +76,7 @@ val pebf = Builder.start(loc)
 pebf.hasMaintenanceMechanics = false;
 pebf.hasMufflerMechanics = false;
 
+/*
 # [pebf] from [Blast Furnace][+4]
 craft.make(<metaitem:mbt:pebf>, ["pretty",
   "L ■ L",
@@ -86,7 +88,9 @@ craft.make(<metaitem:mbt:pebf>, ["pretty",
   "l": <futuremc:blast_furnace>,         # Blast Furnace
   "B": <ore:sheetBronze>,                # Bronze Sheet
 });
+*/
 
+<metaitem:mbt:pebf>.addTooltip(format.red("DISABLED IN ALPHA!"));
 <metaitem:mbt:pebf>.addTooltip(format.red("Runs dust/ore recipes in parallel!"));
 <metaitem:mbt:pebf>.addTooltip(format.red("4x + 1x per overclock tier"));
 
