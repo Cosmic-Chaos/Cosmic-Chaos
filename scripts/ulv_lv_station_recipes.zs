@@ -77,13 +77,14 @@ val lootable =
   <contenttweaker:controller_broken_north>,
   <contenttweaker:vat_print>,
   <contenttweaker:stator>,
-  <actuallyadditions:block_crystal_cluster_redstone>,
-  <actuallyadditions:block_crystal_cluster_emerald>,
+//  <actuallyadditions:block_crystal_cluster_redstone>,
+//  <actuallyadditions:block_crystal_cluster_emerald>,
   <quark:root>,
   <metaitem:battery_station_ulv>,
   <metaitem:battery_buffer.ulv.4>,
   <fossil:relic_scrap>,
   <fossil:biofossil>,
+  <contenttweaker:fuel_catalyst>,
 ]
  as IItemStack[];
 
