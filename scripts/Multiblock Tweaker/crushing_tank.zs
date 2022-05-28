@@ -330,27 +330,27 @@ crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
     .EUt(8)
     .inputs(<metaitem:hull.plate.0>)
-    .outputs(<contenttweaker:heavy_dust>*4)
+    .outputs(<contenttweaker:heavy_dust>*3)
 	.chancedOutput(<contenttweaker:heavy_dust>*2, 5000, 1000)
-	.chancedOutput(<contenttweaker:heavy_dust>*2, 2500, 1000)
+	.chancedOutput(<contenttweaker:heavy_dust>*1, 2500, 1000)
 .buildAndRegister();
 // Light Dust
 crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
     .EUt(8)
     .inputs(<metaitem:hull.plate.1>)
-    .outputs(<contenttweaker:light_dust>*4)
+    .outputs(<contenttweaker:light_dust>*3)
 	.chancedOutput(<contenttweaker:light_dust>*2, 5000, 1000)
-	.chancedOutput(<contenttweaker:light_dust>*2, 2500, 1000)
+	.chancedOutput(<contenttweaker:light_dust>*1, 2500, 1000)
 .buildAndRegister();
 //Crude Steel Dust
 crushing_tank.recipeMap.recipeBuilder()
     .duration(40)
     .EUt(8)
     .inputs(<metaitem:hull.plate.2>)
-    .outputs(<contenttweaker:dense_dust>*4)
+    .outputs(<contenttweaker:dense_dust>*3)
 	.chancedOutput(<contenttweaker:dense_dust>*2, 5000, 1000)
-	.chancedOutput(<contenttweaker:dense_dust>*2, 2500, 1000)
+	.chancedOutput(<contenttweaker:dense_dust>*1, 2500, 1000)
 .buildAndRegister();
 
 
@@ -381,7 +381,7 @@ crushing_tank.recipeMap.recipeBuilder()
 crushing_tank.recipeMap.recipeBuilder()
     .duration(60)
     .EUt(8)
-    .inputs(<devtech:meta_item:2>.withTag({Charge: 0 as long}))
+    .inputs(<devtech:meta_item:2>.anyDamage)
     .outputs(<metaitem:dustLead>*4)
 	.chancedOutput(<metaitem:dustIron>, 7500, 1000)
 	.chancedOutput(<metaitem:dustTin>, 5000, 1000)
@@ -448,7 +448,7 @@ val ingotDustMap as IItemStack[IOreDictEntry] = {
 for ingot, dust in ingotDustMap {
     crushing_tank.recipeMap.recipeBuilder()
         .duration(50)
-        .EUt(8)
+        .EUt(7)
         .inputs(ingot)
         .outputs(dust)
     .buildAndRegister();
