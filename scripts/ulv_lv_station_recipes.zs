@@ -125,8 +125,9 @@ craft.remake(<contenttweaker:crowbar>, ["pretty",
 craft.remake(<contenttweaker:crowbar_t2>, ["pretty",
   "  □ □",
   "  ╱  ",
-  "╱ □  "], {
+  "╱ T  "], {
   "□": <metaitem:plateWroughtIron>,   # Iron Plate
+  "T": <metaitem:plateTinAlloy>, # Tin Alloy Plate
   "╱": <ore:stickBronze>, # Bronze Rod
 });
 
@@ -437,6 +438,30 @@ craft.remake(<metaitem:component.resistor> * 2, ["pretty",
   "▲": <ore:dustCoal> | <ore:dustCarbon> | <ore:dustCharcoal>,           # Carbon Dust
 });
 
+
+# [Rocket Boots] from [Leather Boots][+5]
+craft.remake(<cosmic_core:cc_armor:1>, ["pretty",
+  "B r B",
+  "L e L",
+  "□ * □"], {
+  "B": <ore:ringBronze>,                      # Bronze Ring
+  "r": <ore:screwBronze>,                     # Bronze Screw
+  "L": <advancedrocketry:pressuretank>,       # Low Pressure Tank
+  "e": <minecraft:leather_boots>.anyDamage(), # Leather Boots
+  "□": <ore:plateCrudeSteel>,                 # Crude Steel Plate
+  "*": <ore:gemRedCrystalAlloy>,              # Firestone
+});
+
+# [Low Pressure Tank] from [Neutronium Hammer][+3]
+craft.remake(<advancedrocketry:pressuretank>, ["pretty",
+  "I o I",
+  "I T I",
+  "I r I"], {
+  "I": <ore:sheetIron>, # Iron Sheet
+  "o": <ore:screwIron>, # Iron Screw
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+  "r": <ore:ringIron>,  # Iron Ring
+});
 
 # [Primitive Electromagnetic Separator] from [ULV Machine Hull][+5]
 craft.make(<metaitem:devtech:electromagnetic_separator.ulv>, ["pretty",
