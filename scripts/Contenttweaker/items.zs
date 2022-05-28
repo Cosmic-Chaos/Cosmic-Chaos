@@ -99,7 +99,7 @@ val cannedBeans = VanillaFactory.createItemFood("canned_beans", 8);
 cannedBeans.saturation = 0.25;
 cannedBeans.register();
 
-val cannedCorn = VanillaFactory.createItemFood("canned_corn", 5);
+val cannedCorn = VanillaFactory.createItemFood("canned_corn", 4);
 cannedCorn.saturation = 2;
 cannedCorn.register();
 ##########################################################################################
