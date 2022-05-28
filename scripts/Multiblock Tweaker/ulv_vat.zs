@@ -72,19 +72,19 @@ val ulv_vat = Builder.start(loc)
 ulv_vat.hasMaintenanceMechanics = false;
 ulv_vat.hasMufflerMechanics = false;
 
-# ULV Vat Controller Recipe
-craft.make(<metaitem:mbt:ulv_vat>, ["pretty",
-  "P r P",
-  "G t G",
-  "¤ ⌂ ¤"], {
-  "P": <metaitem:station.component.3>,
-  "r": <metaitem:circuit.vacuum_tube>,
-  "G": <ore:wireGtDoubleTin>,
-  "t": <contenttweaker:vat_print>,
-  "¤": <ore:gearCopper>,
-  "⌂": <contenttweaker:station_casing>,
-});
 
+# [NASA Slow Cooker] from [Derelict Casing][+5]
+craft.remake(<metaitem:mbt:ulv_vat>, ["pretty",
+  "l L l",
+  "U ⌂ U",
+  "¤ N ¤"], {
+  "l": <metaitem:circuit.vacuum_tube>,                # Vacuum Tube
+  "L": <cosmic_core:cc_meta_item:1>,    # ULV Electric Pump
+  "U": <cosmic_core:cc_meta_item:2>,    # ULV Electric Motor
+  "⌂": <contenttweaker:station_casing>, # Derelict Casing
+  "¤": <ore:gearPotin>,                 # Potin Gear
+  "N": <contenttweaker:vat_print>,      # NASA Slow Cooker Blueprint
+});
 # ULV Vat Blueprint (copy)
 recipes.addShaped("ulv_vat_blueprint_copy", <contenttweaker:vat_print>, [
 	[<ore:nuggetRubber>, <quark:root_dye:1>, <ore:nuggetRubber>],
@@ -97,14 +97,6 @@ recipes.addShaped("ulv_vat_blueprint_copy", <contenttweaker:vat_print>, [
 // Recipes
 
 /*
-// Nutrient Distillation
-ulv_vat.recipeMap.recipeBuilder()
-	.inputs(<ore:listAllmushroom>)
-	.fluidInputs(<liquid:water>*1000)
-	.fluidOutputs(<liquid:nutrient_distillation>*1000)
-	.duration(128).EUt(2).buildAndRegister();
-*/
-
 // Nutrient distillation recipes (a la the the vat)
 val nutrientInputsA as double[IIngredient] = {
 	<ore:listAllmeatraw>: 0.75 as double,
@@ -129,6 +121,15 @@ for itemA, multA in nutrientInputsA {
 			.duration(100).EUt(7).buildAndRegister();
 	}
 }
+*/
+
+/*
+// Nutrient Distillation
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<ore:listAllmushroom>)
+	.fluidInputs(<liquid:water>*1000)
+	.fluidOutputs(<liquid:nutrient_distillation>*1000)
+	.duration(128).EUt(2).buildAndRegister();
 
 // Biomass from Nutrient Distillation + Bio Chaff
 ulv_vat.recipeMap.recipeBuilder()
@@ -137,6 +138,13 @@ ulv_vat.recipeMap.recipeBuilder()
 	.fluidOutputs(<liquid:biomass>*1000)
 	.duration(128).EUt(4).buildAndRegister();
 
+// Biomass from Nutrient Distillation + Sapling
+ulv_vat.recipeMap.recipeBuilder()
+	.inputs(<ore:treeSapling>)
+	.fluidInputs(<liquid:nutrient_distillation>*200)
+	.fluidOutputs(<liquid:biomass>*200)
+	.duration(128).EUt(4).buildAndRegister();
+*/
 // Biomass from Water + Bio Chaff
 ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<metaitem:bio_chaff>)
@@ -149,13 +157,6 @@ ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<ore:treeSapling>)
 	.fluidInputs(<liquid:water>*100)
 	.fluidOutputs(<liquid:biomass>*100)
-	.duration(128).EUt(4).buildAndRegister();
-
-// Biomass from Nutrient Distillation + Sapling
-ulv_vat.recipeMap.recipeBuilder()
-	.inputs(<ore:treeSapling>)
-	.fluidInputs(<liquid:nutrient_distillation>*200)
-	.fluidOutputs(<liquid:biomass>*200)
 	.duration(128).EUt(4).buildAndRegister();
 
 // Methane for Rocket Boots
@@ -237,10 +238,10 @@ ulv_vat.recipeMap.recipeBuilder()
 */
 // Rocket Fuel
 ulv_vat.recipeMap.recipeBuilder()
-	.inputs(<advancedrocketry:pressuretank>)
+	.inputs(<contenttweaker:fuel_catalyst>)
 	.fluidInputs(<liquid:red_crystal_fluid>*1000)
-	.outputs(<forge:bucketfilled>.withTag({FluidName: "rocket_fuel", Amount: 1000}))
-	.duration(200).EUt(3).buildAndRegister();
+	.fluidOutputs(<liquid:rocket_fuel>*1000)
+	.duration(200).EUt(8).buildAndRegister();
 
 # [Cooling Element] from [Blue Crystal Dust][+1]
 craft.remake(<contenttweaker:cooling_element>, ["pretty",
