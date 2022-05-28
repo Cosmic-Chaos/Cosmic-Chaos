@@ -141,7 +141,7 @@ bio_organic_fabricator.updateFormedValidFunction = function(controller as IContr
     if (controller.offsetTimer % 20 == 0) {
         if (controller.recipeLogic.isWorking) {
             for pos in getCenter(controller.pos, controller.frontFacing) {
-                    world.setBlockState(<blockstate:enderio:block_fluid_nutrient_distillation>, pos); // SLUDGE
+                    world.setBlockState(<blockstate:minecraft:water>, pos); // Water
             }
         } else if (!controller.recipeLogic.isActive) { //Clear interior so next recipe can run
             for pos in getCenter(controller.pos, controller.frontFacing) {
@@ -202,11 +202,11 @@ for input, output in bioRecipeMap {
 		.duration(100)
 		.EUt(6)
 		.notConsumable(input)
-		.fluidInputs(<liquid:biomass> * 500)
+		.fluidInputs(<liquid:water> * 1000)
 		.outputs(output[0], output[1])
 		.chancedOutput(output[2], 5000, 0)
 		.chancedOutput(input, 100, 0)
-		.fluidOutputs(<liquid:sludge> * 250)
+		.fluidOutputs(<liquid:sludge> * 1000)
 	.buildAndRegister();
 }
 
@@ -230,22 +230,22 @@ bio_organic_fabricator.recipeMap.recipeBuilder()
 // Quark Roots
 bio_organic_fabricator.recipeMap.recipeBuilder()
 	.notConsumable(<quark:root>)
-	.fluidInputs(<liquid:biomass> * 500)
+	.fluidInputs(<liquid:water> * 1000)
 	.chancedOutput(<quark:root>, 5000, 500)
 	.chancedOutput(<quark:root_flower:0>, 1800, 300)
 	.chancedOutput(<quark:root_flower:1>, 1800, 300)
 	.chancedOutput(<quark:root_flower:2>, 1800, 300)
 	.chancedOutput(<minecraft:stick>, 1800, 300)
-	.fluidOutputs(<liquid:sludge> * 250)
+	.fluidOutputs(<liquid:sludge> * 1000)
 .duration(240).EUt(3).buildAndRegister();
 
 // Rabbit
 bio_organic_fabricator.recipeMap.recipeBuilder()
 	.notConsumable(<fossil:rabbit_dna>)
-	.fluidInputs(<liquid:biomass> * 500)
+	.fluidInputs(<liquid:water> * 1000)
 	.outputs(<minecraft:rabbit_hide>*4, <minecraft:rabbit>)
 	.chancedOutput(<minecraft:rabbit_foot>, 2000, 0)
 	.chancedOutput(<fossil:rabbit_dna>, 100, 0)
 	.chancedOutput(<minecraft:bone>, 5000, 0)
-	.fluidOutputs(<liquid:sludge> * 250)
+	.fluidOutputs(<liquid:sludge> * 1000)
 .duration(240).EUt(3).buildAndRegister();
