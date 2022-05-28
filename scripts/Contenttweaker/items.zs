@@ -18,58 +18,31 @@ function itemColor(intColor as int) as IItemColorSupplier {
   };
 }
 
-VanillaFactory.createItem("scrap_rubber").register();
-VanillaFactory.createItem("heavy_dust").register();
-VanillaFactory.createItem("light_dust").register();
-VanillaFactory.createItem("dense_dust").register();
+var simpleItems = [
+	//Station Items
+  "vat_print",
+  "cooling_element",
+  "heating_element",
+  "stator",
+  "rough_redstone_crystal",
+  "fuel_catalyst",
 
-VanillaFactory.createItem("root_pulp").register();
-VanillaFactory.createItem("root_paper").register();
+	//Station Materials
+  "flexible_organic_panel",
+  "blue_crystal_dust_inert",
+  "blue_crystal_dust",
+  "dust_crystal_green_glass",
+  "root_paper",
+  "root_pulp",
+  "dense_dust",
+  "light_dust",
+  "heavy_dust",
+  "scrap_rubber",
+] as string[];
 
-VanillaFactory.createItem("dust_crystal_green_glass").register();
-
-
-VanillaFactory.createItem("blue_crystal_dust").register();
-VanillaFactory.createItem("blue_crystal_dust_inert").register();
-
-
-VanillaFactory.createItem("rough_redstone_crystal").register();
-
-
-VanillaFactory.createItem("internals_t1").register();
-
-VanillaFactory.createItem("internals_t2").register();
-
-VanillaFactory.createItem("internals_t3").register();
-
-VanillaFactory.createItem("internals_t4").register();
-
-VanillaFactory.createItem("stator").register();
-
-VanillaFactory.createItem("heating_element").register();
-VanillaFactory.createItem("cooling_element").register();
-
-VanillaFactory.createItem("vat_print").register();
-
-
-VanillaFactory.createItem("emc_widget_1").register();
-VanillaFactory.createItem("emc_item_1").register();
-VanillaFactory.createItem("emc_item_2").register();
-VanillaFactory.createItem("emc_item_3").register();
-VanillaFactory.createItem("emc_item_4").register();
-VanillaFactory.createItem("emc_item_5").register();
-VanillaFactory.createItem("emc_item_6").register();
-VanillaFactory.createItem("emc_item_7").register();
-VanillaFactory.createItem("emc_item_8").register();
-VanillaFactory.createItem("emc_item_9").register();
-VanillaFactory.createItem("emc_item_10").register();
-
-VanillaFactory.createItem("station_component_1").register();
-VanillaFactory.createItem("station_component_2").register();
-VanillaFactory.createItem("station_component_3").register();
-VanillaFactory.createItem("station_component_4").register();
-
-VanillaFactory.createItem("flexible_organic_panel").register();
+for item in simpleItems {
+	VanillaFactory.createItem(item).register();
+}
 
 val crowbar = VanillaFactory.createItem("crowbar");
 crowbar.maxStackSize = 1;
