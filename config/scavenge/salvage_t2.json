@@ -213,7 +213,8 @@
 			],
 			"drops": [
 				{
-					"name": "contenttweaker:internals_t1",
+					"name": "cosmic_core:cc_meta_item",
+					"meta": 110,
 					"properties": [
 						{
 							"type": "set_random_size",
@@ -367,7 +368,8 @@
 			],
 			"drops": [
 				{
-					"name": "contenttweaker:internals_t2",
+					"name": "cosmic_core:cc_meta_item",
+					"meta": 111,
 					"properties": [
 						{
 							"type": "set_random_size",

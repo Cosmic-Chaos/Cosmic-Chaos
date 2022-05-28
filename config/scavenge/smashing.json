@@ -17,6 +17,9 @@
 					},
 					{
 						"name": "chisel:factory"
+					},
+					{
+						"name": "chisel:tyrian"
 					}
 				]
 			},
@@ -89,6 +92,9 @@
 					},
 					{
 						"name": "chisel:factory"
+					},
+					{
+						"name": "chisel:tyrian"
 					}
 				]
 			},
@@ -162,6 +168,9 @@
 					},
 					{
 						"name": "chisel:factory"
+					},
+					{
+						"name": "chisel:tyrian"
 					}
 				]
 			},
@@ -223,6 +232,9 @@
 					},
 					{
 						"name": "chisel:factory"
+					},
+					{
+						"name": "chisel:tyrian"
 					}
 				]
 			},
