@@ -94,6 +94,10 @@ for item in lootable {
 <hooked:hook:2>.displayName = "Blue Alloy Hook";
 <hooked:microcrafting:2>.displayName = "Crude Steel Chain Link";
 <hooked:microcrafting:3>.displayName = "Crude Steel Chain";
+
+//Rocket Boots
+<cosmic_core:cc_armor:1>.anyDamage().addTooltip(format.gold("Fueled with Liquid Fire Matrix"));
+
 ##=======================================================
 ## ADD RECIPES
 ##=======================================================

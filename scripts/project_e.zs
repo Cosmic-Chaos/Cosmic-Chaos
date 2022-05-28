@@ -80,15 +80,15 @@ Unacceptable, Emerging, Minimally Acceptable, Acceptable, Accomplished, Exemplar
 
 
 val mapEMC as IItemStack[][IOreDictEntry] = {
-    <ore:circuitUlv>:[<contenttweaker:emc_item_1>, <contenttweaker:emc_item_2>], //ULV
-    <ore:circuitLv>:[<contenttweaker:emc_item_2>, <contenttweaker:emc_item_3>],
-    <ore:circuitMv>:[<contenttweaker:emc_item_3>, <contenttweaker:emc_item_4>],
-    <ore:circuitHv>:[<contenttweaker:emc_item_4>, <contenttweaker:emc_item_5>],
-    <ore:circuitEv>:[<contenttweaker:emc_item_5>, <contenttweaker:emc_item_6>],
-    <ore:circuitIv>:[<contenttweaker:emc_item_6>, <contenttweaker:emc_item_7>],
-    <ore:circuitLuv>:[<contenttweaker:emc_item_7>, <contenttweaker:emc_item_8>],
-    <ore:circuitZpm>:[<contenttweaker:emc_item_8>, <contenttweaker:emc_item_9>],
-    <ore:circuitUv>:[<contenttweaker:emc_item_9>, <contenttweaker:emc_item_10>],
+    <ore:circuitUlv>:[<cosmic_core:cc_meta_item:10>, <cosmic_core:cc_meta_item:11>], //ULV
+    <ore:circuitLv>:[<cosmic_core:cc_meta_item:11>, <cosmic_core:cc_meta_item:12>],
+    <ore:circuitMv>:[<cosmic_core:cc_meta_item:12>, <cosmic_core:cc_meta_item:13>],
+    <ore:circuitHv>:[<cosmic_core:cc_meta_item:13>, <cosmic_core:cc_meta_item:14>],
+    <ore:circuitEv>:[<cosmic_core:cc_meta_item:14>, <cosmic_core:cc_meta_item:15>],
+    <ore:circuitIv>:[<cosmic_core:cc_meta_item:15>, <cosmic_core:cc_meta_item:16>],
+    <ore:circuitLuv>:[<cosmic_core:cc_meta_item:16>, <cosmic_core:cc_meta_item:17>],
+    <ore:circuitZpm>:[<cosmic_core:cc_meta_item:17>, <cosmic_core:cc_meta_item:18>],
+    <ore:circuitUv>:[<cosmic_core:cc_meta_item:18>, <cosmic_core:cc_meta_item:19>],
 } as IItemStack[][IOreDictEntry];
 
 for item, material in mapEMC {
@@ -145,7 +145,7 @@ extractor.recipeBuilder()
 */
 
 # [Minor Alchemical Construct] from [Bronze Plate][+8]
-craft.remake(<contenttweaker:emc_widget_1>, ["pretty",
+craft.remake(<cosmic_core:cc_meta_item:20>, ["pretty",
   "o G T",
   "* □ F",
   "○ H l"], {
