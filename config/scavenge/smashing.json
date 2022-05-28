@@ -35,7 +35,8 @@
 				},
 				{
 					"type": "require_item",
-					"name": "contenttweaker:internals_t1"
+					"name": "cosmic_core:cc_meta_item",
+					"meta": 110
 				},
 				{
 					"type": "swing_hand"

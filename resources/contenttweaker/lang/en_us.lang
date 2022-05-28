@@ -151,6 +151,8 @@ tile.contenttweaker.controller_broken_north.name=Broken Generator Controller
 
 tile.contenttweaker.controller_broken_west.name=Broken Compactor Controller
 
+tile.contenttweaker.roots.name=Cave Roots
+
 tile.contenttweaker.crystal_cluster_blue_1.name=Growing Blue Crystal Cluster
 tile.contenttweaker.crystal_cluster_blue_2.name=Growing Blue Crystal Cluster
 tile.contenttweaker.crystal_cluster_blue_3.name=Growing Blue Crystal Cluster
@@ -199,4 +201,5 @@ mbd.gp_eu.description=Using the power of Manual Labor, generate Power!
 multiblocked.recipe_map.Clockwork EU=Hand Crank Generator
 
 devtech.machine.electromagnetic_separator.ulv.name=Primitive Electromagnetic Separator
+devtech.machine.water_electrolyzer.ulv.name=Primitive Water Electrolyzer
 

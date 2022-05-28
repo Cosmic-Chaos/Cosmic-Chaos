@@ -136,7 +136,7 @@ craft.remake(<contenttweaker:station_casing>*2, ["pretty",
   "P o P",
   "P ◙ P",
   "P T P"], {
-  "P": <contenttweaker:station_component_1> | <contenttweaker:station_component_2>, # Plating Component
+  "P": <metaitem:station.component.0> | <metaitem:station.component.1>, # Plating Component
   "o": <ore:gtceHardHammers>, # Neutronium Hammer
   "◙": <ore:frameGtWroughtIron>,                   # Wrought Iron Frame Box
   "T": <ore:gtceWrenches>, # Neutronium Wrench
@@ -158,8 +158,8 @@ craft.remake(<metaitem:workbench>, ["pretty",
   "E P",
   "r S"], {
   "E": <minecraft:book>, # Book
-  "P": <contenttweaker:station_component_4>, # Primitive Crafting Interface
-  "r": <contenttweaker:station_component_3>, # Primitive Mixed Plating
+  "P": <metaitem:station.component.3>, # Primitive Crafting Interface
+  "r": <metaitem:station.component.2>, # Primitive Mixed Plating
   "S": <ironchest:iron_chest:*>,              # Silver Chest
 });
 
@@ -174,23 +174,23 @@ recipes.addShaped(<metaitem:workbench>, [
 ]);
 
 # [Plating Component]
-recipes.addShapeless(<contenttweaker:station_component_1>, 
+recipes.addShapeless(<metaitem:station.component.0>, 
 	[<ore:gtceHardHammers>,<metaitem:hull.plate.1>,<metaitem:hull.plate.1>,<metaitem:hull.plate.0>]
 );
 
 # [Plating Component]
-recipes.addShapeless(<contenttweaker:station_component_2>, 
+recipes.addShapeless(<metaitem:station.component.1>, 
 	[<ore:gtceHardHammers>,<metaitem:hull.plate.0>,<metaitem:hull.plate.0>,<metaitem:hull.plate.1>]
 );
 
 # [Primitive Mixed Plating]
-recipes.addShapeless(<contenttweaker:station_component_3>, 
-	[<ore:gtceWrenches>,<contenttweaker:station_component_2>,<contenttweaker:station_component_1>]
+recipes.addShapeless(<metaitem:station.component.2>, 
+	[<ore:gtceWrenches>,<metaitem:station.component.1>,<metaitem:station.component.0>]
 );
 
 # [Primitive Crafting Interface]
-recipes.addShapeless(<contenttweaker:station_component_4>, 
-	[<ore:gtceScrewdrivers>,<contenttweaker:internals_t1>,<contenttweaker:internals_t1>,<contenttweaker:internals_t1>]
+recipes.addShapeless(<metaitem:station.component.3>, 
+	[<ore:gtceScrewdrivers>,<metaitem:internal.components.0>,<metaitem:internal.components.0>,<metaitem:internal.components.0>]
 );
 
 # [Copper Furnace] from [Neutronium Wrench][+1]
@@ -198,7 +198,7 @@ craft.remake(<morefurnaces:furnaceblock:5>, ["pretty",
   "P P P",
   "P T P",
   "P P P"], {
-  "P": <contenttweaker:station_component_1>, # Plating Component
+  "P": <metaitem:station.component.0>, # Plating Component
   "T": <ore:gtceHardHammers>, # Neutronium Wrench
 });
 
@@ -216,7 +216,7 @@ craft.remake(<morefurnaces:furnaceblock>, ["pretty",
   "P P P",
   "P T P",
   "P P P"], {
-  "P": <contenttweaker:station_component_2>, # Plating Component
+  "P": <metaitem:station.component.1>, # Plating Component
   "T": <ore:gtceHardHammers>, # Neutronium Wrench
 });
 
@@ -372,54 +372,6 @@ craft.remake(<mbd:gp_eu>, ["pretty",
   "i": <ore:springSilver>,               # ULV Machine Hull
 });
 
-
-# [Liquid Fueled Engine] from [Crude Steel Screw][+3]
-craft.remake(<advancedrocketry:rocketmotor>, ["pretty",
-  "╱ r ╱",
-  "I C I",
-  "I   I"], {
-  "╱": <ore:stickCrudeSteel>, # Crude Steel Rod
-  "r": <ore:ringCrudeSteel>,  # Crude Steel Ring
-  "I": <ore:sheetIron>,       # Iron Sheet
-  "C": <ore:screwCrudeSteel>, # Crude Steel Screw
-});
-
-# [Liquid Fuel Tank] from [Double Crude Steel Plate][+2]
-craft.remake(<advancedrocketry:fueltank>, ["pretty",
-  "╱ C ╱",
-  "□ C □",
-  "╱ C ╱"], {
-  "╱": <ore:stickCrudeSteel>,       # Crude Steel Rod
-  "C": <ore:ringCrudeSteel>,        # Crude Steel Ring
-  "□": <ore:plateDoubleCrudeSteel>, # Double Crude Steel Plate
-});
-
-# [Rocket Assembling Machine] from [ULV Machine Casing][+5]
-craft.remake(<advancedrocketry:rocketbuilder>, ["pretty",
-  "L U L",
-  "□ ⌂ □",
-  "¤ V ¤"], {
-  "L": <ore:circuitLv>,            # Electronic Circuit
-  "U": <advancedrocketry:misc>,    # User Interface
-  "□": <ore:plateSilver>,          # Silver Plate
-  "⌂": <gregtech:machine_casing>,  # ULV Machine Casing
-  "¤": <ore:gearCrudeSteel>,       # Crude Steel Gear
-  "V": <cosmic_core:cc_meta_item>, # ULV Conveyor Module
-});
-
-# [Guidance Computer] from [ULV Machine Casing][+5]
-craft.remake(<advancedrocketry:guidancecomputer>, ["pretty",
-  "□ U □",
-  "L ⌂ L",
-  "¤ V ¤"], {
-  "□": <ore:plateSilver>,            # Silver Plate
-  "U": <advancedrocketry:misc>,      # User Interface
-  "L": <ore:circuitLv>,              # Electronic Circuit
-  "⌂": <gregtech:machine_casing>,    # ULV Machine Casing
-  "¤": <ore:gearCrudeSteel>,         # Crude Steel Gear
-  "V": <cosmic_core:cc_meta_item:2>, # ULV Electric Motor
-});
-
 # [Blue Alloy Hook] from [Blue Alloy Pickaxe Head][+3]
 craft.remake(<hooked:hook:2>, ["pretty",
   "B ╱ H",
@@ -457,39 +409,6 @@ craft.remake(<hooked:microcrafting:2> * 3, ["pretty",
   "o": <ore:gtceWireCutters>, # Neutronium Wire Cutter
 });
 
-# [User Interface] from [Glass Pane][+3]
-craft.remake(<advancedrocketry:misc>, ["pretty",
-  "F L F",
-  "▲ G ▲"], {
-  "F": <ore:wireFineRedAlloy>,                     # Fine Red Alloy Wire
-  "L": <ore:circuitLv>,                            # Electronic Circuit
-  "▲": <ore:dustGlowstone>,                        # Glowstone Dust
-  "G": <ore:paneGlassColorless>, # Glass Pane
-});
-/*
-# [Low Pressure Tank] from [Neutronium Screwdriver][+3]
-craft.remake(<advancedrocketry:pressuretank>, ["pretty",
-  "I W I",
-  "I o I",
-  "I T I"], {
-  "I": <ore:sheetIron>,        # Iron Sheet
-  "W": <ore:screwWroughtIron>, # Wrought Iron Screw
-  "o": <ore:gtceScrewdrivers>, # Neutronium Screwdriver
-  "T": <ore:gtceHardHammers>, # Neutronium Hammer
-});
-*/
-# [Planet Id Chip] from [Circuit Board][+5]
-craft.remake(<advancedrocketry:planetidchip>, ["pretty",
-  "R U R",
-  "* C *",
-  "▲ ♠ ▲"], {
-  "R": <metaitem:component.resistor>,              # Resistor
-  "U": <metaitem:circuit.vacuum_tube>,                     # Vacuum Tube
-  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
-  "C": <metaitem:circuit_board.basic>,           # Circuit Board
-  "▲": <ore:dustGlowstone>,                  # Glowstone Dust
-  "♠": <projecte:item.pe_covalence_dust>,    # Low Covalence Dust
-});
 # [Coated Circuit Board] from [Wood Plank][+1]
 craft.remake(<metaitem:board.coated>, ["pretty",
   "# S",
@@ -519,8 +438,8 @@ craft.remake(<metaitem:component.resistor> * 2, ["pretty",
 });
 
 
-# [devtech.machine.electromagnetic_separator.ulv.name] from [ULV Machine Hull][+5]
-craft.remake(<metaitem:devtech:electromagnetic_separator.ulv>, ["pretty",
+# [Primitive Electromagnetic Separator] from [ULV Machine Hull][+5]
+craft.make(<metaitem:devtech:electromagnetic_separator.ulv>, ["pretty",
   "U G t",
   "G V ╱",
   "L G t"], {
@@ -530,6 +449,18 @@ craft.remake(<metaitem:devtech:electromagnetic_separator.ulv>, ["pretty",
   "V": <metaitem:hull.ulv>,      # ULV Machine Hull
   "╱": <ore:stickIronMagnetic>,     # Magnetic Iron Rod
   "L": <metaitem:conveyor.module.ulv>,  # ULV Conveyor Module
+});
+
+# [Primitive Water Electrolyzer] from [ULV Machine Hull][+5]
+craft.make(<metaitem:devtech:water_electrolyzer.ulv>, ["pretty",
+  "| L |",
+  "| V |",
+  "U G U"], {
+  "U": <metaitem:circuit.vacuum_tube>,            # Vacuum Tube
+  "G": <ore:cableGtSingleRedAlloy>, # 1x Red Alloy Cable
+  "V": <metaitem:hull.ulv>,      # ULV Machine Hull
+  "|": <ore:wireGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Wire
+  "L": <ore:blockGlassColorless>,  # Glass
 });
 
 # [Broken Iron Scraps] from [Heavy Hull Plate][+1]
@@ -560,14 +491,14 @@ craft.make(<minecraft:redstone>, ["pretty",
   "T",
   "§"], {
   "T": <ore:gtceHardHammers>, # Neutronium Hammer
-  "§": <contenttweaker:internals_t1>, # Simple Internals
+  "§": <metaitem:internal.components.0>, # Simple Internals
 });
 
 # [Small Pile of Coal Dust] from [Simple Internals][+1]
 craft.make(<metaitem:dustSmallCoal>, ["pretty",
   "T §"], {
   "T": <ore:gtceHardHammers>, # Neutronium Hammer
-  "§": <contenttweaker:internals_t1>, # Simple Internals
+  "§": <metaitem:internal.components.0>, # Simple Internals
 });
 
 //Cooking Ingots
@@ -779,12 +710,25 @@ craft.make(<industrialforegoing:spores_recreator>, ["pretty",
   "§ l §",
   "n ⌂ n",
   "□ ¤ □"], {
-  "§": <contenttweaker:internals_t2>, # Complex Internals
+  "§": <metaitem:internal.components.1>, # Complex Internals
   "l": <ore:listAllwater>,            # Water Bucket
   "n": <ore:listAllmushroom>, # Mushroom
   "⌂": <gregtech:machine_casing:0>,     # ULV Machine Casing
   "□": <ore:plateDoubleTinAlloy>,     # Double Tin Alloy Plate
   "¤": <ore:gearIron>,                # Iron Gear
 });
+
+<recipemap:water_electrolyzer>.recipeBuilder()
+	.fluidInputs(<liquid:water>*3000)
+	.fluidOutputs(<liquid:hydrogen>*2000, <liquid:oxygen>*1000)
+.duration(1500).EUt(8).buildAndRegister();
+
+// Move ulv transformer to assembler only so that it cannot be abused to create explosions and hence compressed iron on the space station
+recipes.removeByRecipeName("gregtech:gregtech.machine.transformer.ulv");
+<recipemap:assembler>.recipeBuilder()
+	.inputs(<metaitem:gregtech:hull.ulv>, <ore:cableGtSingleTin>, <ore:cableGtSingleRedAlloy>*4)
+	.outputs(<metaitem:gregtech:transformer.ulv>)
+.duration(100).EUt(5).buildAndRegister();
+
 ##########################################################################################
 print("==================== end of ulv_lv_station_recipes.zs ====================");

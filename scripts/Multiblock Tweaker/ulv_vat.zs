@@ -1,3 +1,4 @@
+#priority 6
 import crafttweaker.block.IBlockState;
 import crafttweaker.block.IBlock;
 import crafttweaker.item.IIngredient;
@@ -76,7 +77,7 @@ craft.make(<metaitem:mbt:ulv_vat>, ["pretty",
   "P r P",
   "G t G",
   "¤ ⌂ ¤"], {
-  "P": <contenttweaker:station_component_4>,
+  "P": <metaitem:station.component.3>,
   "r": <metaitem:circuit.vacuum_tube>,
   "G": <ore:wireGtDoubleTin>,
   "t": <contenttweaker:vat_print>,
@@ -88,7 +89,7 @@ craft.make(<metaitem:mbt:ulv_vat>, ["pretty",
 recipes.addShaped("ulv_vat_blueprint_copy", <contenttweaker:vat_print>, [
 	[<ore:nuggetRubber>, <quark:root_dye:1>, <ore:nuggetRubber>],
 	[<ore:wireFineRedAlloy>, <contenttweaker:root_paper>, <ore:wireFineRedAlloy>],
-	[<ore:nuggetRubber>, <contenttweaker:station_component_4>, <ore:nuggetRubber>]
+	[<ore:nuggetRubber>, <metaitem:station.component.3>, <ore:nuggetRubber>]
 ]);
 
 <metaitem:mbt:ulv_vat>.addTooltip(format.red("Can only be used in the space station"));
@@ -273,10 +274,11 @@ ulv_vat.recipeMap.recipeBuilder()
 
 
 
-
+/*
 // Oxygen Thingie
 mods.fossils.recipes.addCultivateRecipe(<advancedrocketry:crystal:2>, <contenttweaker:organic_overloader>);
 <contenttweaker:organic_overloader>.addTooltip(format.yellow("Recipes in the Cuture Vat can fail, with a Failuresaurus breaking out instead!"));
+*/
 
 # [Green Crystal Block] from [Green Crystal Shard]
 craft.remake(<advancedrocketry:crystal:2>, ["pretty",
@@ -289,12 +291,14 @@ craft.reshapeless(<actuallyadditions:item_crystal_shard:4> * 4, "*", {
   "*": <advancedrocketry:crystal:2>, # Green Crystal Block
 });
 
+/*
 // Oxygen
 ulv_vat.recipeMap.recipeBuilder()
 	.notConsumable(<contenttweaker:organic_overloader>)
 	.inputs(<minecraft:leaves>*24)
 	.fluidOutputs(<liquid:oxygen>*1000)
 	.duration(200).EUt(3).buildAndRegister();
+*/
 
 // Concrete
 ulv_vat.recipeMap.recipeBuilder()

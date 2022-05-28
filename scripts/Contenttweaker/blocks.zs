@@ -179,6 +179,18 @@ perfect_sample_ruby.blockColorSupplier = perfect_sample_ruby_blockColor;
 perfect_sample_ruby.itemColorSupplier = perfect_sample_ruby_itemColor;
 perfect_sample_ruby.register();
 
+var caveRoots = VanillaFactory.createBlock("roots", <blockmaterial:vine>);
+caveRoots.passable = true;
+caveRoots.replaceable = true;
+caveRoots.toolClass = "shears";
+caveRoots.fullBlock = false;
+caveRoots.setDropHandler(function(drops, world, position, state, fortune) {
+	drops.clear();
+	drops.add(<item:quark:root:1>);
+});
+caveRoots.blockSoundType = <soundtype:plant>;
+caveRoots.blockLayer = "CUTOUT_MIPPED";
+caveRoots.register();
 
 ///////////////////////////////////////////////////////////
 //////////////////////    BLUE    /////////////////////////

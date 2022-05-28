@@ -65,15 +65,59 @@ val itemstoRemoveAndHide =
 <enderio:block_enhanced_vat>,
 <enderio:block_combustion_generator>,
 <enderio:block_simple_alloy_smelter>,
+<enderio:item_endergy_conduit:0>,
+<enderio:item_liquid_conduit:0>,
+<enderio:block_sag_mill>,
+<enderio:block_simple_sag_mill>,
+<enderio:block_dark_paper_anvil:0>,
+<enderio:block_dark_paper_anvil:1>,
+<enderio:block_dark_paper_anvil:2>,
 
-<advancedrocketry:electrolyser>, // Only AR multiblock left is the Assembler, might remove still
-<advancedrocketry:arcfurnace>,
+<advancedrocketry:electrolyser>,
+<advancedrocketry:arcfurnace>, // Only AR multiblock left is the Assembler, might remove still
 <advancedrocketry:crystallizer>,
 <advancedrocketry:chemicalreactor>,
 <advancedrocketry:cuttingmachine>,
 <advancedrocketry:lathe>,
 <advancedrocketry:rollingmachine>,
 <advancedrocketry:sawbladeiron>,
+<advancedrocketry:liquidtank>,
+<advancedrocketry:precisionassemblingmachine>,
+<advancedrocketry:precisionlaseretcher>,
+<advancedrocketry:centrifuge>,
+<advancedrocketry:blackholegenerator>,
+<advancedrocketry:blockpump>,
+<advancedrocketry:quartzcrucible>,
+<advancedrocketry:solarpanel>,
+<advancedrocketry:solararraypanel>,
+<advancedrocketry:forcefieldprojector>,
+<advancedrocketry:vacuumlaser>,
+<advancedrocketry:solargenerator>,
+<advancedrocketry:microwavereciever>,
+<advancedrocketry:solararray>,
+<advancedrocketry:biomescanner>,
+<advancedrocketry:railgun>,
+<advancedrocketry:spaceelevatorcontroller>,
+<advancedrocketry:terraformer>,
+<advancedrocketry:satelliteprimaryfunction:5>,//biome changer
+<advancedrocketry:satelliteprimaryfunction:3>,//microwave emitter (power gen)
+<advancedrocketry:biomechanger>,//biome changer remote
+<advancedrocketry:jetpack>,
+<advancedrocketry:orescanner>,
+<advancedrocketry:itemupgrade:1>,//flight speed control upgrade
+<advancedrocketry:hovercraft>,
+<advancedrocketry:lens>,//basic lens
+<advancedrocketry:misc:1>,//carbon brick
+<advancedrocketry:elevatorchip>,
+<advancedrocketry:ic:0>,//basic circuit
+<advancedrocketry:ic:2>,//advanced circuit
+<advancedrocketry:ic:3>,//control circuit
+<advancedrocketry:ic:4>,//item circuit
+<advancedrocketry:ic:5>,//liquid circuit
+<libvulpes:productboule:3>,//silicon boule
+<advancedrocketry:wafer:0>,//silicon wafer
+<advancedrocketry:itemcircuitplate:0>,//basic wafer
+<advancedrocketry:itemcircuitplate:1>,//advanced wafer
 
 <nuclearcraft:alloy_furnace>, // Only NC Machines left are the Fuel Reprocessor and Decay Hastener, might remove still
 <nuclearcraft:separator>,
@@ -113,6 +157,7 @@ val itemstoRemoveAndHide =
 <metaitem:steam_alloy_smelter_steel>,
 
 <metaitem:steam_miner>,
+<metaitem:gregtech:primitive_blast_furnace.bronze>,
 
 <harvestcraft:shippingbin>,
 <harvestcraft:market>,
@@ -264,6 +309,7 @@ var name_removals = [
     "harvestcraft:leather_helmet",
     "harvestcraft:leather_chestplate",
     "harvestcraft:leather_boots",
+    "gregtech:cauldron",
     "gregtechfoodoption:gtfo_hand_zest1",
     "gregtechfoodoption:gtfo_hand_zest2",
     "gregtechfoodoption:gtfo_hand_zest3",
@@ -284,6 +330,13 @@ var name_removals = [
     "danknull:dank_null_4",
     "danknull:dank_null_5",
     "fluxnetworks:item.fluxnetworks.fluxcore",
+    "akashictome:tome",
+    "akashictome:tome_1",
+    "advancedrocketry:guidancecomputer",
+    "advancedrocketry:rocketbuilder",
+    "advancedrocketry:engine",
+    "advancedrocketry:blockfueltank",
+    "advancedrocketry:planetidchip",
 ] as string[];
 
 for item in name_removals {
@@ -297,6 +350,7 @@ var category_removals = [
 	"jehc.grinder",
 	"jehc.waterfilter",
 	"industrialrenewal.lathe",
+	"gregtech:primitive_blast_furnace",
 ] as string[];
 
 for name in category_removals {

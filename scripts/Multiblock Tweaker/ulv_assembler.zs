@@ -1,3 +1,4 @@
+#priority 6
 import crafttweaker.block.IBlockState;
 import crafttweaker.block.IBlock;
 import crafttweaker.item.IIngredient;
@@ -25,7 +26,8 @@ import mods.gregtech.recipe.functions.ICompleteRecipeFunction;
 import mods.gregtech.recipe.IRecipe;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.RecipeMap;
-
+import mods.gregtech.predicate.IMTEPredicate;
+import mods.gregtech.IMetaTileEntity;
 
 var loc = "mbt:ulv_assembler";
 
@@ -54,9 +56,9 @@ val ulv_assembler = Builder.start(loc)
 
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:station_casing>)
-			.where("S", <blockstate:sonarcore:stableglass>)
+			.where("S", <metastate:chisel:glassdyedlightgray:3>)
 			.where("R", <blockstate:industrialrenewal:frame>)
-			.where("W", <blockstate:minecraft:crafting_table>)
+			.where("W", IMetaTileEntity.byId("gregtech:workbench") as CTPredicate)
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
@@ -153,7 +155,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<gregtech:machine:986>,         # LV Machine Hull
 		<ore:cableGtQuadrupleTin>,      # 4x Tin Cable
 		<ore:gemRedCrystalAlloy>,       # Fire Gem
-		<contenttweaker:internals_t2>   # Complex Internals
+		<metaitem:internal.components.1>   # Complex Internals
 	)
 	.outputs(<gregtech:machine:440>)
 .duration(600).EUt(14).buildAndRegister();

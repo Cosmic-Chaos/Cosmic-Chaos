@@ -1,3 +1,4 @@
+#priority 6
 import mods.gregtech.multiblock.Builder;
 import mods.gregtech.multiblock.FactoryBlockPattern;
 import mods.gregtech.multiblock.IPatternMatchContext;
