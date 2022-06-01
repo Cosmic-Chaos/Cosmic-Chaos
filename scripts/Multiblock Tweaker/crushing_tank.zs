@@ -442,6 +442,7 @@ val ingotDustMap as IItemStack[IOreDictEntry] = {
 <ore:ingotIron>:<metaitem:dustIron>,
 <ore:ingotTin>:<metaitem:dustTin>,
 <ore:ingotBronze>:<metaitem:dustBronze>,
+<ore:ingotSilver>:<metaitem:dustSilver>,
 <ore:frameGtWroughtIron>:<metaitem:dustWroughtIron>*2
 } as IItemStack[IOreDictEntry];
 

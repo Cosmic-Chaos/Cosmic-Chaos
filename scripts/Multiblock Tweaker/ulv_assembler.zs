@@ -56,7 +56,7 @@ val ulv_assembler = Builder.start(loc)
 
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:station_casing>)
-			.where("S", <metastate:chisel:glassdyedlightgray:3>)
+			.where("S", <blockstate:cosmic_core:station_glass>)
 			.where("R", <blockstate:industrialrenewal:frame>)
 			.where("W", IMetaTileEntity.byId("gregtech:workbench") as CTPredicate)
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)

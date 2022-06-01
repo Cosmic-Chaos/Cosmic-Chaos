@@ -148,15 +148,15 @@ ulv_vat.recipeMap.recipeBuilder()
 // Biomass from Water + Bio Chaff
 ulv_vat.recipeMap.recipeBuilder()
 	.inputs(<metaitem:bio_chaff>)
-	.fluidInputs(<liquid:water>*500)
-	.fluidOutputs(<liquid:biomass>*500)
+	.fluidInputs(<liquid:water>*1000)
+	.fluidOutputs(<liquid:biomass>*1000)
 	.duration(128).EUt(4).buildAndRegister();
 
 // Biomass from Water + Sapling
 ulv_vat.recipeMap.recipeBuilder()
-	.inputs(<ore:treeSapling>)
-	.fluidInputs(<liquid:water>*100)
-	.fluidOutputs(<liquid:biomass>*100)
+	.inputs(<ore:listAllmushroom>)
+	.fluidInputs(<liquid:water>*500)
+	.fluidOutputs(<liquid:biomass>*500)
 	.duration(128).EUt(4).buildAndRegister();
 
 // Methane for Rocket Boots

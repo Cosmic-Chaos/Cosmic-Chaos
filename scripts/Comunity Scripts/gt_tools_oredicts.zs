@@ -33,3 +33,6 @@
 
 <ore:gtceMortars>.addItems([
 	<gregtech:meta_tool:12>.withEmptyTag()]);
+
+<ore:gtceKnives>.addItems([
+	<gregtech:meta_tool:4>.withEmptyTag()]);

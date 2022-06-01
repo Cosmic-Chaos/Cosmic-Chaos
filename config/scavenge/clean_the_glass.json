@@ -15,14 +15,15 @@
 				},
 				{
 					"type": "play_sound",
-					"name": "block.anvil.place",
+					"name": "block.glass.hit",
 					"volume": 0.3,
 					"pitch": 0.75,
 					"category": "block"
 				},
 				{
 					"type": "require_item",
-					"name": "actuallyadditions:item_knife"
+					"name": "gregtech:meta_tool",
+					"meta": "15"
 				},
 				{
 					"type": "swing_hand"

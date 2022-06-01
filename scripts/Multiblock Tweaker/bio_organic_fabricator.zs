@@ -31,19 +31,19 @@ val bio_organic_fabricator = Builder.start(loc)
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             
             .aisle(
-                "CCC",
+                "III",
                 "CGC",
                 "CGC",
                 "IEI"
             )
             .aisle(
-                "CCC",
+                "III",
                 "G G",
                 "G G",
                 "ICI"
             )
             .aisle(
-                "CCC",
+                "III",
                 "CGC",
                 "CGC",
                 "III"
@@ -59,6 +59,7 @@ val bio_organic_fabricator = Builder.start(loc)
                                       | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1) // There is at least one IMPORT_ITEMS bus. JEI preview shows only one.
                                       | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
                                       | CTPredicate.abilities(<mte_ability:IMPORT_FLUIDS>).setMinGlobalLimited(1).setPreviewCount(1)
+                                      | CTPredicate.abilities(<mte_ability:EXPORT_FLUIDS>).setMinGlobalLimited(1).setPreviewCount(1)
                                       | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1)
             )              
             .build();
