@@ -14,7 +14,7 @@ craft.remake(<fossil:cultivate>, ["pretty",
   "□ □ □"], {
   "*": <contenttweaker:crystal_green_glass>, # Green Crystal Glass
   "B": <ore:circuitLv>,                     # Bio-Goo
-  "E": <projecte:item.pe_evertide_amulet>,   # Evertide Amulet
+  "E": <ore:listAllwater>|<projecte:item.pe_evertide_amulet>,   # Evertide Amulet
   "□": <ore:plateWroughtIron>,               # Wrought Iron Plate
 });
 

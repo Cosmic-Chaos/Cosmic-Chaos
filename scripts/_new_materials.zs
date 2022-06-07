@@ -88,7 +88,7 @@ var crude_steel = MaterialBuilder(32002, "crude_steel")
     .color(0x9e9e9e) // can also use colorAverage() if using components
     .iconSet("dull") // "NONE", "METALLIC", "DULL", "MAGNETIC", "QUARTZ", "DIAMOND", "EMERALD", "SHINY", "ROUGH", "FINE", "SAND", "FLINT", "RUBY", "LAPIS", "FLUID", "GAS", "LIGNITE", "OPAL", "GLASS", "WOOD", "GEM_HORIZONTAL", "GEM_VERTICAL", "PAPER", "NETHERSTAR", "BRIGHT".
     .flags(["generate_plate", "generate_rod", "generate_gear", "generate_frame", "generate_bolt_screw", "generate_ring"]) // add flags "generate_foil",  "generate_fine_wire"
-    .toolStats(10, 3, 256, 1) // (float speed, float damage, int durability, int enchantability)
+    .toolStats(10, 3, 512, 1) // (float speed, float damage, int durability, int enchantability)
     .components([<material:iron> * 4, <material:carbon>*1])
 //    .cableProperties(8, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
 //    .element("Iron")
@@ -604,7 +604,7 @@ var green_crystal_alloy = MaterialBuilder(32151, "green_crystal_alloy")
     .color(0x21a343)
     .iconSet("SHINY")
     .flags(["generate_plate", "generate_foil", "generate_fine_wire"])
-    .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+    .cableProperties(8, 2, 0, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .components([<material:crude_steel> * 4, <material:beryllium> * 1])
     .build();
 

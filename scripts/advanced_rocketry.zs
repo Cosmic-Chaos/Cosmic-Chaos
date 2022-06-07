@@ -140,47 +140,36 @@ recipes.removeByRecipeName("advancedrocketry:warpcore");
 	).outputs(<advancedrocketry:warpcore>)
 .duration(1200).EUt(1200).buildAndRegister();
 
-# [Space Suit Helmet] from [Glass Pane][+2]
-recipes.removeByRecipeName("advancedrocketry:spacehelmet");
-craft.make(<advancedrocketry:spacehelmet>, ["pretty",
-  "S S S",
-  "S G S",
-  "w w w"], {
-  "S": <ore:sheetSteel>,                           # Steel Sheet
-  "G": <ore:paneGlassColorless>, # Glass Pane
-  "w": <ore:wool>, # White Wool
+# [Space Suit Helmet] from [Glass Pane]*2[+1]
+craft.remake(<advancedrocketry:spacehelmet>, ["pretty",
+  "I I I",
+  "I G I"], {
+  "I": <ore:sheetIron>,        # Iron Sheet
+  "G": <minecraft:glass_pane>, # Glass Pane
 });
 
-# [Space Suit Chest-Piece] from [Monopropellant Fuel Tank][+3]
-recipes.removeByRecipeName("advancedrocketry:spacechestplate");
-craft.make(<advancedrocketry:spacechestplate>, ["pretty",
-  "w L w",
-  "S M S",
-  "S w S"], {
-  "w": <ore:wool>, # White Wool
-  "L": <metaitem:electric.pump.lv>,  # LV Electric Pump
-  "S": <ore:sheetSteel>,            # Steel Sheet
-  "M": <advancedrocketry:fueltank>, # Monopropellant Fuel Tank
+# [Space Suit Chest-Piece] from [Iron Sheet]
+craft.remake(<advancedrocketry:spacechestplate>, ["pretty",
+  "I   I",
+  "I I I",
+  "I I I"], {
+  "I": <ore:sheetIron>, # Iron Sheet
 });
 
-# [Space Suit Leggings] from [Steel Sheet][+1]
-recipes.removeByRecipeName("advancedrocketry:spaceleggings");
-craft.make(<advancedrocketry:spaceleggings>, ["pretty",
-  "w w w",
-  "S   S",
-  "w   w"], {
-  "w": <ore:wool>, # White Wool
-  "S": <ore:sheetSteel>, # Steel Sheet
+# [Space Suit Leggings] from [Iron Sheet]
+craft.remake(<advancedrocketry:spaceleggings>, ["pretty",
+  "I I I",
+  "I   I",
+  "I   I"], {
+  "I": <ore:sheetIron>, # Iron Sheet
 });
 
-# [Space Suit Boots] from [White Wool][+1]
-recipes.removeByRecipeName("advancedrocketry:spaceboots");
-craft.make(<advancedrocketry:spaceboots>, ["pretty",
+# [Space Suit Boots] from [Iron Sheet]
+craft.remake(<advancedrocketry:spaceboots>, ["pretty",
   "     ",
-  "w   w",
-  "S   S"], {
-  "w": <ore:wool>, # White Wool
-  "S": <ore:sheetSteel>, # Steel Sheet
+  "I   I",
+  "I   I"], {
+  "I": <ore:sheetIron>, # Iron Sheet
 });
 
 # [Orbital Laser Drill] from [Exquisite Emerald][+6]
@@ -577,7 +566,7 @@ craft.make(<advancedrocketry:oxygencharger>, ["pretty",
   "I I I",
   "o M U"], {
   "I": <ore:barsIron>,               # Iron Bars
-  "o": <advancedrocketry:fueltank>,  # Monopropellant Fuel Tank
+  "o": <metaitem:drum.bronze>,  # Monopropellant Fuel Tank
   "M": <libvulpes:structuremachine>, # Machine Structure
   "U": <metaitem:electric.pump.ulv>, # ULV Electric Pump
 });

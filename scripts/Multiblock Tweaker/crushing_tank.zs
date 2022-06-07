@@ -381,12 +381,24 @@ crushing_tank.recipeMap.recipeBuilder()
 crushing_tank.recipeMap.recipeBuilder()
     .duration(60)
     .EUt(8)
-    .inputs(<metaitem:battery_station_ulv>.anyDamage())
+    .inputs(<devtech:meta_item:2>.withTag({Charge: 0 as long}))
     .outputs(<metaitem:dustLead>*4)
 	.chancedOutput(<metaitem:dustIron>, 7500, 1000)
 	.chancedOutput(<metaitem:dustTin>, 5000, 1000)
 	.chancedOutput(<metaitem:dustTin>, 2500, 1000)
 .buildAndRegister();
+/*
+//Rusty Batteries x2
+crushing_tank.recipeMap.recipeBuilder().hidden()
+    .duration(60)
+    .EUt(8)
+    .inputs(<metaitem:battery_station_ulv>)
+    .outputs(<metaitem:dustLead>*4)
+	.chancedOutput(<metaitem:dustIron>, 7500, 1000)
+	.chancedOutput(<metaitem:dustTin>, 5000, 1000)
+	.chancedOutput(<metaitem:dustTin>, 2500, 1000)
+.buildAndRegister();
+*/
 
 //Wood Pulp
 crushing_tank.recipeMap.recipeBuilder()
@@ -443,6 +455,7 @@ val ingotDustMap as IItemStack[IOreDictEntry] = {
 <ore:ingotTin>:<metaitem:dustTin>,
 <ore:ingotBronze>:<metaitem:dustBronze>,
 <ore:ingotSilver>:<metaitem:dustSilver>,
+<ore:ingotLead>:<metaitem:dustLead>,
 <ore:frameGtWroughtIron>:<metaitem:dustWroughtIron>*2
 } as IItemStack[IOreDictEntry];
 

@@ -71,9 +71,9 @@ craft.remake(<metaitem:conveyor.module.ulv>, ["pretty",
 
 //Glass Tubes
 recipes.addShaped(<metaitem:component.glass.tube>, [
-	[null, <ore:paneGlassColorless>, null],
-	[<ore:paneGlassColorless>, null, <ore:paneGlassColorless>], 
-	[null, <ore:paneGlassColorless>, null]
+	[null, <minecraft:glass_pane>, null],
+	[<minecraft:glass_pane>, null, <minecraft:glass_pane>], 
+	[null, <minecraft:glass_pane>, null]
 ]);
 
 //Wrought Iron temp
@@ -127,7 +127,7 @@ brewery.recipeBuilder()
 	.buildAndRegister();
 
 # [ULV Energy Output Hatch] from [ULV Machine Hull][+2]
-craft.remake(<mbd:ulv_energy_output>, ["pretty",
+craft.remake(<mbd:ulv_energy_output>*2, ["pretty",
   "  U  ",
   "L V L"], {
   "U": <metaitem:voltage_coil.ulv>, # Ultra Low Voltage Coil

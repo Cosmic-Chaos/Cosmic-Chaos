@@ -171,16 +171,16 @@ bio_organic_fabricator.completeRecipeFunction = function (recipeLogic as IRecipe
     return true;
 } as ICompleteRecipeFunction;
 
-# [Bio-Organic Fabricator] from [ULV Machine Casing][+4]
-craft.make(<metaitem:mbt:bio_organic_fabricator>, ["pretty",
-  "§ A §",
+# [Bio-Organic Fabricator] from [Derelict Casing][+4]
+craft.remake(<metaitem:mbt:bio_organic_fabricator>, ["pretty",
+  "§ N §",
   "M ⌂ M",
-  "L A L"], {
-  "§": <metaitem:internal.components.1>,    # Complex Internals
-  "A": <minecraft:sand>,
-  "M": <minecraft:red_mushroom_block>,   # Mushroom
-  "⌂": <gregtech:machine_casing>,        # ULV Machine Casing
-  "L": <metaitem:circuit.vacuum_tube>,                  # Electronic Circuit
+  "U N U"], {
+  "§": <metaitem:internal.components.1>,  # Complex Internals
+  "N": <ore:pipeNormalFluidPotin>,      # Potin Fluid Pipe
+  "M": <minecraft:red_mushroom_block>,  # Mushroom
+  "⌂": <contenttweaker:station_casing>, # Derelict Casing
+  "U":<metaitem:circuit.vacuum_tube>,                # Vacuum Tube
 });
 
 <metaitem:mbt:bio_organic_fabricator>.addTooltip(format.red("Can only be used in the space station"));

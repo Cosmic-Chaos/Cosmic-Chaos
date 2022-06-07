@@ -9,7 +9,7 @@
         "gIO": 2,
         "x": 79,
         "y": 71,
-        "autoIO": false,
+        "autoIO": true,
         "tC": 8000
       }
     ]

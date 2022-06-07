@@ -97,19 +97,17 @@ for item in lootable {
 <hooked:microcrafting:3>.displayName = "Crude Steel Chain";
 
 //Rocket Boots
-<cosmic_core:cc_armor:1>.anyDamage().addTooltip(format.gold("Fueled with Liquid Fire Matrix"));
+<cosmic_core:cc_armor:1>.anyDamage().addTooltip(format.red("Fueled with Liquid Fire Matrix"));
+<cosmic_core:cc_armor:1>.anyDamage().addTooltip(format.gold("Hold shift while standing to launch"));
 
 ##=======================================================
 ## ADD RECIPES
 ##=======================================================
 
 //Busses because no wood
-recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<ironchest:iron_chest:*>]]);
-recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ironchest:iron_chest:*>],[<metaitem:hull.ulv>]]);
+recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<ironchest:iron_chest:*>|<metaitem:crate.bronze>]]);
+recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ironchest:iron_chest:*>],[<metaitem:hull.ulv>|<metaitem:crate.bronze>]]);
 
-
-//Knife
-recipes.addShapeless(<actuallyadditions:item_knife>, [<ore:craftingToolKnife>]);
 
 //No Stone Buttons
 recipes.addShaped(<quark:iron_button>, [[<ore:gtceHardHammers>],[<minecraft:iron_ingot>]]);
@@ -244,6 +242,26 @@ craft.remake(<morefurnaces:furnaceblock:6>, ["pretty",
   "□": <metaitem:plateSilver>, # Silver Plate
   "T": <ore:gtceHardHammers>, # Wrench
 });
+
+# [Furnace Upgrade_ Copper To Silver] from [Copper Plate][+2]
+craft.remake(<morefurnaces:upgrade:5>, ["pretty",
+  "  □  ",
+  "□ п □",
+  "  T  "], {
+  "□": <ore:plateSilver>, # Silver Plate
+  "п": <ore:plateCopper>, # Copper Plate
+  "T": <ore:craftingToolWrench> | <ore:gtceWrenches>, # Neutronium Wrench
+});
+
+# [Furnace Upgrade_ Iron To Silver] from [Iron Plate][+2]
+craft.remake(<morefurnaces:upgrade:6>, ["pretty",
+  "  □  ",
+  "□ п □",
+  "  T  "], {
+  "□": <ore:plateSilver>, # Silver Plate
+  "п": <ore:plateIron>,   # Iron Plate
+  "T": <ore:craftingToolWrench> | <ore:gtceWrenches>, # Neutronium Wrench
+});
 # [Small Pile of Glass Dust] from [Glass Shard][+1]
 craft.reshapeless(<metaitem:dustSmallGlass>, "TG", {
   "T": <ore:gtceHardHammers>, # Neutronium Hammer
@@ -255,7 +273,16 @@ craft.remake(<metaitem:circuit.vacuum_tube>, ["pretty",
   "╱ l ╱",
   "G G G"], {
   "╱": <ore:stickWroughtIron>,     # Wrought Iron Rod
-  "l": <gregtech:meta_item_1:517>, # Glass Tube
+  "l": <metaitem:component.glass.tube>, # Glass Tube
+  "G": <ore:wireGtSingleCopper>,   # 1x Copper Wire
+});
+
+# [Vacuum Tube] from [Glass Tube][+2]
+craft.make(<metaitem:circuit.vacuum_tube>, ["pretty",
+  "╱ l ╱",
+  "G G G"], {
+  "╱": <ore:stickWroughtIron>,     # Wrought Iron Rod
+  "l": <metaitem:internal.components.0>, # Glass Tube
   "G": <ore:wireGtSingleCopper>,   # 1x Copper Wire
 });
 
@@ -445,14 +472,14 @@ craft.remake(<metaitem:component.resistor> * 2, ["pretty",
 
 
 # [Rocket Boots] from [Leather Boots][+5]
-craft.remake(<cosmic_core:cc_armor:1>, ["pretty",
+craft.remake(<cosmic_core:cc_armor:1>.withTag({ench: [{lvl: 1 as short, id: 24}], RepairCost: 1}), ["pretty",
   "B r B",
   "L e L",
   "□ * □"], {
   "B": <ore:ringBronze>,                      # Bronze Ring
   "r": <ore:screwBronze>,                     # Bronze Screw
   "L": <advancedrocketry:pressuretank>,       # Low Pressure Tank
-  "e": <minecraft:leather_boots>.anyDamage(), # Leather Boots
+  "e": <advancedrocketry:spaceboots>.anyDamage(), # Leather Boots
   "□": <ore:plateCrudeSteel>,                 # Crude Steel Plate
   "*": <ore:gemRedCrystalAlloy>,              # Firestone
 });
@@ -538,8 +565,8 @@ furnace.addRecipe(<metaitem:ingotSilver>, <metaitem:hull.plate.3>, 0.0);
 electromagnetic_separator.recipeBuilder()
   .inputs(<contenttweaker:heavy_dust>)
 	.outputs(<metaitem:dustIron>)
+	.chancedOutput(<metaitem:dustSmallTin>, 6000, 1000)
 	.chancedOutput(<metaitem:dustSmallTin>, 4000, 1000)
-	.chancedOutput(<metaitem:dustSmallTin>, 2000, 1000)
 	.EUt(2)
 	.duration(100)
 	.buildAndRegister();
@@ -550,8 +577,8 @@ furnace.addRecipe(<minecraft:iron_ingot>, <contenttweaker:heavy_dust>, 0.0);
 electromagnetic_separator.recipeBuilder()
   .inputs(<contenttweaker:light_dust>)
 	.outputs(<metaitem:dustCopper>)
+	.chancedOutput(<metaitem:dustSmallTin>, 6000, 1000)
 	.chancedOutput(<metaitem:dustSmallTin>, 4000, 1000)
-	.chancedOutput(<metaitem:dustSmallTin>, 2000, 1000)
 	.EUt(2)
 	.duration(100)
 	.buildAndRegister();
@@ -562,8 +589,8 @@ furnace.addRecipe(<metaitem:ingotCopper>, <contenttweaker:light_dust>, 0.0);
 electromagnetic_separator.recipeBuilder()
   .inputs(<contenttweaker:dense_dust>)
 	.outputs(<metaitem:dustCrudeSteel>)
+	.chancedOutput(<metaitem:dustSmallLead>, 6000, 1000)
 	.chancedOutput(<metaitem:dustSmallLead>, 4000, 1000)
-	.chancedOutput(<metaitem:dustSmallLead>, 2000, 1000)
 	.EUt(2)
 	.duration(100)
 	.buildAndRegister();
@@ -582,7 +609,7 @@ recipes.addShapeless(<metaitem:gemSapphire>, [<projecte:item.pe_philosophers_sto
 */
 
 // Red Alloy Dust
-recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
+recipes.addShapeless(<metaitem:dustRedAlloy>, [<ore:dustCopper>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>,<minecraft:redstone>]);
 recipes.addShapeless(<metaitem:dustRedAlloy>*2, [<ore:dustCopper>,<ore:dustCopper>,<metaitem:dustRedCrystal>]);
 
 // Blue Alloy Dust
@@ -738,9 +765,9 @@ craft.make(<industrialforegoing:spores_recreator>, ["pretty",
   "n ⌂ n",
   "□ ¤ □"], {
   "§": <metaitem:internal.components.1>, # Complex Internals
-  "l": <ore:listAllwater>,            # Water Bucket
+  "l": <ore:listAllwater>|<projecte:item.pe_evertide_amulet>,            # Water Bucket
   "n": <ore:listAllmushroom>, # Mushroom
-  "⌂": <gregtech:machine_casing:0>,     # ULV Machine Casing
+  "⌂": <metaitem:hull.ulv>,     # ULV Machine Casing
   "□": <ore:plateDoubleTinAlloy>,     # Double Tin Alloy Plate
   "¤": <ore:gearIron>,                # Iron Gear
 });
