@@ -80,8 +80,8 @@ val getCenter = function (pos as IBlockPos, facing as IFacing) as IBlockPos[] {
     ] as IBlockPos[];
 };
 
-        //if (!(world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_green_glass>))
-        //if (<contenttweaker:crystal_green_glass> in world.getPickedBlock(pos, null, null))
+        //if (!(world.getPickedBlock(pos, null, null) has <cosmic_core:crystal_green_glass>))
+        //if (<cosmic_core:crystal_green_glass> in world.getPickedBlock(pos, null, null))
         //server.commandManager.executeCommand(server, "msg @p Bio-Organic Fabricator needs cleaning!");
 
 // Check correct dimension

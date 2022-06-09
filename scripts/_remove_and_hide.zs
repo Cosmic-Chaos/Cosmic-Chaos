@@ -24,6 +24,9 @@ val itemstoRemoveAndHide =
 <projectex:energy_link>,
 <extrautils2:machine>.withTag({Type: "extrautils2:furnace"}),
 <extrautils2:machine>.withTag({Type: "extrautils2:crusher"}),
+<extrautils2:machine>.withTag({Type: "extrautils2:generator_overclock"}),
+<extrautils2:machine>.withTag({Type: "extrautils2:generator"}),
+<extrautils2:machine>.withTag({Type: "extrautils2:generator_survival"}),
 <equivadditions:collector_mk4>,
 <industrialforegoing:pitiful_fuel_generator>,
 <libvulpes:coalgenerator>,
@@ -40,6 +43,7 @@ val itemstoRemoveAndHide =
 <actuallyadditions:block_grinder_double>,
 <enderio:block_simple_crafter>,
 <enderio:block_simple_wired_charger>,
+<enderio:block_simple_stirling_generator>,
 <libvulpes:productrod:1>,
 <libvulpes:productrod:2>,
 <libvulpes:productrod:3>,
@@ -102,7 +106,7 @@ val itemstoRemoveAndHide =
 <advancedrocketry:satelliteprimaryfunction:5>,//biome changer
 <advancedrocketry:satelliteprimaryfunction:3>,//microwave emitter (power gen)
 <advancedrocketry:biomechanger>,//biome changer remote
-<advancedrocketry:jetpack>,
+//<advancedrocketry:jetpack>,
 <advancedrocketry:orescanner>,
 <advancedrocketry:itemupgrade:1>,//flight speed control upgrade
 <advancedrocketry:hovercraft>,

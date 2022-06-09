@@ -33,7 +33,7 @@
 				},
 				{
 					"type": "consume_block",
-					"name": "contenttweaker:crystal_green_glass"
+					"name": "cosmic_core:crystal_green_glass"
 				},
 				{
 					"type": "damage_item",

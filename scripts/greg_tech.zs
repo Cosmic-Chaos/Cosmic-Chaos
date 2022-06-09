@@ -19,7 +19,7 @@ craft.remake(<metaitem:electric.pump.ulv>, ["pretty",
   "* B l",
   "r R  ",
   "o   T"], {
-  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+  "*": <ore:cableGtSingleGreenCrystalAlloy>|<metaitem:cableGtSingleRedAlloy>, # 1x Green Crystal Alloy Cable
   "B": <ore:rotorBronze>,                    # Bronze Rotor
   "l": <ore:gtceWrenches>, # Neutronium Wrench
   "r": <ore:screwBronze>,                    # Bronze Screw
@@ -33,7 +33,7 @@ craft.remake(<metaitem:electric.motor.ulv>, ["pretty",
   "* ╱ l",
   "/ *  ",
   "o   T"], {
-  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+  "*": <ore:cableGtSingleGreenCrystalAlloy>|<metaitem:cableGtSingleRedAlloy>, # 1x Green Crystal Alloy Cable
   "╱": <ore:stickIron>,                      # Iron Rod
   "l": <ore:gtceWrenches>, # Neutronium Wrench
   "/": <ore:stickIronMagnetic>,              # Magnetic Iron Rod
@@ -63,7 +63,7 @@ craft.remake(<metaitem:conveyor.module.ulv>, ["pretty",
   "□": <ore:plateRubber>,                    # Rubber Sheet
   "U": <metaitem:electric.motor.ulv>,         # ULV Electric Motor
   "T": <ore:gtceWireCutters>, # Neutronium Wire Cutter
-  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+  "*": <ore:cableGtSingleGreenCrystalAlloy>|<metaitem:cableGtSingleRedAlloy>, # 1x Green Crystal Alloy Cable
   "o": <ore:gtceScrewdrivers>, # Neutronium Screwdriver
   "l": <ore:gtceHardHammers>, # Neutronium Hammer
 });

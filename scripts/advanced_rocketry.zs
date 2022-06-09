@@ -327,20 +327,20 @@ recipes.removeByRecipeName("advancedrocketry:blocknuclearfueltank");
 	.inputs(
 		<libvulpes:structuremachine:0>, # Machine Structure
 		<advancedrocketry:misc:0>,      # User Interface
-		<metaitem:electric.motor.ulv>,
+//		<metaitem:electric.motor.ulv>,
 		<ore:circuitLv>*2,
-		<ore:gearCrudeSteel>*2,
-		<ore:plateSilver>*2
+		<ore:gearSilver>*2
+//		<ore:plateSilver>*2
 	).outputs(<advancedrocketry:guidancecomputer>)
 .duration(400).EUt(12).buildAndRegister();
 <recipemap:assembler>.recipeBuilder()
 	.inputs(
 		<libvulpes:structuremachine:0>, # Machine Structure
 		<advancedrocketry:misc:0>,      # User Interface
-		<metaitem:electric.motor.lv>,
+//		<metaitem:electric.motor.lv>,
 		<ore:circuitLv>*2,
-		<ore:gearSteel>*2,
-		<ore:plateSilver>*2
+		<ore:gearSilver>*2
+//		<ore:plateSilver>*2
 	).outputs(<advancedrocketry:guidancecomputer>)
 .duration(100).EUt(24).buildAndRegister();
 
@@ -373,9 +373,9 @@ craft.make(<advancedrocketry:drill>, ["pretty",
 		<libvulpes:structuremachine:0>, # Machine Structure
 		<advancedrocketry:misc:0>,      # User Interface
 		<metaitem:conveyor.module.ulv>,
-		<ore:circuitLv>*2,
-		<ore:gearCrudeSteel>*2,
-		<ore:plateSilver>*2
+//		<ore:circuitLv>*2,
+		<ore:gearCrudeSteel>*2
+//		<ore:plateSilver>*2
 	).outputs(<advancedrocketry:rocketbuilder>)
 .duration(400).EUt(12).buildAndRegister();
 <recipemap:assembler>.recipeBuilder()
@@ -383,9 +383,9 @@ craft.make(<advancedrocketry:drill>, ["pretty",
 		<libvulpes:structuremachine:0>, # Machine Structure
 		<advancedrocketry:misc:0>,      # User Interface
 		<metaitem:conveyor.module.lv>,
-		<ore:circuitLv>*2,
-		<ore:gearSteel>*2,
-		<ore:plateSilver>*2
+//		<ore:circuitLv>*2,
+		<ore:gearSteel>*2
+//		<ore:plateSilver>*2
 	).outputs(<advancedrocketry:rocketbuilder>)
 .duration(100).EUt(24).buildAndRegister();
 
@@ -758,11 +758,11 @@ recipes.removeByRecipeName("advancedrocketry:satelliteidchip");
 <recipemap:ulv_assembler>.recipeBuilder()
 	.inputs(
 		<metaitem:circuit_board.basic>, # Circuit Board
-		<ore:circuitUlv>,
-		<projecte:item.pe_covalence_dust>, # Glowstone Dust
+//		<ore:circuitUlv>,
+		<projecte:item.pe_covalence_dust>*4, # Glowstone Dust
 		<ore:componentResistor>*2,
-		<ore:cableGtSingleGreenCrystalAlloy>*2,
-		<ore:dustGlowstone>*2
+		<ore:cableGtSingleGreenCrystalAlloy>*2|<metaitem:cableGtSingleRedAlloy>*2
+//		<ore:dustGlowstone>*2
 	).outputs(<advancedrocketry:planetidchip>)
 .duration(400).EUt(12).buildAndRegister();
 

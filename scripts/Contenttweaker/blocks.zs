@@ -129,19 +129,6 @@ glassVat.setBlockLayer("TRANSLUCENT");
 glassVat.setLightOpacity(0);
 glassVat.register();
 
-var glassCrystal = VanillaFactory.createBlock("crystal_green_glass", <blockmaterial:ice>);
-glassCrystal.setLightValue(0.2);
-glassCrystal.setBlockHardness(2.0);
-glassCrystal.setBlockResistance(2.0);
-glassCrystal.setToolClass("pickaxe");
-glassCrystal.setToolLevel(1);
-glassCrystal.setBlockSoundType(<soundtype:glass>);
-//glassCrystal.setFullBlock(false);
-glassCrystal.setTranslucent(true);
-glassCrystal.setBlockLayer("CUTOUT_MIPPED");
-glassCrystal.setLightOpacity(0);
-glassCrystal.register();
-
 val stationGlass = VanillaFactory.createBlock("station_glass", <blockmaterial:glass>);
 stationGlass.blockHardness = 5.0;
 stationGlass.setToolLevel(1);

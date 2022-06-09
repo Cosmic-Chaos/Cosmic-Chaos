@@ -25,6 +25,7 @@ val nuggetPrefix = OrePrefix.getPrefix("nugget");
 <material:gold>.addFlags("generate_gear");
 <material:tin>.addFlags("generate_gear");
 <material:copper>.addFlags("generate_gear");
+<material:silver>.addFlags("generate_gear");
 <material:iron>.addFlags("generate_frame");
 <material:wrought_iron>.addFlags("generate_frame");
 <material:silver>.addFlags("generate_spring");

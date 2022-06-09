@@ -106,8 +106,10 @@ for item in lootable {
 
 //Busses because no wood
 recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<ironchest:iron_chest:*>|<metaitem:crate.bronze>]]);
-recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ironchest:iron_chest:*>],[<metaitem:hull.ulv>|<metaitem:crate.bronze>]]);
-
+recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ironchest:iron_chest:*>|<metaitem:crate.bronze>],[<metaitem:hull.ulv>]]);
+//LV Busses
+recipes.addShaped(<metaitem:item_bus.export.lv>, [[<metaitem:hull.lv>], [<ironchest:iron_chest:*>|<metaitem:crate.bronze>]]);
+recipes.addShaped(<metaitem:item_bus.import.lv>, [[<ironchest:iron_chest:*>|<metaitem:crate.bronze>],[<metaitem:hull.lv>]]);
 
 //No Stone Buttons
 recipes.addShaped(<quark:iron_button>, [[<ore:gtceHardHammers>],[<minecraft:iron_ingot>]]);
@@ -164,7 +166,7 @@ craft.remake(<metaitem:workbench>, ["pretty",
   "E": <minecraft:book>, # Book
   "P": <metaitem:station.component.3>, # Primitive Crafting Interface
   "r": <metaitem:station.component.2>, # Primitive Mixed Plating
-  "S": <ironchest:iron_chest:*>,              # Silver Chest
+  "S": <ironchest:iron_chest:*>|<metaitem:crate.bronze>,              # Silver Chest
 });
 
 
@@ -282,8 +284,8 @@ craft.make(<metaitem:circuit.vacuum_tube>, ["pretty",
   "╱ l ╱",
   "G G G"], {
   "╱": <ore:stickWroughtIron>,     # Wrought Iron Rod
-  "l": <metaitem:internal.components.0>, # Glass Tube
-  "G": <ore:wireGtSingleCopper>,   # 1x Copper Wire
+  "l": <metaitem:component.glass.tube>, # Glass Tube
+  "G": <metaitem:internal.components.0>,   # 1x Copper Wire
 });
 
 # [ULV Machine Hull] from [Wrought Iron Plate][+3]
@@ -366,9 +368,9 @@ craft.remake(<industrialforegoing:sludge_refiner>, ["pretty",
   "G L G",
   "U S U"], {
   "*": <ore:foilGreenCrystalAlloy>,         # Green Crystal Alloy Foil
-  "v": <ore:circuitLv>,                     # Electronic Circuit
+  "v": <metaitem:circuit.vacuum_tube>,                     # Electronic Circuit
   "G": <ore:wireGtSingleCopper>,            # 1x Copper Wire
-  "L": <gregtech:machine:986>,              # LV Machine Hull
+  "L": <metaitem:hull.ulv>,              # LV Machine Hull
   "U": <metaitem:electric.motor.ulv>, # ULV Electric Motor
   "S": <extrautils2:drum>,                  # Stone Drum
 });
@@ -621,7 +623,7 @@ recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeS
 // GC Glass Dust
 recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:dustGlass>,<metaitem:dustGlass>,<metaitem:dustGreenCrystal>]);
 //Crystal Glass
-furnace.addRecipe(<contenttweaker:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);
+furnace.addRecipe(<cosmic_core:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);
 
 //Tin Alloy
 recipes.addShapeless(<metaitem:dustTinAlloy>*2, [<ore:dustIron>,<ore:dustTin>]);

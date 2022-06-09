@@ -202,7 +202,7 @@
 				},
 				{
 					"type": "consume_block",
-					"chance": 30.0,
+					"chance": 75.0,
 					"name": "minecraft:air"
 				},
 				{

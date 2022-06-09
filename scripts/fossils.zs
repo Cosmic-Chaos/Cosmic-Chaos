@@ -12,7 +12,7 @@ craft.remake(<fossil:cultivate>, ["pretty",
   "* B *",
   "* E *",
   "□ □ □"], {
-  "*": <contenttweaker:crystal_green_glass>, # Green Crystal Glass
+  "*": <cosmic_core:crystal_green_glass>, # Green Crystal Glass
   "B": <ore:circuitLv>,                     # Bio-Goo
   "E": <ore:listAllwater>|<projecte:item.pe_evertide_amulet>,   # Evertide Amulet
   "□": <ore:plateWroughtIron>,               # Wrought Iron Plate
@@ -33,12 +33,12 @@ craft.remake(<fossil:analyzer>, ["pretty",
 // Bio-Goo -> Output (n)
 <fossil:bio_goo>.addTooltip(format.yellow("Hold Shift to see Analyzer chances."));
 val bioGooMap as int[IItemStack] = {
-    <quark:root>:20,
-    <fossil:sheep_dna>:10,
-    <fossil:rabbit_dna>:10,
+    <quark:root>:15,
+    <fossil:sheep_dna>:5,
+    <fossil:rabbit_dna>:5,
     <minecraft:slime_ball>:25,
 	<metaitem:rubber_drop>:25,
-	<minecraft:tallgrass:1>:10,
+	<minecraft:tallgrass:1>:25,
 } as int[IItemStack];
 
 for output, n in bioGooMap {

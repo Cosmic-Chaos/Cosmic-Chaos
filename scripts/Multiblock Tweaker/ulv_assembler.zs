@@ -44,7 +44,7 @@ val ulv_assembler = Builder.start(loc)
                 "C C",
                 "R R",
                 "RWR",
-                "I I"
+                "III"
             )
             .aisle(
                 " C ",
@@ -68,7 +68,7 @@ val ulv_assembler = Builder.start(loc)
     } as IPatternBuilderFunction)
 	    .withRecipeMap(
 		FactoryRecipeMap.start("ulv_assembler")
-						.maxInputs(9)
+						.maxInputs(4)
                         .maxOutputs(1)
                         .build())
 		.withBaseTexture(<contenttweaker:station_casing>.asBlock().definition.getStateFromMeta(1))
@@ -102,7 +102,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:wireGtDoubleGreenCrystalAlloy>*4, # 2x Green Crystal Alloy Wire
 		<ore:stickIronMagnetic>*2,             # Magnetic Iron Rod
-		<metaitem:hull.plate.3>,       # Fancy Hull Plate
+//		<metaitem:hull.plate.3>,       # Fancy Hull Plate
 		<gregtech:machine:986>,               # LV Machine Hull
 		<ore:cableGtDoubleTin>               # 2x Tin Cable
 	)
@@ -114,10 +114,10 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<cosmic_core:cc_meta_item:3>*4,   # ULV Electric Piston
 		<ore:circuitLv>*2,                # Electronic Circuit
-		<metaitem:hull.plate.3>, # Fancy Hull Plate
+//		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
-		<ore:cableGtDoubleTin>,         # 2x Tin Cable
-		<metaitem:hull.plate.0> # Heavy Hull Plate
+		<ore:cableGtDoubleTin>         # 2x Tin Cable
+//		<metaitem:hull.plate.0> # Heavy Hull Plate
 	)
 	.outputs(<gregtech:machine:230>)
 .duration(600).EUt(14).buildAndRegister();
@@ -127,7 +127,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<cosmic_core:cc_meta_item>*4,     # ULV Conveyor Module
 		<ore:circuitLv>*2,                # Electronic Circuit
-		<metaitem:hull.plate.3>, # Fancy Hull Plate
+//		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
 		<ore:cableGtDoubleTin>         # 2x Tin Cable
 	)
@@ -138,8 +138,8 @@ ulv_assembler.recipeMap.recipeBuilder()
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:circuitLv>*4,                    # Electronic Circuit
-		<ore:wireGtOctalGreenCrystalAlloy>*2, # 8x Green Crystal Alloy Wire
-		<metaitem:hull.plate.3>,     # Fancy Hull Plate
+		<ore:wireGtOctalGreenCrystalAlloy>*2|<metaitem:cableGtOctalRedAlloy>*2, # 8x Green Crystal Alloy Wire
+//		<metaitem:hull.plate.3>,     # Fancy Hull Plate
 		<gregtech:machine:986>*2,             # LV Machine Hull
 		<ore:cableGtQuadrupleTin>          # 4x Tin Cable
 	)
@@ -151,15 +151,16 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:circuitLv>*3,                # Electronic Circuit
 		<cosmic_core:cc_meta_item:3>*2,   # ULV Electric Piston
-		<metaitem:hull.plate.3>, # Fancy Hull Plate
+//		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<gregtech:machine:986>,         # LV Machine Hull
-		<ore:cableGtQuadrupleTin>,      # 4x Tin Cable
-		<ore:gemRedCrystalAlloy>,       # Fire Gem
-		<metaitem:internal.components.1>   # Complex Internals
+		<ore:cableGtQuadrupleTin>      # 4x Tin Cable
+//		<ore:gemRedCrystalAlloy>,       # Fire Gem
+//		<metaitem:internal.components.1>   # Complex Internals
 	)
 	.outputs(<gregtech:machine:440>)
 .duration(600).EUt(14).buildAndRegister();
 
+/*
 # [Hull Block] from [Rubber Ring]*32[+5]
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
@@ -229,6 +230,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 	)
 	.outputs(<chisel:laboratory:15>)
 .duration(60).EUt(4).buildAndRegister();
+*/
 
 # [Steel Hull] from [Steel Plate]*8
 ulv_assembler.recipeMap.recipeBuilder()
@@ -242,7 +244,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 # [ULV Conveyor Module] from [Rubber Sheet]*2[+3]
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
-		<ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+		<ore:cableGtSingleGreenCrystalAlloy>|<metaitem:cableGtSingleRedAlloy>, # 1x Green Crystal Alloy Cable
 		<ore:plateRubber>,           # Rubber Sheet
 		<cosmic_core:cc_meta_item:2>,         # ULV Electric Motor
 		<ore:plateBronze>                   # Bronze Plate
@@ -253,7 +255,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 # [ULV Electric Pump] from [Rubber Ring][+3]
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
-		<ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+		<ore:cableGtSingleGreenCrystalAlloy>|<metaitem:cableGtSingleRedAlloy>, # 1x Green Crystal Alloy Cable
 		<ore:ringRubber>,                     # Rubber Ring
 		<ore:rotorBronze>,                    # Bronze Rotor
 		<ore:screwBronze>                   # Bronze Screw
@@ -264,7 +266,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 # [ULV Electric Motor] from [Magnetic Iron Rod][+2]
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
-		<ore:cableGtSingleGreenCrystalAlloy>*2, # 1x Green Crystal Alloy Cable
+		<ore:cableGtSingleGreenCrystalAlloy>*2|<metaitem:cableGtSingleRedAlloy>*2, # 1x Green Crystal Alloy Cable
 		<ore:stickIronMagnetic>,       # Magnetic Iron Rod
 		<ore:stickIron>              # Iron Rod
 	)

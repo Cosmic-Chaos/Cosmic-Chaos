@@ -7,7 +7,6 @@ val itemstoRemove =
 	<extrautils2:teleporter:1>,
 	<extrautils2:terraformer:9>,
 	<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}),
-	<extrautils2:machine>.withTag({Type: "extrautils2:generator"}),
 	<extrautils2:ingredients>,
 ]
  as IItemStack[];

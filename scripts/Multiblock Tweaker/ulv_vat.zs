@@ -49,7 +49,7 @@ val ulv_vat = Builder.start(loc)
 
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:station_casing>)
-			.where("S", <blockstate:contenttweaker:crystal_green_glass>)
+			.where("S", CTPredicate.blocks(<cosmic_core:crystal_green_glass>))
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_FLUIDS>).setMinGlobalLimited(0).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:EXPORT_FLUIDS>).setMinGlobalLimited(0).setPreviewCount(1)

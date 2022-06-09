@@ -32,8 +32,8 @@ val bio_organic_fabricator = Builder.start(loc)
             
             .aisle(
                 "III",
-                "CGC",
-                "CGC",
+                "IGI",
+                "IGI",
                 "IEI"
             )
             .aisle(
@@ -44,15 +44,15 @@ val bio_organic_fabricator = Builder.start(loc)
             )
             .aisle(
                 "III",
-                "CGC",
-                "CGC",
+                "IGI",
+                "IGI",
                 "III"
             )
 
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:station_casing>)
             //.where(" ", CTPredicate.getAir()) // Anything
-			.where("G", CTPredicate.blocks(<contenttweaker:crystal_green_glass>) | CTPredicate.blocks(<contenttweaker:vat_glass>))
+			.where("G", CTPredicate.blocks(<cosmic_core:crystal_green_glass>) | CTPredicate.blocks(<contenttweaker:vat_glass>))
             //.where("S", CTPredicate.liquids(<liquid:sludge>))
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
             
@@ -112,8 +112,8 @@ val getCenter = function (pos as IBlockPos, facing as IFacing) as IBlockPos[] {
 };
 
 
-        //if (!(world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_green_glass>))
-        //if (<contenttweaker:crystal_green_glass> in world.getPickedBlock(pos, null, null))
+        //if (!(world.getPickedBlock(pos, null, null) has <cosmic_core:crystal_green_glass>))
+        //if (<cosmic_core:crystal_green_glass> in world.getPickedBlock(pos, null, null))
         //server.commandManager.executeCommand(server, "msg @p Bio-Organic Fabricator needs cleaning!");
 
 // Check correct dimension
@@ -128,7 +128,7 @@ bio_organic_fabricator.checkRecipeFunction = function(controller as IControllerT
     val world as IWorld = controller.world;
     for pos in getSurround(controller.pos, controller.frontFacing) 
     {
-        if (world.getPickedBlock(pos, null, null) has <contenttweaker:crystal_green_glass>) {
+        if (world.getPickedBlock(pos, null, null) has <cosmic_core:crystal_green_glass>) {
             return true;
         }
     }
@@ -161,7 +161,7 @@ bio_organic_fabricator.completeRecipeFunction = function (recipeLogic as IRecipe
     val controller as IControllerTile = recipeLogic.metaTileEntity;
     val world as IWorld = controller.world;
     for pos in getSurround(controller.pos, controller.frontFacing) {
-         if (world.getRandom().nextInt(10) == 0) {
+         if (world.getRandom().nextInt(20) == 0) {
              world.setBlockState(<blockstate:contenttweaker:vat_glass>, pos);
          }
     }
@@ -178,7 +178,7 @@ craft.remake(<metaitem:mbt:bio_organic_fabricator>, ["pretty",
   "U N U"], {
   "§": <metaitem:internal.components.1>,  # Complex Internals
   "N": <ore:pipeNormalFluidPotin>,      # Potin Fluid Pipe
-  "M": <minecraft:red_mushroom_block>,  # Mushroom
+  "M": <minecraft:red_mushroom_block>|<minecraft:brown_mushroom_block>,  # Mushroom
   "⌂": <contenttweaker:station_casing>, # Derelict Casing
   "U":<metaitem:circuit.vacuum_tube>,                # Vacuum Tube
 });
