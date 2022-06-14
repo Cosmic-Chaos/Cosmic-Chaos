@@ -1,0 +1,121 @@
+{
+    "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+    "textures": {
+        "vent_plating": "contenttweaker:blocks/vent_plating",
+        "block_crystal_cluster": "contenttweaker:blocks/vent_crystal"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Vent",
+            "from": [ 0, 1, 0 ], 
+            "to": [ 16, 3, 16 ], 
+            "faces": {
+                "north": { "texture": "#vent_plating", "uv": [ 0, 1, 16, 3 ] },
+                "east": { "texture": "#vent_plating", "uv": [ 0, 2, 16, 4 ] },
+                "south": { "texture": "#vent_plating", "uv": [ 0, 11, 16, 13 ] },
+                "west": { "texture": "#vent_plating", "uv": [ 0, 3, 16, 5 ] },
+                "up": { "texture": "#vent_plating", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#vent_plating", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Vent",
+            "from": [ 0, 5, 0 ], 
+            "to": [ 16, 7, 16 ], 
+            "faces": {
+                "north": { "texture": "#vent_plating", "uv": [ 0, 3, 16, 5 ] },
+                "east": { "texture": "#vent_plating", "uv": [ 0, 9, 16, 11 ] },
+                "south": { "texture": "#vent_plating", "uv": [ 0, 12, 16, 14 ] },
+                "west": { "texture": "#vent_plating", "uv": [ 0, 5, 16, 8 ] },
+                "up": { "texture": "#vent_plating", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#vent_plating", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Vent",
+            "from": [ 0, 9, 0 ], 
+            "to": [ 16, 11, 16 ], 
+            "faces": {
+                "north": { "texture": "#vent_plating", "uv": [ 0, 0, 16, 2 ] },
+                "east": { "texture": "#vent_plating", "uv": [ 0, 3, 16, 5 ] },
+                "south": { "texture": "#vent_plating", "uv": [ 0, 7, 16, 9 ] },
+                "west": { "texture": "#vent_plating", "uv": [ 0, 11, 16, 13 ] },
+                "up": { "texture": "#vent_plating", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#vent_plating", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Vent",
+            "from": [ 0, 13, 0 ], 
+            "to": [ 16, 15, 16 ], 
+            "faces": {
+                "north": { "texture": "#vent_plating", "uv": [ 0, 3, 16, 5 ] },
+                "east": { "texture": "#vent_plating", "uv": [ 0, 2, 16, 4 ] },
+                "south": { "texture": "#vent_plating", "uv": [ 0, 13, 16, 15 ] },
+                "west": { "texture": "#vent_plating", "uv": [ 0, 1, 16, 3 ] },
+                "up": { "texture": "#vent_plating", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#vent_plating", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Crystal",
+            "from": [ 3, 3, 5 ], 
+            "to": [ 6, 13, 8 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "x", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 10 ], "tintindex": 0  },
+                "east": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 10 ], "tintindex": 0  },
+                "south": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 10 ], "tintindex": 0  },
+                "west": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 10 ], "tintindex": 0  },
+                "up": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 3 ], "tintindex": 0  },
+                "down": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 3 ], "tintindex": 0  }
+            }
+        },
+        {
+            "name": "Crystal",
+            "from": [ 9, 7, 9 ], 
+            "to": [ 12, 11, 12 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "z", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 4 ], "tintindex": 0  },
+                "east": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 4 ], "tintindex": 0  },
+                "south": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 4 ], "tintindex": 0  },
+                "west": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 4 ], "tintindex": 0  },
+                "up": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 3 ], "tintindex": 0  },
+                "down": { "texture": "#block_crystal_cluster", "uv": [ 0, 0, 3, 3 ], "tintindex": 0  }
+            }
+        }
+    ]
+}

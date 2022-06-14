@@ -107,6 +107,8 @@ item.contenttweaker.vat_print.name=NASA Slow Cooker Blueprint
 item.contenttweaker.stator.name=Primitive Stator
 item.contenttweaker.fuel_catalyst.name=Fuel Catalyst
 
+item.contenttweaker.mold_rod.name=Mold (Rod)
+
 
 item.contenttweaker.emc_widget_1.name=Minor Alchemical Construct
 
@@ -158,8 +160,14 @@ tile.contenttweaker.crystal_cluster_green_5.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_6.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_7.name=Growing Green Crystal Cluster
 
-tile.contenttweaker.perfect_sample_ruby.name=Perfected Crystal of Ruby 
+tile.contenttweaker.perfect_sample_ruby.name=Perfected Crystal of Ruby
+tile.contenttweaker.reaction_chamber.name=Reaction Chamber
 
+tile.contenttweaker.vent_clean.name=Exhaust Vent
+tile.contenttweaker.vent_very_clean.name=Silver Exhaust Vent
+tile.contenttweaker.vent_dirty_1.name=Exhaust Vent
+tile.contenttweaker.vent_dirty_2.name=Exhaust Vent
+tile.contenttweaker.vent_dirty_3.name=Blocked Exhaust Vent
 
 tile.mbd.station_generator_controller.name=Backup Generator
 station_generator_controller.name=Backup Generator
@@ -182,5 +190,10 @@ mbd.gp_eu.description=Using the power of Manual Labor, generate Power!
 multiblocked.recipe_map.Clockwork EU=Hand Crank Generator
 
 devtech.machine.electromagnetic_separator.ulv.name=Primitive Electromagnetic Separator
+
 devtech.machine.water_electrolyzer.ulv.name=Primitive Water Electrolyzer
+recipemap.water_electrolyzer.name=Water Electrolysis
+
+devtech.machine.sintering_furnace.ulv.name=Primitive Sintering Furnace
+recipemap.sintering_furnace.name=Sintering Furmace
 

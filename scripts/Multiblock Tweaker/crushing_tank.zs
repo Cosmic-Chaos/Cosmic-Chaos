@@ -91,6 +91,7 @@ crushing_tank.formStructureFunction = function(controller as IControllerTile, co
 	}
 } as IFormStructureFunction;
 
+/*
 val blocksToCheck =
 [
     <contenttweaker:crystal_cluster_blue_1>,
@@ -116,7 +117,7 @@ val blocksToCheck =
     <contenttweaker:crystal_cluster_red_7>,
 ]
  as IItemStack[];
-
+*/
 static baseCrystals as IBlockState[] = [
 	<blockstate:contenttweaker:crystal_cluster_blue_1>,
 	<blockstate:contenttweaker:crystal_cluster_red_1>,

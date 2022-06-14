@@ -34,22 +34,31 @@ val ulv_vat = Builder.start(loc)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             .aisle(
-                "CEC", 
-                "III"
+                " I ", 
+                "IEI", 
+                " I "
             )
             .aisle(
-                "CSC", 
+                "ICI", 
+                "GRG", 
                 "ICI"
-            ).setRepeatable(2)
+            )
             .aisle(
-                "CCC", 
-                "III"
+                " I ", 
+                "IGI", 
+                " I "
             )
 
 
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:station_casing>)
-			.where("S", CTPredicate.blocks(<cosmic_core:crystal_green_glass>))
+			.where("G", CTPredicate.blocks(<contenttweaker:vent_clean>)
+						|CTPredicate.blocks(<contenttweaker:vent_very_clean>)
+						|CTPredicate.blocks(<contenttweaker:vent_dirty_1>)
+						|CTPredicate.blocks(<contenttweaker:vent_dirty_2>)
+						|CTPredicate.blocks(<contenttweaker:vent_dirty_3>)
+						)
+			.where("R", CTPredicate.blocks(<contenttweaker:reaction_chamber>))
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_FLUIDS>).setMinGlobalLimited(0).setPreviewCount(1)
 				  | CTPredicate.abilities(<mte_ability:EXPORT_FLUIDS>).setMinGlobalLimited(0).setPreviewCount(1)
@@ -61,7 +70,7 @@ val ulv_vat = Builder.start(loc)
     } as IPatternBuilderFunction)
 	    .withRecipeMap(
 		FactoryRecipeMap.start("ulv_vat")
-						.maxInputs(2)
+						.maxInputs(3)
 						.maxFluidInputs(2)
                         .maxOutputs(1)
                         .maxFluidOutputs(1)
@@ -71,6 +80,80 @@ val ulv_vat = Builder.start(loc)
 // set optional properties
 ulv_vat.hasMaintenanceMechanics = false;
 ulv_vat.hasMufflerMechanics = false;
+
+val getSurround = function (pos as IBlockPos, facing as IFacing) as IBlockPos[] {
+    val center as IBlockPos = pos.getOffset(facing.opposite, 1);
+    return [
+        center.getOffset(IFacing.north(), 1),
+        center.getOffset(IFacing.south(), 1),
+        center.getOffset(IFacing.east(), 1),
+        center.getOffset(IFacing.west(), 1),
+    ] as IBlockPos[];
+};
+
+static ventMap as IBlockState[IBlockState] = {
+	//////////////////// Clean ///////////////
+    <blockstate:contenttweaker:vent_clean>:
+		<blockstate:contenttweaker:vent_dirty_1>,
+    <blockstate:contenttweaker:vent_dirty_1>:
+		<blockstate:contenttweaker:vent_dirty_2>,
+	<blockstate:contenttweaker:vent_dirty_2>:
+		<blockstate:contenttweaker:vent_dirty_3>
+} as IBlockState[IBlockState];
+
+// check if any vents are clean enough, if so, start.
+ulv_vat.checkRecipeFunction = function(controller as IControllerTile, recipe as IRecipe, consumeIfSuccess as bool) as bool {
+    val world as IWorld = controller.world;
+    for pos in getSurround(controller.pos, controller.frontFacing) {
+		val block as IBlockState = world.getBlockState(pos);
+        if (ventMap has block) {
+            return true;
+        } else if (<blockstate:contenttweaker:vent_very_clean> has block) {
+            return true;
+        }
+	}
+	return false;
+} as ICheckRecipeFunction;
+
+/*
+			val block as IBlockState = world.getBlockState(pos);
+        	if (<blockstate:contenttweaker:vent_very_clean> has block) {
+        	    return true;
+        	} else if (<blockstate:contenttweaker:vent_clean> has block) {
+        	    return true;
+        	} else if (<blockstate:contenttweaker:vent_dirty_1> has block) {
+        	    return true;
+        	} else if (<blockstate:contenttweaker:vent_dirty_1> has block) {
+        	    return true;
+        	}
+
+			
+        if (world.getPickedBlock(pos, null, null) has <contenttweaker:vent_very_clean>) {
+            return true;
+        } else if (world.getPickedBlock(pos, null, null) has <contenttweaker:vent_clean>) {
+            return true;
+        } else if (world.getPickedBlock(pos, null, null) has <contenttweaker:vent_dirty_1>) {
+            return true;
+        } else if (world.getPickedBlock(pos, null, null) has <contenttweaker:vent_dirty_1>) {
+            return true;
+        }
+*/
+
+// 1/4 chance to progress crystal growth
+ulv_vat.completeRecipeFunction = function (recipeLogic as IRecipeLogic) as bool {
+    val controller as IControllerTile = recipeLogic.metaTileEntity;
+    val world as IWorld = controller.world;
+
+    for pos in getSurround(controller.pos, controller.frontFacing) {
+        if (world.getRandom().nextInt(4) == 0) {
+				val block as IBlockState = world.getBlockState(pos);
+				if (ventMap has block) {
+					world.setBlockState(ventMap[block], pos);
+				}
+			}
+        }
+    return true;
+} as ICompleteRecipeFunction;
 
 
 # [NASA Slow Cooker] from [Derelict Casing][+5]
@@ -303,9 +386,9 @@ ulv_vat.recipeMap.recipeBuilder()
 
 // Concrete
 ulv_vat.recipeMap.recipeBuilder()
-	.inputs(<ore:gravel>*2,<ore:sand>*2)
+	.inputs(<ore:gravel>*2,<ore:sand>*2,<ore:ingotClay>*4)
 	.fluidInputs(<liquid:water>*1000)
-	.outputs(<advancedrocketry:concrete>*8)
+	.outputs(<advancedrocketry:concrete>*4)
 .duration(40).EUt(7).buildAndRegister();
 
 // Root Pulp for Paper

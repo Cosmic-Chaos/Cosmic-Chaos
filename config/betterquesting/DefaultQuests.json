@@ -5499,7 +5499,7 @@
             },
             "5:10": {
               "Count:3": 1,
-              "Damage:2": 1165,
+              "Damage:2": 1166,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -5511,14 +5511,9 @@
             },
             "7:10": {
               "Count:3": 1,
-              "Damage:2": 15,
-              "OreDict:8": "craftingToolKnife",
-              "id:8": "gregtech:meta_tool",
-              "tag:10": {
-                "GT.ToolStats:10": {
-                  "Material:8": "wrought_iron"
-                }
-              }
+              "Damage:2": 1195,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5979,7 +5974,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Launch the Rocket to complete this Alpha! Be sure to let us know your thoughts!",
+          "desc:8": "Launch the Rocket to complete this Alpha! Be sure to let us know your thoughts!\n\nChests and Crates are able to be transferred on the rocket.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 4,
@@ -6013,13 +6008,13 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 4,
+              "Count:3": 2,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "advancedrocketry:rocketmotor"
             },
             "1:10": {
-              "Count:3": 8,
+              "Count:3": 4,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "advancedrocketry:fueltank"

@@ -117,7 +117,6 @@ crystalHatch.register();
 */
 
 var glassVat = VanillaFactory.createBlock("vat_glass", <blockmaterial:glass>);
-glassVat.setLightValue(0);
 glassVat.setBlockHardness(1.0);
 glassVat.setBlockResistance(1.0);
 glassVat.setToolClass("pickaxe");
@@ -139,7 +138,6 @@ stationGlass.setLightOpacity(0);
 stationGlass.register();
 
 var organicOverloader = VanillaFactory.createBlock("organic_overloader", <blockmaterial:iron>);
-organicOverloader.setLightOpacity(3);
 organicOverloader.setLightValue(1);
 organicOverloader.setBlockHardness(3.0);
 organicOverloader.setBlockResistance(3.0);
@@ -147,6 +145,14 @@ organicOverloader.setToolClass("axe");
 organicOverloader.setToolLevel(1);
 organicOverloader.setBlockSoundType(<soundtype:wood>);
 organicOverloader.register();
+
+var reactionChamber = VanillaFactory.createBlock("reaction_chamber", <blockmaterial:iron>);
+reactionChamber.setBlockHardness(3.0);
+reactionChamber.setBlockResistance(3.0);
+reactionChamber.setToolClass("wrench");
+reactionChamber.setToolLevel(1);
+reactionChamber.setBlockSoundType(<soundtype:metal>);
+reactionChamber.register();
 
 var perfect_sample_ruby_itemColor = (itemColor(0xdb001d));
 var perfect_sample_ruby_blockColor = (blockColor(0xdb001d));
@@ -178,6 +184,67 @@ caveRoots.setDropHandler(function(drops, world, position, state, fortune) {
 caveRoots.blockSoundType = <soundtype:plant>;
 caveRoots.blockLayer = "CUTOUT_MIPPED";
 caveRoots.register();
+
+
+var crystalClusterYellowColorItem = (itemColor(0xfcdb03));
+var crystalClusterYellowColorBlock = (blockColor(0xfcdb03));
+
+var ventClean = VanillaFactory.createBlock("vent_clean", <blockmaterial:iron>);
+ventClean.setBlockHardness(2.0);
+ventClean.setBlockResistance(2.0);
+ventClean.setToolClass("wrench");
+ventClean.setToolLevel(1);
+ventClean.setBlockSoundType(<soundtype:metal>);
+ventClean.setFullBlock(false);
+ventClean.setBlockLayer("CUTOUT");
+ventClean.register();
+
+var ventClean2 = VanillaFactory.createBlock("vent_very_clean", <blockmaterial:iron>);
+ventClean2.setBlockHardness(2.0);
+ventClean2.setBlockResistance(2.0);
+ventClean2.setToolClass("wrench");
+ventClean2.setToolLevel(1);
+ventClean2.setBlockSoundType(<soundtype:metal>);
+ventClean2.setFullBlock(false);
+ventClean2.setBlockLayer("CUTOUT");
+ventClean2.register();
+
+var ventDirty = VanillaFactory.createBlock("vent_dirty_1", <blockmaterial:iron>);
+ventDirty.setBlockHardness(2.0);
+ventDirty.setBlockResistance(2.0);
+ventDirty.setToolClass("wrench");
+ventDirty.setToolLevel(1);
+ventDirty.setBlockSoundType(<soundtype:metal>);
+ventDirty.setFullBlock(false);
+ventDirty.setBlockLayer("CUTOUT");
+ventDirty.blockColorSupplier = crystalClusterYellowColorBlock;
+ventDirty.itemColorSupplier = crystalClusterYellowColorItem;
+ventDirty.register();
+
+var ventDirty2 = VanillaFactory.createBlock("vent_dirty_2", <blockmaterial:iron>);
+ventDirty2.setBlockHardness(2.0);
+ventDirty2.setBlockResistance(2.0);
+ventDirty2.setToolClass("wrench");
+ventDirty2.setToolLevel(1);
+ventDirty2.setBlockSoundType(<soundtype:metal>);
+ventDirty2.setFullBlock(false);
+ventDirty2.setBlockLayer("CUTOUT");
+ventDirty2.blockColorSupplier = crystalClusterYellowColorBlock;
+ventDirty2.itemColorSupplier = crystalClusterYellowColorItem;
+ventDirty2.register();
+
+var ventDirty3 = VanillaFactory.createBlock("vent_dirty_3", <blockmaterial:iron>);
+ventDirty3.setBlockHardness(2.0);
+ventDirty3.setBlockResistance(2.0);
+ventDirty3.setToolClass("wrench");
+ventDirty3.setToolLevel(1);
+ventDirty3.setBlockSoundType(<soundtype:metal>);
+ventDirty3.setFullBlock(false);
+ventDirty3.setBlockLayer("CUTOUT");
+ventDirty3.blockColorSupplier = crystalClusterYellowColorBlock;
+ventDirty3.itemColorSupplier = crystalClusterYellowColorItem;
+ventDirty3.register();
+
 
 ///////////////////////////////////////////////////////////
 //////////////////////    BLUE    /////////////////////////

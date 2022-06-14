@@ -141,7 +141,8 @@ val trashCompactorOneToOneMap as IItemStack[IOreDictEntry] = {
     <ore:dustWood>:<ore:plateWood>.firstItem,
     <ore:dustCaveRoot>:<ore:plateCaveRoot>.firstItem,
     <ore:cobblestone>:<minecraft:gravel>,
-    <ore:blockGlass>:<minecraft:sand>,
+    <ore:blockGlass>:<minecraft:sand>
+
 } as IItemStack[IOreDictEntry];
 
 for input, output in trashCompactorOneToOneMap {
@@ -153,6 +154,14 @@ for input, output in trashCompactorOneToOneMap {
 	.buildAndRegister();
 }
 
+//Blank Molds
+	trash_compactor.recipeMap.recipeBuilder()
+		.duration(240)
+		.EUt(8)
+		.inputs(<ore:plateCrudeSteel>*4)
+		.outputs(<metaitem:shape.empty>)
+	.buildAndRegister();
+
 //Root Paper
 trash_compactor.recipeMap.recipeBuilder()
 	.duration(120)
@@ -160,7 +169,6 @@ trash_compactor.recipeMap.recipeBuilder()
 	.inputs(<contenttweaker:root_pulp>)
 	.outputs(<contenttweaker:root_paper>)
 .buildAndRegister();
-
 
 // Check correct dimension
 trash_compactor.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){

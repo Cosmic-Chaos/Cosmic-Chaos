@@ -38,6 +38,9 @@ var simpleItems = [
   "light_dust",
   "heavy_dust",
   "scrap_rubber",
+
+  //GT Items
+  "mold_rod",
 ] as string[];
 
 for item in simpleItems {

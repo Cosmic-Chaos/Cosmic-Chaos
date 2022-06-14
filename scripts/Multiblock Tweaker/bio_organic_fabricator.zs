@@ -52,7 +52,7 @@ val bio_organic_fabricator = Builder.start(loc)
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:station_casing>)
             //.where(" ", CTPredicate.getAir()) // Anything
-			.where("G", CTPredicate.blocks(<cosmic_core:crystal_green_glass>) | CTPredicate.blocks(<contenttweaker:vat_glass>))
+			.where("G", CTPredicate.blocks(<minecraft:glass>) |CTPredicate.blocks(<cosmic_core:crystal_green_glass>) | CTPredicate.blocks(<contenttweaker:vat_glass>))
             //.where("S", CTPredicate.liquids(<liquid:sludge>))
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
             
@@ -73,7 +73,7 @@ val bio_organic_fabricator = Builder.start(loc)
                         .minInputs(1)
 						.maxInputs(1)
 						.minOutputs(1)
-                        .maxOutputs(6)
+                        .maxOutputs(4)
                         .build())
 		.withBaseTexture(<contenttweaker:station_casing>.asBlock().definition.getStateFromMeta(1))
 		.buildAndRegister();
@@ -130,13 +130,15 @@ bio_organic_fabricator.checkRecipeFunction = function(controller as IControllerT
     {
         if (world.getPickedBlock(pos, null, null) has <cosmic_core:crystal_green_glass>) {
             return true;
+        } else if (world.getPickedBlock(pos, null, null) has <minecraft:glass>) {
+            return true;
         }
     }
 return false;
 } as ICheckRecipeFunction;
 
 
-// if the machine is working --- Add Sludge. if the machine is not working and not active (have a recipe but not working, e.g. hasEnergyProblem) --- Remove Sludge.
+// if the machine is working --- Add Water. if the machine is not working and not active (have a recipe but not working, e.g. hasEnergyProblem) --- Remove Water.
 bio_organic_fabricator.updateFormedValidFunction = function(controller as IControllerTile) {
     val world as IWorld = controller.world;
     if (controller.offsetTimer % 20 == 0) {
@@ -161,9 +163,12 @@ bio_organic_fabricator.completeRecipeFunction = function (recipeLogic as IRecipe
     val controller as IControllerTile = recipeLogic.metaTileEntity;
     val world as IWorld = controller.world;
     for pos in getSurround(controller.pos, controller.frontFacing) {
-         if (world.getRandom().nextInt(20) == 0) {
+        
+        if (world.getRandom().nextInt(10) == 0) {
+         if (world.getPickedBlock(pos, null, null) has <minecraft:glass>) {
              world.setBlockState(<blockstate:contenttweaker:vat_glass>, pos);
          }
+        }
     }
     for pos in getCenter(controller.pos, controller.frontFacing) { // Remove Sludge
              world.setBlockState(<blockstate:minecraft:air>, pos);
@@ -233,9 +238,9 @@ bio_organic_fabricator.recipeMap.recipeBuilder()
 	.notConsumable(<quark:root>)
 	.fluidInputs(<liquid:water> * 1000)
 	.chancedOutput(<quark:root>, 5000, 500)
-	.chancedOutput(<quark:root_flower:0>, 1800, 300)
-	.chancedOutput(<quark:root_flower:1>, 1800, 300)
-	.chancedOutput(<quark:root_flower:2>, 1800, 300)
+	.chancedOutput(<quark:root_flower:0>, 2500, 300)
+	.chancedOutput(<quark:root_flower:1>, 2500, 300)
+//	.chancedOutput(<quark:root_flower:2>, 1800, 300)
 	.chancedOutput(<minecraft:stick>, 1800, 300)
 	.fluidOutputs(<liquid:sludge> * 1000)
 .duration(240).EUt(3).buildAndRegister();
@@ -245,7 +250,7 @@ bio_organic_fabricator.recipeMap.recipeBuilder()
 	.notConsumable(<fossil:rabbit_dna>)
 	.fluidInputs(<liquid:water> * 1000)
 	.outputs(<minecraft:rabbit_hide>*4, <minecraft:rabbit>)
-	.chancedOutput(<minecraft:rabbit_foot>, 2000, 0)
+//	.chancedOutput(<minecraft:rabbit_foot>, 2000, 0)
 	.chancedOutput(<fossil:rabbit_dna>, 100, 0)
 	.chancedOutput(<minecraft:bone>, 5000, 0)
 	.fluidOutputs(<liquid:sludge> * 1000)

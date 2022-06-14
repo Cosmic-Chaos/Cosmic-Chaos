@@ -1,6 +1,7 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import mods.industrialforegoing.SludgeRefiner;
+import crafttweaker.oredict.IOreDictEntry;
 
 print("==================== loading ulv_lv_station_recipes.zs ====================");
 ##########################################################################################
@@ -110,6 +111,18 @@ recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ironchest:iron_chest:*>|<me
 //LV Busses
 recipes.addShaped(<metaitem:item_bus.export.lv>, [[<metaitem:hull.lv>], [<ironchest:iron_chest:*>|<metaitem:crate.bronze>]]);
 recipes.addShaped(<metaitem:item_bus.import.lv>, [[<ironchest:iron_chest:*>|<metaitem:crate.bronze>],[<metaitem:hull.lv>]]);
+
+# [Ultra Low Voltage 4x Battery Buffer] from [ULV Machine Hull][+2]
+craft.make(<metaitem:battery_buffer.ulv.4>, ["pretty",
+  "G I G",
+  "G U G"], {
+  "G": <ore:wireGtQuadrupleLead>, # 4x Lead Wire
+  "I": <ironchest:iron_chest:*>|<metaitem:crate.bronze>,    # Iron Chest
+  "U": <metaitem:hull.ulv>,    # ULV Machine Hull
+});
+
+//Rod Mold
+recipes.addShaped(<contenttweaker:mold_rod>, [[<metaitem:shape.empty>, <ore:gtceHardHammers>]]);
 
 //No Stone Buttons
 recipes.addShaped(<quark:iron_button>, [[<ore:gtceHardHammers>],[<minecraft:iron_ingot>]]);
@@ -785,6 +798,43 @@ recipes.removeByRecipeName("gregtech:gregtech.machine.transformer.ulv");
 	.inputs(<metaitem:gregtech:hull.ulv>, <ore:cableGtSingleTin>, <ore:cableGtSingleRedAlloy>*4)
 	.outputs(<metaitem:gregtech:transformer.ulv>)
 .duration(100).EUt(5).buildAndRegister();
+
+
+/////////////////////////////////////////////////////////////////////
+///////////////////////////// SINTERING /////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+
+val sinteringMapULV as IItemStack[][IOreDictEntry] = {
+    <ore:dustIron>:[<ore:ingotIron>.firstItem, <ore:stickIron>.firstItem],
+    <ore:dustWroughtIron>:[<ore:ingotWroughtIron>.firstItem, <ore:stickWroughtIron>.firstItem],
+    <ore:dustTin>:[<ore:ingotTin>.firstItem, <ore:stickTin>.firstItem],
+    <ore:dustCopper>:[<ore:ingotCopper>.firstItem, <ore:stickCopper>.firstItem],
+    <ore:dustBronze>:[<ore:ingotBronze>.firstItem, <ore:stickBronze>.firstItem],
+    <ore:dustCrudeSteel>:[<ore:ingotCrudeSteel>.firstItem, <ore:stickCrudeSteel>.firstItem],
+    <ore:dustRedAlloy>:[<ore:ingotRedAlloy>.firstItem, <ore:stickRedAlloy>.firstItem],
+    <ore:dustGreenCrystalAlloy>:[<ore:ingotGreenCrystalAlloy>.firstItem, null],
+    <ore:dustSilver>:[<ore:ingotSilver>.firstItem, <ore:stickSilver>.firstItem],
+    <ore:dustLead>:[<ore:ingotLead>.firstItem, <ore:stickLead>.firstItem],
+    <ore:dustPotin>:[<ore:ingotPotin>.firstItem, <ore:stickPotin>.firstItem],
+    <ore:dustTinAlloy>:[<ore:ingotTinAlloy>.firstItem, <ore:stickTinAlloy>.firstItem],
+} as IItemStack[][IOreDictEntry];
+
+for dust, output in sinteringMapULV {
+<recipemap:sintering_furnace>.recipeBuilder().duration(80).EUt(8)
+	.notConsumable(<metaitem:shape.mold.ingot>)
+	.inputs(dust)
+	.outputs(output[0])
+.buildAndRegister();
+
+	if (!(isNull(output[1]))) {
+<recipemap:sintering_furnace>.recipeBuilder().duration(160).EUt(8)
+	.notConsumable(<contenttweaker:mold_rod>)
+	.inputs(dust*2)
+	.outputs(output[1]*3)
+.buildAndRegister();
+	}
+}
 
 ##########################################################################################
 print("==================== end of ulv_lv_station_recipes.zs ====================");

@@ -25,5 +25,18 @@ MachineBuilder.create(32101, "electromagnetic_separator")
 .setRenderer("machines/electromagnetic_separator")
 .addTier(0)
 .buildAndRegister();
-##########################################################################################
+
+
+//Sintering Furnace
+MachineBuilder.create(32102, "sintering_furnace")
+.setRecipeMap(
+	FactoryRecipeMap.start("sintering_furnace")
+		.maxInputs(2)
+		.maxOutputs(1)
+		.build()
+).setRenderer("machines/electric_furnace")
+.addTier(0)
+.buildAndRegister();
+
+##################################################################
 print("==================== end of new_machines.zs ====================");

@@ -26,6 +26,20 @@ for tinyDust, material in tinyDustMap {
 	mods.fossils.recipes.addSifterOutput(material, tinyDust, 1);
 }
 
+val sinteringMapULV as IItemStack[][IOreDictEntry] = {
+    <ore:dustIron>:[<ore:ingotIron>.firstItem, <ore:rodIron>.firstItem],
+} as IItemStack[][IOreDictEntry];
+
+for dust, output in sinteringMapULV {
+<recipemap:sintering_furnace>.recipeBuilder().duration(40).EUt(7)
+	.notConsumable(<metaitem:shape.mold.ingot>)
+	.inputs(dust)
+	.outputs(output[0])
+.buildAndRegister();
+
+
+
+
 
 val basicCapacitorInput as IIngredient = (<enderio:item_capacitor_grainy>|<enderio:item_material:20>*2) as IIngredient;
 

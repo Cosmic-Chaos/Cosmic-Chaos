@@ -1,0 +1,147 @@
+{
+	"block_pools":
+	[
+		{
+			"name": "clean_vents",
+			"type": {
+				"type": "block",
+				"name": "contenttweaker:vent_dirty_1"
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.glass.hit",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"name": "contenttweaker:vent_clean"
+				},
+				{
+					"type": "require_empty_hand"
+				},
+				{
+					"type": "require_sneak",
+					"sneak": true
+				}
+			],
+			"drops": [
+				{
+					"name": "gregtech:meta_dust_small",
+					"meta": 103,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 3
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "clean_vents_2",
+			"type": {
+				"type": "block",
+				"name": "contenttweaker:vent_dirty_2"
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.glass.hit",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"name": "contenttweaker:vent_dirty_1"
+				},
+				{
+					"type": "require_empty_hand"
+				},
+				{
+					"type": "require_sneak",
+					"sneak": true
+				}
+			],
+			"drops": [
+				{
+					"name": "gregtech:meta_dust_small",
+					"meta": 103,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 3
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "clean_vents_3",
+			"type": {
+				"type": "block",
+				"name": "contenttweaker:vent_dirty_3"
+			},
+			"clicktype": "rightclick",
+			"properties": [
+				{
+					"type": "play_sound",
+					"name": "block.glass.hit",
+					"volume": 0.3,
+					"pitch": 0.75,
+					"category": "block"
+				},
+				{
+					"type": "swing_hand"
+				},
+				{
+					"type": "drop_items"
+				},
+				{
+					"type": "consume_block",
+					"name": "contenttweaker:vent_dirty_2"
+				},
+				{
+					"type": "require_empty_hand"
+				},
+				{
+					"type": "require_sneak",
+					"sneak": true
+				}
+			],
+			"drops": [
+				{
+					"name": "gregtech:meta_dust_small",
+					"meta": 103,
+					"properties": [
+						{
+							"type": "set_random_size",
+							"minValue": 1,
+							"maxValue": 3
+						}
+					]
+				}
+			]
+		}
+		
+	]
+}

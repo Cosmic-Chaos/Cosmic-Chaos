@@ -30,7 +30,7 @@
 				},
 				{
 					"type": "consume_block",
-					"chance": 20.0,
+					"chance": 25.0,
 					"name": "chisel:technical",
 					"meta": 0
 				},
@@ -84,7 +84,7 @@
 				},
 				{
 					"type": "consume_block",
-					"chance": 20.0,
+					"chance": 25.0,
 					"name": "chisel:technical",
 					"meta": 0
 				},
