@@ -272,6 +272,18 @@ for item in carbonMonoxideItems {
 	.outputs(<fluxnetworks:fluxcore>*2)
 .duration(160).EUt(49153).buildAndRegister();
 
+
+# [2x Green Crystal Alloy Cable] from [1x Green Crystal Alloy Cable]
+craft.shapeless(<metaitem:cableGtDoubleGreenCrystalAlloy>, "**", {
+  "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable
+});
+
+# [2x Red Alloy Cable] from [1x Red Alloy Cable]
+craft.shapeless(<metaitem:cableGtDoubleRedAlloy>, "GG", {
+  "G": <ore:cableGtSingleRedAlloy>, # 1x Red Alloy Cable
+});
+
+
 /*
 val tinyDustMap as IItemStack[IItemStack] = {
 } as IItemStack[IItemStack];
