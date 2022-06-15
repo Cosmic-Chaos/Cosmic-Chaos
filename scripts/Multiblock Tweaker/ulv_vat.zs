@@ -115,37 +115,14 @@ ulv_vat.checkRecipeFunction = function(controller as IControllerTile, recipe as 
 	return false;
 } as ICheckRecipeFunction;
 
-/*
-			val block as IBlockState = world.getBlockState(pos);
-        	if (<blockstate:contenttweaker:vent_very_clean> has block) {
-        	    return true;
-        	} else if (<blockstate:contenttweaker:vent_clean> has block) {
-        	    return true;
-        	} else if (<blockstate:contenttweaker:vent_dirty_1> has block) {
-        	    return true;
-        	} else if (<blockstate:contenttweaker:vent_dirty_1> has block) {
-        	    return true;
-        	}
 
-			
-        if (world.getPickedBlock(pos, null, null) has <contenttweaker:vent_very_clean>) {
-            return true;
-        } else if (world.getPickedBlock(pos, null, null) has <contenttweaker:vent_clean>) {
-            return true;
-        } else if (world.getPickedBlock(pos, null, null) has <contenttweaker:vent_dirty_1>) {
-            return true;
-        } else if (world.getPickedBlock(pos, null, null) has <contenttweaker:vent_dirty_1>) {
-            return true;
-        }
-*/
-
-// 1/4 chance to progress crystal growth
+// 1/8 chance to progress crystal growth
 ulv_vat.completeRecipeFunction = function (recipeLogic as IRecipeLogic) as bool {
     val controller as IControllerTile = recipeLogic.metaTileEntity;
     val world as IWorld = controller.world;
 
     for pos in getSurround(controller.pos, controller.frontFacing) {
-        if (world.getRandom().nextInt(4) == 0) {
+        if (world.getRandom().nextInt(8) == 0) {
 				val block as IBlockState = world.getBlockState(pos);
 				if (ventMap has block) {
 					world.setBlockState(ventMap[block], pos);
