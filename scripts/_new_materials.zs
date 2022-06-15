@@ -1,5 +1,5 @@
 #loader gregtech
-#priority 1001
+#priority 1002
 import crafttweaker.item.IItemStack;
 import mods.gregtech.material.MaterialRegistry;
 import mods.gregtech.material.MaterialBuilder;

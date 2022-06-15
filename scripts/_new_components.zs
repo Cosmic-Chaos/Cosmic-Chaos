@@ -24,6 +24,7 @@ MaterialFlagBuilder.create("generate_thin_sheet")
 <material:tin>.addFlags("generate_thin_sheet");
 <material:bronze>.addFlags("generate_thin_sheet");
 <material:gold>.addFlags("generate_thin_sheet");
+<material:crude_steel>.addFlags("generate_thin_sheet");
 
 
 // addItem(short id, string name).long maxCharge, int tier, @Optional boolean rechargeable (default true), @Optional boolean dischrgeable (default true)
