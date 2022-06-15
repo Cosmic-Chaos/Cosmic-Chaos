@@ -510,6 +510,17 @@ craft.remake(<advancedrocketry:pressuretank>, ["pretty",
   "r": <ore:ringIron>,  # Iron Ring
 });
 
+# [ Pressure Tank] from [Neutronium Hammer][+3]
+craft.remake(<advancedrocketry:pressuretank:1>, ["pretty",
+  "I o I",
+  "I T I",
+  "I r I"], {
+  "I": <ore:sheetCrudeSteel>, # CrudeSteel Sheet
+  "o": <ore:screwCrudeSteel>, # CrudeSteel Screw
+  "T": <ore:gtceHardHammers>, # Neutronium Hammer
+  "r": <ore:ringCrudeSteel>,  # CrudeSteel Ring
+});
+
 # [Primitive Electromagnetic Separator] from [ULV Machine Hull][+5]
 craft.make(<metaitem:devtech:electromagnetic_separator.ulv>, ["pretty",
   "U G t",
@@ -533,6 +544,52 @@ craft.make(<metaitem:devtech:water_electrolyzer.ulv>, ["pretty",
   "V": <metaitem:hull.ulv>,      # ULV Machine Hull
   "|": <ore:wireGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Wire
   "L": <ore:blockGlassColorless>,  # Glass
+});
+
+# [Suit Jetpack] from [Silver Ring][+5]
+craft.remake(<advancedrocketry:jetpack>, ["pretty",
+  "P □ P",
+  "l S l",
+  "* i *"], {
+  "P": <advancedrocketry:pressuretank:1>|<advancedrocketry:pressuretank>, # Pressure Tank
+  "□": <ore:plateDoubleBlueAlloy>,        # Double Blue Alloy Plate
+  "l": <ore:leather> | <ore:itemLeather>, # Leather
+  "S": <ore:ringSilver>,                  # Silver Ring
+  "*": <ore:gemRedCrystalAlloy>,          # Firestone
+  "i": <ore:screwSilver>,                 # Silver Screw
+});
+
+# [Exhaust Vent] from [Bronze Screw][+2]
+craft.remake(<contenttweaker:vent_clean>, ["pretty",
+  "╱ □ ╱",
+  "B □ B",
+  "╱ □ ╱"], {
+  "╱": <ore:stickTinAlloy>,   # Tin Alloy Rod
+  "□": <ore:plateCrudeSteel>, # Crude Steel Plate
+  "B": <ore:screwBronze>,     # Bronze Screw
+});
+
+# [Silver Exhaust Vent] from [Blue Alloy Screw][+2]
+craft.remake(<contenttweaker:vent_very_clean>, ["pretty",
+  "* □ *",
+  "B □ B",
+  "* □ *"], {
+  "*": <contenttweaker:blue_crystal_dust>, # Reactive Crystal Powder
+  "□": <ore:plateSilver>,                  # Silver Plate
+  "B": <ore:screwBlueAlloy>,               # Blue Alloy Screw
+});
+
+# [Primitive Sintering Furnace] from [ULV Machine Hull][+5]
+craft.remake(<metaitem:devtech:sintering_furnace.ulv>, ["pretty",
+  "U S U",
+  "* L *",
+  "□ ¤ □"], {
+  "U": <metaitem:circuit.vacuum_tube>,              # Vacuum Tube
+  "S": <morefurnaces:furnaceblock:6>, # Silver Furnace
+  "*": <ore:gemRedCrystalAlloy>,      # Firestone
+  "L": <metaitem:hull.ulv>,        # ULV Machine Hull
+  "□": <ore:plateBlueAlloy>,          # Blue Alloy Plate
+  "¤": <ore:gearCrudeSteel>,          # Crude Steel Gear
 });
 
 /* No more hammers
