@@ -32,6 +32,7 @@ var simpleItems = [
   "blue_crystal_dust_inert",
   "blue_crystal_dust",
   "dust_crystal_green_glass",
+  "dust_crystal_purple_glass",
   "root_paper",
   "root_pulp",
   "dense_dust",

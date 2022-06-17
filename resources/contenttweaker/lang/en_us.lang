@@ -88,6 +88,7 @@ item.contenttweaker.crowbar_t2.name=§6Crowbar
 item.contenttweaker.scrap_rubber.name=Rubber Scraps
 
 item.contenttweaker.dust_crystal_green_glass.name=Green Crystal-Glass Blend
+item.contenttweaker.dust_crystal_purple_glass.name=Purple Crystal-Glass Blend
 item.contenttweaker.rough_redstone_crystal.name=Redstone Covered Crystal
 
 item.contenttweaker.heavy_dust.name=Heavy Scrap Dust
@@ -126,7 +127,6 @@ tile.contenttweaker.station_backbone.name=Station Backbone
 tile.contenttweaker.station_glass.name=Station Window
 tile.contenttweaker.vat_glass.name=Bio-Covered Glass
 tile.contenttweaker.organic_overloader.name=Photosynthesis Accelerator
-tile.contenttweaker.crystal_green_glass.name=Green Crystal Glass
 
 tile.contenttweaker.controller_broken_south.name=Broken Recycler Controller
 

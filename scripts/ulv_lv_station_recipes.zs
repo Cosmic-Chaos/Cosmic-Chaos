@@ -692,9 +692,13 @@ recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeS
 
 // GC Glass Dust
 recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:dustGlass>,<metaitem:dustGlass>,<metaitem:dustGreenCrystal>]);
+
+// PC Glass Dust
+recipes.addShapeless(<contenttweaker:dust_crystal_purple_glass> * 2, [<metaitem:dustGlass>,<metaitem:dustGlass>,<metaitem:dustRedCrystal>,<metaitem:dustBlueCrystal>]);
+/*
 //Crystal Glass
 furnace.addRecipe(<cosmic_core:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);
-
+*/
 //Tin Alloy
 recipes.addShapeless(<metaitem:dustTinAlloy>*2, [<ore:dustIron>,<ore:dustTin>]);
 
@@ -893,5 +897,16 @@ for dust, output in sinteringMapULV {
 	}
 }
 
+<recipemap:sintering_furnace>.recipeBuilder().duration(80).EUt(8)
+	.notConsumable(<metaitem:shape.mold.block>)
+	.inputs(<contenttweaker:dust_crystal_green_glass>)
+	.outputs(<cosmic_core:crystal_green_glass>)
+.buildAndRegister();
+
+<recipemap:sintering_furnace>.recipeBuilder().duration(80).EUt(8)
+	.notConsumable(<metaitem:shape.mold.block>)
+	.inputs(<contenttweaker:dust_crystal_purple_glass>)
+	.outputs(<cosmic_core:crystal_purple_glass>)
+.buildAndRegister();
 ##########################################################################################
 print("==================== end of ulv_lv_station_recipes.zs ====================");

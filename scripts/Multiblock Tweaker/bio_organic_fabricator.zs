@@ -52,7 +52,7 @@ val bio_organic_fabricator = Builder.start(loc)
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:station_casing>)
             //.where(" ", CTPredicate.getAir()) // Anything
-			.where("G", CTPredicate.blocks(<minecraft:glass>) |CTPredicate.blocks(<cosmic_core:crystal_green_glass>) | CTPredicate.blocks(<contenttweaker:vat_glass>))
+			.where("G", CTPredicate.blocks(<minecraft:glass>) |CTPredicate.blocks(<cosmic_core:crystal_purple_glass>) | CTPredicate.blocks(<contenttweaker:vat_glass>))
             //.where("S", CTPredicate.liquids(<liquid:sludge>))
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
             
@@ -128,7 +128,7 @@ bio_organic_fabricator.checkRecipeFunction = function(controller as IControllerT
     val world as IWorld = controller.world;
     for pos in getSurround(controller.pos, controller.frontFacing) 
     {
-        if (world.getPickedBlock(pos, null, null) has <cosmic_core:crystal_green_glass>) {
+        if (world.getPickedBlock(pos, null, null) has <cosmic_core:crystal_purple_glass>) {
             return true;
         } else if (world.getPickedBlock(pos, null, null) has <minecraft:glass>) {
             return true;
