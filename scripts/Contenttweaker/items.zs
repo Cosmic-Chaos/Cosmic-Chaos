@@ -42,6 +42,9 @@ var simpleItems = [
 
   //GT Items
   "mold_rod",
+
+  //Other Items
+  "fuel_pump",
 ] as string[];
 
 for item in simpleItems {

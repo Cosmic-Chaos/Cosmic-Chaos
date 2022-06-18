@@ -86,6 +86,7 @@ val lootable =
   <fossil:relic_scrap>,
   <fossil:biofossil>,
   <contenttweaker:fuel_catalyst>,
+  <contenttweaker:reaction_chamber>,
 ]
  as IItemStack[];
 
@@ -100,6 +101,9 @@ for item in lootable {
 //Rocket Boots
 <cosmic_core:cc_armor:1>.anyDamage().addTooltip(format.red("Fueled with Liquid Fire Matrix"));
 <cosmic_core:cc_armor:1>.anyDamage().addTooltip(format.gold("Hold shift while standing to launch"));
+
+//Purple Glass
+<cosmic_core:crystal_purple_glass>.anyDamage().addTooltip(format.gold("When used in the Bio-Organic Fabricator, does not need to be cleaned"));
 
 ##=======================================================
 ## ADD RECIPES
@@ -485,7 +489,7 @@ craft.remake(<metaitem:component.resistor> * 2, ["pretty",
   "▲": <ore:dustCoal> | <ore:dustCarbon> | <ore:dustCharcoal>,           # Carbon Dust
 });
 
-
+/*
 # [Rocket Boots] from [Leather Boots][+5]
 craft.remake(<cosmic_core:cc_armor:1>.withTag({ench: [{lvl: 1 as short, id: 24}], RepairCost: 1}), ["pretty",
   "B r B",
@@ -498,7 +502,7 @@ craft.remake(<cosmic_core:cc_armor:1>.withTag({ench: [{lvl: 1 as short, id: 24}]
   "□": <ore:plateCrudeSteel>,                 # Crude Steel Plate
   "*": <ore:gemRedCrystalAlloy>,              # Firestone
 });
-
+*/
 # [Low Pressure Tank] from [Neutronium Hammer][+3]
 craft.remake(<advancedrocketry:pressuretank>, ["pretty",
   "I o I",
@@ -591,6 +595,18 @@ craft.remake(<metaitem:devtech:sintering_furnace.ulv>, ["pretty",
   "□": <ore:plateBlueAlloy>,          # Blue Alloy Plate
   "¤": <ore:gearCrudeSteel>,          # Crude Steel Gear
 });
+
+# [Reaction Chamber] from [Crude Steel Frame Box][+3]
+craft.remake(<contenttweaker:reaction_chamber>, ["pretty",
+  "╱ ♠ ╱",
+  "▲ ◙ ▲",
+  "╱ ♠ ╱"], {
+  "╱": <ore:stickBlueAlloy>,              # Blue Alloy Rod
+  "♠": <projecte:item.pe_covalence_dust>, # Low Covalence Dust
+  "▲": <ore:dustGlowstone>,               # Glowstone Dust
+  "◙": <ore:frameGtCrudeSteel>,           # Crude Steel Frame Box
+});
+
 
 /* No more hammers
 # [Broken Iron Scraps] from [Heavy Hull Plate][+1]
@@ -691,7 +707,7 @@ recipes.addShapeless(<metaitem:dustBlueAlloy>*2, [<ore:dustSilver>,<ore:dustSilv
 recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustGreenCrystal>]);
 
 // GC Glass Dust
-recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 3, [<metaitem:dustGlass>,<metaitem:dustGlass>,<metaitem:dustGreenCrystal>]);
+recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 2, [<metaitem:dustGlass>,<metaitem:dustGreenCrystal>]);
 
 // PC Glass Dust
 recipes.addShapeless(<contenttweaker:dust_crystal_purple_glass> * 2, [<metaitem:dustGlass>,<metaitem:dustGlass>,<metaitem:dustRedCrystal>,<metaitem:dustBlueCrystal>]);

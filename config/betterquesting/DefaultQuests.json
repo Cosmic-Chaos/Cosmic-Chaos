@@ -4785,13 +4785,13 @@
     },
     "89:10": {
       "preRequisites:11": [
-        6,
+        17,
         101
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Spaaaaace!\n\n§6The Rocket Boots are fueled with Liquid Fire Matrix, and can be filled by simply right clicking them on a fluid storage containing some.",
+          "desc:8": "Spaaaaace!\n\nYou\u0027ll need to add an extra tank for §1Hydrogen§r, as fuel for your Jetpack.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4832,9 +4832,9 @@
             },
             "1:10": {
               "Count:3": 1,
-              "Damage:2": 1,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "cosmic_core:cc_armor"
+              "id:8": "advancedrocketry:jetpack"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -4849,7 +4849,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Probably won\u0027t be food safe when you\u0027re done with it.\n\n§eYou\u0027ll need to find the first Blueprint.",
+          "desc:8": "Probably won\u0027t be food safe when you\u0027re done with it.\n\n§eYou\u0027ll need to find the first Blueprint.§r\n\nOver time, the Vents will clog up with §eSulfur Crystals§r. These can be removed by simply shift right clicking with an empty hand. Later on, you\u0027ll unlock Silver Vents, which won\u0027t get contaminated by Sulfur.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4878,7 +4878,7 @@
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
+          "ignoreNBT:1": 1,
           "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
@@ -4889,46 +4889,52 @@
               "id:8": "gregtech:machine"
             },
             "1:10": {
-              "Count:3": 16,
+              "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "contenttweaker:station_casing"
+              "id:8": "contenttweaker:reaction_chamber"
             },
             "2:10": {
-              "Count:3": 2,
+              "Count:3": 3,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "cosmic_core:crystal_green_glass"
+              "id:8": "contenttweaker:vent_clean"
             },
             "3:10": {
               "Count:3": 1,
-              "Damage:2": 1195,
+              "Damage:2": 1210,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "4:10": {
               "Count:3": 1,
-              "Damage:2": 1180,
+              "Damage:2": 1150,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "5:10": {
               "Count:3": 1,
-              "Damage:2": 1150,
+              "Damage:2": 1165,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "6:10": {
               "Count:3": 1,
-              "Damage:2": 1165,
+              "Damage:2": 1180,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "7:10": {
               "Count:3": 1,
-              "Damage:2": 1210,
+              "Damage:2": 1195,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "8:10": {
+              "Count:3": 9,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:station_casing"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5172,7 +5178,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With these, you\u0027ll be able to assemble the Recycler and start making more complex materials!\n\nYou may need to keep track of how much Power you\u0027re burning though...\n\nPlace the §bULV Battery Buffer§r next to the §eULV Energy Hatch§r and rotate it by using a §9Wrench§r on the rectangle section closest to the Hatch. After placing the §6Rusty Batteries§r§r inside, you\u0027ll be able to run the Recycler!",
+          "desc:8": "With these, you\u0027ll be able to assemble the Recycler and start making more complex materials!\n\n§6You can see how any of these multiblocks are formed if you check uses in JEI on the controller block, or shift right click on them in world; each successive click will alter the hologram.§r\n\nPlace the §bULV Battery Buffer§r next to the §eULV Energy Hatch§r and rotate it by using a §9Wrench§r on the rectangle section closest to the Hatch. After placing the §6Rusty Batteries§r§r inside, you\u0027ll be able to run the Recycler!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 2,
@@ -5274,7 +5280,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You may find the remains of this machine through the center walkway.\n\n§6This machine will allow you to save materials when crafting plates at a 3:2 ratio.",
+          "desc:8": "Recommended to automate §aBiomass§r using the §9NASA Slow Cooker§r before starting this machine, so you don\u0027t have to worry about power.\n\nYou may find the remains of this machine through the center walkway.\n\n§6This machine will allow you to save materials when crafting plates at a 3:2 ratio.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 4,
@@ -5365,7 +5371,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is one of the only ways to get §dLead§r, and §7Crude Steel Dust§r.",
+          "desc:8": "This is one of the only ways to get §dLead§r and §7Crude Steel Dust§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5434,7 +5440,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "As you run this, you\u0027ll need to keep the Crystal Glass free from contaminants by scraping clean any §aBio Covered Glass§r that shows up. \n\nThe §aBio-Goo§r collected this way is quite useful.",
+          "desc:8": "Recommended to automate §aBiomass§r using the §9NASA Slow Cooker§r before starting this machine, so you don\u0027t have to worry about power.\n\nAs you run this, you\u0027ll need to keep the Crystal Glass free from contaminants by scraping clean any §aBio Covered Glass§r that shows up. \n\nThe §aBio-Goo§r collected this way is quite useful.\n\nIf the Glass is replaced with §dPurple Crystal Glass§r, it will not need cleaning.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5483,7 +5489,7 @@
               "Count:3": 8,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "cosmic_core:crystal_green_glass"
+              "id:8": "minecraft:glass"
             },
             "3:10": {
               "Count:3": 1,
@@ -5974,7 +5980,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Launch the Rocket to complete this Alpha! Be sure to let us know your thoughts!\n\nChests and Crates are able to be transferred on the rocket.",
+          "desc:8": "Launch the Rocket to complete this Alpha! Be sure to let us know your thoughts!\n\nChests and Crates are able to be saved on the rocket.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 4,
@@ -6191,7 +6197,7 @@
           "id:3": 3,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 354,
+          "x:3": 360,
           "y:3": -36
         },
         "4:10": {
@@ -6205,15 +6211,15 @@
           "id:3": 5,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 624,
+          "x:3": 588,
           "y:3": -36
         },
         "6:10": {
           "id:3": 6,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
-          "y:3": -84
+          "x:3": 360,
+          "y:3": -96
         },
         "7:10": {
           "id:3": 8,
@@ -6240,22 +6246,22 @@
           "id:3": 17,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
-          "y:3": -132
+          "x:3": 360,
+          "y:3": -144
         },
         "11:10": {
           "id:3": 25,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 660,
+          "x:3": 624,
           "y:3": -36
         },
         "12:10": {
           "id:3": 26,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 690,
-          "y:3": -138
+          "x:3": 588,
+          "y:3": -144
         },
         "13:10": {
           "id:3": 27,
@@ -6268,22 +6274,22 @@
           "id:3": 94,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 588,
+          "x:3": 720,
           "y:3": -36
         },
         "15:10": {
           "id:3": 95,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 468,
-          "y:3": -84
+          "x:3": 408,
+          "y:3": -96
         },
         "16:10": {
           "id:3": 96,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 708,
-          "y:3": -90
+          "x:3": 672,
+          "y:3": -96
         },
         "17:10": {
           "id:3": 97,
@@ -6296,8 +6302,8 @@
           "id:3": 98,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 354,
-          "y:3": 6
+          "x:3": 360,
+          "y:3": 24
         },
         "19:10": {
           "id:3": 99,
@@ -6310,15 +6316,15 @@
           "id:3": 100,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 624,
-          "y:3": -150
+          "x:3": 540,
+          "y:3": -144
         },
         "21:10": {
           "id:3": 101,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 618,
-          "y:3": -108
+          "x:3": 534,
+          "y:3": -102
         },
         "22:10": {
           "id:3": 102,
@@ -6331,8 +6337,8 @@
           "id:3": 104,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 354,
-          "y:3": 48
+          "x:3": 360,
+          "y:3": 72
         },
         "24:10": {
           "id:3": 106,
@@ -6352,14 +6358,14 @@
           "id:3": 109,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 618,
-          "y:3": 24
+          "x:3": 534,
+          "y:3": 18
         },
         "27:10": {
           "id:3": 110,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
+          "x:3": 408,
           "y:3": -36
         },
         "28:10": {
@@ -6387,8 +6393,8 @@
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 396,
-          "y:3": 6
+          "x:3": 408,
+          "y:3": 24
         },
         "32:10": {
           "id:3": 118,
@@ -6429,7 +6435,7 @@
           "id:3": 125,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 702,
+          "x:3": 666,
           "y:3": -42
         }
       }

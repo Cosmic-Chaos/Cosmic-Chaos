@@ -41,7 +41,7 @@ craft.reshapeless(<advancedrocketry:launchpad>, "cB▲", {
 });
 
 # [Structure Tower]*8 from [Crude Steel Frame Box][+1]
-craft.remake(<advancedrocketry:structuretower> * 8, ["pretty",
+craft.remake(<advancedrocketry:structuretower> * 2, ["pretty",
   "╱ ╱ ╱",
   "╱ ◙ ╱",
   "╱ ╱ ╱"], {
@@ -195,13 +195,24 @@ craft.make(<advancedrocketry:seat>, ["pretty",
   "□": <ore:plateCrudeSteel>,
 });
 
+# [Fuel Pump] from [Glass Tube][+3]
+<recipemap:assembler>.recipeBuilder()
+	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration:1}))
+	.inputs(
+  		<ore:springSmallAluminium>,   # Small Aluminium Spring
+  		<metaitem:component.glass.tube>,   # Glass Tube
+  		<ore:wireFineAnnealedCopper>*8, # Fine Annealed Copper Wire
+  		<metaitem:electric.pump.mv>,   # MV Electric Pump
+).outputs(<contenttweaker:fuel_pump>)
+.duration(100).EUt(24).buildAndRegister();
+
 # [Monopropellant Rocket Engine] from [Crude Steel Screw][+3]
 <recipemap:ulv_assembler>.recipeBuilder()
 	.inputs(
-		<ore:ringCrudeSteel>,
-		<ore:screwCrudeSteel>,
-		<ore:stickCrudeSteel>*2,
-		<ore:sheetIron>*4
+		<ore:ringCrudeSteel>*2,
+		<ore:screwCrudeSteel>*4,
+		<contenttweaker:fuel_pump>,
+		<ore:sheetCrudeSteel>*4
 	).outputs(<advancedrocketry:rocketmotor>)
 .duration(400).EUt(12).buildAndRegister();
 <recipemap:assembler>.recipeBuilder()
