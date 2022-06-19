@@ -87,6 +87,7 @@ val lootable =
   <fossil:biofossil>,
   <contenttweaker:fuel_catalyst>,
   <contenttweaker:reaction_chamber>,
+  <contenttweaker:fuel_pump>,
 ]
  as IItemStack[];
 
@@ -105,6 +106,35 @@ for item in lootable {
 //Purple Glass
 <cosmic_core:crystal_purple_glass>.anyDamage().addTooltip(format.gold("When used in the Bio-Organic Fabricator, does not need to be cleaned"));
 
+//+(format.gold(" "));
+/*
+format.black
+format.darkBlue
+format.darkGreen
+format.darkAqua
+format.darkRed
+format.darkPurple
+format.gold
+format.gray
+format.darkGray
+format.blue
+format.green
+format.aqua
+format.red
+format.lightPurple
+format.yellow
+format.white
+*/
+<contenttweaker:test_planet>.addTooltip(format.white("- Primary Resource: " )+(format.gray("Titanium "))+(format.green("[800,000/800,000]")));
+<contenttweaker:test_planet>.addTooltip(format.gold("Additional scanning required for more info"));
+
+<contenttweaker:test_planet_2>.addTooltip(format.white("- Primary Resource: " )+(format.gray("Iridium "))+(format.yellow("[298,630/550,000]")));
+<contenttweaker:test_planet_2>.addTooltip(format.white("- Secondary Resource: " )+(format.gray("Tungsten "))+(format.red("[13,140/128,000]")));
+<contenttweaker:test_planet_2>.addShiftTooltip(format.white("- Tier: ")+(format.red("8")), "Hold shift for additional info");
+<contenttweaker:test_planet_2>.addShiftTooltip(format.white("- Size: ")+(format.yellow("6")));
+<contenttweaker:test_planet_2>.addShiftTooltip(format.white("- Biome(s): ")+(format.yellow("Desert, "))+(format.gray("Wasteland")));
+<contenttweaker:test_planet_2>.addShiftTooltip(format.white("- Mining Robots: ")+(format.green("[3,840/4000]")));
+<contenttweaker:test_planet_2>.addShiftTooltip(format.white("- Railgun: ")+(format.green("Yes")));
 ##=======================================================
 ## ADD RECIPES
 ##=======================================================

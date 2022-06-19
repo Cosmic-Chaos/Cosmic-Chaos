@@ -67,6 +67,16 @@ crowbar_t2.maxDamage = 256;
 crowbar_t2.toolLevel = 1;
 crowbar_t2.register();
 
+val test_planet = VanillaFactory.createItem("test_planet");
+test_planet.maxStackSize = 1;
+test_planet.rarity = "RARE";
+test_planet.register();
+
+val test_planet_2 = VanillaFactory.createItem("test_planet_2");
+test_planet_2.maxStackSize = 1;
+test_planet_2.rarity = "RARE";
+test_planet_2.register();
+
 /*
 var componentsULV = (itemColor(0xf0821d));
 

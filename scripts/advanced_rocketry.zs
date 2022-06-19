@@ -197,12 +197,11 @@ craft.make(<advancedrocketry:seat>, ["pretty",
 
 # [Fuel Pump] from [Glass Tube][+3]
 <recipemap:assembler>.recipeBuilder()
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration:1}))
 	.inputs(
   		<ore:springSmallAluminium>,   # Small Aluminium Spring
   		<metaitem:component.glass.tube>,   # Glass Tube
   		<ore:wireFineAnnealedCopper>*8, # Fine Annealed Copper Wire
-  		<metaitem:electric.pump.mv>,   # MV Electric Pump
+  		<metaitem:electric.pump.mv>   # MV Electric Pump
 ).outputs(<contenttweaker:fuel_pump>)
 .duration(100).EUt(24).buildAndRegister();
 
@@ -215,6 +214,7 @@ craft.make(<advancedrocketry:seat>, ["pretty",
 		<ore:sheetCrudeSteel>*4
 	).outputs(<advancedrocketry:rocketmotor>)
 .duration(400).EUt(12).buildAndRegister();
+
 <recipemap:assembler>.recipeBuilder()
 	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration:1}))
 	.inputs(

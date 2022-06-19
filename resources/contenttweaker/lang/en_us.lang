@@ -112,6 +112,9 @@ item.contenttweaker.mold_rod.name=Mold (Rod)
 
 item.contenttweaker.fuel_pump.name=Fuel Pump
 
+item.contenttweaker.test_planet.name=Planet E-12
+item.contenttweaker.test_planet_2.name=Alpha Bronson
+
 item.contenttweaker.emc_widget_1.name=Minor Alchemical Construct
 
 fluid.emc_fluid=Liquid EMC

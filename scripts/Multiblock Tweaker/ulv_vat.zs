@@ -147,8 +147,8 @@ craft.remake(<metaitem:mbt:ulv_vat>, ["pretty",
 });
 # ULV Vat Blueprint (copy)
 recipes.addShaped("ulv_vat_blueprint_copy", <contenttweaker:vat_print>, [
-	[<ore:nuggetRubber>, <quark:root_dye:1>, <ore:nuggetRubber>],
-	[<ore:wireFineRedAlloy>, <contenttweaker:root_paper>, <ore:wireFineRedAlloy>],
+	[<ore:nuggetRubber>, <quark:root_dye>, <ore:nuggetRubber>],
+	[<ore:wireFineRedAlloy>, <enderio:item_material:77>, <ore:wireFineRedAlloy>],
 	[<ore:nuggetRubber>, <metaitem:station.component.3>, <ore:nuggetRubber>]
 ]);
 
