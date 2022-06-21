@@ -39,6 +39,21 @@ var simpleItems = [
   "light_dust",
   "heavy_dust",
   "scrap_rubber",
+  "crystal_shard_magenta",
+  "crystal_shard_yellow",
+  "crystal_seed_red",
+  "crystal_seed_blue",
+  "crystal_seed_green",
+  "crystal_seed_yellow",
+  "crystal_seed_magenta",
+  "crystal_seed_cyan",
+  "crystal_seed_white",
+  
+    //Other Materials
+  "glod_crystal",
+  "empowered_glod_crystal",
+  "quinturple_crystal",
+  "empowered_quinturple_crystal",
 
   //GT Items
   "mold_rod",
