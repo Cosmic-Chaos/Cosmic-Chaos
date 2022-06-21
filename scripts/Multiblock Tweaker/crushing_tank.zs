@@ -26,6 +26,9 @@ import mods.gregtech.recipe.IRecipe;
 import mods.gregtech.recipe.IRecipeLogic;
 import mods.gregtech.recipe.RecipeMap;
 
+import scripts.g.stationCrystalsByStats;
+import scripts.g.stationCrystalStatsMap;
+import scripts.g.primaryColors;
 
 var loc = "mbt:crushing_tank";
 
@@ -44,8 +47,6 @@ val crushing_tank = Builder.start(loc)
                 "CCC", 
                 "III"
             )
-
-
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:station_casing>)
 			.where("S", CTPredicate.blocks(<metastate:advancedrocketry:sawblade>.block))
@@ -91,87 +92,6 @@ crushing_tank.formStructureFunction = function(controller as IControllerTile, co
 	}
 } as IFormStructureFunction;
 
-/*
-val blocksToCheck =
-[
-    <contenttweaker:crystal_cluster_blue_1>,
-    <contenttweaker:crystal_cluster_blue_2>,
-    <contenttweaker:crystal_cluster_blue_3>,
-    <contenttweaker:crystal_cluster_blue_4>,
-    <contenttweaker:crystal_cluster_blue_5>,
-    <contenttweaker:crystal_cluster_blue_6>,
-    <contenttweaker:crystal_cluster_blue_7>,
-    <contenttweaker:crystal_cluster_green_1>,
-    <contenttweaker:crystal_cluster_green_2>,
-    <contenttweaker:crystal_cluster_green_3>,
-    <contenttweaker:crystal_cluster_green_4>,
-    <contenttweaker:crystal_cluster_green_5>,
-    <contenttweaker:crystal_cluster_green_6>,
-    <contenttweaker:crystal_cluster_green_7>,
-    <contenttweaker:crystal_cluster_red_1>,
-    <contenttweaker:crystal_cluster_red_2>,
-    <contenttweaker:crystal_cluster_red_3>,
-    <contenttweaker:crystal_cluster_red_4>,
-    <contenttweaker:crystal_cluster_red_5>,
-    <contenttweaker:crystal_cluster_red_6>,
-    <contenttweaker:crystal_cluster_red_7>,
-]
- as IItemStack[];
-*/
-static baseCrystals as IBlockState[] = [
-	<blockstate:contenttweaker:crystal_cluster_blue_1>,
-	<blockstate:contenttweaker:crystal_cluster_red_1>,
-	<blockstate:contenttweaker:crystal_cluster_green_1>
-] as IBlockState[];
-
-static crystalMap as IBlockState[IBlockState] = {
-	//////////////////// BLUE ///////////////
-    <blockstate:contenttweaker:crystal_cluster_blue_1>:
-		<blockstate:contenttweaker:crystal_cluster_blue_2>,
-    <blockstate:contenttweaker:crystal_cluster_blue_2>:
-		<blockstate:contenttweaker:crystal_cluster_blue_3>,
-	<blockstate:contenttweaker:crystal_cluster_blue_3>:
-		<blockstate:contenttweaker:crystal_cluster_blue_4>,
-	<blockstate:contenttweaker:crystal_cluster_blue_4>:
-		<blockstate:contenttweaker:crystal_cluster_blue_5>,
-	<blockstate:contenttweaker:crystal_cluster_blue_5>:
-		<blockstate:contenttweaker:crystal_cluster_blue_6>,
-	<blockstate:contenttweaker:crystal_cluster_blue_6>:
-		<blockstate:contenttweaker:crystal_cluster_blue_7>,
-	<blockstate:contenttweaker:crystal_cluster_blue_7>:
-		<blockstate:actuallyadditions:block_crystal_cluster_lapis:facing=up>,
-    //////////////////// RED ///////////////
-    <blockstate:contenttweaker:crystal_cluster_red_1>:
-		<blockstate:contenttweaker:crystal_cluster_red_2>,
-    <blockstate:contenttweaker:crystal_cluster_red_2>:
-		<blockstate:contenttweaker:crystal_cluster_red_3>,
-    <blockstate:contenttweaker:crystal_cluster_red_3>:
-		<blockstate:contenttweaker:crystal_cluster_red_4>,
-    <blockstate:contenttweaker:crystal_cluster_red_4>:
-		<blockstate:contenttweaker:crystal_cluster_red_5>,
-    <blockstate:contenttweaker:crystal_cluster_red_5>:
-		<blockstate:contenttweaker:crystal_cluster_red_6>,
-	<blockstate:contenttweaker:crystal_cluster_red_6>:
-		<blockstate:contenttweaker:crystal_cluster_red_7>,
-	<blockstate:contenttweaker:crystal_cluster_red_7>:
-		<blockstate:actuallyadditions:block_crystal_cluster_redstone:facing=up>,
-    //////////////////// GREEN ///////////////
-    <blockstate:contenttweaker:crystal_cluster_green_1>:
-		<blockstate:contenttweaker:crystal_cluster_green_2>,
-	<blockstate:contenttweaker:crystal_cluster_green_2>:
-		<blockstate:contenttweaker:crystal_cluster_green_3>,
-	<blockstate:contenttweaker:crystal_cluster_green_3>:
-		<blockstate:contenttweaker:crystal_cluster_green_4>,
-	<blockstate:contenttweaker:crystal_cluster_green_4>:
-		<blockstate:contenttweaker:crystal_cluster_green_5>,
-	<blockstate:contenttweaker:crystal_cluster_green_5>:
-		<blockstate:contenttweaker:crystal_cluster_green_6>,
-	<blockstate:contenttweaker:crystal_cluster_green_6>:
-		<blockstate:contenttweaker:crystal_cluster_green_7>,
-	<blockstate:contenttweaker:crystal_cluster_green_7>:
-		<blockstate:actuallyadditions:block_crystal_cluster_emerald:facing=up>
-} as IBlockState[IBlockState];
-
 // check if the crystal can grow more, if so, start.
 crushing_tank.checkRecipeFunction = function(controller as IControllerTile, recipe as IRecipe, consumeIfSuccess as bool) as bool {
     val world as IWorld = controller.world;
@@ -180,7 +100,7 @@ crushing_tank.checkRecipeFunction = function(controller as IControllerTile, reci
             return true;
         } else {
 			val block as IBlockState = world.getBlockState(pos);
-			if (crystalMap has block) {
+			if (stationCrystalStatsMap has block) {
                 return true;
             }
         }
@@ -196,12 +116,17 @@ crushing_tank.completeRecipeFunction = function (recipeLogic as IRecipeLogic) as
     for pos in getCenter(controller.pos, controller.frontFacing) {
         if (world.getRandom().nextInt(4) == 0) {
             if (world.isAirBlock(pos)) {
-				val crystalType as int = world.getRandom().nextInt(baseCrystals.length);
-                world.setBlockState(baseCrystals[crystalType], pos);
+				val crystalType as int = world.getRandom().nextInt(primaryColors.length);
+                world.setBlockState(stationCrystalsByStats[primaryColors[crystalType]][0], pos);
             } else {
 				val block as IBlockState = world.getBlockState(pos);
-				if (crystalMap has block) {
-					world.setBlockState(crystalMap[block], pos);
+				if (stationCrystalStatsMap has block) {
+					val stats as int[string] = stationCrystalStatsMap[block];
+					for crystalColor in stats { // Note that stats is a map with a single key, value pair so this loop isn't really a loop
+						val crystalLevel as int = stats[crystalColor] as int;
+						world.setBlockState(stationCrystalsByStats[crystalColor][crystalLevel + 1], pos);
+						break;
+					}
 				}
 			}
         }
@@ -412,33 +337,15 @@ crushing_tank.recipeMap.recipeBuilder()
 	.chancedOutput(<metaitem:dustWood>, 2500, 1000)
 .buildAndRegister();
 
-
-//Green Crystal
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(60)
-    .EUt(6)
-    .inputs(<actuallyadditions:item_crystal_shard:4>)
-    .outputs(<metaitem:dustGreenCrystal>)
-	.chancedOutput(<metaitem:dustGreenCrystal>, 5000, 1000)
-.buildAndRegister();
-
-//Red Crystal
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(60)
-    .EUt(6)
-    .inputs(<actuallyadditions:item_crystal_shard>)
-    .outputs(<metaitem:dustRedCrystal>)
-	.chancedOutput(<metaitem:dustRedCrystal>, 5000, 1000)
-.buildAndRegister();
-
-//Blue Crystal
-crushing_tank.recipeMap.recipeBuilder()
-    .duration(60)
-    .EUt(6)
-    .inputs(<actuallyadditions:item_crystal_shard:1>)
-    .outputs(<metaitem:dustBlueCrystal>)
-	.chancedOutput(<metaitem:dustBlueCrystal>, 5000, 1000)
-.buildAndRegister();
+//Station Crystal Shards
+for colorName in stationCrystalsByStats {
+	val output as IItemStack = oreDict["dust"~colorName~"Crystal"].firstItem;
+	crushing_tank.recipeMap.recipeBuilder()
+		.inputs(oreDict["gem"~colorName~"Crystal"])
+		.outputs(output)
+		.chancedOutput(output, 5000, 1000)
+		.duration(60).EUt(6).buildAndRegister();
+}
 
 //Books to Paper
 crushing_tank.recipeMap.recipeBuilder()
