@@ -216,36 +216,33 @@ craft.make(<advancedrocketry:seat>, ["pretty",
 .duration(400).EUt(12).buildAndRegister();
 
 <recipemap:assembler>.recipeBuilder()
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration:1}))
 	.inputs(
 		<ore:ringSteel>,
 		<ore:screwSteel>,
-		<ore:stickSteel>*2,
-		<ore:sheetSteel>*4
+		<contenttweaker:fuel_pump>,
+		<ore:sheetSteel>*5
 	).outputs(<advancedrocketry:rocketmotor>)
 .duration(100).EUt(24).buildAndRegister();
 
 # [Bipropellant Rocket Engine] from [Titanium Screw][+3]
 recipes.removeByRecipeName("advancedrocketry:bipropellantengine");
 <recipemap:assembler>.recipeBuilder()
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration:1}))
 	.inputs(
 		<ore:ringTitanium>,
 		<ore:screwTitanium>,
-		<ore:stickTitanium>*2,
-		<ore:sheetSteel>*4
+		<contenttweaker:fuel_pump>,
+		<ore:sheetSteel>*5
 	).outputs(<advancedrocketry:bipropellantrocketmotor>)
 .duration(200).EUt(1024).buildAndRegister();
 
 # [Advanced Monopropellant Rocket Engine] from [Aluminium Spring][+3]
 recipes.removeByRecipeName("advancedrocketry:advengine");
 <recipemap:assembler>.recipeBuilder()
-	.notConsumable(<metaitem:circuit.integrated>.withTag({Configuration:2}))
 	.inputs(
 		<ore:gearAluminium>,
 		<ore:springAluminium>,
-		<ore:stickLongTitanium>*2,
-		<ore:sheetTitaniumIridium>*4
+		<contenttweaker:fuel_pump>,
+		<ore:sheetTitaniumIridium>*8
 	).outputs(<advancedrocketry:advrocketmotor>)
 .duration(200).EUt(1024).buildAndRegister();
 
@@ -256,8 +253,8 @@ recipes.removeByRecipeName("advancedrocketry:advbipropellantengine");
 	.inputs(
 		<ore:gearAluminium>,
 		<ore:springAluminium>,
-		<ore:stickLongIridium>*2,
-		<ore:sheetTitaniumAluminide>*4
+		<contenttweaker:fuel_pump>,
+		<ore:sheetTitaniumAluminide>*8
 	).outputs(<advancedrocketry:advbipropellantrocketmotor>)
 .duration(200).EUt(1024).buildAndRegister();
 
@@ -268,7 +265,8 @@ recipes.removeByRecipeName("advancedrocketry:nuclearengine");
 	.inputs(
 		<ore:springEuropium>*2,
 		<ore:stickLongIridium>*2,
-		<ore:sheetTitaniumAluminide>*4
+		<contenttweaker:fuel_pump>,
+		<ore:sheetTitaniumAluminide>*8
 	).outputs(<advancedrocketry:nuclearrocketmotor>)
 .duration(500).EUt(4096).buildAndRegister();
 

@@ -633,8 +633,6 @@ var blue_crystal = MaterialBuilder(32154, "blue_crystal")
     .build();
 gemPrefix.setIgnored(<material:blue_crystal>);
 
-
-
 //Cave Root
 var cave_root = MaterialBuilder(32155, "cave_root")
     .dust(1)
@@ -644,6 +642,37 @@ var cave_root = MaterialBuilder(32155, "cave_root")
     .build();
 ingotPrefix.setIgnored(<material:cave_root>);
 
+// Cyan Crystal
+var cyan_crystal = MaterialBuilder(32156, "cyan_crystal")
+    .gem(1)
+    .color(0x45ffff)
+    .iconSet("diamond")
+    .build();
+gemPrefix.setIgnored(<material:cyan_crystal>);
+
+// Magenta Crystal
+var magenta_crystal = MaterialBuilder(32157, "magenta_crystal")
+    .gem(1)
+    .color(0xff35ff)
+    .iconSet("diamond")
+    .build();
+gemPrefix.setIgnored(<material:magenta_crystal>);
+
+// Yellow Crystal
+var yellow_crystal = MaterialBuilder(32158, "yellow_crystal")
+    .gem(1)
+    .color(0xffff2f)
+    .iconSet("diamond")
+    .build();
+gemPrefix.setIgnored(<material:yellow_crystal>);
+
+// White Crystal
+var white_crystal = MaterialBuilder(32159, "white_crystal")
+    .gem(1)
+    .color(0xededed)
+    .iconSet("diamond")
+    .build();
+gemPrefix.setIgnored(<material:white_crystal>);
 
 // Minor Manifested EMC
 var emc_minor = MaterialBuilder(32200, "emc_minor")
