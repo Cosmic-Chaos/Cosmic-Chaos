@@ -116,7 +116,7 @@ ulv_vat.checkRecipeFunction = function(controller as IControllerTile, recipe as 
 } as ICheckRecipeFunction;
 
 
-// 1/8 chance to progress crystal growth
+// 1/8 chance to dirty a vent
 ulv_vat.completeRecipeFunction = function (recipeLogic as IRecipeLogic) as bool {
     val controller as IControllerTile = recipeLogic.metaTileEntity;
     val world as IWorld = controller.world;

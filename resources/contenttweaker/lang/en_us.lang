@@ -32,7 +32,7 @@ material.aurorian_steel=Aurorian Steel
 
 material.tenebrum=Tenebrum
 material.nagrilite=Nagrilite
-material.ebony=Ebony
+material.ebony=Ebonite
 material.archaic_shard=Archaic Shard
 
 material.octine=Octine
@@ -46,6 +46,10 @@ material.red_crystal_alloy=Firestone
 material.green_crystal=Green Crystal
 material.red_crystal=Red Crystal
 material.blue_crystal=Blue Crystal
+material.cyan_crystal=Cyan Crystal
+material.magenta_crystal=Magenta Crystal
+material.yellow_crystal=Yellow Crystal
+material.white_crystal=White Crystal
 
 material.fluix=Fluix
 material.fluix_steel=Fluix Steel
@@ -119,8 +123,26 @@ item.contenttweaker.emc_widget_1.name=Minor Alchemical Construct
 
 fluid.emc_fluid=Liquid EMC
 
+item.contenttweaker.crystal_seed_red.name=Red Crystal Catalyst
+item.contenttweaker.crystal_seed_blue.name=Blue Crystal Catalyst
+item.contenttweaker.crystal_seed_green.name=Green Crystal Catalyst
+item.contenttweaker.crystal_seed_cyan.name=Cyan Crystal Catalyst
+item.contenttweaker.crystal_seed_magenta.name=Magenta Crystal Catalyst
+item.contenttweaker.crystal_seed_yellow.name=Yellow Crystal Catalyst
+item.contenttweaker.crystal_seed_white.name=White Crystal Catalyst
 
+item.contenttweaker.crystal_shard_magenta.name=Magenta Crystal Shard
+item.contenttweaker.crystal_shard_yellow.name=Yellow Crystal Shard
 
+item.contenttweaker.glod_crystal.name=Glod Crystal
+item.contenttweaker.empowered_glod_crystal.name=Empowered Glod Crystal
+tile.contenttweaker.glod_crystal_block.name=Glod Crystal Block
+tile.contenttweaker.empowered_glod_crystal_block.name=Empowered Glod Crystal Block
+
+item.contenttweaker.quinturple_crystal.name=Quinturple Crystal
+item.contenttweaker.empowered_quinturple_crystal.name=Empowered Quinturple Crystal
+tile.contenttweaker.quinturple_crystal_block.name=Quinturple Crystal Block
+tile.contenttweaker.empowered_quinturple_crystal_block.name=Empowered Quinturple Crystal Block
 
 item.contenttweaker.emitter_ulv.name=ULV Emitter
 
@@ -164,8 +186,44 @@ tile.contenttweaker.crystal_cluster_green_5.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_6.name=Growing Green Crystal Cluster
 tile.contenttweaker.crystal_cluster_green_7.name=Growing Green Crystal Cluster
 
+tile.contenttweaker.crystal_cluster_cyan_1.name=Growing Cyan Crystal Cluster
+tile.contenttweaker.crystal_cluster_cyan_2.name=Growing Cyan Crystal Cluster
+tile.contenttweaker.crystal_cluster_cyan_3.name=Growing Cyan Crystal Cluster
+tile.contenttweaker.crystal_cluster_cyan_4.name=Growing Cyan Crystal Cluster
+tile.contenttweaker.crystal_cluster_cyan_5.name=Growing Cyan Crystal Cluster
+tile.contenttweaker.crystal_cluster_cyan_6.name=Growing Cyan Crystal Cluster
+tile.contenttweaker.crystal_cluster_cyan_7.name=Growing Cyan Crystal Cluster
+
+tile.contenttweaker.crystal_cluster_magenta_1.name=Growing Magenta Crystal Cluster
+tile.contenttweaker.crystal_cluster_magenta_2.name=Growing Magenta Crystal Cluster
+tile.contenttweaker.crystal_cluster_magenta_3.name=Growing Magenta Crystal Cluster
+tile.contenttweaker.crystal_cluster_magenta_4.name=Growing Magenta Crystal Cluster
+tile.contenttweaker.crystal_cluster_magenta_5.name=Growing Magenta Crystal Cluster
+tile.contenttweaker.crystal_cluster_magenta_6.name=Growing Magenta Crystal Cluster
+tile.contenttweaker.crystal_cluster_magenta_7.name=Growing Magenta Crystal Cluster
+tile.contenttweaker.crystal_cluster_magenta_8.name=Magenta Crystal Cluster
+
+tile.contenttweaker.crystal_cluster_yellow_1.name=Growing Yellow Crystal Cluster
+tile.contenttweaker.crystal_cluster_yellow_2.name=Growing Yellow Crystal Cluster
+tile.contenttweaker.crystal_cluster_yellow_3.name=Growing Yellow Crystal Cluster
+tile.contenttweaker.crystal_cluster_yellow_4.name=Growing Yellow Crystal Cluster
+tile.contenttweaker.crystal_cluster_yellow_5.name=Growing Yellow Crystal Cluster
+tile.contenttweaker.crystal_cluster_yellow_6.name=Growing Yellow Crystal Cluster
+tile.contenttweaker.crystal_cluster_yellow_7.name=Growing Yellow Crystal Cluster
+tile.contenttweaker.crystal_cluster_yellow_8.name=Yellow Crystal Cluster
+
+tile.contenttweaker.crystal_cluster_white_1.name=Growing White Crystal Cluster
+tile.contenttweaker.crystal_cluster_white_2.name=Growing White Crystal Cluster
+tile.contenttweaker.crystal_cluster_white_3.name=Growing White Crystal Cluster
+tile.contenttweaker.crystal_cluster_white_4.name=Growing White Crystal Cluster
+tile.contenttweaker.crystal_cluster_white_5.name=Growing White Crystal Cluster
+tile.contenttweaker.crystal_cluster_white_6.name=Growing White Crystal Cluster
+tile.contenttweaker.crystal_cluster_white_7.name=Growing White Crystal Cluster
+
 tile.contenttweaker.perfect_sample_ruby.name=Perfected Crystal of Ruby
 tile.contenttweaker.reaction_chamber.name=Reaction Chamber
+
+tile.contenttweaker.crystal_core.name=Crystal Core
 
 tile.contenttweaker.vent_clean.name=Exhaust Vent
 tile.contenttweaker.vent_very_clean.name=Silver Exhaust Vent

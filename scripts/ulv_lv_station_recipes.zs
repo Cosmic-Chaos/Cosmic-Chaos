@@ -736,11 +736,20 @@ recipes.addShapeless(<metaitem:dustBlueAlloy>*2, [<ore:dustSilver>,<ore:dustSilv
 // GC Alloy Dust
 recipes.addShapeless(<metaitem:dustGreenCrystalAlloy> * 5, [<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustCrudeSteel>,<metaitem:dustGreenCrystal>]);
 
+recipes.addShapeless(<contenttweaker:crystal_seed_red>, [<projecte:item.pe_philosophers_stone>.reuse(), <ore:gemRedCrystal>, <ore:gemRedCrystal>, <ore:gemRedCrystal>, <ore:gemRedCrystal>, <ore:gemRedCrystal>, <ore:gemRedCrystal>]);
+recipes.addShapeless(<contenttweaker:crystal_seed_green>, [<projecte:item.pe_philosophers_stone>.reuse(), <ore:gemGreenCrystal>, <ore:gemGreenCrystal>, <ore:gemGreenCrystal>, <ore:gemGreenCrystal>, <ore:gemGreenCrystal>, <ore:gemGreenCrystal>]);
+recipes.addShapeless(<contenttweaker:crystal_seed_blue>, [<projecte:item.pe_philosophers_stone>.reuse(), <ore:gemBlueCrystal>, <ore:gemBlueCrystal>, <ore:gemBlueCrystal>, <ore:gemBlueCrystal>, <ore:gemBlueCrystal>, <ore:gemBlueCrystal>]);
+recipes.addShapeless(<contenttweaker:crystal_seed_cyan>, [<projecte:item.pe_philosophers_stone>.reuse(), <ore:gemGreenCrystal>, <ore:gemGreenCrystal>, <ore:gemGreenCrystal>, <ore:gemBlueCrystal>, <ore:gemBlueCrystal>, <ore:gemBlueCrystal>]);
+recipes.addShapeless(<contenttweaker:crystal_seed_magenta>, [<projecte:item.pe_philosophers_stone>.reuse(), <ore:gemRedCrystal>, <ore:gemRedCrystal>, <ore:gemRedCrystal>, <ore:gemBlueCrystal>, <ore:gemBlueCrystal>, <ore:gemBlueCrystal>]);
+recipes.addShapeless(<contenttweaker:crystal_seed_yellow>, [<projecte:item.pe_philosophers_stone>.reuse(), <ore:gemRedCrystal>, <ore:gemRedCrystal>, <ore:gemRedCrystal>, <ore:gemGreenCrystal>, <ore:gemGreenCrystal>, <ore:gemGreenCrystal>]);
+recipes.addShapeless(<contenttweaker:crystal_seed_white>, [<projecte:item.pe_philosophers_stone>.reuse(), <ore:gemRedCrystal>, <ore:gemRedCrystal>, <ore:gemGreenCrystal>, <ore:gemGreenCrystal>, <ore:gemBlueCrystal>, <ore:gemBlueCrystal>]);
+
 // GC Glass Dust
 recipes.addShapeless(<contenttweaker:dust_crystal_green_glass> * 2, [<metaitem:dustGlass>,<metaitem:dustGreenCrystal>]);
 
 // PC Glass Dust
 recipes.addShapeless(<contenttweaker:dust_crystal_purple_glass> * 2, [<metaitem:dustGlass>,<metaitem:dustGlass>,<metaitem:dustRedCrystal>,<metaitem:dustBlueCrystal>]);
+recipes.addShapeless(<contenttweaker:dust_crystal_purple_glass> * 2, [<metaitem:dustGlass>,<metaitem:dustGlass>,<metaitem:dustMagentaCrystal>,<metaitem:dustMagentaCrystal>]);
 /*
 //Crystal Glass
 furnace.addRecipe(<cosmic_core:crystal_green_glass>, <contenttweaker:dust_crystal_green_glass>, 0.0);

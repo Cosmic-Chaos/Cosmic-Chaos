@@ -6,5 +6,7 @@ Carving.addVariation("honeycomb", <erebus:honey_comb>);
 Carving.addVariation("honeycomb", <harvestcraft:honeycomb>);
 Carving.addVariation("honeycomb", <futuremc:honeycomb_block>);
 
-Carving.removeVariation("glassdyedlightgray", <chisel:glassdyedlightgray:3>);
+Carving.addGroup("ebonite");
+Carving.addVariation("ebonite", <midnight:ebonys_block>);
+Carving.addVariation("ebonite", <metaitem:blockEbony>);
 

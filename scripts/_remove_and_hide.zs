@@ -300,6 +300,34 @@ val itemstoRemoveAndHide =
 <contenttweaker:crystal_cluster_red_5>,
 <contenttweaker:crystal_cluster_red_6>,
 <contenttweaker:crystal_cluster_red_7>,
+<contenttweaker:crystal_cluster_cyan_1>,
+<contenttweaker:crystal_cluster_cyan_2>,
+<contenttweaker:crystal_cluster_cyan_3>,
+<contenttweaker:crystal_cluster_cyan_4>,
+<contenttweaker:crystal_cluster_cyan_5>,
+<contenttweaker:crystal_cluster_cyan_6>,
+<contenttweaker:crystal_cluster_cyan_7>,
+<contenttweaker:crystal_cluster_magenta_1>,
+<contenttweaker:crystal_cluster_magenta_2>,
+<contenttweaker:crystal_cluster_magenta_3>,
+<contenttweaker:crystal_cluster_magenta_4>,
+<contenttweaker:crystal_cluster_magenta_5>,
+<contenttweaker:crystal_cluster_magenta_6>,
+<contenttweaker:crystal_cluster_magenta_7>,
+<contenttweaker:crystal_cluster_yellow_1>,
+<contenttweaker:crystal_cluster_yellow_2>,
+<contenttweaker:crystal_cluster_yellow_3>,
+<contenttweaker:crystal_cluster_yellow_4>,
+<contenttweaker:crystal_cluster_yellow_5>,
+<contenttweaker:crystal_cluster_yellow_6>,
+<contenttweaker:crystal_cluster_yellow_7>,
+<contenttweaker:crystal_cluster_white_1>,
+<contenttweaker:crystal_cluster_white_2>,
+<contenttweaker:crystal_cluster_white_3>,
+<contenttweaker:crystal_cluster_white_4>,
+<contenttweaker:crystal_cluster_white_5>,
+<contenttweaker:crystal_cluster_white_6>,
+<contenttweaker:crystal_cluster_white_7>,
 ]
  as IItemStack[];
 
@@ -366,6 +394,7 @@ var name_removals = [
     "advancedrocketry:engine",
     "advancedrocketry:blockfueltank",
     "advancedrocketry:planetidchip",
+    "midnight:ebonys_block",
 ] as string[];
 
 for item in name_removals {
