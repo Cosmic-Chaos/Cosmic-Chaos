@@ -1,5 +1,4 @@
 {
-  "build:8": "4.0.1",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -1177,6 +1176,12 @@
               "Damage:2": 32104,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:mold_rod"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -5497,7 +5502,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Recommended to automate §aBiomass§r using the §9NASA Slow Cooker§r before starting this machine, so you don\u0027t have to worry about power.\n\nAs you run this, you\u0027ll need to keep the Crystal Glass free from contaminants by scraping clean any §aBio Covered Glass§r that shows up. \n\nThe §aBio-Goo§r collected this way is quite useful.\n\nIf the Glass is replaced with §dPurple Crystal Glass§r, it will not need cleaning.",
+          "desc:8": "Recommended to automate §aBiomass§r using the §9NASA Slow Cooker§r before starting this machine, so you don\u0027t have to worry about power.\n\nAs you run this, you\u0027ll need to keep the Crystal Glass free from contaminants by scraping clean with a Knife any §aBio Covered Glass§r that shows up. \n\nThe §aBio-Goo§r collected this way is quite useful.\n\nIf the Glass is replaced with §dPurple Crystal Glass§r, it will not need cleaning.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
