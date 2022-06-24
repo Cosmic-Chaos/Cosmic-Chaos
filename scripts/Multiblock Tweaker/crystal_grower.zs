@@ -133,7 +133,7 @@ crystal_grower.recipeMap.recipeBuilder()
 crystal_grower.recipeMap.recipeBuilder()
 	.notConsumable(<contenttweaker:crystal_seed_yellow>)
 	.inputs(<ore:dustTinyRedCrystal>, <ore:dustTinyGreenCrystal>)
-	.chancedOutput(<ore:gemBlueCrystal>.firstItem.withTag({display:{Lore:["Grows a Yellow Crystal on the crystal core by two stages"]}}), 2500, 0)
+	.chancedOutput(<ore:gemYellowCrystal>.firstItem.withTag({display:{Lore:["Grows a Yellow Crystal on the crystal core by two stages"]}}), 2500, 0)
 	.duration(40).EUt(6).buildAndRegister();
 
 crystal_grower.recipeMap.recipeBuilder()
