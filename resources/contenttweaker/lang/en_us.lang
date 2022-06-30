@@ -224,6 +224,7 @@ tile.contenttweaker.perfect_sample_ruby.name=Perfected Crystal of Ruby
 tile.contenttweaker.reaction_chamber.name=Reaction Chamber
 
 tile.contenttweaker.crystal_core.name=Crystal Core
+tile.contenttweaker.space_crate.name=Dusty Crate
 
 tile.contenttweaker.vent_clean.name=Exhaust Vent
 tile.contenttweaker.vent_very_clean.name=Silver Exhaust Vent
