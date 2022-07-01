@@ -421,7 +421,18 @@ var aurorian_steel = MaterialBuilder(32066, "aurorian_steel")
     .build();
 ingotPrefix.setIgnored(<material:aurorian_steel>);
 
+var mixed_moonwater_salts = MaterialBuilder(32067, "mixed_moonwater_salts")
+    .dust()
+    .color(0xddddee)
+    .iconSet("shiny")
+    .build();
 
+var gallium_trichloride = MaterialBuilder(32068, "gallium_trichloride")
+    .dust()
+    .color(0x888899)
+    .iconSet("shiny")
+    .components([<material:gallium> * 1, <material:chlorine> * 3])
+    .build();
 /////////////////////////////////////////////////////////
 ///////////////       The Midnight      /////////////////
 /////////////////////////////////////////////////////////
