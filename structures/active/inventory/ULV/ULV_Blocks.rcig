@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "ULV_Blocks",
+  "items": [
+    {
+      "weight": 1,
+      "min": 1,
+      "max": 48,
+      "item": {
+        "id": "chisel:laboratory",
+        "damage": 5,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2,
+      "min": 1,
+      "max": 48,
+      "item": {
+        "id": "chisel:laboratory",
+        "damage": 11,
+        "count": 1
+      }
+    },
+    {
+      "weight": 6,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "chisel:factory",
+        "damage": 9,
+        "count": 1
+      }
+    },
+    {
+      "weight": 6,
+      "min": 1,
+      "max": 33,
+      "item": {
+        "id": "chisel:technical",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 6,
+      "min": 1,
+      "max": 64,
+      "item": {
+        "id": "chisel:technicalnew",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2,
+      "min": 1,
+      "max": 20,
+      "item": {
+        "id": "advancedrocketry:circlelight",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5,
+      "min": 1,
+      "max": 20,
+      "item": {
+        "id": "chisel:laboratory",
+        "damage": 15,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

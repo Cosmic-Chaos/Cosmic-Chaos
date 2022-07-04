@@ -1,0 +1,177 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "ULV_Parts",
+  "items": [
+    {
+      "weight": 2,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "cosmic_core:cc_meta_item",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "ulv_covers:ulv_cover_meta_item",
+        "damage": 2,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2.0,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "ulv_covers:ulv_cover_meta_item",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "cosmic_core:cc_meta_item",
+        "damage": 3,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "devtech:meta_item",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 8.0,
+      "min": 5,
+      "max": 10,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 516,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 6,
+      "item": {
+        "id": "gregtech:machine_casing",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 985,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1,
+      "min": 4,
+      "max": 11,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 335,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 2,
+      "max": 16,
+      "item": {
+        "id": "contenttweaker:station_casing",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 2,
+      "max": 4,
+      "item": {
+        "id": "gregtech:machine",
+        "damage": 1626,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2,
+      "min": 3,
+      "max": 13,
+      "item": {
+        "id": "cosmic_core:cc_meta_item",
+        "damage": 100,
+        "count": 1
+      }
+    },
+    {
+      "weight": 4.0,
+      "min": 2,
+      "max": 18,
+      "item": {
+        "id": "cosmic_core:cc_meta_item",
+        "damage": 101,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1,
+      "min": 3,
+      "max": 16,
+      "item": {
+        "id": "cosmic_core:cc_meta_item",
+        "damage": 102,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "cosmic_core:cc_meta_item",
+        "damage": 103,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2,
+      "min": 8,
+      "max": 10,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 519,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2,
+      "min": 1,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_item_1",
+        "damage": 381,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}

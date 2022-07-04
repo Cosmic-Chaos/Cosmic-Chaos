@@ -278,6 +278,14 @@ empowered_quinturple_crystal_block.setToolLevel(2);
 empowered_quinturple_crystal_block.setBlockSoundType(<soundtype:metal>);
 empowered_quinturple_crystal_block.register();
 
+
+var space_crate = VanillaFactory.createBlock("space_crate", <blockmaterial:iron>);
+space_crate.setBlockHardness(1);
+space_crate.setBlockResistance(2);
+space_crate.setToolClass("pickaxe");
+space_crate.setToolLevel(1);
+space_crate.setBlockSoundType(<soundtype:metal>);
+space_crate.register();
 ///////////////////////////////////////////////////////////
 //////////////////////    Crystals    /////////////////////
 ///////////////////////////////////////////////////////////
@@ -348,7 +356,7 @@ for colorName in crystalColorMap {
 		crystalCluster.setBlockSoundType(<soundtype:glass>);
 		crystalCluster.setFullBlock(false);
 		crystalCluster.setTranslucent(true);
-		crystalCluster.setBlockLayer("TRANSLUCENT"); //CUTOUT_MIPPED
+		crystalCluster.setBlockLayer("TRANSLUCENT");
 		crystalCluster.setEntitySpawnable(false);
 		crystalCluster.blockColorSupplier = crystalClusterColorBlock;
 		crystalCluster.itemColorSupplier = crystalClusterColorItem;
@@ -365,7 +373,7 @@ for colorName in (["magenta", "yellow"] as string[]) {
 	crystalCluster.setBlockSoundType(<soundtype:glass>);
 	crystalCluster.setFullBlock(false);
 	crystalCluster.setTranslucent(true);
-	crystalCluster.setBlockLayer("TRANSLUCENT"); //CUTOUT_MIPPED
+	crystalCluster.setBlockLayer("TRANSLUCENT");
 	crystalCluster.setEntitySpawnable(false);
 	crystalCluster.blockColorSupplier = blockColor(colorHex);
 	crystalCluster.itemColorSupplier = itemColor(colorHex);

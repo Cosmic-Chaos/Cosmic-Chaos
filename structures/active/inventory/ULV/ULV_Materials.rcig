@@ -1,0 +1,217 @@
+{
+  "version": 2,
+  "inventoryGeneratorID": "ULV_Materials",
+  "items": [
+    {
+      "weight": 2,
+      "min": 18,
+      "max": 32,
+      "item": {
+        "id": "minecraft:redstone",
+        "damage": 0,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1,
+      "min": 8,
+      "max": 17,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 2517,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8,
+      "min": 11,
+      "max": 21,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 2517,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5,
+      "min": 5,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 32151,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1,
+      "min": 6,
+      "max": 13,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 32151,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1,
+      "min": 7,
+      "max": 14,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 100,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5,
+      "min": 16,
+      "max": 28,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 32002,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "item": {
+        "id": "gregtech:meta_block_compressed_66",
+        "damage": 12,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5,
+      "min": 12,
+      "max": 20,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 55,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.8,
+      "min": 4,
+      "max": 8,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 2000,
+        "count": 1
+      }
+    },
+    {
+      "weight": 2,
+      "min": 5,
+      "max": 34,
+      "item": {
+        "id": "gregtech:meta_ingot",
+        "damage": 335,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5,
+      "min": 2,
+      "max": 11,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 335,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1,
+      "min": 4,
+      "max": 13,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 51,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 4,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 51,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 2,
+      "max": 6,
+      "item": {
+        "id": "gregtech:meta_screw",
+        "damage": 51,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1,
+      "min": 8,
+      "max": 22,
+      "item": {
+        "id": "gregtech:meta_plate",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 4,
+      "max": 16,
+      "item": {
+        "id": "gregtech:meta_stick",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1.0,
+      "min": 5,
+      "max": 10,
+      "item": {
+        "id": "gregtech:wire_single",
+        "damage": 112,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5,
+      "min": 8,
+      "max": 25,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 112,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5,
+      "min": 8,
+      "max": 26,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 25,
+        "count": 1
+      }
+    },
+    {
+      "weight": 1,
+      "min": 8,
+      "max": 25,
+      "item": {
+        "id": "gregtech:meta_dust",
+        "damage": 51,
+        "count": 1
+      }
+    }
+  ],
+  "dependencyExpression": ""
+}
