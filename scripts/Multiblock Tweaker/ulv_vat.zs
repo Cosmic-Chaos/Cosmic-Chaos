@@ -139,8 +139,8 @@ craft.remake(<metaitem:mbt:ulv_vat>, ["pretty",
   "U ⌂ U",
   "¤ N ¤"], {
   "l": <metaitem:circuit.vacuum_tube>,                # Vacuum Tube
-  "L": <cosmic_core:cc_meta_item:1>,    # ULV Electric Pump
-  "U": <cosmic_core:cc_meta_item:2>,    # ULV Electric Motor
+  "L": <metaitem:electric.pump.ulv>,    # ULV Electric Pump
+  "U": <metaitem:electric.motor.ulv>,    # ULV Electric Motor
   "⌂": <contenttweaker:station_casing>, # Derelict Casing
   "¤": <ore:gearPotin>,                 # Potin Gear
   "N": <contenttweaker:vat_print>,      # NASA Slow Cooker Blueprint

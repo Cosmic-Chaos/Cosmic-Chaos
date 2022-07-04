@@ -2,6 +2,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import mods.industrialforegoing.SludgeRefiner;
 import crafttweaker.oredict.IOreDictEntry;
+import mods.initialinventory.InvHandler;
 
 print("==================== loading ulv_lv_station_recipes.zs ====================");
 ##########################################################################################
@@ -135,23 +136,44 @@ format.white
 <contenttweaker:test_planet_2>.addShiftTooltip(format.white("- Biome(s): ")+(format.yellow("Desert, "))+(format.gray("Wasteland")));
 <contenttweaker:test_planet_2>.addShiftTooltip(format.white("- Mining Robots: ")+(format.green("[3,840/4000]")));
 <contenttweaker:test_planet_2>.addShiftTooltip(format.white("- Railgun: ")+(format.green("Yes")));
+
+
+
+
+##=======================================================
+## Starting Stuff
+##=======================================================
+
+val startingGear =
+[
+  <advancedrocketry:spacehelmet>,
+  <advancedrocketry:spacechestplate>.withTag({slotInsert: [1, 1, 1, 1, 1, 1] as byte[] as byte[], size: 6, slotExtract: [1, 1, 1, 1, 1, 1] as byte[] as byte[], outputItems: [{Slot: 0 as byte, id: "advancedrocketry:pressuretank", Count: 1 as byte, tag: {Fluid: {FluidName: "oxygen", Amount: 990}}, Damage: 0 as short}]}),
+  <advancedrocketry:spaceleggings>,
+  <advancedrocketry:spaceboots>,
+]
+ as IItemStack[];
+
+for item in startingGear {
+	InvHandler.addStartingItem(item);
+}
+
 ##=======================================================
 ## ADD RECIPES
 ##=======================================================
 
 //Busses because no wood
-recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<ironchest:iron_chest:*>|<metaitem:crate.bronze>]]);
-recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<ironchest:iron_chest:*>|<metaitem:crate.bronze>],[<metaitem:hull.ulv>]]);
+recipes.addShaped(<metaitem:item_bus.export.ulv>, [[<metaitem:hull.ulv>], [<metaitem:crate.bronze>|<metaitem:crate.steel>]]);
+recipes.addShaped(<metaitem:item_bus.import.ulv>, [[<metaitem:crate.bronze>|<metaitem:crate.steel>],[<metaitem:hull.ulv>]]);
 //LV Busses
-recipes.addShaped(<metaitem:item_bus.export.lv>, [[<metaitem:hull.lv>], [<ironchest:iron_chest:*>|<metaitem:crate.bronze>]]);
-recipes.addShaped(<metaitem:item_bus.import.lv>, [[<ironchest:iron_chest:*>|<metaitem:crate.bronze>],[<metaitem:hull.lv>]]);
+recipes.addShaped(<metaitem:item_bus.export.lv>, [[<metaitem:hull.lv>], [<metaitem:crate.bronze>|<metaitem:crate.steel>]]);
+recipes.addShaped(<metaitem:item_bus.import.lv>, [[<metaitem:crate.bronze>|<metaitem:crate.steel>],[<metaitem:hull.lv>]]);
 
 # [Ultra Low Voltage 4x Battery Buffer] from [ULV Machine Hull][+2]
 craft.make(<metaitem:battery_buffer.ulv.4>, ["pretty",
   "G I G",
   "G U G"], {
   "G": <ore:wireGtQuadrupleLead>, # 4x Lead Wire
-  "I": <ironchest:iron_chest:*>|<metaitem:crate.bronze>,    # Iron Chest
+  "I": <metaitem:crate.bronze>|<metaitem:crate.steel>,    # Iron Chest
   "U": <metaitem:hull.ulv>,    # ULV Machine Hull
 });
 
