@@ -62,6 +62,9 @@ material.sky_stone=Sky Stone
 material.limestone_atum=Atum Limestone
 material.stone_aurorian=Aurorian Stone
 
+material.gallium_trichloride=Gallium Trichloride
+material.mixed_moonwater_salts=Mixed Moonwater Salts
+
 item.material.oreprefix.oreSkyStone=Alchemical %s Ore
 item.material.oreprefix.oreAurorianStone=%s Ore
 item.material.oreprefix.oreBetweenStone=%s Ore
