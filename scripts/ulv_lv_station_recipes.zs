@@ -235,7 +235,7 @@ craft.remake(<metaitem:workbench>, ["pretty",
   "E": <minecraft:book>, # Book
   "P": <metaitem:station.component.3>, # Primitive Crafting Interface
   "r": <metaitem:station.component.2>, # Primitive Mixed Plating
-  "S": <ironchest:iron_chest:*>|<metaitem:crate.bronze>,              # Silver Chest
+  "S": <metaitem:crate.bronze>|<metaitem:crate.steel>,              # Silver Chest
 });
 
 
