@@ -103,7 +103,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<ore:wireGtDoubleGreenCrystalAlloy>*4, # 2x Green Crystal Alloy Wire
 		<ore:stickIronMagnetic>*2,             # Magnetic Iron Rod
 //		<metaitem:hull.plate.3>,       # Fancy Hull Plate
-		<gregtech:machine:986>,               # LV Machine Hull
+		<metaitem:hull.lv>,               # LV Machine Hull
 		<ore:cableGtDoubleTin>               # 2x Tin Cable
 	)
 	.outputs(<gregtech:machine:545>)
@@ -112,10 +112,10 @@ ulv_assembler.recipeMap.recipeBuilder()
 # [Basic Compressor] from [Heavy Hull Plate][+5]
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
-		<cosmic_core:cc_meta_item:3>*4,   # ULV Electric Piston
+		<metaitem:electric.piston.ulv>*4,   # ULV Electric Piston
 		<ore:circuitLv>*2,                # Electronic Circuit
 //		<metaitem:hull.plate.3>, # Fancy Hull Plate
-		<gregtech:machine:986>,         # LV Machine Hull
+		<metaitem:hull.lv>,         # LV Machine Hull
 		<ore:cableGtDoubleTin>         # 2x Tin Cable
 //		<metaitem:hull.plate.0> # Heavy Hull Plate
 	)
@@ -128,7 +128,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<cosmic_core:cc_meta_item>*4,     # ULV Conveyor Module
 		<ore:circuitLv>*2,                # Electronic Circuit
 //		<metaitem:hull.plate.3>, # Fancy Hull Plate
-		<gregtech:machine:986>,         # LV Machine Hull
+		<metaitem:hull.lv>,         # LV Machine Hull
 		<ore:cableGtDoubleTin>         # 2x Tin Cable
 	)
 	.outputs(<gregtech:machine:620>)
@@ -140,7 +140,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<ore:circuitLv>*4,                    # Electronic Circuit
 		<ore:wireGtOctalGreenCrystalAlloy>*2|<metaitem:cableGtOctalRedAlloy>*2, # 8x Green Crystal Alloy Wire
 //		<metaitem:hull.plate.3>,     # Fancy Hull Plate
-		<gregtech:machine:986>*2,             # LV Machine Hull
+		<metaitem:hull.lv>*2,             # LV Machine Hull
 		<ore:cableGtQuadrupleTin>          # 4x Tin Cable
 	)
 	.outputs(<gregtech:machine:80>)
@@ -150,9 +150,9 @@ ulv_assembler.recipeMap.recipeBuilder()
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:circuitLv>*3,                # Electronic Circuit
-		<cosmic_core:cc_meta_item:3>*2,   # ULV Electric Piston
+		<metaitem:electric.piston.ulv>*2,   # ULV Electric Piston
 //		<metaitem:hull.plate.3>, # Fancy Hull Plate
-		<gregtech:machine:986>,         # LV Machine Hull
+		<metaitem:hull.lv>,         # LV Machine Hull
 		<ore:cableGtQuadrupleTin>      # 4x Tin Cable
 //		<ore:gemRedCrystalAlloy>,       # Fire Gem
 //		<metaitem:internal.components.1>   # Complex Internals
@@ -246,10 +246,10 @@ ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
 		<ore:cableGtSingleGreenCrystalAlloy>|<metaitem:cableGtSingleRedAlloy>, # 1x Green Crystal Alloy Cable
 		<ore:plateRubber>,           # Rubber Sheet
-		<cosmic_core:cc_meta_item:2>,         # ULV Electric Motor
+		<metaitem:electric.motor.ulv>,         # ULV Electric Motor
 		<ore:plateBronze>                   # Bronze Plate
 	)
-	.outputs(<cosmic_core:cc_meta_item:0>)
+	.outputs(<metaitem:conveyor.module.ulv>)
 .duration(200).EUt(4).buildAndRegister();
 
 # [ULV Electric Pump] from [Rubber Ring][+3]
@@ -260,7 +260,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<ore:rotorBronze>,                    # Bronze Rotor
 		<ore:screwBronze>                   # Bronze Screw
 	)
-	.outputs(<cosmic_core:cc_meta_item:1>)
+	.outputs(<metaitem:electric.pump.ulv>)
 .duration(200).EUt(4).buildAndRegister();
 
 # [ULV Electric Motor] from [Magnetic Iron Rod][+2]
@@ -270,13 +270,13 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<ore:stickIronMagnetic>,       # Magnetic Iron Rod
 		<ore:stickIron>              # Iron Rod
 	)
-	.outputs(<cosmic_core:cc_meta_item:2>)
+	.outputs(<metaitem:electric.motor.ulv>)
 .duration(200).EUt(4).buildAndRegister();
 
 # [ULV Electric Piston] from [Bronze Rod][+1]
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
-		<cosmic_core:cc_meta_item:2>, # ULV Electric Motor
+		<metaitem:electric.motor.ulv>, # ULV Electric Motor
 		<ore:plateBronze>,     # Bronze Plate
 		<ore:gearSmallBronze>, # Small Bronze Gear
 		<ore:stickBronze>     # Bronze Rod
