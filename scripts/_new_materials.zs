@@ -695,7 +695,77 @@ var emc_minor = MaterialBuilder(32200, "emc_minor")
     .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .build();
 
+var miasma_tar = MaterialBuilder(32201, "miasma_tar")
+    .fluid("fluid", false)
+    .color(0x59087f)
+    .iconSet("SHINY")
+    .build();
 
+var miasma_heavy = MaterialBuilder(32202, "miasma_heavy")
+    .fluid("fluid", false)
+    .color(0x6e0d9b)
+    .iconSet("SHINY")
+    .build();
+
+var miasma_light = MaterialBuilder(32203, "miasma_light")
+    .fluid("fluid", false)
+    .color(0x8915bf)
+    .iconSet("SHINY")
+    .build();
+
+var miasma_heavy_filtered = MaterialBuilder(32204, "miasma_heavy_filtered")
+    .fluid("fluid", false)
+    .color(0x7d3b9b)
+    .iconSet("SHINY")
+    .build();
+
+var miasma_light_filtered = MaterialBuilder(32205, "miasma_light_filtered")
+    .fluid("fluid", false)
+    .color(0x9b4ebf)
+    .iconSet("SHINY")
+    .build();
+
+var lewisite = MaterialBuilder(32206, "lewisite")
+    .fluid("fluid", false)
+    .color(0xd5db8a)
+    .iconSet("FLUID")
+    .components([<material:arsenic> * 1, <material:chlorine> * 3, <material:hydrogen> * 2, <material:carbon> * 2])
+    .build();
+
+var trimethylgallium = MaterialBuilder(32207, "trimethylgallium")
+    .fluid("fluid", false)
+    .color(0xdbb58a)
+    .iconSet("FLUID")
+    .components([<material:hydrogen> * 9, <material:carbon> * 3, <material:gallium> * 1])
+    .build();
+
+var phosphorus_trifluoride = MaterialBuilder(32208, "phosphorus_trifluoride")
+    .fluid("gas", false)
+    .color(0xfcdcab)
+    .iconSet("FLUID")
+    .components([<material:phosphorus> * 1, <material:fluorine> * 3])
+    .build();
+
+var phosphorus_trichloride = MaterialBuilder(32209, "phosphorus_trichloride")
+    .fluid("gas", false)
+    .color(0xfce9ab)
+    .iconSet("FLUID")
+    .components([<material:phosphorus> * 1, <material:chlorine> * 3])
+    .build();
+
+var fluoroform = MaterialBuilder(32210, "fluoroform")
+    .fluid("gas", false)
+    .color(0xb5cc88)
+    .iconSet("FLUID")
+    .components([<material:fluorine> * 3, <material:carbon> * 1, <material:hydrogen> * 1])
+    .build();
+
+var sodium_arsenate = MaterialBuilder(32211, "sodium_arsenate")
+    .dust()
+    .color(0xcccccc)
+    .iconSet("DULL")
+    .components([<material:sodium> * 3, <material:arsenic> * 1, <material:oxygen> * 4])
+    .build();
 
 /////////////////////////////////////////////////////////
 ////////////       New Stone Types         //////////////

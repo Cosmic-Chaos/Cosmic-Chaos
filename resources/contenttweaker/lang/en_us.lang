@@ -65,6 +65,18 @@ material.stone_aurorian=Aurorian Stone
 material.gallium_trichloride=Gallium Trichloride
 material.mixed_moonwater_salts=Mixed Moonwater Salts
 
+material.miasma_tar=Miasma Tar
+material.miasma_heavy=Heavy Miasma Fraction
+material.miasma_light=Light Miasma Fraction
+material.miasma_heavy_filtered=Filtered Heavy Miasma Fraction
+material.miasma_light_filtered=Filtered Light Miasma Fraction
+material.lewisite=Lewisite
+material.trimethylgallium=Trimethylgallium
+material.phosphorus_trifluoride=Phosphorus Trifluoride
+material.phosphorus_trichloride=Phosphorus Trichloride
+material.fluoroform=Fluoroform
+material.sodium_arsenate=Sodium Arsenate
+
 item.material.oreprefix.oreSkyStone=Alchemical %s Ore
 item.material.oreprefix.oreAurorianStone=%s Ore
 item.material.oreprefix.oreBetweenStone=%s Ore
