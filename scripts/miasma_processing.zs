@@ -10,7 +10,7 @@ print("==================== loading miasma_processing.zs ====================");
     .buildAndRegister();
 
 <recipemap:distillery>.recipeBuilder()
-    .circuit(0)
+    .circuit(1)
     .fluidInputs(<liquid:miasma> * 50)
     .fluidOutputs(<liquid:miasma_heavy> * 15)
     .EUt(30)
@@ -18,7 +18,7 @@ print("==================== loading miasma_processing.zs ====================");
     .buildAndRegister();
 
 <recipemap:distillery>.recipeBuilder()
-    .circuit(0)
+    .circuit(2)
     .fluidInputs(<liquid:miasma> * 50)
     .fluidOutputs(<liquid:miasma_light> * 15)
     .EUt(30)
