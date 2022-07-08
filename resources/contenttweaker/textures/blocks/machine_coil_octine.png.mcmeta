@@ -1,0 +1,14 @@
+{
+    "ctm": {
+        "ctm_version": 1,
+        "type": "CTM",
+        "layer": "CUTOUT",
+        "gregtech": true,
+        "textures": [
+            "contenttweaker:blocks/machine_coil_octine_ctm"
+        ],
+        "extra": {
+            "connect_inside": true
+        }
+    }
+}

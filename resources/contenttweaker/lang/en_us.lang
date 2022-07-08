@@ -241,6 +241,9 @@ tile.contenttweaker.reaction_chamber.name=Reaction Chamber
 tile.contenttweaker.crystal_core.name=Crystal Core
 tile.contenttweaker.space_crate.name=Dusty Crate
 
+
+tile.contenttweaker.machine_coil_octine.name=Octine Coil Block
+
 tile.contenttweaker.vent_clean.name=Exhaust Vent
 tile.contenttweaker.vent_very_clean.name=Silver Exhaust Vent
 tile.contenttweaker.vent_dirty_1.name=Exhaust Vent

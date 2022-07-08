@@ -380,6 +380,20 @@ for colorName in (["magenta", "yellow"] as string[]) {
 	crystalCluster.setDropHandler(crystalClusterDropHandler);
 	crystalCluster.register();
 }
-
+/*
+var coilOctineColorItem = (itemColor(0xff8c19));
+var coilOctineColorBlock = (blockColor(0xff8c19));
+*/
+var coilOctine = VanillaFactory.createBlock("machine_coil_octine", <blockmaterial:iron>);
+coilOctine.setLightOpacity(3);
+coilOctine.setLightValue(0);
+coilOctine.setBlockHardness(5.0);
+coilOctine.setBlockResistance(5.0);
+coilOctine.setToolClass("wrench");
+coilOctine.setToolLevel(2);
+coilOctine.setBlockSoundType(<soundtype:metal>);/*
+coilOctine.blockColorSupplier = coilOctineColorBlock;
+coilOctine.itemColorSupplier = coilOctineColorItem;*/
+coilOctine.register();
 ##########################################################################################
 print("==================== end of blocks.zs ====================");

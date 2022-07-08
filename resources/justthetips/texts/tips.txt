@@ -1,0 +1,5 @@
+A Screwdriver can be used for configuring covers
+A Soft Hammer can be used for disabling machines
+A Gregtech Crowbar can be used for removing covers
+A Wrench can be used for rotating machines, picking them up quickly, and connecting pipes
+A Wirecutter can be used for connecting and breaking wires
