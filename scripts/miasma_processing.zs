@@ -104,9 +104,11 @@ print("==================== loading miasma_processing.zs ====================");
 # Further processing
 # Lewisite -> Sodium Arsenate
 <recipemap:chemical_reactor>.recipeBuilder()
-    .inputs(<ore:dustSodiumHydroxide> * 3)
+    .inputs(<ore:dustSodiumHydroxide> * 6)
     .fluidInputs(<liquid:lewisite> * 1000)
-    .fluidOutputs(<liquid:ethylene> * 1000)
+    .fluidOutputs(<liquid:acetylene> * 1000)
+    # .fluidOutputs(<liquid:water> * 2000) # There's no space for this output, so it voids the water
+    .fluidOutputs(<liquid:hydrogen> * 2000)
     .outputs(<ore:dustSalt>.firstItem * 3)
     .outputs(<ore:dustSodiumArsenate>.firstItem)
     .EUt(30)
@@ -122,6 +124,16 @@ print("==================== loading miasma_processing.zs ====================");
     .fluidOutputs(<liquid:oxygen> * 4000)
     .EUt(30)
     .duration(400)
+    .buildAndRegister();
+
+# Acetylene -> Ethylene
+<recipemap:chemical_reactor>.recipeBuilder()
+    .inputs(<ore:dustTinySilver>)
+    .fluidInputs(<liquid:acetylene> * 1000)
+    .fluidInputs(<liquid:hydrogen> * 1000)
+    .fluidOutputs(<liquid:ethylene> * 1000)
+    .EUt(120)
+    .duration(20)
     .buildAndRegister();
 
 # Trimethylgallium -> Gallium
