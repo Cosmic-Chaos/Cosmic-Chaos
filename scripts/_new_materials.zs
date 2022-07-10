@@ -685,16 +685,19 @@ var white_crystal = MaterialBuilder(32159, "white_crystal")
     .build();
 gemPrefix.setIgnored(<material:white_crystal>);
 
-// Minor Manifested EMC
-var emc_minor = MaterialBuilder(32200, "emc_minor")
-    .fluid("fluid", true)
-    .ingot(1)
-    .color(0x261ba1)
-    .iconSet("SHINY")
-    .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
-    .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+
+// Asteroid Dust
+var asteroid_dust = MaterialBuilder(32160, "asteroid_dust")
+    .dust(1)
+    .color(0x949494)
+    .iconSet("sand")
     .build();
 
+
+
+/////////////////////////////////
+//////New Planet Processing//////
+/////////////////////////////////
 var miasma_tar = MaterialBuilder(32201, "miasma_tar")
     .fluid("fluid", false)
     .color(0x59087f)
@@ -767,6 +770,17 @@ var sodium_arsenate = MaterialBuilder(32211, "sodium_arsenate")
     .components([<material:sodium> * 3, <material:arsenic> * 1, <material:oxygen> * 4])
     .build();
 
+
+// Minor Manifested EMC
+var emc_minor = MaterialBuilder(32300, "emc_minor")
+    .fluid("fluid", true)
+    .ingot(1)
+    .color(0x261ba1)
+    .iconSet("SHINY")
+    .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
+    .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+    .build();
+
 /////////////////////////////////////////////////////////
 ////////////       New Stone Types         //////////////
 /////////////////////////////////////////////////////////
@@ -784,6 +798,12 @@ StoneType.create(18,"betweenstone","oreBetweenStone",<material:stone>,"thebetwee
 
 //Midnight Stone
 StoneType.create(19,"nightstone","oreNightStone",<material:stone>,"midnight:nightstone", null, true);
+
+//Asteroid Stone
+val oreAsteriodStone as OrePrefix = OrePrefix.registerOrePrefix("oreAsteriodStone", 1);
+oreAsteriodStone.addSecondaryMaterial(<material:asteroid_dust>);
+StoneType.create(20,"asteroid","oreAsteriodStone",<material:stone>,"contenttweaker:block_ore_asteroid", null, true);
+
 
 /*
 // Aurorian Stone

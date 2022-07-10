@@ -58,6 +58,9 @@ material.emc_minor=Minor Manifested EMC
 
 material.cave_root=Cave Root
 
+material.asteroid_dust=Asteroid
+item.material.oreprefix.oreAsteroidStone=%s Ore
+
 material.sky_stone=Sky Stone
 material.limestone_atum=Atum Limestone
 material.stone_aurorian=Aurorian Stone
@@ -240,6 +243,9 @@ tile.contenttweaker.reaction_chamber.name=Reaction Chamber
 
 tile.contenttweaker.crystal_core.name=Crystal Core
 tile.contenttweaker.space_crate.name=Dusty Crate
+
+tile.contenttweaker.block_dust_asteroid.name=Asteroid Dust
+tile.contenttweaker.block_rock_asteroid.name=Asteroid Rock
 
 
 tile.contenttweaker.machine_coil_octine.name=Octine Coil Block

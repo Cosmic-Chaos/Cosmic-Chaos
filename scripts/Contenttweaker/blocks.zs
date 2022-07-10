@@ -172,7 +172,7 @@ perfect_sample_ruby.setLightOpacity(0);
 perfect_sample_ruby.blockColorSupplier = perfect_sample_ruby_blockColor;
 perfect_sample_ruby.itemColorSupplier = perfect_sample_ruby_itemColor;
 perfect_sample_ruby.register();
-
+/*
 var caveRoots = VanillaFactory.createBlock("roots", <blockmaterial:vine>);
 caveRoots.passable = true;
 caveRoots.replaceable = true;
@@ -185,7 +185,7 @@ caveRoots.setDropHandler(function(drops, world, position, state, fortune) {
 caveRoots.blockSoundType = <soundtype:plant>;
 caveRoots.blockLayer = "CUTOUT_MIPPED";
 caveRoots.register();
-
+*/
 
 var sulfurClusterColorItem = (itemColor(0xfcdb03));
 var sulfurClusterColorBlock = (blockColor(0xfcdb03));
@@ -395,5 +395,29 @@ coilOctine.setBlockSoundType(<soundtype:metal>);/*
 coilOctine.blockColorSupplier = coilOctineColorBlock;
 coilOctine.itemColorSupplier = coilOctineColorItem;*/
 coilOctine.register();
+
+val dustAsteroid = VanillaFactory.createBlock("block_dust_asteroid", <blockmaterial:iron>);
+dustAsteroid.setBlockHardness(1.0);
+dustAsteroid.setBlockResistance(1.0);
+dustAsteroid.setToolClass("shovel");
+dustAsteroid.setToolLevel(0);
+dustAsteroid.setBlockSoundType(<soundtype:sand>);
+dustAsteroid.register();
+
+val rockAsteroid = VanillaFactory.createBlock("block_rock_asteroid", <blockmaterial:iron>);
+rockAsteroid.setBlockHardness(2.0);
+rockAsteroid.setBlockResistance(2.0);
+rockAsteroid.setToolClass("pickaxe");
+rockAsteroid.setToolLevel(0);
+rockAsteroid.setBlockSoundType(<soundtype:stone>);
+rockAsteroid.register();
+
+val oreAsteroid = VanillaFactory.createBlock("block_ore_asteroid", <blockmaterial:iron>);
+oreAsteroid.setBlockHardness(2.0);
+oreAsteroid.setBlockResistance(2.0);
+oreAsteroid.setToolClass("pickaxe");
+oreAsteroid.setToolLevel(0);
+oreAsteroid.setBlockSoundType(<soundtype:stone>);
+oreAsteroid.register();
 ##########################################################################################
 print("==================== end of blocks.zs ====================");
