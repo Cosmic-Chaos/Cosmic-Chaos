@@ -1,4 +1,5 @@
 {
+  "build:8": "4.0.2",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -31,71 +32,7 @@
         }
       },
       "questID:3": 0,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "advancedrocketry:spacehelmet"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "advancedrocketry:spacechestplate",
-              "tag:10": {
-                "outputItems:9": {
-                  "0:10": {
-                    "Count:1": 1,
-                    "Damage:2": 0,
-                    "Slot:1": 0,
-                    "id:8": "advancedrocketry:pressuretank",
-                    "tag:10": {
-                      "Fluid:10": {
-                        "Amount:3": 1000,
-                        "FluidName:8": "oxygen"
-                      }
-                    }
-                  }
-                },
-                "size:3": 6,
-                "slotExtract:7": [
-                  1,
-                  1,
-                  1,
-                  1,
-                  1,
-                  1
-                ],
-                "slotInsert:7": [
-                  1,
-                  1,
-                  1,
-                  1,
-                  1,
-                  1
-                ]
-              }
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "advancedrocketry:spaceleggings"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "advancedrocketry:spaceboots"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -565,7 +502,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Breaking Down",
+          "name:8": "Smashing!",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -4667,7 +4604,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Once you have the Generator back up and running, you\u0027ll be able to process materials much more efficiently and with less stress.\n\nYou might be able to find a few drums partially filled with some Bio Mass around the station to get you started.\n\n§6This produces 2 Amps of ULV power, so you will need at least a 2x cable of Red or Green Alloy Cable to transfer power from both Dynamos.",
+          "desc:8": "Once you have the Generator back up and running, you\u0027ll be able to process materials much more efficiently and with less stress.\n\nYou might be able to find a few drums partially filled with some Bio Mass around the station to get you started.\n\n§6This produces 2 Amps of ULV power, so you will need at least a 2x cable of Red or 1x Green Alloy Cable to transfer power from both Dynamos.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,

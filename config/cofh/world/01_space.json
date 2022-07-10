@@ -1,0 +1,66 @@
+{
+	"priority": 100,
+	"populate": {
+		"ore_asteroid": {
+			"distribution": "gaussian",
+			"generator":
+            [
+                {
+                "type": "geode",
+                "block": "contenttweaker:block_dust_asteroid",
+                "crust": "contenttweaker:block_dust_asteroid",
+                "hollow": true,
+				"block": [
+                    {
+                        "name": "contenttweaker:block_rock_asteroid",
+                        "weight": 20
+                    },
+                    {
+                        "name": "gregtech:ore_iron_1",
+                        "weight": 80,
+						"properties": {
+							"type": "asteroid"
+						},
+                    }
+				],
+				"material": "minecraft:air",
+				"cluster-size": 100
+			},
+            {
+                "type": "geode",
+                "block": "contenttweaker:block_dust_asteroid",
+                "crust": "contenttweaker:block_dust_asteroid",
+                "hollow": true,
+				"block": [
+                    {
+                        "name": "contenttweaker:block_rock_asteroid",
+                        "weight": 20
+                    },
+                    {
+                        "name": "gregtech:ore_copper_1",
+                        "weight": 80,
+						"properties": {
+							"type": "asteroid"
+						},
+                    }
+				],
+				"material": "minecraft:air",
+				"cluster-size": 100
+			}
+        ],
+
+			"cluster-count": 1,
+			"chunk-chance": 8,
+			"center-height": 100,
+			"spread": 80,
+			"retrogen": false,
+			"biome": "all",
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					33
+				]
+			}
+		}
+	}
+}
