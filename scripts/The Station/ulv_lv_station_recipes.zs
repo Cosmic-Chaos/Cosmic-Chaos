@@ -287,7 +287,7 @@ craft.remake(<industrialforegoing:sludge_refiner>, ["pretty",
   "G": <ore:wireGtSingleCopper>,            # 1x Copper Wire
   "L": <metaitem:hull.ulv>,              # LV Machine Hull
   "U": <metaitem:electric.motor.ulv>, # ULV Electric Motor
-  "S": <extrautils2:drum>,                  # Stone Drum
+  "S": <metaitem:drum.bronze>,                  # Bronze Drum
 });
 
 # [Redstone Gear] from [Red Alloy Plate][+1]

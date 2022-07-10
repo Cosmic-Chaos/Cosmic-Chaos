@@ -1,3 +1,4 @@
+import crafttweaker.item.IItemStack;
 
 print("==================== loading The Station/jei.zs ====================");
 ##########################################################################################
@@ -20,7 +21,6 @@ for item in itemstoRemove {
 }
 
 var name_removals = [
-    // Clay
     "gregtech:electric_motor_lv_iron",
 ] as string[];
 

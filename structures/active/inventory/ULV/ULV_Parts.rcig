@@ -7,8 +7,8 @@
       "min": 1,
       "max": 3,
       "item": {
-        "id": "cosmic_core:cc_meta_item",
-        "damage": 2,
+        "id": "ulv_covers:ulv_cover_meta_item",
+        "damage": 3,
         "count": 1
       }
     },
@@ -37,8 +37,18 @@
       "min": 1,
       "max": 3,
       "item": {
-        "id": "cosmic_core:cc_meta_item",
-        "damage": 3,
+        "id": "ulv_covers:ulv_cover_meta_item",
+        "damage": 1,
+        "count": 1
+      }
+    },
+    {
+      "weight": 0.5,
+      "min": 1,
+      "max": 3,
+      "item": {
+        "id": "ulv_covers:ulv_cover_meta_item",
+        "damage": 4,
         "count": 1
       }
     },

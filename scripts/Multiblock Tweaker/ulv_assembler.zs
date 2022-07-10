@@ -125,7 +125,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 # [Basic Wiremill] from [ULV Conveyor Module][+4]
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
-		<cosmic_core:cc_meta_item>*4,     # ULV Conveyor Module
+		<metaitem:conveyor.module.ulv>*4,     # ULV Conveyor Module
 		<ore:circuitLv>*2,                # Electronic Circuit
 //		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<metaitem:hull.lv>,         # LV Machine Hull
@@ -281,7 +281,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<ore:gearSmallBronze>, # Small Bronze Gear
 		<ore:stickBronze>     # Bronze Rod
 	)
-	.outputs(<cosmic_core:cc_meta_item:3>)
+	.outputs(<metaitem:electric.piston.ulv>)
 .duration(200).EUt(4).buildAndRegister();
 
 // Check correct dimension
