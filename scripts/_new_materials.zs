@@ -770,6 +770,13 @@ var sodium_arsenate = MaterialBuilder(32211, "sodium_arsenate")
     .components([<material:sodium> * 3, <material:arsenic> * 1, <material:oxygen> * 4])
     .build();
 
+var acetylene = MaterialBuilder(32212, "acetylene")
+    .fluid("gas", false)
+    .flags(["flammable", "disable_decomposition"])
+    .color(0xeeeeee)
+    .iconSet("FLUID")
+    .components([<material:carbon> * 2, <material:hydrogen> * 2])
+    .build();
 
 // Minor Manifested EMC
 var emc_minor = MaterialBuilder(32300, "emc_minor")
@@ -780,7 +787,6 @@ var emc_minor = MaterialBuilder(32300, "emc_minor")
     .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
     .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .build();
-
 /////////////////////////////////////////////////////////
 ////////////       New Stone Types         //////////////
 /////////////////////////////////////////////////////////
