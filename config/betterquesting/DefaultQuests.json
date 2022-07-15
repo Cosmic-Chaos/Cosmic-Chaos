@@ -1,5 +1,4 @@
 {
-  "build:8": "4.0.2",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -5967,7 +5966,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll probably want around 16 Launch Pads.",
+          "desc:8": "You\u0027ll probably want around 16 Launch Pads and 8 Towers.\n\n§dTemp Quest reward because you need 4 buckets to launch.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5990,7 +5989,20 @@
         }
       },
       "questID:3": 123,
-      "rewards:9": {},
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:fuel_catalyst"
+            }
+          }
+        }
+      },
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -6070,7 +6082,7 @@
               "id:8": "advancedrocketry:rocketmotor"
             },
             "1:10": {
-              "Count:3": 4,
+              "Count:3": 6,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "advancedrocketry:fueltank"
@@ -6094,7 +6106,7 @@
               "id:8": "advancedrocketry:planetidchip"
             },
             "5:10": {
-              "Count:3": 2,
+              "Count:3": 4,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "forge:bucketfilled",
@@ -6186,7 +6198,7 @@
             },
             "6:10": {
               "Count:3": 1,
-              "Damage:2": 1150,
+              "Damage:2": 1151,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -7045,7 +7057,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,

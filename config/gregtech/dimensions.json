@@ -11,6 +11,10 @@
     {
       "dimID": -1,
       "dimName": "Nether"
+    },
+    {
+      "dimID": 33,
+      "dimName": "Asteroid Field"
     }
   ]
 }

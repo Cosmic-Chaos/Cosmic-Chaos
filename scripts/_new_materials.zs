@@ -9,6 +9,8 @@ import mods.jei.JEI;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.ore.OrePrefix;
 import mods.gregtech.StoneType;
+import crafttweaker.block.IBlockStateMatcher;
+import crafttweaker.block.IBlockState;
 print("==================== loading new_materials.zs ====================");
 ##########################################################################################
 
@@ -693,6 +695,12 @@ var asteroid_dust = MaterialBuilder(32160, "asteroid_dust")
     .iconSet("sand")
     .build();
 
+// Heavy Asteroid Dust
+var heavy_asteroid_dust = MaterialBuilder(32161, "heavy_asteroid_dust")
+    .dust(1)
+    .color(0x595959)
+    .iconSet("sand")
+    .build();
 
 
 /////////////////////////////////
@@ -810,6 +818,7 @@ val oreAsteriodStone as OrePrefix = OrePrefix.registerOrePrefix("oreAsteriodSton
 oreAsteriodStone.addSecondaryMaterial(<material:asteroid_dust>);
 StoneType.create(20,"asteroid","oreAsteriodStone",<material:stone>,"contenttweaker:block_ore_asteroid", null, true);
 
+//<blockstate:contenttweaker:block_rock_asteroid>
 
 /*
 // Aurorian Stone

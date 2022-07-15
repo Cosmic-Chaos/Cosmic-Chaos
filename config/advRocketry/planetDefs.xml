@@ -12,7 +12,10 @@
                 <orbitalTheta>20</orbitalTheta>
 		    	<orbitalPhi>45</orbitalPhi>
                 <rotationalPeriod>24000</rotationalPeriod>
-		    	<fillerBlock>minecraft:air</fillerBlock>
+		    	<fillerBlock>contenttweaker:block_rock_asteroid</fillerBlock>
+                <OreGen>
+		    		<ore block="contenttweaker:block_dust_asteroid" minHeight="1" maxHeight="255" clumpSize="50" chancePerChunk="12" />
+		    	</OreGen>
             </planet>
         </planet>
     </star>

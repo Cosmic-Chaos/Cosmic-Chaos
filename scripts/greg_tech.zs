@@ -265,14 +265,6 @@ for item in carbonMonoxideItems {
 	.outputs(<industrialforegoing:tinydryrubber>*9)
 .duration(60).EUt(8).buildAndRegister();
 
-// Flux Core
-<recipemap:large_chemical_reactor>.recipeBuilder()
-	.inputs(<fluxnetworks:flux>*24, <ore:dustEnderEye>*24, <ore:circuitEv>)
-	.fluidInputs(<liquid:octine>*1008, <liquid:indium>*1008)
-	.outputs(<fluxnetworks:fluxcore>*2)
-.duration(160).EUt(49153).buildAndRegister();
-
-
 # [2x Green Crystal Alloy Cable] from [1x Green Crystal Alloy Cable]
 craft.shapeless(<metaitem:cableGtDoubleGreenCrystalAlloy>, "**", {
   "*": <ore:cableGtSingleGreenCrystalAlloy>, # 1x Green Crystal Alloy Cable

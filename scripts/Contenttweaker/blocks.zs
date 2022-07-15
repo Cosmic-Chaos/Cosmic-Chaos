@@ -402,6 +402,13 @@ dustAsteroid.setBlockResistance(1.0);
 dustAsteroid.setToolClass("shovel");
 dustAsteroid.setToolLevel(0);
 dustAsteroid.setBlockSoundType(<soundtype:sand>);
+dustAsteroid.setDropHandler(function(drops, world, position, state, fortune) {
+	drops.clear();
+	drops.add(<item:gregtech:meta_dust:32160>);
+	drops.add(<item:gregtech:meta_dust:32160> % 50);
+	drops.add(<item:gregtech:meta_dust:32160> % 50);
+	drops.add(<item:gregtech:meta_dust:32160> % 50);
+});
 dustAsteroid.register();
 
 val rockAsteroid = VanillaFactory.createBlock("block_rock_asteroid", <blockmaterial:iron>);

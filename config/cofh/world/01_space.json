@@ -2,7 +2,7 @@
 	"priority": 100,
 	"populate": {
 		"ore_asteroid": {
-			"distribution": "gaussian",
+			"distribution": "uniform",
 			"generator":
             [
                 {
@@ -13,14 +13,35 @@
 				"block": [
                     {
                         "name": "contenttweaker:block_rock_asteroid",
-                        "weight": 20
+                        "weight": 40
+                    },
+                    {
+                        "name": "gregtech:ore_banded_iron_1",
+                        "weight": 20,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_brown_limonite_1",
+                        "weight": 15,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_yellow_limonite_1",
+                        "weight": 15,
+						"properties": {
+							"stone_type": "asteroid"
+						}
                     },
                     {
                         "name": "gregtech:ore_iron_1",
-                        "weight": 80,
+                        "weight": 10,
 						"properties": {
-							"type": "asteroid"
-						},
+							"stone_type": "asteroid"
+						}
                     }
 				],
 				"material": "minecraft:air",
@@ -34,14 +55,175 @@
 				"block": [
                     {
                         "name": "contenttweaker:block_rock_asteroid",
-                        "weight": 20
+                        "weight": 40
+                    },
+                    {
+                        "name": "gregtech:ore_banded_iron_1",
+                        "weight": 20,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_brown_limonite_1",
+                        "weight": 15,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_yellow_limonite_1",
+                        "weight": 15,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_iron_1",
+                        "weight": 10,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    }
+				],
+				"material": "minecraft:air",
+				"cluster-size": 100
+			},
+            {
+                "type": "geode",
+                "block": "contenttweaker:block_dust_asteroid",
+                "crust": "contenttweaker:block_dust_asteroid",
+                "hollow": true,
+				"block": [
+                    {
+                        "name": "contenttweaker:block_rock_asteroid",
+                        "weight": 40
                     },
                     {
                         "name": "gregtech:ore_copper_1",
-                        "weight": 80,
+                        "weight": 10,
 						"properties": {
-							"type": "asteroid"
-						},
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_chalcopyrite_1",
+                        "weight": 25,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_malachite_1",
+                        "weight": 25,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    }
+				],
+				"material": "minecraft:air",
+				"cluster-size": 100
+			},
+            {
+                "type": "geode",
+                "block": "contenttweaker:block_dust_asteroid",
+                "crust": "contenttweaker:block_dust_asteroid",
+                "hollow": true,
+				"block": [
+                    {
+                        "name": "contenttweaker:block_rock_asteroid",
+                        "weight": 40
+                    },
+                    {
+                        "name": "gregtech:ore_copper_1",
+                        "weight": 10,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_chalcopyrite_1",
+                        "weight": 25,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_malachite_1",
+                        "weight": 25,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    }
+				],
+				"material": "minecraft:air",
+				"cluster-size": 100
+			},
+            {
+                "type": "geode",
+                "block": "contenttweaker:block_dust_asteroid",
+                "crust": "contenttweaker:block_dust_asteroid",
+                "hollow": true,
+				"block": [
+                    {
+                        "name": "contenttweaker:block_rock_asteroid",
+                        "weight": 40
+                    },
+                    {
+                        "name": "gregtech:ore_tin_1",
+                        "weight": 40,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    },
+                    {
+                        "name": "gregtech:ore_cassiterite_1",
+                        "weight": 20,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    }
+				],
+				"material": "minecraft:air",
+				"cluster-size": 100
+			},
+            {
+                "type": "geode",
+                "block": "contenttweaker:block_dust_asteroid",
+                "crust": "contenttweaker:block_dust_asteroid",
+                "hollow": true,
+				"block": [
+                    {
+                        "name": "contenttweaker:block_rock_asteroid",
+                        "weight": 60
+                    },
+                    {
+                        "name": "gregtech:ore_lead_1",
+                        "weight": 40,
+						"properties": {
+							"stone_type": "asteroid"
+						}
+                    }
+				],
+				"material": "minecraft:air",
+				"cluster-size": 100
+			},
+            {
+                "type": "geode",
+                "block": "contenttweaker:block_dust_asteroid",
+                "crust": "contenttweaker:block_dust_asteroid",
+                "hollow": true,
+				"block": [
+                    {
+                        "name": "contenttweaker:block_rock_asteroid",
+                        "weight": 60
+                    },
+                    {
+                        "name": "gregtech:ore_redstone_1",
+                        "weight": 40,
+						"properties": {
+							"stone_type": "asteroid"
+						}
                     }
 				],
 				"material": "minecraft:air",
@@ -50,9 +232,9 @@
         ],
 
 			"cluster-count": 1,
-			"chunk-chance": 8,
-			"center-height": 100,
-			"spread": 80,
+			"chunk-chance": 10,
+			"min-height": 0,
+			"max-height": 256,
 			"retrogen": false,
 			"biome": "all",
 			"dimension": {
@@ -62,5 +244,202 @@
 				]
 			}
 		}
-	}
+	},
+    "space_vein_redstone": {
+        "distribution": "uniform",
+        "generator": {
+            "block": [
+                {
+                    "name": "contenttweaker:block_rock_asteroid",
+                    "weight": 40
+                },
+                {
+                    "name": "gregtech:ore_redstone_1",
+                    "weight": 60,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                }
+            ],
+            "material": "contenttweaker:block_rock_asteroid",
+            "cluster-size": 50
+        },
+        "cluster-count": 4,
+        "min-height": 20,
+        "max-height": 200,
+        "retrogen": "false",
+        "biome": "all",
+        "dimension": {
+            "restriction": "whitelist",
+            "value": [
+                33
+            ]
+        }
+    },
+    "space_vein_lead": {
+        "distribution": "uniform",
+        "generator": {
+            "block": [
+                {
+                    "name": "contenttweaker:block_rock_asteroid",
+                    "weight": 40
+                },
+                {
+                    "name": "gregtech:ore_lead_1",
+                    "weight": 60,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                }
+            ],
+            "material": "contenttweaker:block_rock_asteroid",
+            "cluster-size": 50
+        },
+        "cluster-count": 4,
+        "min-height": 20,
+        "max-height": 200,
+        "retrogen": "false",
+        "biome": "all",
+        "dimension": {
+            "restriction": "whitelist",
+            "value": [
+                33
+            ]
+        }
+    },
+    "space_vein_iron": {
+        "distribution": "uniform",
+        "generator": {
+            "block": [
+                {
+                    "name": "contenttweaker:block_rock_asteroid",
+                    "weight": 40
+                },
+                {
+                    "name": "gregtech:ore_banded_iron_1",
+                    "weight": 20,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                },
+                {
+                    "name": "gregtech:ore_brown_limonite_1",
+                    "weight": 15,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                },
+                {
+                    "name": "gregtech:ore_yellow_limonite_1",
+                    "weight": 15,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                },
+                {
+                    "name": "gregtech:ore_iron_1",
+                    "weight": 10,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                }
+            ],
+            "material": "contenttweaker:block_rock_asteroid",
+            "cluster-size": 50
+        },
+        "cluster-count": 4,
+        "min-height": 20,
+        "max-height": 200,
+        "retrogen": "false",
+        "biome": "all",
+        "dimension": {
+            "restriction": "whitelist",
+            "value": [
+                33
+            ]
+        }
+    },
+    "space_vein_copper": {
+        "distribution": "uniform",
+        "generator": {
+            "block": [
+                {
+                    "name": "contenttweaker:block_rock_asteroid",
+                    "weight": 40
+                },
+                {
+                    "name": "gregtech:ore_copper_1",
+                    "weight": 10,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                },
+                {
+                    "name": "gregtech:ore_chalcopyrite_1",
+                    "weight": 25,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                },
+                {
+                    "name": "gregtech:ore_malachite_1",
+                    "weight": 25,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                }
+            ],
+            "material": "contenttweaker:block_rock_asteroid",
+            "cluster-size": 50
+        },
+        "cluster-count": 4,
+        "min-height": 20,
+        "max-height": 200,
+        "retrogen": "false",
+        "biome": "all",
+        "dimension": {
+            "restriction": "whitelist",
+            "value": [
+                33
+            ]
+        }
+    },
+    "space_vein_tin": {
+        "distribution": "uniform",
+        "generator": {
+            "block": [
+                {
+                    "name": "contenttweaker:block_rock_asteroid",
+                    "weight": 40
+                },
+                {
+                    "name": "gregtech:ore_tin_1",
+                    "weight": 40,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                },
+                {
+                    "name": "gregtech:ore_cassiterite_1",
+                    "weight": 20,
+                    "properties": {
+                        "stone_type": "asteroid"
+                    }
+                }
+            ],
+            "material": "contenttweaker:block_rock_asteroid",
+            "cluster-size": 50
+        },
+        "cluster-count": 4,
+        "min-height": 20,
+        "max-height": 200,
+        "retrogen": "false",
+        "biome": "all",
+        "dimension": {
+            "restriction": "whitelist",
+            "value": [
+                33
+            ]
+        }
+    }
 }

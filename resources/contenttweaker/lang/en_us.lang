@@ -59,7 +59,8 @@ material.emc_minor=Minor Manifested EMC
 material.cave_root=Cave Root
 
 material.asteroid_dust=Asteroid
-item.material.oreprefix.oreAsteroidStone=%s Ore
+material.heavy_asteroid_dust=Heavy Asteroid
+item.material.oreprefix.oreAsteriodStone=%s Ore
 
 material.sky_stone=Sky Stone
 material.limestone_atum=Atum Limestone
@@ -277,6 +278,7 @@ mbd.gp_eu.description=Using the power of Manual Labor, generate Power!
 multiblocked.recipe_map.Clockwork EU=Hand Crank Generator
 
 devtech.machine.electromagnetic_separator.ulv.name=Primitive Electromagnetic Separator
+devtech.machine.centrifuge.ulv.name=Primitive Centrifuge
 
 devtech.machine.water_electrolyzer.ulv.name=Primitive Water Electrolyzer
 recipemap.water_electrolyzer.name=Water Electrolysis
