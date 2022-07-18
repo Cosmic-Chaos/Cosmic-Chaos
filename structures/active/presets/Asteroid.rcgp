@@ -16,7 +16,7 @@
               "type": "average",
               "ray": {
                 "up": false,
-                "destExpression": "stone"
+                "destExpression": "!air"
               }
             },
             {
