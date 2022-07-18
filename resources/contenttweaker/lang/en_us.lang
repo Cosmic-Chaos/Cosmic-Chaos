@@ -76,6 +76,7 @@ material.phosphorus_trifluoride=Phosphorus Trifluoride
 material.phosphorus_trichloride=Phosphorus Trichloride
 material.fluoroform=Fluoroform
 material.sodium_arsenate=Sodium Arsenate
+material.acetylene=Acetylene
 
 item.material.oreprefix.oreSkyStone=Alchemical %s Ore
 item.material.oreprefix.oreAurorianStone=%s Ore
