@@ -125,7 +125,7 @@ ulv_assembler.recipeMap.recipeBuilder()
 # [Basic Wiremill] from [ULV Conveyor Module][+4]
 ulv_assembler.recipeMap.recipeBuilder()
 	.inputs(
-		<cosmic_core:cc_meta_item>*4,     # ULV Conveyor Module
+		<metaitem:conveyor.module.ulv>*4,     # ULV Conveyor Module
 		<ore:circuitLv>*2,                # Electronic Circuit
 //		<metaitem:hull.plate.3>, # Fancy Hull Plate
 		<metaitem:hull.lv>,         # LV Machine Hull
@@ -281,8 +281,21 @@ ulv_assembler.recipeMap.recipeBuilder()
 		<ore:gearSmallBronze>, # Small Bronze Gear
 		<ore:stickBronze>     # Bronze Rod
 	)
-	.outputs(<cosmic_core:cc_meta_item:3>)
+	.outputs(<metaitem:electric.piston.ulv>)
 .duration(200).EUt(4).buildAndRegister();
+
+
+# [Basic Centrifuge] from [ULV Electric Motor][+3]
+ulv_assembler.recipeMap.recipeBuilder()
+	.inputs(
+		<metaitem:hull.lv>, 				# LV Machine Hull
+		<metaitem:electric.motor.ulv>*4,   # ULV Electric Motor
+		<ore:circuitLv>*4, 					# Electronic Circuit
+		<ore:cableGtDoubleTin>    			# 2x Tin Cable
+	)
+	.outputs(<metaitem:centrifuge.lv>)
+.duration(200).EUt(4).buildAndRegister();
+
 
 // Check correct dimension
 ulv_assembler.formStructureFunction = function(controller as IControllerTile, context as IPatternMatchContext){

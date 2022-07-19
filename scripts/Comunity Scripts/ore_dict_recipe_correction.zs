@@ -82,6 +82,28 @@ var name_removals = [
 
     "lucraftcore:nugget_copper",
     "lucraftcore:block_copper",
+    "lucraftcore:ingot_copper",
+    "lucraftcore:ingot_copper_alt",
+
+    "lucraftcore:nugget_bronze",
+    "lucraftcore:block_bronze",
+    "lucraftcore:ingot_bronze",
+    "lucraftcore:ingot_bronze_alt",
+
+    "lucraftcore:nugget_silver",
+    "lucraftcore:block_silver",
+    "lucraftcore:ingot_silver",
+    "lucraftcore:ingot_silver_alt",
+
+    "lucraftcore:nugget_lead",
+    "lucraftcore:block_lead",
+    "lucraftcore:ingot_lead",
+    "lucraftcore:ingot_lead_alt",
+
+    "lucraftcore:nugget_tin",
+    "lucraftcore:block_tin",
+    "lucraftcore:ingot_tin",
+    "lucraftcore:ingot_tin_alt",
 
     "thebetweenlands:scabyst_from_block",
     "thebetweenlands:scabyst_block",

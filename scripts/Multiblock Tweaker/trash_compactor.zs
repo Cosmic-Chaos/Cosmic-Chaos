@@ -108,6 +108,7 @@ val trashCompactorPlateMap as IItemStack[IOreDictEntry] = {
     <ore:ingotLead>:<ore:plateLead>.firstItem,
     <ore:ingotPotin>:<ore:platePotin>.firstItem,
     <ore:ingotTinAlloy>:<ore:plateTinAlloy>.firstItem,
+    <ore:ingotBlueAlloy>:<ore:plateBlueAlloy>.firstItem,
 } as IItemStack[IOreDictEntry];
 
 for ingot, plate in trashCompactorPlateMap {

@@ -279,6 +279,9 @@ val itemstoRemoveAndHide =
 <contenttweaker:vent_dirty_1>,
 <contenttweaker:vent_dirty_2>,
 <contenttweaker:vent_dirty_3>,
+<contenttweaker:vent_dirty_carbon_1>,
+<contenttweaker:vent_dirty_carbon_2>,
+<contenttweaker:vent_dirty_carbon_3>,
 <contenttweaker:crystal_cluster_blue_1>,
 <contenttweaker:crystal_cluster_blue_2>,
 <contenttweaker:crystal_cluster_blue_3>,
@@ -328,6 +331,16 @@ val itemstoRemoveAndHide =
 <contenttweaker:crystal_cluster_white_5>,
 <contenttweaker:crystal_cluster_white_6>,
 <contenttweaker:crystal_cluster_white_7>,
+
+//Unneeded Ingots
+<erebus:materials:44>,
+<erebus:materials:45>,
+<erebus:materials:46>,
+<nuclearcraft:alloy>,
+<nuclearcraft:ingot:1>,
+<nuclearcraft:ingot:13>,
+<nuclearcraft:ingot:2>,
+<nuclearcraft:ingot>,
 ]
  as IItemStack[];
 

@@ -9,6 +9,8 @@ import mods.jei.JEI;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.ore.OrePrefix;
 import mods.gregtech.StoneType;
+import crafttweaker.block.IBlockStateMatcher;
+import crafttweaker.block.IBlockState;
 print("==================== loading new_materials.zs ====================");
 ##########################################################################################
 
@@ -88,7 +90,7 @@ var crude_steel = MaterialBuilder(32002, "crude_steel")
     .ingot(1) // (@Optional int harvestLevel,  @Optional int burnTime)
     .color(0x9e9e9e) // can also use colorAverage() if using components
     .iconSet("dull") // "NONE", "METALLIC", "DULL", "MAGNETIC", "QUARTZ", "DIAMOND", "EMERALD", "SHINY", "ROUGH", "FINE", "SAND", "FLINT", "RUBY", "LAPIS", "FLUID", "GAS", "LIGNITE", "OPAL", "GLASS", "WOOD", "GEM_HORIZONTAL", "GEM_VERTICAL", "PAPER", "NETHERSTAR", "BRIGHT".
-    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_frame", "generate_bolt_screw", "generate_ring"]) // add flags "generate_foil",  "generate_fine_wire"
+    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_frame", "generate_bolt_screw", "generate_ring", "generate_long_rod"]) // add flags "generate_foil",  "generate_fine_wire"
     .toolStats(10, 3, 512, 1) // (float speed, float damage, int durability, int enchantability)
     .components([<material:iron> * 4, <material:carbon>*1])
 //    .cableProperties(8, 1, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
@@ -685,16 +687,25 @@ var white_crystal = MaterialBuilder(32159, "white_crystal")
     .build();
 gemPrefix.setIgnored(<material:white_crystal>);
 
-// Minor Manifested EMC
-var emc_minor = MaterialBuilder(32200, "emc_minor")
-    .fluid("fluid", true)
-    .ingot(1)
-    .color(0x261ba1)
-    .iconSet("SHINY")
-    .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
-    .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
+
+// Asteroid Dust
+var asteroid_dust = MaterialBuilder(32160, "asteroid_dust")
+    .dust(1)
+    .color(0x949494)
+    .iconSet("sand")
     .build();
 
+// Heavy Asteroid Dust
+var heavy_asteroid_dust = MaterialBuilder(32161, "heavy_asteroid_dust")
+    .dust(1)
+    .color(0x595959)
+    .iconSet("sand")
+    .build();
+
+
+/////////////////////////////////
+//////New Planet Processing//////
+/////////////////////////////////
 var miasma_tar = MaterialBuilder(32201, "miasma_tar")
     .fluid("fluid", false)
     .color(0x59087f)
@@ -799,6 +810,14 @@ var aluminium_complex = MaterialBuilder(32215, "aluminium_complex")
 var swamp_reed_extract = MaterialBuilder(32216, "swamp_reed_extract")
     .fluid()
     .color(0xb28137)
+// Minor Manifested EMC
+var emc_minor = MaterialBuilder(32300, "emc_minor")
+    .fluid("fluid", true)
+    .ingot(1)
+    .color(0x261ba1)
+    .iconSet("SHINY")
+    .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_gear", "generate_long_rod", "generate_spring"])
+    .cableProperties(8, 2, 1, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .build();
 /////////////////////////////////////////////////////////
 ////////////       New Stone Types         //////////////
@@ -817,6 +836,13 @@ StoneType.create(18,"betweenstone","oreBetweenStone",<material:stone>,"thebetwee
 
 //Midnight Stone
 StoneType.create(19,"nightstone","oreNightStone",<material:stone>,"midnight:nightstone", null, true);
+
+//Asteroid Stone
+val oreAsteriodStone as OrePrefix = OrePrefix.registerOrePrefix("oreAsteriodStone", 1);
+oreAsteriodStone.addSecondaryMaterial(<material:asteroid_dust>);
+StoneType.create(20,"asteroid","oreAsteriodStone",<material:stone>,"contenttweaker:block_ore_asteroid", null, true);
+
+//<blockstate:contenttweaker:block_rock_asteroid>
 
 /*
 // Aurorian Stone

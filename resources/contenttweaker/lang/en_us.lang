@@ -58,6 +58,10 @@ material.emc_minor=Minor Manifested EMC
 
 material.cave_root=Cave Root
 
+material.asteroid_dust=Asteroid
+material.heavy_asteroid_dust=Heavy Asteroid
+item.material.oreprefix.oreAsteriodStone=%s Ore
+
 material.sky_stone=Sky Stone
 material.limestone_atum=Atum Limestone
 material.stone_aurorian=Aurorian Stone
@@ -246,6 +250,9 @@ tile.contenttweaker.reaction_chamber.name=Reaction Chamber
 tile.contenttweaker.crystal_core.name=Crystal Core
 tile.contenttweaker.space_crate.name=Dusty Crate
 
+tile.contenttweaker.block_dust_asteroid.name=Asteroid Dust
+tile.contenttweaker.block_rock_asteroid.name=Asteroid Rock
+
 
 tile.contenttweaker.machine_coil_octine.name=Octine Coil Block
 
@@ -254,6 +261,9 @@ tile.contenttweaker.vent_very_clean.name=Silver Exhaust Vent
 tile.contenttweaker.vent_dirty_1.name=Exhaust Vent
 tile.contenttweaker.vent_dirty_2.name=Exhaust Vent
 tile.contenttweaker.vent_dirty_3.name=Blocked Exhaust Vent
+tile.contenttweaker.vent_dirty_carbon_1.name=Exhaust Vent
+tile.contenttweaker.vent_dirty_carbon_2.name=Exhaust Vent
+tile.contenttweaker.vent_dirty_carbon_3.name=Blocked Exhaust Vent
 
 tile.mbd.station_generator_controller.name=Backup Generator
 station_generator_controller.name=Backup Generator
@@ -276,6 +286,7 @@ mbd.gp_eu.description=Using the power of Manual Labor, generate Power!
 multiblocked.recipe_map.Clockwork EU=Hand Crank Generator
 
 devtech.machine.electromagnetic_separator.ulv.name=Primitive Electromagnetic Separator
+devtech.machine.centrifuge.ulv.name=Primitive Centrifuge
 
 devtech.machine.water_electrolyzer.ulv.name=Primitive Water Electrolyzer
 recipemap.water_electrolyzer.name=Water Electrolysis
