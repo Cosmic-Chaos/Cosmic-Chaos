@@ -496,7 +496,7 @@ craft.remake(<contenttweaker:reaction_chamber>, ["pretty",
 });
 
 # [Steel Drum] from [Neutronium Hammer][+2]
-craft.remake(<metaitem:drum.steel>, ["pretty",
+craft.make(<metaitem:drum.steel>, ["pretty",
   "  T  ",
   "□ ╱ □",
   "□ ╱ □"], {
