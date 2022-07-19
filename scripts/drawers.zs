@@ -7,7 +7,7 @@ craft.remake(<fluiddrawers:tank>, ["pretty",
   "G ╱ G"], {
   "G": <ore:paneGlassColorless>, # Glass Pane
   "╱": <ore:stickSteel>,                           # Steel Rod
-  "I": <extrautils2:drum:1>,                       # Iron Drum
+  "I": <metaitem:drum.steel>,                       # Iron Drum
 });
 
 val chestMap as string[IItemStack] = {

@@ -13,7 +13,7 @@ HeatingCoils.add(<blockstate:contenttweaker:machine_coil_octine>, "octine", 1700
 
 
 <contenttweaker:machine_coil_octine>.addTooltip("Base Heat Capacity: " + format.yellow("1700K"));
-<contenttweaker:machine_coil_octine>.addShiftTooltip(format.green("Multi Smelter")+":","Hold " + (format.green("Shift")) + " for more info");
+<contenttweaker:machine_coil_octine>.addShiftTooltip((format.green("Multi Smelter"))+":","Hold " + (format.green("Shift")) + " for more info");
 <contenttweaker:machine_coil_octine>.addShiftTooltip(" Max Parallel: " + format.yellow("64"));
 <contenttweaker:machine_coil_octine>.addShiftTooltip(" Energy Usage: " + format.yellow("4 EU/t per recipe"));
 <contenttweaker:machine_coil_octine>.addShiftTooltip(format.green("Pyrolyse Oven")+":");

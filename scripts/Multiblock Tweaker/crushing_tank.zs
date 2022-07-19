@@ -395,3 +395,12 @@ for root, dye in rootMap {
 	    .chancedOutput(dye, 5000, 1000)
     .buildAndRegister();
 }
+
+//Asteroid Dust
+crushing_tank.recipeMap.recipeBuilder()
+    .duration(80)
+    .EUt(8)
+    .inputs(<contenttweaker:block_rock_asteroid>)
+    .outputs(<metaitem:dustAsteroidDust>*2)
+	.chancedOutput(<metaitem:dustAsteroidDust>, 7500, 1000)
+.buildAndRegister();

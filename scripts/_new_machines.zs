@@ -26,7 +26,6 @@ MachineBuilder.create(32101, "electromagnetic_separator")
 .addTier(0)
 .buildAndRegister();
 
-
 //Sintering Furnace
 MachineBuilder.create(32102, "sintering_furnace")
 .setRecipeMap(
@@ -38,5 +37,13 @@ MachineBuilder.create(32102, "sintering_furnace")
 .addTier(0)
 .buildAndRegister();
 
+/* has a lang key
+//Centrifuge
+MachineBuilder.create(32103, "centrifuge")
+.setRecipeMap(RecipeMaps.CENTRIFUGE_RECIPES)
+.setRenderer("machines/centrifuge")
+.addTier(0)
+.buildAndRegister();
+*/
 ##################################################################
 print("==================== end of new_machines.zs ====================");

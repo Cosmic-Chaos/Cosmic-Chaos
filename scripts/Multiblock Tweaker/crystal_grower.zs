@@ -42,8 +42,8 @@ val crystal_grower = Builder.start(loc)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             .aisle(
-				"r b",
-				"R B",
+				"   ",
+				"   ",
                 "NEN"
             )
             .aisle(
@@ -52,19 +52,21 @@ val crystal_grower = Builder.start(loc)
                 "ICI"
             )
             .aisle(
-                " g ",
-                " G ",
+                "   ",
+                "   ",
                 "INI"
             )
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:crystal_core>)
 			.where("N", CTPredicate.abilities(<mte_ability:INPUT_ENERGY>))
+			/*
 			.where("R", <metastate:gregtech:wire_quadruple:2517>) # red alloy
 			.where("r", <metastate:gregtech:wire_double:2517>) # red alloy
 			.where("B", <metastate:gregtech:wire_quadruple:2527>) # blue alloy
 			.where("b", <metastate:gregtech:wire_double:2527>) # blue alloy
 			.where("G", <metastate:gregtech:wire_quadruple:32151>) # green crystal alloy
 			.where("g", <metastate:gregtech:wire_double:32151>) # green crystal alloy
+			*/
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
 				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
             )              
@@ -96,7 +98,7 @@ recipes.addShaped("crystal_grower", <metaitem:mbt:crystal_grower>, [
 # [Crystal Core] from [Block of Firestone][+4]
 recipes.addShaped("crystal_core", <contenttweaker:crystal_core>, [
 	[<contenttweaker:dust_crystal_green_glass>, <ore:springSmallTin>, <contenttweaker:dust_crystal_purple_glass>],
-	[<ore:springSmallGold>, <ore:blockRedCrystalAlloy>, <ore:springSmallGold>],
+	[<metaitem:springSmallCopper>, <ore:blockRedCrystalAlloy>, <metaitem:springSmallCopper>],
 	[<contenttweaker:dust_crystal_purple_glass>, <ore:springSmallTin>, <contenttweaker:dust_crystal_green_glass>]
 ]);
 

@@ -5,6 +5,9 @@
     "min": 100,
     "max": 200
   },
+    "dimension_filter": [
+    "dimension_id:0"
+  ],
   "depletion": {
     "amount": 1,
     "chance": 100,

@@ -57,6 +57,9 @@ val ulv_vat = Builder.start(loc)
 						|CTPredicate.blocks(<contenttweaker:vent_dirty_1>)
 						|CTPredicate.blocks(<contenttweaker:vent_dirty_2>)
 						|CTPredicate.blocks(<contenttweaker:vent_dirty_3>)
+						|CTPredicate.blocks(<contenttweaker:vent_dirty_carbon_1>)
+						|CTPredicate.blocks(<contenttweaker:vent_dirty_carbon_2>)
+						|CTPredicate.blocks(<contenttweaker:vent_dirty_carbon_3>)
 						)
 			.where("R", CTPredicate.blocks(<contenttweaker:reaction_chamber>))
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
@@ -93,13 +96,24 @@ val getSurround = function (pos as IBlockPos, facing as IFacing) as IBlockPos[] 
 
 static ventMap as IBlockState[IBlockState] = {
 	//////////////////// Clean ///////////////
-    <blockstate:contenttweaker:vent_clean>:
-		<blockstate:contenttweaker:vent_dirty_1>,
+    <blockstate:contenttweaker:vent_clean>:<blockstate:contenttweaker:vent_dirty_1>,
     <blockstate:contenttweaker:vent_dirty_1>:
 		<blockstate:contenttweaker:vent_dirty_2>,
 	<blockstate:contenttweaker:vent_dirty_2>:
-		<blockstate:contenttweaker:vent_dirty_3>
+		<blockstate:contenttweaker:vent_dirty_3>,
+		
+    <blockstate:contenttweaker:vent_clean>:<blockstate:contenttweaker:vent_dirty_carbon_1>,
+    <blockstate:contenttweaker:vent_dirty_carbon_1>:
+		<blockstate:contenttweaker:vent_dirty_carbon_2>,
+	<blockstate:contenttweaker:vent_dirty_carbon_2>:
+		<blockstate:contenttweaker:vent_dirty_carbon_3>
 } as IBlockState[IBlockState];
+
+val ventMapDirty = [
+	//////////////////// Dirty ///////////////
+    <blockstate:contenttweaker:vent_dirty_1>,
+    <blockstate:contenttweaker:vent_dirty_carbon_1>
+] as IBlockState[];
 
 // check if any vents are clean enough, if so, start.
 ulv_vat.checkRecipeFunction = function(controller as IControllerTile, recipe as IRecipe, consumeIfSuccess as bool) as bool {
@@ -124,7 +138,10 @@ ulv_vat.completeRecipeFunction = function (recipeLogic as IRecipeLogic) as bool 
     for pos in getSurround(controller.pos, controller.frontFacing) {
         if (world.getRandom().nextInt(8) == 0) {
 				val block as IBlockState = world.getBlockState(pos);
-				if (ventMap has block) {
+				if (<blockstate:contenttweaker:vent_clean> has block) {
+					val dirtyType as int = world.getRandom().nextInt(ventMapDirty.length);
+					world.setBlockState(ventMapDirty[dirtyType], pos);
+				} else if (ventMap has block) {
 					world.setBlockState(ventMap[block], pos);
 				}
 			}

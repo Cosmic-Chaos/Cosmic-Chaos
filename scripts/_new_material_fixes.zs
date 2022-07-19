@@ -9,6 +9,9 @@ import mods.jei.JEI;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.gregtech.ore.OrePrefix;
 import crafttweaker.liquid.ILiquidStack;
+import mods.gregtech.StoneType;
+import crafttweaker.block.IBlockStateMatcher;
+import crafttweaker.block.IBlockState;
 
 import scripts.g.stationCrystalsByStats;
 
