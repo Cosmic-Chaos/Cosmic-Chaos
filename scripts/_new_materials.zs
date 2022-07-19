@@ -786,6 +786,32 @@ var acetylene = MaterialBuilder(32212, "acetylene")
     .components([<material:carbon> * 2, <material:hydrogen> * 2])
     .build();
 
+var aluminium_trichloride = MaterialBuilder(32213, "aluminium_trichloride")
+    .dust()
+    .color(0xddddff)
+    .iconSet("DULL")
+    .components([<material:aluminium> * 1, <material:chlorine> * 3])
+    .build();
+
+var eight_hydroxyquinoline = MaterialBuilder(32214, "eight_hydroxyquinoline")
+    .dust()
+    .color(0xf7ef94)
+    .iconSet("DULL")
+    .components([<material:carbon> * 9, <material:hydrogen> * 7, <material:nitrogen> * 1, <material:oxygen> * 1])
+    .build();
+
+var aluminium_complex = MaterialBuilder(32215, "aluminium_complex")
+    .dust()
+    .color(0xf7ef94)
+    .iconSet("DULL")
+    .components([<material:aluminium> * 1, <material:eight_hydroxyquinoline> * 3])
+    .build();
+
+var swamp_reed_extract = MaterialBuilder(32216, "swamp_reed_extract")
+    .fluid()
+    .color(0xb28137)
+    .build();
+
 // Minor Manifested EMC
 var emc_minor = MaterialBuilder(32300, "emc_minor")
     .fluid("fluid", true)

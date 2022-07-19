@@ -81,6 +81,10 @@ material.phosphorus_trichloride=Phosphorus Trichloride
 material.fluoroform=Fluoroform
 material.sodium_arsenate=Sodium Arsenate
 material.acetylene=Acetylene
+material.swamp_reed_extract=Swamp Reed Extract
+material.eight_hydroxyquinoline=8-Hydroxyquinoline
+material.aluminium_complex=Aluminium Semiconductor Complex
+material.aluminium_trichloride=Aluminium Trichloride
 
 item.material.oreprefix.oreSkyStone=Alchemical %s Ore
 item.material.oreprefix.oreAurorianStone=%s Ore
