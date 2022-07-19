@@ -5966,7 +5966,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll probably want around 16 Launch Pads and 8 Towers.\n\n§dTemp Quest reward because you need 4 buckets to launch.",
+          "desc:8": "You\u0027ll probably want around 16 Launch Pads and 8 Towers.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5989,20 +5989,7 @@
         }
       },
       "questID:3": 123,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:fuel_catalyst"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
