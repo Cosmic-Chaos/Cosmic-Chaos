@@ -810,6 +810,8 @@ var aluminium_complex = MaterialBuilder(32215, "aluminium_complex")
 var swamp_reed_extract = MaterialBuilder(32216, "swamp_reed_extract")
     .fluid()
     .color(0xb28137)
+    .build();
+
 // Minor Manifested EMC
 var emc_minor = MaterialBuilder(32300, "emc_minor")
     .fluid("fluid", true)
