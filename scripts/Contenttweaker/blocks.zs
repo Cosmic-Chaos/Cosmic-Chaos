@@ -210,41 +210,86 @@ ventClean2.setFullBlock(false);
 ventClean2.setBlockLayer("CUTOUT");
 ventClean2.register();
 
-var ventDirty = VanillaFactory.createBlock("vent_dirty_1", <blockmaterial:iron>);
-ventDirty.setBlockHardness(2.0);
-ventDirty.setBlockResistance(2.0);
-ventDirty.setToolClass("wrench");
-ventDirty.setToolLevel(1);
-ventDirty.setBlockSoundType(<soundtype:metal>);
-ventDirty.setFullBlock(false);
-ventDirty.setBlockLayer("CUTOUT");
-ventDirty.blockColorSupplier = sulfurClusterColorBlock;
-ventDirty.itemColorSupplier = sulfurClusterColorItem;
-ventDirty.register();
+var ventDirtySulfur = VanillaFactory.createBlock("vent_dirty_1", <blockmaterial:iron>);
+ventDirtySulfur.setBlockHardness(2.0);
+ventDirtySulfur.setBlockResistance(2.0);
+ventDirtySulfur.setToolClass("wrench");
+ventDirtySulfur.setToolLevel(1);
+ventDirtySulfur.setBlockSoundType(<soundtype:metal>);
+ventDirtySulfur.setFullBlock(false);
+ventDirtySulfur.setBlockLayer("CUTOUT");
+ventDirtySulfur.blockColorSupplier = sulfurClusterColorBlock;
+ventDirtySulfur.itemColorSupplier = sulfurClusterColorItem;
+ventDirtySulfur.register();
 
-var ventDirty2 = VanillaFactory.createBlock("vent_dirty_2", <blockmaterial:iron>);
-ventDirty2.setBlockHardness(2.0);
-ventDirty2.setBlockResistance(2.0);
-ventDirty2.setToolClass("wrench");
-ventDirty2.setToolLevel(1);
-ventDirty2.setBlockSoundType(<soundtype:metal>);
-ventDirty2.setFullBlock(false);
-ventDirty2.setBlockLayer("CUTOUT");
-ventDirty2.blockColorSupplier = sulfurClusterColorBlock;
-ventDirty2.itemColorSupplier = sulfurClusterColorItem;
-ventDirty2.register();
+var ventDirtySulfur2 = VanillaFactory.createBlock("vent_dirty_2", <blockmaterial:iron>);
+ventDirtySulfur2.setBlockHardness(2.0);
+ventDirtySulfur2.setBlockResistance(2.0);
+ventDirtySulfur2.setToolClass("wrench");
+ventDirtySulfur2.setToolLevel(1);
+ventDirtySulfur2.setBlockSoundType(<soundtype:metal>);
+ventDirtySulfur2.setFullBlock(false);
+ventDirtySulfur2.setBlockLayer("CUTOUT");
+ventDirtySulfur2.blockColorSupplier = sulfurClusterColorBlock;
+ventDirtySulfur2.itemColorSupplier = sulfurClusterColorItem;
+ventDirtySulfur2.register();
 
-var ventDirty3 = VanillaFactory.createBlock("vent_dirty_3", <blockmaterial:iron>);
-ventDirty3.setBlockHardness(2.0);
-ventDirty3.setBlockResistance(2.0);
-ventDirty3.setToolClass("wrench");
-ventDirty3.setToolLevel(1);
-ventDirty3.setBlockSoundType(<soundtype:metal>);
-ventDirty3.setFullBlock(false);
-ventDirty3.setBlockLayer("CUTOUT");
-ventDirty3.blockColorSupplier = sulfurClusterColorBlock;
-ventDirty3.itemColorSupplier = sulfurClusterColorItem;
-ventDirty3.register();
+var ventDirtySulfur3 = VanillaFactory.createBlock("vent_dirty_3", <blockmaterial:iron>);
+ventDirtySulfur3.setBlockHardness(2.0);
+ventDirtySulfur3.setBlockResistance(2.0);
+ventDirtySulfur3.setToolClass("wrench");
+ventDirtySulfur3.setToolLevel(1);
+ventDirtySulfur3.setBlockSoundType(<soundtype:metal>);
+ventDirtySulfur3.setFullBlock(false);
+ventDirtySulfur3.setBlockLayer("CUTOUT");
+ventDirtySulfur3.blockColorSupplier = sulfurClusterColorBlock;
+ventDirtySulfur3.itemColorSupplier = sulfurClusterColorItem;
+ventDirtySulfur3.register();
+
+
+
+var carbonClusterColorItem = (itemColor(0x1f1f1f));
+var carbonClusterColorBlock = (blockColor(0x1f1f1f));
+
+var ventDirtyCarbon = VanillaFactory.createBlock("vent_dirty_carbon_1", <blockmaterial:iron>);
+ventDirtyCarbon.setBlockHardness(2.0);
+ventDirtyCarbon.setBlockResistance(2.0);
+ventDirtyCarbon.setToolClass("wrench");
+ventDirtyCarbon.setToolLevel(1);
+ventDirtyCarbon.setBlockSoundType(<soundtype:metal>);
+ventDirtyCarbon.setFullBlock(false);
+ventDirtyCarbon.setBlockLayer("CUTOUT");
+ventDirtyCarbon.blockColorSupplier = carbonClusterColorBlock;
+ventDirtyCarbon.itemColorSupplier = carbonClusterColorItem;
+ventDirtyCarbon.register();
+
+var ventDirtyCarbon2 = VanillaFactory.createBlock("vent_dirty_carbon_2", <blockmaterial:iron>);
+ventDirtyCarbon2.setBlockHardness(2.0);
+ventDirtyCarbon2.setBlockResistance(2.0);
+ventDirtyCarbon2.setToolClass("wrench");
+ventDirtyCarbon2.setToolLevel(1);
+ventDirtyCarbon2.setBlockSoundType(<soundtype:metal>);
+ventDirtyCarbon2.setFullBlock(false);
+ventDirtyCarbon2.setBlockLayer("CUTOUT");
+ventDirtyCarbon2.blockColorSupplier = carbonClusterColorBlock;
+ventDirtyCarbon2.itemColorSupplier = carbonClusterColorItem;
+ventDirtyCarbon2.register();
+
+var ventDirtyCarbon3 = VanillaFactory.createBlock("vent_dirty_carbon_3", <blockmaterial:iron>);
+ventDirtyCarbon3.setBlockHardness(2.0);
+ventDirtyCarbon3.setBlockResistance(2.0);
+ventDirtyCarbon3.setToolClass("wrench");
+ventDirtyCarbon3.setToolLevel(1);
+ventDirtyCarbon3.setBlockSoundType(<soundtype:metal>);
+ventDirtyCarbon3.setFullBlock(false);
+ventDirtyCarbon3.setBlockLayer("CUTOUT");
+ventDirtyCarbon3.blockColorSupplier = carbonClusterColorBlock;
+ventDirtyCarbon3.itemColorSupplier = carbonClusterColorItem;
+ventDirtyCarbon3.register();
+
+
+
+
 
 var glod_crystal_block = VanillaFactory.createBlock("glod_crystal_block", <blockmaterial:iron>);
 glod_crystal_block.setBlockHardness(3);

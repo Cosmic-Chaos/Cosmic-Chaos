@@ -256,6 +256,9 @@ tile.contenttweaker.vent_very_clean.name=Silver Exhaust Vent
 tile.contenttweaker.vent_dirty_1.name=Exhaust Vent
 tile.contenttweaker.vent_dirty_2.name=Exhaust Vent
 tile.contenttweaker.vent_dirty_3.name=Blocked Exhaust Vent
+tile.contenttweaker.vent_dirty_carbon_1.name=Exhaust Vent
+tile.contenttweaker.vent_dirty_carbon_2.name=Exhaust Vent
+tile.contenttweaker.vent_dirty_carbon_3.name=Blocked Exhaust Vent
 
 tile.mbd.station_generator_controller.name=Backup Generator
 station_generator_controller.name=Backup Generator
