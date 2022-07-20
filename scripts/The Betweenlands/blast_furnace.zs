@@ -1,7 +1,7 @@
 import mods.gregtech.blocks.HeatingCoils;
 print("==================== loading blast_furnace.zs ====================");
 ##########################################################################################
-
+val HeatProofCasing = <gregtech:metal_casing:2>;
 
 // register a heating coil made from Minecraft's Dirt
 // 1400K temperature
@@ -20,6 +20,35 @@ HeatingCoils.add(<blockstate:contenttweaker:machine_coil_octine>, "octine", 1700
 <contenttweaker:machine_coil_octine>.addShiftTooltip(" Processing Speed: " + format.yellow("150%"));
 <contenttweaker:machine_coil_octine>.addShiftTooltip(format.green("Cracking Unit")+":");
 <contenttweaker:machine_coil_octine>.addShiftTooltip(" Energy Usage: " + format.yellow("90%"));
+
+
+# Syrmorite Casing Recipes
+recipes.addShaped("heat_proof_casing_syrmorite", HeatProofCasing * 2,
+[
+    [<ore:plateSyrmorite>,<ore:craftingToolHardHammer>,<ore:plateSyrmorite>],
+    [<ore:plateSyrmorite>,<ore:frameGtSyrmorite>,<ore:plateSyrmorite>],
+    [<ore:plateSyrmorite>,<ore:craftingToolWrench>,<ore:plateSyrmorite>]
+]);
+
+<recipemap:assembler>.recipeBuilder()
+    .inputs(<ore:plateSyrmorite> * 6)
+    .inputs(<ore:frameGtSyrmorite> * 1)
+    .circuit(6)
+    .outputs(HeatProofCasing * 2)
+    .EUt(16)
+    .duration(50)
+    .buildAndRegister();
+
+# Coil Recipe
+<recipemap:assembler>.recipeBuilder()
+    .inputs(<ore:wireGtDoubleOctine> * 8)
+    .inputs(<ore:foilSyrmorite> * 8)
+    .fluidInputs(<liquid:tin_alloy> * 144)
+    .circuit(6)
+    .outputs(<contenttweaker:machine_coil_octine> * 1)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister();
 
 // register a heating coil made from Minecraft's Oak Planks
 // 1900K temperature
