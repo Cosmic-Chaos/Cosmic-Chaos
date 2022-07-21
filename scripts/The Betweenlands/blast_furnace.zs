@@ -9,10 +9,10 @@ val HeatProofCasing = <gregtech:metal_casing:2>;
 // Discount 4 (16 / 4 EU/t in multismelter per item)
 // Tier 3 (used for discount in the cracker and pyrolyse oven)
 // Material null (uses the Dirt block for JEI name)
-HeatingCoils.add(<blockstate:contenttweaker:machine_coil_octine>, "octine", 1800, 2, 4, 3, <material:octine>);
+HeatingCoils.add(<blockstate:contenttweaker:machine_coil_octine>, "octine", 2200, 2, 4, 3, <material:octine>);
 
 
-<contenttweaker:machine_coil_octine>.addTooltip("Base Heat Capacity: " + format.yellow("1800K"));
+<contenttweaker:machine_coil_octine>.addTooltip("Base Heat Capacity: " + format.yellow("2200K"));
 <contenttweaker:machine_coil_octine>.addShiftTooltip((format.green("Multi Smelter"))+":","Hold " + (format.green("Shift")) + " for more info");
 <contenttweaker:machine_coil_octine>.addShiftTooltip(" Max Parallel: " + format.yellow("64"));
 <contenttweaker:machine_coil_octine>.addShiftTooltip(" Energy Usage: " + format.yellow("4 EU/t per recipe"));
