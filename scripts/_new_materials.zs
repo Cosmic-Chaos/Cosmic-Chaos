@@ -513,6 +513,7 @@ var octine = MaterialBuilder(32080, "octine")
 //    .element("Octine")
     .ore(1, 1, true) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
 //    .addOreByproducts(<material:gold>)
+    .cableProperties(128, 2, 4, false)
     .build();
 ingotPrefix.setIgnored(<material:octine>);
 
@@ -523,7 +524,7 @@ var syrmorite = MaterialBuilder(32081, "syrmorite")
     .ingot()
     .color(0x3d48db)
     .iconSet("dull")
-    .flags(["generate_plate", "generate_rod", "generate_gear"]) // "generate_foil", "generate_fine_wire"
+    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_foil", "generate_frame"]) // "generate_fine_wire"
 //    .element("Syrmorite")
     .ore(1, 1, false) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
 //    .addOreByproducts(<material:gold>)
