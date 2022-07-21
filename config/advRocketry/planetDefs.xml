@@ -1,6 +1,5 @@
 <galaxy>
     <star name="Tau Ceti" temp="128" x="0" y="0" numPlanets="0" numGasGiants="0" blackHole="true">
-    
         <planet name="The Aurorian" DIMID="424" dimMapping="" customIcon="EarthLike">
             <orbitalDistance>150</orbitalDistance>
             <orbitalTheta>180</orbitalTheta>
@@ -23,13 +22,12 @@
 		    	</OreGen>
             </planet>
             
-
-            <planet name="Atum" DIMID="17" dimMapping="" customIcon="DesertWorld">
+            <planet name="The Betweenlands" DIMID="20" dimMapping="" customIcon="WaterWorld">
                 <orbitalDistance>250</orbitalDistance>
                 <orbitalTheta>100</orbitalTheta>
                 <orbitalPhi>30</orbitalPhi>
             </planet>
-            
+
             <planet name="The Midnight" DIMID="-421" dimMapping="" customIcon="CarbonWorld">
                 <orbitalDistance>100</orbitalDistance>
                 <orbitalTheta>50</orbitalTheta>
