@@ -804,7 +804,7 @@ var eight_hydroxyquinoline = MaterialBuilder(32214, "eight_hydroxyquinoline")
 var aluminium_complex = MaterialBuilder(32215, "aluminium_complex")
     .dust()
     .color(0xf7ef94)
-    .iconSet("DULL")
+    .iconSet("custom1")
     .components([<material:aluminium> * 1, <material:eight_hydroxyquinoline> * 3])
     .build();
 
