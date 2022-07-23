@@ -3,7 +3,7 @@
 Cosmic Chaos is a Space-based modpack by Filostorm focused around [GTCEu](https://www.curseforge.com/minecraft/mc-mods/gregtech-ce-unofficial)
 (gregtech community edition unofficial), technology, and exploration.
 
-Start your journey in a failing space station wher you'll progress through a steam-free ULV/early LV
+Start your journey in a failing space station where you'll progress through a steam-free ULV/early LV
 and prepare to crash land a space ship on one of three planets to continue branching progression.
 
 ## Contributors
