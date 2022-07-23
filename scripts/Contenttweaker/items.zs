@@ -60,6 +60,7 @@ var simpleItems = [
 
   //Other Items
   "fuel_pump",
+  "floppy_disk",
 ] as string[];
 
 for item in simpleItems {

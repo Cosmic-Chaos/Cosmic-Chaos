@@ -35,7 +35,7 @@ recipes.addShaped(<libvulpes:structuremachine> * 8, [
 
 # [Launch Pad] from [Black Dye]*2[+2]
 craft.reshapeless(<advancedrocketry:launchpad>, "cB▲", {
-  "c": <ore:concrete>,      # Concrete
+  "c": <ore:stoneConcrete>,      # Concrete
   "B": <quark:root_dye:1>,  # Black Dye
   "▲": <ore:dustGlowstone>, # Glowstone Dust
 });
@@ -766,12 +766,10 @@ recipes.removeByRecipeName("advancedrocketry:satelliteidchip");
 # [Planet Id Chip] from [Circuit Board][+5]
 <recipemap:ulv_assembler>.recipeBuilder()
 	.inputs(
-		<metaitem:circuit_board.basic>, # Circuit Board
-//		<ore:circuitUlv>,
-		<projecte:item.pe_covalence_dust>*4, # Glowstone Dust
-		<ore:componentResistor>*2,
-		<ore:cableGtSingleGreenCrystalAlloy>*2|<metaitem:cableGtSingleRedAlloy>*2
-//		<ore:dustGlowstone>*2
+		<ore:circuitLv>, # LV Circuit
+		<projecte:item.pe_covalence_dust>*8, # Glowstone Dust
+		<ore:dustGlowstone>*2,
+		<metaitem:emc.item.0>*3
 	).outputs(<advancedrocketry:planetidchip>)
 .duration(400).EUt(12).buildAndRegister();
 

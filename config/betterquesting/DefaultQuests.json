@@ -4868,7 +4868,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Probably won\u0027t be food safe when you\u0027re done with it.\n\n§eYou\u0027ll need to find the first Blueprint.§r\n\nOver time, the Vents will clog up with §eSulfur Crystals§r. These can be removed by simply shift right clicking with an empty hand. Later on, you\u0027ll unlock Silver Vents, which won\u0027t get contaminated by Sulfur.",
+          "desc:8": "Probably won\u0027t be food safe when you\u0027re done with it.\n\n§eYou\u0027ll need to find the first Blueprint.§r\n\nOver time, the Vents will clog up with §eSulfur§r or §8Carbon§r Crystals§r. These can be removed by simply shift right clicking with an empty hand. Later on, you\u0027ll unlock Silver Vents, which won\u0027t get contaminated.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
