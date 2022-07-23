@@ -829,21 +829,26 @@ var emc_minor = MaterialBuilder(32300, "emc_minor")
 //Sky Stone
 val oreSkyStone as OrePrefix = OrePrefix.registerOrePrefix("oreSkyStone", 1);
 oreSkyStone.addSecondaryMaterial(<material:sky_stone>);
-StoneType.create(16,"sky_stone","oreSkyStone",<material:sky_stone>,"appliedenergistics2:sky_stone_block", null, true);
+StoneType.create(16,"sky_stone","oreSkyStone",<material:sky_stone>,"appliedenergistics2:sky_stone_block", function(state as IBlockState) as bool {
+  return state.block.definition.id == "cosmic_core:asteroid_rock" && state.meta == null;
+} as IBlockStateMatcher, true);
 
 //Aurorian Stone
-StoneType.create(17,"stone_aurorian","oreAurorianStone",<material:stone>,"theaurorian:aurorianstone", null, true);
+StoneType.create(17,"stone_aurorian","oreAurorianStone",<material:stone>,"theaurorian:aurorianstone", <blockstate:theaurorian:aurorianstone>.matchBlock(), true);
 
 //Atum Stone
-StoneType.create(18,"betweenstone","oreBetweenStone",<material:stone>,"thebetweenlands:betweenstone", null, true);
+StoneType.create(18,"betweenstone","oreBetweenStone",<material:stone>,"thebetweenlands:betweenstone", IBlockStateMatcher.create(<blockstate:thebetweenlands:betweenstone>), true);
 
 //Midnight Stone
-StoneType.create(19,"nightstone","oreNightStone",<material:stone>,"midnight:nightstone", null, true);
+StoneType.create(19,"nightstone","oreNightStone",<material:stone>,"midnight:nightstone", IBlockState.getBlockState("midnight:nightstone", ""), true);
 
 //Asteroid Stone
 val oreAsteriodStone as OrePrefix = OrePrefix.registerOrePrefix("oreAsteriodStone", 1);
 oreAsteriodStone.addSecondaryMaterial(<material:asteroid_dust>);
-StoneType.create(20,"asteroid","oreAsteriodStone",<material:stone>,"contenttweaker:block_ore_asteroid", null, true);
+StoneType.create(20,"asteroid","oreAsteriodStone",<material:stone>,"cosmic_core:asteroid_rock_ore", null, true);
+//StoneType.create(20,"asteroid","oreAsteriodStone",<material:stone>,"cosmic_core:asteroid_rock_ore", IBlockStateMatcher.create(<blockstate:cosmic_core:asteroid_rock>), true); <blockstate:cosmic_core:asteroid_rock>.matchBlock()
+//StoneType.create(20,"asteroid","oreAsteriodStone",<material:stone>,"cosmic_core:asteroid_rock_ore", IBlockState.getBlockState("cosmic_core:asteroid_rock", ""), true);
+//StoneType.create(20,"asteroid","oreAsteriodStone",<material:stone>,"cosmic_core:asteroid_rock_ore", <blockstate:cosmic_core:asteroid_rock>, ""), true);
 
 //<blockstate:contenttweaker:block_rock_asteroid>
 
