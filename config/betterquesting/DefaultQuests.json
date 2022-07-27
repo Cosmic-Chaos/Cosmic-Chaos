@@ -1,5 +1,4 @@
 {
-  "build:8": "4.0.5",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -17,7 +16,7 @@
             "OreDict:8": "",
             "id:8": "minecraft:lever"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
           "name:8": "Shipwrecked",
@@ -106,7 +105,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Lootin\u0027",
@@ -144,7 +143,7 @@
             "OreDict:8": "",
             "id:8": "actuallyadditions:block_crystal_cluster_redstone"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Crystals",
@@ -206,7 +205,7 @@
               }
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Tools",
@@ -282,7 +281,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You will find some hull blocks in the station, you can salvage some of the blocks in the station\u0027s hallways for different resources.\nThat\u0027s how you\u0027ll be able to get most of the resources necessary in this stage.\n\n§8§4Sturdy Hulls§f can be used to make Iron \u0026 Tin\n§e§6§4Rusty Hulls§f can be used to make Copper \u0026 Tin\n§7Rusty Scaffolds§f can be used to get Simple Internals which you can use to get Redstone \u0026 Coal Dust",
+          "desc:8": "You will find some hull blocks in the station, you can salvage some of the blocks by shift right clicking with your Crowbar in the station\u0027s hallways for different resources.\nThat\u0027s how you\u0027ll be able to get most of the resources necessary in this stage.\n\n§8§4Sturdy Hulls§f can be used to make Iron \u0026 Tin\n§e§6§4Rusty Hulls§f can be used to make Copper \u0026 Tin\n§7Rusty Scaffolds§f can be used to get Simple Internals which you can use to get Redstone \u0026 Coal Dust",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -290,7 +289,7 @@
             "OreDict:8": "",
             "id:8": "chisel:factory"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Hulls \u0026 Blocks",
@@ -364,7 +363,7 @@
             "OreDict:8": "",
             "id:8": "advancedrocketry:spacehelmet"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Space Suit",
@@ -425,7 +424,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "This is one of the key Multiblocks in Gregtech, and at this stage it unlocks the MV Tier Material.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -433,7 +432,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "The Electric Blast Furnace",
@@ -519,7 +518,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your trusty crowbar and hulls you can get to work and get some §4Hull Plates§f. You can use them to make some§4 Plating Components§f or scrap them on the ground to get Pieces of §4Broken Scrap§f.",
+          "desc:8": "With your trusty crowbar and hulls you can get to work and get some §4Hull Plates§f. You can use them to make some§4 Plating Components§f or scrap them on the ground to get pieces of §4Broken Scrap§f.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -527,7 +526,7 @@
             "OreDict:8": "",
             "id:8": "cosmic_core:cc_meta_item"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Salvage Salad",
@@ -903,7 +902,7 @@
             "OreDict:8": "",
             "id:8": "cosmic_core:cc_meta_item"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Smashed Potatoes",
@@ -956,12 +955,6 @@
               "Damage:2": 106,
               "OreDict:8": "",
               "id:8": "cosmic_core:cc_meta_item"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 107,
-              "OreDict:8": "",
-              "id:8": "cosmic_core:cc_meta_item"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -996,18 +989,22 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "This can be filtered down into usable parts for circuit crafting!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 622,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
+            "id:8": "forge:bucketfilled",
+            "tag:10": {
+              "Amount:3": 1000,
+              "FluidName:8": "miasma"
+            }
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Your First MV Circuit!",
+          "name:8": "Miasma",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -1031,9 +1028,13 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 622,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
+              "id:8": "forge:bucketfilled",
+              "tag:10": {
+                "Amount:3": 1000,
+                "FluidName:8": "miasma"
+              }
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -1055,7 +1056,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Crafting",
@@ -1439,7 +1440,7 @@
             "OreDict:8": "",
             "id:8": "morefurnaces:furnaceblock"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Furnaces \u0026 I",
@@ -1508,7 +1509,7 @@
             "OreDict:8": "",
             "id:8": "minecraft:iron_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Ingots",
@@ -3517,7 +3518,7 @@
             "OreDict:8": "",
             "id:8": "devtech:meta_item"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Crystal Battery",
@@ -4888,7 +4889,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Homes are enabled in this pack, You can choose to not use them if you feel they are too cheaty but that\u0027s up to you.\n\nUse §6/sethome [name]§f to set a home at your location.\nUse §6/home [name]§f to teleport to your home.\n\nNote that homes only work if you are in §4The Same Dimension as your home§f.",
+          "desc:8": "Homes are enabled in this pack, You can choose to not use them if you feel they are too cheaty but that\u0027s up to you.\n\nUse §6/sethome [name]§f to set a home at your location.\nUse §6/home [name]§f to teleport to your home.\n\nNote that homes only work if you are in §4the same dimension as your home§f.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -4939,7 +4940,7 @@
               }
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Tools Tools",
@@ -5017,7 +5018,7 @@
             "OreDict:8": "",
             "id:8": "advancedrocketry:sawblade"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Station Recycler",
@@ -5188,7 +5189,7 @@
             "OreDict:8": "",
             "id:8": "contenttweaker:heavy_dust"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Non-Scrappy Scrapping",
@@ -5307,7 +5308,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Rubber",
@@ -5392,7 +5393,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Alloys",
@@ -5494,7 +5495,7 @@
             "OreDict:8": "",
             "id:8": "enderio:item_alloy_endergy_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Steel",
@@ -5625,7 +5626,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "More Storage",
@@ -5841,7 +5842,7 @@
             "OreDict:8": "",
             "id:8": "industrialforegoing:spores_recreator"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Spores Recreator",
@@ -5986,7 +5987,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can find some §4Framed Drawers§f in the Station, They are very useful for bulk item storage, Each Drawer can fit §432 Stacks of Items inside§f.\n\nYou can also craft some §4Fluid Tanks§f from EnderIO, they have less storage than Bronze Drums, But you can fill them with water quite easily using the Evertide Amulet also found in the station, you can also automate cycling the Amulet in and out of the tank with a conveyor cycle.",
+          "desc:8": "You can find some §4Framed Drawers§f in the Station, They are very useful for bulk item storage, Each Drawer can fit §432 total stacks of items inside§f.\n\nYou can also craft some §4Fluid Tanks§f from EnderIO, they have less storage than Bronze Drums, but you can fill them with water quite easily using the Evertide Amulet also found in the station, you can also automate cycling the Amulet in and out of the tank with a conveyor cycle.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6114,7 +6115,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Electromagnetic Separator",
@@ -6199,7 +6200,7 @@
             "OreDict:8": "",
             "id:8": "contenttweaker:crowbar_t2"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Scrapping with Force",
@@ -6345,7 +6346,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Using a §4Water Electrolyzer§f you can create §4Hydrogen §f\u0026§4 Oxygen§f.\n\nYou can use them for various chemical processes but you can also use§4 Oxygen§f to fill up your Space Suit again; You will need a Gas Charge Pad though.\n\nI strongly recommend you make a big buffer of Hydrogen, because you will get a lot of it.",
+          "desc:8": "Using a §4Water Electrolyzer§f you can create §4Hydrogen §f\u0026§4 Oxygen§f.\n\nYou can use them for various chemical processes but you can also use§4 Oxygen§f to fill up your Space Suit again; You will need a Gas Charge Pad though.\n\nI strongly recommend you set up a big buffer for Hydrogen, because you will get a lot of it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6421,18 +6422,13 @@
       }
     },
     "113:10": {
-      "preRequisiteTypes:7": [
-        0,
-        1
-      ],
       "preRequisites:11": [
-        26,
         113
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A §4Suit Workbench§f is needed to modify your suit, you can also add more tanks to your suit.\n\nYou can fill a §4Gas Charge Pad§f with Oxygen and then Stand atop it to charge your suit with O2.\nYou can do the same for the §4Suit Jetpack§f, But with Hydrogen.\n\nYou can make a bigger pressure tank using Crude Steel so I recommend waiting until that is available.",
+          "desc:8": "A §aSuit Workbench§f is needed to modify your suit, you can also add more tanks to your suit.\n\nYou can fill a §9Gas Charge Pad§f with Oxygen and then Stand atop it to charge your suit with O2.\nYou can do the same for the §6Suit Jetpack§f, but with §9Hydrogen§r.\n\nYou can also make a bigger pressure tank using Crude Steel.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6444,7 +6440,7 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Charging Your Suit",
-          "questlogic:8": "OR",
+          "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
           "simultaneous:1": 0,
@@ -6531,7 +6527,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Potin",
@@ -6605,7 +6601,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Baby\u0027s First Circuits!",
@@ -6759,7 +6755,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Once you have the §4Generator§f back up and running, you\u0027ll be able to process materials much more efficiently and with less stress.\n\nYou might be able to find a few drums partially filled with some §4Biomass§f around the station to get you started.\n\nIt is highly recommended to have some energy buffer stored in batteries.\n\n§6§fThis produces 2 Amps of ULV power, so you will need at least a 2x cable of Red or 1x Green Alloy Cable to transfer power from both dynamos, this behaviour is specific to the Multiblocked mod.",
+          "desc:8": "Once you have the §4Generator§f back up and running, you\u0027ll be able to process materials much more efficiently and with less stress.\n\nYou might be able to find a few drums partially filled with some §aBiomass§f around the station to get you started.\n\nIt is highly recommended to have some energy buffer stored in batteries.\n\n§6§fThis produces 2 Amps of ULV power, so you will need at least a 2x cable of Red or 1x Green Alloy Cable to transfer power from both dynamos, this behaviour is specific to the Multiblocked mod.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6767,7 +6763,7 @@
             "OreDict:8": "",
             "id:8": "mbd:station_generator_controller"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Power!",
@@ -6868,7 +6864,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you end up getting low on power, you\u0027ll be able to keep the lights on with the §4Hand Crank Generator§f.\n\nYou can find the §4Primitive Stator§f in the station.",
+          "desc:8": "If you end up getting low on power, you\u0027ll be able to keep the lights on with the §4Hand Crank Generator§f.\n\nYou can find the §6Primitive Stator§f in the station.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6937,7 +6933,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "The NASA Slow Cooker",
@@ -7177,7 +7173,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "For automating power production in the station you will need to have a steady supply of §4Mushrooms §f\u0026 §4Water§f.\nBoth of these are very easily automatable, You need to then automatically process them into §4Biomass§f which can then be directly transported to your §4Backup Generator§f to be turned into §4Power§f.\n\nAll of these are beneficial to have storage of; You can use Drawers for Mushrooms, Drums for Water \u0026 Biomass, and Battery Storage for power.",
+          "desc:8": "For automating power production in the station you will need to have a steady supply of §2Mushrooms §f\u0026 §9Water§f.\nBoth of these are very easily automatable, You need to then automatically process them into §aBiomass§f which can then be directly transported to your §4Backup Generator§f to be turned into §ePower§f.\n\nAll of these are beneficial to have storage of; You can use Drawers for Mushrooms, Drums for Water \u0026 Biomass, and Battery Storage for power.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7189,7 +7185,7 @@
               "FluidName:8": "biomass"
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Automating Power",
@@ -7286,7 +7282,7 @@
             "OreDict:8": "",
             "id:8": "advancedrocketry:platepress"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Trash Compactor",
@@ -7377,7 +7373,7 @@
             "OreDict:8": "",
             "id:8": "contenttweaker:vat_glass"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Bio-Organic Fabricator",
@@ -7475,7 +7471,7 @@
             "OreDict:8": "",
             "id:8": "quark:roots"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Cave Root Processing",
@@ -7561,7 +7557,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "ULV Assembling Machine",
@@ -7667,7 +7663,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "With your NASA Slow Cooker you can create a very useful chemical known as §4Sulfuric Acid§f.\n\nFirst mix some Sulfur Dust with some Oxygen, That will give you §4Sulfur Dioxide§f(SO2).\nIf you now add some more Oxygen to the mix it will result in §4Sulfur Trioxide§f(SO3).\nLastly add some Water and it will result in §4Sulfuric Acid§f(H2SO4).\n\nSulfuric Acid has a lot of uses, if you mix it with different colors of Crystal Dust it will yield §4different fluids§f. Now if you choose to either Heat or Cool the fluids you will get some new Materials; §4Low Covalence Dust§f, §4Firestone §f\u0026§4 Reactive Crystal Powder§f.\n\n§4Note§f: Since §4Sulfuric Acid§f is an Acid, A Bronze Drum cannot handle it, You can use §4EIO Fluid Tanks§f to store it.",
+          "desc:8": "With your NASA Slow Cooker you can create a very useful chemical known as §4Sulfuric Acid§f.\n\nFirst mix some Sulfur Dust with some Oxygen, That will give you §4Sulfur Dioxide§f(SO2).\nIf you now add some more Oxygen to the mix it will result in §4Sulfur Trioxide§f(SO3).\nLastly add some Water and it will result in §4Sulfuric Acid§f(H2SO4).\n\nSulfuric Acid has a lot of uses, if you mix it with different colors of Crystal Dust it will yield different fluids§f. Then either Heat or Cool the fluids to get some new Materials; §aLow Covalence Dust§f, §cFirestone §f\u0026 §9Reactive Crystal Powder§f.\n\n§4Note§f: Since §4Sulfuric Acid§f is an Acid, A Bronze Drum cannot handle it, you\u0027ll have to use §9Steel Drums§r or §4EIO Fluid Tanks§f to store it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7679,7 +7675,7 @@
               "FluidName:8": "sulfuric_acid"
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Sulfuric Acid",
@@ -7815,7 +7811,7 @@
             "id:8": "projecte:item.pe_philosophers_stone",
             "tag:10": {}
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "The Philosopher\u0027s Stone",
@@ -7864,7 +7860,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§4The Suit Jetpack§f is a very fine addition to your Space Suit, You can put it in your Space Suit using the Suit Workbench, It will also need an additional§4 Pressure Tank §fto work.\n\nIt uses Hydrogen to work, you can charge it with §4Hydrogen§f just like you can charge your space suit with Oxygen.\n\nHold Space to fly up.",
+          "desc:8": "The §6Suit Jetpack§f is a very fine addition to your Space Suit, You can put it in your Space Suit using the Suit Workbench, It will also need an additional §7Pressure Tank §fto work.\n\nIt uses §9Hydrogen to work, you can charge it with §9Hydrogen§f just like you can charge your space suit with Oxygen.\n\nHold Space to fly up.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8062,7 +8058,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can use the §4Bio-Goo§f waste you get from the Bio-Organic Fabricator for some useful stuff.\n\nYou can smelt it to get §4Sticky Resin§f.\n\nYou can analyze it in the §4Analyzer§f to get a variety of stuff, most importantly §4Grass§f, §4Slime Balls§f \u0026 §4Rabbit DNA§f which can be used to get leather.",
+          "desc:8": "You can use the §aBio-Goo§f waste you get from the Bio-Organic Fabricator for some useful stuff.\n\nYou can smelt it to get §6Sticky Resin§f.\n\nYou can analyze it in the §eAnalyzer§f to get a variety of stuff, most importantly §aGrass§f, §aSlime Balls§f \u0026 §dRabbit DNA§f which can be used to get leather.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8070,7 +8066,7 @@
             "OreDict:8": "",
             "id:8": "fossil:bio_goo"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Bio-Goo Processing",
@@ -8160,7 +8156,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "It\u0027s time for you to make §4Circuit Components§f.\n§4§f\nYou will need §4Carbon Dust§f for making Resistors, I hope you have been keeping your NASA Slow Cooker clean for this!\n\nIt is highly recommended to go for a §4Sintering Furnace§f and/or Use a §4Trash Compactor§f to make your Rods \u0026 Plates for the sheer amount of resources you\u0027ll need for this.\n\nIt is also very useful to §4batchcraft§f the circuits instead of making few at a time. Though you should\u0027ve learnt the GT Drill by now.",
+          "desc:8": "It\u0027s time for you to make §4Circuit Components§f.\n§4§f\nYou will need §4Carbon Dust§f for making Resistors, I hope you have been keeping your NASA Slow Cooker clean for this!\n\nIt is highly recommended to go for a §4Sintering Furnace§f and/or use a §4Trash Compactor§f to make your Rods \u0026 Plates for the sheer amount of resources you\u0027ll need for this.\n\nIt is also very useful to §4batchcraft§f the circuits instead of making few at a time. Though you should\u0027ve learnt the GT Drill by now.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8168,7 +8164,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Circuit Components",
@@ -9045,7 +9041,7 @@
             "OreDict:8": "",
             "id:8": "advancedrocketry:rocketbuilder"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Rocket Assembling",
@@ -9108,7 +9104,7 @@
             "OreDict:8": "",
             "id:8": "advancedrocketry:rocketmotor"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Building the Rocket",
@@ -10554,6 +10550,57 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "182:10": {
+      "preRequisites:11": [
+        16
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This version is expensive, so you\u0027ll want to unlock the next generation of MV Curcuit as soon as possible.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 622,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Your First MV Circuit!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 183,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 622,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -10664,7 +10711,7 @@
           "id:3": 27,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 216,
+          "x:3": 240,
           "y:3": -132
         },
         "13:10": {
@@ -10797,8 +10844,8 @@
           "id:3": 114,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 264,
-          "y:3": -132
+          "x:3": 420,
+          "y:3": -168
         },
         "32:10": {
           "id:3": 115,
@@ -10966,14 +11013,14 @@
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 804,
-          "y:3": -132
+          "y:3": -84
         },
         "56:10": {
           "id:3": 141,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 864,
-          "y:3": -132
+          "y:3": -96
         },
         "57:10": {
           "id:3": 142,
@@ -10999,6 +11046,83 @@
       }
     },
     "1:10": {
+      "lineID:3": 1,
+      "order:3": 4,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "No Description",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:wisp"
+          },
+          "name:8": "II - The Betweenlands",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "quests:9": {
+        "0:10": {
+          "id:3": 7,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 0,
+          "y:3": 0
+        },
+        "1:10": {
+          "id:3": 183,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 24,
+          "y:3": -24
+        }
+      }
+    },
+    "2:10": {
+      "lineID:3": 2,
+      "order:3": 5,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "No Description",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "midnight:dewshroom"
+          },
+          "name:8": "II - The Midnight",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "quests:9": {
+        "0:10": {
+          "id:3": 7,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 48
+        },
+        "1:10": {
+          "id:3": 16,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": -12
+        },
+        "2:10": {
+          "id:3": 183,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 24,
+          "y:3": 24
+        }
+      }
+    },
+    "3:10": {
       "lineID:3": 3,
       "order:3": 3,
       "properties:10": {
@@ -11467,7 +11591,7 @@
         }
       }
     },
-    "2:10": {
+    "4:10": {
       "lineID:3": 4,
       "order:3": 1,
       "properties:10": {
@@ -11502,7 +11626,7 @@
         }
       }
     },
-    "3:10": {
+    "5:10": {
       "lineID:3": 5,
       "order:3": 0,
       "properties:10": {
@@ -11625,6 +11749,41 @@
           "sizeY:3": 72,
           "x:3": 0,
           "y:3": -96
+        }
+      }
+    },
+    "6:10": {
+      "lineID:3": 6,
+      "order:3": 6,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "No Description",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "theaurorian:moontemplelamp"
+          },
+          "name:8": "II - The Auroriun",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "quests:9": {
+        "0:10": {
+          "id:3": 7,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 48
+        },
+        "1:10": {
+          "id:3": 183,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 0,
+          "y:3": 0
         }
       }
     }

@@ -4,7 +4,7 @@ print("==================== loading general_recipes.zs ====================");
 mods.jei.JEI.hideCategory("Painter");
 mods.jei.JEI.hideCategory("EIOWC");
 mods.jei.JEI.hideCategory("EIOWO");
-mods.jei.JEI.hideCategory("EIOTank");
+//mods.jei.JEI.hideCategory("EIOTank");
 
 /*
 val itemstoRemove =
@@ -24,8 +24,6 @@ for tinyDust, material in tinyDustMap {
 	mods.fossils.recipes.addSifterOutput(material, tinyDust, 1);
 }
 */
-
-mods.fossils.recipes.addAnalyzerOutput(<fossil:bio_goo>, <fossil:rabbit_dna>, 0.1);
 
 # [Fishing Rod] from [LV Electric Motor][+2]
 recipes.removeByRecipeName("minecraft:fishing_rod");
