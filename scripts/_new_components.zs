@@ -21,10 +21,19 @@ print("==================== loading new_components.zs ====================");
 MaterialFlagBuilder.create("generate_thin_sheet")
     .requireFlag("generate_plate").build();
 
+MaterialFlagBuilder.create("generate_token")
+    .requireFlag("generate_plate").build();
+
 <material:tin>.addFlags("generate_thin_sheet");
 <material:bronze>.addFlags("generate_thin_sheet");
 <material:gold>.addFlags("generate_thin_sheet");
 <material:crude_steel>.addFlags("generate_thin_sheet");
+
+
+<material:gold>.addFlags("generate_token");
+<material:platinum>.addFlags("generate_token");
+<material:bronze>.addFlags("generate_token");
+<material:tin>.addFlags("generate_token");
 
 
 // addItem(short id, string name).long maxCharge, int tier, @Optional boolean rechargeable (default true), @Optional boolean dischrgeable (default true)
@@ -42,9 +51,8 @@ MetaItem.create(2, "battery_station_ulv").electricItem(96000, 0, false);
 ###################################################
 
 
-
+//Sheets
 val sheet as OrePrefix = OrePrefix.registerOrePrefix("sheet", 1);
-
 sheet.setGenerationPredicate(function(mat as Material) as bool {
     return mat.hasFlag("generate_thin_sheet");  
 } as IMaterialPredicate);
@@ -52,6 +60,13 @@ sheet.createMaterialItem();
 
 
 
+
+//Tokens
+val token as OrePrefix = OrePrefix.registerOrePrefix("token", 1);
+token.setGenerationPredicate(function(mat as Material) as bool {
+    return mat.hasFlag("generate_token");  
+} as IMaterialPredicate);
+token.createMaterialItem();
 
 
 ##########################################################################################
