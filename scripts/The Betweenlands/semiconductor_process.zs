@@ -1,4 +1,4 @@
-print("==================== loading semiconductor_process.zs ====================");
+print("==================== loading The Betweenlands/semiconductor_process.zs ====================");
 ##########################################################################################
 val Diode = <gregtech:meta_item_1:521>;
 val SiliconBoule = <gregtech:meta_item_1:361>;
@@ -84,4 +84,4 @@ val SiliconBoule = <gregtech:meta_item_1:361>;
     .buildAndRegister();
 
 ##########################################################################################
-print("==================== end of semiconductor_process.zs ====================");
+print("==================== end of The Betweenlands/semiconductor_process.zs ====================");

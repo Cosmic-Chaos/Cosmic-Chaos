@@ -1,5 +1,5 @@
 import crafttweaker.item.IItemStack;
-print("==================== loading miasma_processing.zs ====================");
+print("==================== loading The Midnight/recipes.zs ====================");
 ##########################################################################################
 
 
@@ -23,4 +23,4 @@ for item in uselessPlants {
 }
 
 ##########################################################################################
-print("==================== end of miasma_processing.zs ====================");
+print("==================== end of The Midnight/recipes.zs ====================");

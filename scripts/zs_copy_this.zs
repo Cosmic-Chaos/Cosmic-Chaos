@@ -38,7 +38,17 @@ for dust, output in sinteringMapULV {
 .buildAndRegister();
 
 
-
+	macerator.recipeBuilder()
+		.inputs(<thebetweenlands:items_misc:23>)
+		.fluidInputs(<liquid:water>)
+		.notConsumable(IIngredient[])
+		.notConsumable(ILiquidStack[])
+		.outputs(<metaitem:dustRawRubber>*3)
+		.fluidOutputs(ILiquidStack[])
+		.chancedOutput(IItemStack, 0-10000, 0-10000) // IItemStack output, intitial output chance, tier output chance boost. 10000 is 100% chance
+		.circuit(int) // circuit number to use, from 0-32
+		.hidden()
+		.duration(5*20).EUt(4).buildAndRegister();
 
 
 val basicCapacitorInput as IIngredient = (<enderio:item_capacitor_grainy>|<enderio:item_material:20>*2) as IIngredient;

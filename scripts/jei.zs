@@ -91,6 +91,10 @@ for item in lootable {
 	item.addTooltip(format.yellow("Found on the Station"));
 }
 
+
+<gregtech:metal_casing:2>.displayName = "Heat Proof Machine Casing";
+
+//Hook
 <hooked:hook:2>.displayName = "Blue Alloy Hook";
 <hooked:microcrafting:2>.displayName = "Crude Steel Chain Link";
 <hooked:microcrafting:3>.displayName = "Crude Steel Chain";

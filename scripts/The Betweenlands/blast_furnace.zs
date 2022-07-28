@@ -1,5 +1,5 @@
 import mods.gregtech.blocks.HeatingCoils;
-print("==================== loading blast_furnace.zs ====================");
+print("==================== loading The Betweenlands/blast_furnace.zs ====================");
 ##########################################################################################
 val HeatProofCasing = <gregtech:metal_casing:2>;
 
@@ -58,4 +58,4 @@ recipes.addShaped("heat_proof_casing_syrmorite", HeatProofCasing * 2,
 // Material Silver (uses the Silver material for JEI name)
 //HeatingCoils.add(<blockstate:minecraft:planks:variant=oak>, "planks", 1900, 1, 2, 3, <material:silver>);
 ##########################################################################################
-print("==================== end of blast_furnace.zs ====================");
+print("==================== end of The Betweenlands/blast_furnace.zs ====================");
