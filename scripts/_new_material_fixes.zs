@@ -43,9 +43,6 @@ print("==================== loading new_materials.zs ====================");
 furnace.remove(<lucraftcore:ingot_dwarf_star_alloy>, <lucraftcore:ore_dwarf_star_alloy>);
 furnace.remove(<lucraftcore:ingot_dwarf_star_alloy>, <lucraftcore:dust_dwarf_star_alloy>);
 
-
-
-
 // Uru
 <ore:oreUru>.remove(<lucraftcore:ore_uru>);
 JEI.removeAndHide(<lucraftcore:ore_uru>);

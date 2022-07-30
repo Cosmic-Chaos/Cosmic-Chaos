@@ -169,9 +169,6 @@ unify(<ore:itemSilicon>, 0);
 
 
 
-<ore:fusedGlass>.add(<sonarcore:stableglass>);
-<ore:fusedGlass>.add(<sonarcore:clearstableglass>);
-
 
 <ore:bioChaff>.add(<metaitem:bio_chaff>);
 

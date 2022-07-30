@@ -177,23 +177,6 @@ val itemstoRemoveAndHide =
 <farmingforblockheads:market>,
 <farmingforblockheads:feeding_trough>,
 
-<futuremc:acacia_trapdoor>,
-<futuremc:jungle_trapdoor>,
-<futuremc:birch_trapdoor>,
-<futuremc:spruce_trapdoor>,
-<futuremc:dark_oak_trapdoor>, // quark also adds trapdoors
-<futuremc:brick_wall>,
-<futuremc:granite_wall>,
-<futuremc:andesite_wall>,
-<futuremc:diorite_wall>,
-<futuremc:sandstone_wall>,
-<futuremc:red_sandstone_wall>,
-<futuremc:stone_brick_wall>,
-<futuremc:mossy_stone_brick_wall>,
-<futuremc:nether_brick_wall>,
-<futuremc:red_nether_brick_wall>,
-<futuremc:end_stone_brick_wall>,
-<futuremc:prismarine_wall>,
 
 <industrialforegoing:petrified_fuel_generator>,// rf gen
 <industrialforegoing:enchantment_extractor>,// pnc pressure chamber
@@ -365,7 +348,6 @@ for item in itemstoRemove {
 
 
 var name_removals = [
-    "futuremc:oak_trap_door",
     "aether_legacy:saddle", // gtceu adds a recipe
     "harvestcraft:freshwateritem_listallwater",
     "erebus:honey_comb",

@@ -121,3 +121,7 @@ craftpresence/chardata.properties
 
 OpenComputersMod-*-lua*-native*.so
 fancymenu_data/last_world.fmdata
+config/cyberware.cfg
+config/AppliedEnergistics2/VersionChecker.cfg
+config/BlockDrops/blockdrops.txt
+config/jei/worldSettings.cfg

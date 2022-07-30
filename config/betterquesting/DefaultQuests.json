@@ -3556,7 +3556,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Notable Biomes:\n\n§5The Midnight:§r\n-Crystal Spires: §dBloom Crystal§r\n-Obscured Plateau: §9Archic Shards§r\n-Warped Fields: §1Dark Water§r\n-Fungi Forest: §aTall Mushrooms§r\n-Vigilant Forest: §bSuavis§r\n-Night Plains: §5Miasma§r",
+          "desc:8": "Notable Biomes:\n\n§5The Midnight:§r\n-Crystal Spires: §dBloom Crystal§r\n-Obscured Plateau: §9Archic Shards§r\n-Warped Fields: §1Dark Water§r\n-Fungi Forest: §aTall Mushrooms§r\n-Vigilant Forest: §bSuavis§r\n-Night Plains: §5Miasma§r\n\n§aThe Betweenlands:§r\n-Swamplands: §aGiant Weedwood Trees§r with §2Dentrothyst§r inside\n-Swamplands Clearing: §6Tree Sprits§r\n-Sludge Plains: §cMiddle Gem Ores§r, §8Tar§r, and §eSludge§r\n-Sludge Plains Clearing:§6 The Sludgeon§r\n-Coarse Islands: §eGiant Roots§r and §6Cragrock Towers§r\n-Raised Isles: §6Chiromaw Matriarch Nests§r and §6Cragrock Towers§r",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -10965,7 +10965,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "While you are in the §2Betweenlands§r, you\u0027ll slowly start to decay, as show by the brownish bar above your hunger. If it goes low enough, you\u0027ll start to slowly lose health until you hit about a 3 heart threshold.\n\nEating these removes some decay.",
+          "desc:8": "While you are in the §2Betweenlands§r, and especially while in the water, you and any tools you are holding will slowly start to decay, as shown by the brownish bar above your hunger. If it goes low enough, you\u0027ll start to slowly lose health until you hit about a 3 heart threshold, while tools will preform\n\nEating these removes some decay.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11382,7 +11382,7 @@
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
-          "autoclaim:1": 0,
+          "autoclaim:1": 1,
           "desc:8": "The Betweenlands is a dangerous place, filled with lots of critters that want to eat you, enough swampland to last a lifetime, and intricate Dungeons with fantastic loot and challanging bosses!\n\n§aThis Planet will put your adventuring skills to the test!",
           "globalshare:1": 0,
           "icon:10": {
@@ -11392,7 +11392,7 @@
             "id:8": "thebetweenlands:wisp"
           },
           "ismain:1": 0,
-          "issilent:1": 0,
+          "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "The Betweenlands",
           "questlogic:8": "AND",
@@ -11406,7 +11406,18 @@
         }
       },
       "questID:3": 193,
-      "rewards:9": {},
+      "rewards:9": {
+        "0:10": {
+          "asScript:1": 1,
+          "command:8": "spawnpoint @p",
+          "description:8": "Set your spawnpoint to current location",
+          "hideBlockIcon:1": 1,
+          "index:3": 0,
+          "rewardID:8": "bq_standard:command",
+          "title:8": "bq_standard.reward.command",
+          "viaPlayer:1": 0
+        }
+      },
       "tasks:9": {
         "0:10": {
           "biome:8": "",
@@ -11423,6 +11434,23 @@
           "taskID:8": "bq_standard:location",
           "taxiCabDist:1": 0,
           "visible:1": 0
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 12,
+              "OreDict:8": "logWood",
+              "id:8": "thebetweenlands:log_weedwood"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     },
@@ -11565,7 +11593,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Left click after placing the Pestle in the Mortar",
+          "desc:8": "Left click after placing the Pestle in the Mortar.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11843,7 +11871,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This gem like material is used to craft Vials for Potions.\n\nCan occasionally be found inside of Weedwood Trees.",
+          "desc:8": "This gem like material is used to craft Vials for Potions.\n\nCan be found inside of Giant Weedwood Trees.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11975,10 +12003,10 @@
     "203:10": {
       "preRequisites:11": [
         196,
-        201,
         198,
         202,
-        192
+        192,
+        201
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -12250,6 +12278,23 @@
               "Damage:2": 2,
               "OreDict:8": "",
               "id:8": "thebetweenlands:dentrothyst_vial"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
+        },
+        "3:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 3,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:sickle"
             }
           },
           "taskID:8": "bq_standard:optional_retrieval"
@@ -13256,12 +13301,13 @@
     },
     "211:10": {
       "preRequisites:11": [
-        190
+        225,
+        226
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Once the §6Spirit Tree§r has grown (you can use §aGround Dried Swamp Reeds§r to help it along), a §dSmall Tree Spirit§r can be found in its trunk. It will move to any nearby Spirit Logs, and help defend against any monsters that might show up to bother you.\n\nMost importantly at this point, you can also feed it §bCompost§r in exchange for§e Sap Spit§r!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 3,
@@ -13296,12 +13342,12 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "thebetweenlands:sap_ball"
+            "id:8": "thebetweenlands:sap_spit"
           },
           "onHit:1": 0,
           "onInteract:1": 1,
           "partialItemMatch:1": 1,
-          "requiredUses:3": 1,
+          "requiredUses:3": 2,
           "targetID:8": "thebetweenlands:mire_snail",
           "targetNBT:10": {},
           "targetSubtypes:1": 1,
@@ -13880,7 +13926,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A Weedwood Fishing Rod and Net is required to catch an §6Anadia§r. A fishing minigame takes place once an §6Anadia§r has been hooked. Victory comes if you escape the crab and get the §6Anadia§r to the right side of the bar. ",
+          "desc:8": "A Weedwood Fishing Rod and Net is required to catch an §bAnadia§r. A fishing minigame takes place once an §bAnadia§r has been hooked. Victory comes if you escape the crab and get the §bAnadia§r to the right side of the bar. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14185,7 +14231,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Trimming an Anadia has a variety of potential outputs. After chopping a fish, 3 outputs are shown. After taking the desired outputs, the player can choose to void the rest in exchange for Anadia Remains, which are used for catching Crabs.",
+          "desc:8": "Trimming an §bAnadia§r has a variety of potential outputs. After chopping a fish, 3 outputs are shown. After taking the desired outputs, the player can choose to void the rest in exchange for §bAnadia Remains§r, which are used for catching Crabs.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14289,13 +14335,18 @@
       }
     },
     "221:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
       "preRequisites:11": [
-        220
+        220,
+        225
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Trimming a Bubbler Crab or Silt Crab results in 2 Crab Claws and 2 Crabsticks. ",
+          "desc:8": "Trimming a Bubbler Crab or Silt Crab results in 2 Crab Claws and 2 Crabsticks. \n\nAfter Defeating the Giant Tree Spirit, some of the Spirit Wood will be repaced by Rotten Bark",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14363,7 +14414,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Shift right click with an Amphibious Armor piece in hand to access the armor piece’s upgrade menu. The Helmet and Boots have 3 slots, while the Chestplate and Leggings have 5 slots. Adding multiple of the same upgrade makes that upgrade stronger.\n\nUse a Biopathic Trigger or Toggle to activate or toggle the upgrades. \n\n\n§3Upgrages:§r\n\nElectric Upgrade §dChestplate§r Zaps attackers or nearby mobs for up to 5 damage per mob.\n\nGlide Upgrade §dChestplate§r Sprint in air to glide.\n\nUrchin Spike Upgrade §dChestplate§r Attacks enemies with urchin spikes for up to 10 damage.\n\nFish Vortex Upgrade §dChestplate§r Raises enemies in the air.\n\nSnot §dChestplate§r Increases underwater mining speed.\n\nAscent Upgrade §9Leggings§r  Leap up to 10 blocks out of the water by sneaking on the floor for 1 second.\n\nAnadia Eye §aHelmet§r Applies Night Vision underwater.\n\nGlowing Goop §aHelmet§r Highlights Anadia up to 25 blocks away.\n\nAnadia Gills Helmet§r/§dChestplate§r Extends water breathing time.\n\nAnadia Swim Bladder §dChestplate§r/§9Leggings§r Increases swim speed when moving up or down.\n\nLurker Skin §dChestplate§r/§9Leggings§r Increases knockback resistance chance.\n\nAnadia Fins §dChestplate/Leggings§r/§cBoots§r Increases swim speed.\n\nAnadia Scales §6Any§r Adds 0.5 Armor per slot.\n\nAnadia Bones §6Any§r Increases Armor Toughness.\n\nUrchin Spike §6Any§r Chance to deal up to 6 damage to attacking enemy.\n\nSap Spit§6 Any§r Reduces rate of Decay. ",
+          "desc:8": "Shift right click with an Amphibious Armor piece in hand to access the armor piece’s upgrade menu. The Helmet and Boots have 3 slots, while the Chestplate and Leggings have 5 slots. Adding multiple of the same upgrade makes that upgrade stronger.\n\nUse a Biopathic Trigger or Toggle to activate or toggle the upgrades. \n\n\n§3Upgrages:§r\n\nElectric Upgrade §dChestplate§r Zaps attackers or nearby mobs for up to 5 damage per mob.\n\nGlide Upgrade §dChestplate§r Sprint in air to glide.\n\nUrchin Spike Upgrade §dChestplate§r Attacks enemies with urchin spikes for up to 10 damage.\n\nFish Vortex Upgrade §dChestplate§r Raises enemies in the air.\n\nSnot §dChestplate§r Increases underwater mining speed.\n\nAscent Upgrade §9Leggings§r Leap up to 10 blocks out of the water by sneaking on the floor for 1 second.\n\nAnadia Eye §aHelmet§r Applies Night Vision underwater.\n\nGlowing Goop §aHelmet§r Highlights Anadia up to 25 blocks away.\n\nAnadia Gills §aHelmet§r/§dChestplate§r Extends water breathing time.\n\nAnadia Swim Bladder §dChestplate§r/§9Leggings§r Increases swim speed when moving up or down.\n\nLurker Skin §dChestplate§r/§9Leggings§r Increases knockback resistance chance.\n\nAnadia Fins §dChestplate/Leggings§r/§cBoots§r Increases swim speed.\n\nAnadia Scales §6Any§r Adds 0.5 Armor per slot.\n\nAnadia Bones §6Any§r Increases Armor Toughness.\n\nUrchin Spike §6Any§r Chance to deal up to 6 damage to attacking enemy.\n\nSap Spit§6 Any§r Reduces rate of Decay. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14428,6 +14479,1003 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "223:10": {
+      "preRequisiteTypes:7": [
+        0,
+        1
+      ],
+      "preRequisites:11": [
+        190,
+        205
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This can also cleanse your tools of decay.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:purifier"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Purifier",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 223,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:purifier"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "224:10": {
+      "preRequisites:11": [
+        197
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Every now and then, as you dig in your garden, you\u0027ll come across a Tiny Sludge Worm! These will attack you on sight, but if you capture them with your net you\u0027ll be able to store them in a Jar for later use in fishing!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:tiny_sludge_worm"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Looking for Worms",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 224,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:bone_shovel"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:tiny_sludge_worm"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:silt_glass_jar"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
+        }
+      }
+    },
+    "225:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This battle will be quite challanging! You\u0027ll need to hit the large face on the side of the trunk, while avoiding lots of special attacks.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:sapling_spirit_tree"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Defeat the Spirit Tree",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 225,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:spirit_tree_face_large",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 600.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.15,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 48.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 12.0,
+                "Name:8": "generic.attackDamage"
+              },
+              "14:10": {
+                "Base:6": 8.0,
+                "Name:8": "bl.blockTrackingSearchRange"
+              },
+              "15:10": {
+                "Base:6": 8.0,
+                "Name:8": "bl.blockFixSearchRange"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 20,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 1.8,
+                "OrigWidth:5": 1.8,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 30000.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "ForgeData:10": {},
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 600.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 1.4999999403953552,
+              "4:6": 1.7999999523162842,
+              "5:6": 1.4999999403953552
+            },
+            "Rotation:9": {
+              "0:5": 4.0341296,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 1.4999999403953552,
+              "4:6": 1.7999999523162842,
+              "5:6": 1.4999999403953552
+            },
+            "UUIDLeast:4": -5309282016145206936,
+            "UUIDMost:4": 4645493546621879850,
+            "UpdateBlocked:1": 0,
+            "anchor:4": 0,
+            "anchored:1": 1,
+            "facing:3": 2,
+            "facingUp:3": 1,
+            "id:8": "thebetweenlands:spirit_tree_face_large",
+            "wispStrengthModifier:5": 1.0
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:sapling_spirit_tree"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:spirit_fruit"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
+        }
+      }
+    },
+    "226:10": {
+      "preRequisites:11": [
+        191
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Throw some plant matter in and wait!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 47,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:items_misc"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Composting",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 226,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:compost_bin"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:items_misc"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "227:10": {
+      "preRequisites:11": [
+        226,
+        224
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Dug holes need to be filled with Compost before you\u0027re able to grow plants on them.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Farming",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 227,
+      "rewards:9": {},
+      "tasks:9": {}
+    },
+    "228:10": {
+      "preRequisites:11": [
+        210
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "These can be used to augment weapons, and some tools and armor.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:crimson_middle_gem"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Middle Gems",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 228,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:crimson_middle_gem"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:aqua_middle_gem"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:green_middle_gem"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "229:10": {
+      "preRequisites:11": [
+        230
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Use one of these on a Menhir to link it.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:waystone"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Fast Travel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 229,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:bone_wayfinder"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "230:10": {
+      "preRequisites:11": [
+        228
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This will help you find landmarks and bosses.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:empty_amate_map"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Amate Map",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 230,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:empty_amate_map"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "231:10": {
+      "preRequisites:11": [
+        193
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "These are literally the worst, but their Hearts are pretty useful.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:wight_heart"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Wights",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 231,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:wight",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 76.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.33,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 80.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 6.0,
+                "Name:8": "generic.attackDamage"
+              },
+              "14:10": {
+                "Base:6": 1.0,
+                "Name:8": "bl.volatileHealthStart"
+              },
+              "15:10": {
+                "Base:6": 400.0,
+                "Name:8": "bl.volatileCooldown"
+              },
+              "16:10": {
+                "Base:6": 0.32,
+                "Name:8": "bl.volatileFlightSpeed"
+              },
+              "17:10": {
+                "Base:6": 600.0,
+                "Name:8": "bl.volatileLength"
+              },
+              "18:10": {
+                "Base:6": 20.0,
+                "Name:8": "bl.volatileMaxDamage"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 20,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 2.2,
+                "OrigWidth:5": 0.7,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 3800.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "ForgeData:10": {},
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 76.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.3999999761581421,
+              "4:6": 2.200000047683716,
+              "5:6": 0.3999999761581421
+            },
+            "Rotation:9": {
+              "0:5": 5.2192025,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.3999999761581421,
+              "4:6": 2.200000047683716,
+              "5:6": 0.3999999761581421
+            },
+            "UUIDLeast:4": -7960289982162125076,
+            "UUIDMost:4": -5445857962082876854,
+            "UpdateBlocked:1": 0,
+            "canTurnVolatile:1": 1,
+            "canTurnVolatileOnTarget:1": 0,
+            "grow_timer:3": 40,
+            "id:8": "thebetweenlands:wight",
+            "turnVolatileOnPlayer:1": 0,
+            "volatileCooldown:3": 220,
+            "volatileReceivedDamage:5": 0.0,
+            "volatileState:1": 0,
+            "volatileTicks:3": 0
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:wight_heart"
+            }
+          },
+          "taskID:8": "bq_standard:optional_retrieval"
+        }
+      }
+    },
+    "232:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "New Quest",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 232,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "advancement_id:8": "thebetweenlands:adventurer/tall_tough",
+          "index:3": 2,
+          "taskID:8": "bq_standard:advancement"
         }
       }
     }
@@ -14895,17 +15943,17 @@
       "quests:9": {
         "0:10": {
           "id:3": 7,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 240,
-          "y:3": -60
+          "sizeX:3": 48,
+          "sizeY:3": 48,
+          "x:3": 228,
+          "y:3": 0
         },
         "1:10": {
           "id:3": 67,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 72,
-          "y:3": -156
+          "y:3": -168
         },
         "2:10": {
           "id:3": 183,
@@ -14918,8 +15966,8 @@
           "id:3": 190,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
-          "y:3": 24
+          "x:3": -192,
+          "y:3": 84
         },
         "4:10": {
           "id:3": 191,
@@ -14932,29 +15980,29 @@
           "id:3": 192,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": -48
+          "x:3": -324,
+          "y:3": 12
         },
         "6:10": {
           "id:3": 193,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -72,
-          "y:3": -60
+          "x:3": -204,
+          "y:3": 0
         },
         "7:10": {
           "id:3": 194,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": -48
+          "x:3": 156,
+          "y:3": 12
         },
         "8:10": {
           "id:3": 195,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": -204
+          "x:3": 144,
+          "y:3": -132
         },
         "9:10": {
           "id:3": 196,
@@ -14981,28 +16029,28 @@
           "id:3": 199,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": 0
+          "x:3": -156,
+          "y:3": 60
         },
         "13:10": {
           "id:3": 200,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 0,
-          "y:3": -96
+          "x:3": -12,
+          "y:3": -84
         },
         "14:10": {
           "id:3": 201,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": -96
+          "x:3": -228,
+          "y:3": -60
         },
         "15:10": {
           "id:3": 202,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -120,
+          "x:3": -156,
           "y:3": -120
         },
         "16:10": {
@@ -15023,78 +16071,78 @@
           "id:3": 205,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": 0
+          "x:3": 96,
+          "y:3": 60
         },
         "19:10": {
           "id:3": 206,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": -96
+          "x:3": 96,
+          "y:3": -36
         },
         "20:10": {
           "id:3": 207,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 144
+          "x:3": 24,
+          "y:3": 204
         },
         "21:10": {
           "id:3": 208,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -168,
-          "y:3": 0
+          "x:3": -300,
+          "y:3": 60
         },
         "22:10": {
           "id:3": 209,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -132,
-          "y:3": 24
+          "x:3": -240,
+          "y:3": 96
         },
         "23:10": {
           "id:3": 210,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": -48
+          "x:3": 24,
+          "y:3": 12
         },
         "24:10": {
           "id:3": 211,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 84
+          "x:3": 168,
+          "y:3": -240
         },
         "25:10": {
           "id:3": 212,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 60
+          "x:3": 24,
+          "y:3": 120
         },
         "26:10": {
           "id:3": 213,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": 120
+          "x:3": 72,
+          "y:3": 180
         },
         "27:10": {
           "id:3": 214,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": 120
+          "x:3": -24,
+          "y:3": 180
         },
         "28:10": {
           "id:3": 215,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": -48
+          "x:3": 96,
+          "y:3": 12
         },
         "29:10": {
           "id:3": 216,
@@ -15121,8 +16169,8 @@
           "id:3": 219,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -168,
-          "y:3": 60
+          "x:3": -288,
+          "y:3": 96
         },
         "33:10": {
           "id:3": 220,
@@ -15135,8 +16183,8 @@
           "id:3": 221,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": -300
+          "x:3": 24,
+          "y:3": -372
         },
         "35:10": {
           "id:3": 222,
@@ -15144,6 +16192,76 @@
           "sizeY:3": 24,
           "x:3": -144,
           "y:3": -336
+        },
+        "36:10": {
+          "id:3": 223,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -168,
+          "y:3": 120
+        },
+        "37:10": {
+          "id:3": 224,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": -228
+        },
+        "38:10": {
+          "id:3": 225,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": -180
+        },
+        "39:10": {
+          "id:3": 226,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": -216
+        },
+        "40:10": {
+          "id:3": 227,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": -264
+        },
+        "41:10": {
+          "id:3": 228,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -24,
+          "y:3": 48
+        },
+        "42:10": {
+          "id:3": 229,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -108,
+          "y:3": 108
+        },
+        "43:10": {
+          "id:3": 230,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -72,
+          "y:3": 72
+        },
+        "44:10": {
+          "id:3": 231,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -360,
+          "y:3": 60
+        },
+        "45:10": {
+          "id:3": 232,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -300,
+          "y:3": -312
         }
       }
     },

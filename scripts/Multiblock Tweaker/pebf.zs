@@ -1063,7 +1063,6 @@ val furnace_blasting_recipes as IItemStack[][] = [
 	[<gregtech:ore_diatomite_1>, <gregtech:meta_dust:2509>],
 	[<gregtech:ore_cobalt_0:2>, <gregtech:meta_ingot:23> * 2],
 	[<gregtech:ore_kyanite_1:1>, <gregtech:meta_dust:394>],
-	[<futuremc:ancient_debris>, <futuremc:netherite_scrap>],
 	[<gregtech:ore_oilsands_1:1>, <gregtech:meta_dust:1597>],
 	[<gregtech:meta_dust:2513>, <minecraft:iron_ingot>],
 	[<gregtech:meta_dust:354>, <gregtech:meta_ingot:354>],

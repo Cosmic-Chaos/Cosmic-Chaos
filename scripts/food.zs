@@ -169,10 +169,6 @@ recipes.remove(<nuclearcraft:dominos>);
 	.chancedOutput(<randomthings:glowingmushroom>, 100, 400)
 	.duration(650).EUt(30).buildAndRegister();
 
-<recipemap:centrifuge>.recipeBuilder().inputs(<futuremc:honeycomb>)
-	.outputs(<harvestcraft:waxcombitem>)
-	.fluidOutputs(<liquid:honey>*100)
-	.duration(60).EUt(48).buildAndRegister();
 
 // remove gtfo fruits because they are redundant with pam's
 <recipemap:centrifuge>.findRecipe(6, [<minecraft:leaves:0>], [null]).remove();
@@ -310,7 +306,6 @@ val presserRecipes as IItemStack[][IIngredient] = {
 	<ore:foodSilkentofu>: [<harvestcraft:firmtofuitem>, <harvestcraft:soymilkitem>],
 	<ore:cropCherry>: [<harvestcraft:cherryjuiceitem>, <harvestcraft:fruitbaititem>],
 	<ore:cropTealeaf>: [<harvestcraft:oliveoilitem>, <harvestcraft:grainbaititem>],
-	<futuremc:honeycomb>: [<harvestcraft:honeyitem>, <harvestcraft:beeswaxitem>],
 	<ore:cropGrapefruit>: [<harvestcraft:grapefruitjuiceitem>, <harvestcraft:fruitbaititem>],
 	<ore:cropPapaya>: [<harvestcraft:papayajuiceitem>, <harvestcraft:fruitbaititem>],
 	<ore:cropBlackberry>: [<harvestcraft:blackberryjuiceitem>, <harvestcraft:fruitbaititem>],
