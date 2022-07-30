@@ -8352,13 +8352,13 @@
               "id:8": "contenttweaker:station_casing"
             },
             "3:10": {
-              "Count:3": 3,
+              "Count:3": 1,
               "Damage:2": 1210,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
             "4:10": {
-              "Count:3": 1,
+              "Count:3": 3,
               "Damage:2": 1150,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
@@ -10965,7 +10965,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "While you are in the §2Betweenlands§r, and especially while in the water, you and any tools you are holding will slowly start to decay, as shown by the brownish bar above your hunger. If it goes low enough, you\u0027ll start to slowly lose health until you hit about a 3 heart threshold, while tools will preform\n\nEating these removes some decay.",
+          "desc:8": "While you are in the §2Betweenlands§r, and especially while in the water, you and any tools you are holding will slowly start to decay, as shown by the brownish bar above your hunger. If it goes low enough, you\u0027ll start to lose max health until you\u0027re at 3 hearts and will be slowed, while tools will preform worse Until they are unable to function.\n\nEating these removes some decay.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14494,7 +14494,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This can also cleanse your tools of decay.",
+          "desc:8": "This can also repair your tools of corrosion.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14986,7 +14986,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "These can be used to augment weapons, and some tools and armor.",
+          "desc:8": "Can be found most commonly in the Sludge Plains underwater. The ore glows at night, making it fairly easy to spot.\n\nThese can be used to augment weapons, and some tools and armor.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15439,43 +15439,6 @@
             }
           },
           "taskID:8": "bq_standard:optional_retrieval"
-        }
-      }
-    },
-    "232:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
-          },
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "New Quest",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
-        }
-      },
-      "questID:3": 232,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "advancement_id:8": "thebetweenlands:adventurer/tall_tough",
-          "index:3": 2,
-          "taskID:8": "bq_standard:advancement"
         }
       }
     }
@@ -16232,22 +16195,22 @@
           "id:3": 228,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -24,
+          "x:3": -48,
           "y:3": 48
         },
         "42:10": {
           "id:3": 229,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": 108
+          "x:3": -120,
+          "y:3": 156
         },
         "43:10": {
           "id:3": 230,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": 72
+          "x:3": -84,
+          "y:3": 96
         },
         "44:10": {
           "id:3": 231,
@@ -16255,13 +16218,6 @@
           "sizeY:3": 24,
           "x:3": -360,
           "y:3": 60
-        },
-        "45:10": {
-          "id:3": 232,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -300,
-          "y:3": -312
         }
       }
     },

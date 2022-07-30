@@ -54,21 +54,13 @@ val crystal_grower = Builder.start(loc)
             .aisle(
                 "   ",
                 "   ",
-                "INI"
+                "III"
             )
             .where("E", controller.self())
 			.where("C", <blockstate:contenttweaker:crystal_core>)
-			.where("N", CTPredicate.abilities(<mte_ability:INPUT_ENERGY>))
-			/*
-			.where("R", <metastate:gregtech:wire_quadruple:2517>) # red alloy
-			.where("r", <metastate:gregtech:wire_double:2517>) # red alloy
-			.where("B", <metastate:gregtech:wire_quadruple:2527>) # blue alloy
-			.where("b", <metastate:gregtech:wire_double:2527>) # blue alloy
-			.where("G", <metastate:gregtech:wire_quadruple:32151>) # green crystal alloy
-			.where("g", <metastate:gregtech:wire_double:32151>) # green crystal alloy
-			*/
             .where("I", CTPredicate.states(<blockstate:contenttweaker:station_casing>)
-				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
+				  | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>)
+				  | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>)
             )              
             .build();
     } as IPatternBuilderFunction)
