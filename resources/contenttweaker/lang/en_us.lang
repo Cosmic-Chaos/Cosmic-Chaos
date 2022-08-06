@@ -86,6 +86,8 @@ material.eight_hydroxyquinoline=8-Hydroxyquinoline
 material.aluminium_complex=Aluminium Semiconductor Complex
 material.aluminium_trichloride=Aluminium Trichloride
 
+material.blast_fuel=Exothermic Blend
+
 item.material.oreprefix.oreSkyStone=Alchemical %s Ore
 item.material.oreprefix.oreAurorianStone=%s Ore
 item.material.oreprefix.oreBetweenStone=%s Ore
@@ -137,6 +139,11 @@ item.contenttweaker.mold_rod.name=Mold (Rod)
 
 item.contenttweaker.fuel_pump.name=Fuel Pump
 
+item.contenttweaker.unfired_mud_brick.name=Fiber Reinforced Mud Brick
+
+
+
+
 item.contenttweaker.test_planet.name=Planet E-12
 item.contenttweaker.test_planet_2.name=Alpha Bronson
 
@@ -169,6 +176,10 @@ item.contenttweaker.emitter_ulv.name=ULV Emitter
 
 item.contenttweaker.flexible_organic_panel.name=Flexible Organic Panel
 item.contenttweaker.floppy_disk.name=Floppy Disk
+
+item.contenttweaker.cragrock_crushing_gear.name=Heavy Crushing Gear
+
+
 
 tile.contenttweaker.station_casing.name=Derelict Casing
 tile.contenttweaker.station_backbone.name=Station Backbone
@@ -273,6 +284,13 @@ blue_generator.name=Crystal Powered Generator
 multiblocked.blue_generator.description=Runs on Reactive Powder
 multiblocked.recipe_map.Blue EU=Crystal Powered Generator
 
+
+tile.multiblocked.mud_kiln.name=Mud Brick Kiln
+mud_kiln.name=Mud Brick Kiln
+multiblocked.mud_kiln.description=Can 1.3x ores with Limestone Flux
+multiblocked.recipe_map.Mud Kiln=Blast Smelting
+
+
 tile.mbd.ulv_energy_output.name=ULV Dynamo Hatch
 tile.mbd.item_bus.name=Multiblock Item Bus
 tile.mbd.fluid_hatch.name=Multiblock Fluid Hatch
@@ -291,4 +309,11 @@ recipemap.water_electrolyzer.name=Water Electrolysis
 
 devtech.machine.sintering_furnace.ulv.name=Primitive Sintering Furnace
 recipemap.sintering_furnace.name=Sintering Furnace
+
+devtech.machine.biomass_burner.ulv.name=Primitive Biomass Burner
+devtech.machine.biomass_burner.lv.name=Basic Biomass Burner
+recipemap.biomass_burner.name=Biomass Burner
+
+devtech.machine.station_wiremill.ulv.name=Primitive Wiremill
+recipemap.station_wiremill.name=Primitive Wiremill
 

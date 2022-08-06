@@ -1,10 +1,7 @@
 import crafttweaker.item.IItemStack;
 print("==================== loading general_recipes.zs ====================");
 ##########################################################################################
-mods.jei.JEI.hideCategory("Painter");
-mods.jei.JEI.hideCategory("EIOWC");
-mods.jei.JEI.hideCategory("EIOWO");
-//mods.jei.JEI.hideCategory("EIOTank");
+
 
 /*
 val itemstoRemove =

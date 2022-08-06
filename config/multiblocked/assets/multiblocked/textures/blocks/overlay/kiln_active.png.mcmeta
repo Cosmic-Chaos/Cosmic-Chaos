@@ -1,0 +1,8 @@
+{
+    "multiblocked": {
+        "emissive": true
+    },
+    "animation": {
+       "frametime":3
+    }
+}

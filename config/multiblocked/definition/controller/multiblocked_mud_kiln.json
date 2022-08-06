@@ -1,0 +1,148 @@
+{
+  "consumeCatalyst": false,
+  "location": "multiblocked:mud_kiln",
+  "traits": {
+    "background": "multiblocked:textures/gui/kiln.png",
+    "item": [
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "x": 21,
+        "y": 62,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "x": 39,
+        "y": 62,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "x": 21,
+        "y": 80,
+        "autoIO": false
+      },
+      {
+        "cIO": 0,
+        "gIO": 2,
+        "x": 39,
+        "y": 80,
+        "autoIO": false
+      },
+      {
+        "cIO": 1,
+        "gIO": 1,
+        "x": 118,
+        "y": 71,
+        "autoIO": false
+      },
+      {
+        "cIO": 1,
+        "gIO": 1,
+        "x": 136,
+        "y": 71,
+        "autoIO": false
+      }
+    ]
+  },
+  "allowRotate": true,
+  "showInJei": true,
+  "baseRenderer": {
+    "baseTexture": "multiblocked:blocks/casing/mud_bricks",
+    "frontTexture": "multiblocked:blocks/overlay/kiln",
+    "type": "gregtech"
+  },
+  "workingRenderer": {
+    "baseTexture": "multiblocked:blocks/casing/mud_bricks",
+    "frontTexture": "multiblocked:blocks/overlay/kiln_active",
+    "type": "gregtech"
+  },
+  "isOpaqueCube": true,
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "AAA",
+        "AAA",
+        "AAA",
+        "BBB"
+      ],
+      [
+        "AAA",
+        "@CA",
+        "ACA",
+        "B B"
+      ],
+      [
+        "AAA",
+        "AAA",
+        "AAA",
+        "BBB"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "states": [
+          {
+            "id": "thebetweenlands:mud_bricks",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "controller": {
+        "location": "multiblocked:mud_kiln",
+        "type": "component"
+      },
+      "B": {
+        "states": [
+          {
+            "id": "thebetweenlands:mud_brick_shingles",
+            "meta": 0
+          }
+        ],
+        "type": "states"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": []
+    }
+  },
+  "recipeMap": "Mud Kiln"
+}

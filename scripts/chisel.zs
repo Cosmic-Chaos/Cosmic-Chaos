@@ -74,3 +74,49 @@ for item in extrudersToAdd {
 Carving.addVariation("extruder", item);
 }
 
+Carving.addGroup("worm_bricks");
+val wormPillar =
+[
+<thebetweenlands:worm_dungeon_pillar>,
+<thebetweenlands:worm_dungeon_pillar:1>,
+<thebetweenlands:worm_dungeon_pillar:2>,
+<thebetweenlands:worm_dungeon_pillar:3>,
+<thebetweenlands:worm_dungeon_pillar:4>,
+<thebetweenlands:worm_dungeon_pillar:6>,
+<thebetweenlands:worm_dungeon_pillar:7>,
+<thebetweenlands:worm_dungeon_pillar:8>,
+<thebetweenlands:worm_dungeon_pillar:9>,
+<thebetweenlands:worm_dungeon_pillar:10>,
+]
+ as IItemStack[];
+
+for item in wormPillar {
+	recipes.remove(item);
+    Carving.addVariation("worm_bricks", item);
+}
+
+
+Carving.addGroup("carved_mud_bricks");
+val muddyBricks =
+[
+<thebetweenlands:mud_bricks_carved>,
+<thebetweenlands:mud_bricks_carved:1>,
+<thebetweenlands:mud_bricks_carved:2>,
+<thebetweenlands:mud_bricks_carved:3>,
+<thebetweenlands:mud_bricks_carved:4>,
+<thebetweenlands:mud_bricks_carved:5>,
+<thebetweenlands:mud_bricks_carved:6>,
+<thebetweenlands:mud_bricks_carved:7>,
+<thebetweenlands:mud_bricks_carved:8>,
+<thebetweenlands:mud_bricks_carved:9>,
+<thebetweenlands:mud_bricks_carved:10>,
+<thebetweenlands:mud_bricks_carved:11>,
+<thebetweenlands:mud_bricks_carved:12>,
+<thebetweenlands:mud_bricks_carved:13>,
+]
+ as IItemStack[];
+
+for item in muddyBricks {
+	recipes.remove(item);
+    Carving.addVariation("carved_mud_bricks", item);
+}

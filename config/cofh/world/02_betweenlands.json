@@ -1,0 +1,29 @@
+{
+	"priority": 100,
+	"populate": {
+    "no_more_rubber": {
+        "distribution": "uniform",
+        "generator": {
+            "block": [
+                {
+                    "name": "minecraft:air",
+                    "weight": 100
+                }
+            ],
+            "material": "gregtech:rubber_log",
+            "cluster-size": 10
+        },
+        "cluster-count": 20,
+        "min-height": 20,
+        "max-height": 200,
+        "retrogen": "true",
+        "biome": "all",
+        "dimension": {
+            "restriction": "whitelist",
+            "value": [
+                20
+            ]
+        }
+        }
+    }
+}

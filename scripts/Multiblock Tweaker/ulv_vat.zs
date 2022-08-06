@@ -30,7 +30,7 @@ import mods.gregtech.recipe.RecipeMap;
 
 var loc = "mbt:ulv_vat";
 
-val ulv_vat = Builder.start(loc)
+val ulv_vat = Builder.start(loc, ulv_vat_id)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             .aisle(

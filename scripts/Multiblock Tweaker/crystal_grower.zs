@@ -38,13 +38,13 @@ import scripts.g.primaryColors;
 
 var loc = "mbt:crystal_grower";
 
-val crystal_grower = Builder.start(loc)
+val crystal_grower = Builder.start(loc, crystal_grower_id)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             .aisle(
 				"   ",
 				"   ",
-                "NEN"
+                "IEI"
             )
             .aisle(
 				"   ",

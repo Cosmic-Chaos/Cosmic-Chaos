@@ -31,7 +31,7 @@ import mods.gregtech.IMetaTileEntity;
 
 var loc = "mbt:ulv_assembler";
 
-val ulv_assembler = Builder.start(loc)
+val ulv_assembler = Builder.start(loc, ulv_assembler_id)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             .aisle(

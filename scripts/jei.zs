@@ -3,6 +3,108 @@ import crafttweaker.item.IItemStack;
 print("==================== loading The Station/jei.zs ====================");
 ##########################################################################################
 
+//Not sure why these are needed all the sudden. Guessing maybe Multiblocked?
+var catagoryRemovals = [
+    "Painter",
+	"EIOWC",
+	"EIOWO",
+	"AlloySmelter",
+	"CombustionGenerator",
+	"SagMill",
+	"GrindingBall",
+	"StirlingGenerator",
+	"LavaGenerator",
+	//"SliceNSPlice",
+	//"SolarPanel",
+	//"SoulBinder",
+	//"Enchanter",
+	//"EIOTank",
+	//"Vat",
+
+	"xu2_machine_extrautils2:furnace",
+	"xu2_machine_extrautils2:crusher",
+	"xu2_machine_extrautils2:generator_survival",
+	"xu2_machine_extrautils2:generator",
+	"xu2_machine_extrautils2:generator_overclock",
+	//"extrautils2.blockPatterns",
+	//"extrautils2.terraformer",
+	//"extrautils2.resonator",
+	//"xu2_machine_extrautils2:enchanter",
+	//"xu2_machine_extrautils2:generator_culinary",
+	//"xu2_machine_extrautils2:generator_lava",
+	//"xu2_machine_extrautils2:generator_redstone",
+	//"xu2_machine_extrautils2:generator_ender",
+	//"xu2_machine_extrautils2:generator_potion",
+	//"xu2_machine_extrautils2:generator_pink",
+	//"xu2_machine_extrautils2:generator_tnt",
+	//"xu2_machine_extrautils2:generator_netherstar",
+	//"xu2_machine_extrautils2:generator_dragonsbreath",
+	//"xu2_machine_extrautils2:generator_ice",
+	//"xu2_machine_extrautils2:generator_death",
+	//"xu2_machine_extrautils2:generator_enchant",
+	//"xu2_machine_extrautils2:generator_slime",
+
+	"nuclearcraft_manufactory",
+	"nuclearcraft_separator",
+	"nuclearcraft_alloy_furnace",
+	"nuclearcraft_infuser",
+	"nuclearcraft_melter",
+	"nuclearcraft_electrolyzer",
+	"nuclearcraft_assembler",
+	"nuclearcraft_ingot_former",
+	"nuclearcraft_pressurizer",
+	"nuclearcraft_chemical_reactor",
+	"nuclearcraft_salt_mixer",
+	"nuclearcraft_crystallizer",
+	"nuclearcraft_enricher",
+	"nuclearcraft_extractor",
+	"nuclearcraft_centrifuge",
+	"nuclearcraft_pebble_fission",
+	//"nuclearcraft_decay_hastener",
+	//"nuclearcraft_fuel_reprocessor",
+	//"nuclearcraft_supercooler",
+	//"nuclearcraft_rock_crusher",
+	//"nuclearcraft_collector",
+	//"nuclearcraft_decay_generator",
+	//"nuclearcraft_fission_moderator",
+	//"nuclearcraft_fission_reflector",
+	//"nuclearcraft_fission_irradiator",
+	//"nuclearcraft_solid_fission",
+	//"nuclearcraft_fission_heating",
+	//"nuclearcraft_salt_fission",
+	//"nuclearcraft_coolant_heater",
+	//"nuclearcraft_emergency_cooling",
+	//"nuclearcraft_heat_exchanger",
+	//"nuclearcraft_condenser",
+	//"nuclearcraft_high_turbine",
+	//"nuclearcraft_radiation_scrubber",
+
+	"zmaster587.AR.rollingMachine",
+	"zmaster587.AR.lathe",
+	"zmaster587.AR.precisionAssembler",
+	"zmaster587.AR.sawMill",
+	"zmaster587.AR.chemicalReactor",
+	"zmaster587.AR.crystallizer",
+	"zmaster587.AR.electrolyzer",
+	"zmaster587.AR.arcFurnace",
+	"zmaster587.AR.centrifuge",
+	"zmaster587.AR.precisionlaseretcher",
+	//"zmaster587.AR.platePresser",
+
+	"appliedenergistics2.grinder",
+	"petrified_burn_time",
+	"jehc.shippingbin",
+	"jehc.market",
+	"farmingforblockheads:market",
+] as string[];
+
+for item in catagoryRemovals {
+	mods.jei.JEI.hideCategory(item);
+}
+
+
+
+
 ##=======================================================
 ## RECIPE REMOVAL
 ##=======================================================

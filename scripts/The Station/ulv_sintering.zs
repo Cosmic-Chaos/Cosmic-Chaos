@@ -31,7 +31,7 @@ val sinteringMapULV as IItemStack[][IOreDictEntry] = {
     <ore:dustBronze>:[<ore:blockBronze>.firstItem, <ore:stickBronze>.firstItem],
     <ore:dustCrudeSteel>:[<ore:blockCrudeSteel>.firstItem, <ore:stickCrudeSteel>.firstItem],
     <ore:dustRedAlloy>:[<ore:blockRedAlloy>.firstItem, <ore:stickRedAlloy>.firstItem],
-    <ore:dustGreenCrystalAlloy>:[<ore:blockGreenCrystalAlloy>.firstItem, null],
+    <ore:dustGreenCrystalAlloy>:[<ore:blockGreenCrystalAlloy>.firstItem, <ore:stickGreenCrystalAlloy>.firstItem],
     <ore:dustSilver>:[<ore:blockSilver>.firstItem, <ore:stickSilver>.firstItem],
     <ore:dustLead>:[<ore:blockLead>.firstItem, <ore:stickLead>.firstItem],
     <ore:dustPotin>:[<ore:blockPotin>.firstItem, <ore:stickPotin>.firstItem],
@@ -46,13 +46,11 @@ for dust, output in sinteringMapULV {
 	.outputs(output[0])
 .buildAndRegister();
 
-	if (!(isNull(output[1]))) {
 <recipemap:sintering_furnace>.recipeBuilder().duration(160).EUt(8)
 	.notConsumable(<contenttweaker:mold_rod>)
 	.inputs(dust*2)
 	.outputs(output[1]*3)
 .buildAndRegister();
-	}
 }
 
 <recipemap:sintering_furnace>.recipeBuilder().duration(80).EUt(8)

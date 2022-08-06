@@ -108,19 +108,22 @@ var name_removals = [
     "thebetweenlands:scabyst_from_block",
     "thebetweenlands:scabyst_block",
 
-    "thebetweenlands:octine_block",
-    "thebetweenlands:octine_ingot",
+    //"thebetweenlands:octine_block",
+    //"thebetweenlands:octine_ingot",
 
     "thebetweenlands:valonite_shard",
     "thebetweenlands:valonite_block",
-    "thebetweenlands:valonite_splinter",
+    //"thebetweenlands:valonite_splinter",
     //"thebetweenlands:valonite_shard_from_splinters", // No gt recipe for this
+
+    "gregtech:nugget_disassembling_valonite",
 
     "thebetweenlands:symorite_block",
     "thebetweenlands:symorite_ingot",
 
     "gregtech:block_compress_sulfur",
     "gregtech:block_decompress_sulfur",
+
 
 ] as string[];
 

@@ -26,7 +26,7 @@ import mods.gregtech.recipe.RecipeMap;
 
 var loc = "mbt:bio_organic_fabricator";
 
-val bio_organic_fabricator = Builder.start(loc)
+val bio_organic_fabricator = Builder.start(loc, bio_organic_fabricator_id)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             

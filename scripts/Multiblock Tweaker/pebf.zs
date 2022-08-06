@@ -33,7 +33,7 @@ import mods.forge.items.IItemHandlerModifiable;
 
 var loc = "mbt:pebf";
 
-val pebf = Builder.start(loc)
+val pebf = Builder.start(loc, pebf_id)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             .aisle(
@@ -120,16 +120,17 @@ pebf.recipeMap.recipeBuilder()
 
 
 //print("ZZZZZ DUMPING FURNACE RECIPES $ore*/$dust* -> *");
-/*
+
 for recipe in furnace.all {
 	for oreDictTag in recipe.input.ores {
-		if (oreDictTag.name.startsWith("ore") || oreDictTag.name.startsWith("dust")) {
-			print(recipe.toCommandString());
-			break;
+		for oreDictTagOut in recipe.output.ores {
+			if (oreDictTag.name.startsWith("ore") && oreDictTagOut.name.startsWith("ingot")) {
+				print(oreDictTag.name.substring(3));
+				break;
+			}
 		}
 	}
 }
-*/
 
 val furnace_blasting_recipes as IItemStack[][] = [
 	[<gregtech:ore_gypsum_1:1>, <gregtech:meta_dust:2032>],

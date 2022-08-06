@@ -49,6 +49,11 @@ var simpleItems = [
   "crystal_seed_cyan",
   "crystal_seed_white",
   
+  //Betweenlands
+  "unfired_mud_brick",
+  "cragrock_crushing_gear",
+
+
     //Other Materials
   "glod_crystal",
   "empowered_glod_crystal",

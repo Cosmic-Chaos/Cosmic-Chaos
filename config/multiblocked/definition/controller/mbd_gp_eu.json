@@ -24,7 +24,7 @@
   "showInJei": true,
   "baseRenderer": {
     "baseTexture": "multiblocked:blocks/casing/casing_ulv",
-    "frontTexture": "multiblocked:blocks/overlay/overlay_energy_out",
+    "frontTexture": "multiblocked:blocks/overlay/machine",
     "type": "gregtech"
   },
   "isOpaqueCube": true,

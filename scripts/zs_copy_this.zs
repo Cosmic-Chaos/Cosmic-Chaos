@@ -56,6 +56,7 @@ val basicCapacitorInput as IIngredient = (<enderio:item_capacitor_grainy>|<ender
 <techreborn:part:13>.displayName = "Constantan Heating Coil";
 <astralsorcery:itemcelestialcrystal>.addTooltip(format.aqua("Grows from a Celestal Crystal Cluster"));
 
+<techreborn:cloakingdevice>.maxStackSize = 64;
 <fossil:bio_goo>.addTooltip(format.yellow(n ~ "% chance to give " + output.displayName + " when analyzed."));
 */
 ##########################################################################################

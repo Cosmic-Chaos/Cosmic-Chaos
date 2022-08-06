@@ -5,6 +5,7 @@ import mods.gregtech.recipe.RecipeMapBuilder;
 import mods.gregtech.recipe.RecipeMaps;
 import mods.gregtech.recipe.RecipeMap;
 import mods.gregtech.recipe.FactoryRecipeMap;
+import mods.gregtech.machine.Renderer;
 print("==================== loading new_machines.zs ====================");
 ##########################################################################################
 
@@ -34,6 +35,33 @@ MachineBuilder.create(32102, "sintering_furnace")
 		.maxOutputs(1)
 		.build()
 ).setRenderer("machines/electric_furnace")
+.addTier(0)
+.buildAndRegister();
+
+//Biomass Burrner
+MachineBuilder.create(32103, "biomass_burner")
+.setRecipeMap(
+	FactoryRecipeMap.start("biomass_burner")
+		.maxInputs(1)
+		.build()
+)
+.setRenderer(Renderer.create("generators/biomass_burner", "side"))
+.addTier(0,1)
+.setGenerator()
+.setTankScalingFunction(function(tier as int) as int {
+    return 4000*(tier+1);
+})
+.buildAndRegister();
+//each tier takes up a ID slot
+
+//Station Wiremill
+MachineBuilder.create(32105, "station_wiremill")
+.setRecipeMap(
+	FactoryRecipeMap.start("station_wiremill")
+		.maxInputs(1)
+		.maxOutputs(1)
+		.build()
+).setRenderer("machines/wiremill")
 .addTier(0)
 .buildAndRegister();
 

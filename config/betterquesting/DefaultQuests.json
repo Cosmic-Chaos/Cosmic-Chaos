@@ -1,4 +1,5 @@
 {
+  "build:8": "4.0.5",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -419,7 +420,6 @@
     },
     "7:10": {
       "preRequisites:11": [
-        24,
         194
       ],
       "properties:10": {
@@ -630,7 +630,9 @@
       }
     },
     "10:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        255
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -642,7 +644,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Motor",
@@ -693,7 +695,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Piston",
@@ -744,7 +746,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Robot Arm",
@@ -795,7 +797,7 @@
             "OreDict:8": "",
             "id:8": "gregtech:meta_item_1"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "LV Conveyor",
@@ -833,7 +835,8 @@
     },
     "14:10": {
       "preRequisites:11": [
-        10
+        11,
+        213
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -842,14 +845,14 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 142,
+            "Damage:2": 65,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
+            "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "LV Pump",
+          "name:8": "LV-Macerator",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -873,9 +876,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 142,
+              "Damage:2": 65,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -1166,7 +1169,7 @@
     },
     "20:10": {
       "preRequisites:11": [
-        37
+        255
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -1175,14 +1178,14 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 621,
+            "Damage:2": 80,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
+            "id:8": "gregtech:machine"
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "LV Circuit",
+          "name:8": "LV-Alloy Smelter",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -1206,9 +1209,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 621,
-              "OreDict:8": "circuitBasic",
-              "id:8": "gregtech:meta_item_1"
+              "Damage:2": 80,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -1216,11 +1219,7 @@
       }
     },
     "21:10": {
-      "preRequisites:11": [
-        20,
-        28,
-        29
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -1228,14 +1227,14 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 217,
+            "Damage:2": 635,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
+            "id:8": "gregtech:machine"
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "LV Emitter",
+          "name:8": "LV-Circuit Assembler",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -1259,9 +1258,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 217,
+              "Damage:2": 635,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -1269,11 +1268,7 @@
       }
     },
     "22:10": {
-      "preRequisites:11": [
-        20,
-        28,
-        29
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -1281,14 +1276,14 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 232,
+            "Damage:2": 920,
             "OreDict:8": "",
-            "id:8": "gregtech:meta_item_1"
+            "id:8": "gregtech:machine"
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "LV Sensor",
+          "name:8": "LV-Miner",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -1312,9 +1307,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 232,
+              "Damage:2": 920,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_item_1"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -1371,7 +1366,9 @@
       }
     },
     "24:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        10
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -1379,14 +1376,14 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 2,
+            "Damage:2": 470,
             "OreDict:8": "",
-            "id:8": "gregtech:metal_casing"
+            "id:8": "gregtech:machine"
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "New Quest",
+          "name:8": "LV-Mixer",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -1410,9 +1407,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 2,
+              "Damage:2": 470,
               "OreDict:8": "",
-              "id:8": "gregtech:metal_casing"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -2154,60 +2151,7 @@
       }
     },
     "38:10": {
-      "preRequisites:11": [
-        21
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 635,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Circuit Assembling Machine",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
-        }
-      },
-      "questID:3": 38,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 635,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "39:10": {
-      "preRequisites:11": [
-        22
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -2255,7 +2199,7 @@
         }
       }
     },
-    "40:10": {
+    "39:10": {
       "preRequisites:11": [
         13,
         41
@@ -2307,7 +2251,7 @@
         }
       }
     },
-    "41:10": {
+    "40:10": {
       "preRequisites:11": [
         42,
         43
@@ -2359,7 +2303,7 @@
         }
       }
     },
-    "42:10": {
+    "41:10": {
       "preRequisites:11": [
         7
       ],
@@ -2410,7 +2354,7 @@
         }
       }
     },
-    "43:10": {
+    "42:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -2459,7 +2403,7 @@
         }
       }
     },
-    "44:10": {
+    "43:10": {
       "preRequisites:11": [
         12,
         13
@@ -2475,10 +2419,10 @@
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Assembling Machine",
+          "name:8": "LV-Assembling Machine",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -2511,11 +2455,8 @@
         }
       }
     },
-    "45:10": {
-      "preRequisites:11": [
-        14,
-        20
-      ],
+    "44:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -2563,11 +2504,8 @@
         }
       }
     },
-    "46:10": {
-      "preRequisites:11": [
-        14,
-        20
-      ],
+    "45:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -2615,11 +2553,8 @@
         }
       }
     },
-    "47:10": {
-      "preRequisites:11": [
-        14,
-        20
-      ],
+    "46:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -2667,11 +2602,8 @@
         }
       }
     },
-    "48:10": {
-      "preRequisites:11": [
-        14,
-        20
-      ],
+    "47:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -2719,11 +2651,8 @@
         }
       }
     },
-    "49:10": {
-      "preRequisites:11": [
-        14,
-        20
-      ],
+    "48:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -2771,11 +2700,8 @@
         }
       }
     },
-    "50:10": {
-      "preRequisites:11": [
-        14,
-        20
-      ],
+    "49:10": {
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -2823,10 +2749,9 @@
         }
       }
     },
-    "51:10": {
+    "50:10": {
       "preRequisites:11": [
         11,
-        20,
         52
       ],
       "properties:10": {
@@ -2843,7 +2768,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Lathe",
+          "name:8": "LV-Lathe",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -2876,7 +2801,7 @@
         }
       }
     },
-    "52:10": {
+    "51:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -2925,7 +2850,7 @@
         }
       }
     },
-    "53:10": {
+    "52:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -2974,10 +2899,10 @@
         }
       }
     },
-    "54:10": {
+    "53:10": {
       "preRequisites:11": [
-        20,
-        53
+        53,
+        255
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -2993,7 +2918,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Electrolyzer",
+          "name:8": "LV-Electrolyzer",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3026,11 +2951,9 @@
         }
       }
     },
-    "55:10": {
+    "54:10": {
       "preRequisites:11": [
-        11,
-        20,
-        52
+        10
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -3039,66 +2962,14 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 65,
+            "Damage:2": 965,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Macerator",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "CHAIN"
-        }
-      },
-      "questID:3": 55,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 65,
-              "OreDict:8": "",
-              "id:8": "gregtech:machine"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "56:10": {
-      "preRequisites:11": [
-        11,
-        20
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "No Description",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 410,
-            "OreDict:8": "",
-            "id:8": "gregtech:machine"
-          },
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Forge Hammer",
+          "name:8": "LV-Gas Turbine",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3122,7 +2993,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 410,
+              "Damage:2": 965,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
@@ -3131,8 +3002,10 @@
         }
       }
     },
-    "57:10": {
-      "preRequisites:11": [],
+    "55:10": {
+      "preRequisites:11": [
+        255
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -3147,7 +3020,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Polarizer",
+          "name:8": "LV-Polarizer",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3180,10 +3053,9 @@
         }
       }
     },
-    "58:10": {
+    "56:10": {
       "preRequisites:11": [
-        10,
-        20
+        10
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -3199,7 +3071,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Wiremill",
+          "name:8": "LV-Wiremill",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -3232,7 +3104,7 @@
         }
       }
     },
-    "59:10": {
+    "57:10": {
       "preRequisites:11": [
         63
       ],
@@ -3270,7 +3142,7 @@
         }
       }
     },
-    "60:10": {
+    "58:10": {
       "preRequisites:11": [
         63
       ],
@@ -3308,7 +3180,7 @@
         }
       }
     },
-    "61:10": {
+    "59:10": {
       "preRequisites:11": [
         63
       ],
@@ -3346,7 +3218,7 @@
         }
       }
     },
-    "62:10": {
+    "60:10": {
       "preRequisites:11": [
         120
       ],
@@ -3384,7 +3256,7 @@
         }
       }
     },
-    "63:10": {
+    "61:10": {
       "preRequisites:11": [
         120
       ],
@@ -3422,7 +3294,7 @@
         }
       }
     },
-    "64:10": {
+    "62:10": {
       "preRequisites:11": [
         120
       ],
@@ -3460,7 +3332,7 @@
         }
       }
     },
-    "65:10": {
+    "63:10": {
       "preRequisites:11": [
         120
       ],
@@ -3498,7 +3370,7 @@
         }
       }
     },
-    "66:10": {
+    "64:10": {
       "preRequisites:11": [
         111
       ],
@@ -3549,14 +3421,19 @@
         }
       }
     },
-    "67:10": {
+    "65:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0
+      ],
       "preRequisites:11": [
-        191
+        206,
+        201
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Notable Biomes:\n\n§5The Midnight:§r\n-Crystal Spires: §dBloom Crystal§r\n-Obscured Plateau: §9Archic Shards§r\n-Warped Fields: §1Dark Water§r\n-Fungi Forest: §aTall Mushrooms§r\n-Vigilant Forest: §bSuavis§r\n-Night Plains: §5Miasma§r\n\n§aThe Betweenlands:§r\n-Swamplands: §aGiant Weedwood Trees§r with §2Dentrothyst§r inside\n-Swamplands Clearing: §6Tree Sprits§r\n-Sludge Plains: §cMiddle Gem Ores§r, §8Tar§r, and §eSludge§r\n-Sludge Plains Clearing:§6 The Sludgeon§r\n-Coarse Islands: §eGiant Roots§r and §6Cragrock Towers§r\n-Raised Isles: §6Chiromaw Matriarch Nests§r and §6Cragrock Towers§r",
+          "desc:8": "Notable Biomes:\n\n§5The Midnight:§r\n\n-Crystal Spires: §dBloom Crystal§r\n-Obscured Plateau: §9Archic Shards§r\n-Warped Fields: §1Dark Water§r\n-Fungi Forest: §aTall Mushrooms§r\n-Vigilant Forest: §bSuavis§r\n-Night Plains: §5Miasma§r\n\n§aThe Betweenlands:§r\n\n-Swamplands: §aGiant Weedwood Trees§r with §2Dentrothyst§r inside\n-Swamplands Clearing: §6Tree Sprits§r\n\n-Sludge Plains: §cMiddle Gem Ores§r, §8Tar§r, and §eSludge§r\n-Sludge Plains Clearing:§6 The Sludgeon§r\n\n-Coarse Islands: §eGiant Roots§r and §6Cragrock Towers§r\n-Raised Isles: §6Chiromaw Matriarch Nests§r and §6Cragrock Towers§r\n\n-Deep Waters: §7Cragrock Spires§r, which have §eBarnacle Clusters§r growing an them",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -3602,7 +3479,7 @@
         }
       }
     },
-    "68:10": {
+    "66:10": {
       "preRequisites:11": [
         9
       ],
@@ -3653,7 +3530,7 @@
         }
       }
     },
-    "69:10": {
+    "67:10": {
       "preRequisites:11": [
         9
       ],
@@ -3704,7 +3581,7 @@
         }
       }
     },
-    "70:10": {
+    "68:10": {
       "preRequisites:11": [
         9
       ],
@@ -3755,7 +3632,7 @@
         }
       }
     },
-    "71:10": {
+    "69:10": {
       "preRequisites:11": [
         9
       ],
@@ -3806,7 +3683,7 @@
         }
       }
     },
-    "72:10": {
+    "70:10": {
       "preRequisites:11": [
         9
       ],
@@ -3857,7 +3734,7 @@
         }
       }
     },
-    "73:10": {
+    "71:10": {
       "preRequisites:11": [
         9
       ],
@@ -3908,7 +3785,7 @@
         }
       }
     },
-    "74:10": {
+    "72:10": {
       "preRequisites:11": [
         9
       ],
@@ -3959,7 +3836,7 @@
         }
       }
     },
-    "75:10": {
+    "73:10": {
       "preRequisites:11": [
         9
       ],
@@ -4010,7 +3887,7 @@
         }
       }
     },
-    "76:10": {
+    "74:10": {
       "preRequisites:11": [
         9
       ],
@@ -4061,7 +3938,7 @@
         }
       }
     },
-    "77:10": {
+    "75:10": {
       "preRequisites:11": [
         9
       ],
@@ -4112,7 +3989,7 @@
         }
       }
     },
-    "78:10": {
+    "76:10": {
       "preRequisites:11": [
         9
       ],
@@ -4163,7 +4040,7 @@
         }
       }
     },
-    "79:10": {
+    "77:10": {
       "preRequisites:11": [
         9
       ],
@@ -4214,7 +4091,7 @@
         }
       }
     },
-    "80:10": {
+    "78:10": {
       "preRequisites:11": [
         9
       ],
@@ -4265,7 +4142,7 @@
         }
       }
     },
-    "81:10": {
+    "79:10": {
       "preRequisites:11": [
         9
       ],
@@ -4316,7 +4193,7 @@
         }
       }
     },
-    "82:10": {
+    "80:10": {
       "preRequisites:11": [
         9
       ],
@@ -4367,7 +4244,7 @@
         }
       }
     },
-    "83:10": {
+    "81:10": {
       "preRequisites:11": [
         9
       ],
@@ -4418,7 +4295,7 @@
         }
       }
     },
-    "84:10": {
+    "82:10": {
       "preRequisites:11": [
         9
       ],
@@ -4469,7 +4346,7 @@
         }
       }
     },
-    "85:10": {
+    "83:10": {
       "preRequisites:11": [
         9
       ],
@@ -4520,7 +4397,7 @@
         }
       }
     },
-    "86:10": {
+    "84:10": {
       "preRequisites:11": [
         9
       ],
@@ -4571,7 +4448,7 @@
         }
       }
     },
-    "87:10": {
+    "85:10": {
       "preRequisites:11": [
         9
       ],
@@ -4622,7 +4499,7 @@
         }
       }
     },
-    "88:10": {
+    "86:10": {
       "preRequisites:11": [
         9
       ],
@@ -4673,7 +4550,7 @@
         }
       }
     },
-    "89:10": {
+    "87:10": {
       "preRequisites:11": [
         9
       ],
@@ -4724,7 +4601,7 @@
         }
       }
     },
-    "90:10": {
+    "88:10": {
       "preRequisites:11": [
         9
       ],
@@ -4775,7 +4652,7 @@
         }
       }
     },
-    "91:10": {
+    "89:10": {
       "preRequisites:11": [
         9
       ],
@@ -4826,7 +4703,7 @@
         }
       }
     },
-    "92:10": {
+    "90:10": {
       "preRequisites:11": [
         9
       ],
@@ -4877,11 +4754,9 @@
         }
       }
     },
-    "93:10": {
+    "91:10": {
       "preRequisites:11": [
-        10,
-        11,
-        20
+        11
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -4897,7 +4772,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "1:1 Plates",
+          "name:8": "LV-Bending Machine",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -4930,7 +4805,7 @@
         }
       }
     },
-    "94:10": {
+    "92:10": {
       "preRequisites:11": [
         120
       ],
@@ -4968,7 +4843,7 @@
         }
       }
     },
-    "95:10": {
+    "93:10": {
       "preRequisites:11": [
         26
       ],
@@ -5051,7 +4926,7 @@
         }
       }
     },
-    "96:10": {
+    "94:10": {
       "preRequisites:11": [
         95
       ],
@@ -5093,7 +4968,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32001,
+              "Damage:2": 3006,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -5142,7 +5017,7 @@
         }
       }
     },
-    "97:10": {
+    "95:10": {
       "preRequisites:11": [
         26
       ],
@@ -5222,7 +5097,7 @@
         }
       }
     },
-    "98:10": {
+    "96:10": {
       "preRequisites:11": [
         96
       ],
@@ -5290,7 +5165,7 @@
         }
       }
     },
-    "99:10": {
+    "97:10": {
       "preRequisites:11": [
         96
       ],
@@ -5341,7 +5216,7 @@
         }
       }
     },
-    "100:10": {
+    "98:10": {
       "preRequisites:11": [
         96
       ],
@@ -5421,7 +5296,7 @@
         }
       }
     },
-    "101:10": {
+    "99:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -5433,7 +5308,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You can now acquire various §4Alloys§f that do their job better than their purer ingredients.\n\n§4Bronze§f is a sturdy alloy from Copper \u0026 Tin, You can get 3 Bronze Ingots from 3 Copper Ingots + 1 Tin Ingot.\n§4Red Alloy§f is a highly conductant alloy from Copper \u0026 Redstone, You can get 1 Red Alloy Ingot from 1 Copper Ingot + 4 Redstone Dust\n§4Tin Alloy§f is a cheap yet sturdy from Tin \u0026 Iron, You can get 2 Tin Alloy Ingots from 1 Iron Ingot + 1 Tin Ingot§4.\nGreen Crystal§f Alloy is a very conductant alloy from Green Crystals \u0026 Crude Steel, You can get 5 Green Crystal Alloy Ingots from 1 Green Crystal Dust + 4 Crude Steel Ingots, It\u0027s significance compared to Red Alloy is that it can supply Double the Amperage and can also act as a capacitor.§4",
+          "desc:8": "You can now acquire various §6Alloys§f that do their job better than their purer ingredients.\n\n§4Bronze§f is a sturdy alloy from Copper \u0026 Tin, You can get 3 Bronze Ingots from 3 Copper Ingots + 1 Tin Ingot.\n§4Red Alloy§f is a highly conductant alloy from Copper \u0026 Redstone, You can get 1 Red Alloy Ingot from 1 Copper Ingot + 4 Redstone Dust\n§4Tin Alloy§f is a cheap yet sturdy from Tin \u0026 Iron, You can get 2 Tin Alloy Ingots from 1 Iron Ingot + 1 Tin Ingot.\n§aGreen Crystal Alloy§r is a very conductant alloy from Green Crystals \u0026 Crude Steel, You can get 5 Green Crystal Alloy Ingots from 1 Green Crystal Dust + 4 Crude Steel Ingots, It\u0027s significance compared to Red Alloy is that it can supply Double the Amperage and can also act as a capacitor.§4",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -5528,7 +5403,7 @@
         }
       }
     },
-    "102:10": {
+    "100:10": {
       "preRequisites:11": [
         96
       ],
@@ -5608,7 +5483,7 @@
         }
       }
     },
-    "103:10": {
+    "101:10": {
       "preRequisites:11": [
         9
       ],
@@ -5659,7 +5534,7 @@
         }
       }
     },
-    "104:10": {
+    "102:10": {
       "preRequisites:11": [
         101
       ],
@@ -5727,7 +5602,7 @@
         }
       }
     },
-    "105:10": {
+    "103:10": {
       "preRequisites:11": [
         63
       ],
@@ -5765,7 +5640,7 @@
         }
       }
     },
-    "106:10": {
+    "104:10": {
       "preRequisiteTypes:7": [
         1,
         0
@@ -5875,7 +5750,7 @@
         }
       }
     },
-    "107:10": {
+    "105:10": {
       "preRequisites:11": [
         111
       ],
@@ -5926,7 +5801,7 @@
         }
       }
     },
-    "108:10": {
+    "106:10": {
       "preRequisites:11": [
         100
       ],
@@ -6028,7 +5903,7 @@
         }
       }
     },
-    "109:10": {
+    "107:10": {
       "preRequisites:11": [
         104
       ],
@@ -6147,7 +6022,7 @@
         }
       }
     },
-    "110:10": {
+    "108:10": {
       "preRequisites:11": [
         101,
         100
@@ -6155,7 +6030,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Using some Alloys \u0026 Rubber you can make an §4Electromagnetic Separator§f, It can be used for better scrap processing, to get some new materials, albeit very slowly.\n\nYou can get §4Ti§fn from Separating Iron/Copper from Heavy/Light Scrap dust.\nYou can also get §4Lead§f from Separating Crude Steel from Dense Scrap dust.\n\nYou can either connect a cable line to power both the recycler and the Separator or you can also just rotate the Battery Buffer when you need to.",
+          "desc:8": "Using some Alloys \u0026 Rubber you can make an §4Electromagnetic Separator§f, It can be used for better scrap processing, to get some new materials, albeit very slowly.\n\nYou can get §7Tin§r from Separating Iron/Copper from Heavy/Light Scrap dust.\nYou can also get §dLead§f from Separating Crude Steel from Dense Scrap dust.\n\nYou can either connect a cable line to power both the recycler and the Separator or you can also just rotate the Battery Buffer when you need to.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -6233,7 +6108,7 @@
         }
       }
     },
-    "111:10": {
+    "109:10": {
       "preRequisites:11": [
         101
       ],
@@ -6336,7 +6211,7 @@
         }
       }
     },
-    "112:10": {
+    "110:10": {
       "preRequisites:11": [
         111
       ],
@@ -6387,7 +6262,7 @@
         }
       }
     },
-    "113:10": {
+    "111:10": {
       "preRequisites:11": [
         101
       ],
@@ -6469,7 +6344,7 @@
         }
       }
     },
-    "114:10": {
+    "112:10": {
       "preRequisites:11": [
         113
       ],
@@ -6560,7 +6435,7 @@
         }
       }
     },
-    "115:10": {
+    "113:10": {
       "preRequisites:11": [
         110
       ],
@@ -6634,7 +6509,7 @@
         }
       }
     },
-    "116:10": {
+    "114:10": {
       "preRequisites:11": [
         138
       ],
@@ -6685,7 +6560,7 @@
         }
       }
     },
-    "117:10": {
+    "115:10": {
       "preRequisites:11": [
         120
       ],
@@ -6723,7 +6598,7 @@
         }
       }
     },
-    "118:10": {
+    "116:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -6796,20 +6671,20 @@
         }
       }
     },
-    "119:10": {
+    "117:10": {
       "preRequisites:11": [
         110
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Once you have the §4Generator§f back up and running, you\u0027ll be able to process materials much more efficiently and with less stress.\n\nYou might be able to find a few drums partially filled with some §aBiomass§f around the station to get you started.\n\nIt is highly recommended to have some energy buffer stored in batteries.\n\n§6§fThis produces 2 Amps of ULV power, so you will need at least a 2x cable of Red or 1x Green Alloy Cable to transfer power from both dynamos, this behaviour is specific to the Multiblocked mod.",
+          "desc:8": "Once you have the §4Generator§f back up and running, you\u0027ll be able to process materials much more efficiently and with less stress.\n\nYou might be able to find a few drums partially filled with some §aBiomass§f around the station to get you started.\n\nIt is highly recommended to have some energy buffer stored in batteries.\n\n§6§fThis produces 2 Amps of ULV power, so you will need at least a 2x cable of Red or 1x Green Alloy Cable to transfer power from the Dynamo.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 0,
+            "Damage:2": 3007,
             "OreDict:8": "",
-            "id:8": "mbd:station_generator_controller"
+            "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
           "issilent:1": 0,
@@ -6838,9 +6713,9 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 3007,
               "OreDict:8": "",
-              "id:8": "mbd:station_generator_controller"
+              "id:8": "gregtech:machine"
             },
             "1:10": {
               "Count:3": 22,
@@ -6849,16 +6724,16 @@
               "id:8": "contenttweaker:station_casing"
             },
             "2:10": {
-              "Count:3": 2,
-              "Damage:2": 0,
+              "Count:3": 1,
+              "Damage:2": 1225,
               "OreDict:8": "",
-              "id:8": "mbd:ulv_energy_output"
+              "id:8": "gregtech:machine"
             },
             "3:10": {
               "Count:3": 1,
-              "Damage:2": 0,
+              "Damage:2": 1180,
               "OreDict:8": "",
-              "id:8": "mbd:fluid_hatch"
+              "id:8": "gregtech:machine"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -6869,7 +6744,7 @@
         }
       }
     },
-    "120:10": {
+    "118:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -6905,7 +6780,7 @@
         }
       }
     },
-    "121:10": {
+    "119:10": {
       "preRequisites:11": [
         66
       ],
@@ -6966,7 +6841,7 @@
         }
       }
     },
-    "122:10": {
+    "120:10": {
       "preRequisites:11": [
         115
       ],
@@ -6977,7 +6852,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32005,
+            "Damage:2": 3005,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -7008,7 +6883,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32006,
+              "Damage:2": 3005,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -7069,7 +6944,7 @@
         }
       }
     },
-    "123:10": {
+    "121:10": {
       "preRequisites:11": [
         102
       ],
@@ -7154,7 +7029,7 @@
         }
       }
     },
-    "124:10": {
+    "122:10": {
       "preRequisites:11": [
         131
       ],
@@ -7205,7 +7080,7 @@
         }
       }
     },
-    "125:10": {
+    "123:10": {
       "preRequisiteTypes:7": [
         0,
         0,
@@ -7277,7 +7152,7 @@
         }
       }
     },
-    "126:10": {
+    "124:10": {
       "preRequisites:11": [
         125
       ],
@@ -7315,7 +7190,7 @@
         }
       }
     },
-    "127:10": {
+    "125:10": {
       "preRequisites:11": [
         125
       ],
@@ -7357,7 +7232,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32004,
+              "Damage:2": 3004,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -7406,7 +7281,7 @@
         }
       }
     },
-    "128:10": {
+    "126:10": {
       "preRequisites:11": [
         125
       ],
@@ -7448,7 +7323,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32000,
+              "Damage:2": 3000,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -7503,7 +7378,7 @@
         }
       }
     },
-    "129:10": {
+    "127:10": {
       "preRequisites:11": [
         127,
         128
@@ -7590,7 +7465,7 @@
         }
       }
     },
-    "130:10": {
+    "128:10": {
       "preRequisites:11": [
         116
       ],
@@ -7601,7 +7476,7 @@
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 32004,
+            "Damage:2": 3003,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
@@ -7632,7 +7507,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32005,
+              "Damage:2": 3003,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -7704,7 +7579,7 @@
         }
       }
     },
-    "131:10": {
+    "129:10": {
       "preRequisites:11": [
         122
       ],
@@ -7792,7 +7667,7 @@
         }
       }
     },
-    "132:10": {
+    "130:10": {
       "preRequisites:11": [
         128
       ],
@@ -7843,7 +7718,7 @@
         }
       }
     },
-    "133:10": {
+    "131:10": {
       "preRequisites:11": [
         131
       ],
@@ -7896,7 +7771,7 @@
         }
       }
     },
-    "134:10": {
+    "132:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -7969,7 +7844,7 @@
         }
       }
     },
-    "135:10": {
+    "133:10": {
       "preRequisites:11": [
         131
       ],
@@ -8043,7 +7918,7 @@
         }
       }
     },
-    "136:10": {
+    "134:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -8099,7 +7974,7 @@
         }
       }
     },
-    "137:10": {
+    "135:10": {
       "preRequisites:11": [
         128
       ],
@@ -8196,7 +8071,7 @@
         }
       }
     },
-    "138:10": {
+    "136:10": {
       "preRequisites:11": [
         137,
         129
@@ -8254,7 +8129,7 @@
         }
       }
     },
-    "139:10": {
+    "137:10": {
       "preRequisites:11": [
         155,
         9
@@ -8293,7 +8168,7 @@
         }
       }
     },
-    "140:10": {
+    "138:10": {
       "preRequisites:11": [
         116
       ],
@@ -8335,7 +8210,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 32002,
+              "Damage:2": 3001,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             },
@@ -8372,7 +8247,7 @@
         }
       }
     },
-    "141:10": {
+    "139:10": {
       "preRequisites:11": [
         130
       ],
@@ -8470,7 +8345,7 @@
         }
       }
     },
-    "142:10": {
+    "140:10": {
       "preRequisites:11": [
         6
       ],
@@ -8508,7 +8383,7 @@
         }
       }
     },
-    "143:10": {
+    "141:10": {
       "preRequisites:11": [
         9
       ],
@@ -8559,7 +8434,7 @@
         }
       }
     },
-    "144:10": {
+    "142:10": {
       "preRequisites:11": [
         9
       ],
@@ -8610,7 +8485,7 @@
         }
       }
     },
-    "145:10": {
+    "143:10": {
       "preRequisites:11": [
         9
       ],
@@ -8661,7 +8536,7 @@
         }
       }
     },
-    "146:10": {
+    "144:10": {
       "preRequisites:11": [
         9
       ],
@@ -8712,7 +8587,7 @@
         }
       }
     },
-    "147:10": {
+    "145:10": {
       "preRequisites:11": [
         9
       ],
@@ -8763,7 +8638,7 @@
         }
       }
     },
-    "148:10": {
+    "146:10": {
       "preRequisites:11": [
         9
       ],
@@ -8814,7 +8689,7 @@
         }
       }
     },
-    "149:10": {
+    "147:10": {
       "preRequisites:11": [
         9
       ],
@@ -8865,7 +8740,7 @@
         }
       }
     },
-    "150:10": {
+    "148:10": {
       "preRequisites:11": [
         9
       ],
@@ -8916,7 +8791,7 @@
         }
       }
     },
-    "151:10": {
+    "149:10": {
       "preRequisites:11": [
         9
       ],
@@ -8967,7 +8842,7 @@
         }
       }
     },
-    "152:10": {
+    "150:10": {
       "preRequisites:11": [
         9
       ],
@@ -9018,7 +8893,7 @@
         }
       }
     },
-    "153:10": {
+    "151:10": {
       "preRequisites:11": [
         9
       ],
@@ -9069,11 +8944,7 @@
         }
       }
     },
-    "154:10": {
-      "preRequisiteTypes:7": [
-        0,
-        1
-      ],
+    "152:10": {
       "preRequisites:11": [
         130,
         133
@@ -9137,7 +9008,7 @@
         }
       }
     },
-    "155:10": {
+    "153:10": {
       "preRequisites:11": [
         154
       ],
@@ -9222,7 +9093,7 @@
         }
       }
     },
-    "156:10": {
+    "154:10": {
       "preRequisites:11": [
         9
       ],
@@ -9273,7 +9144,7 @@
         }
       }
     },
-    "157:10": {
+    "155:10": {
       "preRequisites:11": [
         9
       ],
@@ -9324,7 +9195,7 @@
         }
       }
     },
-    "158:10": {
+    "156:10": {
       "preRequisites:11": [
         9
       ],
@@ -9375,7 +9246,7 @@
         }
       }
     },
-    "159:10": {
+    "157:10": {
       "preRequisites:11": [
         9
       ],
@@ -9426,7 +9297,7 @@
         }
       }
     },
-    "160:10": {
+    "158:10": {
       "preRequisites:11": [
         9
       ],
@@ -9477,7 +9348,7 @@
         }
       }
     },
-    "161:10": {
+    "159:10": {
       "preRequisites:11": [
         9
       ],
@@ -9528,7 +9399,7 @@
         }
       }
     },
-    "162:10": {
+    "160:10": {
       "preRequisites:11": [
         9
       ],
@@ -9579,7 +9450,7 @@
         }
       }
     },
-    "163:10": {
+    "161:10": {
       "preRequisites:11": [
         9
       ],
@@ -9630,7 +9501,7 @@
         }
       }
     },
-    "164:10": {
+    "162:10": {
       "preRequisites:11": [
         9
       ],
@@ -9681,7 +9552,7 @@
         }
       }
     },
-    "165:10": {
+    "163:10": {
       "preRequisites:11": [
         9
       ],
@@ -9732,7 +9603,7 @@
         }
       }
     },
-    "166:10": {
+    "164:10": {
       "preRequisites:11": [
         9
       ],
@@ -9783,7 +9654,7 @@
         }
       }
     },
-    "167:10": {
+    "165:10": {
       "preRequisites:11": [
         9
       ],
@@ -9834,7 +9705,7 @@
         }
       }
     },
-    "168:10": {
+    "166:10": {
       "preRequisites:11": [
         9
       ],
@@ -9885,7 +9756,7 @@
         }
       }
     },
-    "169:10": {
+    "167:10": {
       "preRequisites:11": [
         9
       ],
@@ -9936,7 +9807,7 @@
         }
       }
     },
-    "170:10": {
+    "168:10": {
       "preRequisites:11": [
         9
       ],
@@ -9987,7 +9858,7 @@
         }
       }
     },
-    "171:10": {
+    "169:10": {
       "preRequisites:11": [
         9
       ],
@@ -10038,7 +9909,7 @@
         }
       }
     },
-    "172:10": {
+    "170:10": {
       "preRequisites:11": [
         9
       ],
@@ -10089,7 +9960,7 @@
         }
       }
     },
-    "173:10": {
+    "171:10": {
       "preRequisites:11": [
         9
       ],
@@ -10140,7 +10011,7 @@
         }
       }
     },
-    "174:10": {
+    "172:10": {
       "preRequisites:11": [
         9
       ],
@@ -10191,7 +10062,7 @@
         }
       }
     },
-    "175:10": {
+    "173:10": {
       "preRequisites:11": [
         9
       ],
@@ -10242,7 +10113,7 @@
         }
       }
     },
-    "176:10": {
+    "174:10": {
       "preRequisites:11": [
         9
       ],
@@ -10293,7 +10164,7 @@
         }
       }
     },
-    "177:10": {
+    "175:10": {
       "preRequisites:11": [
         9
       ],
@@ -10344,7 +10215,7 @@
         }
       }
     },
-    "178:10": {
+    "176:10": {
       "preRequisites:11": [
         9
       ],
@@ -10395,7 +10266,7 @@
         }
       }
     },
-    "179:10": {
+    "177:10": {
       "preRequisites:11": [
         9
       ],
@@ -10446,7 +10317,7 @@
         }
       }
     },
-    "180:10": {
+    "178:10": {
       "preRequisites:11": [
         9
       ],
@@ -10497,7 +10368,7 @@
         }
       }
     },
-    "181:10": {
+    "179:10": {
       "preRequisites:11": [
         9
       ],
@@ -10548,7 +10419,7 @@
         }
       }
     },
-    "182:10": {
+    "180:10": {
       "preRequisites:11": [
         9
       ],
@@ -10599,9 +10470,10 @@
         }
       }
     },
-    "183:10": {
+    "181:10": {
       "preRequisites:11": [
-        16
+        16,
+        44
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -10650,7 +10522,7 @@
         }
       }
     },
-    "184:10": {
+    "182:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -10707,7 +10579,7 @@
         }
       }
     },
-    "185:10": {
+    "183:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -10756,7 +10628,7 @@
         }
       }
     },
-    "186:10": {
+    "184:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -10805,7 +10677,7 @@
         }
       }
     },
-    "187:10": {
+    "185:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -10860,7 +10732,7 @@
         }
       }
     },
-    "188:10": {
+    "186:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -10909,7 +10781,7 @@
         }
       }
     },
-    "189:10": {
+    "187:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -10958,7 +10830,7 @@
         }
       }
     },
-    "190:10": {
+    "188:10": {
       "preRequisites:11": [
         193
       ],
@@ -11026,7 +10898,7 @@
         }
       }
     },
-    "191:10": {
+    "189:10": {
       "preRequisites:11": [
         193
       ],
@@ -11041,10 +10913,10 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:weedwood_workbench"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Crafting Tables",
+          "name:8": "Thrive!",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -11094,9 +10966,9 @@
         }
       }
     },
-    "192:10": {
+    "190:10": {
       "preRequisites:11": [
-        193
+        236
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -11109,7 +10981,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:items_misc"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Lurkers",
@@ -11378,7 +11250,7 @@
         }
       }
     },
-    "193:10": {
+    "191:10": {
       "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
@@ -11391,7 +11263,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:wisp"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 1,
           "lockedprogress:1": 0,
           "name:8": "The Betweenlands",
@@ -11454,10 +11326,11 @@
         }
       }
     },
-    "194:10": {
+    "192:10": {
       "preRequisites:11": [
         205,
-        206
+        206,
+        44
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -11470,7 +11343,7 @@
             "OreDict:8": "",
             "id:8": "contenttweaker:machine_coil_octine"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Octine Coils",
@@ -11506,7 +11379,7 @@
         }
       }
     },
-    "195:10": {
+    "193:10": {
       "preRequisites:11": [
         191
       ],
@@ -11524,7 +11397,7 @@
               "Fluid:10": {}
             }
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Rubber Tree Farming",
@@ -11586,14 +11459,14 @@
         }
       }
     },
-    "196:10": {
+    "194:10": {
       "preRequisites:11": [
         191
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Left click after placing the Pestle in the Mortar.",
+          "desc:8": "Left click after placing the Pestle in the Mortar.\n\nCragrock can be found in the Coarse Islands and Raised Isles biomes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11644,7 +11517,7 @@
         }
       }
     },
-    "197:10": {
+    "195:10": {
       "preRequisites:11": [
         191
       ],
@@ -11695,7 +11568,7 @@
         }
       }
     },
-    "198:10": {
+    "196:10": {
       "preRequisites:11": [
         197
       ],
@@ -11762,9 +11635,9 @@
         }
       }
     },
-    "199:10": {
+    "197:10": {
       "preRequisites:11": [
-        193
+        215
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -11813,14 +11686,14 @@
         }
       }
     },
-    "200:10": {
+    "198:10": {
       "preRequisites:11": [
-        191
+        193
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11864,14 +11737,14 @@
         }
       }
     },
-    "201:10": {
+    "199:10": {
       "preRequisites:11": [
-        193
+        230
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This gem like material is used to craft Vials for Potions.\n\nCan be found inside of Giant Weedwood Trees.",
+          "desc:8": "This gem like material is used to craft Vials for Potions.\n\nCan be found inside of Giant Weedwood Trees found uncommonly in Swamplands, Coarse Islands, and Marsh biomes, ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -11879,7 +11752,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:dentrothyst_shard_green"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Dentrothyst",
@@ -11932,7 +11805,7 @@
         }
       }
     },
-    "202:10": {
+    "200:10": {
       "preRequisiteTypes:7": [
         0,
         1
@@ -12000,7 +11873,7 @@
         }
       }
     },
-    "203:10": {
+    "201:10": {
       "preRequisites:11": [
         196,
         198,
@@ -12011,7 +11884,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "In order to create an §dInfusion§r, you\u0027ll first need to feed your pet §6Gecko§r some §aground down items§r to discover §eAspects§r.",
+          "desc:8": "In order to create an §dInfusion§r, you\u0027ll first need to feed your pet §6Gecko§r some §aground down items§r to discover §eAspects§r.\n\nOnce you\u0027ve collected information on many items, you\u0027ll be able to select an Elixir to make. We\u0027ll take the §dElixir of Healing§r as an example.\n\nLooking at the page for §dElixir of Healing§r§r in your §bHerblore Book§r, you\u0027ll see that it requires the §cYeowynn§r and §2Ordaniss§r aspects.\n\nCollect some items containing these aspects, and we\u0027ll start getting the §6Infuser§r ready.\n\nThe §6Infuser§r needs to be above Smoldering Peat, which you can ignite by dropping moss on a Peat block and using an §eOctine Ingot §ron it. You\u0027ll also need up to 3 buckets of Swamp Water inside. Once its heated up, you\u0027ll start to see the Evaporation timer rising. If this gets to maximum before you stir it, you\u0027ll lose a bucket of what\u0027s inside.\n\nPlace up to 6 items inside, then left click to stir. If you made a valid recipe it will show up on the right, and will take quite a while to stir into a working §dInfusion§r. If it doesn\u0027t make a valid recipe it will be quite quick. A shower of bubbles and a change of color signifies its safe to remove the §dInfusion§r with a bucket or 3. \n\nOnce you\u0027ve got your bucket of §dInfusion§r, you\u0027ll be wanting to turn it into a usable product. The next step is simple, place it into an Alembic and wait! Once you don\u0027t see any more particles you can extract it with §eDentrothyst Vials§r.\n\nIf you brewed an Elixir recipe, you\u0027ll get that with variable strength and durablity based on the amounts of aspect you added. If not, you\u0027ll get Vials filled with purifed aspects, which have various uses.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12060,190 +11933,7 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "thebetweenlands:manual_hl",
-              "tag:10": {
-                "category:8": "aspect_category",
-                "discoveries:9": {
-                  "0:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Ordaniis"
-                      },
-                      "1:10": {
-                        "type:8": "Yeowynn"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 0,
-                      "id:8": "thebetweenlands:sap_spit"
-                    }
-                  },
-                  "1:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Azuwynn"
-                      },
-                      "1:10": {
-                        "type:8": "Ordaniis"
-                      },
-                      "2:10": {
-                        "type:8": "Yeowynn"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 47,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "2:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Byariis"
-                      },
-                      "1:10": {
-                        "type:8": "Celawynn"
-                      },
-                      "2:10": {
-                        "type:8": "Yeowynn"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 3,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "3:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Azuwynn"
-                      },
-                      "1:10": {
-                        "type:8": "Wodren"
-                      },
-                      "2:10": {
-                        "type:8": "Yeowynn"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 55,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "4:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Fergalaz"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 32,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "5:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Azuwynn"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 27,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "6:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Byrginaz"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 29,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "7:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Firnalaz"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 28,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "8:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Byariis"
-                      },
-                      "1:10": {
-                        "type:8": "Ordaniis"
-                      },
-                      "2:10": {
-                        "type:8": "Uduriis"
-                      },
-                      "3:10": {
-                        "type:8": "Yeowynn"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 56,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "9:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Armaniis"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 35,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "10:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Armaniis"
-                      },
-                      "1:10": {
-                        "type:8": "Firnalaz"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 37,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  },
-                  "11:10": {
-                    "aspects:9": {
-                      "0:10": {
-                        "type:8": "Yunugaz"
-                      }
-                    },
-                    "item:10": {
-                      "Count:1": 1,
-                      "Damage:2": 36,
-                      "id:8": "thebetweenlands:items_crushed"
-                    }
-                  }
-                },
-                "page_number:3": 31
-              }
+              "id:8": "thebetweenlands:manual_hl"
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -12281,27 +11971,10 @@
             }
           },
           "taskID:8": "bq_standard:optional_retrieval"
-        },
-        "3:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 3,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "thebetweenlands:sickle"
-            }
-          },
-          "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
-    "204:10": {
+    "202:10": {
       "preRequisites:11": [
         203
       ],
@@ -12325,7 +11998,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Shalowbreath",
+          "name:8": "Shallowbreath",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -12599,7 +12272,7 @@
         }
       }
     },
-    "205:10": {
+    "203:10": {
       "preRequisites:11": [
         210
       ],
@@ -12614,7 +12287,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:octine_ingot"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Octine",
@@ -12650,7 +12323,7 @@
         }
       }
     },
-    "206:10": {
+    "204:10": {
       "preRequisites:11": [
         210
       ],
@@ -12665,7 +12338,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:items_misc"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Syrmorite",
@@ -12701,7 +12374,7 @@
         }
       }
     },
-    "207:10": {
+    "205:10": {
       "preRequisites:11": [
         212
       ],
@@ -12752,14 +12425,14 @@
         }
       }
     },
-    "208:10": {
+    "206:10": {
       "preRequisites:11": [
-        193
+        236
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Shamblers will grab you with their long tongue and drag you back to the water.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -12993,16 +12666,16 @@
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "thebetweenlands:shambler_tongue"
+              "id:8": "thebetweenlands:grappling_hook"
             }
           },
           "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
-    "209:10": {
+    "207:10": {
       "preRequisites:11": [
-        193
+        236
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -13239,23 +12912,23 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 21,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "thebetweenlands:items_misc"
+              "id:8": "thebetweenlands:fishing_spear"
             }
           },
           "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
-    "210:10": {
+    "208:10": {
       "preRequisites:11": [
         193
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Cavern Layer extends down to Y\u003d46\\\n\nIf you didn\u0027t bring a furnace with you, you\u0027ll need to craft up the Sulfur Furnace.",
+          "desc:8": "The Cavern Layer extends down to Y\u003d46\n\nIf you didn\u0027t bring a furnace with you, you\u0027ll need to craft up the Sulfur Furnace.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13263,7 +12936,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:betweenstone"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Going Mining!",
@@ -13299,15 +12972,14 @@
         }
       }
     },
-    "211:10": {
+    "209:10": {
       "preRequisites:11": [
-        225,
-        226
+        234
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Once the §6Spirit Tree§r has grown (you can use §aGround Dried Swamp Reeds§r to help it along), a §dSmall Tree Spirit§r can be found in its trunk. It will move to any nearby Spirit Logs, and help defend against any monsters that might show up to bother you.\n\nMost importantly at this point, you can also feed it §bCompost§r in exchange for§e Sap Spit§r!",
+          "desc:8": "Snails can be bred using Sludge Balls or §eSap Spit§r. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 3,
@@ -13342,7 +13014,7 @@
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "thebetweenlands:sap_spit"
+            "id:8": "thebetweenlands:sludge_ball"
           },
           "onHit:1": 0,
           "onInteract:1": 1,
@@ -13586,7 +13258,7 @@
         }
       }
     },
-    "212:10": {
+    "210:10": {
       "preRequisites:11": [
         210
       ],
@@ -13637,7 +13309,7 @@
         }
       }
     },
-    "213:10": {
+    "211:10": {
       "preRequisites:11": [
         212
       ],
@@ -13652,7 +13324,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:items_misc"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Valonite",
@@ -13688,7 +13360,7 @@
         }
       }
     },
-    "214:10": {
+    "212:10": {
       "preRequisites:11": [
         212
       ],
@@ -13739,7 +13411,7 @@
         }
       }
     },
-    "215:10": {
+    "213:10": {
       "preRequisites:11": [
         210
       ],
@@ -13790,9 +13462,9 @@
         }
       }
     },
-    "216:10": {
+    "214:10": {
       "preRequisites:11": [
-        191
+        193
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -13841,7 +13513,7 @@
         }
       }
     },
-    "217:10": {
+    "215:10": {
       "preRequisites:11": [
         197
       ],
@@ -13919,7 +13591,7 @@
         }
       }
     },
-    "218:10": {
+    "216:10": {
       "preRequisites:11": [
         197
       ],
@@ -13976,9 +13648,9 @@
         }
       }
     },
-    "219:10": {
+    "217:10": {
       "preRequisites:11": [
-        193
+        236
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -14215,16 +13887,16 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 59,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "thebetweenlands:items_misc"
+              "id:8": "thebetweenlands:fishing_spear_amphibious_robust"
             }
           },
           "taskID:8": "bq_standard:optional_retrieval"
         }
       }
     },
-    "220:10": {
+    "218:10": {
       "preRequisites:11": [
         218
       ],
@@ -14334,11 +14006,7 @@
         }
       }
     },
-    "221:10": {
-      "preRequisiteTypes:7": [
-        0,
-        1
-      ],
+    "219:10": {
       "preRequisites:11": [
         220,
         225
@@ -14346,7 +14014,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Trimming a Bubbler Crab or Silt Crab results in 2 Crab Claws and 2 Crabsticks. \n\nAfter Defeating the Giant Tree Spirit, some of the Spirit Wood will be repaced by Rotten Bark",
+          "desc:8": "Trimming a Bubbler Crab or Silt Crab results in 2 Crab Claws and 2 Crabsticks. \n\nAfter Defeating the §bGiant Tree Spirit§r, some of the Spirit Wood will be repaced by Rotten Bark",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14407,7 +14075,7 @@
         }
       }
     },
-    "222:10": {
+    "220:10": {
       "preRequisites:11": [
         220
       ],
@@ -14482,13 +14150,8 @@
         }
       }
     },
-    "223:10": {
-      "preRequisiteTypes:7": [
-        0,
-        1
-      ],
+    "221:10": {
       "preRequisites:11": [
-        190,
         205
       ],
       "properties:10": {
@@ -14502,7 +14165,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:purifier"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "The Purifier",
@@ -14538,7 +14201,7 @@
         }
       }
     },
-    "224:10": {
+    "222:10": {
       "preRequisites:11": [
         197
       ],
@@ -14612,12 +14275,14 @@
         }
       }
     },
-    "225:10": {
-      "preRequisites:11": [],
+    "223:10": {
+      "preRequisites:11": [
+        230
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This battle will be quite challanging! You\u0027ll need to hit the large face on the side of the trunk, while avoiding lots of special attacks.",
+          "desc:8": "This battle will be quite challanging! You\u0027ll need to hit the large face on the side of the trunk, while avoiding lots of special attacks.\n\nThe difficulty can be tweaked by adjusting the amount of wisps on the pedestals, with harder fights offering more rewards.\n\nSpirit Fruit can be obtained by breaking Spirit Tree Leaves, either on the large tree of the smaller one you can grow after defeating the boss.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14888,7 +14553,7 @@
         }
       }
     },
-    "226:10": {
+    "224:10": {
       "preRequisites:11": [
         191
       ],
@@ -14945,7 +14610,7 @@
         }
       }
     },
-    "227:10": {
+    "225:10": {
       "preRequisites:11": [
         226,
         224
@@ -14953,13 +14618,13 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Dug holes need to be filled with Compost before you\u0027re able to grow plants on them.",
+          "desc:8": "Dug holes need to be filled with Compost before you\u0027re able to grow plants on them. Compost lasts for three harvests before needing to be replenished.\n\n§eSpores§r are a common drop from §eSporelings§r, which spawn on Shelf Fungus. Most commonly found on Giant Roots in the Coarse Islands biome.\n\n\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "minecraft:nether_star"
+            "id:8": "thebetweenlands:yellow_dotted_fungus"
           },
           "ismain:1": 0,
           "issilent:1": 0,
@@ -14971,17 +14636,64 @@
           "simultaneous:1": 0,
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
+          "tasklogic:8": "OR",
           "visibility:8": "CHAIN"
         }
       },
       "questID:3": 227,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:spores"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:yellow_dotted_fungus"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:middle_fruit_bush_seeds"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:middle_fruit"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
-    "228:10": {
+    "226:10": {
       "preRequisites:11": [
-        210
+        223
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -14994,7 +14706,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:crimson_middle_gem"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Middle Gems",
@@ -15064,7 +14776,7 @@
         }
       }
     },
-    "229:10": {
+    "227:10": {
       "preRequisites:11": [
         230
       ],
@@ -15115,7 +14827,7 @@
         }
       }
     },
-    "230:10": {
+    "228:10": {
       "preRequisites:11": [
         228
       ],
@@ -15130,7 +14842,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:empty_amate_map"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "The Amate Map",
@@ -15166,14 +14878,14 @@
         }
       }
     },
-    "231:10": {
+    "229:10": {
       "preRequisites:11": [
-        193
+        236
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "These are literally the worst, but their Hearts are pretty useful.",
+          "desc:8": "After taking some damage, Wights will fly towards you in an attempt to possess you. Try to keep them away.\n\nWight\u0027s Hearts are quite useful.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15181,7 +14893,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:wight_heart"
           },
-          "ismain:1": 0,
+          "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "The Wights",
@@ -15441,6 +15153,3122 @@
           "taskID:8": "bq_standard:optional_retrieval"
         }
       }
+    },
+    "230:10": {
+      "preRequisites:11": [
+        195
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "These are invaluble at traversing mud propperly",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:rubber_boots"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rubber Boots",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 232,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:rubber_boots"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "231:10": {
+      "preRequisites:11": [
+        236
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Peat Mummys spawn in the Sludge Plains and Marsh biomes. \n\nYou can right click to throw §eShimmerstones§r, attacting their attention, after you\u0027ve collected a few.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:shimmer_stone",
+            "tag:10": {
+              "shimmering:1": 1,
+              "shimmeringTicks:3": 0
+            }
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Shimmerstone",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 233,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:peat_mummy",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 110.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 1.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.20000000298023224,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 40.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 6.0,
+                "Name:8": "generic.attackDamage"
+              },
+              "14:10": {
+                "Base:6": 0.0,
+                "Name:8": "bl.carryShimmerstone"
+              },
+              "15:10": {
+                "Base:6": 0.0,
+                "Name:8": "bl.isDreadfulPeatMummyBoss"
+              },
+              "16:10": {
+                "Base:6": 100.0,
+                "Name:8": "bl.spawnLength"
+              },
+              "17:10": {
+                "Base:6": 2.0,
+                "Name:8": "bl.spawnOffset"
+              },
+              "18:10": {
+                "Base:6": 8.0,
+                "Name:8": "bl.spawnRange"
+              },
+              "19:10": {
+                "Base:6": 160.0,
+                "Name:8": "bl.chargingCooldown"
+              },
+              "20:10": {
+                "Base:6": 60.0,
+                "Name:8": "bl.chargingPreparationSpeed"
+              },
+              "21:10": {
+                "Base:6": 320.0,
+                "Name:8": "bl.chargingTime"
+              },
+              "22:10": {
+                "Base:6": 0.55,
+                "Name:8": "bl.chargingSpeed"
+              },
+              "23:10": {
+                "Base:6": 1.65,
+                "Name:8": "bl.chargingDamageMultiplier"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 33,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 1.2,
+                "OrigWidth:5": 1.0,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 5500.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 110.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.699999988079071,
+              "4:6": 1.2000000476837158,
+              "5:6": 0.699999988079071
+            },
+            "Rotation:9": {
+              "0:5": 4.0523443,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.699999988079071,
+              "4:6": 1.2000000476837158,
+              "5:6": 0.699999988079071
+            },
+            "UUIDLeast:4": -6589877971185203626,
+            "UUIDMost:4": -5914400693814082672,
+            "UpdateBlocked:1": 0,
+            "chargingPreparation:3": 0,
+            "chargingState:1": 0,
+            "id:8": "thebetweenlands:peat_mummy",
+            "spawningTicks:3": 0
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:shimmer_stone",
+              "tag:10": {
+                "shimmering:1": 0,
+                "shimmeringTicks:3": 0
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "232:10": {
+      "preRequisites:11": [
+        236
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Sludge spawn in the Sludge Plains.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:sludge_ball"
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Sludge Balls",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 234,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:sludge",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 20.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.6,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 16.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 1.0,
+                "Name:8": "bl.sludgeTrail"
+              },
+              "14:10": {
+                "Base:6": 1.5,
+                "Name:8": "generic.attackDamage"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 33,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 1.2,
+                "OrigWidth:5": 1.1,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 1000.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "ForgeData:10": {},
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 20.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.800000011920929,
+              "4:6": 1.2000000476837158,
+              "5:6": 0.800000011920929
+            },
+            "Rotation:9": {
+              "0:5": 2.1721098,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.800000011920929,
+              "4:6": 1.2000000476837158,
+              "5:6": 0.800000011920929
+            },
+            "UUIDLeast:4": -4833881872138895625,
+            "UUIDMost:4": 6060636179578635956,
+            "UpdateBlocked:1": 0,
+            "id:8": "thebetweenlands:sludge",
+            "wasOnGround:1": 0
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "1:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:smoll_sludge",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 14.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.6,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 16.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 0.0,
+                "Name:8": "bl.sludgeTrail"
+              },
+              "14:10": {
+                "Base:6": 1.0,
+                "Name:8": "generic.attackDamage"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 33,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 0.7,
+                "OrigWidth:5": 0.7,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 700.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "ForgeData:10": {},
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 14.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.3499999940395355,
+              "1:6": 0.0,
+              "2:6": -0.3499999940395355,
+              "3:6": 0.3499999940395355,
+              "4:6": 0.699999988079071,
+              "5:6": 0.3499999940395355
+            },
+            "Rotation:9": {
+              "0:5": 0.3950912,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.3499999940395355,
+              "1:6": 0.0,
+              "2:6": -0.3499999940395355,
+              "3:6": 0.3499999940395355,
+              "4:6": 0.699999988079071,
+              "5:6": 0.3499999940395355
+            },
+            "UUIDLeast:4": -8644064613638569971,
+            "UUIDMost:4": 1296284851245695905,
+            "UpdateBlocked:1": 0,
+            "id:8": "thebetweenlands:smoll_sludge",
+            "wasOnGround:1": 0
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:sludge_ball"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "233:10": {
+      "preRequisites:11": [
+        236
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "These spawn in tar pits, most commonly found in the Sludge Plains.\n\nTar Drops can be used on your Weedwood Boat to increase maneuverability.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 26,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:items_misc"
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tar",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 235,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:tar_beast",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 100.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 1.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.22,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 25.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 6.0,
+                "Name:8": "generic.attackDamage"
+              },
+              "14:10": {
+                "Base:6": 70.0,
+                "Name:8": "bl.shedCooldown"
+              },
+              "15:10": {
+                "Base:6": 10.0,
+                "Name:8": "bl.shedSpeed"
+              },
+              "16:10": {
+                "Base:6": 400.0,
+                "Name:8": "bl.suckCooldown"
+              },
+              "17:10": {
+                "Base:6": 40.0,
+                "Name:8": "bl.suckPreparationSpeed"
+              },
+              "18:10": {
+                "Base:6": 130.0,
+                "Name:8": "bl.suckLength"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 33,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 2.0,
+                "OrigWidth:5": 1.25,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 5000.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "ForgeData:10": {},
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 100.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.949999988079071,
+              "4:6": 2.0,
+              "5:6": 0.949999988079071
+            },
+            "Rotation:9": {
+              "0:5": 4.578781,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.949999988079071,
+              "4:6": 2.0,
+              "5:6": 0.949999988079071
+            },
+            "UUIDLeast:4": -8266851032497696392,
+            "UUIDMost:4": -2730988454270057108,
+            "UpdateBlocked:1": 0,
+            "grow_timer:3": 40,
+            "id:8": "thebetweenlands:tar_beast",
+            "shedCooldown:3": 70,
+            "sheddingProgress:3": 0,
+            "sheddingState:1": 0,
+            "suckingCooldown:3": 400,
+            "suckingPreparation:3": 0,
+            "suckingProgress:3": 0,
+            "suckingState:1": 0
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 26,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:items_misc"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "234:10": {
+      "preRequisites:11": [
+        193
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You\u0027ll want to put a high emphasis on gearing up. Keep a supply of food and potions whenever possible.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:octine_sword"
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "It\u0027s a Cruel New World",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 236,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:weedwood_sword"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:bone_sword"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "2:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 2,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:octine_sword"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "235:10": {
+      "preRequisites:11": [
+        193
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You\u0027ll probably be dying a lot, so its highly recommended to set up a base of operations as soon as possible.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:moss_bed_item"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Home Sweet Home",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 237,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:moss_bed_item"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "236:10": {
+      "preRequisites:11": [
+        231,
+        207
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This is one of the only ways to repair your gear in the Betweenlands, can turn in Item Scrolls, and summon entities.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:animator"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Animator",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 238,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:animator"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "237:10": {
+      "preRequisites:11": [
+        233,
+        234,
+        203,
+        241
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:mummy_bait"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Mummy Bait",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 239,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:mummy_bait"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 1,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:dreadful_mummy",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 550.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 1.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.3,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 40.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 8.0,
+                "Name:8": "generic.attackDamage"
+              },
+              "14:10": {
+                "Base:6": 180.0,
+                "Name:8": "bl.spawnLength"
+              },
+              "15:10": {
+                "Base:6": 3.0,
+                "Name:8": "bl.spawnOffset"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 33,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 2.0,
+                "OrigWidth:5": 1.1,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 27500.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "ForgeData:10": {},
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 550.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.800000011920929,
+              "4:6": 2.0,
+              "5:6": 0.800000011920929
+            },
+            "Rotation:9": {
+              "0:5": 0.6220535,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.800000011920929,
+              "4:6": 2.0,
+              "5:6": 0.800000011920929
+            },
+            "UUIDLeast:4": -7994454999657856390,
+            "UUIDMost:4": 1126818317360447792,
+            "UpdateBlocked:1": 0,
+            "deathTicks:3": 0,
+            "id:8": "thebetweenlands:dreadful_mummy",
+            "initialPosY:6": 0.0,
+            "previousYOffset:5": 0.0,
+            "spawningState:3": 0
+          },
+          "taskID:8": "bq_standard:hunt"
+        }
+      }
+    },
+    "238:10": {
+      "preRequisiteTypes:7": [
+        1,
+        0
+      ],
+      "preRequisites:11": [
+        226,
+        225
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Once your §6Spirit Tree§r has grown (you can use §aGround Dried Swamp Reeds§r to help it along), a §dSmall Tree Spirit§r can be found in its trunk. It will move to any nearby Spirit Logs, and help defend against any monsters that might show up to bother you.\n\nMost importantly at this point, you can also feed it §bCompost§r in exchange for§e Sap Spit§r!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:sap_spit"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Sap Spit",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 240,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:sap_spit"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "239:10": {
+      "preRequisites:11": [
+        235,
+        238
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "If you end up with extra of these, having a few §eTarminions§r around to help fight sounds like a good time.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 25,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:items_misc"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Animating a Tar Heart",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 241,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 25,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:items_misc"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "240:10": {
+      "preRequisites:11": [
+        230
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The first part of the Dungeon will require you to solve a §alaser maze§r in order to open the Door leading to the §4Labyrinthine Vaults§r.\n\nLighting the Braziers will spawn some §6Emberling Shamans§r that will drop §6Undying Embers§r when defeated.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:mud_tower_brazier"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Its Sludgen\u0027 Time",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 242,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "advancement_id:8": "thebetweenlands:adventurer/light_the_braziers",
+          "index:3": 0,
+          "taskID:8": "bq_standard:advancement"
+        }
+      }
+    },
+    "241:10": {
+      "preRequisites:11": [
+        242
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Each floor will have a §6Door Code §ron the stair down. This consists of 3 horizantal rows randomized to create a unique pattern. In order to unlock the next floor, you\u0027ll need to change the lock on the Door down§r to match the pattern at the beginning of the floor.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:dungeon_door_runes"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Labyrinthine Vaults",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 243,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "advancement_id:8": "thebetweenlands:adventurer/a_real_poopy_experience",
+          "index:3": 0,
+          "taskID:8": "bq_standard:advancement"
+        }
+      }
+    },
+    "242:10": {
+      "preRequisites:11": [
+        230
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Can be found uncommonly in Coarse Islands and Raised Isles biomes.\n\nBe sure to properly prepare!",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:glowing_smooth_cragrock"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Cragrock Tower",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 244,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "advancement_id:8": "thebetweenlands:adventurer/tall_tough",
+          "index:3": 0,
+          "taskID:8": "bq_standard:advancement"
+        }
+      }
+    },
+    "243:10": {
+      "preRequisites:11": [
+        230
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:glowing_betweenstone_tile"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Wight Tower",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 245,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "advancement_id:8": "thebetweenlands:adventurer/enter_the_stronghold",
+          "index:3": 0,
+          "taskID:8": "bq_standard:advancement"
+        }
+      }
+    },
+    "244:10": {
+      "preRequisites:11": [
+        245
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Reaching the fourth floor gives access to a special room called the Armory, where you\u0027ll be able to acquire the Shockwave Sword.\n\nThis is an excellent crowd control weapon, able to hit all enemys in front of you.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:shockwave_sword"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Shockwave Sword!",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 246,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:shockwave_sword"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "245:10": {
+      "preRequisites:11": [
+        245,
+        244
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Pyrads are tree spirits that can spawn around Giant Weedwood Trees and from Monster Spawners in Cragrock Towers and the Wight Fortress. \n\nIf found around Giant Weedwood Trees, Pyrads are passive innitially. If damaged enough, a block is taken from their tree, or if its night time, they will become active and try to attack. \n\nIf killed during their fireball chargeup time, they have achance to drop §cPyrad Flames§r.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 40,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:pyrad_flame"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Pyrads",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 247,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:pyrad",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 60.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.1,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 28.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 6.0,
+                "Name:8": "generic.attackDamage"
+              },
+              "14:10": {
+                "Base:6": 6.0,
+                "Name:8": "bl.flamesPerAttack"
+              },
+              "15:10": {
+                "Base:6": 0.0,
+                "Name:8": "bl.pyradAgressive"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 20,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 0.0,
+                "OrigWidth:5": 0.0,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 3000.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "ForgeData:10": {},
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 60.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.30000001192092896,
+              "4:6": 1.7999999523162842,
+              "5:6": 0.30000001192092896
+            },
+            "Rotation:9": {
+              "0:5": 4.9983997,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.30000001192092896,
+              "1:6": 0.0,
+              "2:6": -0.30000001192092896,
+              "3:6": 0.30000001192092896,
+              "4:6": 1.7999999523162842,
+              "5:6": 0.30000001192092896
+            },
+            "UUIDLeast:4": -4901473518383888525,
+            "UUIDMost:4": -2584302173191256969,
+            "UpdateBlocked:1": 0,
+            "active:1": 0,
+            "id:8": "thebetweenlands:pyrad"
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:pyrad_flame"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "246:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Ash Sprites have a chance to spawn when breaking §dUrns of Chance§r. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 44,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:items_misc"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Ash Sprites",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 248,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:ash_sprite",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 14.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.699999988079071,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 16.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 4.0,
+                "Name:8": "generic.attackDamage"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 20,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 0.8,
+                "OrigWidth:5": 0.4,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 700.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "ForgeData:10": {},
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 14.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.20000000298023224,
+              "1:6": 0.0,
+              "2:6": -0.20000000298023224,
+              "3:6": 0.20000000298023224,
+              "4:6": 0.800000011920929,
+              "5:6": 0.20000000298023224
+            },
+            "Rotation:9": {
+              "0:5": 5.1895747,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.20000000298023224,
+              "1:6": 0.0,
+              "2:6": -0.20000000298023224,
+              "3:6": 0.20000000298023224,
+              "4:6": 0.800000011920929,
+              "5:6": 0.20000000298023224
+            },
+            "UUIDLeast:4": -6224545132657644485,
+            "UUIDMost:4": -8960026094683078289,
+            "UpdateBlocked:1": 0,
+            "id:8": "thebetweenlands:ash_sprite"
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 44,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:items_misc"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "247:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Crypt Crawlers spawn on the 6th level of the Labyrinth and can drop a variety of loot. ",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 47,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:items_misc"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Crypt Crawlers",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 249,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "damageType:8": "",
+          "ignoreNBT:1": 1,
+          "index:3": 0,
+          "required:3": 1,
+          "subtypes:1": 1,
+          "target:8": "thebetweenlands:crypt_crawler",
+          "targetNBT:10": {
+            "AbsorptionAmount:5": 0.0,
+            "Air:2": 300,
+            "ArmorDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085,
+              "2:5": 0.085,
+              "3:5": 0.085
+            },
+            "ArmorItems:9": {
+              "0:10": {},
+              "1:10": {},
+              "2:10": {},
+              "3:10": {}
+            },
+            "Attributes:9": {
+              "0:10": {
+                "Base:6": 1.0,
+                "Name:8": "lucraftcore.stepHeight"
+              },
+              "1:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.extraPunchDamage"
+              },
+              "2:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.fallResistance"
+              },
+              "3:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.jumpHeight"
+              },
+              "4:10": {
+                "Base:6": 0.0,
+                "Name:8": "lucraftcore.sprintSpeed"
+              },
+              "5:10": {
+                "Base:6": 100.0,
+                "Name:8": "cyberware.tolerance"
+              },
+              "6:10": {
+                "Base:6": 20.0,
+                "Name:8": "generic.maxHealth"
+              },
+              "7:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.knockbackResistance"
+              },
+              "8:10": {
+                "Base:6": 0.699999988079071,
+                "Name:8": "generic.movementSpeed"
+              },
+              "9:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armor"
+              },
+              "10:10": {
+                "Base:6": 0.0,
+                "Name:8": "generic.armorToughness"
+              },
+              "11:10": {
+                "Base:6": 1.0,
+                "Name:8": "forge.swimSpeed"
+              },
+              "12:10": {
+                "Base:6": 16.0,
+                "Name:8": "generic.followRange"
+              },
+              "13:10": {
+                "Base:6": 2.0,
+                "Name:8": "generic.attackDamage"
+              }
+            },
+            "CanPickUpLoot:1": 0,
+            "DeathTime:2": 0,
+            "Dimension:3": 20,
+            "FallDistance:5": 0.0,
+            "FallFlying:1": 0,
+            "Fire:2": -1,
+            "ForgeCaps:10": {
+              "enderutilities:entity_portal_cooldown:10": {
+                "LastInPortal:4": 0
+              },
+              "llibrary:extendedentitydatacapability:10": {},
+              "lucraftcore:size_changing:10": {
+                "EstimatedSize:5": 0.0,
+                "OrigHeight:5": 1.0,
+                "OrigWidth:5": 0.5,
+                "Size:5": 0.0,
+                "SizeChanger:8": "lucraftcore:default",
+                "SizePerTick:5": 0.0
+              },
+              "lucraftcore:superpower_capability:10": {
+                "Data:10": {},
+                "HasPlayedBefore:1": 0
+              },
+              "nuclearcraft:capability_entity_rads:10": {
+                "consumed:1": 0,
+                "externalRadiationResistance:6": 0.0,
+                "giveGuidebook:1": 0,
+                "internalRadiationResistance:6": 0.0,
+                "maxRads:6": 1000.0,
+                "messageCooldownTime:3": 0,
+                "poisonBuffer:6": 0.0,
+                "radXCooldown:6": 0.0,
+                "radXUsed:1": 0,
+                "radXWoreOff:1": 0,
+                "radawayBuffer:6": 0.0,
+                "radawayBufferSlow:6": 0.0,
+                "radawayCooldown:6": 0.0,
+                "radiationImmunityStage:1": 0,
+                "radiationImmunityTime:6": 0.0,
+                "radiationLevel:6": 0.0,
+                "recentPoisonAddition:6": 0.0,
+                "recentRadXAddition:6": 0.0,
+                "recentRadawayAddition:6": 0.0,
+                "setMaxRads:1": 1,
+                "shouldWarn:1": 0,
+                "totalRads:6": 0.0
+              },
+              "pneumaticcraft:hacking:10": {},
+              "thebetweenlands:custom_step_sound:10": {},
+              "thebetweenlands:entity_gems:10": {
+                "gems:9": {}
+              },
+              "thebetweenlands:equipment:10": {
+                "amuletSlots:3": 1
+              },
+              "thebetweenlands:puppet:10": {
+                "guard:1": 0,
+                "recruitmentCost:3": 0,
+                "stay:1": 0,
+                "ticks:3": 0
+              }
+            },
+            "ForgeData:10": {},
+            "HandDropChances:9": {
+              "0:5": 0.085,
+              "1:5": 0.085
+            },
+            "HandItems:9": {
+              "0:10": {},
+              "1:10": {}
+            },
+            "Health:5": 20.0,
+            "HurtByTimestamp:3": 0,
+            "HurtTime:2": 0,
+            "Invulnerable:1": 0,
+            "Leashed:1": 0,
+            "LeftHanded:1": 0,
+            "Motion:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "OnGround:1": 0,
+            "PersistenceRequired:1": 0,
+            "PortalCooldown:3": 0,
+            "Pos:9": {
+              "0:6": 0.0,
+              "1:6": 0.0,
+              "2:6": 0.0
+            },
+            "RelativeAABB:9": {
+              "0:6": -0.25,
+              "1:6": 0.0,
+              "2:6": -0.25,
+              "3:6": 0.25,
+              "4:6": 1.0,
+              "5:6": 0.25
+            },
+            "Rotation:9": {
+              "0:5": 5.9826245,
+              "1:5": 0.0
+            },
+            "SurgeAABB:9": {
+              "0:6": -0.25,
+              "1:6": 0.0,
+              "2:6": -0.25,
+              "3:6": 0.25,
+              "4:6": 1.0,
+              "5:6": 0.25
+            },
+            "UUIDLeast:4": -8911118315068049551,
+            "UUIDMost:4": -582332077911224419,
+            "UpdateBlocked:1": 0,
+            "id:8": "thebetweenlands:crypt_crawler",
+            "is_biped:1": 0,
+            "is_chief:1": 0
+          },
+          "taskID:8": "bq_standard:hunt"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 47,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:items_misc"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "248:10": {
+      "preRequisites:11": [
+        203,
+        249,
+        248
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Effects:\n\nSap Ball: (1 item to fill, lasts indefinitely, but duration depletes by half per decay point restored) Emits a small brown puff and slowly heals Decay in a large area (32x18x32).\n\nWeeping Blue Petal: (1 item to fill, lasts indefinitely, but duration depletes by 1/6th per 2 decay points restored) Emits a small blue puff and slowly heals decay in a large area (32x18x32).\n\nPlant Tonic: (1 item to fill, 10 minute duration when full) Emits a small brown cloud and prevents crops from decaying and removes existing decay in a medium area (16x5x16).\n\nElixir: (1 item to fill, 16 minute duration when full) Emits a small cloud the colour of the Elixir and continuously applies a weak version of the Elixir, with a duration of 14 seconds (regardless of the Elixir\u0027s duration) in a large area. Potency affects range (default at level 1 is 32x18x32).\n\nStagnant Water: (1 item to fill, 25 minute duration when full) Emits a thick yellow-green fog and continuously applies the Elixir of Decay effect, causing Decay to be accelerated in a small area (13x2x13).\n\nBottled Fog: (8 items to fill, 120 minute duration when full) Emits a thick white fog and increases crop growth and allows Sludgeon plants to grow in a small area (13x2x13). Stackable.\n\nAspect: (5 aspect levels to fill [must be combined in 1 bottle], 90 minute duration when full) Emits a thick fog of the aspect\u0027s colour and infuses Aspectrus crops with the aspect, also enabling them to grow in a small area (13x3x13).\n\nCremains: (1 item to fill, 2.5 minute duration when full) Emits a dark red cloud and sets fire to any living creature in a small area, causing them to drop 0-2 cremains upon death, along with their usual on-fire drops (13x13x13).\n\nSwamp Water: (8 items to fill, 60 minute duration when full. Duration only decreases when Bark Amulet is added) Emits a cloud of white steam that carries the effect of the item it is imbued with in a large area (~48x_x48?).\n        Can be imbued with a Bark Amulet. For that, place the Bark Amulet in the left slot, then right-click the Censer with a Swamp Water Bucket. It will show the life of the mobs the same way as it would do if you were wearing it.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:censer"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Making Fog",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 250,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:censer"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "249:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You\u0027ll be able to collect Fog in Vials while on the 6th \u0026 7th floors. When used in a Censer, it boosts nearby plant growth.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:dentrothyst_fluid_vial",
+            "tag:10": {
+              "Fluid:10": {
+                "Amount:3": 1000,
+                "FluidName:8": "fog"
+              }
+            }
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Bottling Fog",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 251,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:dentrothyst_fluid_vial",
+              "tag:10": {
+                "Fluid:10": {
+                  "Amount:3": 1000,
+                  "FluidName:8": "fog"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:dentrothyst_fluid_vial",
+              "tag:10": {
+                "Fluid:10": {
+                  "Amount:3": 1000,
+                  "FluidName:8": "fog"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "250:10": {
+      "preRequisites:11": [
+        242
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Drops from the §6Emberling Shamans§r§r, and §6Emberlings§r which can be found rarly in the §9Patchy Islands§r biome.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 45,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:items_misc"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Undying Embers",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 252,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 45,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:items_misc"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "251:10": {
+      "preRequisites:11": [
+        243
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Standing in this will very quickly lower your decay bar. Can be used to accelerate decay in a Censer.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:bl_bucket",
+            "tag:10": {
+              "Fluid:10": {
+                "Amount:3": 1000,
+                "FluidName:8": "stagnant_water"
+              }
+            }
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Stagnant Water",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 253,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:bl_bucket",
+              "tag:10": {
+                "Fluid:10": {
+                  "Amount:3": 1000,
+                  "FluidName:8": "stagnant_water"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:bl_bucket",
+              "tag:10": {
+                "Fluid:10": {
+                  "Amount:3": 1000,
+                  "FluidName:8": "stagnant_water"
+                }
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "252:10": {
+      "preRequisites:11": [
+        227
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You\u0027ll be able to use Plant Tonic to remove and slow decay. Using the bucket will take care of a 5x5 area.\n\nIf burned in a Censor, will remove and prevent decay.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:bl_bucket_plant_tonic",
+            "tag:10": {}
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Stopping Plant Decay",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 254,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:bl_bucket_plant_tonic",
+              "tag:10": {}
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:bl_bucket_plant_tonic",
+              "tag:10": {}
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "253:10": {
+      "preRequisites:11": [
+        234
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You\u0027ll be needing to make more Steel, so this might be your next task.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "multiblocked:mud_kiln"
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Blast Kiln",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 255,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "multiblocked:mud_kiln"
+            },
+            "1:10": {
+              "Count:3": 24,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:mud_bricks"
+            },
+            "2:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:mud_brick_shingles"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "254:10": {
+      "preRequisites:11": [
+        11
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 32106,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "LV-Biomass Burner",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 256,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 32106,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "255:10": {
+      "preRequisites:11": [
+        213,
+        203,
+        256
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Using the Sickle allows you to collect plants much more efficiently and occasionally rare types.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:sickle"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Collecting Plants",
+          "questlogic:8": "OR",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "questID:3": 257,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thebetweenlands:sickle"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -15458,7 +18286,7 @@
             "OreDict:8": "",
             "id:8": "contenttweaker:crowbar"
           },
-          "name:8": "I - The Beginning",
+          "name:8": "I/ULV - The Beginning",
           "visibility:8": "UNLOCKED"
         }
       },
@@ -15887,7 +18715,7 @@
     },
     "1:10": {
       "lineID:3": 1,
-      "order:3": 4,
+      "order:3": 3,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -15899,7 +18727,7 @@
             "OreDict:8": "",
             "id:8": "thebetweenlands:wisp"
           },
-          "name:8": "II - The Betweenlands",
+          "name:8": "II/LV - The Betweenlands",
           "visibility:8": "CHAIN"
         }
       },
@@ -15908,316 +18736,428 @@
           "id:3": 7,
           "sizeX:3": 48,
           "sizeY:3": 48,
-          "x:3": 228,
-          "y:3": 0
+          "x:3": 282,
+          "y:3": 12
         },
         "1:10": {
-          "id:3": 67,
+          "id:3": 10,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": -168
+          "x:3": -78,
+          "y:3": 258
         },
         "2:10": {
-          "id:3": 183,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": 360,
-          "y:3": -120
+          "id:3": 11,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 258
         },
         "3:10": {
-          "id:3": 190,
+          "id:3": 12,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -192,
-          "y:3": 84
+          "x:3": 90,
+          "y:3": 306
         },
         "4:10": {
-          "id:3": 191,
+          "id:3": 13,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -144
+          "x:3": 96,
+          "y:3": 240
         },
         "5:10": {
-          "id:3": 192,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -324,
-          "y:3": 12
-        },
-        "6:10": {
-          "id:3": 193,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -204,
-          "y:3": 0
-        },
-        "7:10": {
-          "id:3": 194,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 156,
-          "y:3": 12
-        },
-        "8:10": {
-          "id:3": 195,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 144,
-          "y:3": -132
-        },
-        "9:10": {
-          "id:3": 196,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -72,
-          "y:3": -156
-        },
-        "10:10": {
-          "id:3": 197,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": -192
-        },
-        "11:10": {
-          "id:3": 198,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": -204
-        },
-        "12:10": {
-          "id:3": 199,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": 60
-        },
-        "13:10": {
-          "id:3": 200,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -84
-        },
-        "14:10": {
-          "id:3": 201,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -228,
-          "y:3": -60
-        },
-        "15:10": {
-          "id:3": 202,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -156,
-          "y:3": -120
-        },
-        "16:10": {
-          "id:3": 203,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -216,
-          "y:3": -192
-        },
-        "17:10": {
-          "id:3": 204,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -288,
-          "y:3": -204
-        },
-        "18:10": {
-          "id:3": 205,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": 60
-        },
-        "19:10": {
-          "id:3": 206,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": -36
-        },
-        "20:10": {
-          "id:3": 207,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": 204
-        },
-        "21:10": {
-          "id:3": 208,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -300,
-          "y:3": 60
-        },
-        "22:10": {
-          "id:3": 209,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -240,
-          "y:3": 96
-        },
-        "23:10": {
-          "id:3": 210,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": 12
-        },
-        "24:10": {
-          "id:3": 211,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 168,
-          "y:3": -240
-        },
-        "25:10": {
-          "id:3": 212,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": 120
-        },
-        "26:10": {
-          "id:3": 213,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 72,
-          "y:3": 180
-        },
-        "27:10": {
-          "id:3": 214,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": 180
-        },
-        "28:10": {
-          "id:3": 215,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 96,
-          "y:3": 12
-        },
-        "29:10": {
-          "id:3": 216,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 48,
-          "y:3": -108
-        },
-        "30:10": {
-          "id:3": 217,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -108,
-          "y:3": -240
-        },
-        "31:10": {
-          "id:3": 218,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": -252
-        },
-        "32:10": {
-          "id:3": 219,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -288,
-          "y:3": 96
-        },
-        "33:10": {
-          "id:3": 220,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": -324
-        },
-        "34:10": {
-          "id:3": 221,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": -372
-        },
-        "35:10": {
-          "id:3": 222,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -144,
-          "y:3": -336
-        },
-        "36:10": {
-          "id:3": 223,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -168,
-          "y:3": 120
-        },
-        "37:10": {
-          "id:3": 224,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -12,
-          "y:3": -228
-        },
-        "38:10": {
-          "id:3": 225,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 132,
-          "y:3": -180
-        },
-        "39:10": {
-          "id:3": 226,
+          "id:3": 14,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 36,
-          "y:3": -216
+          "y:3": 204
         },
-        "40:10": {
-          "id:3": 227,
+        "6:10": {
+          "id:3": 20,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 84,
-          "y:3": -264
+          "x:3": -72,
+          "y:3": 180
         },
-        "41:10": {
-          "id:3": 228,
+        "7:10": {
+          "id:3": 22,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -48,
-          "y:3": 48
+          "x:3": 126,
+          "y:3": 354
         },
-        "42:10": {
-          "id:3": 229,
+        "8:10": {
+          "id:3": 24,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -120,
-          "y:3": 156
+          "y:3": 300
         },
-        "43:10": {
-          "id:3": 230,
+        "9:10": {
+          "id:3": 44,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 162,
+          "y:3": 264
+        },
+        "10:10": {
+          "id:3": 51,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -84,
+          "x:3": 42,
+          "y:3": 324
+        },
+        "11:10": {
+          "id:3": 57,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -180,
+          "y:3": 174
+        },
+        "12:10": {
+          "id:3": 58,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 300
+        },
+        "13:10": {
+          "id:3": 67,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 222,
+          "y:3": 174
+        },
+        "14:10": {
+          "id:3": 93,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -6,
+          "y:3": 324
+        },
+        "15:10": {
+          "id:3": 183,
+          "sizeX:3": 42,
+          "sizeY:3": 36,
+          "x:3": 240,
+          "y:3": 282
+        },
+        "16:10": {
+          "id:3": 190,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 24,
+          "y:3": 66
+        },
+        "17:10": {
+          "id:3": 191,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -36,
+          "y:3": -66
+        },
+        "18:10": {
+          "id:3": 192,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -96,
+          "y:3": 60
+        },
+        "19:10": {
+          "id:3": 193,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -24,
+          "y:3": 24
+        },
+        "20:10": {
+          "id:3": 194,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 210,
+          "y:3": 24
+        },
+        "21:10": {
+          "id:3": 195,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 18,
+          "y:3": -54
+        },
+        "22:10": {
+          "id:3": 196,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -114,
+          "y:3": -72
+        },
+        "23:10": {
+          "id:3": 197,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -90,
+          "y:3": -114
+        },
+        "24:10": {
+          "id:3": 199,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": -60
+        },
+        "25:10": {
+          "id:3": 200,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": -6
+        },
+        "26:10": {
+          "id:3": 201,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 270,
+          "y:3": 168
+        },
+        "27:10": {
+          "id:3": 205,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 150,
+          "y:3": 72
+        },
+        "28:10": {
+          "id:3": 206,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 150,
+          "y:3": -12
+        },
+        "29:10": {
+          "id:3": 207,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": 174
+        },
+        "30:10": {
+          "id:3": 208,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -222,
+          "y:3": 60
+        },
+        "31:10": {
+          "id:3": 209,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -222,
+          "y:3": -12
+        },
+        "32:10": {
+          "id:3": 210,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 78,
+          "y:3": 24
+        },
+        "33:10": {
+          "id:3": 211,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -78,
+          "y:3": 126
+        },
+        "34:10": {
+          "id:3": 212,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": 90
+        },
+        "35:10": {
+          "id:3": 213,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 42,
+          "y:3": 144
+        },
+        "36:10": {
+          "id:3": 214,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": 138
+        },
+        "37:10": {
+          "id:3": 215,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 108,
+          "y:3": -36
+        },
+        "38:10": {
+          "id:3": 216,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -48,
+          "y:3": 72
+        },
+        "39:10": {
+          "id:3": 217,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -162,
+          "y:3": -84
+        },
+        "40:10": {
+          "id:3": 218,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -150,
+          "y:3": -132
+        },
+        "41:10": {
+          "id:3": 219,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -222,
+          "y:3": 24
+        },
+        "42:10": {
+          "id:3": 220,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -204,
+          "y:3": -138
+        },
+        "43:10": {
+          "id:3": 223,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 222,
           "y:3": 96
         },
         "44:10": {
+          "id:3": 224,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -36,
+          "y:3": -120
+        },
+        "45:10": {
+          "id:3": 226,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": -90
+        },
+        "46:10": {
+          "id:3": 227,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 18,
+          "y:3": -132
+        },
+        "47:10": {
+          "id:3": 228,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 300,
+          "y:3": 90
+        },
+        "48:10": {
+          "id:3": 229,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 396,
+          "y:3": 168
+        },
+        "49:10": {
+          "id:3": 230,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 330,
+          "y:3": 150
+        },
+        "50:10": {
           "id:3": 231,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -360,
-          "y:3": 60
+          "x:3": -186,
+          "y:3": -18
+        },
+        "51:10": {
+          "id:3": 232,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 66,
+          "y:3": -48
+        },
+        "52:10": {
+          "id:3": 233,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -114,
+          "y:3": -18
+        },
+        "53:10": {
+          "id:3": 234,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -138,
+          "y:3": 102
+        },
+        "54:10": {
+          "id:3": 235,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -150,
+          "y:3": -24
+        },
+        "55:10": {
+          "id:3": 236,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -156,
+          "y:3": 24
+        },
+        "56:10": {
+          "id:3": 237,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 18,
+          "y:3": -6
+        },
+        "57:10": {
+          "id:3": 254,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": -150
+        },
+        "58:10": {
+          "id:3": 255,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -132,
+          "y:3": 186
+        },
+        "59:10": {
+          "id:3": 256,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -24,
+          "y:3": 198
+        },
+        "60:10": {
+          "id:3": 257,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 138
         }
       }
     },
@@ -16235,7 +19175,7 @@
             "OreDict:8": "",
             "id:8": "midnight:dewshroom"
           },
-          "name:8": "II - The Midnight",
+          "name:8": "II/LV - The Midnight",
           "visibility:8": "CHAIN"
         }
       },
@@ -16314,7 +19254,7 @@
     },
     "3:10": {
       "lineID:3": 3,
-      "order:3": 3,
+      "order:3": 7,
       "properties:10": {
         "betterquesting:10": {
           "bg_image:8": "",
@@ -16956,7 +19896,7 @@
             "OreDict:8": "",
             "id:8": "theaurorian:moontemplelamp"
           },
-          "name:8": "II - The Auroriun",
+          "name:8": "II/LV - The Auroriun",
           "visibility:8": "CHAIN"
         }
       },
@@ -16981,6 +19921,265 @@
           "sizeY:3": 24,
           "x:3": 0,
           "y:3": 0
+        }
+      }
+    },
+    "7:10": {
+      "lineID:3": 7,
+      "order:3": 4,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "No Description",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thebetweenlands:infuser"
+          },
+          "name:8": "II/MV - The Betweenlands",
+          "visibility:8": "CHAIN"
+        }
+      },
+      "quests:9": {
+        "0:10": {
+          "id:3": 7,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -96,
+          "y:3": 246
+        },
+        "1:10": {
+          "id:3": 21,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -144,
+          "y:3": 246
+        },
+        "2:10": {
+          "id:3": 183,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -54,
+          "y:3": 246
+        },
+        "3:10": {
+          "id:3": 198,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 6,
+          "y:3": 72
+        },
+        "4:10": {
+          "id:3": 201,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 144,
+          "y:3": 66
+        },
+        "5:10": {
+          "id:3": 202,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 48,
+          "y:3": 54
+        },
+        "6:10": {
+          "id:3": 203,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -12,
+          "y:3": 18
+        },
+        "7:10": {
+          "id:3": 204,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -48,
+          "y:3": -60
+        },
+        "8:10": {
+          "id:3": 207,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -132,
+          "y:3": 138
+        },
+        "9:10": {
+          "id:3": 213,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -42,
+          "y:3": 72
+        },
+        "10:10": {
+          "id:3": 214,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -120,
+          "y:3": 192
+        },
+        "11:10": {
+          "id:3": 220,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 306,
+          "y:3": 168
+        },
+        "12:10": {
+          "id:3": 221,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 366,
+          "y:3": 204
+        },
+        "13:10": {
+          "id:3": 222,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 318,
+          "y:3": 210
+        },
+        "14:10": {
+          "id:3": 225,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 348,
+          "y:3": 144
+        },
+        "15:10": {
+          "id:3": 230,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": 264,
+          "y:3": 120
+        },
+        "16:10": {
+          "id:3": 231,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -84,
+          "y:3": 102
+        },
+        "17:10": {
+          "id:3": 238,
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -150,
+          "y:3": 66
+        },
+        "18:10": {
+          "id:3": 239,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -174,
+          "y:3": -18
+        },
+        "19:10": {
+          "id:3": 240,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 420,
+          "y:3": 156
+        },
+        "20:10": {
+          "id:3": 241,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -186,
+          "y:3": 48
+        },
+        "21:10": {
+          "id:3": 242,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": 60
+        },
+        "22:10": {
+          "id:3": 243,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 216,
+          "y:3": -12
+        },
+        "23:10": {
+          "id:3": 244,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 288,
+          "y:3": 60
+        },
+        "24:10": {
+          "id:3": 245,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 348,
+          "y:3": 72
+        },
+        "25:10": {
+          "id:3": 246,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 420,
+          "y:3": 66
+        },
+        "26:10": {
+          "id:3": 247,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 348,
+          "y:3": 24
+        },
+        "27:10": {
+          "id:3": 248,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 84,
+          "y:3": -36
+        },
+        "28:10": {
+          "id:3": 249,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 132,
+          "y:3": -72
+        },
+        "29:10": {
+          "id:3": 250,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": -84
+        },
+        "30:10": {
+          "id:3": 251,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 276,
+          "y:3": -60
+        },
+        "31:10": {
+          "id:3": 252,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 264,
+          "y:3": 12
+        },
+        "32:10": {
+          "id:3": 253,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 204,
+          "y:3": -84
+        },
+        "33:10": {
+          "id:3": 257,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -78,
+          "y:3": 30
         }
       }
     }

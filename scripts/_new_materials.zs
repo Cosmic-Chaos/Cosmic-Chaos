@@ -516,6 +516,8 @@ var octine = MaterialBuilder(32080, "octine")
     .cableProperties(128, 2, 4, false)
     .build();
 ingotPrefix.setIgnored(<material:octine>);
+nuggetPrefix.setIgnored(<material:octine>);
+blockPrefix.setIgnored(<material:octine>);
 
 // Syrmorite
 //Elements.add(800, 850, -1, null, "Syrmorite", "Cr", false); // create a new element.
@@ -524,12 +526,13 @@ var syrmorite = MaterialBuilder(32081, "syrmorite")
     .ingot()
     .color(0x3d48db)
     .iconSet("dull")
-    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_foil", "generate_frame"]) // "generate_fine_wire"
+    .flags(["generate_plate", "generate_rod", "generate_gear", "generate_foil", "generate_fine_wire", "generate_frame", "generate_bolt_screw", "generate_ring", "generate_long_rod", "generate_spring"]) // 
 //    .element("Syrmorite")
     .ore(1, 1, false) //(@Optional int oreMultiplier, @Optional int byproductMultiplier, @Optional boolean emissive)
 //    .addOreByproducts(<material:gold>)
     .build();
 ingotPrefix.setIgnored(<material:syrmorite>);
+nuggetPrefix.setIgnored(<material:syrmorite>);
 
 // Valonite
 //Elements.add(800, 850, -1, null, "Valonite", "Cr", false); // create a new element.
@@ -559,6 +562,14 @@ var scabyst = MaterialBuilder(32083, "scabyst")
 //    .addOreByproducts(<material:gold>)
     .build();
 gemPrefix.setIgnored(<material:scabyst>);
+
+
+// Blast Blend
+var blast_fuel = MaterialBuilder(32084, "blast_fuel")
+    .dust(0, 800)
+    .color(0x7d4704)
+    .iconSet("shiny")
+    .build();
 
 /////////////////////////////////////////////////////////
 ////////////////////       AE 2      ////////////////////
@@ -618,7 +629,7 @@ var green_crystal_alloy = MaterialBuilder(32151, "green_crystal_alloy")
     .ingot(1)
     .color(0x21a343)
     .iconSet("custom1")
-    .flags(["generate_plate", "generate_foil", "generate_fine_wire"])
+    .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod"])
     .cableProperties(8, 2, 0, false) // (long voltage, int amperage, int loss, @Optional boolean isSuperCon)
     .components([<material:crude_steel> * 4, <material:beryllium> * 1])
     .build();
@@ -834,7 +845,7 @@ StoneType.create(16,"sky_stone","oreSkyStone",<material:sky_stone>,"appliedenerg
 //Aurorian Stone
 StoneType.create(17,"stone_aurorian","oreAurorianStone",<material:stone>,"theaurorian:aurorianstone", null, true);
 
-//Atum Stone
+//Between Stone
 StoneType.create(18,"betweenstone","oreBetweenStone",<material:stone>,"thebetweenlands:betweenstone", null, true);
 
 //Midnight Stone
@@ -844,6 +855,10 @@ StoneType.create(19,"nightstone","oreNightStone",<material:stone>,"midnight:nigh
 val oreAsteriodStone as OrePrefix = OrePrefix.registerOrePrefix("oreAsteriodStone", 1);
 oreAsteriodStone.addSecondaryMaterial(<material:asteroid_dust>);
 StoneType.create(20,"asteroid","oreAsteriodStone",<material:stone>,"cosmic_core:asteroid_rock_ore", null, true);
+
+//Between Pit Stone
+StoneType.create(21,"betweenpitstone","oreBetweenPitStone",<material:stone>,"thebetweenlands:pitstone", null, true);
+
 
 /*
 // Aurorian Stone

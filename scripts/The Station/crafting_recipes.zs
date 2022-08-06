@@ -506,41 +506,6 @@ craft.make(<metaitem:drum.steel>, ["pretty",
 });
 
 
-/* No more hammers
-# [Broken Iron Scraps] from [Heavy Hull Plate][+1]
-craft.make(<metaitem:hull.plate.broken.0>, ["pretty",
-  "T",
-  "□"], {
-  "T": <ore:gtceHardHammers>, # Neutronium Hammer
-  "□": <metaitem:hull.plate.0>, # Heavy Hull Plate
-});
-# [Broken Tin Scraps] from [Heavy Hull Plate][+1]
-craft.make(<metaitem:hull.plate.broken.2>, ["pretty",
-  "T □"], {
-  "T": <ore:gtceHardHammers>, # Neutronium Hammer
-  "□": <metaitem:hull.plate.0>, # Heavy Hull Plate
-});
-# [Broken Copper Scraps] from [Light Hull Plate][+1]
-craft.make(<metaitem:hull.plate.broken.1>, ["pretty",
-  "T",
-  "□"], {
-  "T": <ore:gtceHardHammers>, # Neutronium Hammer
-  "□": <metaitem:hull.plate.1>, # Light Hull Plate
-});
-# [Redstone] from [Simple Internals][+1]
-craft.make(<minecraft:redstone>, ["pretty",
-  "T",
-  "§"], {
-  "T": <ore:gtceHardHammers>, # Neutronium Hammer
-  "§": <metaitem:internal.components.0>, # Simple Internals
-});
-# [Small Pile of Coal Dust] from [Simple Internals][+1]
-craft.make(<metaitem:dustSmallCoal>, ["pretty",
-  "T §"], {
-  "T": <ore:gtceHardHammers>, # Neutronium Hammer
-  "§": <metaitem:internal.components.0>, # Simple Internals
-});
-*/
 //Reuse the Basic furnaces
 val basicFurnace as IIngredient = (<morefurnaces:furnaceblock:5>|<morefurnaces:furnaceblock>) as IIngredient;
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [[null, <metaitem:plateSilver>, null],[<metaitem:plateSilver>, basicFurnace, <metaitem:plateSilver>], [null, <ore:gtceWrenches>, null]]);

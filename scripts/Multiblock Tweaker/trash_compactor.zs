@@ -15,7 +15,7 @@ import crafttweaker.item.IItemStack;
 
 var loc = "mbt:trash_compactor";
 
-val trash_compactor = Builder.start(loc)
+val trash_compactor = Builder.start(loc, trash_compactor_id)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             .aisle(

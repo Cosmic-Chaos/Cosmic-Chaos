@@ -32,7 +32,7 @@ import scripts.g.primaryColors;
 
 var loc = "mbt:crushing_tank";
 
-val crushing_tank = Builder.start(loc)
+val crushing_tank = Builder.start(loc, crushing_tank_id)
     .withPattern(function(controller as IControllerTile) as IBlockPattern {
                        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
             .aisle(

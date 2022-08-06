@@ -6,12 +6,12 @@
   "showInJei": true,
   "baseRenderer": {
     "baseTexture": "multiblocked:blocks/casing/ebf_casing",
-    "frontTexture": "multiblocked:blocks/overlay/overlay_front",
+    "frontTexture": "multiblocked:blocks/overlay/machine",
     "type": "gregtech"
   },
   "workingRenderer": {
     "baseTexture": "multiblocked:blocks/casing/ebf_casing",
-    "frontTexture": "multiblocked:blocks/overlay/overlay_front_active",
+    "frontTexture": "multiblocked:blocks/overlay/machine_active",
     "type": "gregtech"
   },
   "isOpaqueCube": true,

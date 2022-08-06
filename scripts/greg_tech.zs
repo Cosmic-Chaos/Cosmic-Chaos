@@ -68,7 +68,6 @@ craft.remake(<metaitem:conveyor.module.ulv>, ["pretty",
   "l": <ore:gtceHardHammers>, # Neutronium Hammer
 });
 
-
 //Glass Tubes
 recipes.addShaped(<metaitem:component.glass.tube>, [
 	[null, <minecraft:glass_pane>, null],
@@ -125,21 +124,6 @@ brewery.recipeBuilder()
 	.EUt(4)
 	.duration(128)
 	.buildAndRegister();
-
-# [ULV Energy Output Hatch] from [ULV Machine Hull][+2]
-craft.remake(<mbd:ulv_energy_output>*2, ["pretty",
-  "  U  ",
-  "L V L"], {
-  "U": <metaitem:voltage_coil.ulv>, # Ultra Low Voltage Coil
-  "L": <ore:springLead>,          # Lead Spring
-  "V": <metaitem:hull.ulv>,    # ULV Machine Hull
-});
-
-# [ULV Dynamo Hatch] from [ULV Energy Output Hatch]
-craft.reshapeless(<metaitem:energy_hatch.output.ulv>, "Ϟ", {
-  "Ϟ": <mbd:ulv_energy_output>, # ULV Energy Output Hatch
-});
-<metaitem:energy_hatch.output.ulv>.addTooltip(format.red("Deprecated until proper MBD support"));
 
 //Temp?
 // Ultra Low Voltage Coil * 1
